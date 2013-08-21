@@ -1,0 +1,856 @@
+
+# BEGIN Better WP Security
+# Begin HackRepair.com Blacklist
+RewriteEngine on
+# Abuse Agent Blocking
+RewriteCond %{HTTP_USER_AGENT} ^BlackWidow [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^Bolt\ 0 [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^Bot\ mailto:craftbot\@yahoo\.com [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} CazoodleBot [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^ChinaClaw [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^Custo [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^Default\ Browser\ 0 [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^DIIbot [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^DISCo [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} discobot [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^Download\ Demon [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^eCatch [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ecxi [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^EirGrabber [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^EmailCollector [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^EmailSiphon [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^EmailWolf [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^Express\ WebPictures [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^ExtractorPro [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^EyeNetIE [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^FlashGet [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^GetRight [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^GetWeb! [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^Go!Zilla [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^Go-Ahead-Got-It [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^GrabNet [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^Grafula [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} GT::WWW [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} heritrix [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^HMView [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} HTTP::Lite [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} HTTrack [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ia_archiver [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} IDBot [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} id-search [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} id-search\.org [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^Image\ Stripper [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^Image\ Sucker [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} Indy\ Library [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^InterGET [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^Internet\ Ninja [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^InternetSeer\.com [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} IRLbot [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ISC\ Systems\ iRc\ Search\ 2\.1 [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^Java [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^JetCar [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^JOC\ Web\ Spider [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^larbin [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^LeechFTP [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} libwww [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} libwww-perl [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^Link [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} LinksManager.com_bot [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} linkwalker [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} lwp-trivial [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^Mass\ Downloader [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^Maxthon$ [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} MFC_Tear_Sample [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^microsoft\.url [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} Microsoft\ URL\ Control [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^MIDown\ tool [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^Mister\ PiX [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} Missigua\ Locator [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^Mozilla\.*Indy [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^Mozilla\.*NEWT [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^MSFrontPage [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^Navroad [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^NearSite [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^NetAnts [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^NetSpider [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^Net\ Vampire [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^NetZIP [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^Nutch [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^Octopus [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^Offline\ Explorer [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^Offline\ Navigator [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^PageGrabber [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} panscient.com [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^Papa\ Foto [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^pavuk [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} PECL::HTTP [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^PeoplePal [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^pcBrowser [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} PHPCrawl [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} PleaseCrawl [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^psbot [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^RealDownload [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^ReGet [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^Rippers\ 0 [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} SBIder [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^SeaMonkey$ [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^sitecheck\.internetseer\.com [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^SiteSnagger [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^SmartDownload [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} Snoopy [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} Steeler [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^SuperBot [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^SuperHTTP [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^Surfbot [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^tAkeOut [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^Teleport\ Pro [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^Toata\ dragostea\ mea\ pentru\ diavola [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} URI::Fetch [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} urllib [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} User-Agent [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^VoidEYE [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^Web\ Image\ Collector [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^Web\ Sucker [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} Web\ Sucker [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} webalta [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^WebAuto [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^[Ww]eb[Bb]andit [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} WebCollage [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^WebCopier [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^WebFetch [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^WebGo\ IS [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^WebLeacher [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^WebReaper [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^WebSauger [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^Website\ eXtractor [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^Website\ Quester [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^WebStripper [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^WebWhacker [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^WebZIP [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} Wells\ Search\ II [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} WEP\ Search [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^Wget [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^Widow [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^WWW-Mechanize [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^WWWOFFLE [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^Xaldon\ WebSpider [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} zermelo [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^Zeus [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^Zeus\.*Webster [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ZyBorg [NC]
+RewriteRule ^.* - [F,L]
+# Abuse bot blocking rule end
+# End HackRepair.com Blacklist
+<files .htaccess>
+Order allow,deny
+Deny from all
+</files>
+
+<files readme.html>
+Order allow,deny
+Deny from all
+</files>
+
+<files readme.txt>
+Order allow,deny
+Deny from all
+</files>
+
+<files install.php>
+Order allow,deny
+Deny from all
+</files>
+
+<files wp-config.php>
+Order allow,deny
+Deny from all
+</files>
+
+RewriteRule ^wp-admin/includes/ - [F,L]
+RewriteRule !^wp-includes/ - [S=3]
+RewriteCond %{SCRIPT_FILENAME} !^(.*)wp-includes/ms-files.php
+RewriteRule ^wp-includes/[^/]+\.php$ - [F,L]
+RewriteRule ^wp-includes/js/tinymce/langs/.+\.php - [F,L]
+RewriteRule ^wp-includes/theme-compat/ - [F,L]
+
+# END Better WP Security
+
+# Apache configuration file
+# httpd.apache.org/docs/2.2/mod/quickreference.html
+
+# Note .htaccess files are an overhead, this logic should be in your Apache config if possible
+# httpd.apache.org/docs/2.2/howto/htaccess.html
+
+# Techniques in here adapted from all over, including:
+#   Kroc Camen: camendesign.com/.htaccess
+#   perishablepress.com/press/2006/01/10/stupid-htaccess-tricks/
+#   Sample .htaccess file of CMS MODx: modxcms.com
+
+###
+### If you run a webserver other than Apache, consider:
+### github.com/h5bp/server-configs
+###
+
+# ----------------------------------------------------------------------
+# Better website experience for IE users
+# ----------------------------------------------------------------------
+
+# Force the latest IE version, in various cases when it may fall back to IE7 mode
+#  github.com/rails/rails/commit/123eb25#commitcomment-118920
+# Use ChromeFrame if it's installed for a better experience for the poor IE folk
+
+<IfModule mod_headers.c>
+Header set X-UA-Compatible "IE=Edge,chrome=1"
+# mod_headers can't match by content-type, but we don't want to send this header on *everything*...
+<FilesMatch "\.(js|css|gif|png|jpe?g|pdf|xml|oga|ogg|m4a|ogv|mp4|m4v|webm|svg|svgz|eot|ttf|otf|woff|ico|webp|appcache|manifest|htc|crx|oex|xpi|safariextz|vcf)$" >
+Header unset X-UA-Compatible
+</FilesMatch>
+</IfModule>
+
+# ----------------------------------------------------------------------
+# Cross-domain AJAX requests
+# ----------------------------------------------------------------------
+
+# Serve cross-domain Ajax requests, disabled by default.
+# enable-cors.org
+# code.google.com/p/html5security/wiki/CrossOriginRequestSecurity
+
+#  <IfModule mod_headers.c>
+#    Header set Access-Control-Allow-Origin "*"
+#  </IfModule>
+
+# ----------------------------------------------------------------------
+# CORS-enabled images (@crossorigin)
+# ----------------------------------------------------------------------
+
+# Send CORS headers if browsers request them; enabled by default for images.
+# developer.mozilla.org/en/CORS_Enabled_Image
+# blog.chromium.org/2011/07/using-cross-domain-images-in-webgl-and.html
+# hacks.mozilla.org/2011/11/using-cors-to-load-webgl-textures-from-cross-domain-images/
+# wiki.mozilla.org/Security/Reviews/crossoriginAttribute
+
+<IfModule mod_setenvif.c>
+<IfModule mod_headers.c>
+# mod_headers, y u no match by Content-Type?!
+<FilesMatch "\.(gif|png|jpe?g|svg|svgz|ico|webp)$">
+SetEnvIf Origin ":" IS_CORS
+Header set Access-Control-Allow-Origin "*" env=IS_CORS
+</FilesMatch>
+</IfModule>
+</IfModule>
+
+# ----------------------------------------------------------------------
+# Webfont access
+# ----------------------------------------------------------------------
+
+# Allow access from all domains for webfonts.
+# Alternatively you could only whitelist your
+# subdomains like "subdomain.example.com".
+
+<IfModule mod_headers.c>
+<FilesMatch "\.(ttf|ttc|otf|eot|woff|font.css)$">
+Header set Access-Control-Allow-Origin "*"
+</FilesMatch>
+</IfModule>
+
+# ----------------------------------------------------------------------
+# Proper MIME type for all files
+# ----------------------------------------------------------------------
+
+# JavaScript
+#   Normalize to standard type (it's sniffed in IE anyways)
+#   tools.ietf.org/html/rfc4329#section-7.2
+AddType application/javascript         js
+
+# Audio
+AddType audio/ogg                      oga ogg
+AddType audio/mp4                      m4a
+
+# Video
+AddType video/ogg                      ogv
+AddType video/mp4                      mp4 m4v
+AddType video/webm                     webm
+
+# SVG
+#   Required for svg webfonts on iPad
+#   twitter.com/FontSquirrel/status/14855840545
+AddType     image/svg+xml              svg svgz
+AddEncoding gzip                       svgz
+
+# Webfonts
+AddType application/vnd.ms-fontobject  eot
+AddType application/x-font-ttf         ttf ttc
+AddType font/opentype                  otf
+AddType application/x-font-woff        woff
+
+# Assorted types
+AddType image/x-icon                        ico
+AddType image/webp                          webp
+AddType text/cache-manifest                 appcache manifest
+AddType text/x-component                    htc
+AddType application/x-chrome-extension      crx
+AddType application/x-opera-extension       oex
+AddType application/x-xpinstall             xpi
+AddType application/octet-stream            safariextz
+AddType application/x-web-app-manifest+json webapp
+AddType text/x-vcard                        vcf
+
+# ----------------------------------------------------------------------
+# Allow concatenation from within specific js and css files
+# ----------------------------------------------------------------------
+
+# e.g. Inside of script.combined.js you could have
+#   <!--#include file="libs/jquery-1.5.0.min.js" -->
+#   <!--#include file="plugins/jquery.idletimer.js" -->
+# and they would be included into this single file.
+
+# This is not in use in the boilerplate as it stands. You may
+# choose to name your files in this way for this advantage or
+# concatenate and minify them manually.
+# Disabled by default.
+
+#<FilesMatch "\.combined\.js$">
+#  Options +Includes
+#  AddOutputFilterByType INCLUDES application/javascript application/json
+#  SetOutputFilter INCLUDES
+#</FilesMatch>
+#<FilesMatch "\.combined\.css$">
+#  Options +Includes
+#  AddOutputFilterByType INCLUDES text/css
+#  SetOutputFilter INCLUDES
+#</FilesMatch>
+
+# ----------------------------------------------------------------------
+# Gzip compression
+# ----------------------------------------------------------------------
+
+<IfModule mod_deflate.c>
+
+# Force deflate for mangled headers developer.yahoo.com/blogs/ydn/posts/2010/12/pushing-beyond-gzipping/
+<IfModule mod_setenvif.c>
+<IfModule mod_headers.c>
+SetEnvIfNoCase ^(Accept-EncodXng|X-cept-Encoding|X{15}|~{15}|-{15})$ ^((gzip|deflate)\s*,?\s*)+|[X~-]{4,13}$ HAVE_Accept-Encoding
+RequestHeader append Accept-Encoding "gzip,deflate" env=HAVE_Accept-Encoding
+</IfModule>
+</IfModule>
+
+# HTML, TXT, CSS, JavaScript, JSON, XML, HTC:
+<IfModule filter_module>
+FilterDeclare   COMPRESS
+FilterProvider  COMPRESS  DEFLATE resp=Content-Type $text/html
+FilterProvider  COMPRESS  DEFLATE resp=Content-Type $text/css
+FilterProvider  COMPRESS  DEFLATE resp=Content-Type $text/plain
+FilterProvider  COMPRESS  DEFLATE resp=Content-Type $text/xml
+FilterProvider  COMPRESS  DEFLATE resp=Content-Type $text/x-component
+FilterProvider  COMPRESS  DEFLATE resp=Content-Type $application/javascript
+FilterProvider  COMPRESS  DEFLATE resp=Content-Type $application/json
+FilterProvider  COMPRESS  DEFLATE resp=Content-Type $application/xml
+FilterProvider  COMPRESS  DEFLATE resp=Content-Type $application/xhtml+xml
+FilterProvider  COMPRESS  DEFLATE resp=Content-Type $application/rss+xml
+FilterProvider  COMPRESS  DEFLATE resp=Content-Type $application/atom+xml
+FilterProvider  COMPRESS  DEFLATE resp=Content-Type $application/vnd.ms-fontobject
+FilterProvider  COMPRESS  DEFLATE resp=Content-Type $image/svg+xml
+FilterProvider  COMPRESS  DEFLATE resp=Content-Type $image/x-icon
+FilterProvider  COMPRESS  DEFLATE resp=Content-Type $application/x-font-ttf
+FilterProvider  COMPRESS  DEFLATE resp=Content-Type $font/opentype
+FilterChain     COMPRESS
+FilterProtocol  COMPRESS  DEFLATE change=yes;byteranges=no
+</IfModule>
+
+<IfModule !mod_filter.c>
+# Legacy versions of Apache
+AddOutputFilterByType DEFLATE text/html text/plain text/css application/json
+AddOutputFilterByType DEFLATE application/javascript
+AddOutputFilterByType DEFLATE text/xml application/xml text/x-component
+AddOutputFilterByType DEFLATE application/xhtml+xml application/rss+xml application/atom+xml
+AddOutputFilterByType DEFLATE image/x-icon image/svg+xml application/vnd.ms-fontobject application/x-font-ttf font/opentype
+</IfModule>
+
+</IfModule>
+
+# ----------------------------------------------------------------------
+# Expires headers (for better cache control)
+# ----------------------------------------------------------------------
+
+# These are pretty far-future expires headers.
+# They assume you control versioning with cachebusting query params like
+#   <script src="application.js?20100608">
+# Additionally, consider that outdated proxies may miscache
+#   www.stevesouders.com/blog/2008/08/23/revving-filenames-dont-use-querystring/
+
+# If you don't use filenames to version, lower the CSS  and JS to something like
+#   "access plus 1 week" or so.
+
+<IfModule mod_expires.c>
+ExpiresActive on
+
+# Perhaps better to whitelist expires rules? Perhaps.
+ExpiresDefault                          "access plus 1 month"
+
+# cache.appcache needs re-requests in FF 3.6 (thanks Remy ~Introducing HTML5)
+ExpiresByType text/cache-manifest       "access plus 0 seconds"
+
+# Your document html
+ExpiresByType text/html                 "access plus 0 seconds"
+
+# Data
+ExpiresByType text/xml                  "access plus 0 seconds"
+ExpiresByType application/xml           "access plus 0 seconds"
+ExpiresByType application/json          "access plus 0 seconds"
+
+# Feed
+ExpiresByType application/rss+xml       "access plus 1 hour"
+ExpiresByType application/atom+xml      "access plus 1 hour"
+
+# Favicon (cannot be renamed)
+ExpiresByType image/x-icon              "access plus 1 week"
+
+# Media: images, video, audio
+ExpiresByType image/gif                 "access plus 1 month"
+ExpiresByType image/png                 "access plus 1 month"
+ExpiresByType image/jpg                 "access plus 1 month"
+ExpiresByType image/jpeg                "access plus 1 month"
+ExpiresByType video/ogg                 "access plus 1 month"
+ExpiresByType audio/ogg                 "access plus 1 month"
+ExpiresByType video/mp4                 "access plus 1 month"
+ExpiresByType video/webm                "access plus 1 month"
+
+# HTC files  (css3pie)
+ExpiresByType text/x-component          "access plus 1 month"
+
+# Webfonts
+ExpiresByType application/x-font-ttf    "access plus 1 month"
+ExpiresByType font/opentype             "access plus 1 month"
+ExpiresByType application/x-font-woff   "access plus 1 month"
+ExpiresByType image/svg+xml             "access plus 1 month"
+ExpiresByType application/vnd.ms-fontobject "access plus 1 month"
+
+# CSS and JavaScript
+ExpiresByType text/css                  "access plus 1 year"
+ExpiresByType application/javascript    "access plus 1 year"
+
+</IfModule>
+
+# ----------------------------------------------------------------------
+# ETag removal
+# ----------------------------------------------------------------------
+
+# FileETag None is not enough for every server.
+<IfModule mod_headers.c>
+Header unset ETag
+</IfModule>
+
+# Since we're sending far-future expires, we don't need ETags for
+# static content.
+#   developer.yahoo.com/performance/rules.html#etags
+FileETag None
+
+# ----------------------------------------------------------------------
+# Stop screen flicker in IE on CSS rollovers
+# ----------------------------------------------------------------------
+
+# The following directives stop screen flicker in IE on CSS rollovers - in
+# combination with the "ExpiresByType" rules for images (see above). If
+# needed, un-comment the following rules.
+
+# BrowserMatch "MSIE" brokenvary=1
+# BrowserMatch "Mozilla/4.[0-9]{2}" brokenvary=1
+# BrowserMatch "Opera" !brokenvary
+# SetEnvIf brokenvary 1 force-no-vary
+
+# ----------------------------------------------------------------------
+# Cookie setting from iframes
+# ----------------------------------------------------------------------
+
+# Allow cookies to be set from iframes (for IE only)
+# If needed, uncomment and specify a path or regex in the Location directive
+
+# <IfModule mod_headers.c>
+#   <Location />
+#     Header set P3P "policyref=\"/w3c/p3p.xml\", CP=\"IDC DSP COR ADM DEVi TAIi PSA PSD IVAi IVDi CONi HIS OUR IND CNT\""
+#   </Location>
+# </IfModule>
+
+# ----------------------------------------------------------------------
+# Start rewrite engine
+# ----------------------------------------------------------------------
+
+# Turning on the rewrite engine is necessary for the following rules and features.
+# FollowSymLinks must be enabled for this to work.
+
+<IfModule mod_rewrite.c>
+Options +FollowSymlinks
+RewriteEngine On
+</IfModule>
+
+# ----------------------------------------------------------------------
+# Suppress or force the "www." at the beginning of URLs
+# ----------------------------------------------------------------------
+
+# The same content should never be available under two different URLs - especially not with and
+# without "www." at the beginning, since this can cause SEO problems (duplicate content).
+# That's why you should choose one of the alternatives and redirect the other one.
+
+# By default option 1 (no "www.") is activated. Remember: Shorter URLs are sexier.
+# no-www.org/faq.php?q=class_b
+
+# If you rather want to use option 2, just comment out all option 1 lines
+# and uncomment option 2.
+# IMPORTANT: NEVER USE BOTH RULES AT THE SAME TIME!
+
+# ----------------------------------------------------------------------
+
+# Option 1:
+# Rewrite "www.example.com -> example.com"
+
+<IfModule mod_rewrite.c>
+RewriteCond %{HTTPS} !=on
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^ http://%1%{REQUEST_URI} [R=301,L]
+</IfModule>
+
+# ----------------------------------------------------------------------
+
+# Option 2:
+# To rewrite "example.com -> www.example.com" uncomment the following lines.
+# Be aware that the following rule might not be a good idea if you
+# use "real" subdomains for certain parts of your website.
+
+# <IfModule mod_rewrite.c>
+#   RewriteCond %{HTTPS} !=on
+#   RewriteCond %{HTTP_HOST} !^www\..+$ [NC]
+#   RewriteRule ^ http://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+# </IfModule>
+
+# ----------------------------------------------------------------------
+# Built-in filename-based cache busting
+# ----------------------------------------------------------------------
+
+# If you're not using the build script to manage your filename version revving,
+# you might want to consider enabling this, which will route requests for
+# /css/style.20110203.css to /css/style.css
+
+# To understand why this is important and a better idea than all.css?v1231,
+# read: github.com/h5bp/html5-boilerplate/wiki/Version-Control-with-Cachebusting
+
+# Uncomment to enable.
+# <IfModule mod_rewrite.c>
+#   RewriteCond %{REQUEST_FILENAME} !-f
+#   RewriteCond %{REQUEST_FILENAME} !-d
+#   RewriteRule ^(.+)\.(\d+)\.(js|css|png|jpg|gif)$ $1.$3 [L]
+# </IfModule>
+
+# ----------------------------------------------------------------------
+# Prevent SSL cert warnings
+# ----------------------------------------------------------------------
+
+# Rewrite secure requests properly to prevent SSL cert warnings, e.g. prevent
+# https://www.example.com when your cert only allows https://secure.example.com
+# Uncomment the following lines to use this feature.
+
+# <IfModule mod_rewrite.c>
+#   RewriteCond %{SERVER_PORT} !^443
+#   RewriteRule ^ https://example-domain-please-change-me.com%{REQUEST_URI} [R=301,L]
+# </IfModule>
+
+# ----------------------------------------------------------------------
+# Prevent 404 errors for non-existing redirected folders
+# ----------------------------------------------------------------------
+
+# without -MultiViews, Apache will give a 404 for a rewrite if a folder of the same name does not exist
+#   e.g. /blog/hello : webmasterworld.com/apache/3808792.htm
+
+Options -MultiViews
+
+# ----------------------------------------------------------------------
+# Custom 404 page
+# ----------------------------------------------------------------------
+
+# You can add custom pages to handle 500 or 403 pretty easily, if you like.
+ErrorDocument 404 /404.html
+
+# ----------------------------------------------------------------------
+# UTF-8 encoding
+# ----------------------------------------------------------------------
+
+# Use UTF-8 encoding for anything served text/plain or text/html
+AddDefaultCharset utf-8
+
+# Force UTF-8 for a number of file formats
+AddCharset utf-8 .css .js .xml .json .rss .atom
+
+# ----------------------------------------------------------------------
+# A little more security
+# ----------------------------------------------------------------------
+
+# Do we want to advertise the exact version number of Apache we're running?
+# Probably not.
+## This can only be enabled if used in httpd.conf - It will not work in .htaccess
+# ServerTokens Prod
+
+# "-Indexes" will have Apache block users from browsing folders without a default document
+# Usually you should leave this activated, because you shouldn't allow everybody to surf through
+# every folder on your server (which includes rather private places like CMS system folders).
+<IfModule mod_autoindex.c>
+Options -Indexes
+</IfModule>
+
+# Block access to "hidden" directories whose names begin with a period. This
+# includes directories used by version control systems such as Subversion or Git.
+<IfModule mod_rewrite.c>
+RewriteCond %{SCRIPT_FILENAME} -d
+RewriteCond %{SCRIPT_FILENAME} -f
+RewriteRule "(^|/)\." - [F]
+</IfModule>
+
+# Block access to backup and source files
+# This files may be left by some text/html editors and
+# pose a great security danger, when someone can access them
+<FilesMatch "(\.(bak|config|sql|fla|psd|ini|log|sh|inc|swp|dist)|~)$">
+Order allow,deny
+Deny from all
+Satisfy All
+</FilesMatch>
+
+# If your server is not already configured as such, the following directive
+# should be uncommented in order to set PHP's register_globals option to OFF.
+# This closes a major security hole that is abused by most XSS (cross-site
+# scripting) attacks. For more information: http://php.net/register_globals
+#
+# IF REGISTER_GLOBALS DIRECTIVE CAUSES 500 INTERNAL SERVER ERRORS :
+#
+# Your server does not allow PHP directives to be set via .htaccess. In that
+# case you must make this change in your php.ini file instead. If you are
+# using a commercial web host, contact the administrators for assistance in
+# doing this. Not all servers allow local php.ini files, and they should
+# include all PHP configurations (not just this one), or you will effectively
+# reset everything to PHP defaults. Consult www.php.net for more detailed
+# information about setting PHP directives.
+
+# php_flag register_globals Off
+
+# Rename session cookie to something else, than PHPSESSID
+# php_value session.name sid
+
+# Do not show you are using PHP
+# Note: Move this line to php.ini since it won't work in .htaccess
+# php_flag expose_php Off
+
+# Level of log detail - log all errors
+# php_value error_reporting -1
+
+# Write errors to log file
+# php_flag log_errors On
+
+# Do not display errors in browser (production - Off, development - On)
+# php_flag display_errors Off
+
+# Do not display startup errors (production - Off, development - On)
+# php_flag display_startup_errors Off
+
+# Format errors in plain text
+# Note: Leave this setting 'On' for xdebug's var_dump() output
+# php_flag html_errors Off
+
+# Show multiple occurrence of error
+# php_flag ignore_repeated_errors Off
+
+# Show same errors from different sources
+# php_flag ignore_repeated_source Off
+
+# Size limit for error messages
+# php_value log_errors_max_len 1024
+
+# Don't precede error with string (doesn't accept empty string, use whitespace if you need)
+# php_value error_prepend_string " "
+
+# Don't prepend to error (doesn't accept empty string, use whitespace if you need)
+# php_value error_append_string " "
+
+# Increase cookie security
+<IfModule php5_module>
+php_value session.cookie_httponly true
+</IfModule>
+
+# BEGIN W3TC Browser Cache
+<IfModule mod_mime.c>
+AddType text/css .css
+AddType application/x-javascript .js
+AddType text/x-component .htc
+AddType text/html .html .htm
+AddType text/richtext .rtf .rtx
+AddType image/svg+xml .svg .svgz
+AddType text/plain .txt
+AddType text/xsd .xsd
+AddType text/xsl .xsl
+AddType text/xml .xml
+AddType video/asf .asf .asx .wax .wmv .wmx
+AddType video/avi .avi
+AddType image/bmp .bmp
+AddType application/java .class
+AddType video/divx .divx
+AddType application/msword .doc .docx
+AddType application/vnd.ms-fontobject .eot
+AddType application/x-msdownload .exe
+AddType image/gif .gif
+AddType application/x-gzip .gz .gzip
+AddType image/x-icon .ico
+AddType image/jpeg .jpg .jpeg .jpe
+AddType application/vnd.ms-access .mdb
+AddType audio/midi .mid .midi
+AddType video/quicktime .mov .qt
+AddType audio/mpeg .mp3 .m4a
+AddType video/mp4 .mp4 .m4v
+AddType video/mpeg .mpeg .mpg .mpe
+AddType application/vnd.ms-project .mpp
+AddType application/x-font-otf .otf
+AddType application/vnd.oasis.opendocument.database .odb
+AddType application/vnd.oasis.opendocument.chart .odc
+AddType application/vnd.oasis.opendocument.formula .odf
+AddType application/vnd.oasis.opendocument.graphics .odg
+AddType application/vnd.oasis.opendocument.presentation .odp
+AddType application/vnd.oasis.opendocument.spreadsheet .ods
+AddType application/vnd.oasis.opendocument.text .odt
+AddType audio/ogg .ogg
+AddType application/pdf .pdf
+AddType image/png .png
+AddType application/vnd.ms-powerpoint .pot .pps .ppt .pptx
+AddType audio/x-realaudio .ra .ram
+AddType application/x-shockwave-flash .swf
+AddType application/x-tar .tar
+AddType image/tiff .tif .tiff
+AddType application/x-font-ttf .ttf .ttc
+AddType audio/wav .wav
+AddType audio/wma .wma
+AddType application/vnd.ms-write .wri
+AddType application/vnd.ms-excel .xla .xls .xlsx .xlt .xlw
+AddType application/zip .zip
+</IfModule>
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType text/css A31536000
+ExpiresByType application/x-javascript A31536000
+ExpiresByType text/x-component A31536000
+ExpiresByType text/html A3600
+ExpiresByType text/richtext A3600
+ExpiresByType image/svg+xml A3600
+ExpiresByType text/plain A3600
+ExpiresByType text/xsd A3600
+ExpiresByType text/xsl A3600
+ExpiresByType text/xml A3600
+ExpiresByType video/asf A31536000
+ExpiresByType video/avi A31536000
+ExpiresByType image/bmp A31536000
+ExpiresByType application/java A31536000
+ExpiresByType video/divx A31536000
+ExpiresByType application/msword A31536000
+ExpiresByType application/vnd.ms-fontobject A31536000
+ExpiresByType application/x-msdownload A31536000
+ExpiresByType image/gif A31536000
+ExpiresByType application/x-gzip A31536000
+ExpiresByType image/x-icon A31536000
+ExpiresByType image/jpeg A31536000
+ExpiresByType application/vnd.ms-access A31536000
+ExpiresByType audio/midi A31536000
+ExpiresByType video/quicktime A31536000
+ExpiresByType audio/mpeg A31536000
+ExpiresByType video/mp4 A31536000
+ExpiresByType video/mpeg A31536000
+ExpiresByType application/vnd.ms-project A31536000
+ExpiresByType application/x-font-otf A31536000
+ExpiresByType application/vnd.oasis.opendocument.database A31536000
+ExpiresByType application/vnd.oasis.opendocument.chart A31536000
+ExpiresByType application/vnd.oasis.opendocument.formula A31536000
+ExpiresByType application/vnd.oasis.opendocument.graphics A31536000
+ExpiresByType application/vnd.oasis.opendocument.presentation A31536000
+ExpiresByType application/vnd.oasis.opendocument.spreadsheet A31536000
+ExpiresByType application/vnd.oasis.opendocument.text A31536000
+ExpiresByType audio/ogg A31536000
+ExpiresByType application/pdf A31536000
+ExpiresByType image/png A31536000
+ExpiresByType application/vnd.ms-powerpoint A31536000
+ExpiresByType audio/x-realaudio A31536000
+ExpiresByType image/svg+xml A31536000
+ExpiresByType application/x-shockwave-flash A31536000
+ExpiresByType application/x-tar A31536000
+ExpiresByType image/tiff A31536000
+ExpiresByType application/x-font-ttf A31536000
+ExpiresByType audio/wav A31536000
+ExpiresByType audio/wma A31536000
+ExpiresByType application/vnd.ms-write A31536000
+ExpiresByType application/vnd.ms-excel A31536000
+ExpiresByType application/zip A31536000
+</IfModule>
+<IfModule mod_deflate.c>
+<IfModule mod_setenvif.c>
+BrowserMatch ^Mozilla/4 gzip-only-text/html
+BrowserMatch ^Mozilla/4\.0[678] no-gzip
+BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+BrowserMatch \bMSI[E] !no-gzip !gzip-only-text/html
+</IfModule>
+<IfModule mod_headers.c>
+Header append Vary User-Agent env=!dont-vary
+</IfModule>
+<IfModule mod_filter.c>
+AddOutputFilterByType DEFLATE text/css application/x-javascript text/x-component text/html text/richtext image/svg+xml text/plain text/xsd text/xsl text/xml image/x-icon
+</IfModule>
+</IfModule>
+<FilesMatch "\.(css|js|htc|CSS|JS|HTC)$">
+<IfModule mod_headers.c>
+Header set Pragma "public"
+Header set Cache-Control "public, must-revalidate, proxy-revalidate"
+</IfModule>
+FileETag MTime Size
+<IfModule mod_headers.c>
+Header set X-Powered-By "W3 Total Cache/0.9.2.4"
+</IfModule>
+</FilesMatch>
+<FilesMatch "\.(html|htm|rtf|rtx|svg|svgz|txt|xsd|xsl|xml|HTML|HTM|RTF|RTX|SVG|SVGZ|TXT|XSD|XSL|XML)$">
+<IfModule mod_headers.c>
+Header set Pragma "public"
+Header set Cache-Control "public, must-revalidate, proxy-revalidate"
+</IfModule>
+FileETag MTime Size
+<IfModule mod_headers.c>
+Header set X-Powered-By "W3 Total Cache/0.9.2.4"
+</IfModule>
+</FilesMatch>
+<FilesMatch "\.(asf|asx|wax|wmv|wmx|avi|bmp|class|divx|doc|docx|eot|exe|gif|gz|gzip|ico|jpg|jpeg|jpe|mdb|mid|midi|mov|qt|mp3|m4a|mp4|m4v|mpeg|mpg|mpe|mpp|otf|odb|odc|odf|odg|odp|ods|odt|ogg|pdf|png|pot|pps|ppt|pptx|ra|ram|svg|svgz|swf|tar|tif|tiff|ttf|ttc|wav|wma|wri|xla|xls|xlsx|xlt|xlw|zip|ASF|ASX|WAX|WMV|WMX|AVI|BMP|CLASS|DIVX|DOC|DOCX|EOT|EXE|GIF|GZ|GZIP|ICO|JPG|JPEG|JPE|MDB|MID|MIDI|MOV|QT|MP3|M4A|MP4|M4V|MPEG|MPG|MPE|MPP|OTF|ODB|ODC|ODF|ODG|ODP|ODS|ODT|OGG|PDF|PNG|POT|PPS|PPT|PPTX|RA|RAM|SVG|SVGZ|SWF|TAR|TIF|TIFF|TTF|TTC|WAV|WMA|WRI|XLA|XLS|XLSX|XLT|XLW|ZIP)$">
+<IfModule mod_headers.c>
+Header set Pragma "public"
+Header set Cache-Control "public, must-revalidate, proxy-revalidate"
+</IfModule>
+FileETag MTime Size
+<IfModule mod_headers.c>
+Header set X-Powered-By "W3 Total Cache/0.9.2.4"
+</IfModule>
+</FilesMatch>
+# END W3TC Browser Cache
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress
+
+# BEGIN GZIP
+<ifmodule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/text text/html text/plain text/xml text/css application/x-javascript application/javascript
+</ifmodule>
+# END GZIP
+
+# Prevent access to config etc
+Redirect 301 /wp-config.php /at-least-you-tried.html
+
+RewriteRule ^.git/ - [NC,F,L]
+
+Redirect 301 /favicon.ico /favicon.png
+
+# Redirect /type to the Just My Type site!
+Redirect /type http://justmytype.co
+Redirect /type/twins http://justmytype.co/twins

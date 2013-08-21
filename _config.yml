@@ -1,0 +1,7 @@
+name: Daniel Eden
+
+markdown: rdiscount
+rdiscount:
+  extensions: [smart]
+
+pygments: true

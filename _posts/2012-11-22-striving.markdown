@@ -1,0 +1,12 @@
+---
+layout: post
+title: Striving
+---
+
+A few days ago, [Striving](http://striving.me) was launched. For those not yet aware, Striving is a website that allows you to set personal goals, and achieve them with the help of other people in the community. It's something that [Jack](http://twitter.com/jack_l_smith) pitched to me and [Michael](http://twitter.com/michaelw90) a little over a year ago - and it's maybe one of the best ideas I'd ever heard for a website.
+
+My contribution to Striving has been minimal compared to the months of incredible and hard work put in by Jack and Michael, but it was still incredibly exciting to see the site evolve and be involved in the development process. Striving is built on a rare principle in the modern web - the only actions you can take are positive. You see people's goals and you can help them achieve them by commenting on them with your advice. It's like Quora, but for self improvement. And I love that. You don't even get follower counts. There's no ego in this thing. It's perfect.
+
+Michael's strong development skills have made this thing snappy as heck. Jack's design has made it a joy to use. And my occasional bossing around made a few spelling corrections and CSS optimisations along the way.
+
+Striving is going to help me become a better person, and I've no doubt it can help you too. [Start Striving](http://striving.me).

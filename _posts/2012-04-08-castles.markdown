@@ -1,0 +1,23 @@
+---
+layout: post
+title: We, Who Build Our Own Castles
+---
+
+Let me get one thing straight - I'm not exactly what you'd call "outdoorsy". I hated boy scouts, despised P.E. in high school; I'm still not sure I fully understand [the offside rule.](http://en.wikipedia.org/wiki/Offside_(association_football)) But there's something quite special about stepping away from they keyboard and making something, or going somewhere. Smelling the Earth. Getting dirt in your fingernails, and building a _thing_ you can take home and use.
+
+![](/uploads/2012/04/960x400_HUF-Haus-ART-6-grau_aussen1.jpg)
+
+My (unlikely) dream is to one day get myself a prefabricated, flat-pack house, much like the one you see above from [HUF Haus](http://www.huf-haus.com/en/home.html), and put it up somewhere nice. Something I can call my own - completely new. Something I know from the inside out. My own custom castle.
+
+Of course, I know I could never do it alone - I don't have the manpower to build such a thing on my own, nor the brainpower to figure out things like plumbing and electricity. Maybe if I put my mind to it I could, but [I doubt it.](http://bukk.it/noidea-golf.gif) But the intention is there, and I'd supervise the whole thing, and it would still be that - _my_ castle. And I could sure as hell decorate the thing, and put up the shelves myself, and maybe even build a table and a few whatchamacallits.
+
+
+## Where exactly are you heading with this, Dan?
+
+
+Good question. I feel very much the same way about my future as I do about design & web development. I feel like we should be making our own tools, and our own crutches, rather than using whatever the hottest thing right now is. When I needed a CSS framework, I found that the currently available solutions didn't suit my needs - so [I made one.](http://daneden.me/toast) When I found myself repeatedly writing the same CSS animations on websites, I thought to myself "There must be a place with all this stuff already written?" - and there wasn't. So [I made one.](http://daneden.me/animate) When I needed a place to calculate my income and outgoings, I found there were a few places to go. But they were all way to complex or expensive. So... [you guessed it.](http://brills.me)
+
+Even if a solution already exists, we should strive to make something else. Because it's fun. It's hard work. It's practice. It could be invaluable to others. What defines a product's success, to me, is not how well it is received by others, but how happy you are with it.
+
+Don't settle for a house someone else has built - strive for a castle you crafted. Make things.
+  *[P.E.]: Physical Education. I'm not quite ready to start calling it 'gym class'

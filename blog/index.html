@@ -1,0 +1,11 @@
+---
+layout: default
+title: Blog
+in-nav: true
+---
+
+<ul class="all-posts posts-by-year">
+{% for post in site.posts %}
+  <li><p class="gamma"><a href="{{ post.url }}">{{ post.title }}</a> <span class="entry-meta">{{ post.date | date_to_string }}</span></h2></li>
+{% endfor %}
+</ul>
