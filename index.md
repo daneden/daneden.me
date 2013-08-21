@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Making Things, Better.
+title: Making Things, Better
 ---
 
 We all design. Every time we evaluate a tool or product, or think about how we might have done something differently, we are designing. I have a tendency to act upon these evaluations.
