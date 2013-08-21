@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Portfolio
+permalink: ''
 in-nav: true
 ---
 

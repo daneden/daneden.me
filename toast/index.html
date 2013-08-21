@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Toast | A Simple CSS Framework</title>
+	<meta name="description" content="css, grid, css framework, grid layout, @_dte, Daniel Eden, css3, layout">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" href="css/toast.css">
+	<link rel="stylesheet" href="style.css">
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="//use.typekit.net/rbe6ofr.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+</head>
+<body>
+	<div class="container" role="main">
+
+		<div class="grid">
+
+			<header class="unit span-grid" role="banner">
+				<h1 class="site-title">Toast</h1>
+				<h2 class="site-tagline">A Simple CSS Framework</h2>
+			</header>
+
+			<hr class="unit span-grid">
+
+			<div class="unit one-of-four">
+				<aside role="contentinfo">
+					<p><a class="download-link" href="https://github.com/daneden/Toast">Download on Github</a></p>
+					<p>Another thing from <a href="http://daneden.me">Daniel Eden.</a></p>
+				</aside>
+			</div>
+
+			<div class="unit three-of-four">
+				<p>Toast is a CSS framework made as simple as it can be, but no simpler. A plain-English responsive grid makes simple layouts a breeze, and with <code>box-sizing</code> you can add padding and borders to the grid, without breaking a single thing.</p>
+
+				<div class="grid demo p">
+
+					<div class="unit one-of-four">.unit.one-of-four</div>
+					<div class="unit one-of-four">.unit.one-of-four</div>
+					<div class="unit one-of-four">.unit.one-of-four</div>
+					<div class="unit one-of-four">.unit.one-of-four</div>
+
+					<div class="unit one-of-three">.unit.one-of-three</div>
+					<div class="unit one-of-three">.unit.one-of-three</div>
+					<div class="unit one-of-three">.unit.one-of-three</div>
+
+					<div class="unit one-of-three">.unit.one-of-three</div>
+					<div class="unit two-of-three">.unit.two-of-three</div>
+
+					<div class="unit one-of-two">.unit.one-of-two</div>
+					<div class="unit one-of-two">.unit.one-of-two</div>
+
+					<div class="unit span-grid">.unit.span-grid</div>
+
+					<div class="unit two-of-five">.unit.two-of-five</div>
+					<div class="unit three-of-five">.unit.three-of-five</div>
+
+				</div>
+
+				<h3>No floats, no clearfix; no worries.</h3>
+				<p>By using <code>display: inline-block</code>, Toast saves the headache of clearing floats, and allows you to use floats what they were originally intended for - not for laying out websites.</p>
+
+				<h3>Responsibly responsive.</h3>
+				<p>Toast includes two main states - a single column layout for narrow screen and mobile devices, and a multi-column layout up to a default width of 960px. It's super easy to adjust Toast for your own needs - simply change the <code>min-width</code> in <code>toast.css</code>, or write your own media queries for the screen sizes you want.</p>
+
+				<h3>IE7 is dead - long live IE8.</h3>
+				<p>Using pain-free CSS properties like <code>box-sizing</code> and <code>display: inline-block</code> hasn't come without it's sacrifices; Toast only supports Internet Explorer 8 and up. But that's OK - you don't like old IE7 much anyway, do you?</p>
+
+				<hr>
+
+				<h2>Usage</h2>
+				<p>Using Toast couldn’t be simpler. Just drop the CSS into your site’s <code>&lt;head&gt;</code>, and add create grids like so:</p>
+				<pre class=" language-markup"><code class=" language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>grid<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>unit one-of-two<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+        Content
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>unit one-of-two<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+        Content
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>unit span-grid<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+        Content
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span></code></pre>
+
+				<h2>Notes</h2>
+				<p>The main intention of Toast is to provide a barebones framework from which to build prototype layouts for websites. For best results, take Toast and adjust it for your needs.</p>
+				<p>There&rsquo;s no plug-and-play solution for web design. No framework will be perfect, but hopefully Toast is simple enough to work as a starting point for a variety of projects.</p>
+				<p>Feel free to <a href="http://twitter.com/_dte">tweet me</a> your suggestions or queries.</p>
+			</div>
+		
+		</div>
+
+	</div>
+</body>
+</html>

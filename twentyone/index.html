@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Daniel Eden ~ Twenty One Years in the Making</title>
+	<link href='http://fonts.googleapis.com/css?family=Six+Caps' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="s.css">
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script src="jquery.lettering.js"></script>
+	<script type="text/javascript">
+	  TypekitConfig = {
+	    kitId: 'dln0cub',
+	    scriptTimeout: 3000
+	  };
+	  (function() {
+	    var h = document.getElementsByTagName('html')[0];
+	    h.className += ' wf-loading';
+	    var t = setTimeout(function() {
+	      h.className = h.className.replace(/(\s|^)wf-loading(\s|$)/g, '');
+	      h.className += ' wf-inactive';
+	    }, TypekitConfig.scriptTimeout);
+	    var tk = document.createElement('script');
+	    tk.src = '//use.typekit.com/' + TypekitConfig.kitId + '.js';
+	    tk.type = 'text/javascript';
+	    tk.async = 'true';
+	    tk.onload = tk.onreadystatechange = function() {
+	      var rs = this.readyState;
+	      if (rs && rs != 'complete' && rs != 'loaded') return;
+	      clearTimeout(t);
+	      try { Typekit.load(TypekitConfig); } catch (e) {}
+	    };
+	    var s = document.getElementsByTagName('script')[0];
+	    s.parentNode.insertBefore(tk, s);
+	  })();
+	</script>
+</head>
+<body>
+	<article>
+		<header>
+			<h1>21<br> years in the<br> making</h1>
+		</header>
+		<section id="stats">
+			<ul class="stats cf">
+				<li><em>7670</em> days on earth</li>
+				<li><em>1437</em> cups of tea drunk*</li>
+				<li><em>8</em> countries visited</li>
+			</ul>
+			<footer>
+				<p>* Actual results may vary</p>
+			</footer>
+		</section>
+		<section id="progress">
+			<div class="life">
+				<span class="progress"><b>26% complete</b><span>
+			</div>
+		</section>
+		<section id="profile" class="cf">
+			<h2>18th February 1991</h2>
+			<div class="me then">
+				<img src="images/then.jpg" alt="Me, as a wee baby">
+				<h3>Then</h3>
+				<p><strong>Likes:</strong></p>
+				<ul>
+					<li>Shapes</li>
+					<li>Colours</li>
+					<li>Pooping</li>
+					<li>Chewing</li>
+				</ul>
+				<p><strong>Dislikes:</strong></p>
+				<ul>
+					<li>Not sleeping</li>
+					<li>Not eating</li>
+					<li>Talking</li>
+				</ul>
+			</div>
+			<div class="me now">
+				<img src="images/now.jpg" alt="Me, age 20. Close enough.">
+				<h3>Now</h3>
+				<p><strong>Likes:</strong></p>
+				<ul>
+					<li>Food</li>
+					<li>Music</li>
+					<li>Design</li>
+					<li>Beer</li>
+				</ul>
+				<p><strong>Dislikes:</strong></p>
+				<ul>
+					<li>Not sleeping</li>
+					<li>Not eating</li>
+					<li>Mushrooms</li>
+				</ul>
+			</div>
+		</section>
+		<section id="currently">
+			Currently a designer based in <strong>Stockport</strong>
+		</section>
+		<footer role="contentinfo">
+			Follow <a href="http://twitter.com/_dte">Dan on Twitter</a>
+		</footer>
+	</article>
+	<script>
+	$('header h1').lettering('lines').children('span').lettering();
+	</script>
+</body>
+</html>

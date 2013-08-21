@@ -5,3 +5,5 @@ rdiscount:
   extensions: [smart]
 
 pygments: true
+
+permalink: /:year/:month/:day/:title/

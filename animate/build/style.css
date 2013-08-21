@@ -1,0 +1,274 @@
+/* style.css */
+
+*  {
+	margin: 0;
+	padding: 0;
+}
+
+::selection {
+	background: #F8F7C9;
+	color: #CB9240;
+	text-shadow: none;
+}
+
+::-moz-selection {
+	background: #F8F7C9;
+	color: #CB9240;
+	text-shadow: none;
+}
+
+/* For modern browsers */
+.cf:before,
+.cf:after {
+    content:"";
+    display:table;
+}
+
+.cf:after {
+    clear:both;
+}
+
+/* For IE 6/7 (trigger hasLayout) */
+.cf {
+    zoom:1;
+}
+
+html {
+	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+	color: #444;
+	background: #f9f9f9;
+	font-size: 100%;
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+}
+
+.support {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: .75em 0;
+	background: #F4B442;
+	color: #300;
+	text-shadow: 0 1px 0 rgba(255,255,255,.3);
+	text-align: center;
+	font-weight: bold;
+}
+
+.cssanimations .support {
+	content: "Woohoo! Your browser supports CSS animations!";
+}
+
+.no-cssanimations {
+	margin-top: 1.5em;
+}
+
+.no-cssanimations .support {
+	display: block;
+}
+
+hr {
+	border: 0;
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+	clear: both;
+	height: 0;
+	display: block;
+	margin: 1.5em 0;
+}
+
+h1, h2, h3, h4 {
+	color: #000;
+}
+
+.back {
+	display: none;
+	-webkit-animation-duration: .75s;
+	-webkit-animation-delay: .5s;
+	-webkit-animation-timing-function: ease;
+	-webkit-animation-fill-mode: both;
+	-webkit-animation-name: fadeInLeft;
+	-moz-animation-duration: .75s;
+	-moz-animation-delay: .5s;
+	-moz-animation-timing-function: ease;
+	-moz-animation-fill-mode: both;
+	-moz-animation-name: fadeInLeft;
+	animation-duration: .75s;
+	animation-delay: .5s;
+	animation-timing-function: ease;
+	animation-fill-mode: both;
+	animation-name: fadeInLeft;
+}
+
+h1:hover .back {
+	display: inline-block;
+}
+
+h3 {
+	margin-top: 1.5em;
+}
+
+h3:first-child {
+	margin-top: 0;
+}
+
+p {
+	margin-bottom: 1.5em;
+}
+
+code {
+	font-size: 1.2em;
+	line-height: 1;
+	font-weight: 700;
+	color: #36a978;
+}
+
+a {
+	text-decoration: none;
+	color: #fe5741;
+	font-weight: bold;
+}
+
+a:hover {
+	color: #fe391f;
+	text-decoration: underline;
+}
+
+.alignright {
+	float: right;
+}
+
+.container {
+	max-width: 600px;
+	padding: 0 16px;
+	margin: 24px auto;
+	-webkit-animation-duration: .75s;
+	-webkit-animation-delay: .5s;
+	-webkit-animation-timing-function: ease;
+	-webkit-animation-fill-mode: both;
+	-webkit-animation-name: bounceInLeft;
+	-moz-animation-duration: .75s;
+	-moz-animation-delay: .5s;
+	-moz-animation-timing-function: ease;
+	-moz-animation-fill-mode: both;
+	-moz-animation-name: bounceInLeft;
+	animation-duration: .75s;
+	animation-delay: .5s;
+	animation-timing-function: ease;
+	animation-fill-mode: both;
+	animation-name: bounceInLeft;
+}
+
+.checks {
+	margin-top: .5em;
+	border-top: 1px dashed #c8e4f1;
+}
+
+form h3 a {
+	color: #aaa;
+}
+
+.checks li {
+	display: block;
+	float: left;
+	list-style: none;
+	padding: 2.1%;
+	margin: 0;
+	width: 29%;
+	border-bottom: 1px dashed #c8e4f1;
+	background: #e4f1f8;
+	font-size: .9em;
+	line-height: 1;
+	text-shadow: 0 1px 0 rgba(255,255,255,.7);
+}
+
+.checks label {
+	position: relative;
+	top: -.2em;
+	font-family: monospace;
+	display: inline-block;
+	padding: 1em;
+	margin: -1em;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-timing-function: ease;
+	-webkit-animation-fill-mode: both;
+	-moz-animation-duration: 1s;
+	-moz-animation-timing-function: ease;
+	-moz-animation-fill-mode: both;
+	-ms-animation-duration: 1s;
+	-ms-animation-timing-function: ease;
+	-ms-animation-fill-mode: both;
+	animation-duration: 1s;
+	animation-timing-function: ease;
+	animation-fill-mode: both;
+}
+
+.checks li:nth-child(3n-1) {
+	background: #f1f8fc;
+}
+
+footer {
+	margin: 1.5em 0 0;
+	border-top: 1px solid #ddd;
+	color: #aaa;
+	padding: 1.5em 0 0;
+}
+
+footer a {
+	color: #666;
+}
+
+.github {
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-delay: 1s;
+	-webkit-animation-timing-function: ease;
+	-webkit-animation-fill-mode: both;
+	-moz-animation-duration: 1s;
+	-moz-animation-delay: 1s;
+	-moz-animation-timing-function: ease;
+	-moz-animation-fill-mode: both;
+	-ms-animation-duration: 1s;
+	-ms-animation-delay: 1s;
+	-ms-animation-timing-function: ease;
+	-ms-animation-fill-mode: both;
+	animation-delay: 1s;
+	animation-duration: 1s;
+	animation-timing-function: ease;
+	animation-fill-mode: both;
+}
+
+@media screen and (max-width: 600px) {
+	body {
+		-webkit-font-smoothing: antialiased;
+	}
+
+	.github {
+		display: none;
+	}
+
+	footer {
+		font-size: .9em;
+	}
+
+	small {
+		font-size: .6em;
+	}
+
+	.checks li {
+		width: 46%;
+	}
+
+	.checks li:nth-child(3n-1) {
+		background: #e4f1f8;
+	}
+
+	.checks li:nth-child(even) {
+		background: #f1f8fc;
+	}
+
+}

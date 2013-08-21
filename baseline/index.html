@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+	<title>Baseline.js | Vertical rhythm made easy</title>
+	<meta charset=utf-8>
+	<link rel=stylesheet href="a/s.css">
+	<script type="text/javascript" src="http://use.typekit.com/ykh8rmv.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<header role=banner>
+		<div class=wrap>
+			<h1 class=title>Baseline.js</h1>
+		</div>
+	</header>
+	<section role=main>
+		<div class=wrap>
+			<p>Implementing a vertical baseline can be pretty easy. But maintaining one can be difficult, particularly with the addition of images in articles and webpages. That&rsquo;s where Baseline.js steps in.</p>
+			<p><a class="butt go" href="https://github.com/daneden/Baseline.js">Download on Github</a></p>
+			<p>Baseline.js is a jQuery plugin that helps you to maintain vertical rhythm set by a typographic baseline, even when adding inline images with awkward sizes.</p>
+			<p>Using Baseline.js couldn't be easier. Simply include jQuery along with the plugin, and call it like so:</p>
+			<pre><i>// This sets all images on the page to a baseline of 24px</i>
+$(<b>'img'</b>).baseline(<span>24</span>);
+
+<i>// This sets all images inside .content to a baseline of 30px</i>
+$(<b>'.content img'</b>).baseline(<span>30</span>);
+
+<i>// This sets all images inside .content to a baseline of 24px, changing to 30px above 700px widths</i>
+$(<b>'.content img'</b>).baseline({<span>'0px'</span>:<span>24</span>, <span>'700px'</span>:<span>30</span>});</pre>
+			<p>You can see the effect Baseline.js has for yourself below. It also works with responsive design - try resizing your browser!</p>
+			<p><a class="toggle butt" href="javascript:toggle();">Turn Baseline.js on</a></p>
+			<div class=demo>
+				<img src="http://placedog.com/700/437">
+				<p>Nulla fringilla, orci ac euismod semper, magna diam porttitor mauris, quis sollicitudin sapien justo in libero. Vestibulum mollis mauris enim. Morbi euismod magna ac lorem rutrum elementum. Donec viverra auctor lobortis. Pellentesque eu est a nulla placerat dignissim. Morbi a enim in magna semper bibendum.</p>
+				<img src="http://placedog.com/300/233">
+				<p>Nulla fringilla, orci ac euismod semper, magna diam porttitor mauris, quis sollicitudin sapien justo in libero. Vestibulum mollis mauris enim. Morbi euismod magna ac lorem rutrum elementum. Donec viverra auctor lobortis. Pellentesque eu est a nulla placerat dignissim. Morbi a enim in magna semper bibendum.</p>
+			</div>
+			<p>You see that? Vertical rhythm in 2 easy steps. <a href="https://github.com/daneden/Baseline.js">Download or contribute on Github.</a></p>
+		</div>
+	</section>
+	<footer role=contentinfo>
+		<div class=wrap>
+			<p>Another thing by <a href="http://daneden.me">Daniel Eden</a></p>
+		</div>
+	</footer>
+	<script src="http://code.jquery.com/jquery.min.js"></script>
+	<script src="a/jquery.baseline.js"></script>
+	<script src="a/coffee.js"></script>
+	<script type="text/javascript">
+	  var _gauges = _gauges || [];
+	  (function() {
+	    var t   = document.createElement('script');
+	    t.type  = 'text/javascript';
+	    t.async = true;
+	    t.id    = 'gauges-tracker';
+	    t.setAttribute('data-site-id', '4fe2437cf5a1f52a5200000d');
+	    t.src = '//secure.gaug.es/track.js';
+	    var s = document.getElementsByTagName('script')[0];
+	    s.parentNode.insertBefore(t, s);
+	  })();
+	</script>
