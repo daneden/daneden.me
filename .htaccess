@@ -1,18 +1,3 @@
-<files .htaccess>
-Order allow,deny
-Deny from all
-</files>
-
-<files readme.html>
-Order allow,deny
-Deny from all
-</files>
-
-<files readme.txt>
-Order allow,deny
-Deny from all
-</files>
-
 # Apache configuration file
 # httpd.apache.org/docs/2.2/mod/quickreference.html
 
