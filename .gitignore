@@ -1,2 +1,7 @@
 _site
+<<<<<<< HEAD
 .sass-cache
+=======
+.sass-cache
+.DS_Store
+>>>>>>> f5ece991cc6cb7c1db88d953c6bc6175849d254c

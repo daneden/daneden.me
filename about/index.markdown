@@ -5,7 +5,7 @@ permalink: ''
 in-nav: true
 ---
 
-![This is my face. There are many like it but this one is mine.](http://daneden.me/wp-content/uploads/2011/09/Portrait.jpg)
+![This is my face. There are many like it but this one is mine.](http://daneden.me/uploads/2011/09/Portrait.jpg)
 
 Hello. My name is Daniel Eden, and I'm a designer.
 
