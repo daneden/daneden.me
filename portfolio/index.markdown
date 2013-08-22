@@ -24,9 +24,9 @@ If you want to see more of what I'm working on, you can look at my design work-i
 
 I was responsible for the branding, design, and front-end development of Gateway. [Visit the site](http://gateway-learning.com).
 
-![Gateway Home Page](http://daneden.me/wp-content/uploads/2012/05/Portfolio_0001_Gateway-Homepage.jpg)
+![Gateway Home Page](http://daneden.me/uploads/2012/05/Portfolio_0001_Gateway-Homepage.jpg)
 
-![Gateway Design](http://daneden.me/wp-content/uploads/2012/05/gateway-design.png)
+![Gateway Design](http://daneden.me/uploads/2012/05/gateway-design.png)
 
 
 
@@ -37,9 +37,9 @@ Tired of only being able to access my iA Writer documents on my iOS devices, I c
 
 [Visit the site](http://onword.co).
 
-![Onword Focus](http://daneden.me/wp-content/uploads/2012/05/Portfolio_0003_Onword-Focus.jpg)
+![Onword Focus](http://daneden.me/uploads/2012/05/Portfolio_0003_Onword-Focus.jpg)
 
-![Onword Home page](http://daneden.me/wp-content/uploads/2012/05/Portfolio_0002_Onword-Home.jpg)
+![Onword Home page](http://daneden.me/uploads/2012/05/Portfolio_0002_Onword-Home.jpg)
 
 
 
@@ -48,7 +48,7 @@ Tired of only being able to access my iA Writer documents on my iOS devices, I c
 
 I was invited to speak at this year's [Webshaped](http://webshaped.fi) conference, alongside some incredible folk I've long admired. It was terrifying, amazing, and I'd love to do it again. My presentation tackled animation on the web, and how we can delight our audience by integrating animation in our websites and applications. You can [read more](http://daneden.me/2012/05/i-have-no-idea-what-im-doing/) about my time there. And that's not me up on stage in the picture - that's [Kyle.](http://twitter.com/kneath)
 
-[![Webshaped](http://daneden.me/wp-content/uploads/2012/05/webshaped.jpg)](http://webshaped.fi)
+[![Webshaped](http://daneden.me/uploads/2012/05/webshaped.jpg)](http://webshaped.fi)
 
 
 
@@ -57,7 +57,7 @@ I was invited to speak at this year's [Webshaped](http://webshaped.fi) conferenc
 
 I recently [became an “adult”](http://daneden.me/twentyone), whatever that means. So I thought it was about time I got myself some business cards and establish some sort of personal branding. Rubber stamps are a relatively cheap way to instantly make handwritten letters a lot more fun.
 
-![Branding](http://daneden.me/wp-content/uploads/2012/05/branding.jpg)
+![Branding](http://daneden.me/uploads/2012/05/branding.jpg)
 
 
 
@@ -68,9 +68,9 @@ I designed and developed [Brills](http://brills.me) to quench my thirst for a si
 
 [Visit the site](http://brills.me).
 
-![Brills](http://daneden.me/wp-content/uploads/2012/05/Portfolio_0004_Brills-e1375342196515.jpg)
+![Brills](http://daneden.me/uploads/2012/05/Portfolio_0004_Brills-e1375342196515.jpg)
 
-![Brills Design](http://daneden.me/wp-content/uploads/2012/05/brills-design.png)
+![Brills Design](http://daneden.me/uploads/2012/05/brills-design.png)
 
 
 
@@ -81,7 +81,7 @@ During the development of Brills, I found myself spending a lot of time writing 
 
 [Animate.css](http://daneden.me/animate) is a cross-browser plug-and-play CSS animation library for delightful animation in websites and web applications. [Visit the site](http://daneden.me/animate).
 
-![Animate.css](http://daneden.me/wp-content/uploads/2012/05/Portfolio_0006_Animate.css.jpg)
+![Animate.css](http://daneden.me/uploads/2012/05/Portfolio_0006_Animate.css.jpg)
 
 
 
@@ -92,4 +92,4 @@ During the development of Brills, I found myself spending a lot of time writing 
 
 [Visit the site](http://daneden.me/toast).
 
-![Toast](http://daneden.me/wp-content/uploads/2012/05/Portfolio_0007_Toast.jpg)
+![Toast](http://daneden.me/uploads/2012/05/Portfolio_0007_Toast.jpg)
