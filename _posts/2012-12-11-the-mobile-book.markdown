@@ -3,7 +3,9 @@ layout: post
 title: The Mobile Book
 ---
 
-[![](/uploads/2012/12/the-mobile-book.png)](https://shop.smashingmagazine.com/the-mobile-book.html) The always-brilliant Smashing Magazine gave me the opportunity to review their new book, [The Mobile Book](https://shop.smashingmagazine.com/the-mobile-book.html). _TL;DR_ -- buy this book. It'll change the way you work.
+{% image alignleft /uploads/2012/12/the-mobile-book.png %}
+
+The always-brilliant Smashing Magazine gave me the opportunity to review their new book, [The Mobile Book](https://shop.smashingmagazine.com/the-mobile-book.html). _TL;DR_ -- buy this book. It'll change the way you work.
 
 I've not been on this planet for a very long time. Just about long enough to call myself a child of the Internet. I was there in the dial-up days of the 90's and early 2000's, when you'd have to kick me off the computer if you wanted to make a phone call. Then broadband came along; this changed everything. No more dial-up tone! (I actually miss the dial-up tone) No more crazy data-per-minute charges! Things were looking up.
 

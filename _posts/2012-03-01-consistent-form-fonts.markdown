@@ -8,15 +8,16 @@ It's not very often I write something code-oriented these days, but this is a ge
 If, like me, using a full-on reset or normalizing stylesheet makes you feel dirty and wrong, you probably stick with something really simple like this:
 
 
+{% highlight css %}
+* {
+    margin: 0;
+    padding: 0;
+}
 
-    * {
-        margin: 0;
-        padding: 0;
-    }
-
-    html, body {
-        font: 100%/1.5 Helvetica Neue, Helvetica, Arial, sans-serif;
-    }
+html, body {
+    font: 100%/1.5 Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+{% endhighlight %}
 
 
 
@@ -25,13 +26,13 @@ That's about as complex as my reset gets. But then you drop a form into your HTM
 But fear not; Rogie has the solution.
 
 
-
-    input, textarea, select {
-        font-size: inherit;
-        font-family: inherit;
-        line-height: inherit;
-    }
-
+{% highlight css %}
+input, textarea, select {
+    font-size: inherit;
+    font-family: inherit;
+    line-height: inherit;
+}
+{% endhighlight %}
 
 
 It turns out that by default, form elements don't inherit the declared font values. Heck, even [Eric Meyer's reset](http://meyerweb.com/eric/tools/css/reset/) doesn't provide consistent form fonts.

@@ -1,0 +1,87 @@
+/*-----------------------------------*\
+  $TYPE
+\*-----------------------------------*/
+
+a {
+  color: $link;
+  text-decoration: none;
+}
+
+  a:hover, a:focus {
+    text-decoration: underline;
+  }
+
+hr {
+  border: none;
+  margin-bottom: 0;
+
+  &:after {
+    content: "* * *";
+    font-size: 1.75rem;
+    line-height: .857142857;
+    letter-spacing: .2em;
+    color: rgba(0,0,0,.3);
+    display: block;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+}
+
+h1, .alpha {
+  font-size: 3rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1;
+  }
+
+h2, .beta {
+  clear: both;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1;
+  font-style: italic;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+  p + h2, p + .beta {
+    padding-top: 1.5rem;
+  }
+
+h3, .gamma {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 400;
+  margin-bottom: 0;
+  font-style: normal;
+  letter-spacing: .05em;
+  font-family: "Hoefler Text SC A", "Hoefler Text SC B", "Hoefler Text", Georgia, serif;
+  text-transform: uppercase;
+}
+
+.entry-content p {
+  -webkit-hyphens: auto;
+     -moz-hyphens: auto;
+          hyphens: auto;
+}
+
+small {
+  font-size: .75rem;
+  line-height: 1.666;
+  color: rgba(0,0,0,.7);
+}
+
+del {
+  opacity: .5;
+  text-decoration: line-through;
+}
+
+.callout, .promo {
+  text-align: center;
+}
+
+.caps {
+  font-family: "Hoefler Text SC A", "Hoefler Text SC B", "Hoefler Text", Georgia, serif;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+}

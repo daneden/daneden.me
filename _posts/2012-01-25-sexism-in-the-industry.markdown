@@ -3,10 +3,6 @@ layout: post
 title: Sexism in the industry
 ---
 
-_This is the kind of post that could cause upset amongst a few people - but I assure you, I mean no harm. I'm just calling something as I see it.
-
-Onwards..._
-
 
 
 > Man in video: comments by men address what he's saying.Woman in video: comments by men address how she looks, is dressed, etc. [#wtf](https://twitter.com/search/%2523wtf)

@@ -3,8 +3,6 @@ layout: post
 title: The times they are a changin'
 ---
 
-[![](/uploads/2012/01/bbc-300x162.png)
-
 2012 is set to be a big year for the web. HTML5 is becoming a Candidate Recommendation, the heat around Responsive Web Design will start to cool down and people will actually use it in effective & purposeful ways, and Microsoft will open the Windows application development platform to hundreds of thousands of web designers and developers.
 
 We've also been blessed with the redesigns of a few popular websites - The BBC, The Boston Globe (OK, they were late 2011 - but close enough), and more recently [Smashing Magazine.](http://www.smashingmagazine.com/) These redesigns have all been received with a mixture of rave reviews, harsh criticism, and even boycotting of the site. At the risk of stating the obvious, users don't like change.
@@ -55,8 +53,6 @@ If there's one prime example of a site that undergoes changes often rejected by 
 
 
 One reason Facebook has been so immensely successful is because it's giving us features and tools we didn't even know we needed - and much of it is achieved through design.
-
-[![](/uploads/2012/01/smashing1-300x179.png)
 
 
 ## A big fish in a little bowl

@@ -13,21 +13,22 @@ However, something I noticed about this little feature is that web designers are
 
 The theory is very simple. Keep your markup lean, with only the _actual_ content between the anchor tags. Then use an attribute to insert the nibble of information about the page. While you could use the title attribute, for this example I'm going to use a data attribute.
 
-
-    <a href="/about" title="About" data-description="Learn a little more about me">About</a>
+{% highlight html %}
+<a href="/about" title="About" data-description="Learn a little more about me">About</a>
+{% endhighlight %}
 
 
 Awesome. Lean, clean, and semantic. But how do we get that nibble to appear along with our link? Enter the pseudo element.
 
-
-    a[href="/about"]:after {
-        content: attr(data-description);
-        display: block;
-        font-size: .75em;
-        line-height: 1.1;
-        color: #999;
-    }
-
+{% highlight css %}
+a[href="/about"]:after {
+    content: attr(data-description);
+    display: block;
+    font-size: .75em;
+    line-height: 1.1;
+    color: #999;
+}
+{% endhighlight %}
 
 How easy was that? After this CSS (plus a little extra), you could end up with something like this:
 

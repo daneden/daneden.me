@@ -22,36 +22,36 @@ There's so much more to writing good CSS than the code itself. In fact, I'd say 
 If, for example, we took [the media object](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/) in a large, minified CSS file, we'd probably get something like this:
 
 
-
-    .media{padding:10px;overflow:hidden}
-    .media .img{float:left;margin-right:10px}
-
+{% highlight css %}
+.media{padding:10px;overflow:hidden}
+.media .img{float:left;margin-right:10px}
+{% endhighlight %}
 
 
 A bit of an eyesore, but you get the general idea. However, someone new to CSS might not get it completely, or might go blindly in and copy the code into their own site or app, completely unaware of the meaning behind the code. Jump to our `style.max.css` and we can see the author's original intentions, clearly documented with comments:
 
 
+{% highlight css %}
+/*------------------------------------*\
+    $MEDIA
+    .media object for containing an image or some other media and corresponding text/content.
+    Usage example:
+    <div class=media>
+        <img class=img src="profile.jpg" alt="">
+        <div class=bd>This is my face. There are many like it, but this one is mine.</div>
+    </div>
+\*------------------------------------*/
 
-    /*------------------------------------*\
-        $MEDIA
-        .media object for containing an image or some other media and corresponding text/content.
-        Usage example:
-        <div class=media>
-            <img class=img src="profile.jpg" alt="">
-            <div class=bd>This is my face. There are many like it, but this one is mine.</div>
-        </div>
-    \*------------------------------------*/
+.media {
+    padding: 10px;
+    overflow: hidden; /* Clear floats - though a more reliable clearfix is recommended */
+}
 
-    .media {
-        padding: 10px;
-        overflow: hidden; /* Clear floats - though a more reliable clearfix is recommended */
-    }
-
-            .media .img {
-                float: left;
-                margin-right: 10px;
-            }
-
+        .media .img {
+            float: left;
+            margin-right: 10px;
+        }
+{% endhighlight %}
 
 
 And just like that, we've taught our designer/developer in-the-making how to clear a float, as well as informing them of better ways to do so, and demonstrating some decent practices for organising and structuring CSS. Knowledge is power.

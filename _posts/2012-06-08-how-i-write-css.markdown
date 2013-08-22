@@ -82,15 +82,15 @@ Letting my mind flow between these steps and not worrying about the organisation
 The only other issue with organisation of CSS I can think of is how we include prefixed properties. Since we're all an impatient bunch, we want to try the latest bleeding edge CSS properties as soon as our browsers will allow us. I write mine by order of length, and add indents to line values up. Here's an example:
 
 
-
-    .butt {
-        background: -webkit-linear-gradient(#012,#234);
-        background:    -moz-linear-gradient(#012,#234);
-        background:     -ms-linear-gradient(#012,#234);
-        background:      -o-linear-gradient(#012,#234);
-        background:         linear-gradient(#012,#234);
-    }
-
+{% highlight css %}
+.butt {
+    background: -webkit-linear-gradient(#012,#234);
+    background:    -moz-linear-gradient(#012,#234);
+    background:     -ms-linear-gradient(#012,#234);
+    background:      -o-linear-gradient(#012,#234);
+    background:         linear-gradient(#012,#234);
+}
+{% endhighlight %}
 
 
 While we're on the subject, will everyone [stop faffing around](http://daneden.me/2012/05/preprocessors/) with preprocessors and realise it took me all of 10 seconds to write those prefixes? I don't mean that, actually. Do what you like. I'll just be grumbling in the corner.

@@ -27,26 +27,14 @@ In the end, I opted for the Epson. It seemed like the lesser of two evils, and i
 
 One thing I noticed throughout my research was that every single printer currently made has these exact same characteristics:
 
-
-
-
   * Awkward, boxy design
-
-
   * High maintenance costs
-
-
   * Large physical footprint
-
-
   * (Almost) useless screens
-
 
 It's already been [pointed out](https://twitter.com/#!/JackT_Taylor/status/142605049854562305) to me that you don't buy something like a printer because of the way it looks - you buy it for how it performs. But here's the thing with design in everyday objects - they're everyday. If I'm going to have anything in my life that is going to be involved in my every day work and life, I want it to look great - or at least be unobtrusive in it's appearance. That's why I opt for the more expensive, better looking [Field Notes](http://fieldnotesbrand.com/) than Tesco's own notepads. It's why I'd go for the ludicrously expensive [Roberts DAB radio](http://www.robertsradio.co.uk/index.htm) if I were going to purchase a digital radio.
 
 Design **is** function. Design should be functional. Everything should be considered. To dismiss my fussiness as fanboyism and a "form over function" approach is silly. If something is going to be staring you in the face all day, it has to be designed in a way that prevents it from involving itself too much. It has to step aside and let you do what you need, but always be there for when you need it.
-
-[![](/uploads/2011/12/365_day_5_image_1_1.jpg)
 
 Take the [Nest thermostat](http://www.nest.com/) as an example. It's simple design is it's key selling point - it makes it easier to use, less intrusive in the home environment; it would even make a killer talking point. Very rarely do you see this in the design of printers, (or indeed any computers - but that's getting better) but it would undoubtedly make them a lot more desirable.
 

@@ -9,46 +9,46 @@ It seems like everyone is pretty obsessed with CSS preprocessors at the moment. 
 
 In case you still don't “get it”, here's an example of the syntax for one of the popular CSS processors, [LESS](http://lesscss.org/). Here's the code you punch in:
 
+{% highlight css %}
+@color: #b4bcbf;
 
-    @color: #b4bcbf;
+.rounded-corners (@radius: 5px) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    border-radius: @radius;
+}
 
-    .rounded-corners (@radius: 5px) {
-        -webkit-border-radius: @radius;
-        -moz-border-radius: @radius;
-        border-radius: @radius;
+.banner {
+    .rounded-corners;
+}
+.footer {
+    .rounded-corners(10px);
+
+    a {
+        color: lighten(@color, 10%);
     }
-
-    .banner {
-        .rounded-corners;
-    }
-    .footer {
-        .rounded-corners(10px);
-
-        a {
-            color: lighten(@color, 10%);
-        }
-    }
-
+}
+{% endhighlight %}
 
 And here's what would get spat back out the other side:
 
+{% highlight css %}
+.banner {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
 
-    .banner {
-        -webkit-border-radius: 5px;
-        -moz-border-radius: 5px;
-        border-radius: 5px;
-    }
+.footer {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
 
-    .footer {
-        -webkit-border-radius: 10px;
-        -moz-border-radius: 10px;
-        border-radius: 10px;
-    }
-
-    .footer a {
-        color: #ccd5d9;
-    }
-
+.footer a {
+    color: #ccd5d9;
+}
+{% endhighlight %}
 
 Pretty fantastic, right? You can see why people are getting so excited about preprocessors. They make a lot of hellish stuff a breeze, particularly when managing a large website.
 
@@ -67,63 +67,63 @@ In my experience with LESS, once you start nesting rules, it can cause a real sp
 
 Another thing that boggles me is mixins. They're a pretty smart idea, actually. You can declare a set of rules in a sort of component that can be reused in your CSS. Wow, that's brilliant!
 
+{% highlight css %}
+.box-content {
+    padding: 20px;
+    border: 1px solid #eee;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
 
-    .box-content {
-        padding: 20px;
-        border: 1px solid #eee;
-        -webkit-border-radius: 5px;
-        -moz-border-radius: 5px;
-        border-radius: 5px;
-    }
+/* <div class=sidebar> */
+.sidebar {
+    .box-content;
+    float: right;
+    margin-left: 20px;
+}
 
-    /* <div class=sidebar> */
-    .sidebar {
-        .box-content;
-        float: right;
-        margin-left: 20px;
-    }
+/* <footer class=footer> */
+.footer {
+    .box-content;
+    clear: both;
+}
 
-    /* <footer class=footer> */
-    .footer {
-        .box-content;
-        clear: both;
-    }
+/* Output: */
+.sidebar {
+    padding: 20px;
+    border: 1px solid #eee;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    float: right;
+    margin-left: 20px;
+}
 
-    /* Output: */
-    .sidebar {
-        padding: 20px;
-        border: 1px solid #eee;
-        -webkit-border-radius: 5px;
-        -moz-border-radius: 5px;
-        border-radius: 5px;
-        float: right;
-        margin-left: 20px;
-    }
-
-    .footer {
-        padding: 20px;
-        border: 1px solid #eee;
-        -webkit-border-radius: 5px;
-        -moz-border-radius: 5px;
-        border-radius: 5px;
-        clear: both;
-    }
-
+.footer {
+    padding: 20px;
+    border: 1px solid #eee;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    clear: both;
+}
+{% endhighlight %}
 
 Wait. Don't classes do that?
 
+{% highlight css %}
+.island {
+    padding: 20px;
+    border: 1px solid #eee;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
 
-    .island {
-        padding: 20px;
-        border: 1px solid #eee;
-        -webkit-border-radius: 5px;
-        -moz-border-radius: 5px;
-        border-radius: 5px;
-    }
-
-    /* <div class="sidebar island"> */
-    /* <footer class="footer island"> */
-
+/* <div class="sidebar island"> */
+/* <footer class="footer island"> */
+{% endhighlight %}
 
 I know that's a silly example - most people would use a class anyway, and mixins are better suited for allowing variables in declarations such as border-radius - but preprocessors could enforce the idea that this sort of authoring is acceptable.
 
@@ -133,18 +133,18 @@ I know that's a silly example - most people would use a class anyway, and mixins
 
 That's true. Variables were one of the more attractive features of preprocessors for me. But once again, logic and good documentation can triumph over preprocessors.
 
+{% highlight css %}
+@blue: #b4bcbf;
+@red: #f66;
 
-    @blue: #b4bcbf;
-    @red: #f66;
+/* Sweet! But... why don't we just acknowledge these colors somewhere and do a simple find and replace? */
 
-    /* Sweet! But... why don't we just acknowledge these colors somewhere and do a simple find and replace? */
-
-    /*-----------------------*\
-        $COLORS
-        Blue: #b4bcbf;
-        Orange: #f66;
-    \*-----------------------*/
-
+/*-----------------------*\
+    $COLORS
+    Blue: #b4bcbf;
+    Orange: #f66;
+\*-----------------------*/
+{% endhighlight %}
 
 If you struggle to do a find and replace in your favorite code editor, you probably need [a new code editor.](http://www.sublimetext.com/) One thing I'll say in favor of preprocessors are the math functions. They're pretty neat. Particularly when it comes to dealing with colors.
 

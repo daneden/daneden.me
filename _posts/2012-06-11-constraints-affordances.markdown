@@ -15,8 +15,6 @@ And so we step back towards the traditional methods. We give ourselves limits an
 
 I doubt it. There's a deep longing in me. A need to make something real. Something to hold and smell. A book. A print. A walking stick, for all I care. It can be tiring creating something that can so easily vanish with a simple tap of a keyboard. So I plan, and I practice for the day it's possible for me to make. To craft. To feel the constraints of the situation, and to mould them into a product.
 
-[![](/uploads/2012/06/Drunke-300x201.jpg)](/uploads/2012/06/Drunke.jpg)
-
 I studied photography at [college](http://www.camsfc.ac.uk), which I thoroughly enjoyed, not least because of how hands-on it would get. We'd spend hours in the darkroom, come out stinking of chemicals and going through so many materials just to get some kind of picture developed. Most of the time, the photograph comes out nothing like you'd imagined. It's overexposed. Or there's so much dust on the thing you couldn't tell it was taken in this century. But no matter how bad the results, the time and care and process behind it gives it a worth so profound that you share it with pride regardless of its artistic value. The imperfections are a mark of our craft. We don't have that on the web.
 
 There are no happy accidents. No overexposures. Mistakes are logged in version control, or comments, but quickly shooed away. We're not brave enough. We strive too hard for perfection.

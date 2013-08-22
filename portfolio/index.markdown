@@ -68,8 +68,6 @@ I designed and developed [Brills](http://brills.me) to quench my thirst for a si
 
 [Visit the site](http://brills.me).
 
-![Brills](http://daneden.me/uploads/2012/05/Portfolio_0004_Brills-e1375342196515.jpg)
-
 ![Brills Design](http://daneden.me/uploads/2012/05/brills-design.png)
 
 

@@ -49,14 +49,14 @@ I'm a huge fan of WordPress. However, one thing that does drive me crazy is movi
 Luckily, there's a trick you can use to have one connection locally, and another on the remote server. On your local machine, create a copy of `wp-config.php` and give it the name `wp-config-local.php`. Put your local database connection credentials in there. Now, make the following changes to `wp-config.php`:
 
 
-
-    <?php
-    if ( file_exists( dirname( __FILE__ ) . '/wp-config-local.php' ) ) {
-        require_once dirname(__FILE__) . '/wp-config-local.php';
-    } else {
-        /* Put your remote/original wp-config here */
-    }
-
+{% highlight php %}
+<?php
+if ( file_exists( dirname( __FILE__ ) . '/wp-config-local.php' ) ) {
+    require_once dirname(__FILE__) . '/wp-config-local.php';
+} else {
+    /* Put your remote/original wp-config here */
+}
+{% endhighlight %}
 
 
 Then, when you upload your site back to the remote server, just be sure not to include `wp-config-local.php`. Neat, right?
@@ -64,15 +64,15 @@ Then, when you upload your site back to the remote server, just be sure not to i
 One last thing to do on our local environment. We don't want to download all the uploaded media, so we should request it from the production server. To do that, we need a `.htaccess` file inside `/wp-content/uploads/` that looks like this:
 
 
-
-    # Attempt to load files from production if they're not in our local version
-    <IfModule mod_rewrite.c>
-      RewriteEngine on
-      RewriteCond %{REQUEST_FILENAME} !-d
-      RewriteCond %{REQUEST_FILENAME} !-f
-      RewriteRule (.*) /uploads/$1
-    </IfModule>
-
+{% highlight apache %}
+# Attempt to load files from production if they're not in our local version
+<IfModule mod_rewrite.c>
+  RewriteEngine on
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule (.*) /uploads/$1
+</IfModule>
+{% endhighlight %}
 
 
 
@@ -85,22 +85,22 @@ Let's bring this back to the main topic: Git. Now, I'm a huge fan of GitHub, so 
 The first thing I did was create a new private repository on GitHub. If you're a student, GitHub will give you a [free "micro" plan](https://github.com/edu). After I'd created the repo, I wrote up a `.gitignore` file with all the files I didn't want uploading. Mine looks like this:
 
 
+{% highlight apache %}
+# Exclude these files from the git repo
+wp-content/cache/*
+wp-content/plugins/wp-minify/cache/*
+wp-content/upgrade/*
+wp-content/uploads/*
+sitemap.*
+wp-config-local.php
 
-    # Exclude these files from the git repo
-    wp-content/cache/*
-    wp-content/plugins/wp-minify/cache/*
-    wp-content/upgrade/*
-    wp-content/uploads/*
-    sitemap.*
-    wp-config-local.php
+# Hidden system files
+*.DS_Store
+*Thumbs.DB
 
-    # Hidden system files
-    *.DS_Store
-    *Thumbs.DB
-
-    # Include these files in previously blocked directories
-    !wp-content/uploads/.htaccess
-
+# Include these files in previously blocked directories
+!wp-content/uploads/.htaccess
+{% endhighlight %}
 
 
 Next, I added the GitHub repo as a remote origin on my local machine, added all my files, and pushed to the remote repo. My website is now on GitHub. Hooray! But how could I get anything I push to GitHub to then go to my remote server?
@@ -115,9 +115,9 @@ This is where things start to get cool. On the remote server in the root of my s
 I created a PHP file in the root of the site with the contents:
 
 
-
-    <?php `git pull`;
-
+{% highlight php %}
+<?php `git pull`;
+{% endhighlight %}
 
 
 While those look like single quotes, they're actually backticks. This tells the server to execute the contents as if they were entered on a command line. The final step was to point to this PHP script as a WebHook URL in the repository settings on GitHub.

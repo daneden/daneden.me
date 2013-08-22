@@ -1,0 +1,40 @@
+/*-----------------------------------*\
+  $SHARED
+\*-----------------------------------*/
+
+::selection {
+  background-color: #dddedf;
+  text-shadow: none;
+}
+
+::-moz-selection {
+  background-color: #dddedf;
+  text-shadow: none;
+}
+
+:target, mark {
+  background-color: rgba(255,200,0,.3);
+}
+
+img, video, figure {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+h1, h2, h3, p, ul, ol, dl, dd, table, .highlight, form, picture {
+  margin-bottom: $baseline;
+  display: block;
+}
+
+ul, ol {
+  padding-left: 1.5em;
+}
+
+ul {
+  list-style: square;
+}
+
+li ul, li ol {
+  margin-bottom: 0;
+}
