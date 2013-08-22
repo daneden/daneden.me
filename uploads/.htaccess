@@ -1,7 +1,0 @@
-# Attempt to load files from production if they're not in our local version
-<IfModule mod_rewrite.c>
-  RewriteEngine on
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteRule (.*) http://daneden.me/wp-content/uploads/$1
-</IfModule>
