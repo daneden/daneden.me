@@ -1,3 +1,5 @@
+/*! Unminified source available at /assets/css/scss/style.scss */
+
 @import 'partials/reset';
 @import 'partials/base';
 @import 'partials/shared';
@@ -10,7 +12,7 @@
 \*-----------------------------------*/
 
 html {
-  font: 125%/1.5 "Hoefler Text A", "Hoefler Text B", "Hoefler Text", Georgia, serif;
+  font: 125%/1.5 $Hoefler-Text;
   color: #252525;
   background-color: $gray;
   -webkit-text-size-adjust: 100%;
@@ -191,7 +193,7 @@ body {
 }
 
     .entry-title {
-      font-family: "Requiem Display A", "Requiem Display B";
+      font-family: $Requiem;
       margin-bottom: 3rem;
     }
 
@@ -209,11 +211,11 @@ body {
 
 .entry-content > .intro {
   font-family: $Hoefler-Text-SC;
-}
 
-  .entry-content > .intro:first-letter {
+  &:first-letter {
     font-family: $Hoefler-Text;
   }
+}
 
 blockquote {
   font-family: $Whitney;
@@ -223,6 +225,10 @@ blockquote {
   margin-bottom: 1.5rem;
   color: darken($gray, 20%);
   font-style: italic;
+
+  .caps {
+    font-family: $Whitney-SC;
+  }
 
   @media screen and (max-width: 640px) {
     width: auto;

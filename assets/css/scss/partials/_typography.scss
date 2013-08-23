@@ -3,13 +3,23 @@
 \*-----------------------------------*/
 
 a {
-  color: $link;
-  text-decoration: none;
-}
-
-  a:hover, a:focus {
-    text-decoration: underline;
+  color: inherit;
+  text-decoration: underline;
+  &:hover, &:focus {
+    color: $link;
   }
+
+  .site-header &, .posts-by-year & {
+    text-decoration: none;
+  }
+
+  .posts-by-year & {
+    color: $link;
+    &:hover, &:focus {
+      text-decoration: underline;
+    }
+  }
+}
 
 hr {
   border: none;
