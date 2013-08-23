@@ -12,7 +12,7 @@
 html {
   font: 125%/1.5 "Hoefler Text A", "Hoefler Text B", "Hoefler Text", Georgia, serif;
   color: #252525;
-  background-color: #cccbc4;
+  background-color: $gray;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
   -webkit-font-feature-settings: "liga", "dlig";
@@ -208,92 +208,44 @@ body {
     }
 
 .entry-content > .intro {
-  font-family: "Hoefler Text SC A", "Hoefler Text SC B", serif;
+  font-family: $Hoefler-Text-SC;
 }
 
   .entry-content > .intro:first-letter {
-    font-family: "Hoefler Text A", "Hoefler Text B", serif;
+    font-family: $Hoefler-Text;
   }
 
 blockquote {
-  max-width: 30em;
+  font-family: $Whitney;
+  @include box-sizing(content);
+  @include calc(width, "100% + 4rem");
+  @include calc(margin-left, "-2rem");
   margin-bottom: 1.5rem;
-  margin-left: auto;
-  margin-right: auto;
-  color: #aaa;
-  color: rgba(0,0,0,.45);
+  color: darken($gray, 20%);
   font-style: italic;
-}
 
-  blockquote em {
+  @media screen and (max-width: 640px) {
+    width: auto;
+    margin-left: 0;
+  }
+
+  em {
     font-style: normal;
   }
-
-.paging-navigation {
-  margin-bottom: 1.5rem;
 }
-
-  .paging-navigation .nav-previous {
-    float: left;
-  }
-
-  .paging-navigation .nav-next {
-    float: right;
-  }
-
-    .paging-navigation .nav-previous a, .paging-navigation .nav-next a {
-      cursor: pointer;
-      color: #fff;
-      font-size: .75rem;
-      background-color: #b5b4b3;
-      border-radius: .25em;
-      padding: .25rem .5rem .25rem;
-      font-family: "Whitney SSm SC A", "Whitney SSm SC B", "Whitney", sans-serif;
-      text-transform: uppercase;
-    }
-
-      .paging-navigation .nav-previous a {
-        border-radius: 0 .25em .25em 0;
-      }
-
-        .paging-navigation .nav-previous a:before {
-          content: '';
-          position: absolute;
-          right: 100%;
-          top: 0;
-          bottom: 0;
-          border: .65rem solid transparent;
-          border-right-color: #b5b4b3;
-        }
-
-      .paging-navigation .nav-next a {
-        border-radius: .25em 0 0 .25em;
-      }
-
-        .paging-navigation .nav-next a:before {
-          content: '';
-          position: absolute;
-          left: 100%;
-          margin-left: 1px;
-          top: 0;
-          bottom: 0;
-          border: .65rem solid transparent;
-          border-left-color: #b5b4b3;
-        }
 
 /*-----------------------------------*\
   $FOOTER
 \*-----------------------------------*/
 
 .site-footer {
-  background-color: #f8f7f6;
-  border-top: 30px solid #dfdedd;
+  background-color: desaturate(lighten($gray, 20%), 1%);
+  border-top: 30px solid desaturate(lighten($gray, 10%), 1%);
   padding: 1.5rem 0;
-  color: rgba(0,0,0,.5);
+  color: darken($gray, 40%);
   font-size: .75rem;
-}
 
-  .site-footer:after {
+  &:after {
     content:'';
     position: absolute;
     top: -1.25em;
@@ -301,7 +253,7 @@ blockquote {
     height: 1.25em;
     left: 50%;
     margin-left: -.625em;
-    background-color: #dfdedd;
+    background-color: desaturate(lighten($gray, 10%), 1%);
     background-image: url('../images/tools.svg');
     background-size: 50%;
     background-position: center;
@@ -313,19 +265,16 @@ blockquote {
     border-radius: 100%;
   }
 
+  p {
+    margin-bottom: 1.5em;
+  }
+}
+
   @media screen and (max-width: 720px) {
     .site-footer {
       font-size: .875rem;
       line-height: 1.4;
     }
-  }
-
-  .site-footer p {
-    margin-bottom: 1.5em;
-  }
-
-  .site-footer a {
-    color: rgba(0,0,20,.8);
   }
 
   .author-info .avatar {
