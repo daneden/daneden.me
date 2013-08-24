@@ -2,12 +2,6 @@
   $OBJECTS
 \*-----------------------------------*/
 
-.wrap {
-  max-width: 36rem;
-  margin: 0 auto;
-  padding: 0 3rem;
-}
-
   @media screen and (max-width: 640px) {
     .wrap {
       padding: 0 1.5rem;

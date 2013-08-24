@@ -39,19 +39,19 @@ hr {
 
 h1, .alpha {
   font-size: 3rem;
-  font-style: italic;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1;
+  letter-spacing: -.05em;
   }
 
 h2, .beta {
   clear: both;
   font-size: 1.5rem;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1;
-  font-style: italic;
+  font-style: normal;
   letter-spacing: 0;
-  text-transform: none;
+  font-family: $Sans;
 }
 
   p + h2, p + .beta {
@@ -65,7 +65,7 @@ h3, .gamma {
   margin-bottom: 0;
   font-style: normal;
   letter-spacing: .05em;
-  font-family: "Hoefler Text SC A", "Hoefler Text SC B", "Hoefler Text", Georgia, serif;
+  font-family: $Sans-SC;
   text-transform: uppercase;
 }
 
@@ -91,7 +91,7 @@ del {
 }
 
 .caps {
-  font-family: "Hoefler Text SC A", "Hoefler Text SC B", "Hoefler Text", Georgia, serif;
+  font-family: $Serif-SC;
   text-transform: uppercase;
   letter-spacing: .05em;
 }

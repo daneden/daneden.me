@@ -6,31 +6,18 @@
 @import 'partials/typography';
 @import 'partials/code';
 @import 'partials/objects';
+@import 'partials/layout';
 
 /*-----------------------------------*\
   $MAIN
 \*-----------------------------------*/
 
 html {
-  font: 125%/1.5 $Hoefler-Text;
+  font: 125%/1.5 $Serif;
   color: #252525;
-  background-color: $gray;
-  -webkit-text-size-adjust: 100%;
-      -ms-text-size-adjust: 100%;
-  -webkit-font-feature-settings: "liga", "dlig";
-     -moz-font-feature-settings: "liga=1, dlig=1";
-        -ms-font-feature-settings: "liga", "dlig";
-         -o-font-feature-settings: "liga", "dlig";
-            font-feature-settings: "liga", "dlig";
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-}
-
-body {
-  max-width: 57rem;
-  margin: 0 auto;
-  box-shadow: 0 0 1px 1px rgba(0,0,0,.1);
-  background-color: #fff;
+  background-color: lighten($gray, 50%);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 @media screen and (max-width: 720px) {
@@ -62,52 +49,14 @@ body {
   padding: 1.5rem 0;
 }
 
-  .site-header a {
-    color: #222;
-  }
-
-    .site-header a:hover {
-      text-decoration: none;
-    }
-
-  .site-title {
-    margin-bottom: 0;
-    float: left;
-    min-width: 10rem;
-  }
-
-    .site-title .divide {
-      vertical-align: -.15em;
-      margin-right: .1em;
-      margin-left: -.1em;
-      line-height: 1;
-      color: #c59b4c;
-      text-decoration: none;
-      display: inline-block;
-      width: 1rem;
-      height: 1rem;
-    }
-
-    .site-title a:hover {
-      opacity: .8;
-    }
-
   .entry-meta {
-    color: rgba(0,0,0,.5);
-  }
-
-  .site-navigation {
-    float: right;
+    font-family: $Sans;
+    float: left;
+    max-width: 15rem;
   }
 
     .site-nav {
       padding-left: 0;
-    }
-
-    .site-nav a {
-      padding: 1.5rem .75rem;
-      margin: -1.5rem 0;
-      font-style: italic;
     }
 
       .site-nav a:hover {
@@ -187,38 +136,20 @@ body {
   $ARTICLE
 \*-----------------------------------*/
 
-.entry-header {
-  text-align: center;
-  padding: 3rem 0;
+.entry-title {
+  font-family: $Sans;
 }
 
-    .entry-title {
-      font-family: $Requiem;
-      margin-bottom: 3rem;
-    }
-
-    .entry-title:after {
-      content: '';
-      width: 25%;
-      height: 1px;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      margin: 1.5rem auto;
-      background-color: rgba(0,0,0,.3);
-    }
-
 .entry-content > .intro {
-  font-family: $Hoefler-Text-SC;
+  font-family: $Serif-SC;
 
   &:first-letter {
-    font-family: $Hoefler-Text;
+    font-family: $Serif;
   }
 }
 
 blockquote {
-  font-family: $Whitney;
+  font-family: $Sans;
   @include box-sizing(content);
   @include calc(width, "100% + 4rem");
   @include calc(margin-left, "-2rem");
@@ -227,7 +158,7 @@ blockquote {
   font-style: italic;
 
   .caps {
-    font-family: $Whitney-SC;
+    font-family: $Sans-SC;
   }
 
   @media screen and (max-width: 640px) {
