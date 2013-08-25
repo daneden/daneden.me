@@ -3,9 +3,11 @@ layout: default
 ---
 <header class="entry-header">
 	<h1 class="entry-title">{{ page.title }}</h1>
-	<p class="entry-meta caps">{{ page.date | date_to_string }}</p>
+	<div class="entry-meta">
+		<p>{{ page.date | date_to_string }}</p>
+	</div>
 </header>
 
-<div class="post">
+<div class="entry-content">
 {{ content }}
 </div>

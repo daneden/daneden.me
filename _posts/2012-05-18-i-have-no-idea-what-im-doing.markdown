@@ -9,7 +9,7 @@ It's difficult to communicate in words my experience over the last few days. I t
 
 It was a huge privilege to meet designers and developers who have long inspired me, as well as to see them talk about the things they're passionate about. Webshaped was a resounding success for myself and for the organizers of the event, too.
 
-{% image alignleft /uploads/2012/05/Helsinki.jpg %}
+{% image alignleft /uploads/2012/05/Helsinki.jpg "Helsinki is a beautiful city. I’d love to go back there." %}
 
 I was terrified for the whole trip. Even after I'd spoken, there was a fear that filled my gut and clouded my mind. The entire talk is a completely blank space in my mind - I don't remember a word I said, and the only thing I remember is screwing up opening a bottle of water. A pretty impressive feat, I think. I hardly ate a thing. Everything I'd rehearsed went straight out of the window as soon as I opened my mouth. I didn't talk for nearly long enough. I almost definitely said some stupid things. And I loved every second of it.
 

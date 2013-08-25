@@ -11,3 +11,7 @@
   #{$property}: -webkit-calc(#{$expression});
   #{$property}: calc(#{$expression});
 }
+
+$breakpoint-regular: 40rem;
+$breakpoint-small: 25rem;
+$breakpoint-big: 65rem;
