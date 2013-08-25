@@ -7,7 +7,7 @@
   margin: 0 auto;
   padding: 0 $baseline*2;
 
-  @media (max-width: $breakpoint-regular) {
+  @media (max-width: $breakpoint-small) {
   	padding: 0 $baseline;
   }
 }
