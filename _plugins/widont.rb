@@ -12,15 +12,35 @@
 
 require 'liquid'
 
-module WidontFilter
+module Jekyll
 
-  # Return the element's text after applying the filter
-  def widont(text)
-    text.strip!
-    text[text.rindex(' '), 1] = '&nbsp;' if text.rindex(' ')
-    return text
+  module WidontFilter
+
+    # Return the element's text after applying the filter
+    def widont(text)
+      text.strip!
+
+      # Split the sentence into an array of words
+      words = text.split(' ')
+
+      # Extract the last two words
+      words = words[words.length-2, words.length-1] if words.length > 2
+
+      character_count = 0
+
+      # Count the characters of the last two words
+      words.each { |word| character_count += word.length }
+
+      # Check whether to insert a space
+      if character_count < 15
+        text[text.rindex(' '), 1] = '&nbsp;' if text.rindex(' ')
+      end
+
+      return text
+    end
+
   end
 
 end
 
-Liquid::Template.register_filter(WidontFilter)
+Liquid::Template.register_filter(Jekyll::WidontFilter)

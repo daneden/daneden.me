@@ -2,7 +2,7 @@
 layout: default
 ---
 <header class="entry-header">
-	<h1 class="entry-title">{{ page.title }}</h1>
+	<h1 class="entry-title">{{ page.title | widont }}</h1>
 	<div class="entry-meta">
 		<p>{{ page.date | date: "%d %B %Y" }}</p>
 	</div>
