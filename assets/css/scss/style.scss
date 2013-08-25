@@ -64,8 +64,8 @@ html {
       font-weight: 700;
       padding-left: 0;
 
-      li + li{
-        margin-left: $baseline/2;
+      li + li {
+        margin-left: $baseline/1.75;
       }
     }
 
@@ -98,11 +98,21 @@ html {
   list-style: none;
   padding-left: 0;
 
+  a {
+    font-weight: 700;
+  }
+
   li {
     padding: $baseline/2 0;
 
     + li {
       border-top: 1px solid rgba(0,0,0,.1);
+    }
+
+    .entry-meta {
+      float: right;
+      margin-left: $baseline;
+      margin-bottom: $baseline;
     }
   }
 

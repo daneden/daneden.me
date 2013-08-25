@@ -7,6 +7,6 @@ in-nav: true
 
 <ul class="all-posts posts-by-year">
 {% for post in site.posts %}
-  <li><a href="{{ post.url }}">{{ post.title }}</a> <span class="entry-meta">&mdash; {{ post.date | date: "%d %B %Y" }}</span></li>
+  <li><span class="entry-meta">{{ post.date | date: "%d %B %Y" }}</span> <a href="{{ post.url }}">{{ post.title }}</a></li>
 {% endfor %}
 </ul>
