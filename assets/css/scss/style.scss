@@ -46,7 +46,9 @@ html {
 \*-----------------------------------*/
 
 .site-header {
-  padding: 1.5rem 0;
+  background-color: lighten($gray, 17.5%);
+  padding: $baseline 0;
+  margin-bottom: $baseline;
 }
 
   .site-title {
@@ -59,6 +61,7 @@ html {
   }
 
     .site-nav {
+      font-weight: 700;
       padding-left: 0;
 
       li + li{
@@ -110,11 +113,11 @@ html {
 \*-----------------------------------*/
 
 .entry-header {
-  margin-bottom: $baseline;
+  padding: $baseline 0;
 }
 
 .entry-title {
-  margin-bottom: 0;
+  margin-bottom: $baseline/2;
 }
 
 .entry-content {
