@@ -26,7 +26,7 @@ html {
   }
 
   small, figcaption {
-    font-size: .75rem;
+    font-size: $baseline/2;
     line-height: 1.333;
   }
 }
@@ -49,14 +49,21 @@ html {
   padding: 1.5rem 0;
 }
 
+  .site-title {
+    margin-bottom: $baseline/2;
+  }
+
   .entry-meta {
     font-family: $Sans;
-    float: left;
-    max-width: 15rem;
+    color: darken($gray, 20%);
   }
 
     .site-nav {
       padding-left: 0;
+
+      li + li{
+        margin-left: $baseline/2;
+      }
     }
 
       .site-nav a:hover {
@@ -66,35 +73,6 @@ html {
       .site-nav .active {
         color: $link;
       }
-
-  @media screen and (max-width: 480px) {
-    .site-title, .site-navigation {
-      float: none;
-    }
-
-    .site-title {
-      margin-bottom: .75rem;
-    }
-
-    .site-nav {
-      margin-bottom: -.75rem;
-    }
-
-      .site-nav a {
-        padding-top: .75rem;
-        padding-bottom: .75rem;
-        margin-top: 0;
-      }
-
-      .current_page_item a, .current_page_parent a {
-        padding-bottom: 8px;
-        border-bottom-width: 4px;
-      }
-
-    .site-header {
-      text-align: center;
-    }
-  }
 
 /*-----------------------------------*\
   $BANNER
@@ -118,16 +96,11 @@ html {
   padding-left: 0;
 
   li {
-    padding: .75rem 0;
+    padding: $baseline/2 0;
 
     + li {
       border-top: 1px solid rgba(0,0,0,.1);
     }
-
-    .entry-meta {
-      font-style: normal;
-    }
-
   }
 
 }
@@ -136,15 +109,30 @@ html {
   $ARTICLE
 \*-----------------------------------*/
 
-.entry-title {
-  font-family: $Sans;
+.entry-header {
+  margin-bottom: $baseline;
 }
 
-.entry-content > .intro {
-  font-family: $Serif-SC;
+.entry-title {
+  margin-bottom: 0;
+}
 
-  &:first-letter {
-    font-family: $Serif;
+.entry-content {
+  &:after {
+    content: '\2766';
+    display: block;
+    font-size: $baseline*2;
+    line-height: 1;
+    text-align: center;
+    color: $gray;
+  }
+
+  > .intro {
+    font-family: $Serif-SC;
+
+    &:first-letter {
+      font-family: $Serif;
+    }
   }
 }
 
@@ -176,31 +164,10 @@ blockquote {
 \*-----------------------------------*/
 
 .site-footer {
-  background-color: desaturate(lighten($gray, 20%), 1%);
-  border-top: 30px solid desaturate(lighten($gray, 10%), 1%);
+  background-color: darken($gray, 50%);
   padding: 1.5rem 0;
-  color: darken($gray, 40%);
-  font-size: .75rem;
-
-  &:after {
-    content:'';
-    position: absolute;
-    top: -1.25em;
-    width: 1.25em;
-    height: 1.25em;
-    left: 50%;
-    margin-left: -.625em;
-    background-color: desaturate(lighten($gray, 10%), 1%);
-    background-image: url('../images/tools.svg');
-    background-size: 50%;
-    background-position: center;
-    background-repeat: no-repeat;
-    text-align: center;
-    font-size: 2rem;
-    line-height: 1.1;
-    color: rgba(255,255,255,.4);
-    border-radius: 100%;
-  }
+  color: $gray;
+  font-size: $baseline/2;
 
   p {
     margin-bottom: 1.5em;

@@ -28,11 +28,14 @@ hr {
   &:after {
     content: "* * *";
     font-size: 1.75rem;
+    font-family: $Sans;
+    font-weight: 700;
     line-height: .857142857;
     letter-spacing: .2em;
     color: rgba(0,0,0,.3);
     display: block;
     text-align: center;
+    margin-top: 2.25rem;
     margin-bottom: 1.5rem;
   }
 }
@@ -42,12 +45,18 @@ h1, .alpha {
   font-weight: 700;
   line-height: 1;
   letter-spacing: -.05em;
+
+  @media (max-width: $breakpoint-small) {
+    font-size: 2rem;
+    line-height: 1;
   }
+}
 
 h2, .beta {
   clear: both;
   font-size: 1.5rem;
   font-weight: 700;
+  margin-bottom: $baseline/2;
   line-height: 1;
   font-style: normal;
   letter-spacing: 0;
