@@ -7,9 +7,17 @@ in-nav: true
 
 I'm a big believer in [building the things we need.](http://daneden.me/2012/04/castles/) That's mostly what you'll see here - tools I built for myself. I hope they're useful to you, too.
 
-If you want to see more of what I'm working on, you can look at my design work-in-progress on [dribbble](http://dribbble.com/dte), and you can explore my open source contributions on [GitHub.](http://github.com/daneden)
+If you want to see more of what I'm working on, you can look at my design work-in-progress on [Dribbble](http://dribbble.com/dte), and you can explore my open source contributions on [GitHub.](http://github.com/daneden)
 
 * * *
+
+## Just My Type
+
+[Just My Type](http://justmytype.co) is a library of font pairings from Adobe Typekit and H&FJ’s Cloud.Typography. Created out of a desire for a place to keep track of my personal favorite web font pairings, Just My Type has grown to become a popular typography resource for many web designers.
+
+[Visit the site](http://justmytype.co).
+
+<p><iframe class="b" src="//player.vimeo.com/video/73036312?title=0&amp;byline=0&amp;portrait=0&amp;color=e2444d&amp;autoplay=1&amp;loop=1" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></p>
 
 ## Gateway
 
@@ -17,7 +25,7 @@ If you want to see more of what I'm working on, you can look at my design work-i
 
 I was responsible for the branding, design, and front-end development of Gateway. [Visit the site](http://gateway-learning.com).
 
-<iframe src="//player.vimeo.com/video/73036366?title=0&amp;byline=0&amp;portrait=0&amp;color=e2444d&amp;autoplay=1&amp;loop=1" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<p><iframe class="b" src="//player.vimeo.com/video/73036366?title=0&amp;byline=0&amp;portrait=0&amp;color=e2444d&amp;autoplay=1&amp;loop=1" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></p>
 
 
 ## Onword
@@ -26,7 +34,7 @@ Tired of only being able to access my iA Writer documents on my iOS devices, I c
 
 [Visit the site](http://onword.co).
 
-<iframe src="//player.vimeo.com/video/73036311?title=0&amp;byline=0&amp;portrait=0&amp;color=e2444d&amp;autoplay=1&amp;loop=1" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<p><iframe class="b" src="//player.vimeo.com/video/73036311?title=0&amp;byline=0&amp;portrait=0&amp;color=e2444d&amp;autoplay=1&amp;loop=1" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></p>
 
 
 ## Webshaped 2012
@@ -47,7 +55,7 @@ I recently [became an “adult”](http://daneden.me/twentyone), whatever that m
 
 I designed and developed [Brills](http://brills.me) to quench my thirst for a simpler money management application that worked on all my devices, with a no-nonsense interface. I wrote it in vanilla PHP, before later discovering that CodeIgniter does a much better job than me at a lot of important stuff, and moving the code onto the framework with great ease.
 
-<iframe src="//player.vimeo.com/video/73036315?title=0&amp;byline=0&amp;portrait=0&amp;color=e2444d&amp;autoplay=1&amp;loop=1" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<p><iframe class="b" src="//player.vimeo.com/video/73036315?title=0&amp;byline=0&amp;portrait=0&amp;color=e2444d&amp;autoplay=1&amp;loop=1" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></p>
 
 
 ## Animate.css
@@ -56,13 +64,4 @@ During the development of Brills, I found myself spending a lot of time writing 
 
 [Animate.css](http://daneden.me/animate) is a cross-browser plug-and-play CSS animation library for delightful animation in websites and web applications. [Visit the site](http://daneden.me/animate).
 
-<iframe src="//player.vimeo.com/video/73036314?title=0&amp;byline=0&amp;portrait=0&amp;color=e2444d&amp;autoplay=1&amp;loop=1" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
-
-## Just My Type
-
-[Just My Type](http://justmytype.co) is a library of font pairings from Adobe Typekit and H&FJ’s Cloud.Typography. Created out of a desire for a place to keep track of my personal favorite web font pairings, Just My Type has grown to become a popular typography resource for many web designers.
-
-[Visit the site](http://justmytype.co).
-
-<iframe src="//player.vimeo.com/video/73036312?title=0&amp;byline=0&amp;portrait=0&amp;color=e2444d&amp;autoplay=1&amp;loop=1" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<p><iframe class="b" src="//player.vimeo.com/video/73036314?title=0&amp;byline=0&amp;portrait=0&amp;color=e2444d&amp;autoplay=1&amp;loop=1" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></p>
