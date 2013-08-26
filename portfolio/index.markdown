@@ -3,6 +3,7 @@ layout: page
 title: Portfolio
 permalink: ''
 in-nav: true
+scripts: ["//cdnjs.cloudflare.com/ajax/libs/fitvids/1.0.1/jquery.fitvids.min.js"]
 ---
 
 I'm a big believer in [building the things we need.](http://daneden.me/2012/04/castles/) That's mostly what you'll see here - tools I built for myself. I hope they're useful to you, too.
