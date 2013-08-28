@@ -103,6 +103,7 @@ html {
 
   li {
     padding: $baseline/2 0;
+    overflow: hidden;
 
     + li {
       border-top: 1px solid rgba(0,0,0,.1);
