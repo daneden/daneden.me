@@ -148,18 +148,6 @@ html {
   }
 }
 
-blockquote {
-  @include box-sizing(content);
-  @include calc(width, "100% + 4rem");
-  @include calc(margin-left, "-2rem");
-  margin-bottom: $baseline;
-
-  @media screen and (max-width: 640px) {
-    width: auto;
-    margin-left: 0;
-  }
-}
-
 /*-----------------------------------*\
   $FOOTER
 \*-----------------------------------*/

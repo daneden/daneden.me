@@ -41,9 +41,9 @@ hr {
 }
 
 h1, .alpha {
-  font-size: 3rem;
+  font-size: $baseline*1.8;
   font-weight: 700;
-  line-height: 1;
+  line-height: 1.12;
   letter-spacing: -.05em;
 
   @media (max-width: $breakpoint-small) {
@@ -54,7 +54,7 @@ h1, .alpha {
 
 h2, .beta {
   clear: both;
-  font-size: 1.5rem;
+  font-size: $baseline;
   font-weight: 700;
   margin-bottom: $baseline/2;
   line-height: 1;
@@ -64,7 +64,7 @@ h2, .beta {
 }
 
   p + h2, p + .beta {
-    padding-top: 1.5rem;
+    padding-top: $baseline;
   }
 
 h3, .gamma {
@@ -85,13 +85,13 @@ h3, .gamma {
 }
 
 small {
-  font-size: .75rem;
+  font-size: $baseline/2;
   line-height: 1.666;
   color: rgba(0,0,0,.7);
 }
 
 del {
-  opacity: .5;
+  opacity: .65;
   text-decoration: line-through;
 }
 
@@ -117,8 +117,6 @@ figcaption {
 blockquote {
   font-family: $Sans;
   color: darken($gray, 25%);
-  font-size: 1.222rem;
-  line-height: 1.4;
   font-style: italic;
 
   .caps {

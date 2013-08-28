@@ -91,9 +91,9 @@ hr:after {
   margin-bottom: 1.5rem; }
 
 h1, .alpha {
-  font-size: 3rem;
+  font-size: 2.79rem;
   font-weight: 700;
-  line-height: 1;
+  line-height: 1.12;
   letter-spacing: -.05em; }
 @media (max-width: 33rem) {
   h1, .alpha {
@@ -102,7 +102,7 @@ h1, .alpha {
 
 h2, .beta {
   clear: both;
-  font-size: 1.5rem;
+  font-size: 1.55rem;
   font-weight: 700;
   margin-bottom: 0.775rem;
   line-height: 1;
@@ -111,7 +111,7 @@ h2, .beta {
   font-family: "Whitney SSm A", "Whitney SSm B", sans-serif; }
 
 p + h2, p + .beta {
-  padding-top: 1.5rem; }
+  padding-top: 1.55rem; }
 
 h3, .gamma {
   font-size: 1rem;
@@ -129,12 +129,12 @@ h3, .gamma {
   hyphens: auto; }
 
 small {
-  font-size: .75rem;
+  font-size: 0.775rem;
   line-height: 1.666;
   color: rgba(0, 0, 0, 0.7); }
 
 del {
-  opacity: .5;
+  opacity: .65;
   text-decoration: line-through; }
 
 .callout, .promo {
@@ -155,8 +155,6 @@ figcaption .caps {
 blockquote {
   font-family: "Whitney SSm A", "Whitney SSm B", sans-serif;
   color: #808a91;
-  font-size: 1.222rem;
-  line-height: 1.4;
   font-style: italic; }
 blockquote .caps {
   font-family: "Whitney SSm SC A", "Whitney SSm SC B", sans-serif; }
@@ -538,25 +536,6 @@ html {
   font-family: "Mercury SSm SC A", "Mercury SSm SC B", serif; }
 .entry-content > .intro:first-letter {
   font-family: "Mercury SSm A", "Mercury SSm B", serif; }
-
-blockquote {
-  /* Acceptable values are border, content, and padding - content is the default W3C model */
-  box-sizing: content-box;
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  width: -moz-calc(100% + 4rem);
-  width: -o-calc(100% + 4rem);
-  width: -webkit-calc(100% + 4rem);
-  width: calc(100% + 4rem);
-  margin-left: -moz-calc(-2rem);
-  margin-left: -o-calc(-2rem);
-  margin-left: -webkit-calc(-2rem);
-  margin-left: calc(-2rem);
-  margin-bottom: 1.55rem; }
-@media screen and (max-width: 640px) {
-  blockquote {
-    width: auto;
-    margin-left: 0; } }
 
 /*-----------------------------------*\
   $FOOTER
