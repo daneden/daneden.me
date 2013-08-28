@@ -375,7 +375,7 @@ figure img {
   padding: 0 3.1rem; }
 @media (max-width: 33rem) {
   .wrap {
-    padding: 0 1.55rem; } }
+    padding: 0 1.10714rem; } }
 
 .aligncenter {
   display: block;
@@ -444,7 +444,7 @@ html {
   font: 112.5%/1.55 "Mercury SSm A", "Mercury SSm B", serif;
   /* 18px/28px */
   color: #252525;
-  background-color: white;
+  background-color: #feffff;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility; }
 @media (max-width: 40rem) {
