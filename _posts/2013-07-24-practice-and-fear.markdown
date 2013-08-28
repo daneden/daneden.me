@@ -3,7 +3,7 @@ layout: post
 title: Practice & Fear
 ---
 
-There’s a fundamental flaw in the phrase “Practice makes Perfect”, particularly when it comes to the web. “Practice” implies too much subjectivity. It also implies a static target. The fact is, on the web, at least, there are no static targets. Web designers have a great advantage over those in print; we can’t afford to stand still. There’s very little risk of us being “left behind” because if we stop, it’s for good. The designers still using tables for layout have either died out, or are new to the game and will soon realise they need to evolve or quit.
+There’s a fundamental flaw in the phrase “Practice makes Perfect”, particularly when it comes to the web. “Perfect” implies too much subjectivity. It also implies a static target. The fact is, on the web, at least, there are no static targets. Web designers have a great advantage over those in print; we can’t afford to stand still. There’s very little risk of us being “left behind” because if we stop, it’s for good. The designers still using tables for layout have either died out, or are new to the game and will soon realise they need to evolve or quit.
 
 “Perfect” is also a little intimidating. Exactly how much practice is it going to take to hit Perfection? How long after that will it take for somebody to point out a flaw? Even the work of the greats—Vignelli, Rand, Bass—can be criticised. Perfection is also a strange thing to _want_ to achieve. It is, after all, the imperfections in the people that we love that make us love them. Why can’t the same apply for our work?
 

@@ -2,12 +2,6 @@
   $OBJECTS
 \*-----------------------------------*/
 
-  @media screen and (max-width: 640px) {
-    .wrap {
-      padding: 0 1.5rem;
-    }
-  }
-
 .island {
   padding: .75rem;
 }
@@ -32,13 +26,3 @@
 figure img {
   margin-bottom: .75rem;
 }
-
-  figcaption {
-    font-family: "Whitney SSm A", "Whitney SSm B", "Whitney", sans-serif;
-    font-size: .7rem;
-    line-height: 1.428571429;
-    color: rgba(0,0,0,.5);
-    .caps {
-      font-family: "Whitney SSm SC A", "Whitney SSm SC B", "Whitney", sans-serif;
-    }
-  }

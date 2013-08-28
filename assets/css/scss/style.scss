@@ -13,27 +13,26 @@
 \*-----------------------------------*/
 
 html {
-  font: 125%/1.5 $Serif;
+  font: 112.5%/1.55 $Serif; /* 18px/28px */
   color: #252525;
   background-color: lighten($gray, 50%);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+
+  @media (max-width: $breakpoint-regular) {
+    font-size: 87.5% /* 15px/23px */
+  }
 }
 
 @media screen and (max-width: 720px) {
   html {
-    font-size: 100%; /* 16px */
-  }
-
-  small, figcaption {
-    font-size: $baseline/2;
-    line-height: 1.333;
+    font-size: 87.5%; /* 15px */
   }
 }
 
 @media screen and (min-width: 1400px) {
   html {
-    font-size: 137.5%; /* 22px */
+    font-size: 131.25%; /* 21px */
   }
 }
 
@@ -150,25 +149,14 @@ html {
 }
 
 blockquote {
-  font-family: $Sans;
   @include box-sizing(content);
   @include calc(width, "100% + 4rem");
   @include calc(margin-left, "-2rem");
-  margin-bottom: 1.5rem;
-  color: darken($gray, 20%);
-  font-style: italic;
-
-  .caps {
-    font-family: $Sans-SC;
-  }
+  margin-bottom: $baseline;
 
   @media screen and (max-width: 640px) {
     width: auto;
     margin-left: 0;
-  }
-
-  em {
-    font-style: normal;
   }
 }
 
@@ -178,7 +166,7 @@ blockquote {
 
 .site-footer {
   background-color: darken($gray, 50%);
-  padding: 1.5rem 0;
+  padding: $baseline 0;
   color: $gray;
   font-size: $baseline/2;
 
@@ -186,13 +174,6 @@ blockquote {
     margin-bottom: 1.5em;
   }
 }
-
-  @media screen and (max-width: 720px) {
-    .site-footer {
-      font-size: .875rem;
-      line-height: 1.4;
-    }
-  }
 
   .author-info .avatar {
     position: absolute;

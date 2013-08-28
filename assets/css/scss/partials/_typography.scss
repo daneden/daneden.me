@@ -73,7 +73,7 @@ h3, .gamma {
   font-weight: 400;
   margin-bottom: 0;
   font-style: normal;
-  letter-spacing: .05em;
+  letter-spacing: .1em;
   font-family: $Sans-SC;
   text-transform: uppercase;
 }
@@ -103,4 +103,29 @@ del {
   font-family: $Serif-SC;
   text-transform: uppercase;
   letter-spacing: .05em;
+}
+
+figcaption {
+  font-family: "Whitney SSm A", "Whitney SSm B", "Whitney", sans-serif;
+  font-size: $baseline/2;
+  color: darken($gray, 25%);
+  .caps {
+    font-family: "Whitney SSm SC A", "Whitney SSm SC B", "Whitney", sans-serif;
+  }
+}
+
+blockquote {
+  font-family: $Sans;
+  color: darken($gray, 25%);
+  font-size: 1.222rem;
+  line-height: 1.4;
+  font-style: italic;
+
+  .caps {
+    font-family: $Sans-SC;
+  }
+
+  em {
+    font-style: normal;
+  }
 }
