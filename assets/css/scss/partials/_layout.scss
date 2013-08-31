@@ -64,32 +64,3 @@
       padding: 0;
     }
   }
-
-.grids {
-  margin-left: -5%;
-  width: 105%;
-}
-
-[class^="g-"] {
-  display: inline-block;
-  vertical-align: top;
-  margin-right: -.25em;
-  margin-left: 5%;
-}
-
-  .g-1-3 {
-    width: 28.3%;
-  }
-
-@media screen and (max-width: 520px) {
-  .grids {
-    margin-left: 0;
-    width: auto;
-  }
-
-  [class^="g-"] {
-    display: block;
-    width: auto;
-    margin: 0;
-  }
-}

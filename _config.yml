@@ -1,4 +1,6 @@
 name: Daniel Eden
+description: Designer
+url: http://daneden.me
 
 markdown: rdiscount
 rdiscount:

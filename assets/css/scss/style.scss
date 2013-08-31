@@ -159,6 +159,31 @@ html {
   color: $gray;
   font-size: $baseline/2;
 
+  .wrap {
+    display: -webkit-flex;
+
+    section {
+      width: 30%;
+
+      @media (max-width: $breakpoint-small) {
+        width: auto;
+      }
+
+      + section {
+        margin-left: 5%;
+
+        @media (max-width: $breakpoint-small) {
+          margin-left: 0;
+        }
+      }
+    }
+
+    @media (max-width: $breakpoint-small) {
+      display: block;
+    }
+
+  }
+
   p {
     margin-bottom: 1.5em;
   }
