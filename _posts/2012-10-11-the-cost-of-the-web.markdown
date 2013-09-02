@@ -1,6 +1,7 @@
 ---
 layout: post
 title: The Cost of The Web
+hidden: true
 ---
 
 It was interesting reading over [Chris Coyier's monthly costs](http://css-tricks.com/web-developer-economics-monthly-service-costs/) for his web services. I've always wondered how much it cost to run a massive site like CSS-Tricks, as well as what services Chris used on a subscription basis.

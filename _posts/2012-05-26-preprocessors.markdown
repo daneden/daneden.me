@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Preprocessors
+hidden: true
 ---
 
 **TL;DR** — preprocessors can be fantastic tools in the right hands. Tread carefully. In my experience, the longer you use them, the less useful they become. More than anything, **it depends.**

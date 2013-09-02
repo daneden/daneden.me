@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Max CSS In Depth
+hidden: true
 ---
 
 Yesterday morning, I spent five minutes writing up [an idea](http://daneden.me/max-css) I'd had in my head for quite some time. It turned out to become far more popular than I had anticipated - reaching over 10,000 hits in 24 hours thanks to links from [Twitter](https://twitter.com/search/%23maxcss), [Hacker News](http://news.ycombinator.com/item?id=4217477), [.Net magazine](http://www.netmagazine.com/news/dev-urges-max-css-help-newcomers-122072), and [Smashing Magazine](https://twitter.com/smashingmag/status/222579256675414017) amongst others. The idea was simple - alongside our compressed and minified CSS files, we should include an uncompressed, no holds barred, comment-laden version of our CSS files for people to take a look at for learning purposes.

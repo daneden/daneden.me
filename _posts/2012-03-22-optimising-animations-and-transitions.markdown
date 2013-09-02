@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Optimising animations and transitions
+hidden: true
 ---
 
 If you spend enough time with CSS transitions and animations, you start to notice some odd quirks. I've had a few emails from people using [Animate.css](http://daneden.me/animate) in their websites and experiencing some of these issues - most frequently, odd changes in text rendering during animations. I'll go over just a few tips for optimising CSS transitions and animations to make them smoother and bug-free.

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Retrospective
+hidden: true
 ---
 
 As the end of my first term of my final year at University approaches, I find myself thinking about the value of the degree I'll (hopefully) be getting in just a few months time. My feelings on this matter have changed quite a lot since I first started. Towards the end of college, I had absolutely no idea what it was I wanted to do with my life. All I knew was that it was likely to involve computers, and some form of creativity. "Digital Media Technology" sounded right up my street. I applied to NTU, amongst other Universities, with a constant fear that if I couldn't go to University, I'd end up in a dead-end, unfulfilling job with little pay.

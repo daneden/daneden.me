@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Slaying the procrastination troll
+hidden: true
 ---
 
 We've all been there. You've got a deadline coming up, and you're behind on your work. So you set up shop at your desk. You've got an unreasonable amount of browser windows open, a few terminal windows, Textmate projects and the good old CSS spec at your side - all with a copious amount of coffee, too. But after a while, it begins to dawn on you that out of the last 5 hours of 'work', you've spent an hour setting up your workspace, another hour tweeting about the work you aren't actually doing, and the rest of the time looking at pictures of cats.

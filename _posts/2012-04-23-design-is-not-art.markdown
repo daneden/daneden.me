@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Design Is Not Art
+hidden: true
 ---
 
 This is something that's taken me the better part of 5 years to fully come to terms with. **Design is not art.**

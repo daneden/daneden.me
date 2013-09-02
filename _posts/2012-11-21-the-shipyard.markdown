@@ -1,6 +1,7 @@
 ---
 layout: post
 title: The Shipyard
+hidden: true
 ---
 
 A little under 2 weeks ago, I launched [Onword](http://onword.co), my latest web venture. If you haven't yet heard of it, it's a simple writing environment for the web. It was my first project written in Ruby, and it was developed in just 10 days. I'm very happy with it, and from the feedback I've received, so are its users. I'm not going to go into too much technical depth about Onword here. That's for another day. I'd like to talk about shipping.

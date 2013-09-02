@@ -1,6 +1,7 @@
 ---
 layout: post
 title: You’re Good. Get Better.
+hidden: true
 ---
 
 _Profanity warning:_ I don't normally swear this much. Fuck convention.

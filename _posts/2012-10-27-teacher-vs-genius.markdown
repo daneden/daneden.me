@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Teacher vs. Genius
+hidden: true
 ---
 
 In one of my University modules, I have to learn about how a camera operates. The purpose of the lens, the way in which light travels into the camera, and other surprisingly confusing stuff. But in the first lecture, the professor sat down and said the most reassuring thing I've ever heard from somebody in an educational institute. It went something like this:

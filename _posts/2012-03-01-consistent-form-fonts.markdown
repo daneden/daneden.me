@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Consistent Form Fonts
+hidden: true
 ---
 
 It's not very often I write something code-oriented these days, but this is a gem from the archives of [Rogie King's blog](http://www.komodomedia.com/blog/2006/10/css-trickery-part-5-inheritance/) I simply had to share.

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Pulling apart washing machines
+hidden: true
 ---
 
 I have a not-so-secret desire; I want to be a developer.

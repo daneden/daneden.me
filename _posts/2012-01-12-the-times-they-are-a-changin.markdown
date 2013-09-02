@@ -1,6 +1,7 @@
 ---
 layout: post
 title: The times they are a changin’
+hidden: true
 ---
 
 2012 is set to be a big year for the web. HTML5 is becoming a Candidate Recommendation, the heat around Responsive Web Design will start to cool down and people will actually use it in effective & purposeful ways, and Microsoft will open the Windows application development platform to hundreds of thousands of web designers and developers.

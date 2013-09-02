@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Designing For Emotion
+hidden: true
 ---
 
 {% image alignleft /uploads/2012/02/aea-cover-5-e1318351630488.png %}

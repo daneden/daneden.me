@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Design in the browser
+hidden: true
 ---
 
 _"You there! Put down that old, clunky photo editing software package! Introducing **OLD** and exciting design approaches from the comfort of your keyboard!"_

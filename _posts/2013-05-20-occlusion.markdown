@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Occlusion
+hidden: true
 ---
 
 Our minds make the world a considerably more beautiful place. Consider a long drive through the country. If you’re anything like me, you’ll find yourself staring out of the window at the rolling hills, watching the sunset as you chase the sky along the horizon. You’ll look at the colour of the sky and wonder how it looks from up there. You’ll then reach for your camera and have the scene in your mind’s eye shattered by reality; there are fences, bushes, cars, and buildings obscuring the rolling hills and orange skies. This is [occlusion](http://stackoverflow.com/questions/2764238/image-processing-what-are-occlusions) playing its dirty trick.

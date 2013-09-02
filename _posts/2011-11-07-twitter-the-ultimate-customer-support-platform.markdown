@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Twitter - the ultimate customer support platform
+hidden: true
 ---
 
 If your company or product doesn't have an active twitter account, chances are I'll avoid it. And I'm sure I'm not alone. It gives me great joy to know that almost all the products I'm using have active customer support that's quick, free, human and accessible from almost anywhere. It's called twitter, and unless you've been in a cave for the last ten years, you've probably heard of it.

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Summit Awesome
+hidden: true
 ---
 
 Over the weekend, I travelled to Birmingham for the first [Summit Awesome](http://summitawesome.co.uk/hackathon) Hackathon - 24 hours of energy drinks, burgers, snacks, and web development. It was a hell of a weekend, and I'm excited for future events.

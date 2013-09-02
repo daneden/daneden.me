@@ -1,0 +1,17 @@
+---
+layout: default
+title: Archive
+permalink: ''
+---
+
+<h1>Archive</h1>
+
+<p>Welcome to the Archives. Here you’ll find every post I’ve written on the site. Even the ones I’m shameful of. I’ve learned a lot since writing a lot of these words. Judge not by these articles.</p>
+
+<hr>
+
+<ul class="all-posts posts-by-year">
+{% for post in site.posts %}
+  <li><span class="entry-meta">{{ post.date | date: "%d %B %Y" }}</span> <a href="{{ post.url }}">{{ post.title }}</a></li>
+{% endfor %}
+</ul>

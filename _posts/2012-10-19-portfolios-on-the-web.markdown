@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Portfolios on the Web
+hidden: true
 ---
 
 Since returning to University, I've slowly been getting back into the swing of things. Instant mash, 10am alarms, and just enough cash to buy beer (but not quite enough to buy books.) I familiarised myself with the modules I'd be taking for my final year, and one in particular made me think "This'll be a walk in the Park!"

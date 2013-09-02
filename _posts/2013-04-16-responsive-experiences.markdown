@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Responsive Experiences
+hidden: true
 ---
 
 Responsive design has brought with it a whole new world of design challenges. How can we design content containers that work at different widths? How do we decide what content a user needs to access, and how quickly? What can we do to make this website feel like the same product across all these devices?

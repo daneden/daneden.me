@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Limiting Limitation
+hidden: true
 ---
 
 This morning, I was pointed in the direction of a website called [Throwww](http://throwww.com), which describes itself as "the easiest way to write something and share it." Having created my own [similar product](http://onword.co), I was interested to find out what was different about it.

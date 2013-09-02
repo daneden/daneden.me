@@ -1,6 +1,7 @@
 ---
 layout: post
 title: The Right Tools For The Job
+hidden: true
 ---
 
 A few days ago, I received this tweet:

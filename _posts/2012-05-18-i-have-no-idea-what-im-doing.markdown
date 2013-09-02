@@ -1,6 +1,7 @@
 ---
 layout: post
 title: I have no idea what I'm doing
+hidden: true
 ---
 
 Alternative title: _Webshaped 2012._

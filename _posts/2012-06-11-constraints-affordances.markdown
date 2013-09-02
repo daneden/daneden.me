@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Constraints & Affordances
+hidden: true
 ---
 
 I spend a disturbing amount of time thinking about the way our world has come to be. This morning, like most mornings, I took the tram to work. There was a window in the driver's booth with a metal mesh over it - likely to prevent foreign bodies finding their way into the compartment from the terrible streets of Manchester. I started to wonder about the decisions made about that mesh. Who decided on the size of the holes? Why did they come to that decision?

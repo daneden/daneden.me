@@ -1,6 +1,7 @@
 ---
 layout: post
 title: '"Occupy Flash" has got it all wrong'
+hidden: true
 ---
 
 Early this morning, a website starting making the rounds on twitter. [Occupy Flash](http://occupyflash.org) was given a leg-up from Smashing Magazine, and made it's way onto my computer monitor. Before I even read the copy, I knew this was a mistake. The idea behind Occupy Flash is to encourage web users and the tech-savvy to banish the Adobe Flash player plugin from their computers, and from the computers of their loved ones, coworkers and offices. This mission is both insane and impossible.

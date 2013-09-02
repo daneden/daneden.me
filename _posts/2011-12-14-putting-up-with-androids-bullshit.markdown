@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Dispelling the Android CSS animation myths
+hidden: true
 ---
 
 We live in good times as web developer/designers. There are more fantastic resources available today than there ever have been - we have websites like [QuirksMode](http://www.quirksmode.org/), [Can I Use?](http://caniuse.com/), and the recent [Mobile HTML5](http://mobilehtml5.org/) to tell us what features we can expect to use on a myriad of operating systems, browsers and mobile devices. Super! But there's a recurring theme across all of these websites. They all tell us that Android _fully supports CSS animations._

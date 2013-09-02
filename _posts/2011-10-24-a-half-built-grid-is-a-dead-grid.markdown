@@ -1,6 +1,7 @@
 ---
 layout: post
 title: A half-built grid is a dead grid
+hidden: true
 ---
 
 I recently remembered a relatively new redesign of my [University's](http://ntu.ac.uk) website. Memories of a well structured grid were conjured in my mind, and I got all dizzy thinking that I'd been looking at this site without noticing it's excellent design. To my dismay, when I checked the site, it featured nothing but the carcass of a half-built grid.

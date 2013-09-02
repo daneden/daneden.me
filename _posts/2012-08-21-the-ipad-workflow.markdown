@@ -1,6 +1,7 @@
 ---
 layout: post
 title: The iPad Workflow
+hidden: true
 ---
 
 For the past two weeks or so, I've been working almost entirely on my iPad. Creating websites, writing emails, editing photos, the whole shebang. My iPad has been my primary machine for a significant amount of time now.

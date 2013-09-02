@@ -1,6 +1,7 @@
 ---
 layout: post
 title: How I write CSS
+hidden: true
 ---
 
 I find it quite difficult to fully document my particular style of writing code. I point the blame for this problem on a constant state of learning that infects me daily. Something I wrote yesterday would make me raise an eyebrow today, and something I wrote months ago would make me feel a little sick. "How foolish of me!" I'd mutter from my seat, before remembering I'm in a public place and noticing the judging eyes of the public gaze upon me. I'm rambling.

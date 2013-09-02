@@ -8,6 +8,7 @@ title: Words and Pictures
 wordpress_id: 1450
 categories:
 - Design
+hidden: true
 ---
 
 > Your heart goes tick tock. Listen to it. Put your hand on it and feel it. Count the beats: one, two, three, four... When you have counted sixty beats a minute will have passed. After sixty minutes an hour will have passed. In one hour a plant grows a hundredth of an inch. In twelve hours the sun rises and sets. Twenty-four hours make one whole day and one whole night.

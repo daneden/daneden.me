@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Building A Brand
+hidden: true
 ---
 
 Just over a year ago, I settled on a logo that I thought would be a suitable representation of myself. I put it on business cards, stationery, and even bought a rubber stamp to go with it all.

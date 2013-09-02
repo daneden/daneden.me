@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Typekit's Web Font Loader is Awesome
+hidden: true
 ---
 
 It really is. I've [touched on this briefly](http://daneden.me/2011/07/a-smoother-page-load-via-jonikorpi/) before, pointing to Joni Korpi's [experiences](http://jonikorpi.com/a-smoother-page-load/) with the loader, but I've only really started using the tool for my own benefit. It's actually something I came across while I was putting together [Design Happy](http://dribbble.com/shots/394795-Design-Happy), my super-secret in-the-works project. Since it's still under wraps, I can't show off the cool stuff I've been doing with the loader.

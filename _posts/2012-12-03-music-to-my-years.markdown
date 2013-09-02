@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Music to My Years
+hidden: true
 ---
 
 I've been lucky enough to grow up at an exciting time for the human race. Technology has evolved incredibly rapidly over the last 20 years, but when I was first born, the Internet was just getting started, cell phones were the size of your laptop, and all our music sat on magnetic tapes, vinyl records, and CDs. The MP3 boom came around just as I got my hands on a Minidisk player. (Those too young to remember, just imagine it as a floppy disk with about 2 CDs worth of music. What's a floppy disk? Go ask your parents.)

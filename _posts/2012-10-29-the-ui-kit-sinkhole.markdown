@@ -1,6 +1,7 @@
 ---
 layout: post
 title: The UI Kit Sinkhole
+hidden: true
 ---
 
 There's been a lot of heat around a Photoshop plugin called [WebZap](http://webzap.uiparade.com) today. Long story short, it allows designers and developers to create Photoshop mockups of websites and UI kits in just a few button clicks. A lot of people are excited about it. Others - including myself - [not so much](https://twitter.com/_dte/statuses/262857925410832384).

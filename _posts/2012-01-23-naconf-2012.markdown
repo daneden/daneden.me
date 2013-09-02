@@ -1,6 +1,7 @@
 ---
 layout: post
 title: NAconf 2012
+hidden: true
 ---
 
 ![](/uploads/2012/01/DSC01813.jpg)

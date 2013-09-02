@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Printers - the Elephants in our rooms
+hidden: true
 ---
 
 I just ordered a new printer. My current printer has died a death. It's not too clear why it's suddenly stopped working, but it has, and such is the way of these things.

@@ -160,6 +160,10 @@ html {
 
   .wrap {
     display: -webkit-flex;
+    display:    -moz-flex;
+    display:     -ms-flex;
+    display:      -o-flex;
+    display:         flex;
 
     section {
       width: 30%;

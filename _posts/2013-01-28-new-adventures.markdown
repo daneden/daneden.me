@@ -1,6 +1,7 @@
 ---
 layout: post
 title: New Adventures
+hidden: true
 ---
 
 It's exactly one year since [my first conference](http://daneden.me/2012/01/naconf-2012/), NAconf 2012, and last week I had the great pleasure of attending the final instalment of the New Adventures trilogy. Armed with much greater confidence than the previous year, I made it my goal to yet again make some of my personal heroes feel very awkward when I tell them how wonderful they are.

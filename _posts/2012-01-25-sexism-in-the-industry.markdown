@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Sexism in the industry
+hidden: true
 ---
 
 

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: The Devices Blinding Us
+hidden: true
 ---
 
 ![](/uploads/2012/02/blind.jpg)

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: CSS prefixes are becoming a threat - but is Webkit really to blame?
+hidden: true
 ---
 
 It seems like the whole internet is up in arms today - and for good reason, too. The CSS working group recently had [a discussion](http://lists.w3.org/Archives/Public/www-style/2012Feb/0313.html) about the `-webkit-` prefix, which started something like this:

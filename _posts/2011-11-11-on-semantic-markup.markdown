@@ -1,6 +1,7 @@
 ---
 layout: post
 title: On semantic markup
+hidden: true
 ---
 
 It seems like everyone and their mother is worried about the semantics of their markup these days. It's turning into quite a trend, and everyone is weighing in all over the place. Divya Manian made some good points in [her article](http://coding.smashingmagazine.com/2011/11/11/our-pointless-pursuit-of-semantic-value/) over on Smashing Magazine, and I mostly agree with what she's saying.

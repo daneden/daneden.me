@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Content <del>Consumption</del> Creation
+hidden: true
 ---
 
 When the iPad was first announced, it was filling a gap in the market that only Apple could see. Turns out it was a very real one. Manufacturers are scrambling to create their own tablets - most recently, Microsoft joined the game with a great looking [tablet](http://www.microsoft.com/surface/en/us/default.aspx) of their own. So far these devices have been primarily pushed for content consumption rather than creation. I think that changed some time ago.

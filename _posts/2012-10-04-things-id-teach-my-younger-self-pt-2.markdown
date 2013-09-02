@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Things I'd Teach My Younger Self, Pt. 2
+hidden: true
 ---
 
 A little over a year ago, I wrote [a post](http://daneden.me/2011/07/things-id-teach-my-younger-self/) describing some of the lessons I'd teach my younger self if I could go back in time. Generally speaking, there's not much technical knowledge I'd add to that post (except [don't use IDs in CSS](http://csswizardry.com/2011/09/when-using-ids-can-be-a-pain-in-the-class/)) - all those things are second nature to me now.

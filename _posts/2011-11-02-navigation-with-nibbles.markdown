@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Navigation with "nibbles"
+hidden: true
 ---
 
 Something I've come across a few times on the web recently is a feature I like to call "Navigation with nibbles". Let me show you what I mean:

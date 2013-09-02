@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Changing My Ways
+hidden: true
 ---
 
 **Note:** this post isn't supposed to serve as a tutorial. There are much smarter folks who'd do a better job at tutorials than me. Think of this as a log of my experiences.

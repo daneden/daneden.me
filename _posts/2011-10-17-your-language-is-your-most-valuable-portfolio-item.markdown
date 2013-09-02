@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Your language is your most valuable portfolio item
+hidden: true
 ---
 
 An occurring trend I've noticed around [Forrst](http://forrst.com) (as well as other websites) is a serious lack of communicative skill. It's deeper than avoiding words like 'lol' - people seem to have little understanding of structured sentences and appropriate punctuation. I'm far from being an English teacher, but I'd say that your communicative skill is one of your most valuable portfolio items.

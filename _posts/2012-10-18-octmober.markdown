@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Octmober
+hidden: true
 ---
 
 It's almost [that time of the year](http://daneden.me/2011/11/looking-ridiculous-for-charity/) again - Movember is upon us! Yes, that's right ladies, the world (or at least the U.K.) is going to be choc-a-block full of gentlemen struggling to grow moustaches in the name of charity. Specifically, fighting testicular cancer.

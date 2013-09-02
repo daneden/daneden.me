@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Communication Breakdown
+hidden: true
 ---
 
 I'm going to take a minute to address something that's been bothering me. You might have noticed that recently I'm maybe not as communicative on Twitter (or elsewhere) as I used to be. I just want to say I'm sorry for that.

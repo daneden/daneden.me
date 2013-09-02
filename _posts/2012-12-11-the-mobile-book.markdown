@@ -1,6 +1,7 @@
 ---
 layout: post
 title: The Mobile Book
+hidden: true
 ---
 
 {% image alignleft /uploads/2012/12/the-mobile-book.png %}

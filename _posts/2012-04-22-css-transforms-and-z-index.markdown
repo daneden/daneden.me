@@ -1,6 +1,7 @@
 ---
 layout: post
 title: CSS Transforms And z-index
+hidden: true
 ---
 
 Not too long ago, someone pointed out [an issue](https://github.com/daneden/animate.css/issues/25) with Animate.css. In short, they were experiencing issues with animations causing the `z-index` of pseudo elements to get screwed up.

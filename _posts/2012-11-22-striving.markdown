@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Striving
+hidden: true
 ---
 
 A few days ago, [Striving](http://striving.me) was launched. For those not yet aware, Striving is a website that allows you to set personal goals, and achieve them with the help of other people in the community. It's something that [Jack](http://twitter.com/jack_l_smith) pitched to me and [Michael](http://twitter.com/michaelw90) a little over a year ago - and it's maybe one of the best ideas I'd ever heard for a website.

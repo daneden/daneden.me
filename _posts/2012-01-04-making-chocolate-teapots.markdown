@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Making chocolate teapots
+hidden: true
 ---
 
 CSS3 is _pretty damn cool._ I've said that a lot, and I can't see that opinion changing any time soon. With CSS3, we can create effects previously only attainable through image manipulation, generation, and Adobe Flash player. With the advent of these CSS properties came a slew of curious designers, pushing the capabilities of these properties beyond their original scope.
