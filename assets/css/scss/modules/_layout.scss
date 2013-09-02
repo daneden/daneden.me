@@ -5,6 +5,16 @@
 	-moz-box-sizing: #{$type}-box;
 }
 
+@mixin flexbox {
+	// Old Syntax
+	display:  -webkit-box;
+	display:     -moz-box;
+	display:  -ms-flexbox;
+	// New Syntax
+	display: -webkit-flex;
+	display:         flex;
+}
+
 @mixin calc($property, $expression) {
   #{$property}: -moz-calc(#{$expression});
   #{$property}: -o-calc(#{$expression});

@@ -159,11 +159,7 @@ html {
   font-size: $baseline/2;
 
   .wrap {
-    display: -webkit-flex;
-    display:    -moz-flex;
-    display:     -ms-flex;
-    display:      -o-flex;
-    display:         flex;
+    @include flexbox;
 
     section {
       width: 30%;
