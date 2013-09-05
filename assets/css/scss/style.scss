@@ -159,9 +159,11 @@ html {
   font-size: $baseline/2;
 
   .wrap {
-    @include flexbox;
 
     section {
+      display: inline-block;
+      margin-right: -.25em;
+      vertical-align: top;
       width: 30%;
 
       @media (max-width: $breakpoint-small) {

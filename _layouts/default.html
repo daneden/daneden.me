@@ -10,8 +10,8 @@
     <!-- Prefetch DNS -->
     <link rel="dns-prefetch" href="//ajax.cloudflare.com"/>
     <link rel="dns-prefetch" href="//cloud.typography.com"/>
-    <link rel="dns-prefetch" href="//stats.wordpress.com"/>
-    <link rel="dns-prefetch" href="//pixel.quantserve.com"/>
+    <link rel="dns-prefetch" href="//ajax.googleapis.com"/>
+    <link rel="dns-prefetch" href="//www.google-analytics.com"/>
 
     <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7158232/776222/css/fonts.css" />
     <!-- You can view the uncompressed SCSS file at /assets/css/scss/style.scss -->
@@ -60,7 +60,9 @@
           <h3>Recent Posts</h3>
           <ul class="recent-posts">
             {% for post in site.posts limit:5 %}
+              {% if post.hidden != true %}
             <li><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
+              {% endif %}
             {% endfor %}
           </ul>
         </section>
