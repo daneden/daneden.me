@@ -135,7 +135,11 @@ html {
 
 .entry-content {
   &:after {
-    content: '\2766';
+    content: '';
+    margin: 0 auto;
+    width: 112px;
+    height: 56px;
+    background-image: url(/assets/images/fleuron.svg);
     display: block;
     font-size: $baseline*2;
     line-height: 1;
