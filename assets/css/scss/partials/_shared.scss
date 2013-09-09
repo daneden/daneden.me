@@ -28,13 +28,19 @@ h1, p, ul, ol, dl, dd, table, .highlight, form, picture, .b {
 }
 
 ul, ol {
-  padding-left: 1.5em;
+  padding-left: 1.2rem;
+
+  ul, ol {
+    margin-bottom: 0;
+  }
+
 }
 
 ul {
-  list-style: square;
-}
+  list-style-image: url(/assets/images/bullet.svg);
 
-li ul, li ol {
-  margin-bottom: 0;
+  ul {
+    list-style-image: url(/assets/images/bullet-inside.svg);
+  }
+
 }
