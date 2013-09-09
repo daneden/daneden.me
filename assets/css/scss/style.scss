@@ -15,9 +15,14 @@
 html {
   font: 112.5%/1.55 $Serif; /* 18px/28px */
   color: #252525;
-  background-color: #feffff;
+  background-color: darken($gray, 50%);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+
+  body {
+    background-color: #feffff;
+  }
+
 }
 
 @media screen and (max-width: 720px) {
@@ -42,6 +47,9 @@ html {
 
 .site-header {
   background-color: lighten($gray, 17.5%);
+  background-image: url(/assets/images/stripes.svg);
+  background-position: center top;
+  background-repeat: repeat-x;
   padding: $baseline 0;
   margin-bottom: $baseline;
 }
@@ -161,17 +169,16 @@ html {
       margin-right: -.25em;
       vertical-align: top;
       width: 30%;
+      margin-left: 5%;
 
-      @media (max-width: $breakpoint-small) {
-        width: auto;
+      &:nth-child(3n+1) {
+        margin-left: 0;
       }
 
-      + section {
-        margin-left: 5%;
-
-        @media (max-width: $breakpoint-small) {
-          margin-left: 0;
-        }
+      @media (max-width: $breakpoint-small) {
+        display: block;
+        width: auto;
+        margin-left: 0;
       }
     }
 

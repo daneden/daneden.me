@@ -20,28 +20,28 @@
 .alignleft, .alignright {
   clear: both;
   margin-bottom: .75rem;
-  max-width: 33%;
+  max-width: 38.2%;
 }
 
   .alignleft {
     float: left;
-    margin-left: -33%;
+    margin-left: -38.2%;
     padding-right: 1.5rem;
   }
 
   .alignright {
     float: right;
-    margin-right: -33%;
+    margin-right: -38.2%;
     padding-left: 1.5rem;
   }
 
   @media screen and (max-width: $breakpoint-big) {
     .alignleft {
-      margin-left: -16.5%;
+      margin-left: -19.1%;
     }
 
     .alignright {
-      margin-right: -16.5%;
+      margin-right: -19.1%;
     }
   }
 
