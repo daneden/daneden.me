@@ -18,15 +18,18 @@ html {
   background-color: #feffff;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+}
 
-  @media (max-width: 720px) {
-    font-size: 87.5% /* 15px/23px */
+@media screen and (max-width: 720px) {
+  html {
+    font-size: 87.5%; /* 15px */
   }
+}
 
-  @media (max-width: 1400px) {
-    font-size: 125%; /* 20px/30px */
+@media screen and (min-width: 1400px) {
+  html {
+    font-size: 125%; /* 20px */
   }
-
 }
 
 .site-content {
