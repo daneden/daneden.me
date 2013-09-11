@@ -88,6 +88,16 @@
 					<li><input type='checkbox' id="fadeOutRightBig" name='fadeOutRightBig' /><label for="fadeOutRightBig">fadeOutRightBig</label></li>
 				</ul>
 
+				<h3>Sliders <small class="alignright"><a href="javascript:toggleCheck('slideIn');">check/uncheck all</a></small></h3>
+				<ul class="checks cf slideIn">
+					<li><input type='checkbox' id="slideInDown" name='slideInDown' /><label for="slideInDown">slideInDown</label></li>
+					<li><input type='checkbox' id="slideInLeft" name='slideInLeft' /><label for="slideInLeft">slideInLeft</label></li>
+					<li><input type='checkbox' id="slideInRight" name='slideInRight' /><label for="slideInRight">slideInRight</label></li>
+					<li><input type='checkbox' id="slideOutUp" name='slideOutUp' /><label for="slideOutUp">slideOutUp</label></li>
+					<li><input type='checkbox' id="slideOutLeft" name='slideOutLeft' /><label for="slideOutLeft">slideOutLeft</label></li>
+					<li><input type='checkbox' id="slideOutRight" name='slideOutRight' /><label for="slideOutRight">slideOutRight</label></li>
+				</ul>
+
 				<h3>Bouncing Entrances <small class="alignright"><a href="javascript:toggleCheck('bounceIn');">check/uncheck all</a></small></h3>
 				<ul class="checks cf bounceIn">
 					<li><input type='checkbox' id="bounceIn" name='bounceIn' /><label for="bounceIn">bounceIn</label></li>

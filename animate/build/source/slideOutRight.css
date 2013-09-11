@@ -1,6 +1,5 @@
-@-webkit-keyframes fadeOutRightBig {
+@-webkit-keyframes slideOutRight {
 	0% {
-		opacity: 1;
 		-webkit-transform: translateX(0);
 	}
 	
@@ -9,9 +8,9 @@
 		-webkit-transform: translateX(2000px);
 	}
 }
-@-moz-keyframes fadeOutRightBig {
+
+@-moz-keyframes slideOutRight {
 	0% {
-		opacity: 1;
 		-moz-transform: translateX(0);
 	}
 	
@@ -20,9 +19,9 @@
 		-moz-transform: translateX(2000px);
 	}
 }
-@-o-keyframes fadeOutRightBig {
+
+@-o-keyframes slideOutRight {
 	0% {
-		opacity: 1;
 		-o-transform: translateX(0);
 	}
 	
@@ -31,9 +30,9 @@
 		-o-transform: translateX(2000px);
 	}
 }
-@keyframes fadeOutRightBig {
+
+@keyframes slideOutRight {
 	0% {
-		opacity: 1;
 		transform: translateX(0);
 	}
 	
@@ -43,9 +42,9 @@
 	}
 }
 
-.fadeOutRightBig {
-	-webkit-animation-name: fadeOutRightBig;
-	-moz-animation-name: fadeOutRightBig;
-	-o-animation-name: fadeOutRightBig;
-	animation-name: fadeOutRightBig;
+.slideOutRight {
+	-webkit-animation-name: slideOutRight;
+	-moz-animation-name: slideOutRight;
+	-o-animation-name: slideOutRight;
+	animation-name: slideOutRight;
 }

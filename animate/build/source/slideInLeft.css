@@ -1,51 +1,50 @@
-@-webkit-keyframes fadeInLeftBig {
+@-webkit-keyframes slideInLeft {
 	0% {
 		opacity: 0;
 		-webkit-transform: translateX(-2000px);
 	}
 	
 	100% {
-		opacity: 1;
 		-webkit-transform: translateX(0);
 	}
 }
-@-moz-keyframes fadeInLeftBig {
+
+@-moz-keyframes slideInLeft {
 	0% {
 		opacity: 0;
 		-moz-transform: translateX(-2000px);
 	}
 	
 	100% {
-		opacity: 1;
 		-moz-transform: translateX(0);
 	}
 }
-@-o-keyframes fadeInLeftBig {
+
+@-o-keyframes slideInLeft {
 	0% {
 		opacity: 0;
 		-o-transform: translateX(-2000px);
 	}
 	
 	100% {
-		opacity: 1;
 		-o-transform: translateX(0);
 	}
 }
-@keyframes fadeInLeftBig {
+
+@keyframes slideInLeft {
 	0% {
 		opacity: 0;
 		transform: translateX(-2000px);
 	}
 	
 	100% {
-		opacity: 1;
 		transform: translateX(0);
 	}
 }
 
-.fadeInLeftBig {
-	-webkit-animation-name: fadeInLeftBig;
-	-moz-animation-name: fadeInLeftBig;
-	-o-animation-name: fadeInLeftBig;
-	animation-name: fadeInLeftBig;
+.slideInLeft {
+	-webkit-animation-name: slideInLeft;
+	-moz-animation-name: slideInLeft;
+	-o-animation-name: slideInLeft;
+	animation-name: slideInLeft;
 }
