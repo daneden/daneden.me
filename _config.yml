@@ -8,5 +8,4 @@ rdiscount:
 
 pygments: true
 
-permalink: /:year/:month/:day/:title/
-relative_permalinks: true
+permalink: pretty

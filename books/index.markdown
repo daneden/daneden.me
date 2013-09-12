@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Books
-permalink: ''
 in-nav: true
 class: library
 ---
