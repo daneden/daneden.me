@@ -1,5 +1,5 @@
 require 'date'
-require 'facets'
+require 'facets/integer/ordinal'
 
 module Jekyll
   module DateFilter
