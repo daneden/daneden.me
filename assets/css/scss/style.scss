@@ -148,7 +148,7 @@ html {
   }
 
   > .intro {
-    font-family: $Serif-SC;
+    @extend .caps;
 
     &:first-letter {
       font-family: $Serif;
