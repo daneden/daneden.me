@@ -261,6 +261,9 @@ ExpiresByType application/javascript    "access plus 1 year"
 # FileETag None is not enough for every server.
 <IfModule mod_headers.c>
 Header unset ETag
+<FilesMatch "\.(bmp|css|flv|gif|ico|jpg|jpeg|js|pdf|png|svg|swf|tif|tiff)$">
+    Header set Last-Modified "Mon, 31 Aug 2009 00:00:00 GMT"
+</FilesMatch>
 </IfModule>
 
 # Since we're sending far-future expires, we don't need ETags for
