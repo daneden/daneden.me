@@ -47,7 +47,7 @@ html {
 
 .site-header {
   background-color: lighten($gray, 17.5%);
-  background-image: url(/assets/images/stripes.svg);
+  background-image: inline-image('stripes.svg');
   background-position: center top;
   background-repeat: repeat-x;
   padding: $baseline 0;
@@ -139,7 +139,7 @@ html {
     margin: 0 auto;
     width: 112px;
     height: 56px;
-    background-image: url(/assets/images/fleuron.svg);
+    background-image: inline-image('fleuron.svg');
     display: block;
     font-size: $baseline*2;
     line-height: 1;
