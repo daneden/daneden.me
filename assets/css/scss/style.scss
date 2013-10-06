@@ -46,7 +46,7 @@ html {
 \*-----------------------------------*/
 
 .site-header {
-  background-color: lighten($gray, 17.5%);
+  background-color: lighten($gray, 17%);
   background-image: inline-image('stripes.svg');
   background-position: center top;
   background-repeat: repeat-x;
@@ -64,7 +64,6 @@ html {
   }
 
     .site-nav {
-      font-weight: 700;
       padding-left: 0;
 
       li + li {
