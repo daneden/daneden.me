@@ -59,17 +59,6 @@
         </section>
 
         <section>
-          <h3>Recent Posts</h3>
-          <ul class="recent-posts">
-            {% for post in site.posts limit:5 %}
-              {% if post.hidden != true %}
-            <li><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
-              {% endif %}
-            {% endfor %}
-          </ul>
-        </section>
-
-        <section>
           <h3>Colophon</h3>
           <p>Designed, developed, and maintained by <a href="/about">Daniel Eden</a>. Hosted by <a title="RamNode" href="https://clientarea.ramnode.com/aff.php?aff=088">RamNode</a>. Set in <span class="caps">H&FJ</span>’s Mercury and Whitney. Check the <a href="/styleguide">styleguide.</a><p>
         </section>

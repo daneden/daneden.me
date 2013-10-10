@@ -5,7 +5,7 @@ in-nav: true
 class: library
 ---
 
-You won’t find any novels here. The books I list here are the ones that got me to where I am; the ones with practical, actionable advice and learnings. Those that don’t outright give you the instructions on design will inspire you and give you the tools required to build your own path. These folks know what they’re talking about.
+These books will teach you more than their money’s worth about design and life. Don’t forget to close them every once in a while, too.
 
 * * *
 

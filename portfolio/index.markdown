@@ -5,12 +5,6 @@ in-nav: true
 scripts: ["//cdnjs.cloudflare.com/ajax/libs/fitvids/1.0.1/jquery.fitvids.min.js"]
 ---
 
-I'm a big believer in [building the things we need.](/2012/04/08/castles/) That's mostly what you'll see here - tools I built for myself. I hope they're useful to you, too.
-
-If you want to see more of what I'm working on, you can look at my design work-in-progress on [Dribbble](http://dribbble.com/dte), and you can explore my open source contributions on [GitHub.](http://github.com/daneden)
-
-* * *
-
 ## Just My Type
 
 [Just My Type](http://justmytype.co) is a library of font pairings from Adobe Typekit and H&FJ’s Cloud.Typography. Created out of a desire for a place to keep track of my personal favorite web font pairings, Just My Type has grown to become a popular typography resource for many web designers.
