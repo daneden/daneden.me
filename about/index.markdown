@@ -8,7 +8,7 @@ in-nav: true
 
 My name is Daniel Eden, and I'm a designer. I’m intrigued by the stories behind objects; how they were made, and who made them. I like to make [tools](/portfolio) for the web and write about design, courage, and lack thereof. I also like burgers, dogs, and looking up.
 
-I’m currently working for [Dropbox](http://dropbox.com) as a Design Intern. If you need it, you can view [my résumé](http://cl.ly/OlXO).
+I’m currently working for [Dropbox](http://dropbox.com) as a Design Intern. If you want to, you can view and download [my résumé](http://cl.ly/OlXO).
 
 I say words on [Twitter](http://twitter.com/_dte). I get design critique on [Dribbble.](http://dribbble.com/dte) I connect with my family on [Facebook](http://www.facebook.com/daniel.eden). I write code and put it on [GitHub](https://github.com/daneden). Nothing out of the ordinary.
 
