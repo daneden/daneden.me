@@ -3,7 +3,8 @@ layout: page
 title: Everything is Designed
 ---
 
-{% image /uploads/2013/03/design.jpg %}
+
+{% image /assets/images/illustration.svg %}
 
 Find an object that hasn’t been manipulated by the human hand. If you’re sitting in a café or an office, at home or on a train, chances are you’ll find that a very difficult task.
 
