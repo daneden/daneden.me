@@ -61,6 +61,9 @@ h2, .beta {
   font-style: normal;
   letter-spacing: 0;
   font-family: $Sans;
+  + .beta {
+    padding-top: 0;
+  }
 }
 
   p + h2, p + .beta {

@@ -20,7 +20,7 @@ guard :compass, :configuration_file => 'compass_config.rb'
 
 
 # Jekyll
-guard 'jekyll' do
+guard "jekyll-plus", :drafts => true do
   watch /.*/
-  ignore /_site/
+  ignore /^_site/
 end

@@ -17,7 +17,7 @@ html {
   color: #252525;
   background-color: darken($gray, 50%);
   -webkit-font-smoothing: antialiased;
-  -webkit-text-size-adjust: none;
+  @include prefix('text-size-adjust', 'none');
   text-rendering: optimizeLegibility;
 
   body {

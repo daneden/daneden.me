@@ -1,0 +1,14 @@
+@mixin prefix($name, $value) {
+	-webkit-#{$name}: $value;
+	   -moz-#{$name}: $value;
+	    -ms-#{$name}: $value;
+	     -o-#{$name}: $value;
+	        #{$name}: $value;
+}
+
+@mixin calc($property, $expression) {
+	#{$property}: -webkit-calc(#{$expression});
+  #{$property}:    -moz-calc(#{$expression});
+  #{$property}:      -o-calc(#{$expression});
+  #{$property}:         calc(#{$expression});
+}
