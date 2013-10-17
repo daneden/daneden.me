@@ -534,3 +534,5 @@ Redirect /type/twins http://justmytype.co/twins
 
   # END Adaptive-Images -------------------------------------------------------------------------------
 </IfModule>
+
+RewriteRule (.+)-[a-zA-Z0-9]+(\.(js|css))$ $1$2 [L]
