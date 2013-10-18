@@ -20,7 +20,7 @@ Mercury Text ScreenSmart is nice and open, so we can afford to give it some tigh
 
 <figure>
 	<p class="alpha">Quaffing causes waffle deficiencies, say experts</p>
-	<figcaption>Mercury Text's ligatures (seen on *"ffi, ffl,"* and *"fi"*) are discreet but effective</figcaption>
+	<figcaption>Mercury Text's ligatures (seen on *"ffi, ffl,"* and *"fi"*) are discreet but effective. (If you can't see the ligatures, check [this screenshot](/uploads/2013/10/ligatures.png))</figcaption>
 </figure>
 
 Tight leading can cause some conflicts between ascenders and descenders, but it's a rare problem. Secondary and tertiary headlines are set in H&FJ’s [Whitney ScreenSmart](http://www.typography.com/fonts/whitney/overview/). Designed originally for the [Whitney Museum](http://whitney.org), it’s an authoritative yet soft typeface. With similar character contrast and weight to Mercury, it’s perfect to complement the main headlines and body text.
