@@ -9,4 +9,4 @@ rdiscount:
 
 pygments: true
 
-permalink: /:year/:month/:title/
+permalink: pretty
