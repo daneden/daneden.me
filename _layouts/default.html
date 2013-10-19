@@ -1,66 +1,65 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>{{ page.title }} &#10087; {{ site.name }}</title>
-    <meta name="viewport" content="initial-scale=1">
-    <meta name="google-site-verification" content="jUNoh1wOQAwoXUjOsdlOgIeOGsUrMPon_9fXg-E9yUI"/>
+  <meta charset="utf-8">
+  <title>{{ page.title }} &#10087; {{ site.name }}</title>
+  <meta name="viewport" content="initial-scale=1">
 
-    <link rel="stylesheet" href="/assets/css/style-{% bust_cache %}.css">
+  <!-- Grab our super-cacheable, super-compressed site CSS -->
+  <link rel="stylesheet" href="/assets/css/style-{% bust_cache %}.css">
 
-    <!-- Prefetch DNS -->
-    <link rel="dns-prefetch" href="//ajax.cloudflare.com"/>
-    <link rel="dns-prefetch" href="//cloud.typography.com"/>
-    <link rel="dns-prefetch" href="//ajax.googleapis.com"/>
-    <link rel="dns-prefetch" href="//www.google-analytics.com"/>
+  <!-- Prefetch DNS -->
+  <link rel="dns-prefetch" href="//ajax.cloudflare.com"/>
+  <link rel="dns-prefetch" href="//cloud.typography.com"/>
+  <link rel="dns-prefetch" href="//ajax.googleapis.com"/>
+  <link rel="dns-prefetch" href="//www.google-analytics.com"/>
 
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
+  <!-- Touch icon -->
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
 
-    <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7158232/776222/css/fonts.css" />
-
+  <!-- Grab our H&FJ font CSS. Since we wanted to DNS-prefetch the URL, this happens last in the <head> -->
+  <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7158232/776222/css/fonts.css" />
 </head>
 <body{% if page.class %} class="{{ page.class }}"{% endif %}>
-  <header class="site-header">
+  <header class="site-header" role="banner">
     <div class="wrap cf">
       <h1 class="site-title gamma"><a href="/" title="{{ site.name }}">{{ site.name }}</a></h1>
-      <nav class="site-navigation">
+      <nav class="site-navigation" role="navigation">
         <ul class="nav site-nav">
-          {% for p in site.pages %}{% if p.in-nav == true %}
-          <li>
-            <a {% if p.url == page.url %}class="active"{% endif %} href="{{ p.url }}">
-              {{ p.title }}
-            </a>
-          </li>
+
+          {% for p in site.pages %}{% if p.in-nav == true %}<li><a {% if p.url == page.url %}class="active"{% endif %} href="{{ p.url }}">{{ p.title }}</a></li>
           {% endif %}{% endfor %}
         </ul>
       </nav>
     </div>
   </header>
 
-  <main class="site-content">
+  <main class="site-content" role="main">
     <div class="wrap">
       {{ content }}
 
     </div>
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer" role="contentinfo">
     <div class="wrap">
-
         <section class="author-info vcard">
-          <img alt='' src='/assets/images/face.jpeg' class='avatar avatar-90 photo' height='90' width='90'/> <h3>About</h3>
+          <img alt='Portrait of Daniel Eden' src='/assets/images/face.jpeg' class='avatar' height='90' width='90'/>
+          <h3>About</h3>
           <p>My name is Daniel Eden. I'm a designer and writer from Manchester, <span class="caps">UK</span>. Learn more <a href="/about">about me</a> or this site’s <a href="/purpose">purpose.</a></p>
         </section>
 
         <section>
           <h3>Colophon</h3>
-          <p>Designed, developed, and maintained by <a href="/about">Daniel Eden</a>. Hosted by <a title="RamNode" href="https://clientarea.ramnode.com/aff.php?aff=088">RamNode</a>. Set in <span class="caps">H&FJ</span>’s Mercury and Whitney. Check the <a href="/styleguide">styleguide.</a><p>
+          <p>Designed, developed, and maintained by <a href="/about">Daniel Eden</a>. Hosted by <a title="RamNode" href="https://clientarea.ramnode.com/aff.php?aff=088">RamNode</a>. Set in <span class="caps">H&amp;FJ</span>’s Mercury and Whitney. Check the <a href="/styleguide">styleguide.</a><p>
         </section>
     </div>
   </footer>
+
   <!-- Set Adaptive Images cookie -->
   <script>document.cookie='resolution='+Math.max(screen.width,screen.height)+("devicePixelRatio" in window ? ","+devicePixelRatio : ",1")+'; path=/';</script>
+
+  <!-- Load Google Analytics -->
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -71,16 +70,13 @@
     ga('send', 'pageview');
 
   </script>
+
+  <!-- Load jQuery. Probably cached on the user’s machine, so I’m not overly bothered about the weight addition of this. -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+  <!-- Per-page scripts injected here -->
   {% for script in page.scripts %}
     <script src="{{ script }}"></script>
   {% endfor %}
-  <script>
-    $(document).ready(function() {
-      if ($.fn.fitVids) {
-        $('.entry-content').fitVids();
-      };
-    });
-  </script>
 </body>
 </html>
