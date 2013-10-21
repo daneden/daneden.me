@@ -383,7 +383,4 @@ Redirect /type/twins http://justmytype.co/twins
 
 </IfModule>
 
-<IfModule mod_rewrite.c>
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteRule ^(.+)\.(\d+)\.(js|css|png|jpg|gif)$ $1.$3 [L]
-</IfModule>
+RewriteRule (.+)-[a-zA-Z0-9]+(\.(js|css))$ $1$2 [L]
