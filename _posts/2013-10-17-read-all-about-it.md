@@ -11,7 +11,7 @@ When it came to the task of redesigning my website again, I gave myself a broad 
 One of the most vital parts of any news publication design is a readable and diverting headline. H&FJ’s [Mercury](http://www.typography.com/fonts/mercury-text/overview/) was an obvious choice; it was specifically designed for use in newspapers. It also happened to recently have been optimised for their web font service, with a bigger x-height and screen-optimised character contrast. While Mercury Text is designed for body use, it makes a wonderful headline, too:
 
 <figure>
-	<p class="alpha">Gas, Inc. raises energy prices by 9.2%</p>
+	<p class="alpha">Gas, INC. raises energy prices by 9.2%</p>
 	<p class="alpha">President Obama speaks as shutdown ends: 'This town has to change'</p>
 	<figcaption>Mercury Text is diverse enough to be used as an inflated headline typeface</figcaption>
 </figure>
