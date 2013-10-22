@@ -35,14 +35,14 @@ Tired of only being able to access my iA Writer documents on my iOS devices, I c
 
 I was invited to speak at this year's [Webshaped](http://webshaped.fi) conference, alongside some incredible folk I've long admired. It was terrifying, amazing, and I'd love to do it again. My presentation tackled animation on the web, and how we can delight our audience by integrating animation in our websites and applications. You can [read more](http://daneden.me/2012/05/i-have-no-idea-what-im-doing/) about my time there. And that's not me up on stage in the picture - that's [Kyle.](http://twitter.com/kneath)
 
-[![Webshaped](http://daneden.me/uploads/2012/05/webshaped.jpg)](http://webshaped.fi)
+[![Webshaped](/uploads/2012/05/webshaped.jpg)](http://webshaped.fi)
 
 
 ## Personal Branding
 
 I recently [became an “adult”](http://daneden.me/twentyone), whatever that means. So I thought it was about time I got myself some business cards and establish some sort of personal branding. Rubber stamps are a relatively cheap way to instantly make handwritten letters a lot more fun.
 
-![Branding](http://daneden.me/uploads/2012/05/branding.jpg)
+![Branding](/uploads/2012/05/branding.jpg)
 
 
 ## Brills
