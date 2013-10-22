@@ -19,7 +19,7 @@ One of the most vital parts of any news publication design is a readable and div
 Mercury Text ScreenSmart is nice and open, so we can afford to give it some tight tracking and leading (or letter-spacing and line-height in CSS). It also has some excellent, discreet ligatures:
 
 <figure>
-	<p class="alpha">Quaffing causes waffle deficiencies, say experts</p>
+	<p class="alpha">Quaffing causes ½ of all waffle deficiencies, say experts</p>
 	<figcaption>Mercury Text's ligatures (seen on *"ffi, ffl,"* and *"fi"*) are discreet but effective. (If you can't see the ligatures, check [this screenshot](/uploads/2013/10/ligatures.png))</figcaption>
 </figure>
 
