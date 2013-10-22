@@ -276,8 +276,8 @@ RewriteRule ^ http://%1%{REQUEST_URI} [R=301,L]
 # Uncomment the following lines to use this feature.
 
 <IfModule mod_rewrite.c>
-  RewriteCond %{SERVER_PORT} !^443
-  RewriteRule ^ https://daneden.me%{REQUEST_URI} [R=301,L]
+  RewriteCond %{HTTPS} off
+  RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
 </IfModule>
 
 # ----------------------------------------------------------------------
