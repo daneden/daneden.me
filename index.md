@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Everything is Designed
+title: Everything is Spooky
 ---
 
 
-{% image /assets/images/illustration.svg %}
+{% image /assets/images/halloween.svg %}
 
 Find an object that hasn’t been manipulated by the human hand. If you’re sitting in a café or an office, at home or on a train, chances are you’ll find that a very difficult task.
 
