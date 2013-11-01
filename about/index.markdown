@@ -4,7 +4,7 @@ title: About
 in-nav: true
 ---
 
-![This is my face. There are many like it but this one is mine.](/uploads/2013/08/Portrait.jpg)
+{% image /uploads/2013/10/face.jpg "Photo credit: [Rasmus Andersson](http://www.flickr.com/photos/rsms)" %}
 
 My name is Daniel Eden, and I'm a designer. I’m intrigued by the stories behind objects; how they were made, and who made them. I like to make [tools](/portfolio) for the web and [write](/blog) about design, courage, and lack thereof. I also like burgers, dogs, and looking up.
 
