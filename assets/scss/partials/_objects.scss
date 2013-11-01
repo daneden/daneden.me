@@ -27,6 +27,10 @@ figure img {
   margin-bottom: .75rem;
 }
 
+p:empty + figure {
+  margin-top: -$baseline;
+}
+
 .b, .p {
   margin-bottom: $baseline;
 }
