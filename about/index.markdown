@@ -5,7 +5,7 @@ in-nav: true
 ---
 {% image /uploads/2013/10/face.jpg "Photo credit: [Rasmus Andersson](http://www.flickr.com/photos/rsms)" %}
 
-My name is Daniel Eden, and I'm a designer. I’m intrigued by the stories behind objects; how they were made, and who made them. I like to make [tools](/portfolio) for the web and [write](/blog) about design, courage, and lack thereof. I also like burgers, dogs, and looking up.
+My name is Daniel Eden, and I'm a designer. I’m intrigued by the stories behind objects; how they were made, and who made them. I like to make [tools](/portfolio) for the web and [write](/blog) about design, courage, and lack thereof. I also like Disney, dogs, and looking up.
 
 I’m currently working for [Dropbox](http://dropbox.com) as a Design Intern. If you want to, you can view and download [my résumé](http://cl.ly/OlXO).
 
