@@ -2,12 +2,14 @@ module.exports = function(grunt) {
 	pkg: grunt.file.readJSON('package.json'),
 	grunt.initConfig({
 		// Sass
-		compass: {
+		sass: {
 		  dist: {
 		  	options: {
-		  		sassDir: 'assets/scss',
-		  		cssDir: 'assets/css',
-		  		config: 'compass_config.rb'
+		  		sourcemap: true,
+		  		compass: true
+		  	},
+		  	files: {
+		  		'assets/css/style.css' : 'assets/scss/style.scss'
 		  	}
 		  }
 		},
@@ -19,7 +21,7 @@ module.exports = function(grunt) {
 	    },
 	    no_dest: {
 	    	// File to output
-	      src: 'assets/css/style.css',
+	      src: 'assets/css/style.css'
 	    },
 	  },
 	  csso: {
@@ -40,9 +42,9 @@ module.exports = function(grunt) {
     // Watch files for changes
     watch: {
       css: {
-        files: ['assets/**', '!**/node_modules/**', '!**/_site/**', '!**/assets/**/*.css'],
+        files: ['assets/scss/*', 'assets/images/*', '!**/_site/**'],
         // Run Sass, autoprefixer, and CSSO
-        tasks: ['compass', 'autoprefixer', 'csso'],
+        tasks: ['sass', 'autoprefixer', 'csso'],
       },
       site: {
       	files: ['**/*', '!**/node_modules/**', '!**/_site/**', '.htaccess'],
@@ -56,7 +58,6 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-autoprefixer');
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-csso');
-	grunt.loadNpmTasks('grunt-contrib-compass');
 	grunt.loadNpmTasks('grunt-jekyll');
 	grunt.registerTask('default', ['watch']);
 };

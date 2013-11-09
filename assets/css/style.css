@@ -1,4 +1,10 @@
-/*! Unminified Sass source available at /assets/scss/style.scss */
+/*! Unminified Sass source available at /assets/scss/style.scss
+ *  Source map linked to /assets/css/style.css
+ */
+
+/*-----------------------------------*\
+  $RESET
+\*-----------------------------------*/
 
 * {
   margin: 0;
@@ -23,6 +29,10 @@ svg {
   height: auto;
 }
 
+/*-----------------------------------*\
+  $CLEARFIX
+\*-----------------------------------*/
+
 .cf:before,
 .cf:after {
   content: " ";
@@ -32,6 +42,10 @@ svg {
 .cf:after {
   clear: both;
 }
+
+/*-----------------------------------*\
+  $SHARED
+\*-----------------------------------*/
 
 ::selection {
   background-color: #dddedf;
@@ -45,7 +59,7 @@ svg {
 
 :target,
 mark {
-  background-color: rgba(255,200,0,0.3);
+  background-color: rgba(255, 200, 0, 0.3);
 }
 
 img,
@@ -93,6 +107,10 @@ ul ul {
   list-style-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iNTAwcHgiIGhlaWdodD0iNTAwcHgiIHZpZXdCb3g9IjAgMCA1MDAgNTAwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MDAgNTAwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxwYXRoIGQ9Ik0yNTAsOTcuMjg2TDM5Mi4xNywyNTBMMjUwLDQwMi43MTRMMTA3LjgzLDI1MEwyNTAsOTcuMjg2IE0yNTAsMEwxNy4yNjEsMjUwTDI1MCw1MDBsMjMyLjczOS0yNTBMMjUwLDBMMjUwLDB6Ii8+DQo8L2c+DQo8L3N2Zz4NCg==');
 }
 
+/*-----------------------------------*\
+  $TYPE
+\*-----------------------------------*/
+
 a {
   color: inherit;
   text-decoration: underline;
@@ -125,11 +143,11 @@ hr {
 hr:after {
   content: "* * *";
   font-size: 1.75rem;
-  font-family: "Whitney SSm A","Whitney SSm B",Geneva,Verdana,sans-serif;
+  font-family: "Whitney SSm A", "Whitney SSm B", Geneva, Verdana, sans-serif;
   font-weight: 700;
   line-height: .857142857;
   letter-spacing: .2em;
-  color: rgba(0,0,0,0.3);
+  color: rgba(0, 0, 0, 0.3);
   display: block;
   text-align: center;
   margin-top: 2rem;
@@ -161,16 +179,16 @@ h2,
   line-height: 1;
   font-style: normal;
   letter-spacing: 0;
-  font-family: "Whitney SSm A","Whitney SSm B",Geneva,Verdana,sans-serif;
+  font-family: "Whitney SSm A", "Whitney SSm B", Geneva, Verdana, sans-serif;
 }
 
-h2+.beta,
-.beta+.beta {
+h2 + .beta,
+.beta + .beta {
   padding-top: 0;
 }
 
-p+h2,
-p+.beta {
+p + h2,
+p + .beta {
   padding-top: 1.55rem;
 }
 
@@ -182,7 +200,7 @@ h3,
   margin-bottom: 0;
   font-style: normal;
   letter-spacing: .1em;
-  font-family: "Whitney SSm SC A","Whitney SSm SC B",Geneva,Verdana,sans-serif;
+  font-family: "Whitney SSm SC A", "Whitney SSm SC B", Geneva, Verdana, sans-serif;
   text-transform: uppercase;
 }
 
@@ -196,7 +214,7 @@ h3,
 small {
   font-size: 0.775rem;
   line-height: 1.666;
-  color: rgba(0,0,0,0.7);
+  color: rgba(0, 0, 0, 0.7);
 }
 
 del {
@@ -210,9 +228,9 @@ del {
 }
 
 .caps,
-.entry-content>.intro {
+.entry-content > .intro {
   text-transform: uppercase;
-  font-family: "Mercury SSm SC A","Mercury SSm SC B",Georgia,serif;
+  font-family: "Mercury SSm SC A", "Mercury SSm SC B", Georgia, serif;
   letter-spacing: .01em;
 }
 
@@ -223,19 +241,19 @@ figcaption {
 }
 
 figcaption .caps,
-figcaption .entry-content>.intro {
+figcaption .entry-content > .intro {
   font-family: "Whitney SSm SC A", "Whitney SSm SC B", "Whitney", sans-serif;
 }
 
 blockquote {
-  font-family: "Whitney SSm A","Whitney SSm B",Geneva,Verdana,sans-serif;
+  font-family: "Whitney SSm A", "Whitney SSm B", Geneva, Verdana, sans-serif;
   color: #808a91;
   font-style: italic;
 }
 
 blockquote .caps,
-blockquote .entry-content>.intro {
-  font-family: "Whitney SSm SC A","Whitney SSm SC B",Geneva,Verdana,sans-serif;
+blockquote .entry-content > .intro {
+  font-family: "Whitney SSm SC A", "Whitney SSm SC B", Geneva, Verdana, sans-serif;
 }
 
 blockquote em {
@@ -249,6 +267,64 @@ blockquote em {
   padding: .75rem 1.5rem;
   overflow: scroll;
   background-color: #26292c;
+  /* Comment */
+  /* Error */
+  /* Keyword */
+  /* Literal */
+  /* Name */
+  /* Operator */
+  /* Punctuation */
+  /* Comment.Multiline */
+  /* Comment.Preproc */
+  /* Comment.Single */
+  /* Comment.Special */
+  /* Generic.Emph */
+  /* Generic.Strong */
+  /* Keyword.Constant */
+  /* Keyword.Declaration */
+  /* Keyword.Namespace */
+  /* Keyword.Pseudo */
+  /* Keyword.Reserved */
+  /* Keyword.Type */
+  /* Literal.Date */
+  /* Literal.Number */
+  /* Literal.String */
+  /* Name.Attribute */
+  /* Name.Builtin */
+  /* Name.Class */
+  /* Name.Constant */
+  /* Name.Decorator */
+  /* Name.Entity */
+  /* Name.Exception */
+  /* Name.Function */
+  /* Name.Label */
+  /* Name.Namespace */
+  /* Name.Other */
+  /* Name.Property */
+  /* Name.Tag */
+  /* Name.Variable */
+  /* Operator.Word */
+  /* Text.Whitespace */
+  /* Literal.Number.Float */
+  /* Literal.Number.Hex */
+  /* Literal.Number.Integer */
+  /* Literal.Number.Oct */
+  /* Literal.String.Backtick */
+  /* Literal.String.Char */
+  /* Literal.String.Doc */
+  /* Literal.String.Double */
+  /* Literal.String.Escape */
+  /* Literal.String.Heredoc */
+  /* Literal.String.Interpol */
+  /* Literal.String.Other */
+  /* Literal.String.Regex */
+  /* Literal.String.Single */
+  /* Literal.String.Symbol */
+  /* Name.Builtin.Pseudo */
+  /* Name.Variable.Class */
+  /* Name.Variable.Global */
+  /* Name.Variable.Instance */
+  /* Literal.Number.Integer.Long */
 }
 
 .highlight .hll {
@@ -488,6 +564,10 @@ blockquote em {
   color: #ae81ff;
 }
 
+/*-----------------------------------*\
+  $OBJECTS
+\*-----------------------------------*/
+
 .island {
   padding: .75rem;
 }
@@ -522,6 +602,10 @@ p:empty {
 .p {
   margin-bottom: 1.55rem;
 }
+
+/*-----------------------------------*\
+  $LAYOUT
+\*-----------------------------------*/
 
 .wrap {
   max-width: 39rem;
@@ -590,8 +674,13 @@ p:empty {
   }
 }
 
+/*-----------------------------------*\
+  $MAIN
+\*-----------------------------------*/
+
 html {
-  font: 112.5%/1.55 "Mercury SSm A","Mercury SSm B",Georgia,serif;
+  font: 112.5%/1.55 "Mercury SSm A", "Mercury SSm B", Georgia, serif;
+  /* 18px/28px */
   color: #252525;
   background-color: #434a4e;
   -webkit-font-smoothing: antialiased;
@@ -606,18 +695,24 @@ html body {
 @media screen and (max-width: 720px) {
   html {
     font-size: 87.5%;
+    /* 15px */
   }
 }
 
 @media screen and (min-width: 1400px) {
   html {
     font-size: 125%;
+    /* 20px */
   }
 }
 
 .site-content {
   padding-bottom: 3rem;
 }
+
+/*-----------------------------------*\
+  $HEADER
+\*-----------------------------------*/
 
 .site-header {
   background-color: #f3f4f4;
@@ -633,7 +728,7 @@ html body {
 }
 
 .entry-meta {
-  font-family: "Whitney SSm A","Whitney SSm B",Geneva,Verdana,sans-serif;
+  font-family: "Whitney SSm A", "Whitney SSm B", Geneva, Verdana, sans-serif;
   color: #8d979d;
 }
 
@@ -641,7 +736,7 @@ html body {
   padding-left: 0;
 }
 
-.site-nav li+li {
+.site-nav li + li {
   margin-left: 0.88571rem;
 }
 
@@ -653,6 +748,10 @@ html body {
   color: #c75c4a;
 }
 
+/*-----------------------------------*\
+  $BANNER
+\*-----------------------------------*/
+
 .featured-image {
   text-align: center;
 }
@@ -661,6 +760,10 @@ html body {
   margin: auto;
   width: auto;
 }
+
+/*-----------------------------------*\
+  $ALL-POSTS
+\*-----------------------------------*/
 
 .posts-by-year {
   list-style: none;
@@ -676,14 +779,18 @@ html body {
   overflow: hidden;
 }
 
-.posts-by-year li+li {
-  border-top: 1px solid rgba(0,0,0,0.1);
+.posts-by-year li + li {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .posts-by-year li .entry-meta {
   float: right;
   margin-left: 0.775rem;
 }
+
+/*-----------------------------------*\
+  $ARTICLE
+\*-----------------------------------*/
 
 .entry-header {
   padding: 1.55rem 0;
@@ -706,9 +813,13 @@ html body {
   color: #c4c9cc;
 }
 
-.entry-content>.intro:first-letter {
-  font-family: "Mercury SSm A","Mercury SSm B",Georgia,serif;
+.entry-content > .intro:first-letter {
+  font-family: "Mercury SSm A", "Mercury SSm B", Georgia, serif;
 }
+
+/*-----------------------------------*\
+  $FOOTER
+\*-----------------------------------*/
 
 .site-footer {
   background-color: #434a4e;
@@ -753,8 +864,8 @@ html body {
   left: -3rem;
   width: 2rem;
   height: 2rem;
-  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.25);
-  box-shadow: 0 1px 2px rgba(0,0,0,0.25);
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
 }
 
 @media screen and (max-width: 840px) {
@@ -767,3 +878,5 @@ html body {
   padding-left: 0;
   list-style: none;
 }
+
+/*# sourceMappingURL=style.css.map */
