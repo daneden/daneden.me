@@ -1,5 +1,4 @@
 /*! Unminified Sass source available at /assets/scss/style.scss */
-
 @import 'partials/reset';
 @import 'partials/base';
 @import 'partials/shared';
@@ -17,7 +16,7 @@ html {
   color: #252525;
   background-color: darken($gray, 50%);
   -webkit-font-smoothing: antialiased;
-  @include prefix('text-size-adjust', 'none');
+  text-size-adjust: none;
   text-rendering: optimizeLegibility;
 
   body {
