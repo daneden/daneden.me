@@ -66,7 +66,9 @@ table,
 .highlight,
 form,
 picture,
-.b {
+.b,
+.p,
+figure {
   margin-bottom: 1.55rem;
   display: block;
 }
