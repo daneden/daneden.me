@@ -684,7 +684,7 @@ html {
   color: #252525;
   background-color: #434a4e;
   -webkit-font-smoothing: antialiased;
-  text-size-adjust: none;
+  -webkit-text-size-adjust: none;
   text-rendering: optimizeLegibility;
 }
 
