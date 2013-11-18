@@ -50,8 +50,8 @@ module.exports = function(grunt) {
     watch: {
       css: {
         files: [
-          'assets/scss/*',
-          'assets/images/*',
+          'assets/scss/**/*',
+          'assets/images/**/*',
           '!**/_site/**'
         ],
         // Run Sass, autoprefixer, and CSSO
@@ -71,6 +71,7 @@ module.exports = function(grunt) {
   });
 
   // Register our tasks
+  grunt.loadNpmTasks('grunt-notify');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-contrib-sass');

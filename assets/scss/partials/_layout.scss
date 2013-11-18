@@ -12,6 +12,15 @@
   }
 }
 
+figure img {
+  @media (max-width: $breakpoint-small) {
+    max-width: calc(100% + 2.201rem);
+    width: calc(100% + 2.201rem);
+    margin-left: -1.107142857rem;
+    margin-right: -1.107142857rem;
+  }
+}
+
 .aligncenter {
   display: block;
   margin: 0 auto 1.5rem;
@@ -19,8 +28,22 @@
 
 .alignleft, .alignright {
   clear: both;
-  margin-bottom: .75rem;
+  margin-bottom: $baseline/2;
   max-width: 38.2%;
+
+  img {
+    max-width: 100%;
+    width: auto;
+    margin: auto;
+    margin-bottom: $baseline/2;
+
+    @media (max-width: $breakpoint-small) {
+      max-width: calc(100% + 2.201rem);
+      width: calc(100% + 2.201rem);
+      margin-left: -1.107142857rem;
+      margin-right: -1.107142857rem;
+    }
+  }
 }
 
   .alignleft {
@@ -55,7 +78,7 @@
     }
   }
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: $breakpoint-small) {
     .alignleft, .alignright {
       float: none;
       max-width: 100%;
