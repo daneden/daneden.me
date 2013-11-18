@@ -16,14 +16,14 @@
 
 html {
   font: 112.5%/1.55 $Serif; /* 18px/28px */
-  color: #252525;
+  color: darken($gray, 65%);
   background-color: darken($gray, 50%);
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: none;
   text-rendering: optimizeLegibility;
 
   body {
-    background-color: #feffff;
+    background-color: lighten($gray, 22.5%);
   }
 
 }
@@ -50,7 +50,7 @@ html {
 
 .site-header {
   background-color: lighten($gray, 17%);
-  background-image: inline-image('stripes.svg');
+  box-shadow: inset 0 8px $gray;
   background-position: center top;
   background-repeat: repeat-x;
   padding: $baseline 0;
@@ -58,6 +58,7 @@ html {
 }
 
   .site-title {
+    font-weight: 700;
     margin-bottom: $baseline/2;
   }
 
@@ -75,11 +76,11 @@ html {
     }
 
       .site-nav a:hover {
-        color: $link-hover;
+        color: $link;
       }
 
       .site-nav .active {
-        color: $link;
+        color: $link-hover;
       }
 
 /*-----------------------------------*\
