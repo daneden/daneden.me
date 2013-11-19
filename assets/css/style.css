@@ -603,12 +603,16 @@ p:empty {
   margin-bottom: 1.55rem;
 }
 
+.promo {
+  text-align: center;
+}
+
 /*-----------------------------------*\
   $LAYOUT
 \*-----------------------------------*/
 
 .wrap {
-  max-width: 39rem;
+  max-width: 42rem;
   margin: 0 auto;
   padding: 0 3.1rem;
 }
@@ -712,7 +716,7 @@ p:empty {
 html {
   font: 112.5%/1.55 "Mercury SSm A", "Mercury SSm B", Georgia, serif;
   /* 18px/28px */
-  color: #202325;
+  color: #2c3032;
   background-color: #434a4e;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: none;
