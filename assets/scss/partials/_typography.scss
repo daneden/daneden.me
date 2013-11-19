@@ -119,8 +119,9 @@ figcaption {
 
 blockquote {
   font-family: $Sans;
-  color: darken($gray, 25%);
-  font-style: italic;
+  padding-left: 1.55rem;
+  border-left: 2px solid lighten($gray, 15%);
+  color: darken($gray, 35%);
 
   .caps {
     font-family: $Sans-SC;
