@@ -30,6 +30,9 @@ module.exports = function(grunt) {
     // Minify CSS
     csso: {
       dist: {
+        options: {
+          banner: '/*# sourceMappingURL=style.css.map */'
+        },
         files: {
           // Output compressed CSS to style.min.css
           'assets/css/style.min.css': ['assets/css/style.css']
