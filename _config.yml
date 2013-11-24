@@ -10,3 +10,5 @@ rdiscount:
 pygments: true
 
 permalink: pretty
+
+include: [".htaccess"]
