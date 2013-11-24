@@ -139,11 +139,9 @@
 	</div>
 	<script>
 	function testAnim(x) {
-		$('#animateTest').removeClass().addClass(x + ' animated');
-		var wait = window.setTimeout( function(){
-			$('#animateTest').removeClass()},
-			1300
-		);
+		$('#animateTest').removeClass().addClass(x + ' animated').one('webkitAnimationEnd oAnimationEnd', function(){
+			$(this).removeClass();
+		});
 	}
 
 	$(function(){
