@@ -324,6 +324,10 @@ blockquote em {
   /* Literal.Number.Integer.Long */
 }
 
+.highlight * {
+  display: initial;
+}
+
 .highlight .hll {
   background-color: #49483e;
 }
@@ -355,6 +359,7 @@ blockquote em {
 
 .highlight .p {
   color: #f8f8f2;
+  margin-bottom: 0;
 }
 
 .highlight .cm {

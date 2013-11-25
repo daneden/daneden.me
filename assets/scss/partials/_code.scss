@@ -6,6 +6,10 @@
 	overflow: scroll;
 	background-color: #26292c;
 
+	* {
+		display: initial;
+	}
+
 	.hll { background-color: #49483e }
 	.c { color: #75715e } /* Comment */
 	.err { color: #960050; background-color: #1e0010 } /* Error */
@@ -13,7 +17,7 @@
 	.l { color: #ae81ff } /* Literal */
 	.n { color: #f8f8f2 } /* Name */
 	.o { color: #f92672 } /* Operator */
-	.p { color: #f8f8f2 } /* Punctuation */
+	.p { color: #f8f8f2; margin-bottom: 0; } /* Punctuation */
 	.cm { color: #75715e } /* Comment.Multiline */
 	.cp { color: #75715e } /* Comment.Preproc */
 	.c1 { color: #75715e } /* Comment.Single */

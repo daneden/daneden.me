@@ -44,4 +44,4 @@ This, my friends, is a very real and serious issue. The Android browser will alw
 
 What needs to happen, more than anything at this stage, is for people to raise awareness of this issue. I hope this gets as far as the authors of sites such as Can I Use?, Modernizr et al so that we can make sure people are aware of the issue. Tread with caution, animation authors - and help spread the word!
 
-**Update:** it turns out Android 4.0 [actually addresses](http://yfrog.com/h346935364p) this issue. Still, we need to urge the authors of these resources to explicitly mention that full support isn't available in previous versions of Android.
+[Update:](class:caps) it turns out Android 4.0 [actually addresses](http://yfrog.com/h346935364p) this issue. Still, we need to urge the authors of these resources to explicitly mention that full support isn't available in previous versions of Android.
