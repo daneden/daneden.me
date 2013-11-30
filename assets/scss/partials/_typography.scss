@@ -42,7 +42,7 @@ hr {
 
 h1, .alpha {
   font-size: $baseline*1.8;
-  font-weight: 700;
+  font-weight: 200;
   line-height: 1.12;
   letter-spacing: -.05em;
 
@@ -61,6 +61,7 @@ h2, .beta {
   font-style: normal;
   letter-spacing: 0;
   font-family: $Sans;
+  letter-spacing: -.02em;
   + .beta {
     padding-top: 0;
   }
@@ -105,7 +106,7 @@ del {
 .caps {
   text-transform: uppercase;
   font-family: $Serif-SC;
-  letter-spacing: .01em;
+  letter-spacing: .02em;
 }
 
 figcaption {

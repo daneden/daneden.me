@@ -45,17 +45,29 @@ html {
 \*-----------------------------------*/
 
 .site-header {
-  background-color: lighten($gray, 17%);
-  box-shadow: inset 0 8px $gray;
-  background-position: center top;
-  background-repeat: repeat-x;
-  padding: $baseline 0;
+  padding: $baseline 0 $baseline/1.5;
   margin-bottom: $baseline;
+  background-color: darken($gray, 60%);
+  color: $gray;
+
+  a {
+    color: inherit;
+  }
 }
 
-  .site-title {
+  .site-title a {
+    display: block;
+    width: 12rem;
+    height: 1.55rem;
     font-weight: 700;
-    margin-bottom: $baseline/2;
+    margin-bottom: $baseline/1.5;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    background-image: inline-image('title.svg');
+    background-size: auto 1.55rem;
+    background-repeat: no-repeat;
+    background-position: left center;
   }
 
   .entry-meta {
@@ -64,10 +76,12 @@ html {
   }
 
     .site-nav {
+      margin-bottom: 0;
       padding-left: 0;
+      @extend .caps;
 
       li + li {
-        margin-left: $baseline/1.75;
+        margin-left: $baseline;
       }
     }
 
@@ -76,7 +90,9 @@ html {
       }
 
       .site-nav .active {
-        color: $link-hover;
+        color: lighten($gray, 20%);
+        border-bottom: 2px solid $link;
+        margin-bottom: -2px;
       }
 
 /*-----------------------------------*\
