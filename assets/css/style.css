@@ -153,10 +153,9 @@ hr:after {
 h1,
 .alpha {
   font-size: 2.79rem;
-  font-weight: 200;
+  font-weight: 400;
   line-height: 1.12;
-  letter-spacing: -.05em;
-  font-family: "Chronicle Display A", "Chronicle Display B", Georgia, serif;
+  letter-spacing: -.04em;
 }
 
 @media (max-width: 33rem) {
@@ -234,7 +233,7 @@ del {
 }
 
 figcaption {
-  font-family: "Whitney SSm A", "Whitney SSm B", "Whitney", sans-serif;
+  font-family: "Whitney SSm A", "Whitney SSm B", Geneva, Verdana, sans-serif;
   font-size: 0.775rem;
   color: #808a91;
 }
@@ -242,7 +241,7 @@ figcaption {
 figcaption .caps,
 figcaption .site-nav,
 figcaption .entry-content > .intro {
-  font-family: "Whitney SSm SC A", "Whitney SSm SC B", "Whitney", sans-serif;
+  font-family: "Whitney SSm SC A", "Whitney SSm SC B", Geneva, Verdana, sans-serif;
 }
 
 blockquote {

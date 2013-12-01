@@ -42,10 +42,9 @@ hr {
 
 h1, .alpha {
   font-size: $baseline*1.8;
-  font-weight: 200;
+  font-weight: 400;
   line-height: 1.12;
-  letter-spacing: -.05em;
-  font-family: $Display;
+  letter-spacing: -.04em;
 
   @media (max-width: $breakpoint-small) {
     font-size: 2rem;
@@ -111,11 +110,11 @@ del {
 }
 
 figcaption {
-  font-family: "Whitney SSm A", "Whitney SSm B", "Whitney", sans-serif;
+  font-family: $Sans;
   font-size: $baseline/2;
   color: darken($gray, 25%);
   .caps {
-    font-family: "Whitney SSm SC A", "Whitney SSm SC B", "Whitney", sans-serif;
+    font-family: $Sans-SC;
   }
 }
 
