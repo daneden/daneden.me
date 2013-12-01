@@ -45,6 +45,7 @@ h1, .alpha {
   font-weight: 200;
   line-height: 1.12;
   letter-spacing: -.05em;
+  font-family: $Display;
 
   @media (max-width: $breakpoint-small) {
     font-size: 2rem;
