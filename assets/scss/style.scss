@@ -45,10 +45,10 @@ html {
 \*-----------------------------------*/
 
 .site-header {
-  padding: $baseline 0 $baseline/1.5;
+  padding: $baseline/1.5 0;
   margin-bottom: $baseline;
-  background-color: darken($gray, 60%);
-  color: $gray;
+  //background-color: darken($gray, 60%);
+  color: darken($gray, 25%);
 
   a {
     color: inherit;
@@ -56,18 +56,11 @@ html {
 }
 
   .site-title a {
-    display: block;
-    width: 13rem;
-    height: 1.55rem;
+    font-size: 1rem;
+    font-family: $Serif;
     font-weight: 700;
     margin-bottom: $baseline/1.5;
-    text-indent: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-    background-image: inline-image('title.svg');
-    background-size: auto 1.55rem;
-    background-repeat: no-repeat;
-    background-position: left center;
+    color: darken($gray, 60%);
   }
 
   .entry-meta {
@@ -78,6 +71,8 @@ html {
     .site-nav {
       margin-bottom: 0;
       padding-left: 0;
+      padding-bottom: .25rem;
+      border-bottom: .125rem solid lighten($gray, 15%);
       @extend .caps;
 
       li + li {
@@ -90,9 +85,10 @@ html {
       }
 
       .site-nav .active {
-        color: lighten($gray, 20%);
+        color: $link;
         border-bottom: 2px solid $link;
-        margin-bottom: -2px;
+        padding-bottom: .25rem;
+        margin-bottom: -.375rem;
       }
 
 /*-----------------------------------*\

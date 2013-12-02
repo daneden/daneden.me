@@ -8,7 +8,7 @@ This website has gone through a lot of iterations, the vast majority of which ha
 When it came to the task of redesigning my website again, I gave myself a broad objective; it should read like a newspaper. Not necessarily in its content, but its typographic appearance. Its typeface and typographic hierarchy should at some level resemble that of a newspaper. I felt it was a suitable objective to aim for due to the general long-term readability of newspaper body copy and easily-digestible headlines. Combining inspiration from various news publications with general typographic "best practices," I’ve managed to create a design with which I’m happier than I have ever been.
 
 ## Type Selection
-One of the most vital parts of any news publication design is a readable and diverting headline. H&FJ’s [Mercury](http://www.typography.com/fonts/mercury-text/overview/) was an obvious choice; it was specifically designed for use in newspapers. It also happened to recently have been optimised for their web font service, with a bigger x-height and screen-optimised character contrast. While Mercury Text is designed for body use, it makes a wonderful headline, too:
+One of the most vital parts of any news publication design is a readable and diverting headline. [H&FJ](class:caps)’s [Mercury](http://www.typography.com/fonts/mercury-text/overview/) was an obvious choice; it was specifically designed for use in newspapers. It also happened to recently have been optimised for their web font service, with a bigger x-height and screen-optimised character contrast. While Mercury Text is designed for body use, it makes a wonderful headline, too:
 
 <figure>
 	<p class="alpha">Gas, INC. raises energy prices by 9.2%</p>
@@ -23,7 +23,7 @@ Mercury Text ScreenSmart is nice and open, so we can afford to give it some tigh
 	<figcaption>Mercury Text's ligatures (seen on *"ffi, ffl,"* and *"fi"*) are discreet but effective. (If you can't see the ligatures, check [this screenshot](/uploads/2013/10/ligatures.png))</figcaption>
 </figure>
 
-Tight leading can cause some conflicts between ascenders and descenders, but it's a rare problem. Secondary and tertiary headlines are set in H&FJ’s [Whitney ScreenSmart](http://www.typography.com/fonts/whitney/overview/). Designed originally for the [Whitney Museum](http://whitney.org), it’s an authoritative yet soft typeface. With similar character contrast and weight to Mercury, it’s perfect to complement the main headlines and body text.
+Tight leading can cause some conflicts between ascenders and descenders, but it's a rare problem. Secondary headlines are also set in Mercury, and tertiary headlines are set in [H&FJ](class:caps)’s [Whitney ScreenSmart](http://www.typography.com/fonts/whitney/overview/). Designed originally for the [Whitney Museum](http://whitney.org), it’s an authoritative yet soft typeface. With similar character contrast and weight to Mercury, it’s perfect to complement the main headlines and body text.
 
 <figure>
 	<p class="beta">Energy debate</p>
