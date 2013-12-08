@@ -59,6 +59,10 @@ module.exports = function(grunt) {
         ],
         // Run Sass, autoprefixer, and CSSO
         tasks: ['sass', 'autoprefixer', 'csso'],
+        options: {
+          interrupt: true,
+          spawn: false,
+        },
       },
       site: {
         files: [
@@ -67,7 +71,10 @@ module.exports = function(grunt) {
           '!**/node_modules/**',
           '!**/_site/**'
         ],
-        tasks: ['jekyll']
+        tasks: ['jekyll'],
+        options: {
+          spawn: false,
+        },
       }
     }
 
@@ -80,5 +87,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-csso');
   grunt.loadNpmTasks('grunt-jekyll');
-  grunt.registerTask('default', ['watch']);
+  grunt.registerTask('default', ['sass','autoprefixer','csso','jekyll','watch']);
 };

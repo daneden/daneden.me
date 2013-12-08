@@ -12,7 +12,7 @@ As of today, September 9th 2013, the body text and first level headings are set 
 * * *
 
 ## Heading Level Two
-Secondary headings are set in Mercury, and tertiary headings are set in Whitney. [Hyperlinks](/styleguide) are underlined and colored red when hovered.
+Secondary headings are set in Mercury, and tertiary headings are set in Whitney. [Hyperlinks](/styleguide) are underlined and colored blue when hovered.
 
 - Bulleted lists look like this.
 - Multi-leveled bulleted lists look like this:
