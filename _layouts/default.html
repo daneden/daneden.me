@@ -26,7 +26,7 @@
       <h1 class="site-title beta"><a href="/" title="{{ site.name }}">{{ site.name }}</a></h1>
       <nav class="site-navigation" role="navigation">
         <ul class="nav site-nav">
-          {% assign pages = site.pages %}
+          {% assign pages = site.pages | sort:"url" %}
           {% for p in pages order:ascending %}{% if p.in-nav == true %}<li><a {% if p.url == page.url %}class="active"{% endif %} href="{{ p.url }}">{{ p.title }}</a></li>
           {% endif %}{% endfor %}
         </ul>
