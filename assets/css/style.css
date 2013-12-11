@@ -239,8 +239,15 @@ figcaption .entry-content > .intro {
 blockquote {
   font-family: "Whitney SSm A", "Whitney SSm B", Geneva, Verdana, sans-serif;
   padding-left: 1.55rem;
-  border-left: 2px solid #edefef;
+  border-left: 2px solid #4ab5c7;
+  margin-left: -1.55rem;
   color: #677177;
+}
+
+@media (max-width: 33rem) {
+  blockquote {
+    margin-left: 0;
+  }
 }
 
 blockquote .caps,

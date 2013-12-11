@@ -112,9 +112,14 @@ figcaption {
 
 blockquote {
   font-family: $Sans;
-  padding-left: 1.55rem;
-  border-left: 2px solid lighten($gray, 15%);
+  padding-left: $baseline;
+  border-left: 2px solid $link;
+  margin-left: -$baseline;
   color: darken($gray, 35%);
+
+  @media (max-width: $breakpoint-small) {
+    margin-left: 0;
+  }
 
   .caps {
     font-family: $Sans-SC;
