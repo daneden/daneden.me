@@ -23,21 +23,13 @@ a {
 
 hr {
   border: none;
-  margin-bottom: 0;
-
-  &:after {
-    content: "* * *";
-    font-size: 1.75rem;
-    font-family: $Sans;
-    font-weight: 700;
-    line-height: .857142857;
-    letter-spacing: .2em;
-    color: rgba(0,0,0,.3);
-    display: block;
-    text-align: center;
-    margin-top: 2rem;
-    margin-bottom: 1.75rem;
-  }
+  margin-top: $baseline;
+  margin-bottom: $baseline;
+  background-image: inline-image("tristar.svg");
+  background-repeat: no-repeat;
+  background-size: auto $baseline;
+  background-position: center;
+  height: $baseline;
 }
 
 h1, .alpha {
