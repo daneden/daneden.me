@@ -3,9 +3,9 @@
 \*-----------------------------------*/
 
 .wrap {
-  max-width: 42rem;
+  max-width: 44rem;
   margin: 0 auto;
-  padding: 0 $baseline*2;
+  padding: 0 $baseline*3;
 
   @media (max-width: $breakpoint-small) {
   	padding: 0 $baseline/1.4;
