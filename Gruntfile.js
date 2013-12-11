@@ -40,6 +40,17 @@ module.exports = function(grunt) {
       }
     },
 
+    imagemin: {
+      dynamic: {
+        files: [{
+          expand: true,                  // Enable dynamic expansion
+          cwd: '_uploads/',                   // Src matches are relative to this path
+          src: ['**/*.{png,jpg,gif}'],   // Actual patterns to match
+          dest: 'uploads/'                  // Destination path prefix
+        }],
+      },
+    },
+
     // Jekyll with drafts
     jekyll: {
       dist: {
@@ -75,7 +86,16 @@ module.exports = function(grunt) {
         options: {
           spawn: false,
         },
-      }
+      },
+      images: {
+        files: [
+          '_uploads/**/*',
+        ],
+        tasks: ['imagemin'],
+        options: {
+          spawn: false,
+        }
+      },
     }
 
   });
@@ -86,6 +106,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-csso');
+  grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-jekyll');
   grunt.registerTask('default', ['sass','autoprefixer','csso','jekyll','watch']);
+  grunt.registerTask('production', ['sass','autoprefixer','csso','imagemin','jekyll']);
 };
