@@ -853,6 +853,21 @@ html body {
 }
 
 /*-----------------------------------*\
+  $FOOTER
+\*-----------------------------------*/
+
+.home__illustration {
+  max-width: 100%;
+  padding-bottom: 63.63%;
+  height: 0;
+}
+
+.home__illustration svg {
+  position: absolute;
+  top: 0;
+}
+
+/*-----------------------------------*\
   $BANNER
 \*-----------------------------------*/
 
