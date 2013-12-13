@@ -867,6 +867,67 @@ html body {
   top: 0;
 }
 
+.home__illustration svg rect {
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  -webkit-animation: filler .4s alternate;
+  animation: filler .4s alternate;
+  -webkit-animation-iteration-count: 2;
+  animation-iteration-count: 2;
+  -webkit-animation-fill-mode: backwards;
+  animation-fill-mode: backwards;
+  -webkit-animation-delay: .5s;
+  animation-delay: .5s;
+  -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+.home__illustration svg rect:hover {
+  opacity: .5;
+}
+
+.home__illustration svg rect + rect {
+  -webkit-animation-delay: .7s;
+  animation-delay: .7s;
+}
+
+.home__illustration svg rect + rect + rect {
+  -webkit-animation-delay: .9s;
+  animation-delay: .9s;
+}
+
+.home__illustration svg rect + rect + rect + rect {
+  -webkit-animation-delay: 1.1s;
+  animation-delay: 1.1s;
+}
+
+.home__illustration svg rect + rect + rect + rect + rect {
+  -webkit-animation-delay: 1.3s;
+  animation-delay: 1.3s;
+}
+
+.home__illustration svg rect + rect + rect + rect + rect + rect {
+  -webkit-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+}
+
+.home__illustration svg rect + rect + rect + rect + rect + rect + rect {
+  -webkit-animation-delay: 1.7s;
+  animation-delay: 1.7s;
+}
+
+@-webkit-keyframes filler {
+  to {
+    opacity: .5;
+  }
+}
+
+@keyframes filler {
+  to {
+    opacity: .5;
+  }
+}
+
 /*-----------------------------------*\
   $BANNER
 \*-----------------------------------*/
