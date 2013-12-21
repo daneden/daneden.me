@@ -13,7 +13,7 @@
 html {
   font: 112.5%/1.55 $Serif; /* 18px/28px */
   color: darken($gray, 55%);
-  background-color: darken($gray, 50%);
+  background-color: lighten($gray, 15%);
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: none;
   text-rendering: optimizeLegibility;
@@ -209,7 +209,7 @@ html {
     margin: 0 auto;
     width: 112px;
     height: 56px;
-    background-image: inline-image('fleuron.svg');
+    background-image: inline-image("fleuron.min.svg");
     display: block;
     font-size: $baseline*2;
     line-height: 1;
@@ -231,8 +231,8 @@ html {
 \*-----------------------------------*/
 
 .site-footer {
-  background-color: lighten($gray, 15%);
   padding: $baseline 0;
+  background-color: lighten($gray, 15%);
   color: darken($gray, 30%);
   font-size: $baseline/2;
 

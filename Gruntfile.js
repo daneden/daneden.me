@@ -2,6 +2,33 @@ module.exports = function(grunt) {
   pkg: grunt.file.readJSON('package.json'),
   grunt.initConfig({
 
+    // Make our SVGs smaller
+    svgmin: {
+      options: { // Configuration that will be passed directly to SVGO
+        plugins: [{
+            removeViewBox: false
+        }],
+      },
+      dist: {
+        files: [{
+          expand: true,
+          cwd: 'assets/images/src', // Src matches are relative to this path.
+          src: ['**/*.svg'], // Actual pattern(s) to match.
+          dest: 'assets/images/', // Destination path prefix.
+          ext: '.min.svg' // Dest filepaths will have this extension.
+        }],
+      },
+    },
+
+    // Make PNG copies of our SVGs
+    svg2png: {
+      all: {
+        files: [
+            { src: ['assets/images/src/**/*.svg'], dest: 'assets/images/' },
+        ],
+      },
+    },
+
     // Sass
     sass: {
       dist: {
@@ -31,7 +58,8 @@ module.exports = function(grunt) {
     csso: {
       dist: {
         options: {
-          banner: '/*# sourceMappingURL=style.css.map */'
+          banner: '/*# sourceMappingURL=style.css.map */',
+          report: 'gzip'
         },
         files: {
           // Output compressed CSS to style.min.css
@@ -51,11 +79,10 @@ module.exports = function(grunt) {
 
     // Watch files for changes
     watch: {
+
       css: {
         files: [
-          'assets/scss/**/*',
-          'assets/images/**/*',
-          '!**/_site/**'
+          'assets/scss/**/*'
         ],
         // Run Sass, autoprefixer, and CSSO
         tasks: ['sass', 'autoprefixer', 'csso'],
@@ -64,6 +91,18 @@ module.exports = function(grunt) {
           spawn: false,
         },
       },
+
+      images: {
+        files: [
+          'assets/images/**/*'
+        ],
+        tasks: ['svgmin', 'svg2png', 'styles'],
+        options: {
+          interrupt: true,
+          spawn: false,
+        },
+      },
+
       site: {
         files: [
           '**/*',
@@ -76,17 +115,23 @@ module.exports = function(grunt) {
           spawn: false,
         },
       },
+
     }
 
   });
 
-  // Register our tasks
+  // Load tasks
+  grunt.loadNpmTasks('grunt-svgmin');
+  grunt.loadNpmTasks('grunt-svg2png');
   grunt.loadNpmTasks('grunt-notify');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-csso');
   grunt.loadNpmTasks('grunt-jekyll');
-  grunt.registerTask('default', ['sass','autoprefixer','csso','jekyll','watch']);
+
+  // Register tasks
+  grunt.registerTask('default', ['svgmin', 'svg2png', 'sass','autoprefixer','csso','jekyll','watch']);
+  grunt.registerTask('styles', ['sass','autoprefixer','csso','jekyll'])
   grunt.registerTask('production', ['sass','autoprefixer','csso','jekyll']);
 };

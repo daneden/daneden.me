@@ -37,10 +37,10 @@ ul, ol {
 }
 
 ul {
-  list-style-image: inline-image('bullet.svg');
+  list-style-image: inline-image("bullet.min.svg");
 
   ul {
-    list-style-image: inline-image('bullet-inside.svg');
+    list-style-image: inline-image("bullet-inside.min.svg");
   }
 
 }
