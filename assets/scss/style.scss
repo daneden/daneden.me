@@ -226,6 +226,75 @@ html {
   }
 }
 
+.entry-nav {
+  color: darken($gray, 10%);
+  margin-bottom: -$baseline*2;
+  margin-top: $baseline*2;
+  overflow: hidden;
+  box-shadow: inset 0 1px lighten($gray, 15%);
+
+  a {
+    text-decoration: none;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 1px;
+    background-color: lighten($gray, 15%);
+  }
+
+  li {
+    z-index: 1;
+    width: 50%;
+    vertical-align: top;
+
+    &:nth-child(odd) a {
+      padding-left: 0;
+    }
+
+    &:nth-child(even) a {
+      padding-right: 0;
+
+      &:before {
+        right: auto;
+        left: 0;
+      }
+    }
+
+    a {
+      width: 100%;
+      padding: $baseline/2;
+      position: static;
+
+      &:hover {
+        background-color: $link;
+        color: #fff;
+
+        &:before {
+          background-color: $link;
+          box-shadow: 0 0 0 1px $link;
+          width: 1000%;
+        }
+      }
+
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: -100%;
+        width: 1000%;
+      }
+    }
+  }
+}
+
 /*-----------------------------------*\
   $FOOTER
 \*-----------------------------------*/

@@ -1,15 +1,42 @@
----
-layout: default
----
-				<article role="article">
-					<header class="entry-header">
-						<h1 class="entry-title">{{ page.title | widont }}</h1>
-						<div class="entry-meta">
-							<p>{{ page.date | pretty }}</p>
-						</div>
-					</header>
+{% include header.html %}
 
-					<div class="entry-content">
-					{{ content }}
+  <main class="site-content" role="main">
+    <div class="wrap">
+			<article role="article">
+				<header class="entry-header">
+					<h1 class="entry-title">{{ page.title | widont }}</h1>
+					<div class="entry-meta">
+						<p>{{ page.date | pretty }}</p>
 					</div>
-				</article>
+				</header>
+
+				<div class="entry-content">
+				{{ content }}
+				</div>
+			</article>
+    </div>
+
+    {% if page.previous.url %}
+    <nav class="entry-nav nav">
+    	<ul class="wrap">
+    		{% if page.next.url %}
+    		<li>
+    			<a rel="next" href="{{ page.next.url }}">
+    				<h3>Next Post</h3>
+    				<p class="beta">{{page.next.title}}</p>
+    			</a>
+    		</li>
+    		{% endif %}
+    		<li>
+    			<a rel="prev" href="{{ page.previous.url }}">
+    				<h3>Previous Post</h3>
+    				<p class="beta">{{page.previous.title}}</p>
+    			</a>
+    		</li>
+    	</ul>
+  	</nav>
+    {% endif %}
+
+  </main>
+
+{% include footer.html %}
