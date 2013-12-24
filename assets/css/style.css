@@ -981,7 +981,7 @@ html body {
 }
 
 .entry-content:after {
-  content: '';
+  content: "";
   margin: 0 auto;
   width: 112px;
   height: 56px;
@@ -998,7 +998,7 @@ html body {
 }
 
 .entry-nav {
-  color: #a9b0b4;
+  color: #9ba3a9;
   margin-bottom: -3.1rem;
   margin-top: 3.1rem;
   overflow: hidden;
@@ -1006,29 +1006,30 @@ html body {
   box-shadow: inset 0 1px #edefef;
 }
 
-.entry-nav a {
-  text-decoration: none;
+.entry-nav ul {
+  position: static;
 }
 
-.entry-nav:after {
-  content: '';
-  position: absolute;
-  z-index: 0;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  width: 1px;
-  background-color: #edefef;
+.entry-nav a {
+  text-decoration: none;
 }
 
 .entry-nav li {
   z-index: 1;
   width: 50%;
   vertical-align: top;
+  position: static;
 }
 
 .entry-nav li:nth-child(odd) a {
   padding-left: 0;
+}
+
+.entry-nav li:nth-child(odd) a:before {
+  right: 50%;
+  left: 0;
+  -webkit-box-shadow: 1px 0 #edefef;
+  box-shadow: 1px 0 #edefef;
 }
 
 .entry-nav li:nth-child(even) a {
@@ -1037,7 +1038,8 @@ html body {
 
 .entry-nav li:nth-child(even) a:before {
   right: auto;
-  left: 0;
+  left: 50%;
+  right: 0;
 }
 
 .entry-nav li a {
@@ -1053,18 +1055,15 @@ html body {
 
 .entry-nav li a:hover:before {
   background-color: #4ab5c7;
-  -webkit-box-shadow: 0 0 0 1px #4ab5c7;
-  box-shadow: 0 0 0 1px #4ab5c7;
-  width: 1000%;
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 
 .entry-nav li a:before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
-  right: 0;
-  bottom: -100%;
-  width: 1000%;
+  bottom: 0;
 }
 
 /*-----------------------------------*\
