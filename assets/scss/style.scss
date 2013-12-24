@@ -206,15 +206,16 @@ html {
 .entry-content {
   &:after {
     content: "";
-    margin: 0 auto;
-    width: 112px;
-    height: 56px;
-    background-image: inline-image("fleuron.min.svg");
+
     display: block;
-    font-size: $baseline*2;
-    line-height: 1;
-    text-align: center;
-    color: $gray;
+    margin: 0 auto;
+    width: 100%;
+    height: 56px;
+    padding: $baseline 0;
+
+    background-image: inline-image("fleuron.min.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
   }
 
   > .intro {
