@@ -670,9 +670,9 @@ p:empty {
 \*-----------------------------------*/
 
 .wrap {
-  max-width: 44rem;
+  max-width: 46.5rem;
   margin: 0 auto;
-  padding: 0 4.65rem;
+  padding: 0 6.2rem;
 }
 
 @media (max-width: 33rem) {

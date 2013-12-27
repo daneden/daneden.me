@@ -12,7 +12,7 @@ module.exports = function(grunt) {
       dist: {
         files: [{
           expand: true,
-          cwd: 'assets/images/src', // Src matches are relative to this path.
+          cwd: 'assets/images/_src', // Src matches are relative to this path.
           src: ['**/*.svg'], // Actual pattern(s) to match.
           dest: 'assets/images/', // Destination path prefix.
           ext: '.min.svg' // Dest filepaths will have this extension.
@@ -24,7 +24,7 @@ module.exports = function(grunt) {
     svg2png: {
       all: {
         files: [
-            { src: ['assets/images/src/**/*.svg'], dest: 'assets/images/' },
+            { src: ['assets/images/_src/**/*.svg'], dest: 'assets/images/' },
         ],
       },
     },

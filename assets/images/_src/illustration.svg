@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 17.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="1190.55px" height="841.89px" viewBox="0 0 1190.55 841.89" enable-background="new 0 0 1190.55 841.89"
+	 xml:space="preserve">
+<rect x="276.762" y="315.303" transform="matrix(-0.8928 0.4504 -0.4504 -0.8928 844.3853 749.0992)" opacity="0.9" fill="#4FB5C6" enable-background="new    " width="112.608" height="319.422">
+<animate  fill="freeze" accumulate="none" dur="8s" additive="replace" restart="always" calcMode="spline" values="230;240;230" attributename="y" repeatCount="indefinite" keySplines="0.25 0.1 0.25 1;0.25 0.1 0.25 1">
+	</animate>
+</rect>
+<rect x="458.975" y="325.127" transform="matrix(-0.9554 0.2953 -0.2953 -0.9554 1059.3429 809.7028)" opacity="0.9" fill="#2C3032" enable-background="new    " width="19.113" height="319.428">
+<animate  fill="freeze" accumulate="none" dur="8.2s" additive="replace" restart="always" calcMode="spline" values="237;240;237" attributename="y" repeatCount="indefinite" keySplines="0.25 0.1 0.25 1;0.25 0.1 0.25 1">
+	</animate>
+</rect>
+<rect x="457.725" y="221.528" opacity="0.9" fill="#C4C9CA" enable-background="new    " width="90.785" height="319.429">
+<animate  fill="freeze" accumulate="none" dur="7.5s" additive="replace" restart="always" calcMode="spline" values="150;160;150" attributename="y" repeatCount="indefinite" keySplines="0.25 0.1 0.25 1;0.25 0.1 0.25 1">
+	</animate>
+</rect>
+<rect x="580.591" y="55.354" transform="matrix(-0.9611 -0.2762 0.2762 -0.9611 1168.2155 594.668)" opacity="0.9" fill="#2C3032" enable-background="new    " width="90.785" height="319.429">
+<animate  fill="freeze" accumulate="none" dur="8.1s" additive="replace" restart="always" calcMode="spline" values="10;20;10" attributename="y" repeatCount="indefinite" keySplines="0.25 0.1 0.25 1;0.25 0.1 0.25 1">
+	</animate>
+</rect>
+<rect x="655.754" y="269.265" transform="matrix(-0.9836 -0.1805 0.1805 -0.9836 1313.3501 977.4751)" opacity="0.9" fill="#4FB5C6" enable-background="new    " width="90.788" height="319.437">
+<animate  fill="freeze" accumulate="none" dur="6.6s" additive="replace" restart="always" calcMode="spline" values="190;196;190" attributename="y" repeatCount="indefinite" keySplines="0.25 0.1 0.25 1;0.25 0.1 0.25 1">
+	</animate>
+</rect>
+<rect x="759.117" y="418.2" transform="matrix(-0.9763 -0.2163 0.2163 -0.9763 1394.1434 1308.407)" opacity="0.9" fill="#2C3032" enable-background="new    " width="19.113" height="319.421">
+<animate  fill="freeze" accumulate="none" dur="8.8s" additive="replace" restart="always" calcMode="spline" values="315;323;315" attributename="y" repeatCount="indefinite" keySplines="0.25 0.1 0.25 1;0.25 0.1 0.25 1">
+	</animate>
+</rect>
+<rect x="864.513" y="195.393" transform="matrix(-0.9803 0.1975 -0.1975 -0.9803 1830.2867 527.6749)" opacity="0.9" fill="#C4C9CA" enable-background="new    " width="48.635" height="319.428">
+<animate  fill="freeze" accumulate="none" dur="8.4s" additive="replace" restart="always" calcMode="spline" values="128;132;128" attributename="y" repeatCount="indefinite" keySplines="0.25 0.1 0.25 1;0.25 0.1 0.25 1">
+	</animate>
+</rect>
+</svg>
