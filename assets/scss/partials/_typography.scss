@@ -48,30 +48,48 @@ h2, .beta {
   clear: both;
   font-size: $baseline;
   font-weight: 700;
-  margin-bottom: $baseline/2;
+  margin-bottom: $baseline;
   line-height: 1;
   font-style: normal;
   letter-spacing: 0;
   font-family: $Serif;
   letter-spacing: -.03em;
-  + .beta {
-    padding-top: 0;
-  }
 }
 
-  p + h2, p + .beta {
-    padding-top: $baseline;
+  .entry-content {
+    * + h2 {
+      margin-top: $baseline*3;
+    }
+
+    hr + h2 {
+      margin-top: 0;
+    }
   }
 
 h3, .gamma {
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.55;
   font-weight: 400;
-  margin-bottom: 0;
+  margin-bottom: $baseline/2;
   font-style: normal;
   letter-spacing: .1em;
-  font-family: $Sans-SC;
+  font-family: $Serif-SC;
   text-transform: uppercase;
+}
+
+  .entry-content {
+    * + h3 {
+      margin-top: $baseline*2;
+    }
+
+    h2 + h3 {
+      margin-top: 0;
+    }
+  }
+
+h1 a, h2 a, h3 a,
+a h1, a h2, a h3 {
+  text-decoration: none;
 }
 
 .entry-content p {
