@@ -777,8 +777,8 @@ p:empty {
 \*-----------------------------------*/
 
 html {
-  font: 112.5%/1.55 "Mercury SSm A", "Mercury SSm B", Georgia, serif;
-  /* 18px/28px */
+  font: 106.25%/1.55 "Mercury SSm A", "Mercury SSm B", Georgia, serif;
+  /* 17px/26px */
   color: #373d40;
   background-color: #edefef;
   -webkit-font-smoothing: antialiased;
