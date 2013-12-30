@@ -49,17 +49,15 @@ html {
   margin-bottom: $baseline;
   //background-color: darken($gray, 60%);
   color: darken($gray, 25%);
-
-  a {
-    color: inherit;
-  }
 }
 
-  .site-title a {
-    font-size: 1rem;
+  .site-title {
+    display: block;
+    margin-bottom: 0;
+    margin-top: 0;
     font-family: $Serif;
     font-weight: 700;
-    margin-bottom: $baseline/1.5;
+    line-height: $baseline*2;
     color: darken($gray, 60%);
   }
 
@@ -77,6 +75,10 @@ html {
 
       li + li {
         margin-left: $baseline/1.25;
+      }
+
+      a {
+        color: inherit;
       }
     }
 

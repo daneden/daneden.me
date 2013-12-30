@@ -818,15 +818,13 @@ html body {
   color: #808a91;
 }
 
-.site-header a {
-  color: inherit;
-}
-
-.site-title a {
-  font-size: 1rem;
+.site-title {
+  display: block;
+  margin-bottom: 0;
+  margin-top: 0;
   font-family: "Mercury SSm A", "Mercury SSm B", Georgia, serif;
   font-weight: 700;
-  margin-bottom: 1.03333rem;
+  line-height: 3.1rem;
   color: #2c3032;
 }
 
@@ -844,6 +842,10 @@ html body {
 
 .site-nav li + li {
   margin-left: 1.24rem;
+}
+
+.site-nav a {
+  color: inherit;
 }
 
 .site-nav a:hover {
