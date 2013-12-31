@@ -6,6 +6,7 @@ markdown: rdiscount
 rdiscount:
   extensions:
     - smart
+    - generate_toc
 
 pygments: true
 
