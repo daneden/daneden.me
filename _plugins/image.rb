@@ -34,7 +34,7 @@ module Jekyll
         source = "<figure>"
       end
 
-      source += "<img src=\"http://app.resrc.it/#{@url}\" class=\"resrc\">"
+      source += "<img src=\"#{@url}\">"
       source += "<figcaption>#{@caption}</figcaption>" if @caption
       source += "</figure>"
 
