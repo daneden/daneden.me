@@ -8,7 +8,6 @@ This repo is mostly for me. I, like many of you, host my site on GitHub for reas
 Some things you may find interesting:
 
 - [Uncompressed Sass files](https://github.com/daneden/daneden.me/tree/master/assets/scss)
-- [adaptive-images.php](https://github.com/daneden/daneden.me/blob/master/adaptive-images.php) – this drop-in PHP file from [@responsiveimg](http://twitter.com/responsiveimg) makes responsive images a cinch. 10/10, would recommend.
 - [Gruntfile.js](https://github.com/daneden/daneden.me/blob/master/Gruntfile.js) – the Grunt configuration used to help me develop locally. Pushing to the server triggers `jekyll build`, so any preprocessing is done locally.
 - And finally, the [plugins directory](https://github.com/daneden/daneden.me/tree/master/_plugins). There are a few very useful Jekyll plugins in here, including HTML5 image/`figure` tags, ordinal dates, a cachebusting helper, and typographic helpers.
 
