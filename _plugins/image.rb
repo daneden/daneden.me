@@ -39,7 +39,7 @@ module Jekyll
       end
 
       if ENV['JEKYLL_ENV'] != 'development'
-        source += "<img src=\"http://app.resrc.it/#{@url}\" class=\"resrc\"/>"
+        source += "<img src=\"http://app.resrc.it/https://daneden.me#{@url}\" class=\"resrc\"/>"
       else
         source += "<img src=\"#{@url}\" />"
       end
