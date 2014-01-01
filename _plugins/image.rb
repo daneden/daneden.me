@@ -38,7 +38,12 @@ module Jekyll
         source = "<figure>"
       end
 
-      source += "<img src=\"#{@url}\">"
+      if ENV['JEKYLL_ENV'] == 'production'
+        source += "<img src=\"http://app.resrc.it/#{@url}\" class=\"resrc\"/>"
+      else
+        source += "<img src=\"#{@url}\" />"
+      end
+
       source += "<figcaption>#{@caption}</figcaption>" if @caption
       source += "</figure>"
 
