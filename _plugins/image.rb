@@ -38,7 +38,7 @@ module Jekyll
         source = "<figure>"
       end
 
-      if ENV['JEKYLL_ENV'] == 'production'
+      if ENV['JEKYLL_ENV'] != 'development'
         source += "<img src=\"http://app.resrc.it/#{@url}\" class=\"resrc\"/>"
       else
         source += "<img src=\"#{@url}\" />"
