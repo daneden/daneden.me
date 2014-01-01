@@ -14,3 +14,6 @@ permalink: pretty
 
 include: [".htaccess"]
 exclude: ["node_modules", "package.json", "config.rb", "Gruntfile.js"]
+
+asset_bundler:
+  remove_bundled: true
