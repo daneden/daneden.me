@@ -29,7 +29,11 @@ module Jekyll
 
     def render(context)
       if @class
-        source = "<figure class='#{@class}'>"
+        if @class == 'breakout'
+          source = "</div><figure class='#{@class}'>"
+        else
+          source = "<figure class='#{@class}'>"
+        end
       else
         source = "<figure>"
       end
@@ -37,6 +41,10 @@ module Jekyll
       source += "<img src=\"#{@url}\">"
       source += "<figcaption>#{@caption}</figcaption>" if @caption
       source += "</figure>"
+
+      if @class == 'breakout'
+        source += "<div class='entry-content wrap'>"
+      end
 
       source
     end

@@ -2,16 +2,18 @@
 layout: default
 title: Archive
 ---
-<div class="entry-header">
+<div class="entry-header wrap">
   <h1>Archive</h1>
 </div>
 
-<p>Welcome to the Archives. Here you’ll find every post I’ve written on the site. Even the ones I’m shameful of. I’ve learned a lot since writing a lot of these words. Judge not by these articles.</p>
+<div class="entry-content wrap">
+  <p>Welcome to the Archives. Here you’ll find every post I’ve written on the site. Even the ones I’m shameful of. I’ve learned a lot since writing a lot of these words. Judge not by these articles.</p>
 
-<hr>
+  <hr>
 
-<ul class="all-posts posts-by-year">
-{% for post in site.posts %}
-  <li><span class="entry-meta">{{ post.date | date: "%d %B %Y" }}</span> <a href="{{ post.url }}">{{ post.title }}</a></li>
-{% endfor %}
-</ul>
+  <ul class="all-posts posts-by-year">
+  {% for post in site.posts %}
+    <li><span class="entry-meta">{{ post.date | date: "%d %B %Y" }}</span> <a href="{{ post.url }}">{{ post.title }}</a></li>
+  {% endfor %}
+  </ul>
+</div>

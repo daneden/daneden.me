@@ -94,61 +94,13 @@ html {
       }
 
 /*-----------------------------------*\
-  $FOOTER
+  $HOME
 \*-----------------------------------*/
 
 .home__illustration {
   max-width: 100%;
   padding-bottom: 63.63%;
   height: 0;
-
-  svg {
-    position: absolute;
-    top: 0;
-
-    rect {
-      transition: .5s ease;
-      animation: filler .4s alternate;
-      animation-iteration-count: 2;
-      animation-fill-mode: backwards;
-      animation-delay: .5s;
-      box-shadow: inset 0 0 0 1px rgba(0,0,0,.1);
-
-      &:hover {
-        opacity: .5;
-      }
-
-      + rect {
-        animation-delay: .7s;
-
-        + rect {
-          animation-delay: .9s;
-
-          + rect {
-            animation-delay: 1.1s;
-
-            + rect {
-              animation-delay: 1.3s;
-
-              + rect {
-                animation-delay: 1.5s;
-
-                + rect {
-                  animation-delay: 1.7s;
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-@keyframes filler {
-  to {
-    opacity: .5;
-  }
 }
 
 /*-----------------------------------*\
@@ -198,7 +150,10 @@ html {
 \*-----------------------------------*/
 
 .entry-header {
-  padding: $baseline 0;
+  padding: {
+    top: $baseline;
+    bottom: $baseline;
+  }
 }
 
 .entry-title {
@@ -207,7 +162,7 @@ html {
 
 .entry-content {
 
-  &:after {
+  &:last-of-type:after {
     content: "";
 
     display: block;

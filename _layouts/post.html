@@ -1,20 +1,18 @@
 {% include header.html %}
 
   <main class="site-content" role="main">
-    <div class="wrap">
-			<article role="article">
-				<header class="entry-header">
-					<h1 class="entry-title">{{ page.title | widont }}</h1>
-					<div class="entry-meta">
-						<p>{{ page.date | pretty }}</p>
-					</div>
-				</header>
+	<article role="article">
+		<header class="entry-header wrap">
+			<h1 class="entry-title">{{ page.title | widont }}</h1>
+			<div class="entry-meta">
+				<p>{{ page.date | pretty }}</p>
+			</div>
+		</header>
 
-				<div class="entry-content">
-				{{ content }}
-				</div>
-			</article>
-    </div>
+		<div class="entry-content wrap">
+		{{ content }}
+		</div>
+	</article>
 
     {% if page.previous.url %}
     <nav class="entry-nav nav">
