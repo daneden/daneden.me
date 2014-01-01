@@ -27,7 +27,7 @@ module Jekyll
       end
     end
 
-    if @url =~ /(https?:\/\/)/i
+    if @url =~ /(https?:\/\/)/
       @resrc = "https://app.resrc.it/"
     else
       @resrc = "https://app.resrc.it/https://daneden.me"
