@@ -6,9 +6,7 @@
   <meta name="viewport" content="initial-scale=1, minimal-ui" />
 
   <!-- Grab our super-cacheable, super-compressed site CSS -->
-  {% bundle_glob %}
-  - /_assets/css/style.css
-  {% endbundle_glob %}
+  <link rel="stylesheet" href="/assets/css/style.min-{% bust_cache %}.css" />
 
   <!-- Prefetch DNS -->
   <link rel="dns-prefetch" href="//ajax.cloudflare.com" />

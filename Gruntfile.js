@@ -12,9 +12,9 @@ module.exports = function(grunt) {
       dist: {
         files: [{
           expand: true,
-          cwd: 'static/images/_src', // Src matches are relative to this path.
+          cwd: 'assets/images/_src', // Src matches are relative to this path.
           src: ['**/*.svg'], // Actual pattern(s) to match.
-          dest: 'static/images/', // Destination path prefix.
+          dest: 'assets/images/', // Destination path prefix.
           ext: '.min.svg' // Dest filepaths will have this extension.
         }],
       },
@@ -24,7 +24,7 @@ module.exports = function(grunt) {
     svg2png: {
       all: {
         files: [
-            { src: ['static/images/_src/**/*.svg'], dest: 'static/images/' },
+            { src: ['assets/images/_src/**/*.svg'], dest: 'assets/images/' },
         ],
       },
     },
@@ -37,7 +37,7 @@ module.exports = function(grunt) {
           compass: true
         },
         files: {
-          '_assets/css/style.css' : '_assets/scss/style.scss'
+          'assets/css/style.css' : 'assets/scss/style.scss'
         }
       }
     },
@@ -50,7 +50,7 @@ module.exports = function(grunt) {
       },
       no_dest: {
         // File to output
-        src: '_assets/css/style.css'
+        src: 'assets/css/style.css'
       },
     },
 
@@ -63,7 +63,7 @@ module.exports = function(grunt) {
         },
         files: {
           // Output compressed CSS to style.min.css
-          '_assets/css/style.min.css': ['_assets/css/style.css']
+          'assets/css/style.min.css': ['assets/css/style.css']
         }
       }
     },
@@ -82,7 +82,7 @@ module.exports = function(grunt) {
 
       css: {
         files: [
-          '_assets/scss/**/*'
+          'assets/scss/**/*'
         ],
         // Run Sass, autoprefixer, and CSSO
         tasks: ['sass', 'autoprefixer', 'csso'],
@@ -94,7 +94,7 @@ module.exports = function(grunt) {
 
       images: {
         files: [
-          'static/images/**/*'
+          'assets/images/**/*'
         ],
         tasks: ['svgmin', 'svg2png', 'styles'],
         options: {
