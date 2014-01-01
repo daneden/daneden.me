@@ -3,12 +3,13 @@
 \*-----------------------------------*/
 
 .wrap {
+  max-width: 800px;
   max-width: $baseline*30;
   margin: 0 auto;
-  padding: 0 $baseline*4;
+  padding: 0 $baseline/1.4;
 
-  @media (max-width: $breakpoint-small) {
-  	padding: 0 $baseline/1.4;
+  @media screen and (min-width: $breakpoint-small) {
+  	padding: 0 $baseline*4;
   }
 }
 
@@ -109,6 +110,15 @@ figure img {
       bottom: 0;
       top: 75%;
       background-image: linear-gradient(transparent, rgba(0,0,0,.75));
+    }
+  }
+
+  img {
+    max-width: 100%;
+    width: 100%;
+    margin: {
+      left: 0;
+      right: 0;
     }
   }
 
