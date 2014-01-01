@@ -54,20 +54,6 @@ module.exports = function(grunt) {
       },
     },
 
-    // Minify CSS
-    csso: {
-      dist: {
-        options: {
-          banner: '/*# sourceMappingURL=style.css.map */',
-          report: 'gzip'
-        },
-        files: {
-          // Output compressed CSS to style.min.css
-          '_assets/css/style.min.css': ['_assets/css/style.css']
-        }
-      }
-    },
-
     // Jekyll with drafts
     jekyll: {
       dist: {
@@ -85,7 +71,7 @@ module.exports = function(grunt) {
           '_assets/scss/**/*'
         ],
         // Run Sass, autoprefixer, and CSSO
-        tasks: ['sass', 'autoprefixer', 'csso'],
+        tasks: ['sass', 'autoprefixer'],
         options: {
           interrupt: true,
           spawn: false,
@@ -127,11 +113,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-contrib-sass');
-  grunt.loadNpmTasks('grunt-csso');
   grunt.loadNpmTasks('grunt-jekyll');
 
   // Register tasks
-  grunt.registerTask('default', ['svgmin', 'svg2png', 'sass','autoprefixer','csso','jekyll','watch']);
-  grunt.registerTask('styles', ['sass','autoprefixer','csso','jekyll'])
-  grunt.registerTask('production', ['sass','autoprefixer','csso','jekyll']);
+  grunt.registerTask('default', ['svgmin', 'svg2png', 'sass','autoprefixer','jekyll','watch']);
+  grunt.registerTask('styles', ['sass','autoprefixer','jekyll'])
+  grunt.registerTask('prod', ['sass','autoprefixer','jekyll']);
 };

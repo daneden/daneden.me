@@ -2,7 +2,7 @@
 layout: page
 title: Portfolio
 in-nav: true
-scripts: ["/assets/js/jquery.fitvids.custom.js"]
+scripts: ["/static/js/jquery.fitvids.custom.js"]
 ---
 
 ## Just My Type
