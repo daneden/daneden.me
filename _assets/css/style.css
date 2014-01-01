@@ -781,10 +781,6 @@ p:empty {
     margin-bottom: 3.1rem;
   }
 
-  .breakout + .breakout {
-    margin-top: -4.65rem;
-  }
-
   .breakout img {
     margin-bottom: 0;
   }
