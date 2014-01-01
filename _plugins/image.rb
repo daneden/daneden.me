@@ -27,6 +27,12 @@ module Jekyll
       end
     end
 
+    if @url =~ /(https?:\/\/)/i
+      @resrc = "https://app.resrc.it/"
+    else
+      @resrc = "https://app.resrc.it/https://daneden.me"
+    end
+
     def render(context)
       if @class
         if @class == 'breakout'
@@ -39,7 +45,7 @@ module Jekyll
       end
 
       if ENV['JEKYLL_ENV'] != 'development'
-        source += "<img src=\"http://app.resrc.it/https://daneden.me#{@url}\" class=\"resrc\"/>"
+        source += "<img src=\"#{@resrc}#{@url}\" class=\"resrc\"/>"
       else
         source += "<img src=\"#{@url}\" />"
       end
