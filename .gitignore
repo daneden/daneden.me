@@ -3,3 +3,5 @@ _site
 node_modules/
 .DS_Store
 _asset_bundler_cache/
+
+_plugins/environment_variables.rb
