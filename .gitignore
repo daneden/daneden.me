@@ -1,7 +1,17 @@
+# Ignore Jekyll generated files
 _site
-.sass-cache
-node_modules/
-.DS_Store
-_asset_bundler_cache/
 
+# Ignore caches and logs
+.sass-cache
+_asset_bundler_cache/
+.bundle/
+Gemfile.lock
+
+# Ignore node dependencies. Ensure you run `node install`!
+node_modules/
+
+# Ignore junk files
+.DS_Store
+
+# Environment-dependent files
 _plugins/environment_variables.rb

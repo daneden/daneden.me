@@ -54,6 +54,19 @@ module.exports = function(grunt) {
       },
     },
 
+    // Add rem px fallbacks
+    remfallback: {
+      options: {
+        log: true,
+        replace: false,
+      },
+      your_target: {
+        files: {
+          '_assets/css/style.css': ['_assets/css/style.css']
+        },
+      },
+    },
+
     // Jekyll with drafts
     jekyll: {
       dist: {
@@ -71,7 +84,7 @@ module.exports = function(grunt) {
           '_assets/scss/**/*'
         ],
         // Run Sass, autoprefixer, and CSSO
-        tasks: ['sass', 'autoprefixer'],
+        tasks: ['sass', 'autoprefixer', 'remfallback'],
         options: {
           interrupt: true,
           spawn: false,
@@ -113,10 +126,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-remfallback');
   grunt.loadNpmTasks('grunt-jekyll');
 
   // Register tasks
-  grunt.registerTask('default', ['svgmin', 'svg2png', 'sass','autoprefixer','jekyll','watch']);
-  grunt.registerTask('styles', ['sass','autoprefixer','jekyll'])
-  grunt.registerTask('prod', ['sass','autoprefixer','jekyll']);
+  grunt.registerTask('default', ['svgmin', 'svg2png', 'sass','autoprefixer', 'remfallback','jekyll','watch']);
+  grunt.registerTask('styles', ['sass','autoprefixer', 'remfallback','jekyll'])
+  grunt.registerTask('prod', ['sass','autoprefixer', 'remfallback','jekyll']);
 };
