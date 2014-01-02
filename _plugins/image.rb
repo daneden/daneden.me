@@ -45,7 +45,7 @@ module Jekyll
         source = "<figure>"
       end
 
-      if ENV['JEKYLL_ENV'] != 'development'
+      if ENV['JEKYLL_ENV'] != 'development' && (@url.include? '.jpg' or @url.include? '.jpeg' or @url.include? '.png')
         source += "<img src=\"#{@resrc}#{@url}\" class=\"resrc\"/>"
       else
         source += "<img src=\"#{@url}\" />"
