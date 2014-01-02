@@ -26,12 +26,12 @@ module Jekyll
       elsif markup =~ IMAGE_URL
         @url = $1
       end
-    end
 
-    if @url =~ /(https?:\/\/)/
-      @resrc = "https://app.resrc.it/"
-    else
-      @resrc = "https://app.resrc.it/https://daneden.me"
+      if @url =~ /(https?:\/\/)/
+        @resrc = "https://app.resrc.it/"
+      else
+        @resrc = "https://app.resrc.it/https://daneden.me"
+      end
     end
 
     def render(context)
