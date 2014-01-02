@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Twenty-thirteen
+title: Twenty-Thirteen
 ---
 
 To say the last twelve months have been some of the most sublime and surreal of my life so far would be an understatement. I owe this to a few things; the support of my friends, family, and my loving partner, as well as the continued encouragement of my peers and mentors. I have so many of you to thank, so thank you. Truly and eternally – thank you so much.

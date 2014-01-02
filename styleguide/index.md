@@ -31,7 +31,7 @@ Third level headings are most often used to denote names rather than sections, s
 
 {% image /uploads/2013/12/herb-lubalin.jpg "This is an example image caption, set in Whitney. The image is of a desk in the Herb Lubalin Study Center of Design and Typography." %}
 
-Images may take three forms – aligned (left or right), centered, or full-width. Full-width images are intended for use in immersive, media-rich posts and pages.
+Images may take three forms—aligned (left or right), centered, or full-width. Full-width images are intended for use in immersive, media-rich posts and pages.
 
 {% image breakout /uploads/2013/09/coffee.jpeg "This is an example of a full-width image with caption." %}
 

@@ -171,6 +171,11 @@ h2,
   letter-spacing: -.03em;
 }
 
+h2.p,
+.beta.p {
+  margin-bottom: 0.775rem;
+}
+
 .entry-content * + h2 {
   margin-top: 4.65rem;
 }
@@ -273,6 +278,10 @@ blockquote .entry-content > .intro {
 
 blockquote em {
   font-style: normal;
+}
+
+.standalone {
+  margin-bottom: 0;
 }
 
 .highlight {

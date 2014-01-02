@@ -20,15 +20,15 @@
     		{% if page.next.url %}
     		<li>
     			<a rel="next" href="{{ page.next.url }}">
-    				<h3>Next Post</h3>
-    				<p class="beta">{{page.next.title}}</p>
+    				<h3 class="standalone">Next Post</h3>
+    				<p class="beta p">{{page.next.title}}</p>
     			</a>
     		</li>
     		{% endif %}
     		<li>
     			<a rel="prev" href="{{ page.previous.url }}">
-    				<h3>Previous Post</h3>
-    				<p class="beta">{{page.previous.title}}</p>
+    				<h3 class="standalone">Previous Post</h3>
+    				<p class="beta p">{{page.previous.title}}</p>
     			</a>
     		</li>
     	</ul>

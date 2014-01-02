@@ -26,18 +26,18 @@ Unless part of a phrase or word group, punctuation always falls outside of a hyp
 
 The last words in any given paragraph or other block-level elements are separated by a non-breaking space to prevent widows.
 
-“Smart” quotes are preferred over straight quotes. A period is followed by a single space. N-dashes (–) are used for short breaks in text (similar to parentheses), and m-dashes (—) are used to cite authors and origins of quotes, etc.
+“Smart” quotes are preferred over straight quotes. A period is followed by a single space. Regular dashes are used to connect words (e.g. one-time fee, comma-separated list), n-dashes (–) are used for ranges (e.g. 1–10, January–December), and m-dashes (—) are used to cite authors and origins of quotes, as well as for short breaks in text (similar to parentheses.)
 
-Unless at the end of a sentence, terminal punctuation exists outside a set of parentheses. For example:
+Unless at the end of a sentence, terminal punctuation exists outside a set of parentheses. In the case of quotes, however, terminal punctuation exists outside the closing quote mark—unless the terminal punctuation is part of the quote itself. For example:
 
-> I knew it to be true (though I wish it weren’t.)
+> He said it was “in our best interest.” I knew it to be true (though I wish it weren’t.)
 
 Semicolons are used to separate juxtaposing sentences or phrases, or to separate list items which themselves contain comma-separated words or phrases. Colons are used to introduce examples and lists. Blockquotes are used to frame non-original and secondary quotes that run longer than a single line.
 
-Paragraphs – regardless of content – must not exceed more than around 10 sentences. Content must flow so that it is neither one long block of text, nor hundreds of separated single-sentence paragraphs.
+Paragraphs—regardless of content—must not exceed more than around 10 sentences. Content must flow so that it is neither one long block of text, nor hundreds of separated single-sentence paragraphs.
 
 Horizontal rules should be used to separate content into sections, or draw a rule before adding editorial notes and footnotes.
 
 * * *
 
-These guidelines are just that – guidelines – and may be broken where appropriate. They are a mix of my upbringing, lessons learned from doing things the wrong way, and a few resources, including [The Elements of Typographic Style](http://www.amazon.com/Elements-Typographic-Style-Robert-Bringhurst/dp/0881791326). Happy writing.
+These guidelines are just that—guidelines—and may be broken where appropriate. They are a mix of my upbringing, lessons learned from doing things the wrong way, and a few resources—notably [The Elements of Typographic Style](http://www.amazon.com/Elements-Typographic-Style-Robert-Bringhurst/dp/0881791326) and [The Chicago Manual of Style](http://www.chicagomanualofstyle.org/home.html). Happy writing.

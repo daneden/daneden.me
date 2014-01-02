@@ -54,6 +54,10 @@ h2, .beta {
   letter-spacing: 0;
   font-family: $Serif;
   letter-spacing: -.03em;
+
+  &.p {
+    margin-bottom: $baseline/2;
+  }
 }
 
   .entry-content {
@@ -146,4 +150,8 @@ blockquote {
   em {
     font-style: normal;
   }
+}
+
+.standalone {
+  margin-bottom: 0;
 }
