@@ -3,6 +3,7 @@ module Jekyll
     @url = nil
     @caption = nil
     @class = nil
+    @resrc = nil
 
     IMAGE_URL_WITH_CLASS_AND_CAPTION = /(\w+)(\s+)((https?:\/\/|\/)(\S+))(\s+)"(.*?)"/i
     IMAGE_URL_WITH_CAPTION = /((https?:\/\/|\/)(\S+))(\s+)"(.*?)"/i
