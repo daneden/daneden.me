@@ -305,6 +305,8 @@ blockquote em {
 
 .highlight {
   -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
   width: 100%;
   margin-left: -24px;
   margin-left: -1.5rem;
@@ -313,74 +315,6 @@ blockquote em {
   overflow: scroll;
   background-color: #2c3032;
   color: #edefef;
-  /* Comment */
-  /* Error */
-  /* Generic */
-  /* Keyword */
-  /* Literal */
-  /* Name */
-  /* Operator */
-  /* Other */
-  /* Punctuation */
-  /* Comment.Multiline */
-  /* Comment.Preproc */
-  /* Comment.Single */
-  /* Comment.Special */
-  /* Generic.Deleted */
-  /* Generic.Emph */
-  /* Generic.Error */
-  /* Generic.Heading */
-  /* Generic.Inserted */
-  /* Generic.Output */
-  /* Generic.Prompt */
-  /* Generic.Strong */
-  /* Generic.Subheading */
-  /* Generic.Traceback */
-  /* Keyword.Constant */
-  /* Keyword.Declaration */
-  /* Keyword.Namespace */
-  /* Keyword.Pseudo */
-  /* Keyword.Reserved */
-  /* Keyword.Type */
-  /* Literal.Date */
-  /* Literal.Number */
-  /* Literal.String */
-  /* Name.Attribute */
-  /* Name.Builtin */
-  /* Name.Class */
-  /* Name.Constant */
-  /* Name.Decorator */
-  /* Name.Entity */
-  /* Name.Exception */
-  /* Name.Function */
-  /* Name.Label */
-  /* Name.Namespace */
-  /* Name.Other */
-  /* Name.Property */
-  /* Name.Tag */
-  /* Name.Variable */
-  /* Operator.Word */
-  /* Text.Whitespace */
-  /* Literal.Number.Float */
-  /* Literal.Number.Hex */
-  /* Literal.Number.Integer */
-  /* Literal.Number.Oct */
-  /* Literal.String.Backtick */
-  /* Literal.String.Char */
-  /* Literal.String.Doc */
-  /* Literal.String.Double */
-  /* Literal.String.Escape */
-  /* Literal.String.Heredoc */
-  /* Literal.String.Interpol */
-  /* Literal.String.Other */
-  /* Literal.String.Regex */
-  /* Literal.String.Single */
-  /* Literal.String.Symbol */
-  /* Name.Builtin.Pseudo */
-  /* Name.Variable.Class */
-  /* Name.Variable.Global */
-  /* Name.Variable.Instance */
-  /* Literal.Number.Integer.Long */
 }
 
 .highlight * {

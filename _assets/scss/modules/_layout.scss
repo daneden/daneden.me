@@ -1,20 +1,3 @@
-@mixin box-sizing($type: "border") {
-	/* Acceptable values are border, content, and padding - content is the default W3C model */
-	box-sizing: #{$type}-box;
-	-webkit-box-sizing: #{$type}-box;
-	-moz-box-sizing: #{$type}-box;
-}
-
-@mixin flexbox {
-	// Old Syntax
-	display:  -webkit-box;
-	display:     -moz-box;
-	display:  -ms-flexbox;
-	// New Syntax
-	display: -webkit-flex;
-	display:         flex;
-}
-
 $breakpoint-big: 65rem;
 $breakpoint-regular: 70rem;
 $breakpoint-small: 40rem;
