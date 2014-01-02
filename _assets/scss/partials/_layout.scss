@@ -8,15 +8,15 @@
   margin: 0 auto;
   padding: 0 $baseline/1.4;
 
-  @media screen and (min-width: $breakpoint-small) {
+  @media screen and ( min-width: $breakpoint-small ) {
   	padding: 0 $baseline*4;
   }
 }
 
 figure img {
-  @media (max-width: $breakpoint-small) {
-    max-width: calc(100% + 2.201rem);
-    width: calc(100% + 2.201rem);
+  @media ( max-width: $breakpoint-small ) {
+    max-width: calc( 100% + 2.201rem );
+    width: calc( 100% + 2.201rem );
     margin-left: -1.107142857rem;
     margin-right: -1.107142857rem;
   }
@@ -38,9 +38,9 @@ figure img {
     margin: auto;
     margin-bottom: $baseline/2;
 
-    @media (max-width: $breakpoint-small) {
-      max-width: calc(100% + 2.201rem);
-      width: calc(100% + 2.201rem);
+    @media ( max-width: $breakpoint-small ) {
+      max-width: calc( 100% + 2.201rem );
+      width: calc( 100% + 2.201rem );
       margin-left: -1.107142857rem;
       margin-right: -1.107142857rem;
     }
@@ -59,7 +59,7 @@ figure img {
     padding-left: $baseline*1.5;
   }
 
-  @media screen and (max-width: $breakpoint-regular) {
+  @media screen and ( max-width: $breakpoint-regular ) {
     .alignleft {
       margin-left: -15%;
     }
@@ -69,7 +69,7 @@ figure img {
     }
   }
 
-  @media screen and (max-width: $breakpoint-small) {
+  @media screen and ( max-width: $breakpoint-small ) {
     .alignleft, .alignright {
       float: none;
       max-width: 100%;
@@ -80,7 +80,7 @@ figure img {
   }
 
 .breakout {
-  @media (min-width: $breakpoint-small) {
+  @media ( min-width: $breakpoint-small ) {
     padding-top: $baseline;
     margin-bottom: $baseline*2;
 

@@ -737,14 +737,14 @@ p:empty {
 
 @media (max-width: 40rem) {
   figure img {
-    max-width: -webkit-calc(100% + 35px;
-    max-width: -webkit-calc(100% + 2.201rem);
-    max-width: calc(100% + 35px;
-    max-width: calc(100% + 2.201rem);
-    width: -webkit-calc(100% + 35px;
-    width: -webkit-calc(100% + 2.201rem);
-    width: calc(100% + 35px;
-    width: calc(100% + 2.201rem);
+    max-width: -webkit-calc(100% + 35px );
+    max-width: -webkit-calc(100% + 2.201rem );
+    max-width: calc(100% + 35px );
+    max-width: calc(100% + 2.201rem );
+    width: -webkit-calc(100% + 35px );
+    width: -webkit-calc(100% + 2.201rem );
+    width: calc(100% + 35px );
+    width: calc(100% + 2.201rem );
     margin-left: -18px;
     margin-left: -1.107142857rem;
     margin-right: -18px;
@@ -778,14 +778,14 @@ p:empty {
 @media (max-width: 40rem) {
   .alignleft img,
   .alignright img {
-    max-width: -webkit-calc(100% + 35px;
-    max-width: -webkit-calc(100% + 2.201rem);
-    max-width: calc(100% + 35px;
-    max-width: calc(100% + 2.201rem);
-    width: -webkit-calc(100% + 35px;
-    width: -webkit-calc(100% + 2.201rem);
-    width: calc(100% + 35px;
-    width: calc(100% + 2.201rem);
+    max-width: -webkit-calc(100% + 35px );
+    max-width: -webkit-calc(100% + 2.201rem );
+    max-width: calc(100% + 35px );
+    max-width: calc(100% + 2.201rem );
+    width: -webkit-calc(100% + 35px );
+    width: -webkit-calc(100% + 2.201rem );
+    width: calc(100% + 35px );
+    width: calc(100% + 2.201rem );
     margin-left: -18px;
     margin-left: -1.107142857rem;
     margin-right: -18px;
