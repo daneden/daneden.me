@@ -2,7 +2,7 @@
   "name": "daneden.me",
   "version": "3.0.0",
   "devDependencies": {
-    "grunt": "~0.4.1",
+    "grunt": "~0.4.2",
     "grunt-autoprefixer": "~0.4.0",
     "grunt-contrib-sass": "~0.5.0",
     "grunt-contrib-watch": "~0.5.3",
@@ -11,6 +11,6 @@
     "grunt-notify": "~0.2.16",
     "grunt-svgmin": "~0.3.0",
     "grunt-svg2png": "~0.2.1",
-    "grunt-remfallback": "https://github.com/daneden/grunt-remfallback.git"
+    "grunt-remfallback": "git://github.com/daneden/grunt-remfallback.git"
   }
 }

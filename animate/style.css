@@ -675,43 +675,8 @@ footer a {
 	display: block;
 	position: absolute;
 	top: 0;
-	right: -150px;
-	width: 130px;
-	font-size: .75em;
-	line-height: 1.09;
-}
-
-.bsa_it_t {
-	display: block;
-	font-weight: 700;
-}
-
-.ad .one {
-	width: auto;
-	line-height: 1.3;
-}
-
-body .one .bsa_it_p { display:none; }
-
-.ad img {
-	margin-bottom: 8px;
-	display: block;
-}
-
-.ad a {
-	color: #999;
-	text-decoration: none;
-	display: block;
-}
-
-#bsap_aplink {
-	font-weight: 400;
-	margin-top: 1.1em;
-}
-
-.ad .bsa_it_p a {
-	margin-top: 1em;
-	font-weight: 400;
+	right: -174px;
+	width: 154px;
 }
 
 @media screen and (max-width: 1000px) {
