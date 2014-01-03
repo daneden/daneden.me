@@ -33,7 +33,6 @@ module.exports = function(grunt) {
     sass: {
       dist: {
         options: {
-          sourcemap: true,
           compass: true
         },
         files: {
@@ -67,6 +66,17 @@ module.exports = function(grunt) {
       },
     },
 
+    csso: {
+      dist: {
+        options: {
+          report: 'gzip',
+        },
+        files: {
+          '_assets/css/style.min.css': ['_assets/css/style.css'],
+        },
+      },
+    },
+
     // Jekyll with drafts
     jekyll: {
       dist: {
@@ -84,7 +94,7 @@ module.exports = function(grunt) {
           '_assets/scss/**/*'
         ],
         // Run Sass, autoprefixer, and CSSO
-        tasks: ['sass', 'autoprefixer', 'remfallback'],
+        tasks: ['sass', 'autoprefixer', 'remfallback', 'csso'],
         options: {
           interrupt: true,
           spawn: false,
@@ -120,17 +130,18 @@ module.exports = function(grunt) {
   });
 
   // Load tasks
-  grunt.loadNpmTasks('grunt-svgmin');
-  grunt.loadNpmTasks('grunt-svg2png');
-  grunt.loadNpmTasks('grunt-notify');
-  grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-autoprefixer');
+  grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-sass');
-  grunt.loadNpmTasks('grunt-remfallback');
+  grunt.loadNpmTasks('grunt-csso');
   grunt.loadNpmTasks('grunt-jekyll');
+  grunt.loadNpmTasks('grunt-notify');
+  grunt.loadNpmTasks('grunt-remfallback');
+  grunt.loadNpmTasks('grunt-svg2png');
+  grunt.loadNpmTasks('grunt-svgmin');
 
   // Register tasks
-  grunt.registerTask('default', ['svgmin', 'svg2png', 'sass','autoprefixer', 'remfallback','jekyll','watch']);
-  grunt.registerTask('styles', ['sass','autoprefixer', 'remfallback','jekyll'])
-  grunt.registerTask('prod', ['sass','autoprefixer', 'remfallback','jekyll']);
+  grunt.registerTask('default', ['svgmin', 'svg2png', 'sass', 'autoprefixer', 'remfallback', 'csso', 'jekyll', 'watch']);
+  grunt.registerTask('styles', ['sass','autoprefixer', 'remfallback', 'csso', 'jekyll'])
+  grunt.registerTask('prod', ['sass','autoprefixer', 'remfallback', 'csso', 'jekyll']);
 };
