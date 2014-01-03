@@ -14,7 +14,7 @@ Some things you may find interesting:
 ## Workflow
 The source code here on GitHub is all good and well, but there’s still a vital missing ingredient between here and the live site. Here’s a short overview of how I modify and build my site;
 
-1. [Grunt](http://gruntjs.com) is always running when I’m writing or designing. It handles a few things, are defined in my Gruntfile, namely:
+1. [Grunt](http://gruntjs.com) is always running when I’m writing or designing. It handles a few things, as defined in my Gruntfile, namely:
   - SVGMin to minify my SVG files and remove unnecessary code
   - SVG2PNG to make PNG copies of my SVG files
   - Sass to make authoring my stylesheets easier
