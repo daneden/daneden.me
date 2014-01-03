@@ -9,7 +9,74 @@ Some things you may find interesting:
 
 - [Uncompressed Sass files](https://github.com/daneden/daneden.me/tree/master/assets/scss)
 - [Gruntfile.js](https://github.com/daneden/daneden.me/blob/master/Gruntfile.js) – the Grunt configuration used to help me develop locally. Pushing to the server triggers `jekyll build`, so any preprocessing is done locally.
-- And finally, the [plugins directory](https://github.com/daneden/daneden.me/tree/master/_plugins). There are a few very useful Jekyll plugins in here, including HTML5 image/`figure` tags, ordinal dates, a cachebusting helper, and typographic helpers.
+- And finally, the [plugins directory](https://github.com/daneden/daneden.me/tree/master/_plugins). There are a few very useful Jekyll plugins in here, including HTML5 image/`figure` tags, ordinal dates, and typographic helpers.
+
+## Workflow
+The source code here on GitHub is all good and well, but there’s still a vital missing ingredient between here and the live site. Here’s a short overview of how I modify and build my site;
+
+1. [Grunt](http://gruntjs.com) is always running when I’m writing or designing. It handles a few things, are defined in my Gruntfile, namely:
+  - SVGMin to minify my SVG files and remove unnecessary code
+  - SVG2PNG to make PNG copies of my SVG files
+  - Sass to make authoring my stylesheets easier
+  - Autoprefixer to prefix CSS properties and values as needed
+  - Jekyll to build my site into static HTML files
+  - Finally, a “watch” task to watch my files for changes and perform the above tasks
+2. Jekyll builds my site in a `_site` directory, which is ignored by Git so that I don’t end up with duplicate content and unnecessary bloat on GitHub.
+3. When my post or design changes are in a state I’m happy with, I commit my changes and push to GitHub.
+4. When GitHub recieves my changes, a post-commit hook is called. This is a simple URL pointing to a PHP file on my server that is accessed by GitHub—something along the lines of `http://1.2.3.4/pull.php?repo=daneden.me` (I have this post-commit hook for several of my GitHub repos, hence the `repo` variable in the URL).
+5. The PHP script on my server pulls the changes from GitHub into the desired directory, and then runs `jekyll build`.
+6. So long as the build succeeds, the site is now updated!
+
+The contents of the PHP script are the life and blood of this workflow, so here’s a modified/simplified version:
+
+```php
+<?php
+$path = null;
+
+// Get the Repo variable
+if($repo = $_GET["repo"]) {
+
+  switch($repo) {
+    case 'daneden.me':
+      $path = '/server/path/to/daneden.me/';
+      break;
+    case 'brills':
+      // In data-sensitive cases, staging servers are pulled automatically, but production pulls are done manually
+      $path = '/server/path/to/dev.brills.me/';
+      break;
+    case 'justmytype':
+      $path = '/server/path/to/justmytype.co/';
+      break;
+  }
+
+  // CD to our target directory and pull from GitHub
+  $output = 'cd ' . $path . ' && git pull';
+
+  // If it's not just PHP or static files, we need to do some more work
+  if($repo == 'daneden.me') {
+    // Set production environment variable and build using Jekyll
+    $output .= ' && export JEKYLL_ENV=production && jekyll build';
+  }
+
+  // If we successfully execute our git pull...
+  if ($exec = shell_exec($output)) {
+    // Pull succeeded!
+    echo "<b class='txt'>$ " . $output . "</b>";
+    echo "<b>Nice work, kid. Don&rsquo;t get cocky.</b>";
+    echo "<br /><pre>" . $exec . "</pre>";
+  } else {
+    // Pull failed, let's give 'em what we know.
+    echo "<b class='txt'>$ " . $output . "</b><br/>";
+    echo "<strong>Something went wrong. This is all I&rsquo;ve got.</strong><br>";
+    echo $exec;
+    echo '<br><i>Output:</i> ' . $output . '<br><i>Path:</i> ' . $path . '<br><i>Repo:</i> ' . $repo;
+  }
+} else {
+  // Repo URL variable not present.
+  // Someone got here by accident. Let's give them something to watch.
+  echo '<img src="http://24.media.tumblr.com/tumblr_mbal9whEhn1rogl95o1_500.gif" alt="Nothing to see here.">';
+} ?>
+```
 
 ## FAQ
 
