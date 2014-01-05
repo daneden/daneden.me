@@ -150,6 +150,7 @@ hr {
 
 h1,
 .alpha {
+  font-family: "Chronicle Display A", "Chronicle Display B", "Mercury SSm A", "Mercury SSm B", Georgia, serif;
   font-size: 45px;
   font-size: 2.79rem;
   font-weight: 400;
@@ -164,6 +165,15 @@ h1,
     font-size: 2rem;
     line-height: 1;
   }
+}
+
+h1 .caps,
+h1 .site-nav,
+h1 .entry-content > .intro,
+.alpha .caps,
+.alpha .site-nav,
+.alpha .entry-content > .intro {
+  font-family: "Chronicle Display A", "Chronicle Display B", "Mercury SSm A", "Mercury SSm B", Georgia, serif;
 }
 
 h2,
