@@ -8,31 +8,22 @@ This website has gone through a lot of iterations, the vast majority of which ha
 When it came to the task of redesigning my website again, I gave myself a broad objective; it should read like a newspaper. Not necessarily in its content, but its typographic appearance. Its typeface and typographic hierarchy should at some level resemble that of a newspaper. I felt it was a suitable objective to aim for due to the general long-term readability of newspaper body copy and easily-digestible headlines. Combining inspiration from various news publications with general typographic "best practices," I’ve managed to create a design with which I’m happier than I have ever been.
 
 ## Type Selection
-One of the most vital parts of any news publication design is a readable and diverting headline. [H&FJ](class:caps)’s [Mercury](http://www.typography.com/fonts/mercury-text/overview/) was an obvious choice; it was specifically designed for use in newspapers. It also happened to recently have been optimised for their web font service, with a bigger x-height and screen-optimised character contrast. While Mercury Text is designed for body use, it makes a wonderful headline, too:
+Arguably the most important typographic choice of any publication is the long-form body text. [H&FJ](class:caps)’s Mercury ScreenSmart was an obvious choice; with a long development history, Mercury was always intended for editorial use. Paired with Chronicle Display for headlines (seen below), Mercury is a fine typeface that works well for a variety of contexts.
 
 <figure>
 	<p class="alpha">Gas, INC. raises energy prices by 9.2%</p>
 	<p class="alpha">President Obama speaks as shutdown ends: 'This town has to change'</p>
-	<figcaption>Mercury Text is diverse enough to be used as an inflated headline typeface</figcaption>
+	<figcaption>Chronicle Display’s high-contrast and narrow design is simply beautiful at large sizes.</figcaption>
 </figure>
 
-Mercury Text ScreenSmart is nice and open, so we can afford to give it some tight tracking and leading (or letter-spacing and line-height in CSS). It also has some excellent, discreet ligatures:
+Chronicle Display is nice and open, so we can afford to give it some tight tracking and leading (or letter-spacing and line-height in CSS) at these inflated sizes. It also has some excellent, discreet ligatures:
 
 <figure>
-	<p class="alpha">Quaffing causes ½ of all waffle deficiencies, say experts</p>
-	<figcaption>Mercury Text's ligatures (seen on *"ffi, ffl,"* and *"fi"*) are discreet but effective. (If you can't see the ligatures, check [this screenshot](/uploads/2013/10/ligatures.png))</figcaption>
+	<p class="alpha">Quaffing causes 50% of all waffle deficiencies, say experts</p>
+	<figcaption>Chronicle Display’s ligatures, seen here on *“ffi, ffl,”* and *“fi.”* (If you can't see the ligatures, check [this screenshot](/uploads/2014/01/chronicle-display-ligatures.png))</figcaption>
 </figure>
 
-Tight leading can cause some conflicts between ascenders and descenders, but it's a rare problem. Secondary headlines are also set in Mercury, and tertiary headlines are set in [H&FJ](class:caps)’s [Whitney ScreenSmart](http://www.typography.com/fonts/whitney/overview/). Designed originally for the [Whitney Museum](http://whitney.org), it’s an authoritative yet soft typeface. With similar character contrast and weight to Mercury, it’s perfect to complement the main headlines and body text.
-
-<figure>
-	<p class="beta">Energy debate</p>
-	<p class="beta">More on This Story</p>
-	<p class="beta">'Total Opportunism'</p>
-	<p class="gamma">No Comments Yet</p>
-	<p class="gamma p">Agony Aunt</p>
-	<figcaption>Whitney’s soft and formal appearance complements and contrasts Mercury perfectly</figcaption>
-</figure>
+Tight leading can cause some conflicts between ascenders and descenders, but it's a rare problem. Secondary and tertiary headlines are set in Mercury, and captions and additional supporting typographic elements are set in [H&FJ](class:caps)’s [Whitney ScreenSmart](http://www.typography.com/fonts/whitney/overview/). Designed originally for the [Whitney Museum](http://whitney.org), it’s an authoritative yet soft typeface. With similar character contrast and weight to Mercury, it’s perfect to complement the main headlines and body text.
 
 With typeface selection out of the way, it was a simple case of setting the type. It helps working with real content, which, luckily, there is plenty of on my blog.
 
