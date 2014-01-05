@@ -39,13 +39,13 @@ h1, .alpha {
   line-height: 1.12;
   letter-spacing: -.04em;
 
-  @media (max-width: $breakpoint-small) {
-    font-size: 2rem;
-    line-height: 1;
-  }
-
   .caps {
     font-family: $Display;
+  }
+
+  @media (max-width: 720px) {
+    font-size: $baseline*1.6;
+    line-height: 1.043478261;
   }
 }
 

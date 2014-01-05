@@ -45,20 +45,31 @@ html {
 \*-----------------------------------*/
 
 .site-header {
-  padding: $baseline/1.5 0;
+  padding: $baseline/2 0;
   margin-bottom: $baseline;
-  //background-color: darken($gray, 60%);
   color: darken($gray, 25%);
 }
 
   .site-title {
-    display: block;
-    margin-bottom: 0;
-    margin-top: 0;
+    display: inline-block;
+    line-height: $baseline;
+    padding: {
+      left: $baseline/2;
+      bottom: $baseline/3.1;
+      right: $baseline*2.75;
+      top: $baseline;
+    }
+    background-color: $link;
+    color: #fff;
+    margin-bottom: $baseline/2;
+    margin-top: -$baseline/2;
+
     font-family: $Serif;
     font-weight: 700;
-    line-height: $baseline*2;
-    color: darken($gray, 60%);
+
+    &:hover {
+      color: #fff;
+    }
   }
 
   .entry-meta {

@@ -158,15 +158,6 @@ h1,
   letter-spacing: -.04em;
 }
 
-@media (max-width: 40rem) {
-  h1,
-  .alpha {
-    font-size: 32px;
-    font-size: 2rem;
-    line-height: 1;
-  }
-}
-
 h1 .caps,
 h1 .site-nav,
 h1 .entry-content > .intro,
@@ -174,6 +165,15 @@ h1 .entry-content > .intro,
 .alpha .site-nav,
 .alpha .entry-content > .intro {
   font-family: "Chronicle Display A", "Chronicle Display B", "Mercury SSm A", "Mercury SSm B", Georgia, serif;
+}
+
+@media (max-width: 720px) {
+  h1,
+  .alpha {
+    font-size: 40px;
+    font-size: 2.48rem;
+    line-height: 1.043478261;
+  }
 }
 
 h2,
@@ -858,22 +858,37 @@ html body {
 \*-----------------------------------*/
 
 .site-header {
-  padding: 21px 0;
-  padding: 1.03333rem 0;
+  padding: 16px 0;
+  padding: 0.775rem 0;
   margin-bottom: 31px;
   margin-bottom: 1.55rem;
   color: #808a91;
 }
 
 .site-title {
-  display: block;
-  margin-bottom: 0;
-  margin-top: 0;
+  display: inline-block;
+  line-height: 31px;
+  line-height: 1.55rem;
+  padding-left: 16px;
+  padding-left: 0.775rem;
+  padding-bottom: 10px;
+  padding-bottom: 0.5rem;
+  padding-right: 85px;
+  padding-right: 4.2625rem;
+  padding-top: 31px;
+  padding-top: 1.55rem;
+  background-color: #4ab5c7;
+  color: #fff;
+  margin-bottom: 16px;
+  margin-bottom: 0.775rem;
+  margin-top: -15px;
+  margin-top: -0.775rem;
   font-family: "Mercury SSm A", "Mercury SSm B", Georgia, serif;
   font-weight: 700;
-  line-height: 62px;
-  line-height: 3.1rem;
-  color: #2c3032;
+}
+
+.site-title:hover {
+  color: #fff;
 }
 
 .entry-meta {
