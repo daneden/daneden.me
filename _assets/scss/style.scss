@@ -51,25 +51,22 @@ html {
 }
 
   .site-title {
+    box-sizing: content-box;
+    float: left;
     display: inline-block;
-    line-height: $baseline;
-    padding: {
-      left: $baseline/2;
-      bottom: $baseline/3.1;
-      right: $baseline*2.75;
-      top: $baseline;
-    }
-    background-color: $link;
-    color: #fff;
-    margin-bottom: $baseline/2;
-    margin-top: -$baseline/2;
-
-    font-family: $Serif;
-    font-weight: 700;
-
-    &:hover {
-      color: #fff;
-    }
+    height: $baseline*2;
+    width: $baseline*1.5;
+    z-index: 2;
+    margin-bottom: $baseline;
+    padding-right: $baseline/1.5;
+    background-color: #fff;
+    background-image: url("/static/images/monogram.min.svg");
+    background-size: $baseline*1.5;
+    background-position: left center;
+    background-repeat: no-repeat;
+    text-indent: 100%;
+    overflow: hidden;
+    white-space: nowrap;
   }
 
   .entry-meta {
@@ -78,6 +75,7 @@ html {
   }
 
     .site-nav {
+      padding-top: $baseline/2;
       margin-bottom: 0;
       padding-left: 0;
       padding-bottom: .25rem;

@@ -116,7 +116,7 @@ a {
 
 a:hover,
 a:focus {
-  color: #4ab5c7;
+  color: #4fb5c6;
 }
 
 .site-header a,
@@ -125,7 +125,7 @@ a:focus {
 }
 
 .posts-by-year a {
-  color: #4ab5c7;
+  color: #4fb5c6;
 }
 
 .posts-by-year a:hover,
@@ -287,7 +287,7 @@ blockquote {
   font-family: "Whitney SSm A", "Whitney SSm B", Geneva, Verdana, sans-serif;
   padding-left: 25px;
   padding-left: 1.55rem;
-  border-left: 2px solid #4ab5c7;
+  border-left: 2px solid #4fb5c6;
   margin-left: -25px;
   margin-left: -1.55rem;
   color: #677177;
@@ -866,29 +866,29 @@ html body {
 }
 
 .site-title {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  float: left;
   display: inline-block;
-  line-height: 31px;
-  line-height: 1.55rem;
-  padding-left: 16px;
-  padding-left: 0.775rem;
-  padding-bottom: 10px;
-  padding-bottom: 0.5rem;
-  padding-right: 85px;
-  padding-right: 4.2625rem;
-  padding-top: 31px;
-  padding-top: 1.55rem;
-  background-color: #4ab5c7;
-  color: #fff;
-  margin-bottom: 16px;
-  margin-bottom: 0.775rem;
-  margin-top: -15px;
-  margin-top: -0.775rem;
-  font-family: "Mercury SSm A", "Mercury SSm B", Georgia, serif;
-  font-weight: 700;
-}
-
-.site-title:hover {
-  color: #fff;
+  height: 62px;
+  height: 3.1rem;
+  width: 47px;
+  width: 2.325rem;
+  z-index: 2;
+  margin-bottom: 31px;
+  margin-bottom: 1.55rem;
+  padding-right: 21px;
+  padding-right: 1.03333rem;
+  background-color: #fff;
+  background-image: url("/static/images/monogram.min.svg");
+  background-size: 47px;
+  background-size: 2.325rem;
+  background-position: left center;
+  background-repeat: no-repeat;
+  text-indent: 100%;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .entry-meta {
@@ -897,6 +897,8 @@ html body {
 }
 
 .site-nav {
+  padding-top: 16px;
+  padding-top: 0.775rem;
   margin-bottom: 0;
   padding-left: 0;
   padding-bottom: 5px;
@@ -915,12 +917,12 @@ html body {
 }
 
 .site-nav a:hover {
-  color: #4ab5c7;
+  color: #4fb5c6;
 }
 
 .site-nav .active {
-  color: #4ab5c7;
-  border-bottom: 2px solid #4ab5c7;
+  color: #4fb5c6;
+  border-bottom: 2px solid #4fb5c6;
   padding-bottom: 5px;
   padding-bottom: .25rem;
   margin-bottom: -7px;
@@ -1067,12 +1069,12 @@ html body {
 }
 
 .entry-nav li a:hover {
-  background-color: #4ab5c7;
+  background-color: #4fb5c6;
   color: #fff;
 }
 
 .entry-nav li a:hover:before {
-  background-color: #4ab5c7;
+  background-color: #4fb5c6;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
