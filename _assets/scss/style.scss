@@ -57,7 +57,6 @@ html {
     height: $baseline*2;
     width: $baseline*1.5;
     z-index: 2;
-    margin-bottom: $baseline;
     padding-right: $baseline/1.5;
     background-color: #fff;
     background-image: url("/static/images/monogram.min.svg");
@@ -70,7 +69,6 @@ html {
   }
 
   .entry-meta {
-    font-family: $Sans;
     color: darken($gray, 20%);
   }
 

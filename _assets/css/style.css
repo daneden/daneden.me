@@ -876,8 +876,6 @@ html body {
   width: 47px;
   width: 2.325rem;
   z-index: 2;
-  margin-bottom: 31px;
-  margin-bottom: 1.55rem;
   padding-right: 21px;
   padding-right: 1.03333rem;
   background-color: #fff;
@@ -892,7 +890,6 @@ html body {
 }
 
 .entry-meta {
-  font-family: "Whitney SSm A", "Whitney SSm B", Geneva, Verdana, sans-serif;
   color: #8d979d;
 }
 

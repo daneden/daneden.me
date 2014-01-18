@@ -1,12 +1,12 @@
 {% include header.html %}
 
-  <main class="site-content" role="main">
+  <main class="site-content post--single" role="main">
 	<article role="article">
-		<header class="entry-header wrap">
+		<header class="entry-header wrap promo">
 			<h1 class="entry-title">{{ page.title | widont }}</h1>
-			<div class="entry-meta">
-				<p>{{ page.date | pretty }}</p>
-			</div>
+			<p class="entry-meta">
+				{{ page.date | pretty }}
+			</p>
 		</header>
 
 		<div class="entry-content wrap">
