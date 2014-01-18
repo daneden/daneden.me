@@ -55,12 +55,12 @@ html {
     float: left;
     display: inline-block;
     height: $baseline*2;
-    width: $baseline*1.5;
+    width: $baseline*2.5;
     z-index: 2;
     padding-right: $baseline/1.5;
     background-color: #fff;
     background-image: url("/static/images/monogram.min.svg");
-    background-size: $baseline*1.5;
+    background-size: $baseline*2.5;
     background-position: left center;
     background-repeat: no-repeat;
     text-indent: 100%;
