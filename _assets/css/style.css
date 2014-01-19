@@ -151,17 +151,19 @@ hr {
 h1,
 .alpha {
   font-family: "Chronicle Display A", "Chronicle Display B", "Mercury SSm A", "Mercury SSm B", Georgia, serif;
-  font-size: 45px;
-  font-size: 2.79rem;
+  font-size: 38px;
+  font-size: 2.4025rem;
   font-weight: 400;
   line-height: 1.12;
   letter-spacing: -.04em;
 }
 
 h1 .caps,
+h1 .site-title,
 h1 .site-nav,
 h1 .entry-content > .intro,
 .alpha .caps,
+.alpha .site-title,
 .alpha .site-nav,
 .alpha .entry-content > .intro {
   font-family: "Chronicle Display A", "Chronicle Display B", "Mercury SSm A", "Mercury SSm B", Georgia, serif;
@@ -263,6 +265,7 @@ del {
 }
 
 .caps,
+.site-title,
 .site-nav,
 .entry-content > .intro {
   text-transform: uppercase;
@@ -278,6 +281,7 @@ figcaption {
 }
 
 figcaption .caps,
+figcaption .site-title,
 figcaption .site-nav,
 figcaption .entry-content > .intro {
   font-family: "Whitney SSm SC A", "Whitney SSm SC B", Geneva, Verdana, sans-serif;
@@ -300,6 +304,7 @@ blockquote {
 }
 
 blockquote .caps,
+blockquote .site-title,
 blockquote .site-nav,
 blockquote .entry-content > .intro {
   font-family: "Whitney SSm SC A", "Whitney SSm SC B", Geneva, Verdana, sans-serif;
@@ -647,6 +652,10 @@ p:empty {
   display: none;
 }
 
+.o--b {
+  display: block;
+}
+
 .b,
 .p {
   margin-bottom: 25px;
@@ -773,6 +782,12 @@ p:empty {
   }
 }
 
+.breakout {
+  max-width: 960px;
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
 @media (min-width: 40rem) {
   .breakout {
     padding-top: 25px;
@@ -814,6 +829,14 @@ p:empty {
   width: 100%;
   margin-left: 0;
   margin-right: 0;
+}
+
+.f--l {
+  float: left;
+}
+
+.f--r {
+  float: right;
 }
 
 /*-----------------------------------*\
@@ -862,31 +885,11 @@ html body {
   padding: 0.775rem 0;
   margin-bottom: 31px;
   margin-bottom: 1.55rem;
-  color: #808a91;
+  color: #373d40;
 }
 
 .site-title {
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  float: left;
-  display: inline-block;
-  height: 62px;
-  height: 3.1rem;
-  width: 78px;
-  width: 3.875rem;
-  z-index: 2;
-  padding-right: 21px;
-  padding-right: 1.03333rem;
-  background-color: #fff;
-  background-image: url("/static/images/monogram.min.svg");
-  background-size: 78px;
-  background-size: 3.875rem;
-  background-position: left center;
-  background-repeat: no-repeat;
-  text-indent: 100%;
-  overflow: hidden;
-  white-space: nowrap;
+  color: inherit;
 }
 
 .entry-meta {
@@ -987,6 +990,18 @@ html body {
   padding-top: 1.55rem;
   padding-bottom: 31px;
   padding-bottom: 1.55rem;
+}
+
+.post--single .entry-header:after {
+  content: "";
+  display: block;
+  height: 62px;
+  height: 3.1rem;
+  background-image: url("/static/images/post-decor.min.svg");
+  background-size: 47px;
+  background-size: 2.325rem;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .entry-title {

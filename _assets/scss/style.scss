@@ -47,25 +47,12 @@ html {
 .site-header {
   padding: $baseline/2 0;
   margin-bottom: $baseline;
-  color: darken($gray, 25%);
+  color: darken($gray, 55%);
 }
 
   .site-title {
-    box-sizing: content-box;
-    float: left;
-    display: inline-block;
-    height: $baseline*2;
-    width: $baseline*2.5;
-    z-index: 2;
-    padding-right: $baseline/1.5;
-    background-color: #fff;
-    background-image: url("/static/images/monogram.min.svg");
-    background-size: $baseline*2.5;
-    background-position: left center;
-    background-repeat: no-repeat;
-    text-indent: 100%;
-    overflow: hidden;
-    white-space: nowrap;
+    @extend .caps;
+    color: inherit;
   }
 
   .entry-meta {
@@ -160,6 +147,19 @@ html {
   padding: {
     top: $baseline;
     bottom: $baseline;
+  }
+
+  .post--single & {
+    &:after {
+      content: "";
+      display: block;
+      height: $baseline*2;
+
+      background-image: url("/static/images/post-decor.min.svg");
+      background-size: $baseline*1.5;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
   }
 }
 

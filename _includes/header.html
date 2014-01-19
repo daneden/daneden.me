@@ -26,8 +26,9 @@
 <body{% if page.class %} class="{{ page.class }}"{% endif %}>
   <header class="site-header" role="banner">
     <div class="wrap cf">
-      <a class="site-title" href="/" title="{{ site.name }}">{{ site.name }}</a>
-
-      {% include nav.html %}
+      <a class="site-title o--b" href="/" title="{{ site.name }} &#10087; {{ site.description }}">
+        <span class="f--l">{{ site.name }}</span>
+        <span class="f--r">{{ site.description }}</span>
+      </a>
     </div>
   </header>

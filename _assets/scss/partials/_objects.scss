@@ -31,6 +31,10 @@ p:empty {
   display: none;
 }
 
+.o--b {
+  display: block;
+}
+
 .b, .p {
   margin-bottom: $baseline;
 }

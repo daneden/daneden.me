@@ -34,7 +34,7 @@ hr {
 
 h1, .alpha {
   font-family: $Display;
-  font-size: $baseline*1.8;
+  font-size: $baseline*($baseline/1rem);
   font-weight: 400;
   line-height: 1.12;
   letter-spacing: -.04em;

@@ -80,6 +80,9 @@ figure img {
   }
 
 .breakout {
+  max-width: 60rem;
+  margin: 0 auto;
+
   @media ( min-width: $breakpoint-small ) {
     padding-top: $baseline;
     margin-bottom: $baseline*2;
@@ -121,4 +124,12 @@ figure img {
   figcaption {
     @extend .wrap;
   }
+}
+
+.f--l {
+  float: left;
+}
+
+.f--r {
+  float: right;
 }

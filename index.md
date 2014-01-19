@@ -1,14 +1,15 @@
 ---
-layout: promo-page
-title: Everything is Designed
+layout: page
+title: About
 ---
+{% image /uploads/2013/10/face.jpg?1 "Photo credit: [Rasmus Andersson](http://www.flickr.com/photos/rsms)" %}
 
-{% image /static/images/whitney.min.svg %}
+My name is Daniel Eden, and I'm a designer. I’m intrigued by the stories behind objects; how they were made, and who made them. I like to make [tools](/portfolio) for the web and [write](/blog) about design, courage, and lack thereof. I also like Disney, dogs, and looking up.
 
-Find an object that hasn’t been manipulated by the human hand. If you’re sitting in a café or an office, at home or on a train, chances are you’ll find that a very difficult task.
+I’m currently working in San Francsico for [Dropbox](http://dropbox.com) as a Designer. If you want to, you can view and download [my résumé](http://cl.ly/OlXO).
 
-Everything is designed. Every coin has been made a certain weight. Every spoon a certain size. Every shelf a certain depth. Every character in the text you’re reading a certain shape, or the sounds from your screen reader a certain timbre. But who makes these decisions, and why?
+I say words on [Twitter](http://twitter.com/_dte). I get design critique on [Dribbble.](http://dribbble.com/dte) I connect with my family on [Facebook](http://www.facebook.com/daniel.eden). I write code and put it on [GitHub](https://github.com/daneden). Nothing out of the ordinary.
 
-We all design. Every time we evaluate a tool or product, or think about how we might have done something differently, we are designing.
+I’m engaged to be married to the best [human being](http://twitter.com/iamemliy) I have ever known. We’re both from Manchester, UK. She likes horror movies. I don’t.
 
-Hello. My name is Daniel Eden, and I am a Designer.
+If you want to talk, you can email me at [dan.eden@me.com](mailto:dan.eden@me.com). One last thing; the source code for my entire site is available to view over [on GitHub](https://github.com/daneden/daneden.me). Take a look, suggest improvements, and stay curious.
