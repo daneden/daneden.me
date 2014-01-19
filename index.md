@@ -6,7 +6,7 @@ title: About
 
 My name is Daniel Eden, and I'm a designer. I’m intrigued by the stories behind objects; how they were made, and who made them. I like to make [tools](/portfolio) for the web and [write](/blog) about design, courage, and lack thereof. I also like Disney, dogs, and looking up.
 
-I’m currently working in San Francsico for [Dropbox](http://dropbox.com) as a Designer. If you want to, you can view and download [my résumé](http://cl.ly/OlXO).
+I’m currently working in San Francisco for [Dropbox](http://dropbox.com) as a Designer. If you want to, you can view and download [my résumé](http://cl.ly/OlXO).
 
 I say words on [Twitter](http://twitter.com/_dte). I get design critique on [Dribbble.](http://dribbble.com/dte) I connect with my family on [Facebook](http://www.facebook.com/daniel.eden). I write code and put it on [GitHub](https://github.com/daneden). Nothing out of the ordinary.
 
