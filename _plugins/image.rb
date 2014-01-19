@@ -46,7 +46,7 @@ module Jekyll
       end
 
       if ENV['JEKYLL_ENV'] != 'development' && (@url.include? '.jpg' or @url.include? '.jpeg' or @url.include? '.png')
-        source += "<img src=\"#{@resrc}#{@url}\" class=\"resrc\"/>"
+        source += "<img src=\"#{@resrc}#{@url}\" />"
       else
         source += "<img src=\"#{@url}\" />"
       end
