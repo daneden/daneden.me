@@ -889,6 +889,8 @@ html body {
 }
 
 .site-title {
+  padding: 16px 0;
+  padding: 0.775rem 0;
   color: inherit;
 }
 
