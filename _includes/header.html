@@ -22,6 +22,9 @@
 
   <!-- Grab our H&FJ font CSS. Since we wanted to DNS-prefetch the URL, this happens last in the <head> -->
   <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7158232/776222/css/fonts.css?12" />
+
+  <!-- Set Adaptive Images cookie -->
+  <script>document.cookie='resolution='+Math.max(screen.width,screen.height)+("devicePixelRatio" in window ? ","+devicePixelRatio : ",1")+'; path=/';</script>
 </head>
 <body{% if page.class %} class="{{ page.class }}"{% endif %}>
   <header class="site-header" role="banner">
