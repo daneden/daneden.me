@@ -788,11 +788,6 @@ p:empty {
   margin: 0 auto;
 }
 
-.breakout figcaption {
-  margin-bottom: 25px;
-  margin-bottom: 1.55rem;
-}
-
 @media (min-width: 40rem) {
   .breakout {
     padding-top: 25px;
@@ -814,7 +809,6 @@ p:empty {
     right: 0;
     color: #fff;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-    margin-bottom: 0;
   }
 
   .breakout:after {
@@ -895,8 +889,6 @@ html body {
 }
 
 .site-title {
-  padding: 16px 0;
-  padding: 0.775rem 0;
   color: inherit;
 }
 

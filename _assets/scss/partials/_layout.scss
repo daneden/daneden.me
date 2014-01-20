@@ -83,10 +83,6 @@ figure img {
   max-width: 60rem;
   margin: 0 auto;
 
-  figcaption {
-    margin-bottom: $baseline;
-  }
-
   @media ( min-width: $breakpoint-small ) {
     padding-top: $baseline;
     margin-bottom: $baseline*2;
@@ -103,7 +99,6 @@ figure img {
       right: 0;
       color: #fff;
       text-shadow: 0 1px 1px rgba(0,0,0,.2);
-      margin-bottom: 0;
     }
 
     &:after {

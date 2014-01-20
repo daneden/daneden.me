@@ -267,24 +267,6 @@ RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
 RewriteRule ^ http://%1%{REQUEST_URI} [R=301,L]
 </IfModule>
 
-# Rewrite image requests to go through Adaptive Images
-
-<IfModule mod_rewrite.c>
-# Adaptive-Images -----------------------------------------------------------------------------------
-
-# Add any directories you wish to omit from the Adaptive-Images process on a new line, as follows:
-# RewriteCond %{REQUEST_URI} !some-directory
-# RewriteCond %{REQUEST_URI} !another-directory
-
-RewriteCond %{REQUEST_URI} !assets
-
-# Send any GIF, JPG, or PNG request that IS NOT stored inside one of the above directories
-# to adaptive-images.php so we can select appropriately sized versions
-RewriteRule \.(?:jpe?g|gif|png)$ ai.php
-
-# END Adaptive-Images -------------------------------------------------------------------------------
-</IfModule>
-
 # ----------------------------------------------------------------------
 # Prevent SSL cert warnings
 # ----------------------------------------------------------------------

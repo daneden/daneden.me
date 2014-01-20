@@ -26,6 +26,12 @@ module Jekyll
       elsif markup =~ IMAGE_URL
         @url = $1
       end
+
+      if @url =~ /(https?:\/\/)/
+        @resrc = "https://app.resrc.it/O=70,P/"
+      else
+        @resrc = "https://app.resrc.it/O=70,P/https://daneden.me"
+      end
     end
 
     def render(context)
@@ -39,7 +45,11 @@ module Jekyll
         source = "<figure>"
       end
 
-      source += "<img src=\"#{@url}\" />"
+      if ENV['JEKYLL_ENV'] != 'development' && (@url.include? '.jpg' or @url.include? '.jpeg' or @url.include? '.png')
+        source += "<img src=\"#{@resrc}#{@url}\" class=\"resrc\"/>"
+      else
+        source += "<img src=\"#{@url}\" />"
+      end
 
       source += "<figcaption>#{@caption}</figcaption>" if @caption
       source += "</figure>"
