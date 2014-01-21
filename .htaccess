@@ -355,9 +355,11 @@ RewriteRule ^.git/ - [NC,F,L]
 Redirect 301 /favicon.ico /favicon.png
 Redirect 301 /about /
 
-# Redirect /type to the Just My Type site!
+# Redirect /type to the Just My Type site
 Redirect /type http://justmytype.co
 Redirect /type/twins http://justmytype.co/twins
 
+# Redirect /animate to the GitHub page
+Redirect /animate http://daneden.github.io/animate.css/
 
 RewriteRule (.+)-[a-zA-Z0-9]+(\.(js|css))$ $1$2 [L]
