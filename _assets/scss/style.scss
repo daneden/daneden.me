@@ -53,6 +53,7 @@ html {
   .site-title {
     @extend .caps;
     color: inherit;
+    padding: $baseline/2 0;
   }
 
   .entry-meta {

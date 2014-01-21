@@ -890,6 +890,8 @@ html body {
 
 .site-title {
   color: inherit;
+  padding: 16px 0;
+  padding: 0.775rem 0;
 }
 
 .entry-meta {
