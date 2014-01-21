@@ -360,6 +360,6 @@ Redirect /type http://justmytype.co
 Redirect /type/twins http://justmytype.co/twins
 
 # Redirect /animate to the GitHub page
-Redirect /animate http://daneden.github.io/animate.css/
+Redirect /animate http://daneden.github.io/animate.css
 
 RewriteRule (.+)-[a-zA-Z0-9]+(\.(js|css))$ $1$2 [L]
