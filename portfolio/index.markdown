@@ -5,8 +5,10 @@ in-nav: false
 scripts: ["/static/js/jquery.fitvids.custom.js"]
 ---
 
+I’m currently working at [Dropbox](http://dropbox.com) as a Designer. My work outside of Dropbox is what you see here; side projects, open source contributions, and personal itch-scratchers. [Dribbble](http://dribbble.com/dte) may provide a more current, up-to-date representation of my work.
+
 ## Just My Type
-[Just My Type](http://justmytype.co) is a library of font pairings from Adobe Typekit and H&FJ’s Cloud.Typography. Created out of a desire for a place to keep track of my personal favorite web font pairings, Just My Type has grown to become a popular typography resource for many web designers.
+[Just My Type](http://justmytype.co) is a library of font pairings from Adobe Typekit and [H&FJ](class:caps)’s Cloud.Typography. Created out of a desire for a place to keep track of my personal favorite web font pairings, Just My Type has grown to become a popular typography resource for many web designers.
 
 [Visit the site](http://justmytype.co).
 
@@ -23,9 +25,7 @@ Tired of only being able to access my iA Writer documents on my iOS devices, I c
 
 
 ## Webshaped 2012
-I was invited to speak at this year's [Webshaped](http://webshaped.fi) conference, alongside some incredible folk I've long admired. It was terrifying, amazing, and I'd love to do it again. My presentation tackled animation on the web, and how we can delight our audience by integrating animation in our websites and applications. You can [read more](http://daneden.me/2012/05/i-have-no-idea-what-im-doing/) about my time there. And that's not me up on stage in the picture - that's [Kyle.](http://twitter.com/kneath)
-
-[![Webshaped](/uploads/2012/05/webshaped.jpg)](http://webshaped.fi)
+I was invited to speak at this year's [Webshaped](http://webshaped.fi) conference, alongside some incredible folk I've long admired. It was terrifying, amazing, and I'd love to do it again. My presentation tackled animation on the web, and how we can delight our audience by integrating animation in our websites and applications. You can [read more](/2012/05/18/i-have-no-idea-what-im-doing/) about my time there.
 
 
 ## Brills

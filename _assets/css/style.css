@@ -155,7 +155,6 @@ h1,
   font-size: 2.4025rem;
   font-weight: 400;
   line-height: 1.12;
-  letter-spacing: -.04em;
 }
 
 h1 .caps,
@@ -990,20 +989,8 @@ html body {
 .entry-header {
   padding-top: 31px;
   padding-top: 1.55rem;
-  padding-bottom: 31px;
-  padding-bottom: 1.55rem;
-}
-
-.post--single .entry-header:after {
-  content: "";
-  display: block;
-  height: 62px;
-  height: 3.1rem;
-  background-image: url("/static/images/post-decor.min.svg");
-  background-size: 47px;
-  background-size: 2.325rem;
-  background-position: center;
-  background-repeat: no-repeat;
+  padding-bottom: 62px;
+  padding-bottom: 3.1rem;
 }
 
 .entry-title {

@@ -147,20 +147,7 @@ html {
 .entry-header {
   padding: {
     top: $baseline;
-    bottom: $baseline;
-  }
-
-  .post--single & {
-    &:after {
-      content: "";
-      display: block;
-      height: $baseline*2;
-
-      background-image: url("/static/images/post-decor.min.svg");
-      background-size: $baseline*1.5;
-      background-position: center;
-      background-repeat: no-repeat;
-    }
+    bottom: $baseline*2;
   }
 }
 
