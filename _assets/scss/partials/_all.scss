@@ -1,0 +1,22 @@
+/*-----------------------------------*\
+
+  Partials: All
+
+  Includes all partials
+
+\*-----------------------------------*/
+
+@import "mixins";
+@import "reset";
+@import "helpers";
+@import "layout";
+@import "objects";
+@import "typography";
+@import "images";
+@import "tables";
+@import "forms";
+@import "animations";
+
+// Group: Development
+// Include only in development environments
+@import "debug";

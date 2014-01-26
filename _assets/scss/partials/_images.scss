@@ -1,0 +1,137 @@
+/*-----------------------------------*\
+
+  Partial: Images
+
+\*-----------------------------------*/
+
+figure {
+
+  img {
+    margin-bottom: $baseline/2;
+  }
+}
+
+figcaption {
+  @extend .meta;
+
+  font-family: $font-Sans;
+  font-size: .764705882rem;
+  line-height: 1.615384615;
+
+  .caps {
+    font-family: $font-Sans-SC;
+  }
+}
+
+figure img {
+  @media ( max-width: $breakpoint-small ) {
+    max-width: calc( 100% + 2.201rem );
+    width: calc( 100% + 2.201rem );
+    margin-left: -1.107142857rem;
+    margin-right: -1.107142857rem;
+  }
+}
+
+.aligncenter {
+  display: block;
+  margin: 0 auto 1.5rem;
+}
+
+.alignleft, .alignright {
+  clear: both;
+  margin-bottom: $baseline/2;
+  max-width: 38.2%;
+
+  img {
+    max-width: 100%;
+    width: auto;
+    margin: auto;
+    margin-bottom: $baseline/2;
+
+    @media ( max-width: $breakpoint-small ) {
+      max-width: calc( 100% + 2.201rem );
+      width: calc( 100% + 2.201rem );
+      margin-left: -1.107142857rem;
+      margin-right: -1.107142857rem;
+    }
+  }
+}
+
+  .alignleft {
+    float: left;
+    margin-left: -38.2%;
+    padding-right: $baseline*1.5;
+  }
+
+  .alignright {
+    float: right;
+    margin-right: -38.2%;
+    padding-left: $baseline*1.5;
+  }
+
+  @media screen and ( max-width: $breakpoint-regular ) {
+    .alignleft {
+      margin-left: -15%;
+    }
+
+    .alignright {
+      margin-right: -15%;
+    }
+  }
+
+  @media screen and ( max-width: $breakpoint-small ) {
+    .alignleft, .alignright {
+      float: none;
+      max-width: 100%;
+      margin: 0 auto;
+      margin-bottom: $baseline;
+      padding: 0;
+    }
+  }
+
+.breakout {
+  max-width: 60rem;
+  margin: 0 auto;
+
+  @media ( min-width: $breakpoint-small ) {
+    padding-top: $baseline;
+    margin-bottom: $baseline*2;
+
+    img {
+      margin-bottom: 0;
+    }
+
+    figcaption {
+      position: absolute;
+      z-index: 2;
+      bottom: $baseline;
+      left: 0;
+      right: 0;
+      color: #fff;
+      text-shadow: 0 1px 1px rgba(0,0,0,.2);
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 75%;
+      background-image: linear-gradient(transparent, rgba(0,0,0,.75));
+    }
+  }
+
+  img {
+    max-width: 100%;
+    width: 100%;
+    margin: {
+      left: 0;
+      right: 0;
+    }
+  }
+
+  figcaption {
+    @extend .wrap;
+  }
+}

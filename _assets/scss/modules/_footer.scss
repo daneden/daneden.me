@@ -1,0 +1,15 @@
+/*-----------------------------------*\
+
+  Module: Footer
+
+\*-----------------------------------*/
+
+.site__footer {
+  padding-top: $baseline*2;
+  color: $gray;
+  border-top: 1px solid $subtle-gray;
+
+  nav a {
+    color: $light-gray;
+  }
+}

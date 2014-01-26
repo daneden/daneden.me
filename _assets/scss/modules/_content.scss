@@ -1,0 +1,24 @@
+/*-----------------------------------*\
+
+  Module: Content
+
+  <body [class="page"]>
+    ...
+    <main class="site__content">
+      {{ content }}
+    </main>
+    ...
+  </body>
+
+\*-----------------------------------*/
+
+.site__content {
+  padding-bottom: $baseline*3;
+}
+
+.entry__header {
+  padding: {
+    top: $baseline/2;
+    bottom: $baseline/2;
+  }
+}

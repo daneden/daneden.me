@@ -1,0 +1,27 @@
+/*-----------------------------------*\
+
+  Partial: Mixins
+
+\*-----------------------------------*/
+
+// SVG backgrounds with PNG fallback
+// All browsers that support multiple backgrounds also support SVGs. Woohoo!
+@mixin bg-image($image, $size: 16px, $repeat: no-repeat, $position: center) {
+  background-image: image-url("#{$image}.png");
+  background-image: inline-image("#{$image}.min.svg"), none;
+
+  background-size: $size;
+
+  background-repeat: $repeat;
+
+  background-position: $position;
+
+}
+
+// Image replacement technique
+@mixin image-replace {
+  // Extra text indent to account for narrow parent widths
+  text-indent: 200%;
+  overflow: hidden;
+  white-space: nowrap;
+}

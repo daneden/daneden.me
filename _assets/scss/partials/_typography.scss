@@ -1,160 +1,131 @@
 /*-----------------------------------*\
-  $TYPE
+
+  Partial: Typography
+
+  Low-level type things. Headings,
+  links, blockquotes, etc.
+
 \*-----------------------------------*/
 
-a {
-  color: inherit;
+h1, .alpha {
+  margin-top: $baseline*.25;
+  margin-bottom: $baseline*1.5;
+
+  font-family: $font-Display;
+  font-size: $baseline*1.5;
+  font-weight: 400;
+  line-height: 1.333333333;
+
+  color: $dark-gray;
+}
+
+h2, .beta {
+  margin-bottom: $baseline/2;
+  margin-top: $baseline/2;
+
+  font-size: 1.384615385rem;
+  font-weight: 400;
+  line-height: 1.2223;
+}
+
+h3, .gamma {
+  margin-bottom: $baseline/2;
+
+  @extend %caps;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: $baseline-unitless;
+}
+
+h4, .delta {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: $baseline-unitless;
+}
+
+.mega {
+  font-weight: 200;
+  font-size: 2.153846154rem;
+  line-height: 1.178571429;
+}
+
+.promo {
+  text-align: center;
+}
+
+.subhead, .meta {
+  color: $light-gray;
+}
+
+a, [data-href] {
   text-decoration: underline;
-  &:hover, &:focus {
-    color: $link;
-  }
 
-  .site-header &, .posts-by-year & {
-    text-decoration: none;
-  }
+  color: inherit;
 
-  .posts-by-year & {
-    color: $link;
-    &:hover, &:focus {
-      text-decoration: underline;
-    }
+  cursor: pointer;
+
+  &:hover {
+    color: $blue;
   }
+}
+
+.caps, %caps {
+  font-family: $font-Serif-SC;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+
+strong, .strong {
+  font-weight: 700;
+}
+
+em, .em {
+  font-style: italic;
 }
 
 hr {
   border: none;
-  margin-top: $baseline;
-  margin-bottom: $baseline;
-  background-image: inline-image("tristar.min.svg");
-  background-repeat: no-repeat;
-  background-size: auto $baseline;
-  background-position: center;
+  @include bg-image("tristar", auto $baseline);
   height: $baseline;
-}
-
-h1, .alpha {
-  font-family: $Display;
-  font-size: $baseline*($baseline/1rem);
-  font-weight: 400;
-  line-height: 1.12;
-  //letter-spacing: -.04em;
-
-  .caps {
-    font-family: $Display;
-  }
-
-  @media (max-width: 720px) {
-    font-size: $baseline*1.6;
-    line-height: 1.043478261;
-  }
-}
-
-h2, .beta {
-  clear: both;
-  font-size: $baseline;
-  font-weight: 400;
   margin-bottom: $baseline;
-  line-height: 1;
-  font-style: normal;
-  letter-spacing: 0;
-  font-family: $Serif;
-  letter-spacing: -.03em;
-
-  &.p {
-    margin-bottom: $baseline/2;
-  }
 }
 
-  .entry-content {
-    * + h2 {
-      margin-top: $baseline*3;
-    }
+// Remove this for hanging bullets
+ul, ol {
+  padding-left: 1.35em;
+}
 
-    hr + h2 {
-      margin-top: 0;
-    }
+  // Restore some normality to our nested lists
+  li > ul, li > ol {
+    margin-bottom: 0;
   }
 
-h3, .gamma {
-  font-size: 1rem;
-  line-height: 1.55;
-  font-weight: 400;
-  margin-bottom: $baseline/2;
-  font-style: normal;
-  letter-spacing: .1em;
-  font-family: $Serif-SC;
-  text-transform: uppercase;
-}
-
-  .entry-content {
-    * + h3 {
-      margin-top: $baseline*2;
-    }
-
-    h2 + h3 {
-      margin-top: 0;
-    }
+dl {
+  dt {
+    font-weight: 700;
   }
 
-h1 a, h2 a, h3 a,
-a h1, a h2, a h3 {
-  text-decoration: none;
-}
-
-.entry-content p {
-  hyphens: auto;
-}
-
-small {
-  font-size: $baseline/2;
-  line-height: 1.666;
-  color: rgba(0,0,0,.7);
-}
-
-del {
-  opacity: .65;
-  text-decoration: line-through;
-}
-
-.callout, .promo {
-  text-align: center;
-}
-
-.caps {
-  text-transform: uppercase;
-  font-family: $Serif-SC;
-  letter-spacing: .02em;
-}
-
-figcaption {
-  font-family: $Sans;
-  font-size: $baseline/2;
-  color: darken($gray, 25%);
-  .caps {
-    font-family: $Sans-SC;
+  dd {
+    padding-left: 1.3rem;
   }
 }
 
 blockquote {
-  font-family: $Sans;
+  font-family: $font-Sans;
   padding-left: $baseline;
-  border-left: 2px solid $link;
+  border-left: 2px solid $blue;
   margin-left: -$baseline;
-  color: darken($gray, 35%);
+  color: $gray;
 
   @media (max-width: $breakpoint-small) {
     margin-left: 0;
   }
 
   .caps {
-    font-family: $Sans-SC;
+    font-family: $font-Sans-SC;
   }
 
   em {
     font-style: normal;
   }
-}
-
-.standalone {
-  margin-bottom: 0;
 }

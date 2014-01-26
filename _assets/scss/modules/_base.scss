@@ -1,0 +1,26 @@
+/*-----------------------------------*\
+
+  Module: Base
+
+  Anything that can’t be abstracted
+  or assigned to another section.
+  Low-level stuff. Typically only body
+  and html styles.
+
+\*-----------------------------------*/
+
+::-moz-selection {
+  background-color: transparentize($lighter-gray, .5);
+}
+
+::selection {
+  background-color: transparentize($lighter-gray, .5);
+}
+
+html {
+  font: #{$base-font-size}/#{$baseline-unitless} $font-Serif;
+  -webkit-font-smoothing: antialiased;
+
+  color: $gray;
+  background-color: #fff;
+}

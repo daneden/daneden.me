@@ -1,5 +1,6 @@
-<!-- Set Adaptive Images cookie -->
-<script>document.cookie='resolution='+Math.max(screen.width,screen.height)+("devicePixelRatio" in window ? ","+devicePixelRatio : ",1")+'; path=/';</script>
+{% if site.env == 'production' %}
+<script src="//use.resrc.it"></script>
+{% endif %}
 
 <!-- Load Google Analytics -->
 <script>
