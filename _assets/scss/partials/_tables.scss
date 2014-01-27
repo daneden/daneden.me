@@ -1,0 +1,61 @@
+/*-----------------------------------*\
+
+  Partial: Tables
+
+  Table styles
+
+\*-----------------------------------*/
+
+table {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: auto;
+
+  text-align: left;
+
+  border-radius: .25em;
+  border: 1px solid $subtle-gray;
+
+  tr {
+    display: table-row;
+  }
+
+  tbody, thead, tr {
+    border-collapse: collapse;
+  }
+
+  td, th {
+    @extend %isle;
+    width: auto;
+    vertical-align: top;
+    display: table-cell;
+
+    line-height: 1.5;
+    white-space: nowrap;
+
+    border-top: 1px solid $subtle-gray;
+    border-bottom: 1px solid $subtle-gray;
+    border-collapse: collapse;
+
+    &:first-child {
+      border-radius: .25em .25em 0 0;
+      border-left: 1px solid $subtle-gray;
+    }
+
+    &:last-child {
+      border-radius: 0 0 .25em .25em;
+      border-right: 1px solid $subtle-gray;
+    }
+
+    & + td, & + th {
+      //border-left: 1px solid $subtle-gray;
+    }
+  }
+
+  &.table--striped {
+    tr:nth-child(even) {
+      background-color: lighten($subtle-gray, 6%);
+    }
+  }
+}

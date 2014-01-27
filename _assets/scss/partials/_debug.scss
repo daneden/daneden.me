@@ -1,0 +1,50 @@
+/*-----------------------------------*\
+
+  Partial: Debug
+
+  DEVELOPMENT ONLY
+  ================
+
+  Debugging helper classes for layout,
+  etc.
+
+\*-----------------------------------*/
+
+// Outline elements
+.debug-outline {
+  * {
+    outline: 1px dotted rgba(0,0,0,.1);
+    outline-offset: -1px;
+
+    &:hover {
+      outline-color: red;
+    }
+  }
+}
+
+// Grid for debugging visual layout
+.debug--grid {
+  body {
+    position: relative;
+  }
+
+  body:after {
+    position: absolute;
+    width: auto;
+    height: auto;
+    z-index: 9999;
+    content: '';
+    display: block;
+    pointer-events: none;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+ // background: url("http://basehold.it/{baseline in px}");
+    background: url(http://basehold.it/image.php?height=22) repeat top left;
+  }
+
+  body:active:after {
+    display: none;
+  }
+}

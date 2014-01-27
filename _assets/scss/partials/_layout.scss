@@ -1,135 +1,230 @@
 /*-----------------------------------*\
-  $LAYOUT
+
+  Partial: Layout
+
+  Layout helpers
+
 \*-----------------------------------*/
 
 .wrap {
-  max-width: 800px;
-  max-width: $baseline*30;
-  margin: 0 auto;
-  padding: 0 $baseline/1.4;
-
-  @media screen and ( min-width: $breakpoint-small ) {
-  	padding: 0 $baseline*4;
+  max-width: 37rem;
+  padding: {
+    left: $baseline;
+    right: $baseline;
   }
-}
-
-figure img {
-  @media ( max-width: $breakpoint-small ) {
-    max-width: calc( 100% + 2.201rem );
-    width: calc( 100% + 2.201rem );
-    margin-left: -1.107142857rem;
-    margin-right: -1.107142857rem;
-  }
-}
-
-.aligncenter {
-  display: block;
-  margin: 0 auto 1.5rem;
-}
-
-.alignleft, .alignright {
-  clear: both;
-  margin-bottom: $baseline/2;
-  max-width: 38.2%;
-
-  img {
-    max-width: 100%;
-    width: auto;
-    margin: auto;
-    margin-bottom: $baseline/2;
-
-    @media ( max-width: $breakpoint-small ) {
-      max-width: calc( 100% + 2.201rem );
-      width: calc( 100% + 2.201rem );
-      margin-left: -1.107142857rem;
-      margin-right: -1.107142857rem;
-    }
-  }
-}
-
-  .alignleft {
-    float: left;
-    margin-left: -38.2%;
-    padding-right: $baseline*1.5;
-  }
-
-  .alignright {
-    float: right;
-    margin-right: -38.2%;
-    padding-left: $baseline*1.5;
-  }
-
-  @media screen and ( max-width: $breakpoint-regular ) {
-    .alignleft {
-      margin-left: -15%;
-    }
-
-    .alignright {
-      margin-right: -15%;
-    }
-  }
-
-  @media screen and ( max-width: $breakpoint-small ) {
-    .alignleft, .alignright {
-      float: none;
-      max-width: 100%;
-      margin: 0 auto;
-      margin-bottom: $baseline;
-      padding: 0;
-    }
-  }
-
-.breakout {
-  max-width: 60rem;
   margin: 0 auto;
 
-  @media ( min-width: $breakpoint-small ) {
-    padding-top: $baseline;
-    margin-bottom: $baseline*2;
+  @media (max-width: $breakpoint-small) {
+    max-width: 34rem;
 
-    img {
-      margin-bottom: 0;
+    padding: {
+      left: $baseline/2;
+      right: $baseline/2;
     }
+  }
+}
 
-    figcaption {
-      position: absolute;
-      z-index: 2;
+.island,
+%island {
+  padding: $baseline;
+}
+
+  .island--v,
+  %island--v {
+    padding: {
+      top: $baseline;
       bottom: $baseline;
-      left: 0;
-      right: 0;
-      color: #fff;
-      text-shadow: 0 1px 1px rgba(0,0,0,.2);
-    }
-
-    &:after {
-      content: '';
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      top: 75%;
-      background-image: linear-gradient(transparent, rgba(0,0,0,.75));
     }
   }
 
-  img {
-    max-width: 100%;
+  .island--h,
+  %island--h {
+    padding: {
+      left: $baseline;
+      right: $baseline;
+    }
+  }
+
+.isle,
+%isle {
+  padding: $baseline/2;
+}
+
+  .isle--v,
+  %isle--v {
+    padding: {
+      top: $baseline/2;
+      bottom: $baseline/2;
+    }
+  }
+
+  .isle--h,
+  %isle--h {
+    padding: {
+      left: $baseline/2;
+      right: $baseline/2;
+    }
+  }
+
+.spit,
+%spit {
+  padding: $baseline/4;
+}
+
+  .spit--v,
+  %spit--v {
+    padding: {
+      top: $baseline/4;
+      bottom: $baseline/4;
+    }
+  }
+
+  .spit--h,
+  %spit--h {
+    padding: {
+      left: $baseline/4;
+      right: $baseline/4;
+    }
+  }
+
+.span-all,
+%span-all {
+  width: 100%;
+}
+
+/*-----------------------------------*\
+
+  Grid classes
+
+  Usage:
+  <div class="grid">
+    <div class="grid__col--1-of-2">
+      Blah
+    </div>
+
+    <div class="grid__col--1-of-2">
+      Blop
+    </div>
+  </div>
+
+\*-----------------------------------*/
+
+// Gutter size
+$gutter: 2.5rem;
+
+.grid {
+  width: 104.5%;
+  // Spaces are required around the interpolated variable for Grunt tasks to run properly
+  width: calc( 100% + #{$gutter} );
+  margin-left: -$gutter;
+
+  .grid__col--1-of-2, .grid__col--2-of-4 {
+    width: 50%;
+  }
+
+  .grid__col--span-all, & > .span-all,
+  .grid__col--2-of-2, .grid__col--3-of-3, .grid__col--4-of-4, .grid__col--5-of-5 {
+    @extend %span-all;
+    width: 95.5%;
+    width: calc( 100% - #{$gutter} );
+    padding-left: 0 !important;
+    margin-left: $gutter;
+  }
+
+  // 3-column grid
+  .grid__col--1-of-3 {
+    width: percentage(1/3);
+  }
+
+  .grid__col--2-of-3 {
+    width: percentage(2/3);
+  }
+
+  // 4-column grid
+  .grid__col--1-of-4 {
+    width: 25%;
+  }
+
+  .grid__col--3-of-4 {
+    width: 75%;
+  }
+
+  // 5-column grid
+  .grid__col--1-of-5 {
+    width: 20%;
+  }
+
+  .grid__col--2-of-5 {
+    width: 40%;
+  }
+
+  .grid__col--3-of-5 {
+    width: 60%;
+  }
+
+  .grid__col--4-of-5 {
+    width: 80%;
+  }
+
+  > *, > [class*="grid__col--"] {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: -.24em;
+    padding-left: $gutter;
+    min-height: 1px;
+  }
+
+  .grid__col--d-first {
+    float: left;
+  }
+
+  .grid__col--d-last {
+    float: right;
+  }
+
+  &.grid--no-gutter {
+    margin-left: 0;
     width: 100%;
-    margin: {
-      left: 0;
-      right: 0;
+
+    > * {
+      padding-left: 0;
+    }
+
+    .grid__col--span-all, & > .span-all {
+      margin-left: 0;
+      width: 100%;
     }
   }
 
-  figcaption {
-    @extend .wrap;
+  @media screen and (max-width: $breakpoint-small) {
+    margin-left: 0;
+    width: auto;
+
+    > *, > [class*="grid__col--"] {
+      display: block;
+      width: auto;
+      margin-left: 0;
+      margin-right: 0;
+      padding-left: 0;
+    }
+
+    .span-all, .grid__col--span-all {
+      width: auto;
+      margin-left: 0;
+    }
   }
-}
 
-.f--l {
-  float: left;
-}
+  // Group: Grid Helpers
 
-.f--r {
-  float: right;
+  // Centered columns
+  .grid__col--centered {
+    display: block;
+    margin: 0 auto;
+  }
+
+  // Align column to the bottom. Useful for aligned promo images.
+  .grid__col--align-bottom {
+    vertical-align: bottom;
+  }
+
 }

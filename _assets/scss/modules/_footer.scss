@@ -1,0 +1,20 @@
+/*-----------------------------------*\
+
+  Module: Footer
+
+\*-----------------------------------*/
+
+.site__footer {
+  color: $light-gray;
+}
+
+.footer__avatar {
+  width: $baseline*1.5;
+  height: $baseline*1.5;
+  position: absolute;
+  top: $baseline/8;
+  left: 0;
+  margin-left: -$baseline;
+
+  border-radius: 100%;
+}

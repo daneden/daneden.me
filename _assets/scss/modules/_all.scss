@@ -1,3 +1,13 @@
-@import 'compass';
-@import 'colors';
-@import 'layout';
+/*-----------------------------------*\
+
+  Module: All
+
+  Includes all Modules
+
+\*-----------------------------------*/
+
+@import "code";
+@import "header";
+@import "content";
+@import "docs";
+@import "footer";

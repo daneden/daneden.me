@@ -1,0 +1,121 @@
+/*-----------------------------------*\
+
+  Partial: Helpers
+
+  Helper classes. Layout helpers,
+  clearfix, element hiding
+
+\*-----------------------------------*/
+
+// Clearfix
+.cf:before,
+.cf:after {
+    content: "";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+// Set up some vertical rhythm and block-level element helpers
+p, .o--p, [class*="o--p--"], blockquote, table, form, ul, ol, .img, pre,
+.mega, .ultra {
+  display: block;
+  margin-bottom: $baseline;
+}
+
+// Double margin
+.o--p--dm {
+  margin-bottom: $baseline*2;
+}
+
+// Half margin
+.o--p--hm {
+  margin-bottom: $baseline/2;
+}
+
+// Negative margin
+.o--p--nm {
+  margin-bottom: -$baseline;
+}
+
+// Block helper
+.o--b {
+  display: block;
+}
+
+// Inline-block helper
+.o--i {
+  display: inline-block;
+}
+
+// Paragraph font size helpers
+.o--p--xxl {
+  font-size: 1.5rem;
+  line-height: 1.142857143;
+}
+
+.o--p--xl {
+  font-size: 1.230769231rem;
+  line-height: 1.375;
+}
+
+.o--p--l {
+  font-size: 1.142857143rem;
+  line-height: 1.5;
+}
+
+.o--p--s {
+  font-size: .823529412rem;
+  line-height: 1.5;
+}
+
+.o--p--xs {
+  font-size: .75rem;
+  line-height: 1.142857143;
+}
+
+// Floats
+.f--l, .f--r {
+  z-index: 1;
+}
+
+.f--l {
+  float: left;
+}
+
+.f--r {
+  float: right;
+}
+
+.standalone {
+  margin-bottom: 0;
+}
+
+// Visually hidden elements
+.hidden-v {
+  visibility: none;
+  position: absolute;
+  left: -99999px;
+  height: 1px;
+}
+
+// Visually hidden on narrow viewports
+.hidden-v--m {
+  @media (max-width: $breakpoint-small) {
+    visibility: hidden;
+    position: absolute !important;
+    left: -99999px !important;
+    height: 1px !important;
+  }
+}
+
+// Remove from flow on narrow viewports. display: none; is icky, but a nice fallback for non-JS solutions
+.hidden-r--m {
+  @extend .hidden-v--m;
+
+  @media screen and (max-width: $breakpoint-small) {
+    display: none;
+  }
+}

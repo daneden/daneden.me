@@ -1,34 +1,23 @@
 /*-----------------------------------*\
-  $RESET
+
+  Partial: Reset
+
+  Blanket reset. For something less
+  volatile, I’d recommend Eric
+  Meyer’s reset.
+
 \*-----------------------------------*/
 
-* {
+// Sloppy reset. Applied to everything.
+*, :before, :after {
   margin: 0;
   padding: 0;
+  // Layout for dummies
   box-sizing: border-box;
   position: relative;
 }
 
-input, button, select, textarea {
-  font: inherit;
-}
-
-img, svg {
-  display: block;
+// Blanket ban on oversized images.
+img {
   max-width: 100%;
-  height: auto;
-}
-
-/*-----------------------------------*\
-  $CLEARFIX
-\*-----------------------------------*/
-
-.cf:before,
-.cf:after {
-  content: " ";
-  display: table;
-}
-
-.cf:after {
-  clear: both;
 }

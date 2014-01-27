@@ -1,160 +1,149 @@
 /*-----------------------------------*\
-  $TYPE
+
+  Partial: Typography
+
+  Low-level type things. Headings,
+  links, blockquotes, etc.
+
 \*-----------------------------------*/
 
-a {
-  color: inherit;
-  text-decoration: underline;
-  &:hover, &:focus {
-    color: $link;
-  }
-
-  .site-header &, .posts-by-year & {
-    text-decoration: none;
-  }
-
-  .posts-by-year & {
-    color: $link;
-    &:hover, &:focus {
-      text-decoration: underline;
-    }
-  }
-}
-
-hr {
-  border: none;
-  margin-top: $baseline;
-  margin-bottom: $baseline;
-  background-image: inline-image("tristar.min.svg");
-  background-repeat: no-repeat;
-  background-size: auto $baseline;
-  background-position: center;
-  height: $baseline;
-}
-
 h1, .alpha {
-  font-family: $Display;
-  font-size: $baseline*($baseline/1rem);
+  padding-top: $baseline*.5;
+  margin-bottom: $baseline*1.5;
+
+  font-family: $font-Display;
+  font-size: $baseline*1.4;
   font-weight: 400;
-  line-height: 1.12;
-  //letter-spacing: -.04em;
+  line-height: 1.25;
 
-  .caps {
-    font-family: $Display;
-  }
+  color: $dark-gray;
 
-  @media (max-width: 720px) {
-    font-size: $baseline*1.6;
-    line-height: 1.043478261;
+  @media (max-width: $breakpoint-small) {
+    font-size: $baseline*1.2;
   }
 }
 
 h2, .beta {
-  clear: both;
-  font-size: $baseline;
+  padding-top: $baseline/2;
+  margin-bottom: $baseline/2;
+
+  font-size: 1.384615385rem;
   font-weight: 400;
-  margin-bottom: $baseline;
-  line-height: 1;
-  font-style: normal;
-  letter-spacing: 0;
-  font-family: $Serif;
-  letter-spacing: -.03em;
-
-  &.p {
-    margin-bottom: $baseline/2;
-  }
+  line-height: 1.2223;
 }
-
-  .entry-content {
-    * + h2 {
-      margin-top: $baseline*3;
-    }
-
-    hr + h2 {
-      margin-top: 0;
-    }
-  }
 
 h3, .gamma {
-  font-size: 1rem;
-  line-height: 1.55;
-  font-weight: 400;
+  padding-top: $baseline/2;
   margin-bottom: $baseline/2;
-  font-style: normal;
-  letter-spacing: .1em;
-  font-family: $Serif-SC;
-  text-transform: uppercase;
+
+  @extend %caps;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: $baseline-unitless;
 }
 
-  .entry-content {
-    * + h3 {
-      margin-top: $baseline*2;
-    }
-
-    h2 + h3 {
-      margin-top: 0;
-    }
-  }
-
-h1 a, h2 a, h3 a,
-a h1, a h2, a h3 {
-  text-decoration: none;
+h4, .delta {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: $baseline-unitless;
 }
 
-.entry-content p {
-  hyphens: auto;
+.mega {
+  font-weight: 200;
+  font-size: 2.153846154rem;
+  line-height: 1.178571429;
 }
 
-small {
-  font-size: $baseline/2;
-  line-height: 1.666;
-  color: rgba(0,0,0,.7);
-}
-
-del {
-  opacity: .65;
-  text-decoration: line-through;
-}
-
-.callout, .promo {
+.promo {
   text-align: center;
 }
 
-.caps {
-  text-transform: uppercase;
-  font-family: $Serif-SC;
-  letter-spacing: .02em;
+.subhead, .meta {
+  color: $light-gray;
 }
 
-figcaption {
-  font-family: $Sans;
-  font-size: $baseline/2;
-  color: darken($gray, 25%);
-  .caps {
-    font-family: $Sans-SC;
+a, [data-href] {
+  text-decoration: underline;
+
+  color: inherit;
+  transition: .2s;
+
+  cursor: pointer;
+
+  &:hover {
+    color: $blue;
+  }
+}
+
+.a--plain {
+  text-decoration: none;
+}
+
+.caps, %caps {
+  font-family: $font-Serif-SC;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+
+strong, .strong {
+  font-weight: 700;
+}
+
+em, .em {
+  font-style: italic;
+}
+
+hr {
+  border: none;
+  @include bg-image("tristar", auto $baseline);
+  height: $baseline;
+  margin-bottom: $baseline;
+}
+
+.hr--line {
+  margin-top: -1px;
+  height: 1px;
+
+  background-image: none;
+  background-color: $lighter-gray;
+}
+
+// Remove this for hanging bullets
+ul, ol {
+  padding-left: 1.35em;
+}
+
+  // Restore some normality to our nested lists
+  li > ul, li > ol {
+    margin-bottom: 0;
+  }
+
+dl {
+  dt {
+    font-weight: 700;
+  }
+
+  dd {
+    padding-left: 1.3rem;
   }
 }
 
 blockquote {
-  font-family: $Sans;
+  font-family: $font-Sans;
   padding-left: $baseline;
-  border-left: 2px solid $link;
+  border-left: 2px solid $blue;
   margin-left: -$baseline;
-  color: darken($gray, 35%);
+  color: $gray;
 
   @media (max-width: $breakpoint-small) {
     margin-left: 0;
   }
 
   .caps {
-    font-family: $Sans-SC;
+    font-family: $font-Sans-SC;
   }
 
   em {
     font-style: normal;
   }
-}
-
-.standalone {
-  margin-bottom: 0;
 }

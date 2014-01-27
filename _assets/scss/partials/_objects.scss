@@ -1,44 +1,48 @@
 /*-----------------------------------*\
-  $OBJECTS
+
+  Partial: Objects
+
+  Abstracted things and common
+  patterns go here. Not to be
+  confused with helpers.
+
 \*-----------------------------------*/
 
-.island {
-  padding: .75rem;
+.nav, .nav ul {
+  padding-left: 0;
+  z-index: 1;
+
+  list-style: none;
+
+  .nav--sub {
+    padding-left: 1.5em;
+    margin-bottom: 0;
+  }
+
+  .active {
+    font-weight: 700;
+
+    color: $dark-gray;
+  }
 }
 
-.nav {
-  list-style: none;
+.nav--inline {
   margin-bottom: 0;
 
-  li, a {
+  & li, & li > a {
     display: inline-block;
   }
 
   li {
-    margin-right: -.25em;
+    margin-left: 1em;
   }
 }
 
-.avatar {
-  border-radius: 100%;
-}
-
-figure img {
-  margin-bottom: .75rem;
-}
-
-p:empty {
-  display: none;
-}
-
-.o--b {
+.img {
   display: block;
-}
 
-.b, .p {
-  margin-bottom: $baseline;
-}
-
-.promo {
-  text-align: center;
+  &.img--centered {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

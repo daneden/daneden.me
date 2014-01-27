@@ -1,0 +1,43 @@
+/*-----------------------------------*\
+
+  Partial: Variables
+
+  Includes global variables for
+  colors and unit sizes
+
+\*-----------------------------------*/
+
+// Group: Unit Sizes
+$base-font-size: (17/16)*100%;
+$baseline-unitless: 28 / (16*($base-font-size/100%));
+$baseline: $baseline-unitless * 1rem;
+
+
+// Group: Fonts
+$font-Serif: "Mercury SSm A", "Mercury SSm B", Georgia, serif;
+$font-Serif-SC: "Mercury SSm SC A", "Mercury SSm SC B", $font-Serif;
+
+$font-Sans: "Whitney SSm A", "Whitney SSm B", Geneva, Verdana, san-serif;
+$font-Sans-SC: "Whitney SSm SC A", "Whitney SSm SC B", $font-Sans;
+
+$font-Display: "Chronicle Display A", "Chronicle Display B", $font-Serif;
+$font-Code: "Source Code Pro", Monaco, monospace;
+
+
+// Group: Colors
+$white: #fff; // Duh.
+
+$blue: #4fb5c6;
+$light-gray: #7B8994;
+$lighter-gray: #BDC4CA;
+$gray: #47525D;
+$dark-gray: #3D464D;
+
+$subtle-gray: #d8dce0;
+
+$green: #46933D;
+$red: #C32F39;
+
+// Group: Breakpoints
+$breakpoint-small: 47.5rem;
+$breakpoint-regular: 75rem;

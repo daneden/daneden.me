@@ -1,241 +1,85 @@
-@import "partials/reset";
-@import "partials/base";
-@import "partials/shared";
-@import "partials/typography";
-@import "partials/code";
-@import "partials/objects";
-@import "partials/layout";
-
 /*-----------------------------------*\
-  $MAIN
+
+  Root: style.scss
+
+  Imports all required SCSS files.
+
 \*-----------------------------------*/
 
-html {
-  font: 106.25%/1.55 $Serif; /* 17px/26px */
-  color: darken($gray, 55%);
-  background-color: lighten($gray, 15%);
-  -webkit-font-smoothing: antialiased;
-  -webkit-text-size-adjust: none;
-  text-rendering: optimizeLegibility;
+// Import required/base CSS first
+@import "partials/variables";
+@import "modules/base";
 
-  body {
-    background-color: lighten($gray, 22.5%);
-  }
+// Partials are OOCSS components not necessarily related to the site at a stylisting level.
+@import "partials/all";
 
-}
+// Modules are site- and style-specific rules.
+@import "modules/all";
 
-@media screen and (max-width: 720px) {
-  html {
-    font-size: 87.5%; /* 15px */
-  }
-}
+// Full CSS reference in reference.md
 
-@media screen and (min-width: 1400px) {
-  html {
-    font-size: 125%; /* 20px */
-  }
-}
+/*===================================*\
 
-.site-content {
-  padding-bottom: 3rem;
-}
+  Sass Authoring Rules
+  --------------------
 
-/*-----------------------------------*\
-  $HEADER
-\*-----------------------------------*/
+  Some basic guidelines (that may be broken) for authoring manageable, readable Sass styles:
 
-.site-header {
-  padding: $baseline/2 0;
-  margin-bottom: $baseline;
-  color: darken($gray, 55%);
-}
+  .block {
+    // 1. Layout Properties
+    // display, width, padding, margin, vertical-align, box-sizing, etc.
+    // Note: Bracketed expression values — such as calc() or linear-gradient() — must have spaces [e.g. calc( 100% + 2rem )] for Grunt tasks to run properly
 
-  .site-title {
-    @extend .caps;
-    color: inherit;
-    padding: $baseline/2 0;
-  }
+    // 2. Typography Properties
+    // font[-size, -weight, etc], line-height, text-align, letter-spacing, white-space, etc.
 
-  .entry-meta {
-    color: darken($gray, 20%);
-  }
+    // 3. Appearance Properties
+    // color, box-shadow, background, border, text-shadow, opacity, etc.
 
-    .site-nav {
-      padding-top: $baseline/2;
-      margin-bottom: 0;
-      padding-left: 0;
-      padding-bottom: .25rem;
-      border-bottom: .125rem solid lighten($gray, 15%);
-      @extend .caps;
+    // 4. UI Properties
+    // appearance, cursor, pointer-events, etc.
 
-      li + li {
-        margin-left: $baseline/1.25;
+    // Child elements are not always (and shouldn't be) nested in the parent block
+    .block__child {
+
+      // Modifiers are almost always nested in their parent element
+      &.block__child--modifier {
+
       }
 
-      a {
-        color: inherit;
-      }
-    }
-
-      .site-nav a:hover {
-        color: $link;
+      &:after {
+        // `content` counts as a layout property
       }
 
-      .site-nav .active {
-        color: $link;
-        border-bottom: 2px solid $link;
-        padding-bottom: .25rem;
-        margin-bottom: -.375rem;
-      }
-
-/*-----------------------------------*\
-  $HOME
-\*-----------------------------------*/
-
-.home__illustration {
-  max-width: 100%;
-  padding-bottom: 63.63%;
-  height: 0;
-}
-
-/*-----------------------------------*\
-  $BANNER
-\*-----------------------------------*/
-
-.featured-image {
-  text-align: center;
-}
-
-  .featured-image img {
-    margin: auto;
-    width: auto;
-
-  }
-
-/*-----------------------------------*\
-  $ALL-POSTS
-\*-----------------------------------*/
-
-.posts-by-year {
-  list-style: none;
-  padding-left: 0;
-
-  a {
-    font-weight: 700;
-  }
-
-  li {
-    padding: $baseline/2 0;
-    overflow: hidden;
-
-    + li {
-      border-top: 1px solid rgba(0,0,0,.1);
-    }
-
-    .entry-meta {
-      float: right;
-      margin-left: $baseline/2;
     }
   }
 
-}
+  Full Example:
 
-/*-----------------------------------*\
-  $ARTICLE
-\*-----------------------------------*/
-
-.entry-header {
-  padding: {
-    top: $baseline;
-    bottom: $baseline*2;
-  }
-}
-
-.entry-title {
-  margin-bottom: $baseline/2;
-}
-
-.entry-content {
-
-  &:last-of-type:after {
-    content: "";
-
-    display: block;
-    margin: 0 auto;
+  .block {
     width: 100%;
-    height: 56px;
-    padding: $baseline 0;
 
-    background-image: inline-image("fleuron.min.svg");
-    background-repeat: no-repeat;
-    background-position: center center;
-  }
+    font-size: 1rem;
+    font-weight: 400;
 
-  > .intro {
-    @extend .caps;
+    color: $blue;
 
-    &:first-letter {
-      font-family: $Serif;
-    }
-  }
-}
-
-/*-----------------------------------*\
-  $FOOTER
-\*-----------------------------------*/
-
-.site-footer {
-  padding: $baseline 0;
-  background-color: lighten($gray, 15%);
-  color: darken($gray, 30%);
-  font-size: $baseline/2;
-
-  .wrap {
-
-    section {
+    .block__child {
       display: inline-block;
-      margin-right: -.25em;
-      vertical-align: top;
-      width: 47.5%;
-      margin-left: 5%;
 
-      &:nth-child(2n+1) {
-        margin-left: 0;
+      &.block__child--modifier {
+        color: $gray;
       }
 
-      @media (max-width: $breakpoint-small) {
-        display: block;
-        width: auto;
-        margin-left: 0;
+      &:after {
+        content: '';
+        padding: 1.5rem;
+
+        cursor: pointer;
       }
     }
-
-    @media (max-width: $breakpoint-small) {
-      display: block;
-    }
-
   }
 
-  p {
-    margin-bottom: 1.5em;
-  }
-}
+  If you want to pick a fight over/learn more about these rules, let me know – dte@
 
-  .author-info .avatar {
-    position: absolute;
-    top: -.25rem;
-    left: -3rem;
-    width: 2rem;
-    height: 2rem;
-  }
-
-  @media screen and (max-width: 840px) {
-    .author-info .avatar {
-      display: none;
-    }
-  }
-
-  .recent-posts {
-    padding-left: 0;
-    list-style: none;
-  }
+\*===================================*/
