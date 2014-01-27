@@ -67,12 +67,12 @@ p, .o--p, [class*="o--p--"], blockquote, table, form, ul, ol, .img, pre,
 }
 
 .o--p--s {
-  font-size: .875rem;
-  line-height: 2;
+  font-size: .823529412rem;
+  line-height: 1.5;
 }
 
 .o--p--xs {
-  font-size: .857142857rem;
+  font-size: .75rem;
   line-height: 1.142857143;
 }
 
@@ -103,11 +103,11 @@ p, .o--p, [class*="o--p--"], blockquote, table, form, ul, ol, .img, pre,
 
 // Visually hidden on narrow viewports
 .hidden-v--m {
-  @media screen and (max-width: $breakpoint-small) {
-    visibility: none;
-    position: absolute;
-    left: -99999px;
-    height: 1px;
+  @media (max-width: $breakpoint-small) {
+    visibility: hidden;
+    position: absolute !important;
+    left: -99999px !important;
+    height: 1px !important;
   }
 }
 

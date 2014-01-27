@@ -13,6 +13,15 @@
     right: $baseline;
   }
   margin: 0 auto;
+
+  @media (max-width: $breakpoint-small) {
+    max-width: 34rem;
+
+    padding: {
+      left: $baseline/2;
+      right: $baseline/2;
+    }
+  }
 }
 
 .island,

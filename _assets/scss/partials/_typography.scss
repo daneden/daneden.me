@@ -8,20 +8,24 @@
 \*-----------------------------------*/
 
 h1, .alpha {
-  margin-top: $baseline*.25;
+  padding-top: $baseline*.5;
   margin-bottom: $baseline*1.5;
 
   font-family: $font-Display;
-  font-size: $baseline*1.5;
+  font-size: $baseline*1.4;
   font-weight: 400;
-  line-height: 1.333333333;
+  line-height: 1.25;
 
   color: $dark-gray;
+
+  @media (max-width: $breakpoint-small) {
+    font-size: $baseline*1.2;
+  }
 }
 
 h2, .beta {
+  padding-top: $baseline/2;
   margin-bottom: $baseline/2;
-  margin-top: $baseline/2;
 
   font-size: 1.384615385rem;
   font-weight: 400;
@@ -29,6 +33,7 @@ h2, .beta {
 }
 
 h3, .gamma {
+  padding-top: $baseline/2;
   margin-bottom: $baseline/2;
 
   @extend %caps;
@@ -61,12 +66,17 @@ a, [data-href] {
   text-decoration: underline;
 
   color: inherit;
+  transition: .2s;
 
   cursor: pointer;
 
   &:hover {
     color: $blue;
   }
+}
+
+.a--plain {
+  text-decoration: none;
 }
 
 .caps, %caps {
@@ -88,6 +98,14 @@ hr {
   @include bg-image("tristar", auto $baseline);
   height: $baseline;
   margin-bottom: $baseline;
+}
+
+.hr--line {
+  margin-top: -1px;
+  height: 1px;
+
+  background-image: none;
+  background-color: $lighter-gray;
 }
 
 // Remove this for hanging bullets

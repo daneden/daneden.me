@@ -4,10 +4,15 @@ title: Blog
 in-nav: true
 ---
 <div class="entry-content wrap">
-  <ul class="all-posts posts-by-year">
+  <ul class="nav promo">
   {% for post in site.posts %}
   	{% if post.hidden != true %}
-    <li><span class="entry-meta">{{ post.date | pretty }}</span> <a href="{{ post.url }}">{{ post.title }}</a></li>
+    <li class="o--p">
+      <a class="a--plain" href="{{ post.url }}">
+        <span class="o--b">{{ post.title }}</span>
+        <span class="caps meta o--b">{{ post.date | pretty }}</span>
+      </a>
+    </li>
     {% endif %}
   {% endfor %}
   </ul>

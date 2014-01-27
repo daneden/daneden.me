@@ -13,12 +13,12 @@
 \*-----------------------------------*/
 
 .site__content {
-  padding-bottom: $baseline*3;
+  padding-top: $baseline;
+  padding-bottom: $baseline*2;
 }
 
 .entry__header {
   padding: {
-    top: $baseline/2;
     bottom: $baseline/2;
   }
 }

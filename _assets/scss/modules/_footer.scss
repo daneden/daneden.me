@@ -5,11 +5,16 @@
 \*-----------------------------------*/
 
 .site__footer {
-  padding-top: $baseline*2;
-  color: $gray;
-  border-top: 1px solid $subtle-gray;
+  color: $light-gray;
+}
 
-  nav a {
-    color: $light-gray;
-  }
+.footer__avatar {
+  width: $baseline*1.5;
+  height: $baseline*1.5;
+  position: absolute;
+  top: $baseline/8;
+  left: 0;
+  margin-left: -$baseline;
+
+  border-radius: 100%;
 }

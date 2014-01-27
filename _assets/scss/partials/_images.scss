@@ -4,13 +4,6 @@
 
 \*-----------------------------------*/
 
-figure {
-
-  img {
-    margin-bottom: $baseline/2;
-  }
-}
-
 figcaption {
   @extend .meta;
 
@@ -23,12 +16,17 @@ figcaption {
   }
 }
 
-figure img {
-  @media ( max-width: $breakpoint-small ) {
-    max-width: calc( 100% + 2.201rem );
-    width: calc( 100% + 2.201rem );
-    margin-left: -1.107142857rem;
-    margin-right: -1.107142857rem;
+figure {
+  img {
+    display: block;
+    margin-bottom: $baseline/2;
+
+    @media ( max-width: $breakpoint-small ) {
+      max-width: calc( 100% + #{$baseline} );
+      width: calc( 100% + #{$baseline} );
+      margin-left: -$baseline/2;
+      margin-right: -$baseline/2;
+    }
   }
 }
 
@@ -40,7 +38,7 @@ figure img {
 .alignleft, .alignright {
   clear: both;
   margin-bottom: $baseline/2;
-  max-width: 38.2%;
+  max-width: 35%;
 
   img {
     max-width: 100%;
@@ -49,51 +47,50 @@ figure img {
     margin-bottom: $baseline/2;
 
     @media ( max-width: $breakpoint-small ) {
-      max-width: calc( 100% + 2.201rem );
-      width: calc( 100% + 2.201rem );
-      margin-left: -1.107142857rem;
-      margin-right: -1.107142857rem;
+      max-width: calc( 100% + #{$baseline} );
+      width: calc( 100% + #{$baseline} );
+      margin-left: -$baseline/2;
+      margin-right: -$baseline/2;
     }
   }
 }
 
+.alignleft {
+  float: left;
+  margin-left: -35%;
+  padding-right: $baseline;
+}
+
+.alignright {
+  float: right;
+  margin-right: -35%;
+  padding-left: $baseline;
+}
+
+@media ( max-width: $breakpoint-regular ) {
   .alignleft {
-    float: left;
-    margin-left: -38.2%;
-    padding-right: $baseline*1.5;
+    margin-left: -13.5%;
   }
 
   .alignright {
-    float: right;
-    margin-right: -38.2%;
-    padding-left: $baseline*1.5;
+    margin-right: -13.5%;
   }
+}
 
-  @media screen and ( max-width: $breakpoint-regular ) {
-    .alignleft {
-      margin-left: -15%;
-    }
-
-    .alignright {
-      margin-right: -15%;
-    }
+@media ( max-width: $breakpoint-small ) {
+  .alignleft, .alignright {
+    float: none;
+    max-width: 100%;
+    margin: 0 auto;
+    margin-bottom: $baseline;
+    padding: 0;
   }
-
-  @media screen and ( max-width: $breakpoint-small ) {
-    .alignleft, .alignright {
-      float: none;
-      max-width: 100%;
-      margin: 0 auto;
-      margin-bottom: $baseline;
-      padding: 0;
-    }
-  }
+}
 
 .breakout {
-  max-width: 60rem;
-  margin: 0 auto;
-
   @media ( min-width: $breakpoint-small ) {
+    max-width: 60rem;
+    margin: 0 auto;
     padding-top: $baseline;
     margin-bottom: $baseline*2;
 

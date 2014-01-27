@@ -23,4 +23,12 @@ html {
 
   color: $gray;
   background-color: #fff;
+
+  @media (max-width: $breakpoint-small) {
+    font-size: 87.5%;
+  }
+}
+
+body {
+  overflow-x: hidden;
 }
