@@ -40,6 +40,8 @@
 html {
   font: 106.25%/1.64706 "Mercury SSm A", "Mercury SSm B", Georgia, serif;
   -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+  text-rendering: optimizeLegibility;
   color: #47525d;
   background-color: #fff;
 }
