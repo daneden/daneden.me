@@ -2,26 +2,16 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>{{ page.title }} &#10087; {{ site.name }}</title>
+  <title>{{ page.title }} | {{ site.name }}</title>
   <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimal-ui" />
-  <meta property="twitter:account_id" content="1510092041" />
 
-  <!-- Grab our super-cacheable, super-compressed site CSS -->
   {% bundle_glob %}
   - /_assets/css/style.min.css
   {% endbundle_glob %}
 
-  <!-- Prefetch DNS -->
-  <link rel="dns-prefetch" href="//ajax.cloudflare.com" />
-  <link rel="dns-prefetch" href="//cloud.typography.com" />
-  <link rel="dns-prefetch" href="//ajax.googleapis.com" />
-  <link rel="dns-prefetch" href="//www.google-analytics.com" />
-
   <!-- Touch icon -->
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-
-  <!-- Grab our H&FJ font CSS. Since we wanted to DNS-prefetch the URL, this happens last in the <head> -->
-  <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7158232/776222/css/fonts.css?12" />
+  <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7158232/776222/css/fonts.css" />
 </head>
 <body{% if page.class %} class="{{ page.class }}"{% endif %}>
   <header class="site__header" role="banner">
