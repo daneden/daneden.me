@@ -131,6 +131,21 @@ pre,
   margin-bottom: 1.64706rem;
 }
 
+p:empty,
+.o--p:empty,
+[class*="o--p--"]:empty,
+blockquote:empty,
+table:empty,
+form:empty,
+ul:empty,
+ol:empty,
+.img:empty,
+pre:empty,
+.mega:empty,
+.ultra:empty {
+  display: none;
+}
+
 .o--p--dm {
   margin-bottom: 46px;
   margin-bottom: 3.29412rem;
@@ -532,8 +547,8 @@ h1,
 .alpha {
   padding-top: 12px;
   padding-top: 0.82353rem;
-  margin-bottom: 35px;
-  margin-bottom: 2.47059rem;
+  margin-bottom: 58px;
+  margin-bottom: 4.11765rem;
   font-family: "Chronicle Display A", "Chronicle Display B", "Mercury SSm A", "Mercury SSm B", Georgia, serif;
   font-size: 32px;
   font-size: 2.30588rem;
@@ -548,6 +563,12 @@ h1,
     font-size: 28px;
     font-size: 1.97647rem;
   }
+}
+
+h1 .caps,
+.alpha .caps {
+  font-family: "Chronicle Display A", "Chronicle Display B", "Mercury SSm A", "Mercury SSm B", Georgia, serif;
+  letter-spacing: 0;
 }
 
 h2,
@@ -637,7 +658,7 @@ em,
 
 hr {
   border: none;
-  background-image: url('/static/images/tristar.png?1391093964');
+  background-image: url('/static/images/tristar.png?1391122148');
   background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMTkuNDk5IiBoZWlnaHQ9IjU2IiB2aWV3Qm94PSItNTMuNzUgMCAyMTkuNDk5IDU2IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IC01My43NSAwIDIxOS40OTkgNTYiPjxnIGZpbGw9IiNDNEM5Q0IiPjxwYXRoIGQ9Ik0tNy43MTEgMzAuNTExbDMuODY1IDkuNzgzLTIuNTQ5IDEuNjQxLTcuOTcyLTYuNTc0LTguMDU3IDYuNTc0LTIuNDY1LTEuNjQxIDMuODYzLTkuNzgzLTguNzk1LTUuNjcxLjkwNC0yLjg3OCAxMC41MjIuNTc1IDIuMzg0LTEwLjAyN2gzLjIwNGwyLjQ2NiAxMC4wMjcgMTAuNTIxLS41NzUuOTAzIDIuODc4LTguNzk0IDUuNjcxek02Mi42NTkgMzAuNTExbDMuODYyIDkuNzgzLTIuNTQ3IDEuNjQxLTcuOTc0LTYuNTczLTguMDU1IDYuNTc0LTIuNDY2LTEuNjQxIDMuODY1LTkuNzgzLTguNzk1LTUuNjcxLjkwMy0yLjg3OCAxMC41MjEuNTc1IDIuMzg0LTEwLjAyN2gzLjIwN2wyLjQ2NCAxMC4wMjcgMTAuNTIxLS41NzUuOTA1IDIuODc4LTguNzk1IDUuNjd6TTEzMy4wMjYgMzAuNTExbDMuODYyIDkuNzgzLTIuNTQ3IDEuNjQxLTcuOTc0LTYuNTc0LTguMDU1IDYuNTc0LTIuNDY2LTEuNjQxIDMuODY1LTkuNzgzLTguNzk1LTUuNjcxLjkwMy0yLjg3OCAxMC41MjEuNTc1IDIuMzg0LTEwLjAyN2gzLjIwN2wyLjQ2NCAxMC4wMjcgMTAuNTIxLS41NzUuOTA1IDIuODc4LTguNzk1IDUuNjcxeiIvPjwvZz48L3N2Zz4='), none;
   background-size: auto 23px;
   background-size: auto 1.64706rem;
@@ -1396,13 +1417,13 @@ pre {
 }
 
 .footer__avatar {
-  width: 35px;
-  width: 2.47059rem;
-  height: 35px;
-  height: 2.47059rem;
+  width: 28px;
+  width: 1.97647rem;
+  height: 28px;
+  height: 1.97647rem;
   position: absolute;
-  top: 3px;
-  top: 0.20588rem;
+  top: 9px;
+  top: 0.65882rem;
   left: 0;
   margin-left: -23px;
   margin-left: -1.64706rem;

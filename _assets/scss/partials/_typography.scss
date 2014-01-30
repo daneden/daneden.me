@@ -9,7 +9,7 @@
 
 h1, .alpha {
   padding-top: $baseline*.5;
-  margin-bottom: $baseline*1.5;
+  margin-bottom: $baseline*2.5;
 
   font-family: $font-Display;
   font-size: $baseline*1.4;
@@ -20,6 +20,11 @@ h1, .alpha {
 
   @media (max-width: $breakpoint-small) {
     font-size: $baseline*1.2;
+  }
+
+  .caps {
+    font-family: $font-Display;
+    letter-spacing: 0;
   }
 }
 

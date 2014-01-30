@@ -23,6 +23,10 @@ p, .o--p, [class*="o--p--"], blockquote, table, form, ul, ol, .img, pre,
 .mega, .ultra {
   display: block;
   margin-bottom: $baseline;
+
+  &:empty {
+    display: none;
+  }
 }
 
 // Double margin
