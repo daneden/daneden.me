@@ -19,7 +19,7 @@
 }
 
 // Set up some vertical rhythm and block-level element helpers
-p, .o--p, [class*="o--p--"], blockquote, table, form, ul, ol, .img, pre,
+p, .o--p, [class*="o--p--"], figure, blockquote, table, form, ul, ol, .img, pre,
 .mega, .ultra {
   display: block;
   margin-bottom: $baseline;
