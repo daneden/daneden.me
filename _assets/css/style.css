@@ -42,6 +42,12 @@ html {
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: none;
   text-rendering: optimizeLegibility;
+  -webkit-font-feature-settings: "kern" 1;
+  -moz-font-feature-settings: "kern" 1;
+  font-feature-settings: "kern" 1;
+  -webkit-font-kerning: normal;
+  -moz-font-kerning: normal;
+  font-kerning: normal;
   color: #47525d;
   background-color: #fff;
 }
@@ -645,7 +651,7 @@ h3,
 .gamma {
   font-family: "Mercury SSm SC A", "Mercury SSm SC B", "Mercury SSm A", "Mercury SSm B", Georgia, serif;
   text-transform: uppercase;
-  letter-spacing: .04em;
+  letter-spacing: .05em;
 }
 
 strong,
@@ -660,7 +666,7 @@ em,
 
 hr {
   border: none;
-  background-image: url('/static/images/tristar.png?1391690516');
+  background-image: url('/static/images/tristar.png?1391708524');
   background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMTkuNDk5IiBoZWlnaHQ9IjU2IiB2aWV3Qm94PSItNTMuNzUgMCAyMTkuNDk5IDU2IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IC01My43NSAwIDIxOS40OTkgNTYiPjxnIGZpbGw9IiNDNEM5Q0IiPjxwYXRoIGQ9Ik0tNy43MTEgMzAuNTExbDMuODY1IDkuNzgzLTIuNTQ5IDEuNjQxLTcuOTcyLTYuNTc0LTguMDU3IDYuNTc0LTIuNDY1LTEuNjQxIDMuODYzLTkuNzgzLTguNzk1LTUuNjcxLjkwNC0yLjg3OCAxMC41MjIuNTc1IDIuMzg0LTEwLjAyN2gzLjIwNGwyLjQ2NiAxMC4wMjcgMTAuNTIxLS41NzUuOTAzIDIuODc4LTguNzk0IDUuNjcxek02Mi42NTkgMzAuNTExbDMuODYyIDkuNzgzLTIuNTQ3IDEuNjQxLTcuOTc0LTYuNTczLTguMDU1IDYuNTc0LTIuNDY2LTEuNjQxIDMuODY1LTkuNzgzLTguNzk1LTUuNjcxLjkwMy0yLjg3OCAxMC41MjEuNTc1IDIuMzg0LTEwLjAyN2gzLjIwN2wyLjQ2NCAxMC4wMjcgMTAuNTIxLS41NzUuOTA1IDIuODc4LTguNzk1IDUuNjd6TTEzMy4wMjYgMzAuNTExbDMuODYyIDkuNzgzLTIuNTQ3IDEuNjQxLTcuOTc0LTYuNTc0LTguMDU1IDYuNTc0LTIuNDY2LTEuNjQxIDMuODY1LTkuNzgzLTguNzk1LTUuNjcxLjkwMy0yLjg3OCAxMC41MjEuNTc1IDIuMzg0LTEwLjAyN2gzLjIwN2wyLjQ2NCAxMC4wMjcgMTAuNTIxLS41NzUuOTA1IDIuODc4LTguNzk1IDUuNjcxeiIvPjwvZz48L3N2Zz4='), none;
   background-size: auto 23px;
   background-size: auto 1.64706rem;
@@ -1353,6 +1359,11 @@ pre {
   margin-bottom: 23px;
   margin-bottom: 1.64706rem;
   color: #47525d;
+}
+
+.site__title {
+  text-decoration: none;
+  margin-bottom: 0;
 }
 
 /*-----------------------------------*\
