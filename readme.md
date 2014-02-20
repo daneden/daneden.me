@@ -84,9 +84,6 @@ if($repo = $_GET["repo"]) {
   <dt>Why aren’t you hosting this on GitHub?</dt>
   <dd>While GitHub lets you host Jekyll-powered sites directly on GitHub itself, they don’t allow many custom Jekyll plugins. They also don’t allow executable code such as PHP, which is pretty vital to many parts of the site.</dd>
 
-  <dt>Ew. *This* is the Animate.css page code?</dt>
-  <dd>I know. It needs work. Why not help me move Animate.css to GitHub pages by opening or contributing to an issue on <a href="https://github.com/daneden/animate.css">the project</a> itself?</dd>
-
   <dt>How is your site so blazing fast?</dt>
   <dd>Glad you asked! There are a few reasons. First, my site is hosted on one of <a href="https://clientarea.ramnode.com/aff.php?aff=088">RamNode</a>’s SSD servers (yes, that is an affiliate link, and yes, I will get money if you sign up), backed by Apache and Varnish cache on top to help cache requested resources. Second, the <a href="http://adaptive-images.com">adaptive images</a> project is helping me keep my bandwidth and your waiting times down by supplying scaled images. On top of that, Jekyll is helping me make my entire site completely static, which we all know is stupid fast. And finally, the whole domain is being supported by a <a href="https://www.cloudflare.com">CloudFlare</a> pro plan, with SPDY, CDN, and other acronyms.</dd>
 </dl>
