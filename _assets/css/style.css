@@ -666,7 +666,7 @@ em,
 
 hr {
   border: none;
-  background-image: url('/static/images/tristar.png?1393002055');
+  background-image: url('/static/images/tristar.png?1393014290');
   background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMTkuNDk5IiBoZWlnaHQ9IjU2IiB2aWV3Qm94PSItNTMuNzUgMCAyMTkuNDk5IDU2IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IC01My43NSAwIDIxOS40OTkgNTYiPjxnIGZpbGw9IiNDNEM5Q0IiPjxwYXRoIGQ9Ik0tNy43MTEgMzAuNTExbDMuODY1IDkuNzgzLTIuNTQ5IDEuNjQxLTcuOTcyLTYuNTc0LTguMDU3IDYuNTc0LTIuNDY1LTEuNjQxIDMuODYzLTkuNzgzLTguNzk1LTUuNjcxLjkwNC0yLjg3OCAxMC41MjIuNTc1IDIuMzg0LTEwLjAyN2gzLjIwNGwyLjQ2NiAxMC4wMjcgMTAuNTIxLS41NzUuOTAzIDIuODc4LTguNzk0IDUuNjcxek02Mi42NTkgMzAuNTExbDMuODYyIDkuNzgzLTIuNTQ3IDEuNjQxLTcuOTc0LTYuNTczLTguMDU1IDYuNTc0LTIuNDY2LTEuNjQxIDMuODY1LTkuNzgzLTguNzk1LTUuNjcxLjkwMy0yLjg3OCAxMC41MjEuNTc1IDIuMzg0LTEwLjAyN2gzLjIwN2wyLjQ2NCAxMC4wMjcgMTAuNTIxLS41NzUuOTA1IDIuODc4LTguNzk1IDUuNjd6TTEzMy4wMjYgMzAuNTExbDMuODYyIDkuNzgzLTIuNTQ3IDEuNjQxLTcuOTc0LTYuNTc0LTguMDU1IDYuNTc0LTIuNDY2LTEuNjQxIDMuODY1LTkuNzgzLTguNzk1LTUuNjcxLjkwMy0yLjg3OCAxMC41MjEuNTc1IDIuMzg0LTEwLjAyN2gzLjIwN2wyLjQ2NCAxMC4wMjcgMTAuNTIxLS41NzUuOTA1IDIuODc4LTguNzk1IDUuNjcxeiIvPjwvZz48L3N2Zz4='), none;
   background-size: auto 23px;
   background-size: auto 1.64706rem;
@@ -761,9 +761,9 @@ figure img {
     width: -webkit-calc(100% + 1.64706rem );
     width: calc(100% + 23px );
     width: calc(100% + 1.64706rem );
-    margin-left: -11px;
+    margin-left: -12px;
     margin-left: -0.82353rem;
-    margin-right: -11px;
+    margin-right: -12px;
     margin-right: -0.82353rem;
   }
 }
@@ -802,9 +802,9 @@ figure img {
     width: -webkit-calc(100% + 1.64706rem );
     width: calc(100% + 23px );
     width: calc(100% + 1.64706rem );
-    margin-left: -11px;
+    margin-left: -12px;
     margin-left: -0.82353rem;
-    margin-right: -11px;
+    margin-right: -12px;
     margin-right: -0.82353rem;
   }
 }
@@ -878,7 +878,7 @@ figure img {
     right: 0;
     bottom: 0;
     top: 75%;
-    background-image: -webkit-gradient(linear, top left, bottom left, from(transparent), to(rgba(0, 0, 0, 0.75)));
+    background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.75)));
     background-image: -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.75));
     background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.75));
   }
