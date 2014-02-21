@@ -4,6 +4,11 @@
 
 \*-----------------------------------*/
 
+.banner {
+  background-color: $dark-gray;
+  color: $subtle-gray;
+}
+
 .site__header {
   z-index: 3;
   margin-bottom: $baseline;
