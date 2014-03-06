@@ -1402,7 +1402,7 @@ pre {
 .quotes ul {
   text-align: center;
   list-style: none;
-  padding: none;
+  padding-left: 0;
 }
 
 .quotes ul li {
