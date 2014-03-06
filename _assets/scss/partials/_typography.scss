@@ -7,7 +7,7 @@
 
 \*-----------------------------------*/
 
-h1, .alpha {
+h1, .alpha, %alpha {
   padding-top: $baseline*.5;
   margin-bottom: $baseline*2.5;
 
@@ -15,6 +15,8 @@ h1, .alpha {
   font-size: $baseline*1.4;
   font-weight: 400;
   line-height: 1.25;
+  orphans: 3;
+  widows: 3;
 
   color: $dark-gray;
 
@@ -28,16 +30,18 @@ h1, .alpha {
   }
 }
 
-h2, .beta {
+h2, .beta, %beta {
   padding-top: $baseline/2;
   margin-bottom: $baseline/2;
 
   font-size: 1.384615385rem;
   font-weight: 400;
   line-height: 1.2223;
+  orphans: 3;
+  widows: 3; 
 }
 
-h3, .gamma {
+h3, .gamma, %gamma {
   padding-top: $baseline/2;
   margin-bottom: $baseline/2;
 
@@ -47,7 +51,7 @@ h3, .gamma {
   line-height: $baseline-unitless;
 }
 
-h4, .delta {
+h4, .delta, %delta {
   font-size: 1rem;
   font-weight: 700;
   line-height: $baseline-unitless;

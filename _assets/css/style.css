@@ -155,7 +155,7 @@ pre:empty,
 }
 
 .o--p--dm {
-  margin-bottom: 45px;
+  margin-bottom: 44px;
   margin-bottom: 3.17647rem;
 }
 
@@ -562,6 +562,8 @@ h1,
   font-size: 2.22353rem;
   font-weight: 400;
   line-height: 1.25;
+  orphans: 3;
+  widows: 3;
   color: #3d464d;
 }
 
@@ -580,7 +582,8 @@ h1 .caps,
 }
 
 h2,
-.beta {
+.beta,
+.quotes ul li {
   padding-top: 11px;
   padding-top: 0.79412rem;
   margin-bottom: 11px;
@@ -589,10 +592,13 @@ h2,
   font-size: 1.384615385rem;
   font-weight: 400;
   line-height: 1.2223;
+  orphans: 3;
+  widows: 3;
 }
 
 h3,
-.gamma {
+.gamma,
+.quotes ul li > .caps {
   padding-top: 11px;
   padding-top: 0.79412rem;
   margin-bottom: 11px;
@@ -624,7 +630,8 @@ h4,
 
 .subhead,
 .meta,
-figcaption {
+figcaption,
+.quotes ul li > .caps {
   color: #7b8994;
 }
 
@@ -648,7 +655,8 @@ a:hover,
 
 .caps,
 h3,
-.gamma {
+.gamma,
+.quotes ul li > .caps {
   font-family: "Mercury SSm SC A", "Mercury SSm SC B", "Mercury SSm A", "Mercury SSm B", Georgia, serif;
   text-transform: uppercase;
   letter-spacing: .05em;
@@ -666,7 +674,7 @@ em,
 
 hr {
   border: none;
-  background-image: url('/static/images/tristar.png?1393183598');
+  background-image: url('/static/images/tristar.png?1394141556');
   background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMTkuNDk5IiBoZWlnaHQ9IjU2IiB2aWV3Qm94PSItNTMuNzUgMCAyMTkuNDk5IDU2IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IC01My43NSAwIDIxOS40OTkgNTYiPjxnIGZpbGw9IiNDNEM5Q0IiPjxwYXRoIGQ9Ik0tNy43MTEgMzAuNTExbDMuODY1IDkuNzgzLTIuNTQ5IDEuNjQxLTcuOTcyLTYuNTc0LTguMDU3IDYuNTc0LTIuNDY1LTEuNjQxIDMuODYzLTkuNzgzLTguNzk1LTUuNjcxLjkwNC0yLjg3OCAxMC41MjIuNTc1IDIuMzg0LTEwLjAyN2gzLjIwNGwyLjQ2NiAxMC4wMjcgMTAuNTIxLS41NzUuOTAzIDIuODc4LTguNzk0IDUuNjcxek02Mi42NTkgMzAuNTExbDMuODYyIDkuNzgzLTIuNTQ3IDEuNjQxLTcuOTc0LTYuNTczLTguMDU1IDYuNTc0LTIuNDY2LTEuNjQxIDMuODY1LTkuNzgzLTguNzk1LTUuNjcxLjkwMy0yLjg3OCAxMC41MjEuNTc1IDIuMzg0LTEwLjAyN2gzLjIwN2wyLjQ2NCAxMC4wMjcgMTAuNTIxLS41NzUuOTA1IDIuODc4LTguNzk1IDUuNjd6TTEzMy4wMjYgMzAuNTExbDMuODYyIDkuNzgzLTIuNTQ3IDEuNjQxLTcuOTc0LTYuNTc0LTguMDU1IDYuNTc0LTIuNDY2LTEuNjQxIDMuODY1LTkuNzgzLTguNzk1LTUuNjcxLjkwMy0yLjg3OCAxMC41MjEuNTc1IDIuMzg0LTEwLjAyN2gzLjIwN2wyLjQ2NCAxMC4wMjcgMTAuNTIxLS41NzUuOTA1IDIuODc4LTguNzk1IDUuNjcxeiIvPjwvZz48L3N2Zz4='), none;
   background-size: auto 22px;
   background-size: auto 1.58824rem;
@@ -846,7 +854,7 @@ figure img {
     margin: 0 auto;
     padding-top: 22px;
     padding-top: 1.58824rem;
-    margin-bottom: 45px;
+    margin-bottom: 44px;
     margin-bottom: 3.17647rem;
   }
 
@@ -872,7 +880,7 @@ figure img {
     right: 0;
     bottom: 0;
     top: 75%;
-    background-image: -webkit-gradient(linear, top left, bottom left, from(transparent), to(rgba(0, 0, 0, 0.75)));
+    background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.75)));
     background-image: -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.75));
     background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.75));
   }
@@ -1382,7 +1390,7 @@ pre {
 .site__content {
   padding-top: 22px;
   padding-top: 1.58824rem;
-  padding-bottom: 45px;
+  padding-bottom: 44px;
   padding-bottom: 3.17647rem;
 }
 
@@ -1391,31 +1399,19 @@ pre {
   padding-bottom: 0.79412rem;
 }
 
-/*-----------------------------------*\
-
-  Module: Docs
-
-\*-----------------------------------*/
-
-.docs__grid {
-  overflow: hidden;
-  border: 1px solid #d8dce0;
-  border-radius: .25em;
+.quotes ul {
+  text-align: center;
+  list-style: none;
+  padding: none;
 }
 
-.docs__selector {
-  margin-bottom: -1px;
-  border-right: 1px solid #d8dce0;
-  border-bottom: 1px solid #d8dce0;
-  color: #47525d;
+.quotes ul li {
+  padding: 44px 0;
+  padding: 3.17647rem 0;
 }
 
-[class*="grid__col"]:nth-child(3n) .docs__selector {
-  border-right: none;
-}
-
-.docs__selector:hover {
-  color: #4fb5c6;
+.quotes ul li > .caps {
+  display: block;
 }
 
 /*-----------------------------------*\
@@ -1505,6 +1501,6 @@ pre {
     }
   }
 
-  If you want to pick a fight over/learn more about these rules, let me know – dte@
+  If you want to pick a fight over/learn more about these rules, let me know – dan.eden@me.com
 
 \*===================================*/

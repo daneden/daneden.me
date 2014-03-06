@@ -1,0 +1,16 @@
+.quotes ul {
+  text-align: center;
+  list-style: none;
+  padding: none;
+
+  li {
+      padding: $baseline*2 0;
+      @extend %beta;
+
+      > .caps {
+          display: block;
+          @extend %gamma;
+          @extend .meta;
+      }
+  }
+}
