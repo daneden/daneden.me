@@ -11,6 +11,22 @@
           display: block;
           @extend %gamma;
           @extend .meta;
+
+          &:before {
+            content: "";
+            display: block;
+            width: 2rem;
+            padding-top: $baseline/2;
+            border-bottom: 2px solid;
+            margin: {
+              left: auto;
+              right: auto;
+              top: -2px;
+              bottom: $baseline/2;
+            }
+
+            color: $blue;
+          }
       }
   }
 }
