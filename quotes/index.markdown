@@ -8,6 +8,7 @@ These are the things I’ve heard and read that help me work, live, and think. T
 
 * * *
 
+- “I get up. I walk. I fall down. Meanwhile, I keep dancing.” [Daniel Hillel](class:caps)
 - “Money is circulated. Time is&nbsp;spent.” [Frank Chimero](class:caps)
 - “Writing is like driving at night in the fog. You can only see as far as your headlights, but you can make the whole trip that&nbsp;way.” [E.L. Doctorow](class:caps)
 - “They can’t eat you.” [Merlin Mann](class:caps)
