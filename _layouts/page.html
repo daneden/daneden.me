@@ -1,10 +1,12 @@
 ---
 layout: default
 ---
+			<article class="hentry">
 				<header class="entry__header wrap promo">
-					<h1 class="entry__title">{{ page.title | widont }}</h1>
+					<h1 class="entry__title entry-title">{{ page.title | widont }}</h1>
 				</header>
 
-				<div class="entry__content wrap">
-				{{ content }}
+				<div class="entry__content wrap entry-content">
+					{{ content }}
 				</div>
+			</article>
