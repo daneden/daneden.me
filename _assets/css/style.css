@@ -822,8 +822,8 @@ figcaption .caps {
 }
 
 figure {
-  padding-top: 22px;
-  padding-top: 1.55556rem;
+  padding-top: 11px;
+  padding-top: 0.77778rem;
 }
 
 figure img {
@@ -879,12 +879,16 @@ figure img {
   float: left;
   margin-right: 22px;
   margin-right: 1.55556rem;
+  padding-left: 22px;
+  padding-left: 1.55556rem;
 }
 
 .alignright {
   float: right;
   margin-left: 22px;
   margin-left: 1.55556rem;
+  padding-right: 22px;
+  padding-right: 1.55556rem;
 }
 
 @media (max-width: 75em) {
@@ -1386,8 +1390,8 @@ pre {
 .site__content {
   padding-top: 22px;
   padding-top: 1.55556rem;
-  padding-bottom: 44px;
-  padding-bottom: 3.11111rem;
+  padding-bottom: 65px;
+  padding-bottom: 4.66667rem;
 }
 
 .entry__header {

@@ -34,6 +34,4 @@ Third level headings are most often used to denote names rather than sections, s
 
 Images may take one of two forms; aligned (left or right), or centered. Captions are encouraged, but not required.
 
-{% image /uploads/2014/03/tahoe-view.jpg "This is another example of an image and caption. This picture was taken in Tahoe." %}
-
 Images are currently used only sparingly, but must flow with the content. Captions should be readable, but not distract from the main article. Like images themselves, they are supplements.

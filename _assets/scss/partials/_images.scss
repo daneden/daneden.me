@@ -23,7 +23,7 @@ figcaption {
 }
 
 figure {
-  padding-top: $baseline;
+  padding-top: $baseline/2;
 
   img {
     max-width: 100% !important;
@@ -65,12 +65,14 @@ figure {
   @extend .grid__col--pull-1-of-4;
   float: left;
   margin-right: $baseline;
+  padding-left: $gutter;
 }
 
 .alignright {
   @extend .grid__col--pull-1-of-4--right;
   float: right;
   margin-left: $baseline;
+  padding-right: $gutter;
 }
 
 @media ( max-width: $breakpoint-regular ) {
