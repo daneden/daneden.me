@@ -12,14 +12,21 @@
 
   <!-- Touch icon -->
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+  <lnik rel="shortcut icon" href="/favicon.png" />
   <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7158232/776222/css/fonts.css" />
 </head>
 <body{% if page.class %} class="{{ page.class }}"{% endif %}>
   <header class="site__header" role="banner">
     <div class="wrap cf">
-      <a class="site__title o--b isle--v gamma" href="/" title="{{ site.name }} • {{ site.description }}">
-        <span>{{ site.name }}</span>
-        <span class="f--r">{{ site.description }}</span>
-      </a>
+
+      <div class="grid">
+        <div class="grid__col--4-of-6 grid__col--centered">
+          <a class="site__title o--b island--v gamma" href="/" title="{{ site.name }} • {{ site.description }}">
+            {{ site.name }} <span class="title__sep">•</span> <span class="title__desc">{{ site.description }}</span>
+          </a>
+        </div>
+      </div>
+
     </div>
   </header>

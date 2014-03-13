@@ -9,15 +9,16 @@ As of today, December 30th 2013, the majority of typographic elements on the sit
 
 > Blockquotes (like the one seen here), as well as captions and other minor or supporting typographic elements are often set in Whitney.
 
+{% image alignleft /uploads/2013/09/blanket-stories.jpg "This is a left aligned image and caption. The image is of “Blanket Stories” – an installation art piece from Marie Watts." %}
+
 ## Heading Level Two
+
 Second level headings are used to split text into sections. First level headings are only used once per page, in the page or post title. [Hyperlinks](/styleguide) are underlined and colored blue when hovered.
 
 - Bulleted lists look like this.
 - Multi-leveled bulleted lists look like this:
 	- This is an example of a second-level bullet
 - Lists tend not to be used very often on this site, but they exist nonetheless.
-
-{% image alignleft /uploads/2013/09/blanket-stories.jpg "This is a left aligned image and caption. The image is of “Blanket Stories” – an installation art piece from Marie Watts." %}
 
 It would be precarious to design a bulleted list without preparing a numbered list styling.
 

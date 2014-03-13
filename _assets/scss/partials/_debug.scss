@@ -11,7 +11,7 @@
 \*-----------------------------------*/
 
 // Outline elements
-.debug-outline {
+.debug--outline {
   * {
     outline: 1px dotted rgba(0,0,0,.1);
     outline-offset: -1px;
@@ -41,7 +41,7 @@
     bottom: 0;
     left: 0;
  // background: url("http://basehold.it/{baseline in px}");
-    background: url(http://basehold.it/image.php?height=22) repeat top left;
+    background: url(http://basehold.it/image.php?height=28) repeat top left;
   }
 
   body:active:after {

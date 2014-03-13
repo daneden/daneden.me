@@ -94,7 +94,7 @@ p, .o--p, [class*="o--p--"], figure, blockquote, table, form, ul, ol, .img, pre,
 }
 
 .standalone {
-  margin-bottom: 0;
+  margin-bottom: 0 !important;
 }
 
 // Visually hidden elements

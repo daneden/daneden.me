@@ -8,16 +8,25 @@ figcaption {
   @extend .meta;
 
   font-family: $font-Sans;
-  font-size: .764705882rem;
-  line-height: 1.615384615;
+  font-size: .666666667rem;
+  line-height: 1.555555833;
+  text-align: right;
 
   .caps {
     font-family: $font-Sans-SC;
   }
+
+  @media ( max-width: $breakpoint-small ) {
+    font-size: .857142857rem;
+    text-align: left;
+  }
 }
 
 figure {
+  padding-top: $baseline;
+
   img {
+    max-width: 100% !important;
     display: block;
     margin-bottom: $baseline/2;
 
@@ -37,34 +46,31 @@ figure {
 
 .alignleft, .alignright {
   clear: both;
+  padding-top: 0;
   margin-bottom: $baseline/2;
-  max-width: 35%;
 
   img {
     max-width: 100%;
     width: auto;
     margin: auto;
     margin-bottom: $baseline/2;
+  }
 
-    @media ( max-width: $breakpoint-small ) {
-      max-width: none;
-      width: calc( 100% + #{$baseline} );
-      margin-left: -$baseline/2;
-      margin-right: -$baseline/2;
-    }
+  figcaption {
+    text-align: left;
   }
 }
 
 .alignleft {
+  @extend .grid__col--pull-1-of-4;
   float: left;
-  margin-left: -35%;
-  padding-right: $baseline;
+  margin-right: $baseline;
 }
 
 .alignright {
+  @extend .grid__col--pull-1-of-4--right;
   float: right;
-  margin-right: -35%;
-  padding-left: $baseline;
+  margin-left: $baseline;
 }
 
 @media ( max-width: $breakpoint-regular ) {
@@ -84,51 +90,5 @@ figure {
     margin: 0 auto;
     margin-bottom: $baseline;
     padding: 0;
-  }
-}
-
-.breakout {
-  @media ( min-width: $breakpoint-small ) {
-    max-width: 60rem;
-    margin: 0 auto;
-    padding-top: $baseline;
-    margin-bottom: $baseline*2;
-
-    img {
-      margin-bottom: 0;
-    }
-
-    figcaption {
-      position: absolute;
-      z-index: 2;
-      bottom: $baseline;
-      left: 0;
-      right: 0;
-      color: #fff;
-      text-shadow: 0 1px 1px rgba(0,0,0,.2);
-    }
-
-    &:after {
-      content: '';
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      top: 75%;
-      background-image: linear-gradient(transparent, rgba(0,0,0,.75));
-    }
-  }
-
-  img {
-    max-width: 100%;
-    width: 100%;
-    margin: {
-      left: 0;
-      right: 0;
-    }
-  }
-
-  figcaption {
-    @extend .wrap;
   }
 }

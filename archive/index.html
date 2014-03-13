@@ -1,24 +1,18 @@
 ---
-layout: default
+layout: page
 title: Archive
 ---
-<div class="entry-header wrap promo">
-  <h1>Archive</h1>
-</div>
+<p>Welcome to the Archives. Here you’ll find every post I’ve written on the site. Even the ones I’m shameful of. I’ve learned a lot since writing a lot of these words. Judge not by these articles.</p>
 
-<div class="entry-content wrap">
-  <p>Welcome to the Archives. Here you’ll find every post I’ve written on the site. Even the ones I’m shameful of. I’ve learned a lot since writing a lot of these words. Judge not by these articles.</p>
+<hr>
 
-  <hr>
-
-  <ul class="nav promo">
-  {% for post in site.posts %}
-    <li class="o--p">
-      <a class="a--plain" href="{{ post.url }}">
-        <span class="o--b">{{ post.title }}</span>
-        <span class="meta o--b">{{ post.date }}</span>
-      </a>
-    </li>
-  {% endfor %}
-  </ul>
-</div>
+<ul class="nav">
+{% for post in site.posts %}
+  <li class="o--p">
+    <a class="a--plain" href="{{ post.url }}">
+      <span class="o--b beta standalone">{{ post.title }}</span>
+      <span class="meta o--b">{{ post.date | pretty }}</span>
+    </a>
+  </li>
+{% endfor %}
+</ul>
