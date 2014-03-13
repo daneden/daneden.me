@@ -623,6 +623,8 @@ h1,
 @media (max-width: 47.5em) {
   h1,
   .alpha {
+    margin-bottom: 22px;
+    margin-bottom: 1.55556rem;
     font-size: 26px;
     font-size: 1.86667rem;
   }
@@ -1392,6 +1394,12 @@ pre {
   padding-top: 1.55556rem;
   padding-bottom: 65px;
   padding-bottom: 4.66667rem;
+}
+
+@media screen and (max-width: 47.5em) {
+  .site__content {
+    padding-top: 0;
+  }
 }
 
 .entry__header {

@@ -15,6 +15,10 @@
 .site__content {
   padding-top: $baseline;
   padding-bottom: $baseline*3;
+
+  @media screen and ( max-width: $breakpoint-small ) {
+    padding-top: 0;
+  }
 }
 
 .entry__header {

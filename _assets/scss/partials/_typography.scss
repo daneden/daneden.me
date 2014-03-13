@@ -20,6 +20,8 @@ h1, .alpha, %alpha {
   color: $dark-gray;
 
   @media (max-width: $breakpoint-small) {
+    margin-bottom: $baseline;
+
     font-size: $baseline*1.2;
   }
 
