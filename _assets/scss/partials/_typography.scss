@@ -8,13 +8,12 @@
 \*-----------------------------------*/
 
 h1, .alpha, %alpha {
-  padding-top: $baseline*.5;
-  margin-bottom: $baseline*2.5;
+  margin-bottom: $baseline*2;
 
   font-family: $font-Display;
-  font-size: $baseline*1.4;
-  font-weight: 400;
-  line-height: 1.25;
+  font-size: $baseline*2;
+  font-weight: 900;
+  line-height: 1;
   orphans: 3;
   widows: 3;
 
@@ -38,7 +37,7 @@ h2, .beta, %beta {
   font-weight: 400;
   line-height: 1.2223;
   orphans: 3;
-  widows: 3; 
+  widows: 3;
 }
 
 h3, .gamma, %gamma {
@@ -91,7 +90,7 @@ a, [data-href] {
 .caps, %caps {
   font-family: $font-Serif-SC;
   text-transform: uppercase;
-  letter-spacing: .05em;
+  letter-spacing: .04em;
 }
 
 strong, .strong {
@@ -104,9 +103,15 @@ em, .em {
 
 hr {
   border: none;
-  @include bg-image("tristar", auto $baseline);
-  height: $baseline;
-  margin-bottom: $baseline;
+  border-bottom: 2px solid $subtle-gray;
+  width: 6rem;
+  padding-top: $baseline*1.5;
+  margin: {
+    top: -2px;
+    right: auto;
+    bottom: $baseline*2;
+    left: auto;
+  }
 }
 
 .hr--line {
@@ -120,6 +125,7 @@ hr {
 // Remove this for hanging bullets
 ul, ol {
   padding-left: 1.35em;
+  overflow: hidden;
 }
 
   // Restore some normality to our nested lists
@@ -138,11 +144,16 @@ dl {
 }
 
 blockquote {
+  overflow: hidden;
   font-family: $font-Sans;
   padding-left: $baseline;
   border-left: 2px solid $blue;
   margin-left: -$baseline;
   color: $gray;
+
+  > :last-child {
+    margin-bottom: 0;
+  }
 
   @media (max-width: $breakpoint-small) {
     margin-left: 0;

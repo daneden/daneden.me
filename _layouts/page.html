@@ -1,12 +1,19 @@
----
-layout: default
----
-			<article class="hentry">
-				<header class="entry__header wrap promo">
-					<h1 class="entry__title entry-title">{{ page.title | widont }}</h1>
-				</header>
+{% include header.html %}
 
-				<div class="entry__content wrap entry-content">
-					{{ content }}
+	<main class="site__content post--single" role="main">
+
+		<div class="wrap">
+			<article class="grid hentry">
+				<div class="grid__col--4-of-6 grid__col--centered">
+						<header class="entry__header">
+							<h1 class="entry__title entry-title">{{ page.title | widont }}</h1>
+						</header>
+
+						{{ content }}
 				</div>
 			</article>
+		</div>
+
+	</main>
+
+{% include footer.html %}

@@ -5,8 +5,8 @@
 \*-----------------------------------*/
 
 .site__footer {
-  background-color: lighten($subtle-gray, 11%);
-  color: $light-gray;
+  background-color: mix(#393939, $dark-gray);
+  color: mix(#dfdfdf, $light-gray);
 }
 
 .footer__avatar {

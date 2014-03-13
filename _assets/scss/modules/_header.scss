@@ -4,29 +4,21 @@
 
 \*-----------------------------------*/
 
-.banner {
-  font-family: $font-Sans;
-  font-weight: 700;
-
-  background-color: $light-gray;
-  box-shadow: inset 0 1px 1px rgba(0,0,0,.1);
-  color: #fff;
-
-  a:hover {
-    color: inherit;
-  }
-}
-
 .site__header {
-  z-index: 3;
-  margin-bottom: $baseline;
-
   color: $gray;
 }
 
   .site__title {
     text-decoration: none;
     margin-bottom: 0;
+
+    .title__sep {
+      color: $blue;
+    }
+
+    .title__desc {
+      color: $light-gray;
+    }
   }
 
   .site__nav {
