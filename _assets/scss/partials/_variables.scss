@@ -27,17 +27,18 @@ $font-Code: "Source Code Pro", Monaco, monospace;
 // Group: Colors
 $white: #fff; // Duh.
 
-$blue: #4fb5c6;
-$light-gray: #7B8994;
-$lighter-gray: #BDC4CA;
-$gray: #47525D;
-$dark-gray: #3D464D;
+$blue: adjust-hue(#4fb5c6, 170);
+$light-gray: adjust-hue(#7B8994, 170);
+$lighter-gray: adjust-hue(#BDC4CA, 170);
+$gray: adjust-hue(#47525D, 170);
+$dark-gray: adjust-hue(#3D464D, 170);
 
-$subtle-gray: #d8dce0;
+$subtle-gray: adjust-hue(#d8dce0, 170);
 
 $green: #46933D;
 $red: #C32F39;
 
 // Group: Breakpoints
 $breakpoint-small: 47.5em;
+$breakpoint-medium: 56em;
 $breakpoint-regular: 75em;

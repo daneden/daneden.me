@@ -18,4 +18,8 @@
   margin-left: -$baseline;
 
   border-radius: 100%;
+
+  @media ( max-width: $breakpoint-medium ) {
+    display: none;
+  }
 }

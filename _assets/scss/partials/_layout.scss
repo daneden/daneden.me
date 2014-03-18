@@ -14,7 +14,11 @@
   }
   margin: 0 auto;
 
-  @media (max-width: $breakpoint-small) {
+  @media ( max-width: $breakpoint-medium ) {
+    max-width: 36rem;
+  }
+
+  @media ( max-width: $breakpoint-small ) {
     max-width: 34rem;
 
     padding: {
@@ -256,7 +260,7 @@ $gutter: $baseline;
 
   // Grid MQs
 
-  @media screen and ( max-width: $breakpoint-small ) {
+  @media screen and ( max-width: $breakpoint-medium ) {
     margin-left: 0;
     width: auto;
 

@@ -30,11 +30,11 @@
 \*-----------------------------------*/
 
 ::-moz-selection {
-  background-color: rgba(189, 196, 202, 0.5);
+  background-color: rgba(202, 193, 189, 0.5);
 }
 
 ::selection {
-  background-color: rgba(189, 196, 202, 0.5);
+  background-color: rgba(202, 193, 189, 0.5);
 }
 
 html {
@@ -48,7 +48,7 @@ html {
   -webkit-font-kerning: normal;
   -moz-font-kerning: normal;
   font-kerning: normal;
-  color: #47525d;
+  color: #5d4e47;
   background-color: #fff;
 }
 
@@ -263,6 +263,13 @@ pre:empty,
   padding-right: 22px;
   padding-right: 1.55556rem;
   margin: 0 auto;
+}
+
+@media (max-width: 56em) {
+  .wrap {
+    max-width: 504px;
+    max-width: 36rem;
+  }
 }
 
 @media (max-width: 47.5em) {
@@ -514,7 +521,7 @@ table th {
   }
 }
 
-@media screen and (max-width: 47.5em) {
+@media screen and (max-width: 56em) {
   .grid {
     margin-left: 0;
     width: auto;
@@ -572,7 +579,7 @@ table th {
 .nav .active,
 .nav ul .active {
   font-weight: 700;
-  color: #3d464d;
+  color: #4d413d;
 }
 
 .nav--inline {
@@ -617,7 +624,7 @@ h1,
   line-height: 1;
   orphans: 3;
   widows: 3;
-  color: #3d464d;
+  color: #4d413d;
 }
 
 @media (max-width: 47.5em) {
@@ -687,7 +694,7 @@ h4,
 .meta,
 figcaption,
 .quotes article ul li > .caps {
-  color: #7b8994;
+  color: #94827b;
 }
 
 a,
@@ -701,7 +708,7 @@ a,
 
 a:hover,
 [data-href]:hover {
-  color: #4fb5c6;
+  color: #c64f52;
 }
 
 .a--plain {
@@ -729,7 +736,7 @@ em,
 
 hr {
   border: none;
-  border-bottom: 2px solid #d8dce0;
+  border-bottom: 2px solid #e0dbd8;
   width: 84px;
   width: 6rem;
   padding-top: 33px;
@@ -745,7 +752,7 @@ hr {
   margin-top: -1px;
   height: 1px;
   background-image: none;
-  background-color: #bdc4ca;
+  background-color: #cac1bd;
 }
 
 ul,
@@ -773,10 +780,10 @@ blockquote {
   font-family: "Whitney SSm A", "Whitney SSm B", Geneva, Verdana, san-serif;
   padding-left: 22px;
   padding-left: 1.55556rem;
-  border-left: 2px solid #4fb5c6;
+  border-left: 2px solid #c64f52;
   margin-left: -22px;
   margin-left: -1.55556rem;
-  color: #47525d;
+  color: #5d4e47;
 }
 
 blockquote > :last-child {
@@ -815,11 +822,16 @@ figcaption .caps {
   font-family: "Whitney SSm SC A", "Whitney SSm SC B", "Whitney SSm A", "Whitney SSm B", Geneva, Verdana, san-serif;
 }
 
+@media (max-width: 56em) {
+  figcaption {
+    text-align: left;
+  }
+}
+
 @media (max-width: 47.5em) {
   figcaption {
     font-size: 12px;
     font-size: .857142857rem;
-    text-align: left;
   }
 }
 
@@ -930,7 +942,7 @@ table {
   table-layout: auto;
   text-align: left;
   border-radius: .25em;
-  border: 1px solid #d8dce0;
+  border: 1px solid #e0dbd8;
 }
 
 table tr {
@@ -950,25 +962,25 @@ table th {
   display: table-cell;
   line-height: 1.5;
   white-space: nowrap;
-  border-top: 1px solid #d8dce0;
-  border-bottom: 1px solid #d8dce0;
+  border-top: 1px solid #e0dbd8;
+  border-bottom: 1px solid #e0dbd8;
   border-collapse: collapse;
 }
 
 table td:first-child,
 table th:first-child {
   border-radius: .25em .25em 0 0;
-  border-left: 1px solid #d8dce0;
+  border-left: 1px solid #e0dbd8;
 }
 
 table td:last-child,
 table th:last-child {
   border-radius: 0 0 .25em .25em;
-  border-right: 1px solid #d8dce0;
+  border-right: 1px solid #e0dbd8;
 }
 
 table.table--striped tr:nth-child(even) {
-  background-color: #e9ebee;
+  background-color: #eeebe9;
 }
 
 /*-----------------------------------*\
@@ -1064,8 +1076,8 @@ pre {
   padding: 11px 21px;
   padding: .75rem 1.5rem;
   overflow: scroll;
-  background-color: #3d464d;
-  color: #7b8994;
+  background-color: #4d413d;
+  color: #94827b;
 }
 
 .highlight * {
@@ -1359,7 +1371,7 @@ pre {
 \*-----------------------------------*/
 
 .site__header {
-  color: #47525d;
+  color: #5d4e47;
 }
 
 .site__title {
@@ -1368,11 +1380,12 @@ pre {
 }
 
 .site__title .title__sep {
-  color: #4fb5c6;
+  color: #c64f52;
+  vertical-align: -.05em;
 }
 
 .site__title .title__desc {
-  color: #7b8994;
+  color: #94827b;
 }
 
 /*-----------------------------------*\
@@ -1435,7 +1448,7 @@ pre {
   margin-top: -2px;
   margin-bottom: 11px;
   margin-bottom: 0.77778rem;
-  color: #4fb5c6;
+  color: #c64f52;
 }
 
 /*-----------------------------------*\
@@ -1445,8 +1458,8 @@ pre {
 \*-----------------------------------*/
 
 .site__footer {
-  background-color: #3b3f43;
-  color: #adb4b9;
+  background-color: #433d3b;
+  color: #b9b0ad;
 }
 
 .footer__avatar {
@@ -1461,6 +1474,12 @@ pre {
   margin-left: -22px;
   margin-left: -1.55556rem;
   border-radius: 100%;
+}
+
+@media (max-width: 56em) {
+  .footer__avatar {
+    display: none;
+  }
 }
 
 /*===================================*\

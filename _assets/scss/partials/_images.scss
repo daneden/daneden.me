@@ -16,9 +16,12 @@ figcaption {
     font-family: $font-Sans-SC;
   }
 
+  @media ( max-width: $breakpoint-medium ) {
+    text-align: left;
+  }
+
   @media ( max-width: $breakpoint-small ) {
     font-size: .857142857rem;
-    text-align: left;
   }
 }
 
