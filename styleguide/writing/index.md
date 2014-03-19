@@ -26,7 +26,11 @@ Unless part of a phrase or word group, punctuation always falls outside of a hyp
 
 The last words in any given paragraph or other block-level elements are separated by a non-breaking space to prevent widows.
 
-“Smart” quotes are preferred over straight quotes. A period is followed by a single space. Regular dashes are used to connect words (e.g. one-time fee, comma-separated list), n-dashes (–) are used for ranges (e.g. 1–10, January–December), and m-dashes (—) are used to cite authors and origins of quotes, as well as for short breaks in text (similar to parentheses.)
+“Smart” quotes are preferred over straight quotes. A period is followed by a single space. Regular dashes are used for compound words (e.g. one-time fee, comma-separated list), n-dashes (–) are used for ranges (e.g. 1–10, January–December) and preceding statements, and m-dashes (—) are used to cite authors and origins of quotes, as well as for short breaks in text (similar to parentheses.)
+
+Here’s an example of all these dashes in use:
+
+> When number-crunching, one must always remember one rule – do it often and do it well. However—and I say this with caution—this rule may be broken 3–5 times a year, in recognition of national holidays.
 
 Unless at the end of a sentence, terminal punctuation exists outside a set of parentheses. In the case of quotes, however, terminal punctuation exists outside the closing quote mark—unless the terminal punctuation is part of the quote itself. For example:
 
