@@ -1420,6 +1420,20 @@ pre {
   padding-bottom: 0.77778rem;
 }
 
+.grid__col--demo div {
+  min-height: 44px;
+  min-height: 3.11111rem;
+  margin-bottom: 22px;
+  margin-bottom: 1.55556rem;
+  background-color: #e0dbd8;
+}
+
+@media screen and (max-width: 47.5em) {
+  .grid__col--demo {
+    display: none !important;
+  }
+}
+
 .quotes article ul {
   text-align: center;
   list-style: none;

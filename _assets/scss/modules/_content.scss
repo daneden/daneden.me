@@ -26,3 +26,17 @@
     bottom: $baseline/2;
   }
 }
+
+.grid__col--demo {
+
+  div {
+    min-height: $baseline*2;
+    margin-bottom: $baseline;
+
+    background-color: $subtle-gray;
+  }
+
+  @media screen and ( max-width: $breakpoint-small ) {
+    display: none !important;
+  }
+}
