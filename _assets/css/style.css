@@ -1428,7 +1428,7 @@ pre {
   background-color: #e0dbd8;
 }
 
-@media screen and (max-width: 47.5em) {
+@media screen and (max-width: 56em) {
   .grid__col--demo {
     display: none !important;
   }

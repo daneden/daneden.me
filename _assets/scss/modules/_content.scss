@@ -36,7 +36,7 @@
     background-color: $subtle-gray;
   }
 
-  @media screen and ( max-width: $breakpoint-small ) {
+  @media screen and ( max-width: $breakpoint-medium ) {
     display: none !important;
   }
 }
