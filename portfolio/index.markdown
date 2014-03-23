@@ -7,13 +7,14 @@ scripts: ["/static/js/jquery.fitvids.custom.js"]
 
 I’m currently working at [Dropbox](http://dropbox.com) as a Designer. My work outside of Dropbox is what you see here; side projects, open source contributions, and personal itch-scratchers. [Dribbble](http://dribbble.com/dte) may provide a more current, up-to-date representation of my work.
 
+## Ragged Write
+[Ragged Write](http://raggedwrite.net) is a website about typography; a place to share news, reviews, and personal commentary on the world of typography. Created out of a desire to write about type, as well as maintain a collection of typographic resources for personal reference. [Visit the site](http://raggedwrite.net).
+
 ## Untones
-[Untones](http://unton.es/) are occasional, delightful ringtones for mobile devices and beyond. I’ve long been playing around in sound creation software, and thought I’d make something productive out of the process. The tones are released in pairs—one for calls, and one for messages/alerts—as often as I feel like it.
+[Untones](http://unton.es/) are occasional, delightful ringtones for mobile devices and beyond. I’ve long been playing around in sound creation software, and thought I’d make something productive out of the process. The tones are released in pairs—one for calls, and one for messages/alerts—as often as I feel like it. [Visit the site](http://unton.es).
 
 ## Just My Type
-[Just My Type](http://justmytype.co) is a library of font pairings from Adobe Typekit and [H&FJ](class:caps)’s Cloud.Typography. Created out of a desire for a place to keep track of my personal favorite web font pairings, Just My Type has grown to become a popular typography resource for many web designers.
-
-[Visit the site](http://justmytype.co).
+[Just My Type](http://justmytype.co) is a library of font pairings from Adobe Typekit and [H&FJ](class:caps)’s Cloud.Typography. Created out of a desire for a place to keep track of my personal favorite web font pairings, Just My Type has grown to become a popular typography resource for many web designers. [Visit the site](http://justmytype.co).
 
 ## Gateway
 [Gateway](http://gateway-learning.com) is a proof-of-concept website designed to help migrant workers learn the vocational skills needed for them to get a job in the UK. Me, [Jon](http://twitter.com/JWalter14), and [Stacy](http://twitter.com/StaceSlater) built Gateway in collaboration with [Greenhat Interactive](https://twitter.com/ghinteractive) as part of our degrees.
