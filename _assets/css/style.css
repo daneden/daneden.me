@@ -30,11 +30,11 @@
 \*-----------------------------------*/
 
 ::-moz-selection {
-  background-color: rgba(202, 193, 189, 0.5);
+  background-color: rgba(195, 195, 195, 0.5);
 }
 
 ::selection {
-  background-color: rgba(202, 193, 189, 0.5);
+  background-color: rgba(195, 195, 195, 0.5);
 }
 
 html {
@@ -48,7 +48,7 @@ html {
   -webkit-font-kerning: normal;
   -moz-font-kerning: normal;
   font-kerning: normal;
-  color: #5d4e47;
+  color: #525252;
   background-color: #fff;
 }
 
@@ -579,7 +579,7 @@ table th {
 .nav .active,
 .nav ul .active {
   font-weight: 700;
-  color: #4d413d;
+  color: #454545;
 }
 
 .nav--inline {
@@ -624,7 +624,7 @@ h1,
   line-height: 1;
   orphans: 3;
   widows: 3;
-  color: #4d413d;
+  color: #454545;
 }
 
 @media (max-width: 47.5em) {
@@ -694,7 +694,7 @@ h4,
 .meta,
 figcaption,
 .quotes article ul li > .caps {
-  color: #94827b;
+  color: #888888;
 }
 
 a,
@@ -736,7 +736,7 @@ em,
 
 hr {
   border: none;
-  border-bottom: 2px solid #e0dbd8;
+  border-bottom: 2px solid gainsboro;
   width: 84px;
   width: 6rem;
   padding-top: 33px;
@@ -752,7 +752,7 @@ hr {
   margin-top: -1px;
   height: 1px;
   background-image: none;
-  background-color: #cac1bd;
+  background-color: #c3c3c3;
 }
 
 ul,
@@ -783,7 +783,7 @@ blockquote {
   border-left: 2px solid #c64f52;
   margin-left: -22px;
   margin-left: -1.55556rem;
-  color: #5d4e47;
+  color: #525252;
 }
 
 blockquote > :last-child {
@@ -942,7 +942,7 @@ table {
   table-layout: auto;
   text-align: left;
   border-radius: .25em;
-  border: 1px solid #e0dbd8;
+  border: 1px solid gainsboro;
 }
 
 table tr {
@@ -962,25 +962,25 @@ table th {
   display: table-cell;
   line-height: 1.5;
   white-space: nowrap;
-  border-top: 1px solid #e0dbd8;
-  border-bottom: 1px solid #e0dbd8;
+  border-top: 1px solid gainsboro;
+  border-bottom: 1px solid gainsboro;
   border-collapse: collapse;
 }
 
 table td:first-child,
 table th:first-child {
   border-radius: .25em .25em 0 0;
-  border-left: 1px solid #e0dbd8;
+  border-left: 1px solid gainsboro;
 }
 
 table td:last-child,
 table th:last-child {
   border-radius: 0 0 .25em .25em;
-  border-right: 1px solid #e0dbd8;
+  border-right: 1px solid gainsboro;
 }
 
 table.table--striped tr:nth-child(even) {
-  background-color: #eeebe9;
+  background-color: #ebebeb;
 }
 
 /*-----------------------------------*\
@@ -1076,8 +1076,8 @@ pre {
   padding: 11px 21px;
   padding: .75rem 1.5rem;
   overflow: scroll;
-  background-color: #4d413d;
-  color: #94827b;
+  background-color: #454545;
+  color: #888888;
 }
 
 .highlight * {
@@ -1371,7 +1371,7 @@ pre {
 \*-----------------------------------*/
 
 .site__header {
-  color: #5d4e47;
+  color: #525252;
 }
 
 .site__title {
@@ -1385,7 +1385,7 @@ pre {
 }
 
 .site__title .title__desc {
-  color: #94827b;
+  color: #888888;
 }
 
 /*-----------------------------------*\
@@ -1425,7 +1425,7 @@ pre {
   min-height: 3.11111rem;
   margin-bottom: 22px;
   margin-bottom: 1.55556rem;
-  background-color: #e0dbd8;
+  background-color: gainsboro;
 }
 
 @media screen and (max-width: 56em) {
@@ -1472,8 +1472,8 @@ pre {
 \*-----------------------------------*/
 
 .site__footer {
-  background-color: #433d3b;
-  color: #b9b0ad;
+  background-color: #3f3f3f;
+  color: #b3b3b3;
 }
 
 .footer__avatar {

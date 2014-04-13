@@ -28,12 +28,12 @@ $font-Code: "Source Code Pro", Monaco, monospace;
 $white: #fff; // Duh.
 
 $blue: adjust-hue(#4fb5c6, 170);
-$light-gray: adjust-hue(#7B8994, 170);
-$lighter-gray: adjust-hue(#BDC4CA, 170);
-$gray: adjust-hue(#47525D, 170);
-$dark-gray: adjust-hue(#3D464D, 170);
+$light-gray: desaturate(adjust-hue(#7B8994, 170), 90%);
+$lighter-gray: desaturate(adjust-hue(#BDC4CA, 170), 90%);
+$gray: desaturate(adjust-hue(#47525D, 170), 90%);
+$dark-gray: desaturate(adjust-hue(#3D464D, 170), 90%);
 
-$subtle-gray: adjust-hue(#d8dce0, 170);
+$subtle-gray: desaturate(adjust-hue(#d8dce0, 170), 90%);
 
 $green: #46933D;
 $red: #C32F39;
