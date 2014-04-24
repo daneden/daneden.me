@@ -77,6 +77,38 @@ module.exports = function(grunt) {
       },
     },
 
+    responsive_images: {
+      dist: {
+        options: {
+          sizes: [{
+            name: 'small',
+            width: 320
+          }, {
+            name: 'small@2x',
+            width: 640
+          }, {
+            name: 'medium',
+            width: 640
+          }, {
+            name: 'medium@2x',
+            width: 1280
+          }, {
+            name: 'large',
+            width: 1024
+          }, {
+            name: 'large@2x',
+            width: 2048
+          }],
+        },
+        files: [{
+          expand: true,
+          src: ['**/*.{jpg,jpeg,gif,png}'],
+          cwd: './_uploads/',
+          dest: 'uploads/'
+        }],
+      }
+    },
+
     // Jekyll with drafts
     jekyll: {
       dist: {
@@ -137,11 +169,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-jekyll');
   grunt.loadNpmTasks('grunt-notify');
   grunt.loadNpmTasks('grunt-remfallback');
+  grunt.loadNpmTasks('grunt-responsive-images');
   grunt.loadNpmTasks('grunt-svg2png');
   grunt.loadNpmTasks('grunt-svgmin');
 
   // Register tasks
-  grunt.registerTask('default', ['svgmin', 'svg2png', 'sass', 'autoprefixer', 'remfallback', 'csso', 'jekyll', 'watch']);
-  grunt.registerTask('styles', ['sass','autoprefixer', 'remfallback', 'csso', 'jekyll'])
-  grunt.registerTask('prod', ['sass','autoprefixer', 'remfallback', 'csso', 'jekyll']);
+  grunt.registerTask('default', ['svgmin', 'svg2png', 'sass', 'autoprefixer', 'remfallback', 'csso', 'responsive_images', 'jekyll', 'watch']);
 };
