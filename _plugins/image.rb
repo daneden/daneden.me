@@ -44,17 +44,17 @@ module Jekyll
             @local = true
           end
 
-          @name, @ext = @url.split(/./).last
+          @name, @ext = @url.split(".")
         end
 
-        if @local == true
+        if @local
           source += "<picture>"
-          source += "<source srcset=\"#{@name}-small.#{@ext}\" media=\"(min-width: 320px)\" />"
-          source += "<source srcset=\"#{@name}-small@2x.#{@ext}\" media=\"(min-width: 320px), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144)\" />"
-          source += "<source srcset=\"#{@name}-medium.#{@ext}\" media=\"(min-width: 640px)\" />"
-          source += "<source srcset=\"#{@name}-medium@2x.#{@ext}\" media=\"(min-width: 640px), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144)\" />"
           source += "<source srcset=\"#{@name}-large.#{@ext}\" media=\"(min-width: 1024px)\" />"
           source += "<source srcset=\"#{@name}-large@2x.#{@ext}\" media=\"(min-width: 1024px), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144)\" />"
+          source += "<source srcset=\"#{@name}-medium.#{@ext}\" media=\"(min-width: 640px)\" />"
+          source += "<source srcset=\"#{@name}-medium@2x.#{@ext}\" media=\"(min-width: 640px), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144)\" />"
+          source += "<source srcset=\"#{@name}-small.#{@ext}\" media=\"(min-width: 320px)\" />"
+          source += "<source srcset=\"#{@name}-small@2x.#{@ext}\" media=\"(min-width: 320px), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144)\" />"
           source += "<img srcset=\"#{@name}-medium@2x.#{@ext}\" />"
           source += "</picture>"
         else
@@ -66,23 +66,37 @@ module Jekyll
         # Else if alignleft/right is not present, we want to break up the article for the image
         source = "</div><figure class='grid'>"
 
-        if @caption
-          source += "<picture class=\"grid__col--5-of-6 #{@class}\">" if @local == false
-          source += "<img src=\"#{@url}\" class=\"grid__col--5-of-6 #{@class}\" />" if @local == true
+        if @url =~ /(https?:\/\/)/
+          @local = false
+          unless defined?(@local)
+            @local = true
+          end
         else
-          source += "<picture class=\"grid__col--5-of-6 grid__col--push-1-of-6 #{@class}\">" if @local == false
-          source += "<img src=\"#{@url}\" class=\"grid__col--5-of-6 grid__col--push-1-of-6 #{@class}\" />" if @local == true
+          unless defined?(@local)
+            @local = true
+          end
+
+          @name, @ext = @url.split(".")
         end
 
-        if @local == true
-          source += "<source srcset=\"#{@name}-small.#{@ext}\" media=\"(min-width: 320px)\" />"
-          source += "<source srcset=\"#{@name}-small@2x.#{@ext}\" media=\"(min-width: 320px), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144)\" />"
-          source += "<source srcset=\"#{@name}-medium.#{@ext}\" media=\"(min-width: 640px)\" />"
-          source += "<source srcset=\"#{@name}-medium@2x.#{@ext}\" media=\"(min-width: 640px), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144)\" />"
+        if @caption
+          imgclass = @class.to_s + " grid__col--5-of-6"
+        else
+          imgclass = @class.to_s + " grid__col--5-of-6 grid__col--push-1-of-6"
+        end
+
+        if @local
+          source += "<picture class=\"#{imgclass}\">"
           source += "<source srcset=\"#{@name}-large.#{@ext}\" media=\"(min-width: 1024px)\" />"
           source += "<source srcset=\"#{@name}-large@2x.#{@ext}\" media=\"(min-width: 1024px), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144)\" />"
+          source += "<source srcset=\"#{@name}-medium.#{@ext}\" media=\"(min-width: 640px)\" />"
+          source += "<source srcset=\"#{@name}-medium@2x.#{@ext}\" media=\"(min-width: 640px), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144)\" />"
+          source += "<source srcset=\"#{@name}-small.#{@ext}\" media=\"(min-width: 320px)\" />"
+          source += "<source srcset=\"#{@name}-small@2x.#{@ext}\" media=\"(min-width: 320px), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144)\" />"
           source += "<img srcset=\"#{@name}-medium@2x.#{@ext}\" />"
           source += "</picture>"
+        else
+          source += "<img class=\"#{imgclass}\" src=\"#{@url}\" />"
         end
 
         source += "<figcaption class=\"grid__col--1-of-6 grid__col--d-first\">#{@caption}</figcaption>" if @caption
@@ -94,7 +108,7 @@ module Jekyll
         source += "<div class='grid__col--4-of-6 grid__col--centered'>"
       end
 
-      source
+      return source
     end
   end
 end
