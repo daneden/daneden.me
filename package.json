@@ -11,6 +11,7 @@
     "grunt-notify": "~0.2.16",
     "grunt-svgmin": "~0.3.0",
     "grunt-svg2png": "~0.2.1",
-    "grunt-remfallback": "git://github.com/daneden/grunt-remfallback.git"
+    "grunt-remfallback": "git://github.com/daneden/grunt-remfallback.git",
+    "grunt-responsive-images": "~0.1.2"
   }
 }
