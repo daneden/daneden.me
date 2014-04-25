@@ -49,12 +49,12 @@ module Jekyll
 
         if @local
           source += "<picture>"
-          source += "<source srcset=\"#{@name}-large.#{@ext}\" media=\"(min-width: 1024px)\" />"
-          source += "<source srcset=\"#{@name}-large@2x.#{@ext}\" media=\"(min-width: 1024px), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144)\" />"
-          source += "<source srcset=\"#{@name}-medium.#{@ext}\" media=\"(min-width: 640px)\" />"
-          source += "<source srcset=\"#{@name}-medium@2x.#{@ext}\" media=\"(min-width: 640px), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144)\" />"
           source += "<source srcset=\"#{@name}-small.#{@ext}\" media=\"(min-width: 320px)\" />"
           source += "<source srcset=\"#{@name}-small@2x.#{@ext}\" media=\"(min-width: 320px), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144)\" />"
+          source += "<source srcset=\"#{@name}-medium.#{@ext}\" media=\"(min-width: 640px)\" />"
+          source += "<source srcset=\"#{@name}-medium@2x.#{@ext}\" media=\"(min-width: 640px), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144)\" />"
+          source += "<source srcset=\"#{@name}-large.#{@ext}\" media=\"(min-width: 1024px)\" />"
+          source += "<source srcset=\"#{@name}-large@2x.#{@ext}\" media=\"(min-width: 1024px), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144)\" />"
           source += "<img srcset=\"#{@name}-medium@2x.#{@ext}\" />"
           source += "</picture>"
         else
@@ -87,12 +87,12 @@ module Jekyll
 
         if @local
           source += "<picture class=\"#{imgclass}\">"
-          source += "<source srcset=\"#{@name}-large.#{@ext}\" media=\"(min-width: 1024px)\" />"
-          source += "<source srcset=\"#{@name}-large@2x.#{@ext}\" media=\"(min-width: 1024px), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144)\" />"
-          source += "<source srcset=\"#{@name}-medium.#{@ext}\" media=\"(min-width: 640px)\" />"
-          source += "<source srcset=\"#{@name}-medium@2x.#{@ext}\" media=\"(min-width: 640px), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144)\" />"
           source += "<source srcset=\"#{@name}-small.#{@ext}\" media=\"(min-width: 320px)\" />"
           source += "<source srcset=\"#{@name}-small@2x.#{@ext}\" media=\"(min-width: 320px), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144)\" />"
+          source += "<source srcset=\"#{@name}-medium.#{@ext}\" media=\"(min-width: 640px)\" />"
+          source += "<source srcset=\"#{@name}-medium@2x.#{@ext}\" media=\"(min-width: 640px), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144)\" />"
+          source += "<source srcset=\"#{@name}-large.#{@ext}\" media=\"(min-width: 1024px)\" />"
+          source += "<source srcset=\"#{@name}-large@2x.#{@ext}\" media=\"(min-width: 1024px), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144)\" />"
           source += "<img srcset=\"#{@name}-medium@2x.#{@ext}\" />"
           source += "</picture>"
         else
