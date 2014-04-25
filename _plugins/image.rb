@@ -51,7 +51,7 @@ module Jekyll
           source += "<picture>"
           source += "<source srcset=\"#{@name}-large.#{@ext}, #{@name}-large@2x.#{@ext} 2x\" media=\"(min-width: 1024px)\" />"
           source += "<source srcset=\"#{@name}-medium.#{@ext}, #{@name}-medium@2x.#{@ext} 2x\" media=\"(min-width: 640px)\" />"
-          source += "<source srcset=\"#{@name}-small.#{@ext}, #{@name}-small@2x.#{@ext}\" media=\"(min-width: 320px)\" />"
+          source += "<source srcset=\"#{@name}-small.#{@ext}, #{@name}-small@2x.#{@ext} 2x\" media=\"(min-width: 320px)\" />"
           source += "<img srcset=\"#{@name}-small.#{@ext}\" />"
           source += "</picture>"
         else
@@ -86,7 +86,7 @@ module Jekyll
           source += "<picture class=\"#{imgclass}\">"
           source += "<source srcset=\"#{@name}-large.#{@ext}, #{@name}-large@2x.#{@ext} 2x\" media=\"(min-width: 1024px)\" />"
           source += "<source srcset=\"#{@name}-medium.#{@ext}, #{@name}-medium@2x.#{@ext} 2x\" media=\"(min-width: 640px)\" />"
-          source += "<source srcset=\"#{@name}-small.#{@ext}, #{@name}-small@2x.#{@ext}\" media=\"(min-width: 320px)\" />"
+          source += "<source srcset=\"#{@name}-small.#{@ext}, #{@name}-small@2x.#{@ext} 2x\" media=\"(min-width: 320px)\" />"
           source += "<img srcset=\"#{@name}-small.#{@ext}\" />"
           source += "</picture>"
         else
