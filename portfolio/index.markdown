@@ -2,7 +2,6 @@
 layout: page
 title: Portfolio
 in-nav: false
-scripts: ["/static/js/jquery.fitvids.custom.js"]
 ---
 
 I’m currently working at [Dropbox](http://dropbox.com) as a Designer. My work outside of Dropbox is what you see here; side projects, open source contributions, and personal itch-scratchers. [Dribbble](http://dribbble.com/dte) may provide a more current, up-to-date representation of my work.
