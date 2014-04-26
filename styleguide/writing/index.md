@@ -3,7 +3,7 @@ layout: page
 title: Writing Style Guide
 ---
 
-Having taken the time to outline the [visual styleguide](/styleguide) of my site, I thought it would only be fair to create a writing styleguide, too—for myself, as a personal reference, and for those interested in the writing styles and habits of others.
+Having taken the time to outline the [visual style guide](/styleguide) of my site, I thought it would only be fair to create a writing style guide, too—for myself, as a personal reference, and for those interested in the writing styles and habits of others.
 
 ## Language, Voice, and Persona
 I write with the intent of coming across a few ways:
