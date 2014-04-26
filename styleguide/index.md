@@ -13,7 +13,7 @@ As of today, December 30th 2013, the majority of typographic elements on the sit
 
 ## Heading Level Two
 
-Second level headings are used to split text into sections. First level headings are only used once per page, in the page or post title. [Hyperlinks](/styleguide) are underlined and colored blue when hovered.
+Second level headings are used to split text into sections. First level headings are only used once per page, in the page or post title. [Hyperlinks](/styleguide) are underlined and coloured red when hovered.
 
 - Bulleted lists look like this.
 - Multi-leveled bulleted lists look like this:
