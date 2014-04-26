@@ -25,5 +25,5 @@ If you have questions or feedback, you may want to open an issue on my
 [feedback repository](https://github.com/daneden/feedback). Of course, you can always
 email me at [dan.eden@me.com](mailto:dan.eden@me.com).
 One last thing; the source code for my entire site is available to view over
-[on GitHub](https://github.com/daneden/daneden.me). Take a look, suggest improvements,
+[on GitHub](https://bitbucket.org/daneden/daneden.me). Take a look, suggest improvements,
 and stay curious.
