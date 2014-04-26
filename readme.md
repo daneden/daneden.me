@@ -7,9 +7,9 @@ This repo is mostly for me. I, like many of you, host my site on GitHub for reas
 ## Points of Interest
 Some things you may find interesting:
 
-- [Uncompressed Sass files](https://github.com/daneden/daneden.me/tree/master/_assets/scss)
-- [Gruntfile.js](https://github.com/daneden/daneden.me/blob/master/Gruntfile.js) – the Grunt configuration used to help me develop locally. Pushing to the server triggers `jekyll build`, so any preprocessing is done locally.
-- And finally, the [plugins directory](https://github.com/daneden/daneden.me/tree/master/_plugins). There are a few very useful Jekyll plugins in here, including HTML5 image/`figure` tags, ordinal dates, and typographic helpers.
+- [Uncompressed Sass files](https://bitbucket.org/daneden/daneden.me/src/2a066a999866824bd25253c1adfe06cfe399e370/_assets/scss/?at=master)
+- [Gruntfile.js](https://bitbucket.org/daneden/daneden.me/src/2a066a999866824bd25253c1adfe06cfe399e370/Gruntfile.js?at=master) – the Grunt configuration used to help me develop locally. Pushing to the server triggers `jekyll build`, so any preprocessing is done locally.
+- And finally, the [plugins directory](https://bitbucket.org/daneden/daneden.me/src/2a066a999866824bd25253c1adfe06cfe399e370/_plugins/?at=master). There are a few very useful Jekyll plugins in here, including HTML5 image/`figure` tags, ordinal dates, and typographic helpers.
 
 ## Workflow
 The source code here on GitHub is all good and well, but there’s still a vital missing ingredient between here and the live site. Here’s a short overview of how I modify and build my site;
