@@ -2,7 +2,7 @@
 Welcome to the innards of [my website](http://daneden.me). Fairly recently, my site and I went through a somewhat philosophical change, opting for speed over much else on the backend, and for editorial-inspired design over personal taste. (Of course, the editorial design only goes as far as my personal taste – and writing style – allow.)
 
 ## Who This Repo is For
-This repo is mostly for me. I, like many of you, host my site on GitHub for reasons of portability, ease of work, and peace of mind. Beyond my own needs, I have also open-sourced this repo for you, the reader (and most likely developer), to explore the things that make my site tick.
+This repo is mostly for me. I, like many of you, host my site on Bitbucket for reasons of portability, ease of work, and peace of mind. Beyond my own needs, I have also open-sourced this repo for you, the reader (and most likely developer), to explore the things that make my site tick.
 
 ## Points of Interest
 Some things you may find interesting:
@@ -12,7 +12,7 @@ Some things you may find interesting:
 - And finally, the [plugins directory](https://bitbucket.org/daneden/daneden.me/src/2a066a999866824bd25253c1adfe06cfe399e370/_plugins/?at=master). There are a few very useful Jekyll plugins in here, including HTML5 image/`figure` tags, ordinal dates, and typographic helpers.
 
 ## Workflow
-The source code here on GitHub is all good and well, but there’s still a vital missing ingredient between here and the live site. Here’s a short overview of how I modify and build my site;
+The source code here on Bitbucket is all good and well, but there’s still a vital missing ingredient between here and the live site. Here’s a short overview of how I modify and build my site;
 
 1. [Grunt](http://gruntjs.com) is always running when I’m writing or designing. It handles a few things, as defined in my Gruntfile, namely:
   - SVGMin to minify my SVG files and remove unnecessary code
@@ -21,10 +21,10 @@ The source code here on GitHub is all good and well, but there’s still a vital
   - Autoprefixer to prefix CSS properties and values as needed
   - Jekyll to build my site into static HTML files
   - Finally, a “watch” task to watch my files for changes and perform the above tasks
-2. Jekyll builds my site in a `_site` directory, which is ignored by Git so that I don’t end up with duplicate content and unnecessary bloat on GitHub.
-3. When my post or design changes are in a state I’m happy with, I commit my changes and push to GitHub.
-4. When GitHub recieves my changes, a post-commit hook is called. This is a simple URL pointing to a PHP file on my server that is accessed by GitHub—something along the lines of `http://1.2.3.4/pull.php?repo=daneden.me` (I have this post-commit hook for several of my GitHub repos, hence the `repo` variable in the URL).
-5. The PHP script on my server pulls the changes from GitHub into the desired directory, and then runs `jekyll build`.
+2. Jekyll builds my site in a `_site` directory, which is ignored by Git so that I don’t end up with duplicate content and unnecessary bloat on Bitbucket.
+3. When my post or design changes are in a state I’m happy with, I commit my changes and push to Bitbucket.
+4. When Bitbucket recieves my changes, a post-commit hook is called. This is a simple URL pointing to a PHP file on my server that is accessed by Bitbucket—something along the lines of `http://1.2.3.4/pull.php?repo=daneden.me` (I have this post-commit hook for several of my Bitbucket repos, hence the `repo` variable in the URL).
+5. The PHP script on my server pulls the changes from Bitbucket into the desired directory, and then runs `jekyll build`.
 6. So long as the build succeeds, the site is now updated!
 
 The contents of the PHP script are the life and blood of this workflow, so here’s a modified/simplified version:
