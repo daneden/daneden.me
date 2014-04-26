@@ -174,5 +174,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-svgmin');
 
   // Register tasks
-  grunt.registerTask('default', ['svgmin', 'svg2png', 'sass', 'autoprefixer', 'remfallback', 'csso', 'responsive_images', 'jekyll', 'watch']);
+  grunt.registerTask('default', ['svgmin', 'svg2png', 'sass', 'autoprefixer', 'remfallback', 'csso', 'jekyll', 'watch']);
+  grunt.registerTask('images', ['responsive_images', 'svgmin', 'svg2png', 'styles']);
 };

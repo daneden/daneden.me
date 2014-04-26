@@ -16,7 +16,7 @@ If you want to, you can view and download [my résumé](http://cl.ly/OlXO).
 I say words on [Twitter](http://twitter.com/_dte). I get design critique on
 [Dribbble.](http://dribbble.com/dte) I connect with my family on
 [Facebook](http://www.facebook.com/daniel.eden). I write code and put it on
-[GitHub](https://github.com/daneden). Nothing out of the ordinary.
+[BitBucket](https://bitbucket.org/daneden/). Nothing out of the ordinary.
 
 I’m engaged to be married to the best [human being](http://twitter.com/iamemliy)
 I have ever known. We’re both from Manchester, UK. She likes horror movies. I don’t.

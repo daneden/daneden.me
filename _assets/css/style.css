@@ -775,6 +775,11 @@ dl dd {
   padding-left: 1.3rem;
 }
 
+mark {
+  color: #c64f52;
+  background: none;
+}
+
 blockquote {
   overflow: hidden;
   font-family: "Whitney SSm A", "Whitney SSm B", Geneva, Verdana, san-serif;
@@ -1540,7 +1545,7 @@ pre {
     font-size: 1rem;
     font-weight: 400;
 
-    color: $blue;
+    color: $highlight;
 
     .block__child {
       display: inline-block;

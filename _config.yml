@@ -16,9 +16,6 @@ include: [".htaccess"]
 exclude: ["node_modules", "package.json", "config.rb", "Gruntfile.js"]
 
 asset_bundler:
-  compress:
-    css: true
-    js: true
   markup_templates:
     js: "<script type='text/javascript' src='{{url}}' async></script>\n"
     css: "<link rel='stylesheet' type='text/css' href='{{url}}' />\n"

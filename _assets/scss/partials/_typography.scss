@@ -81,7 +81,7 @@ a, [data-href] {
   cursor: pointer;
 
   &:hover {
-    color: $blue;
+    color: $highlight;
   }
 }
 
@@ -145,11 +145,16 @@ dl {
   }
 }
 
+mark {
+  color: $highlight;
+  background: none;
+}
+
 blockquote {
   overflow: hidden;
   font-family: $font-Sans;
   padding-left: $baseline;
-  border-left: 2px solid $blue;
+  border-left: 2px solid $highlight;
   margin-left: -$baseline;
   color: $gray;
 

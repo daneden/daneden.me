@@ -1,9 +1,9 @@
 ---
 layout: page
-title: Styleguide
+title: Style Guide
 ---
 
-This page exists to demonstrate the visual styles of the various elements that comprise the design of this site. This is not only for my own benefit, as the designer and maintainer, but also to satisfy the curiosity of those interested in such things (like myself). To learn about my writing style, check the [writing styleguide](/styleguide/writing).
+This page exists to demonstrate the visual styles of the various elements that comprise the design of this site. This is not only for my own benefit, as the designer and maintainer, but also to satisfy the curiosity of those interested in such things (like myself). To learn about my writing style, check the [writing style guide](/styleguide/writing).
 
 As of today, December 30th 2013, the majority of typographic elements on the site are set in H<span class="caps">oefler</span> &amp; C<span class="caps">o</span>&rsquo;s Mercury ScreenSmart. *This is Mercury italic.* **This is Mercury bold.** First level headings are set in Chronicle Display. For more information about the typographic decisions behind the design of this site, read [this post](/2013/10/17/read-all-about-it/).
 

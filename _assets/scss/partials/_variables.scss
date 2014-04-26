@@ -27,7 +27,7 @@ $font-Code: "Source Code Pro", Monaco, monospace;
 // Group: Colors
 $white: #fff; // Duh.
 
-$blue: adjust-hue(#4fb5c6, 170);
+$highlight: adjust-hue(#4fb5c6, 170);
 $light-gray: desaturate(adjust-hue(#7B8994, 170), 90%);
 $lighter-gray: desaturate(adjust-hue(#BDC4CA, 170), 90%);
 $gray: desaturate(adjust-hue(#47525D, 170), 90%);
