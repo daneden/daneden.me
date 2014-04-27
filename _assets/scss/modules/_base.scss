@@ -22,7 +22,7 @@ html {
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: none;
   text-rendering: optimizeLegibility;
-  font-feature-settings: "kern" 1;
+  font-feature-settings: "kern";
   font-kerning: normal;
 
   color: $gray;

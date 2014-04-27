@@ -42,9 +42,9 @@ html {
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: none;
   text-rendering: optimizeLegibility;
-  -webkit-font-feature-settings: "kern" 1;
-  -moz-font-feature-settings: "kern" 1;
-  font-feature-settings: "kern" 1;
+  -webkit-font-feature-settings: "kern";
+  -moz-font-feature-settings: "kern";
+  font-feature-settings: "kern";
   -webkit-font-kerning: normal;
   -moz-font-kerning: normal;
   font-kerning: normal;
@@ -854,15 +854,7 @@ figure img {
 
 @media (max-width: 47.5em) {
   figure img {
-    max-width: none;
-    width: -webkit-calc(100% + 22px );
-    width: -webkit-calc(100% + 1.55556rem );
-    width: calc(100% + 22px );
-    width: calc(100% + 1.55556rem );
-    margin-left: -11px;
-    margin-left: -0.77778rem;
-    margin-right: -11px;
-    margin-right: -0.77778rem;
+    max-width: 100%;
   }
 }
 
@@ -1072,14 +1064,8 @@ pre {
 .highlight {
   margin-bottom: 22px;
   margin-bottom: 1.55556rem;
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  width: 100%;
-  margin-left: -21px;
-  margin-left: -1.5rem;
-  padding: 11px 21px;
-  padding: .75rem 1.5rem;
+  padding: 11px;
+  padding: 0.77778rem;
   overflow: scroll;
   background-color: #454545;
   color: #888888;

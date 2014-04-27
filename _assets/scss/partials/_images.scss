@@ -34,10 +34,7 @@ figure {
     margin-bottom: $baseline/2;
 
     @media ( max-width: $breakpoint-small ) {
-      max-width: none;
-      width: calc( 100% + #{$baseline} );
-      margin-left: -$baseline/2;
-      margin-right: -$baseline/2;
+      max-width: 100%;
     }
   }
 }

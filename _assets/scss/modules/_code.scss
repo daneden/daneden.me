@@ -12,10 +12,7 @@
 
 .highlight {
   margin-bottom: $baseline;
-  box-sizing: content-box;
-  width: 100%;
-  margin-left: -1.5rem;
-  padding: .75rem 1.5rem;
+  padding: $baseline/2;
   overflow: scroll;
 
   background-color: $dark-gray;
