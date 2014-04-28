@@ -8,6 +8,7 @@ These are the things I’ve heard and read that help me work, live, and think. T
 
 * * *
 
+- “Brevity is a by-product of&nbsp;vigor.” [W. Strunk & E.B. White](class:caps)
 - “I am made of earth, and my song made of&nbsp;words.” [Pablo Neruda](class:caps)
 - “I get up. I walk. I fall down. Meanwhile, I keep&nbsp;dancing.” [Daniel Hillel](class:caps)
 - “Money is circulated. Time is&nbsp;spent.” [Frank Chimero](class:caps)
