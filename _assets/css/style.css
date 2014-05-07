@@ -843,8 +843,8 @@ figcaption .caps {
 
 @media (max-width: 47.5em) {
   figcaption {
-    font-size: 14px;
-    font-size: .857142857rem;
+    font-size: 12px;
+    font-size: .75rem;
   }
 }
 
