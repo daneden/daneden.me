@@ -11,7 +11,7 @@ and [write](/blog) about design, courage, and lack thereof. I also like Disney, 
 and looking up.
 
 I’m currently working in San Francisco for [Dropbox](http://dropbox.com) as a Designer.
-If you want to, you can view and download [my résumé](http://cl.ly/OlXO).
+If you want to, you can view and download [my résumé](https://www.dropbox.com/s/kq431p4ey1b1ayu/R%C3%A9sum%C3%A9.pdf).
 
 I say words on [Twitter](http://twitter.com/_dte). I get design critique on
 [Dribbble.](http://dribbble.com/dte) I connect with my family on
