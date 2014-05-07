@@ -12,6 +12,8 @@
           @extend %gamma;
           @extend .meta;
 
+          font-style: normal;
+
           &:before {
             content: "";
             display: block;

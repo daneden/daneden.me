@@ -38,7 +38,7 @@
 }
 
 html {
-  font: 112.5%/1.55556 "Hoefler Text A", "Hoefler Text B", Georgia, serif;
+  font: 125%/1.4 "Hoefler Text A", "Hoefler Text B", Georgia, serif;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: none;
   text-rendering: optimizeLegibility;
@@ -54,7 +54,7 @@ html {
 
 @media (max-width: 47.5em) {
   html {
-    font-size: 87.5%;
+    font-size: 100%;
   }
 }
 
@@ -135,7 +135,7 @@ pre,
 .ultra {
   display: block;
   margin-bottom: 22px;
-  margin-bottom: 1.55556rem;
+  margin-bottom: 1.4rem;
 }
 
 p:empty,
@@ -155,18 +155,18 @@ pre:empty,
 }
 
 .o--p--dm {
-  margin-bottom: 44px;
-  margin-bottom: 3.11111rem;
+  margin-bottom: 45px;
+  margin-bottom: 2.8rem;
 }
 
 .o--p--hm {
   margin-bottom: 11px;
-  margin-bottom: 0.77778rem;
+  margin-bottom: 0.7rem;
 }
 
 .o--p--nm {
   margin-bottom: -22px;
-  margin-bottom: -1.55556rem;
+  margin-bottom: -1.4rem;
 }
 
 .o--b {
@@ -178,31 +178,31 @@ pre:empty,
 }
 
 .o--p--xxl {
-  font-size: 21px;
+  font-size: 24px;
   font-size: 1.5rem;
   line-height: 1.142857143;
 }
 
 .o--p--xl {
-  font-size: 17px;
+  font-size: 20px;
   font-size: 1.230769231rem;
   line-height: 1.375;
 }
 
 .o--p--l {
-  font-size: 16px;
+  font-size: 18px;
   font-size: 1.142857143rem;
   line-height: 1.5;
 }
 
 .o--p--s {
-  font-size: 12px;
+  font-size: 13px;
   font-size: .823529412rem;
   line-height: 1.5;
 }
 
 .o--p--xs {
-  font-size: 11px;
+  font-size: 12px;
   font-size: .75rem;
   line-height: 1.142857143;
 }
@@ -256,90 +256,90 @@ pre:empty,
 \*-----------------------------------*/
 
 .wrap {
-  max-width: 798px;
-  max-width: 57rem;
+  max-width: 816px;
+  max-width: 51rem;
   padding-left: 22px;
-  padding-left: 1.55556rem;
+  padding-left: 1.4rem;
   padding-right: 22px;
-  padding-right: 1.55556rem;
+  padding-right: 1.4rem;
   margin: 0 auto;
 }
 
 @media (max-width: 56em) {
   .wrap {
-    max-width: 504px;
+    max-width: 576px;
     max-width: 36rem;
   }
 }
 
 @media (max-width: 47.5em) {
   .wrap {
-    max-width: 476px;
+    max-width: 544px;
     max-width: 34rem;
     padding-left: 11px;
-    padding-left: 0.77778rem;
+    padding-left: 0.7rem;
     padding-right: 11px;
-    padding-right: 0.77778rem;
+    padding-right: 0.7rem;
   }
 }
 
 .island {
   padding: 22px;
-  padding: 1.55556rem;
+  padding: 1.4rem;
 }
 
 .island--v {
   padding-top: 22px;
-  padding-top: 1.55556rem;
+  padding-top: 1.4rem;
   padding-bottom: 22px;
-  padding-bottom: 1.55556rem;
+  padding-bottom: 1.4rem;
 }
 
 .island--h {
   padding-left: 22px;
-  padding-left: 1.55556rem;
+  padding-left: 1.4rem;
   padding-right: 22px;
-  padding-right: 1.55556rem;
+  padding-right: 1.4rem;
 }
 
 .isle,
 table td,
 table th {
   padding: 11px;
-  padding: 0.77778rem;
+  padding: 0.7rem;
 }
 
 .isle--v {
   padding-top: 11px;
-  padding-top: 0.77778rem;
+  padding-top: 0.7rem;
   padding-bottom: 11px;
-  padding-bottom: 0.77778rem;
+  padding-bottom: 0.7rem;
 }
 
 .isle--h {
   padding-left: 11px;
-  padding-left: 0.77778rem;
+  padding-left: 0.7rem;
   padding-right: 11px;
-  padding-right: 0.77778rem;
+  padding-right: 0.7rem;
 }
 
 .spit {
-  padding: 5px;
-  padding: 0.38889rem;
+  padding: 6px;
+  padding: 0.35rem;
 }
 
 .spit--v {
-  padding-top: 5px;
-  padding-top: 0.38889rem;
-  padding-bottom: 5px;
-  padding-bottom: 0.38889rem;
+  padding-top: 6px;
+  padding-top: 0.35rem;
+  padding-bottom: 6px;
+  padding-bottom: 0.35rem;
 }
 
 .spit--h {
-  padding-left: 5px;
-  padding-left: 0.38889rem;
-  padding-right: 5px;
-  padding-right: 0.38889rem;
+  padding-left: 6px;
+  padding-left: 0.35rem;
+  padding-right: 6px;
+  padding-right: 0.35rem;
 }
 
 .span-all,
@@ -372,11 +372,11 @@ table th {
 .grid {
   width: 104.5%;
   width: -webkit-calc(100% + 22px );
-  width: -webkit-calc(100% + 1.55556rem );
+  width: -webkit-calc(100% + 1.4rem );
   width: calc(100% + 22px );
-  width: calc(100% + 1.55556rem );
+  width: calc(100% + 1.4rem );
   margin-left: -22px;
-  margin-left: -1.55556rem;
+  margin-left: -1.4rem;
   /*=================================*/
   /*=================================*/
   /*=================================*/
@@ -402,12 +402,12 @@ table th {
 .grid .grid__col--5-of-5 {
   width: 95.5%;
   width: -webkit-calc(100% - 22px );
-  width: -webkit-calc(100% - 1.55556rem );
+  width: -webkit-calc(100% - 1.4rem );
   width: calc(100% - 22px );
-  width: calc(100% - 1.55556rem );
+  width: calc(100% - 1.4rem );
   padding-left: 0 !important;
   margin-left: 22px;
-  margin-left: 1.55556rem;
+  margin-left: 1.4rem;
 }
 
 .grid .grid__col--1-of-3,
@@ -458,7 +458,7 @@ table th {
   vertical-align: top;
   margin-right: -.24em;
   padding-left: 22px;
-  padding-left: 1.55556rem;
+  padding-left: 1.4rem;
   min-height: 1px;
 }
 
@@ -492,9 +492,9 @@ table th {
 .grid .grid__col--pull-1-of-4,
 .grid .alignleft {
   margin-left: -webkit-calc(-25% - 22px );
-  margin-left: -webkit-calc(-25% - 1.55556rem );
+  margin-left: -webkit-calc(-25% - 1.4rem );
   margin-left: calc(-25% - 22px );
-  margin-left: calc(-25% - 1.55556rem );
+  margin-left: calc(-25% - 1.4rem );
 }
 
 @media screen and (max-width: 47.5em) {
@@ -508,9 +508,9 @@ table th {
 .grid .grid__col--pull-1-of-4--right,
 .grid .alignright {
   margin-right: -webkit-calc(-25% - 22px );
-  margin-right: -webkit-calc(-25% - 1.55556rem );
+  margin-right: -webkit-calc(-25% - 1.4rem );
   margin-right: calc(-25% - 22px );
-  margin-right: calc(-25% - 1.55556rem );
+  margin-right: calc(-25% - 1.4rem );
 }
 
 @media screen and (max-width: 47.5em) {
@@ -615,12 +615,13 @@ table th {
 
 h1,
 .alpha {
-  margin-bottom: 44px;
-  margin-bottom: 3.11111rem;
+  margin-bottom: 45px;
+  margin-bottom: 2.8rem;
   font-family: "Requiem Display A", "Requiem Display B", "Hoefler Text A", "Hoefler Text B", Georgia, serif;
-  font-size: 44px;
-  font-size: 3.11111rem;
-  font-weight: 600;
+  font-size: 45px;
+  font-size: 2.8rem;
+  font-weight: 400;
+  letter-spacing: -.025em;
   line-height: 1;
   orphans: 3;
   widows: 3;
@@ -631,9 +632,9 @@ h1,
   h1,
   .alpha {
     margin-bottom: 22px;
-    margin-bottom: 1.55556rem;
-    font-size: 26px;
-    font-size: 1.86667rem;
+    margin-bottom: 1.4rem;
+    font-size: 27px;
+    font-size: 1.68rem;
   }
 }
 
@@ -647,11 +648,12 @@ h2,
 .beta,
 .quotes article ul li {
   padding-top: 11px;
-  padding-top: 0.77778rem;
+  padding-top: 0.7rem;
   margin-bottom: 11px;
-  margin-bottom: 0.77778rem;
-  font-size: 19px;
+  margin-bottom: 0.7rem;
+  font-size: 22px;
   font-size: 1.384615385rem;
+  font-style: italic;
   font-weight: 400;
   line-height: 1.2223;
   orphans: 3;
@@ -662,26 +664,26 @@ h3,
 .gamma,
 .quotes article ul li > .caps {
   padding-top: 11px;
-  padding-top: 0.77778rem;
+  padding-top: 0.7rem;
   margin-bottom: 11px;
-  margin-bottom: 0.77778rem;
-  font-size: 14px;
+  margin-bottom: 0.7rem;
+  font-size: 16px;
   font-size: 1rem;
   font-weight: 400;
-  line-height: 1.55556;
+  line-height: 1.4;
 }
 
 h4,
 .delta {
-  font-size: 14px;
+  font-size: 16px;
   font-size: 1rem;
   font-weight: 700;
-  line-height: 1.55556;
+  line-height: 1.4;
 }
 
 .mega {
   font-weight: 200;
-  font-size: 30px;
+  font-size: 34px;
   font-size: 2.153846154rem;
   line-height: 1.178571429;
 }
@@ -737,14 +739,14 @@ em,
 hr {
   border: none;
   border-bottom: 2px solid gainsboro;
-  width: 84px;
+  width: 96px;
   width: 6rem;
-  padding-top: 33px;
-  padding-top: 2.33333rem;
+  padding-top: 34px;
+  padding-top: 2.1rem;
   margin-top: -2px;
   margin-right: auto;
-  margin-bottom: 44px;
-  margin-bottom: 3.11111rem;
+  margin-bottom: 45px;
+  margin-bottom: 2.8rem;
   margin-left: auto;
 }
 
@@ -771,7 +773,7 @@ dl dt {
 }
 
 dl dd {
-  padding-left: 18px;
+  padding-left: 21px;
   padding-left: 1.3rem;
 }
 
@@ -782,13 +784,19 @@ mark {
 
 blockquote {
   overflow: hidden;
-  font-family: "Whitney SSm A", "Whitney SSm B", Geneva, Verdana, san-serif;
   padding-left: 22px;
-  padding-left: 1.55556rem;
-  border-left: 2px solid #c64f52;
+  padding-left: 1.4rem;
   margin-left: -22px;
-  margin-left: -1.55556rem;
-  color: #525252;
+  margin-left: -1.4rem;
+  font-family: "Hoefler Text A", "Hoefler Text B", Georgia, serif;
+  font-style: italic;
+  border-left: 2px solid #c64f52;
+  color: #888888;
+}
+
+blockquote h3,
+blockquote .gamma {
+  font-style: normal;
 }
 
 blockquote > :last-child {
@@ -802,7 +810,7 @@ blockquote > :last-child {
 }
 
 blockquote .caps {
-  font-family: "Whitney SSm SC A", "Whitney SSm SC B", "Whitney SSm A", "Whitney SSm B", Geneva, Verdana, san-serif;
+  font-family: "Hoefler Text SC A", "Hoefler Text SC B", "Hoefler Text A", "Hoefler Text B", Georgia, serif;
 }
 
 blockquote em {
@@ -817,7 +825,7 @@ blockquote em {
 
 figcaption {
   font-family: "Whitney SSm A", "Whitney SSm B", Geneva, Verdana, san-serif;
-  font-size: 9px;
+  font-size: 11px;
   font-size: .666666667rem;
   line-height: 1.555555833;
   text-align: right;
@@ -835,21 +843,21 @@ figcaption .caps {
 
 @media (max-width: 47.5em) {
   figcaption {
-    font-size: 12px;
+    font-size: 14px;
     font-size: .857142857rem;
   }
 }
 
 figure {
   padding-top: 11px;
-  padding-top: 0.77778rem;
+  padding-top: 0.7rem;
 }
 
 figure img {
   max-width: 100% !important;
   display: block;
   margin-bottom: 11px;
-  margin-bottom: 0.77778rem;
+  margin-bottom: 0.7rem;
 }
 
 @media (max-width: 47.5em) {
@@ -860,7 +868,7 @@ figure img {
 
 .aligncenter {
   display: block;
-  margin: 0 auto 21px;
+  margin: 0 auto 24px;
   margin: 0 auto 1.5rem;
 }
 
@@ -869,7 +877,7 @@ figure img {
   clear: both;
   padding-top: 0;
   margin-bottom: 11px;
-  margin-bottom: 0.77778rem;
+  margin-bottom: 0.7rem;
 }
 
 .alignleft img,
@@ -878,7 +886,7 @@ figure img {
   width: auto;
   margin: auto;
   margin-bottom: 11px;
-  margin-bottom: 0.77778rem;
+  margin-bottom: 0.7rem;
 }
 
 .alignleft figcaption,
@@ -889,17 +897,17 @@ figure img {
 .alignleft {
   float: left;
   margin-right: 22px;
-  margin-right: 1.55556rem;
+  margin-right: 1.4rem;
   padding-left: 22px;
-  padding-left: 1.55556rem;
+  padding-left: 1.4rem;
 }
 
 .alignright {
   float: right;
   margin-left: 22px;
-  margin-left: 1.55556rem;
+  margin-left: 1.4rem;
   padding-right: 22px;
-  padding-right: 1.55556rem;
+  padding-right: 1.4rem;
 }
 
 @media (max-width: 75em) {
@@ -919,7 +927,7 @@ figure img {
     max-width: 100%;
     margin: 0 auto;
     margin-bottom: 22px;
-    margin-bottom: 1.55556rem;
+    margin-bottom: 1.4rem;
     padding: 0;
   }
 }
@@ -1059,13 +1067,15 @@ table.table--striped tr:nth-child(even) {
 code,
 pre {
   font-family: "Source Code Pro", Monaco, monospace;
+  font-size: 12px;
+  font-size: .75rem;
 }
 
 .highlight {
   margin-bottom: 22px;
-  margin-bottom: 1.55556rem;
+  margin-bottom: 1.4rem;
   padding: 11px;
-  padding: 0.77778rem;
+  padding: 0.7rem;
   overflow: scroll;
   background-color: #454545;
   color: #888888;
@@ -1395,9 +1405,9 @@ pre {
 
 .site__content {
   padding-top: 22px;
-  padding-top: 1.55556rem;
-  padding-bottom: 65px;
-  padding-bottom: 4.66667rem;
+  padding-top: 1.4rem;
+  padding-bottom: 67px;
+  padding-bottom: 4.2rem;
 }
 
 @media screen and (max-width: 47.5em) {
@@ -1408,14 +1418,14 @@ pre {
 
 .entry__header {
   padding-bottom: 11px;
-  padding-bottom: 0.77778rem;
+  padding-bottom: 0.7rem;
 }
 
 .grid__col--demo div {
-  min-height: 44px;
-  min-height: 3.11111rem;
+  min-height: 45px;
+  min-height: 2.8rem;
   margin-bottom: 22px;
-  margin-bottom: 1.55556rem;
+  margin-bottom: 1.4rem;
   background-color: gainsboro;
 }
 
@@ -1432,27 +1442,28 @@ pre {
 }
 
 .quotes article ul li {
-  padding: 44px 0;
-  padding: 3.11111rem 0;
+  padding: 45px 0;
+  padding: 2.8rem 0;
 }
 
 .quotes article ul li > .caps {
   display: block;
+  font-style: normal;
 }
 
 .quotes article ul li > .caps:before {
   content: "";
   display: block;
-  width: 28px;
+  width: 32px;
   width: 2rem;
   padding-top: 11px;
-  padding-top: 0.77778rem;
+  padding-top: 0.7rem;
   border-bottom: 2px solid;
   margin-left: auto;
   margin-right: auto;
   margin-top: -2px;
   margin-bottom: 11px;
-  margin-bottom: 0.77778rem;
+  margin-bottom: 0.7rem;
   color: #c64f52;
 }
 
@@ -1468,16 +1479,16 @@ pre {
 }
 
 .footer__avatar {
-  width: 26px;
-  width: 1.86667rem;
-  height: 26px;
-  height: 1.86667rem;
+  width: 27px;
+  width: 1.68rem;
+  height: 27px;
+  height: 1.68rem;
   position: absolute;
   top: 9px;
-  top: 0.62222rem;
+  top: 0.56rem;
   left: 0;
   margin-left: -22px;
-  margin-left: -1.55556rem;
+  margin-left: -1.4rem;
   border-radius: 100%;
 }
 

@@ -12,7 +12,8 @@ h1, .alpha, %alpha {
 
   font-family: $font-Display;
   font-size: $baseline*2;
-  font-weight: 600;
+  font-weight: 400;
+  letter-spacing: -.025em;
   line-height: 1;
   orphans: 3;
   widows: 3;
@@ -36,6 +37,7 @@ h2, .beta, %beta {
   margin-bottom: $baseline/2;
 
   font-size: 1.384615385rem;
+  font-style: italic;
   font-weight: 400;
   line-height: 1.2223;
   orphans: 3;
@@ -152,11 +154,18 @@ mark {
 
 blockquote {
   overflow: hidden;
-  font-family: $font-Sans;
   padding-left: $baseline;
-  border-left: 2px solid $highlight;
   margin-left: -$baseline;
-  color: $gray;
+
+  font-family: $font-Serif;
+  font-style: italic;
+
+  border-left: 2px solid $highlight;
+  color: $light-gray;
+
+  h3, .gamma {
+    font-style: normal;
+  }
 
   > :last-child {
     margin-bottom: 0;
@@ -167,7 +176,7 @@ blockquote {
   }
 
   .caps {
-    font-family: $font-Sans-SC;
+    font-family: $font-Serif-SC;
   }
 
   em {
