@@ -14,13 +14,14 @@ $baseline: $baseline-unitless * 1rem;
 
 
 // Group: Fonts
-$font-Serif: "Mercury SSm A", "Mercury SSm B", Georgia, serif;
-$font-Serif-SC: "Mercury SSm SC A", "Mercury SSm SC B", $font-Serif;
+$font-Serif: "Hoefler Text A", "Hoefler Text B", Georgia, serif;
+$font-Serif-SC: "Hoefler Text SC A", "Hoefler Text SC B", $font-Serif;
 
 $font-Sans: "Whitney SSm A", "Whitney SSm B", Geneva, Verdana, san-serif;
 $font-Sans-SC: "Whitney SSm SC A", "Whitney SSm SC B", $font-Sans;
 
-$font-Display: "Chronicle Display A", "Chronicle Display B", $font-Serif;
+$font-Display: "Requiem Display A", "Requiem Display B", $font-Serif;
+$font-Display-SC: "Requiem Display SC A", "Requiem Display SC B", $font-Display;
 $font-Code: "Source Code Pro", Monaco, monospace;
 
 

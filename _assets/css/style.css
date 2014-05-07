@@ -38,7 +38,7 @@
 }
 
 html {
-  font: 112.5%/1.55556 "Mercury SSm A", "Mercury SSm B", Georgia, serif;
+  font: 112.5%/1.55556 "Hoefler Text A", "Hoefler Text B", Georgia, serif;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: none;
   text-rendering: optimizeLegibility;
@@ -617,7 +617,7 @@ h1,
 .alpha {
   margin-bottom: 44px;
   margin-bottom: 3.11111rem;
-  font-family: "Chronicle Display A", "Chronicle Display B", "Mercury SSm A", "Mercury SSm B", Georgia, serif;
+  font-family: "Requiem Display A", "Requiem Display B", "Hoefler Text A", "Hoefler Text B", Georgia, serif;
   font-size: 44px;
   font-size: 3.11111rem;
   font-weight: 600;
@@ -639,7 +639,7 @@ h1,
 
 h1 .caps,
 .alpha .caps {
-  font-family: "Chronicle Display A", "Chronicle Display B", "Mercury SSm A", "Mercury SSm B", Georgia, serif;
+  font-family: "Requiem Display SC A", "Requiem Display SC B", "Requiem Display A", "Requiem Display B", "Hoefler Text A", "Hoefler Text B", Georgia, serif;
   letter-spacing: 0;
 }
 
@@ -719,7 +719,7 @@ a:hover,
 h3,
 .gamma,
 .quotes article ul li > .caps {
-  font-family: "Mercury SSm SC A", "Mercury SSm SC B", "Mercury SSm A", "Mercury SSm B", Georgia, serif;
+  font-family: "Hoefler Text SC A", "Hoefler Text SC B", "Hoefler Text A", "Hoefler Text B", Georgia, serif;
   text-transform: uppercase;
   letter-spacing: .04em;
 }
