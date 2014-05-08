@@ -94,10 +94,10 @@ module.exports = function(grunt) {
             width: 1280
           }, {
             name: 'large',
-            width: 1024
+            width: 800
           }, {
             name: 'large@2x',
-            width: 2048
+            width: 1600
           }],
         },
         files: [{
