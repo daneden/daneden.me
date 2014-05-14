@@ -2,6 +2,7 @@
 layout: page
 class: quotes
 title: Quotes
+in-nav: true
 ---
 
 These are the things I’ve heard and read that help me work, live, and think. The things that shape my work and remind me that everything is going to be ok. And, of course, the things that make me smile. And they’re all from the pens and lips of those much smarter than I could hope to become. I’ll give it a bloody good go, though.

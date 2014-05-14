@@ -1,27 +1,55 @@
 /*-----------------------------------*\
 
-  Module: Header
+  Module: header
+
+  High-level styles for the header
 
 \*-----------------------------------*/
 
-.site__header {
-  color: $gray;
+
+.site__title {
+  text-decoration: none;
+
+  &:hover {
+    color: inherit;
+  }
+
+  span {
+    margin-bottom: 0;
+  }
 }
 
-  .site__title {
+.site__nav {
+  @extend %figcaption;
+
+  font-family: $font-Sans-SC;
+  letter-spacing: .05em;
+
+  border-top: 1px solid $lighter-gray;
+
+  li {
+    margin-top: -1px;
+
+    + li {
+      margin-left: 1rem;
+    }
+  }
+
+  a {
+    @extend %spit--v;
+
     text-decoration: none;
-    margin-bottom: 0;
 
-    .title__sep {
+    color: $light-gray;
+    border-top: 1px solid transparent;
+
+    &.active {
       color: $highlight;
-      vertical-align: -.05em;
+      border-top-color: $highlight;
     }
 
-    .title__desc {
-      color: $light-gray;
+    &:hover {
+      color: $highlight;
     }
   }
-
-  .site__nav {
-
-  }
+}

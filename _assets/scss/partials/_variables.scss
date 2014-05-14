@@ -1,9 +1,8 @@
 /*-----------------------------------*\
 
-  Partial: Variables
+  Partial: variables
 
-  Includes global variables for
-  colors and unit sizes
+  Global variables of all kinds
 
 \*-----------------------------------*/
 
@@ -26,20 +25,7 @@ $font-Code: "Source Code Pro", Monaco, monospace;
 
 
 // Group: Colors
-$white: #fff; // Duh.
-
-$highlight: adjust-hue(#4fb5c6, 170);
-$light-gray: desaturate(adjust-hue(#7B8994, 170), 90%);
-$lighter-gray: desaturate(adjust-hue(#BDC4CA, 170), 90%);
-$gray: desaturate(adjust-hue(#47525D, 170), 90%);
-$dark-gray: desaturate(adjust-hue(#3D464D, 170), 90%);
-
-$subtle-gray: desaturate(adjust-hue(#d8dce0, 170), 90%);
-
-$green: #46933D;
-$red: #C32F39;
-
-// Group: Breakpoints
-$breakpoint-small: 47.5em;
-$breakpoint-medium: 56em;
-$breakpoint-regular: 75em;
+$highlight: #c64f52;
+$dark-gray: #3d464d;
+$light-gray: #888;
+$lighter-gray: #d0d2d4;

@@ -11,84 +11,60 @@
 
 /*-----------------------------------*\
 
-  Partial: Variables
+  Partial: variables
 
-  Includes global variables for
-  colors and unit sizes
+  Global variables of all kinds
 
 \*-----------------------------------*/
 
 /*-----------------------------------*\
 
-  Module: Base
+  Module: base
 
-  Anything that can’t be abstracted
-  or assigned to another section.
-  Low-level stuff. Typically only body
-  and html styles.
+  High-level styles. Basically just
+  the html/:root element.
 
 \*-----------------------------------*/
 
-::-moz-selection {
-  background-color: rgba(195, 195, 195, 0.5);
-}
-
-::selection {
-  background-color: rgba(195, 195, 195, 0.5);
-}
-
-html {
+html,
+:root {
   font: 125%/1.4 "Hoefler Text A", "Hoefler Text B", Georgia, serif;
-  -webkit-font-smoothing: antialiased;
-  -webkit-text-size-adjust: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-feature-settings: "kern";
-  -moz-font-feature-settings: "kern";
-  font-feature-settings: "kern";
-  -webkit-font-kerning: normal;
-  -moz-font-kerning: normal;
-  font-kerning: normal;
-  color: #525252;
-  background-color: #fff;
-}
-
-@media (max-width: 47.5em) {
-  html {
-    font-size: 100%;
-  }
-}
-
-body {
-  overflow-x: hidden;
 }
 
 /*-----------------------------------*\
 
-  Partials: All
+  Partial: all
 
-  Includes all partials
+  Imports all abstracted components
+  and helpers
 
 \*-----------------------------------*/
 
 /*-----------------------------------*\
 
-  Partial: Mixins
+  Partial: variables
+
+  Global variables of all kinds
 
 \*-----------------------------------*/
 
 /*-----------------------------------*\
 
-  Partial: Reset
+  Partial: mixins
 
-  Blanket reset. For something less
-  volatile, I’d recommend Eric
-  Meyer’s reset.
+  Site-wide mixin definitions
 
 \*-----------------------------------*/
 
-*,
-:before,
-:after {
+/*-----------------------------------*\
+
+  Partial: reset
+
+  An overzealous CSS reset
+
+\*-----------------------------------*/
+
+* {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
@@ -101,365 +77,252 @@ img {
   max-width: 100%;
 }
 
-/*-----------------------------------*\
-
-  Partial: Helpers
-
-  Helper classes. Layout helpers,
-  clearfix, element hiding
-
-\*-----------------------------------*/
-
-.cf:before,
-.cf:after {
-  content: "";
-  display: table;
+ul,
+ol {
+  padding-left: 1.4em;
 }
 
-.cf:after {
-  clear: both;
-}
-
+header,
+main,
+footer,
 p,
-.o--p,
-[class*="o--p--"],
+table,
 figure,
 blockquote,
-table,
-form,
+pre,
 ul,
 ol,
-.img,
-pre,
-.mega,
-.ultra {
-  display: block;
-  margin-bottom: 22px;
+h1,
+.alpha,
+h2,
+.beta {
+  margin-bottom: 28px;
   margin-bottom: 1.4rem;
 }
 
-p:empty,
-.o--p:empty,
-[class*="o--p--"]:empty,
-figure:empty,
-blockquote:empty,
-table:empty,
-form:empty,
-ul:empty,
-ol:empty,
-.img:empty,
-pre:empty,
-.mega:empty,
-.ultra:empty {
-  display: none;
-}
+/*-----------------------------------*\
 
-.o--p--dm {
-  margin-bottom: 45px;
-  margin-bottom: 2.8rem;
-}
+  Partial: helpers
 
-.o--p--hm {
-  margin-bottom: 11px;
-  margin-bottom: 0.7rem;
-}
+  Helper classes for allsorts
 
-.o--p--nm {
-  margin-bottom: -22px;
-  margin-bottom: -1.4rem;
-}
+\*-----------------------------------*/
 
 .o--b {
   display: block;
 }
 
-.o--i {
-  display: inline-block;
+.o--p {
+  margin-bottom: 28px;
+  margin-bottom: 1.4rem;
 }
 
-.o--p--xxl {
-  font-size: 24px;
-  font-size: 1.5rem;
-  line-height: 1.142857143;
+.o--mz {
+  margin-bottom: 0;
 }
 
-.o--p--xl {
-  font-size: 20px;
-  font-size: 1.230769231rem;
-  line-height: 1.375;
-}
-
-.o--p--l {
-  font-size: 18px;
-  font-size: 1.142857143rem;
-  line-height: 1.5;
-}
-
-.o--p--s {
-  font-size: 13px;
-  font-size: .823529412rem;
-  line-height: 1.5;
-}
-
-.o--p--xs {
-  font-size: 12px;
-  font-size: .75rem;
-  line-height: 1.142857143;
-}
-
-.f--l,
-.f--r {
-  z-index: 1;
-}
-
-.f--l {
-  float: left;
-}
-
-.f--r {
-  float: right;
-}
-
-.standalone {
-  margin-bottom: 0 !important;
-}
-
-.hidden-v {
-  visibility: none;
-  position: absolute;
-  left: -99999px;
-  height: 1px;
-}
-
-@media (max-width: 47.5em) {
-  .hidden-v--m,
-  .hidden-r--m {
-    visibility: hidden;
-    position: absolute !important;
-    left: -99999px !important;
-    height: 1px !important;
-  }
-}
-
-@media screen and (max-width: 47.5em) {
-  .hidden-r--m {
-    display: none;
-  }
+.unl {
+  padding-left: 0;
+  list-style: none;
 }
 
 /*-----------------------------------*\
 
-  Partial: Layout
+  Partial: layout
 
-  Layout helpers
+  Layout rules
 
 \*-----------------------------------*/
 
-.wrap {
-  max-width: 816px;
-  max-width: 51rem;
-  padding-left: 22px;
-  padding-left: 1.4rem;
-  padding-right: 22px;
-  padding-right: 1.4rem;
-  margin: 0 auto;
-}
-
-@media (max-width: 56em) {
-  .wrap {
-    max-width: 576px;
-    max-width: 36rem;
-  }
-}
-
-@media (max-width: 47.5em) {
-  .wrap {
-    max-width: 544px;
-    max-width: 34rem;
-    padding-left: 11px;
-    padding-left: 0.7rem;
-    padding-right: 11px;
-    padding-right: 0.7rem;
-  }
-}
-
-.island {
-  padding: 22px;
-  padding: 1.4rem;
-}
-
-.island--v {
-  padding-top: 22px;
-  padding-top: 1.4rem;
-  padding-bottom: 22px;
-  padding-bottom: 1.4rem;
-}
-
-.island--h {
-  padding-left: 22px;
-  padding-left: 1.4rem;
-  padding-right: 22px;
-  padding-right: 1.4rem;
-}
-
-.isle,
-table td,
-table th {
-  padding: 11px;
-  padding: 0.7rem;
-}
-
-.isle--v {
-  padding-top: 11px;
-  padding-top: 0.7rem;
-  padding-bottom: 11px;
-  padding-bottom: 0.7rem;
-}
-
-.isle--h {
-  padding-left: 11px;
-  padding-left: 0.7rem;
-  padding-right: 11px;
-  padding-right: 0.7rem;
-}
-
-.spit {
-  padding: 6px;
-  padding: 0.35rem;
-}
-
-.spit--v {
-  padding-top: 6px;
-  padding-top: 0.35rem;
-  padding-bottom: 6px;
-  padding-bottom: 0.35rem;
-}
-
-.spit--h {
-  padding-left: 6px;
-  padding-left: 0.35rem;
-  padding-right: 6px;
-  padding-right: 0.35rem;
-}
-
-.span-all,
-.grid .grid__col--span-all,
-.grid > .span-all,
-.grid .grid__col--2-of-2,
-.grid .grid__col--3-of-3,
-.grid .grid__col--4-of-4,
-.grid .grid__col--5-of-5 {
-  width: 100%;
-}
-
 /*-----------------------------------*\
 
-  Grid classes
+  Partial: grid
 
-  Usage:
+  Powerful grid derived from Toast.
+  You'd be mad to use it.
+
+  Usage
+  =====
+
+  Assuming default values:
+
   <div class="grid">
-    <div class="grid__col--1-of-2">
-      Blah
+    <div class="grid__col grid__col--1-of-2">
+      A half-width column.
     </div>
-
-    <div class="grid__col--1-of-2">
-      Blop
+    <div class="grid__col grid__col--1-of-4 grid__col--pull-1-of-4">
+      A quarter, pulled left by its own width. You get this, right?
     </div>
   </div>
+
+
+  Customisation
+  =============
+
+  $grid-namespace and $grid-column-namespace
+  adjusts the class names for the grid. With
+  default values, grid wrappers have a class
+  of '.grid' and columns '.grid__col'.
+
+  $col-groups(n) adjusts column divisions.
+  For example, $col-groups(12) will produce
+  a 12-column grid. $col-groups(3,6,8)
+  will produce a 3-, 6-, and 8-column grid.
+
+  $gutter-width is—you guessed it—the gutter
+  width. Accepts any unit.
+
+  That's it. Have fun.
 
 \*-----------------------------------*/
 
 .grid {
-  width: 104.5%;
-  width: -webkit-calc(100% + 22px );
-  width: -webkit-calc(100% + 1.4rem );
-  width: calc(100% + 22px );
-  width: calc(100% + 1.4rem );
-  margin-left: -22px;
-  margin-left: -1.4rem;
-  /*=================================*/
-  /*=================================*/
-  /*=================================*/
-  /*=================================*/
-  /*=================================*/
-  /*=================================*/
-  /*=================================*/
-  /*=================================*/
-  /*=================================*/
+  list-style: none;
+  margin-left: -20px;
 }
 
-.grid .grid__col--1-of-2,
-.grid .grid__col--2-of-4,
-.grid .grid__col--3-of-6 {
+.grid > .grid__col--6-of-6 {
+  width: 100%;
+}
+
+.grid > .grid__col--3-of-6 {
   width: 50%;
 }
 
-.grid .grid__col--span-all,
-.grid > .span-all,
-.grid .grid__col--2-of-2,
-.grid .grid__col--3-of-3,
-.grid .grid__col--4-of-4,
-.grid .grid__col--5-of-5 {
-  width: 95.5%;
-  width: -webkit-calc(100% - 22px );
-  width: -webkit-calc(100% - 1.4rem );
-  width: calc(100% - 22px );
-  width: calc(100% - 1.4rem );
-  padding-left: 0 !important;
-  margin-left: 22px;
-  margin-left: 1.4rem;
-}
-
-.grid .grid__col--1-of-3,
-.grid .grid__col--2-of-6 {
+.grid > .grid__col--2-of-6 {
   width: 33.33333%;
 }
 
-.grid .grid__col--2-of-3,
-.grid .grid__col--4-of-6 {
+.grid > .grid__col--4-of-6 {
   width: 66.66667%;
 }
 
-.grid .grid__col--1-of-4 {
-  width: 25%;
+.grid > .grid__col--push-6-of-6 {
+  margin-left: 100%;
 }
 
-.grid .grid__col--3-of-4 {
-  width: 75%;
+.grid > .grid__col--push-3-of-6 {
+  margin-left: 50%;
 }
 
-.grid .grid__col--1-of-5 {
-  width: 20%;
+.grid > .grid__col--push-2-of-6 {
+  margin-left: 33.33333%;
 }
 
-.grid .grid__col--2-of-5 {
-  width: 40%;
+.grid > .grid__col--push-4-of-6 {
+  margin-left: 66.66667%;
 }
 
-.grid .grid__col--3-of-5 {
-  width: 60%;
+.grid > .grid__col--pull-6-of-6 {
+  margin-left: -100%;
 }
 
-.grid .grid__col--4-of-5 {
-  width: 80%;
+.grid > .grid__col--pull-3-of-6 {
+  margin-left: -50%;
 }
 
-.grid .grid__col--1-of-6 {
+.grid > .grid__col--pull-2-of-6 {
+  margin-left: -33.33333%;
+}
+
+.grid > .grid__col--pull-4-of-6 {
+  margin-left: -66.66667%;
+}
+
+.grid > .grid__col--1-of-6 {
   width: 16.66667%;
 }
 
-.grid .grid__col--5-of-6 {
+.grid > .grid__col--push-1-of-6 {
+  margin-left: 16.66667%;
+}
+
+.grid > .grid__col--pull-1-of-6 {
+  margin-left: -16.66667%;
+}
+
+.grid > .grid__col--5-of-6 {
   width: 83.33333%;
 }
 
+.grid > .grid__col--push-5-of-6 {
+  margin-left: 83.33333%;
+}
+
+.grid > .grid__col--pull-5-of-6 {
+  margin-left: -83.33333%;
+}
+
 .grid > *,
-.grid > [class*="grid__col--"] {
+.grid > .grid__col--1-of-6,
+.grid > .grid__col--push-1-of-6,
+.grid > .grid__col--pull-1-of-6,
+.grid > .grid__col--2-of-6,
+.grid > .grid__col--push-2-of-6,
+.grid > .grid__col--pull-2-of-6,
+.grid > .grid__col--3-of-6,
+.grid > .grid__col--push-3-of-6,
+.grid > .grid__col--pull-3-of-6,
+.grid > .grid__col--4-of-6,
+.grid > .grid__col--push-4-of-6,
+.grid > .grid__col--pull-4-of-6,
+.grid > .grid__col--5-of-6,
+.grid > .grid__col--push-5-of-6,
+.grid > .grid__col--pull-5-of-6,
+.grid > .grid__col--6-of-6,
+.grid > .grid__col--push-6-of-6,
+.grid > .grid__col--pull-6-of-6,
+.grid > .grid__col--6-of-6 {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   display: inline-block;
-  vertical-align: top;
-  margin-right: -.24em;
-  padding-left: 22px;
-  padding-left: 1.4rem;
+  margin-right: -.25em;
   min-height: 1px;
+  padding-left: 20px;
+  vertical-align: top;
+}
+
+@media screen and (max-width: 700px) {
+  .grid > *,
+  .grid > .grid__col--1-of-6,
+  .grid > .grid__col--push-1-of-6,
+  .grid > .grid__col--pull-1-of-6,
+  .grid > .grid__col--2-of-6,
+  .grid > .grid__col--push-2-of-6,
+  .grid > .grid__col--pull-2-of-6,
+  .grid > .grid__col--3-of-6,
+  .grid > .grid__col--push-3-of-6,
+  .grid > .grid__col--pull-3-of-6,
+  .grid > .grid__col--4-of-6,
+  .grid > .grid__col--push-4-of-6,
+  .grid > .grid__col--pull-4-of-6,
+  .grid > .grid__col--5-of-6,
+  .grid > .grid__col--push-5-of-6,
+  .grid > .grid__col--pull-5-of-6,
+  .grid > .grid__col--6-of-6,
+  .grid > .grid__col--push-6-of-6,
+  .grid > .grid__col--pull-6-of-6,
+  .grid > .grid__col--6-of-6 {
+    display: block;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    width: auto;
+  }
+}
+
+.grid .grid__col--centered {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 700px) {
+  .grid {
+    margin-left: 0;
+    width: auto;
+  }
 }
 
 .grid .grid__col--d-first {
@@ -479,1023 +342,398 @@ table th {
   padding-left: 0;
 }
 
-.grid.grid--no-gutter .grid__col--span-all,
-.grid.grid--no-gutter > .span-all {
+.grid.grid--no-gutter .grid__col--span-all {
   margin-left: 0;
   width: 100%;
 }
 
-.grid .grid__col--push-1-of-6 {
-  margin-left: 16.66667%;
+.grid .grid__col--ab {
+  vertical-align: bottom;
 }
 
-.grid .grid__col--pull-1-of-4,
-.grid .alignleft {
-  margin-left: -webkit-calc(-25% - 22px );
-  margin-left: -webkit-calc(-25% - 1.4rem );
-  margin-left: calc(-25% - 22px );
-  margin-left: calc(-25% - 1.4rem );
+.grid .grid__col--am {
+  vertical-align: middle;
 }
 
-@media screen and (max-width: 47.5em) {
-  .grid .grid__col--pull-1-of-4,
-  .grid .alignleft {
-    margin-left: 0;
-    width: auto;
-  }
-}
-
-.grid .grid__col--pull-1-of-4--right,
-.grid .alignright {
-  margin-right: -webkit-calc(-25% - 22px );
-  margin-right: -webkit-calc(-25% - 1.4rem );
-  margin-right: calc(-25% - 22px );
-  margin-right: calc(-25% - 1.4rem );
-}
-
-@media screen and (max-width: 47.5em) {
-  .grid .grid__col--pull-1-of-4--right,
-  .grid .alignright {
-    margin-right: 0;
-    width: auto;
-  }
-}
-
-@media screen and (max-width: 56em) {
-  .grid {
-    margin-left: 0;
-    width: auto;
-  }
-
-  .grid > *,
-  .grid > [class*="grid__col--"] {
-    display: block;
-    width: auto;
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 0;
-    float: none;
-  }
-
-  .grid .span-all,
-  .grid .grid__col--span-all {
-    width: auto;
-    margin-left: 0;
-  }
-}
-
-.grid .grid__col--centered {
-  display: block;
+.wrap {
+  max-width: 960px;
+  max-width: 48rem;
   margin: 0 auto;
 }
 
-.grid .grid__col--align-bottom {
-  vertical-align: bottom;
+body {
+  padding: 28px;
+  padding: 1.4rem;
+}
+
+.island {
+  padding: 28px;
+  padding: 1.4rem;
+}
+
+.island--v {
+  padding-top: 28px;
+  padding-top: 1.4rem;
+  padding-bottom: 28px;
+  padding-bottom: 1.4rem;
+}
+
+.isle {
+  padding: 14px;
+  padding: 0.7rem;
+}
+
+.isle--v,
+.site__footer section {
+  padding-top: 14px;
+  padding-top: 0.7rem;
+  padding-botton: 14px;
+  padding-botton: 0.7rem;
+}
+
+.spit {
+  padding: 7px;
+  padding: 0.35rem;
+}
+
+.spit--v,
+.site__nav a {
+  padding-top: 7px;
+  padding-top: 0.35rem;
+  padding-bottom: 7px;
+  padding-bottom: 0.35rem;
 }
 
 /*-----------------------------------*\
 
-  Partial: Objects
+  Partial: objects
 
-  Abstracted things and common
-  patterns go here. Not to be
-  confused with helpers.
+  Abstractions that can't be categorised
+  anywhere else
 
 \*-----------------------------------*/
 
 .nav,
-.nav ul {
-  padding-left: 0;
-  z-index: 1;
+.nav ul,
+.nav ol {
   list-style: none;
+  padding-left: 0;
 }
 
-.nav .nav--sub,
-.nav ul .nav--sub {
-  padding-left: 1.5em;
-  margin-bottom: 0;
-}
-
-.nav .active,
-.nav ul .active {
-  font-weight: 700;
-  color: #454545;
-}
-
-.nav--inline {
-  margin-bottom: 0;
-}
-
-.nav--inline li,
-.nav--inline li > a {
+.nav li,
+.nav a,
+.nav ul li,
+.nav ul a,
+.nav ol li,
+.nav ol a {
   display: inline-block;
-}
-
-.nav--inline li {
-  margin-left: 1em;
-}
-
-.img {
-  display: block;
-}
-
-.img.img--centered {
-  margin-left: auto;
-  margin-right: auto;
 }
 
 /*-----------------------------------*\
 
-  Partial: Typography
+  Partial: typography
 
-  Low-level type things. Headings,
-  links, blockquotes, etc.
+  Type styles
 
 \*-----------------------------------*/
 
 h1,
 .alpha {
-  margin-bottom: 45px;
-  margin-bottom: 2.8rem;
   font-family: "Requiem Display A", "Requiem Display B", "Hoefler Text A", "Hoefler Text B", Georgia, serif;
-  font-size: 45px;
-  font-size: 2.8rem;
   font-weight: 400;
-  letter-spacing: -.025em;
-  line-height: 1;
-  orphans: 3;
-  widows: 3;
-  color: #454545;
-}
-
-@media (max-width: 47.5em) {
-  h1,
-  .alpha {
-    margin-bottom: 22px;
-    margin-bottom: 1.4rem;
-    font-size: 27px;
-    font-size: 1.68rem;
-  }
+  font-size: 36px;
+  font-size: 1.8rem;
+  line-height: 1.166666667;
 }
 
 h1 .caps,
 .alpha .caps {
   font-family: "Requiem Display SC A", "Requiem Display SC B", "Requiem Display A", "Requiem Display B", "Hoefler Text A", "Hoefler Text B", Georgia, serif;
-  letter-spacing: 0;
 }
 
 h2,
-.beta,
-.quotes article ul li {
-  padding-top: 11px;
-  padding-top: 0.7rem;
-  margin-bottom: 11px;
-  margin-bottom: 0.7rem;
-  font-size: 22px;
-  font-size: 1.384615385rem;
-  font-style: italic;
+.beta {
+  font-size: 24px;
+  font-size: 1.2rem;
   font-weight: 400;
-  line-height: 1.2223;
-  orphans: 3;
-  widows: 3;
+  font-style: italic;
+  line-height: 1.166666667;
+}
+
+* + h2,
+* + .beta {
+  padding-top: 28px;
+  padding-top: 1.4rem;
 }
 
 h3,
-.gamma,
-.quotes article ul li > .caps {
-  padding-top: 11px;
-  padding-top: 0.7rem;
-  margin-bottom: 11px;
-  margin-bottom: 0.7rem;
-  font-size: 16px;
+.gamma {
+  margin-bottom: 14px;
+  margin-bottom: .7rem;
+  font-family: "Hoefler Text SC A", "Hoefler Text SC B", "Hoefler Text A", "Hoefler Text B", Georgia, serif;
+  font-size: 20px;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.4;
+  letter-spacing: .05em;
 }
 
 h4,
 .delta {
-  font-size: 16px;
-  font-size: 1rem;
-  font-weight: 700;
-  line-height: 1.4;
+  margin-bottom: 14px;
+  margin-bottom: .7rem;
+  font-family: "Whitney SSm SC A", "Whitney SSm SC B", "Whitney SSm A", "Whitney SSm B", Geneva, Verdana, san-serif;
+  font-size: 12px;
+  font-size: .6rem;
+  font-weight: 400;
+  line-height: 1.75;
+  letter-spacing: .05em;
 }
 
-.mega {
-  font-weight: 200;
-  font-size: 34px;
-  font-size: 2.153846154rem;
-  line-height: 1.178571429;
-}
-
-.promo {
-  text-align: center;
-}
-
-.subhead,
-.meta,
+small,
+.small,
 figcaption,
-.quotes article ul li > .caps {
+.site__nav {
+  font-size: 14px;
+  font-size: .7rem;
+  line-height: 1.357142857;
+}
+
+.meta {
   color: #888888;
 }
 
-a,
-[data-href] {
-  text-decoration: underline;
-  color: inherit;
-  -webkit-transition: .2s;
-  transition: .2s;
-  cursor: pointer;
+.caps {
+  font-family: "Hoefler Text SC A", "Hoefler Text SC B", "Hoefler Text A", "Hoefler Text B", Georgia, serif;
 }
 
-a:hover,
-[data-href]:hover {
+a {
+  color: inherit;
+}
+
+a:hover {
   color: #c64f52;
 }
 
-.a--plain {
-  text-decoration: none;
+figcaption,
+.site__nav {
+  font-family: "Whitney SSm A", "Whitney SSm B", Geneva, Verdana, san-serif;
+  color: #888888;
 }
 
-.caps,
-h3,
-.gamma,
-.quotes article ul li > .caps {
-  font-family: "Hoefler Text SC A", "Hoefler Text SC B", "Hoefler Text A", "Hoefler Text B", Georgia, serif;
-  text-transform: uppercase;
-  letter-spacing: .04em;
-}
-
-strong,
-.strong {
-  font-weight: 700;
-}
-
-em,
-.em {
-  font-style: italic;
+figcaption .caps,
+.site__nav .caps {
+  font-family: "Whitney SSm SC A", "Whitney SSm SC B", "Whitney SSm A", "Whitney SSm B", Geneva, Verdana, san-serif;
 }
 
 hr {
   border: none;
-  border-bottom: 2px solid gainsboro;
-  width: 96px;
+  border-bottom: 2px solid #d0d2d4;
+  width: 120px;
   width: 6rem;
-  padding-top: 34px;
+  padding-top: 42px;
   padding-top: 2.1rem;
   margin-top: -2px;
   margin-right: auto;
-  margin-bottom: 45px;
+  margin-bottom: 56px;
   margin-bottom: 2.8rem;
   margin-left: auto;
 }
 
-.hr--line {
-  margin-top: -1px;
-  height: 1px;
-  background-image: none;
-  background-color: #c3c3c3;
-}
-
-ul,
-ol {
-  padding-left: 1.35em;
-  overflow: hidden;
-}
-
-li > ul,
-li > ol {
-  margin-bottom: 0;
-}
-
-dl dt {
-  font-weight: 700;
-}
-
-dl dd {
-  padding-left: 21px;
-  padding-left: 1.3rem;
-}
-
-mark {
-  color: #c64f52;
-  background: none;
-}
-
-blockquote {
-  overflow: hidden;
-  padding-left: 22px;
-  padding-left: 1.4rem;
-  margin-left: -22px;
-  margin-left: -1.4rem;
-  font-family: "Hoefler Text A", "Hoefler Text B", Georgia, serif;
-  font-style: italic;
-  border-left: 2px solid #c64f52;
-  color: #888888;
-}
-
-blockquote h3,
-blockquote .gamma {
-  font-style: normal;
-}
-
-blockquote > :last-child {
-  margin-bottom: 0;
-}
-
-@media (max-width: 47.5em) {
-  blockquote {
-    margin-left: 0;
-  }
-}
-
-blockquote .caps {
-  font-family: "Hoefler Text SC A", "Hoefler Text SC B", "Hoefler Text A", "Hoefler Text B", Georgia, serif;
-}
-
-blockquote em {
-  font-style: normal;
-}
-
 /*-----------------------------------*\
 
-  Partial: Images
+  Partial: images
 
-\*-----------------------------------*/
-
-figcaption {
-  font-family: "Whitney SSm A", "Whitney SSm B", Geneva, Verdana, san-serif;
-  font-size: 11px;
-  font-size: .666666667rem;
-  line-height: 1.555555833;
-  text-align: right;
-}
-
-figcaption .caps {
-  font-family: "Whitney SSm SC A", "Whitney SSm SC B", "Whitney SSm A", "Whitney SSm B", Geneva, Verdana, san-serif;
-}
-
-@media (max-width: 56em) {
-  figcaption {
-    text-align: left;
-  }
-}
-
-@media (max-width: 47.5em) {
-  figcaption {
-    font-size: 12px;
-    font-size: .75rem;
-  }
-}
-
-figure {
-  padding-top: 11px;
-  padding-top: 0.7rem;
-}
-
-figure img {
-  max-width: 100% !important;
-  display: block;
-  margin-bottom: 11px;
-  margin-bottom: 0.7rem;
-}
-
-@media (max-width: 47.5em) {
-  figure img {
-    max-width: 100%;
-  }
-}
-
-.aligncenter {
-  display: block;
-  margin: 0 auto 24px;
-  margin: 0 auto 1.5rem;
-}
-
-.alignleft,
-.alignright {
-  clear: both;
-  padding-top: 0;
-  margin-bottom: 11px;
-  margin-bottom: 0.7rem;
-}
-
-.alignleft img,
-.alignright img {
-  max-width: 100%;
-  width: auto;
-  margin: auto;
-  margin-bottom: 11px;
-  margin-bottom: 0.7rem;
-}
-
-.alignleft figcaption,
-.alignright figcaption {
-  text-align: left;
-}
-
-.alignleft {
-  float: left;
-  margin-right: 22px;
-  margin-right: 1.4rem;
-  padding-left: 22px;
-  padding-left: 1.4rem;
-}
-
-.alignright {
-  float: right;
-  margin-left: 22px;
-  margin-left: 1.4rem;
-  padding-right: 22px;
-  padding-right: 1.4rem;
-}
-
-@media (max-width: 75em) {
-  .alignleft {
-    margin-left: -13.5%;
-  }
-
-  .alignright {
-    margin-right: -13.5%;
-  }
-}
-
-@media (max-width: 47.5em) {
-  .alignleft,
-  .alignright {
-    float: none;
-    max-width: 100%;
-    margin: 0 auto;
-    margin-bottom: 22px;
-    margin-bottom: 1.4rem;
-    padding: 0;
-  }
-}
-
-/*-----------------------------------*\
-
-  Partial: Tables
-
-  Table styles
-
-\*-----------------------------------*/
-
-table {
-  display: table;
-  width: 100%;
-  border-collapse: collapse;
-  table-layout: auto;
-  text-align: left;
-  border-radius: .25em;
-  border: 1px solid gainsboro;
-}
-
-table tr {
-  display: table-row;
-}
-
-table tbody,
-table thead,
-table tr {
-  border-collapse: collapse;
-}
-
-table td,
-table th {
-  width: auto;
-  vertical-align: top;
-  display: table-cell;
-  line-height: 1.5;
-  white-space: nowrap;
-  border-top: 1px solid gainsboro;
-  border-bottom: 1px solid gainsboro;
-  border-collapse: collapse;
-}
-
-table td:first-child,
-table th:first-child {
-  border-radius: .25em .25em 0 0;
-  border-left: 1px solid gainsboro;
-}
-
-table td:last-child,
-table th:last-child {
-  border-radius: 0 0 .25em .25em;
-  border-right: 1px solid gainsboro;
-}
-
-table.table--striped tr:nth-child(even) {
-  background-color: #ebebeb;
-}
-
-/*-----------------------------------*\
-
-  Partial: Forms
-
-  Form elements – Buttons, inputs,
-  and the like.
+  Sprite and image helpers should go here
 
 \*-----------------------------------*/
 
 /*-----------------------------------*\
 
-  Partial: Animations
+  Partial: tables
+
+  Table styling
 
 \*-----------------------------------*/
 
 /*-----------------------------------*\
 
-  Partial: Debug
+  Partial: forms
 
-  DEVELOPMENT ONLY
-  ================
-
-  Debugging helper classes for layout,
-  etc.
+  Form & form element styles
 
 \*-----------------------------------*/
 
-.debug--outline * {
+.debug-outline * {
   outline: 1px dotted rgba(0, 0, 0, 0.1);
   outline-offset: -1px;
 }
 
-.debug--outline *:hover {
+.debug-outline *:hover {
   outline-color: red;
 }
 
-.debug--grid body {
-  position: relative;
-}
-
-.debug--grid body:after {
-  position: absolute;
-  width: auto;
-  height: auto;
-  z-index: 9999;
-  content: '';
-  display: block;
-  pointer-events: none;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: url(http://basehold.it/image.php?height=28) repeat top left;
-}
-
-.debug--grid body:active:after {
-  display: none;
-}
-
 /*-----------------------------------*\
 
-  Module: All
+  Partial: animations
 
-  Includes all Modules
+  Animation definitions
 
 \*-----------------------------------*/
 
 /*-----------------------------------*\
 
-  Module: Code
+    Partial: debug
 
-  Code highlighting colors
+    Helpers for layout debugging, etc.
 
-\*-----------------------------------*/
+  \*-----------------------------------*/
 
-.highlight,
-code,
-pre {
-  font-family: "Source Code Pro", Monaco, monospace;
-  font-size: 12px;
-  font-size: .75rem;
+.debug-outline * {
+  outline: 1px dotted rgba(0, 0, 0, 0.1);
+  outline-offset: -1px;
 }
 
-.highlight {
-  margin-bottom: 22px;
-  margin-bottom: 1.4rem;
-  padding: 11px;
-  padding: 0.7rem;
-  overflow: scroll;
-  background-color: #454545;
-  color: #888888;
-}
-
-.highlight * {
-  display: initial;
-}
-
-.highlight .hll {
-  background-color: #ffffcc;
-}
-
-.highlight .c {
-  color: #656763;
-}
-
-.highlight .err {
-  color: #babdb6;
-}
-
-.highlight .g {
-  color: #babdb6;
-}
-
-.highlight .k {
-  color: #729fcf;
-}
-
-.highlight .l {
-  color: #babdb6;
-}
-
-.highlight .n {
-  color: #babdb6;
-}
-
-.highlight .o {
-  color: #babdb6;
-}
-
-.highlight .x {
-  color: #babdb6;
-}
-
-.highlight .p {
-  color: #babdb6;
-}
-
-.highlight .cm {
-  color: #656763;
-}
-
-.highlight .cp {
-  color: #fcaf3e;
-}
-
-.highlight .c1 {
-  color: #656763;
-}
-
-.highlight .cs {
-  color: #656763;
-}
-
-.highlight .gd {
-  color: #2e3436;
-  background-color: #0e1416;
-}
-
-.highlight .ge {
-  color: #babdb6;
-}
-
-.highlight .gr {
-  color: #eeeeec;
-  background-color: #cc0000;
-}
-
-.highlight .gh {
-  color: #fcaf3e;
-}
-
-.highlight .gi {
-  color: #babdb6;
-  background-color: #1f2b2d;
-}
-
-.highlight .go {
-  color: #2c3032;
-  background-color: #2c3032;
-}
-
-.highlight .gp {
-  color: #babdb6;
-}
-
-.highlight .gs {
-  color: #babdb6;
-}
-
-.highlight .gu {
-  color: #fcaf3e;
-}
-
-.highlight .gt {
-  color: #babdb6;
-}
-
-.highlight .kc {
-  color: #729fcf;
-}
-
-.highlight .kd {
-  color: #729fcf;
-}
-
-.highlight .kn {
-  color: #729fcf;
-}
-
-.highlight .kp {
-  color: #729fcf;
-}
-
-.highlight .kr {
-  color: #729fcf;
-}
-
-.highlight .kt {
-  color: #e3e7df;
-}
-
-.highlight .ld {
-  color: #babdb6;
-}
-
-.highlight .m {
-  color: #8ae234;
-}
-
-.highlight .s {
-  color: #babdb6;
-}
-
-.highlight .na {
-  color: #fcaf3e;
-}
-
-.highlight .nb {
-  color: #babdb6;
-}
-
-.highlight .nc {
-  color: #babdb6;
-}
-
-.highlight .no {
-  color: #8ae234;
-}
-
-.highlight .nd {
-  color: #babdb6;
-}
-
-.highlight .ni {
-  color: #888a85;
-}
-
-.highlight .ne {
-  color: #babdb6;
-}
-
-.highlight .nf {
-  color: #fcaf3e;
-}
-
-.highlight .nl {
-  color: #babdb6;
-}
-
-.highlight .nn {
-  color: #babdb6;
-}
-
-.highlight .nx {
-  color: #babdb6;
-}
-
-.highlight .py {
-  color: #babdb6;
-}
-
-.highlight .nt {
-  color: #729fcf;
-}
-
-.highlight .nv {
-  color: #ffffff;
-}
-
-.highlight .ow {
-  color: #babdb6;
-}
-
-.highlight .w {
-  color: #babdb6;
-}
-
-.highlight .mf {
-  color: #8ae234;
-}
-
-.highlight .mh {
-  color: #8ae234;
-}
-
-.highlight .mi {
-  color: #8ae234;
-}
-
-.highlight .mo {
-  color: #8ae234;
-}
-
-.highlight .sb {
-  color: #babdb6;
-}
-
-.highlight .sc {
-  color: #babdb6;
-}
-
-.highlight .sd {
-  color: #babdb6;
-}
-
-.highlight .s2 {
-  color: #babdb6;
-}
-
-.highlight .se {
-  color: #babdb6;
-}
-
-.highlight .sh {
-  color: #babdb6;
-}
-
-.highlight .si {
-  color: #babdb6;
-}
-
-.highlight .sx {
-  color: #babdb6;
-}
-
-.highlight .sr {
-  color: #babdb6;
-}
-
-.highlight .s1 {
-  color: #babdb6;
-}
-
-.highlight .ss {
-  color: #babdb6;
-}
-
-.highlight .bp {
-  color: #babdb6;
-}
-
-.highlight .vc {
-  color: #ffffff;
-}
-
-.highlight .vg {
-  color: #ffffff;
-}
-
-.highlight .vi {
-  color: #ffffff;
-}
-
-.highlight .il {
-  color: #8ae234;
+.debug-outline *:hover {
+  outline-color: red;
 }
 
 /*-----------------------------------*\
 
-  Module: Header
+  Module: all
+
+  Imports modules. Modules are site-
+  and page-specific styles that cannot
+  be easily abstracted.
 
 \*-----------------------------------*/
 
-.site__header {
-  color: #525252;
+/*-----------------------------------*\
+
+  Module: base
+
+  High-level styles. Basically just
+  the html/:root element.
+
+\*-----------------------------------*/
+
+html,
+:root {
+  font: 125%/1.4 "Hoefler Text A", "Hoefler Text B", Georgia, serif;
 }
+
+/*-----------------------------------*\
+
+  Module: code
+
+  Code highlighting styles
+
+\*-----------------------------------*/
+
+/*-----------------------------------*\
+
+  Module: header
+
+  High-level styles for the header
+
+\*-----------------------------------*/
 
 .site__title {
   text-decoration: none;
+}
+
+.site__title:hover {
+  color: inherit;
+}
+
+.site__title span {
   margin-bottom: 0;
 }
 
-.site__title .title__sep {
-  color: #c64f52;
-  vertical-align: -.05em;
+.site__nav {
+  font-family: "Whitney SSm SC A", "Whitney SSm SC B", "Whitney SSm A", "Whitney SSm B", Geneva, Verdana, san-serif;
+  letter-spacing: .05em;
+  border-top: 1px solid #d0d2d4;
 }
 
-.site__title .title__desc {
+.site__nav li {
+  margin-top: -1px;
+}
+
+.site__nav li + li {
+  margin-left: 20px;
+  margin-left: 1rem;
+}
+
+.site__nav a {
+  text-decoration: none;
   color: #888888;
+  border-top: 1px solid transparent;
+}
+
+.site__nav a.active {
+  color: #c64f52;
+  border-top-color: #c64f52;
+}
+
+.site__nav a:hover {
+  color: #c64f52;
 }
 
 /*-----------------------------------*\
 
-  Module: Content
+  Module: content
 
-  <body [class="page"]>
-    ...
-    <main class="site__content">
-      {{ content }}
-    </main>
-    ...
-  </body>
+  High-level styles for the main
+  content
 
 \*-----------------------------------*/
 
-.site__content {
-  padding-top: 22px;
-  padding-top: 1.4rem;
-  padding-bottom: 67px;
-  padding-bottom: 4.2rem;
+.posts__list .beta {
+  margin-bottom: 0;
 }
 
-@media screen and (max-width: 47.5em) {
-  .site__content {
-    padding-top: 0;
-  }
+.posts__list a {
+  text-decoration: none;
 }
 
-.entry__header {
-  padding-bottom: 11px;
-  padding-bottom: 0.7rem;
+.post__title {
+  margin-bottom: 0;
 }
 
-.grid__col--demo div {
-  min-height: 45px;
-  min-height: 2.8rem;
-  margin-bottom: 22px;
-  margin-bottom: 1.4rem;
-  background-color: gainsboro;
+p:empty {
+  display: none;
 }
 
-@media screen and (max-width: 56em) {
-  .grid__col--demo {
-    display: none !important;
-  }
-}
-
-.quotes article ul {
-  text-align: center;
-  list-style: none;
-  padding-left: 0;
-}
-
-.quotes article ul li {
-  padding: 45px 0;
-  padding: 2.8rem 0;
-}
-
-.quotes article ul li > .caps {
-  display: block;
-  font-style: normal;
-}
-
-.quotes article ul li > .caps:before {
-  content: "";
-  display: block;
-  width: 32px;
-  width: 2rem;
-  padding-top: 11px;
-  padding-top: 0.7rem;
-  border-bottom: 2px solid;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: -2px;
-  margin-bottom: 11px;
-  margin-bottom: 0.7rem;
-  color: #c64f52;
+.hentry {
+  margin-bottom: 84px;
+  margin-bottom: 4.2rem;
 }
 
 /*-----------------------------------*\
 
-  Module: Footer
+  Module: footer
+
+  High-level styles for the footer
 
 \*-----------------------------------*/
 
 .site__footer {
-  background-color: #3f3f3f;
-  color: #b3b3b3;
+  border-top: 1px solid #d0d2d4;
 }
 
-.footer__avatar {
-  width: 27px;
-  width: 1.68rem;
-  height: 27px;
-  height: 1.68rem;
+.site__footer section {
+  position: static;
+}
+
+.site__footer section + section:before {
+  content: "";
   position: absolute;
-  top: 9px;
-  top: 0.56rem;
-  left: 0;
-  margin-left: -22px;
-  margin-left: -1.4rem;
-  border-radius: 100%;
-}
-
-@media (max-width: 56em) {
-  .footer__avatar {
-    display: none;
-  }
+  width: 1px;
+  margin-left: -10px;
+  top: 0;
+  bottom: 0;
+  background-color: #d0d2d4;
 }
 
 /*===================================*\

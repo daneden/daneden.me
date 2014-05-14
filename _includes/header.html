@@ -20,21 +20,15 @@
   <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7158232/640444/css/fonts.css?123" />
 
   <!-- RSS, brotha -->
-   <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml" />
+ <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml" />
 
   <!-- You know, rather than reading the source like a chump, you can see it all on Bitbucket like a champ: https://bitbucket.org/daneden/daneden.me -->
 </head>
 <body{% if page.class %} class="{{ page.class }}"{% endif %}>
-  <header class="site__header" role="banner">
-    <div class="wrap cf">
-
-      <div class="grid">
-        <div class="grid__col--4-of-6 grid__col--centered">
-          <a class="site__title o--b island--v gamma" href="/" title="{{ site.name }} • {{ site.description }}">
-            {{ site.name }} <span class="title__sep">•</span> <span class="title__desc">{{ site.description }}</span>
-          </a>
-        </div>
-      </div>
-
-    </div>
+  <header class="wrap site__header" role="banner">
+    <a class="site__title o--b o--p" href="/" title="{{ site.name }} • Home">
+      <span class="delta o--b">From the desk of</span>
+      <span class="o--b">{{ site.name }}</span>
+    </a>
+    {% include nav.html %}
   </header>

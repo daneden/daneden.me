@@ -3,13 +3,13 @@ layout: page
 title: Blog
 in-nav: true
 ---
-<ul class="nav">
+<ul class="unl posts__list">
 {% for post in site.posts %}
 	{% if post.hidden != true %}
   <li class="o--p">
     <a class="a--plain" href="{{ post.url }}">
-      <span class="o--b beta standalone">{{ post.title }}</span>
-      <span class="caps meta o--b">{{ post.date | pretty }}</span>
+      <span class="o--b beta o--z">{{ post.title }}</span>
+      <span class="meta gamma o--b">{{ post.date | pretty }}</span>
     </a>
   </li>
   {% endif %}

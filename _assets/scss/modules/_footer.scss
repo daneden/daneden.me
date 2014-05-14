@@ -1,25 +1,27 @@
 /*-----------------------------------*\
 
-  Module: Footer
+  Module: footer
+
+  High-level styles for the footer
 
 \*-----------------------------------*/
 
 .site__footer {
-  background-color: mix(#393939, $dark-gray);
-  color: mix(#dfdfdf, $light-gray);
-}
+  border-top: 1px solid $lighter-gray;
 
-.footer__avatar {
-  width: $baseline*1.2;
-  height: $baseline*1.2;
-  position: absolute;
-  top: $baseline/2.5;
-  left: 0;
-  margin-left: -$baseline;
+  section {
+    @extend %isle--v;
+    position: static;
 
-  border-radius: 100%;
+    + section:before {
+      content: "";
+      position: absolute;
+      width: 1px;
+      margin-left: -$gutter-width/2;
+      top: 0;
+      bottom: 0;
 
-  @media ( max-width: $breakpoint-medium ) {
-    display: none;
+      background-color: $lighter-gray;
+    }
   }
 }

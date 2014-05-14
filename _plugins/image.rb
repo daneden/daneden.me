@@ -30,77 +30,35 @@ module Jekyll
     end
 
     def render(context)
-      if @class && (@class.match('alignleft') or @class.match('alignright'))
-        # If class includes alignleft or alignright, we want to handle markup differently
-        source = "<figure class='#{@class} grid__col--1-of-2'>"
+      source = "<figure>"
 
-        if @url =~ /(https?:\/\/)/
-          @local = false
-          unless defined?(@local)
-            @local = true
-          end
-        else
-          unless defined?(@local)
-            @local = true
-          end
-
-          @name, @ext = @url.split(".")
+      if @url =~ /(https?:\/\/)/
+        @local = false
+        unless defined?(@local)
+          @local = true
         end
-
-        if @local
-          source += "<picture>"
-          source += "<source srcset=\"#{@name}-large.#{@ext}, #{@name}-large@2x.#{@ext} 2x\" media=\"(min-width: 1024px)\" />"
-          source += "<source srcset=\"#{@name}-medium.#{@ext}, #{@name}-medium@2x.#{@ext} 2x\" media=\"(min-width: 640px)\" />"
-          source += "<source srcset=\"#{@name}-small.#{@ext}, #{@name}-small@2x.#{@ext} 2x\" media=\"(min-width: 320px)\" />"
-          source += "<img srcset=\"#{@name}-small.#{@ext}\" />"
-          source += "</picture>"
-        else
-          source += "<img src=\"#{@url}\" />"
-        end
-
-        source += "<figcaption>#{@caption}</figcaption>" if @caption
       else
-        # Else if alignleft/right is not present, we want to break up the article for the image
-        source = "</div><figure class='grid'>"
-
-        if @url =~ /(https?:\/\/)/
-          @local = false
-          unless defined?(@local)
-            @local = true
-          end
-        else
-          unless defined?(@local)
-            @local = true
-          end
-
-          @name, @ext = @url.split(".")
+        unless defined?(@local)
+          @local = true
         end
 
-        if @caption
-          imgclass = @class.to_s + " grid__col--5-of-6"
-        else
-          imgclass = @class.to_s + " grid__col--5-of-6 grid__col--push-1-of-6"
-        end
-
-        if @local
-          source += "<picture class=\"#{imgclass}\">"
-          source += "<source srcset=\"#{@name}-large.#{@ext}, #{@name}-large@2x.#{@ext} 2x\" media=\"(min-width: 1024px)\" />"
-          source += "<source srcset=\"#{@name}-medium.#{@ext}, #{@name}-medium@2x.#{@ext} 2x\" media=\"(min-width: 640px)\" />"
-          source += "<source srcset=\"#{@name}-small.#{@ext}, #{@name}-small@2x.#{@ext} 2x\" media=\"(min-width: 320px)\" />"
-          source += "<img srcset=\"#{@name}-small.#{@ext}\" />"
-          source += "</picture>"
-        else
-          source += "<img class=\"#{imgclass}\" src=\"#{@url}\" />"
-        end
-
-        source += "<figcaption class=\"grid__col--1-of-6 grid__col--d-first\">#{@caption}</figcaption>" if @caption
+        @name, @ext = @url.split(".")
       end
+
+      if @local
+        source += "<picture class=\"#{@class}\">"
+        source += "<source srcset=\"#{@name}-large.#{@ext}, #{@name}-large@2x.#{@ext} 2x\" media=\"(min-width: 1024px)\" />"
+        source += "<source srcset=\"#{@name}-medium.#{@ext}, #{@name}-medium@2x.#{@ext} 2x\" media=\"(min-width: 640px)\" />"
+        source += "<source srcset=\"#{@name}-small.#{@ext}, #{@name}-small@2x.#{@ext} 2x\" media=\"(min-width: 320px)\" />"
+        source += "<img srcset=\"#{@name}-small.#{@ext}\" />"
+        source += "</picture>"
+      else
+        source += "<img class=\"#{@class}\" src=\"#{@url}\" />"
+      end
+
+      source += "<figcaption>#{@caption}</figcaption>" if @caption
 
       source += "</figure>"
-
-      unless @class && (@class.match('alignleft') or @class.match('alignright'))
-        source += "<div class='grid__col--4-of-6 grid__col--centered'>"
-      end
 
       return source
     end

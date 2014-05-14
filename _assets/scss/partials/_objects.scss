@@ -1,48 +1,18 @@
 /*-----------------------------------*\
 
-  Partial: Objects
+  Partial: objects
 
-  Abstracted things and common
-  patterns go here. Not to be
-  confused with helpers.
+  Abstractions that can't be categorised
+  anywhere else
 
 \*-----------------------------------*/
 
-.nav, .nav ul {
-  padding-left: 0;
-  z-index: 1;
-
+// Group: nav
+.nav, .nav ul, .nav ol {
   list-style: none;
+  padding-left: 0;
 
-  .nav--sub {
-    padding-left: 1.5em;
-    margin-bottom: 0;
-  }
-
-  .active {
-    font-weight: 700;
-
-    color: $dark-gray;
-  }
-}
-
-.nav--inline {
-  margin-bottom: 0;
-
-  & li, & li > a {
+  li, a {
     display: inline-block;
-  }
-
-  li {
-    margin-left: 1em;
-  }
-}
-
-.img {
-  display: block;
-
-  &.img--centered {
-    margin-left: auto;
-    margin-right: auto;
   }
 }

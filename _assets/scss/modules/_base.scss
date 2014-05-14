@@ -1,38 +1,12 @@
 /*-----------------------------------*\
 
-  Module: Base
+  Module: base
 
-  Anything that can’t be abstracted
-  or assigned to another section.
-  Low-level stuff. Typically only body
-  and html styles.
+  High-level styles. Basically just
+  the html/:root element.
 
 \*-----------------------------------*/
 
-::-moz-selection {
-  background-color: transparentize($lighter-gray, .5);
-}
-
-::selection {
-  background-color: transparentize($lighter-gray, .5);
-}
-
-html {
-  font: #{$base-font-size}/#{$baseline-unitless} $font-Serif;
-  -webkit-font-smoothing: antialiased;
-  -webkit-text-size-adjust: none;
-  text-rendering: optimizeLegibility;
-  font-feature-settings: "kern";
-  font-kerning: normal;
-
-  color: $gray;
-  background-color: #fff;
-
-  @media (max-width: $breakpoint-small) {
-    font-size: 100%;
-  }
-}
-
-body {
-  overflow-x: hidden;
+html, :root {
+  font: 125%/1.4 $font-Serif;
 }

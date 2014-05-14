@@ -1,11 +1,13 @@
 /*-----------------------------------*\
 
-  Partials: All
+  Partial: all
 
-  Includes all partials
+  Imports all abstracted components
+  and helpers
 
 \*-----------------------------------*/
 
+@import "variables";
 @import "mixins";
 @import "reset";
 @import "helpers";
@@ -17,6 +19,6 @@
 @import "forms";
 @import "animations";
 
-// Group: Development
-// Include only in development environments
+// Group: development
+// Include only in dev environments
 @import "debug";

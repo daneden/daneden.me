@@ -1,9 +1,18 @@
 /*-----------------------------------*\
 
-  Partial: Forms
+  Partial: forms
 
-  Form elements – Buttons, inputs,
-  and the like.
+  Form & form element styles
 
 \*-----------------------------------*/
 
+.debug-outline {
+  * {
+    outline: 1px dotted rgba(0,0,0,.1);
+    outline-offset: -1px;
+
+    &:hover {
+      outline-color: red;
+    }
+  }
+}

@@ -1,113 +1,89 @@
 /*-----------------------------------*\
 
-  Partial: Typography
+  Partial: typography
 
-  Low-level type things. Headings,
-  links, blockquotes, etc.
+  Type styles
 
 \*-----------------------------------*/
 
 h1, .alpha, %alpha {
-  margin-bottom: $baseline*2;
-
   font-family: $font-Display;
-  font-size: $baseline*2;
   font-weight: 400;
-  letter-spacing: -.025em;
-  line-height: 1;
-  orphans: 3;
-  widows: 3;
-
-  color: $dark-gray;
-
-  @media (max-width: $breakpoint-small) {
-    margin-bottom: $baseline;
-
-    font-size: $baseline*1.2;
-  }
+  font-size: 1.8rem;
+  line-height: 1.166666667;
 
   .caps {
     font-family: $font-Display-SC;
-    letter-spacing: 0;
   }
 }
 
 h2, .beta, %beta {
-  padding-top: $baseline/2;
-  margin-bottom: $baseline/2;
-
-  font-size: 1.384615385rem;
-  font-style: italic;
+  font-size: 1.2rem;
   font-weight: 400;
-  line-height: 1.2223;
-  orphans: 3;
-  widows: 3;
+  font-style: italic;
+  line-height: 1.166666667;
+
+  * + & {
+    padding-top: $baseline;
+  }
 }
 
 h3, .gamma, %gamma {
-  padding-top: $baseline/2;
-  margin-bottom: $baseline/2;
+  margin-bottom: .7rem;
 
-  @extend %caps;
+  font-family: $font-Serif-SC;
   font-size: 1rem;
   font-weight: 400;
-  line-height: $baseline-unitless;
+  line-height: 1.4;
+  letter-spacing: .05em;
 }
 
 h4, .delta, %delta {
-  font-size: 1rem;
-  font-weight: 700;
-  line-height: $baseline-unitless;
+  margin-bottom: .7rem;
+
+  font-family: $font-Sans-SC;
+  font-size: .6rem;
+  font-weight: 400;
+  line-height: 1.75;
+  letter-spacing: .05em;
 }
 
-.mega {
-  font-weight: 200;
-  font-size: 2.153846154rem;
-  line-height: 1.178571429;
+small, .small, %small {
+  font-size: .7rem;
+  line-height: 1.357142857;
 }
 
-.promo {
-  text-align: center;
-}
-
-.subhead, .meta {
+.meta {
   color: $light-gray;
 }
 
-a, [data-href] {
-  text-decoration: underline;
+.caps {
+  font-family: $font-Serif-SC;
+}
 
+a {
   color: inherit;
-  transition: .2s;
-
-  cursor: pointer;
 
   &:hover {
     color: $highlight;
   }
 }
 
-.a--plain {
-  text-decoration: none;
-}
+figcaption, %figcaption {
+  @extend %small;
 
-.caps, %caps {
-  font-family: $font-Serif-SC;
-  text-transform: uppercase;
-  letter-spacing: .04em;
-}
+  font-family: $font-Sans;
 
-strong, .strong {
-  font-weight: 700;
-}
+  color: $light-gray;
 
-em, .em {
-  font-style: italic;
+  .caps {
+    font-family: $font-Sans-SC;
+  }
 }
 
 hr {
   border: none;
-  border-bottom: 2px solid $subtle-gray;
+  border-bottom: 2px solid $lighter-gray;
   width: 6rem;
   padding-top: $baseline*1.5;
   margin: {
@@ -115,71 +91,5 @@ hr {
     right: auto;
     bottom: $baseline*2;
     left: auto;
-  }
-}
-
-.hr--line {
-  margin-top: -1px;
-  height: 1px;
-
-  background-image: none;
-  background-color: $lighter-gray;
-}
-
-// Remove this for hanging bullets
-ul, ol {
-  padding-left: 1.35em;
-  overflow: hidden;
-}
-
-  // Restore some normality to our nested lists
-  li > ul, li > ol {
-    margin-bottom: 0;
-  }
-
-dl {
-  dt {
-    font-weight: 700;
-  }
-
-  dd {
-    padding-left: 1.3rem;
-  }
-}
-
-mark {
-  color: $highlight;
-  background: none;
-}
-
-blockquote {
-  overflow: hidden;
-  padding-left: $baseline;
-  margin-left: -$baseline;
-
-  font-family: $font-Serif;
-  font-style: italic;
-
-  border-left: 2px solid $highlight;
-  color: $light-gray;
-
-  h3, .gamma {
-    font-style: normal;
-  }
-
-  > :last-child {
-    margin-bottom: 0;
-  }
-
-  @media (max-width: $breakpoint-small) {
-    margin-left: 0;
-  }
-
-  .caps {
-    font-family: $font-Serif-SC;
-  }
-
-  em {
-    font-style: normal;
   }
 }

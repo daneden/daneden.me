@@ -27,39 +27,6 @@ A working, scalable, modular system is really what I feel is the ultimate, end-o
 
 Therein lies the difficulty; a system with such acute simplicity is actually a very complex thing indeed to achieve. Designing such a system requires a level of preparedness and thought that I fear many new designers aren’t fully aware of – my younger self included.
 
-</div>
-
-<div class="grid__col--1-of-2 grid__col--demo"><div></div></div>
-<div class="grid__col--1-of-2 grid__col--demo"><div></div></div>
-
-<div class="grid__col--1-of-6 grid__col--demo"><div></div></div>
-<div class="grid__col--1-of-6 grid__col--demo"><div></div></div>
-<div class="grid__col--1-of-6 grid__col--demo"><div></div></div>
-<div class="grid__col--1-of-6 grid__col--demo"><div></div></div>
-<div class="grid__col--1-of-6 grid__col--demo"><div></div></div>
-<div class="grid__col--1-of-6 grid__col--demo"><div></div></div>
-
-<div class="grid__col--1-of-4 grid__col--demo"><div></div></div>
-<div class="grid__col--1-of-4 grid__col--demo"><div></div></div>
-<div class="grid__col--1-of-4 grid__col--demo"><div></div></div>
-<div class="grid__col--1-of-4 grid__col--demo"><div></div></div>
-
-<div class="grid__col--1-of-3 grid__col--demo"><div></div></div>
-<div class="grid__col--1-of-3 grid__col--demo"><div></div></div>
-<div class="grid__col--1-of-3 grid__col--demo"><div></div></div>
-
-<div class="grid__col--1-of-5 grid__col--demo"><div></div></div>
-<div class="grid__col--1-of-5 grid__col--demo"><div></div></div>
-<div class="grid__col--1-of-5 grid__col--demo"><div></div></div>
-<div class="grid__col--1-of-5 grid__col--demo"><div></div></div>
-<div class="grid__col--1-of-5 grid__col--demo"><div></div></div>
-
-<div class="grid__col--1-of-6 grid__col--demo"><div></div></div>
-<div class="grid__col--2-of-3 grid__col--demo"><div></div></div>
-<div class="grid__col--1-of-6 grid__col--demo"><div></div></div>
-
-<div class="grid__col--4-of-6 grid__col--centered">
-
 So, back to the system. What you see before you today (the 20th of March 2014) is the result of approximately three years of tweaking, retweaking, restarting, grumbling, thinking, and mathematics. This is the system I’ve been working on for my own website for three years. It’s imperfect in a number of ways, but it’s given me a satisfaction unlike any other prior to it.
 
 One big thing that developing this system helped me realise was not to overthink the implementation details. I found myself getting so strung up in the mathematics of the implementation that I overlooked the simplest solution. A column that is half the width of its container isn’t 50% minus the gutter width; it’s 50%. Fold the gutter into the column itself. The columns act as shells into which content is poured.

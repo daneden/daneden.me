@@ -1,13 +1,15 @@
 /*-----------------------------------*\
 
-  Module: All
+  Module: all
 
-  Includes all Modules
+  Imports modules. Modules are site-
+  and page-specific styles that cannot
+  be easily abstracted.
 
 \*-----------------------------------*/
 
+@import "base";
 @import "code";
 @import "header";
 @import "content";
-@import "quotes";
 @import "footer";

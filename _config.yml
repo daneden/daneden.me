@@ -1,4 +1,4 @@
-name: Daniel Eden
+name: "Daniel T. Eden, Designer"
 description: Designer
 url: https://daneden.me
 
@@ -8,7 +8,7 @@ rdiscount:
     - smart
     - generate_toc
 
-pygments: true
+highlighter: true
 
 permalink: pretty
 

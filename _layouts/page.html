@@ -1,18 +1,15 @@
 {% include header.html %}
 
-	<main class="site__content post--single" role="main">
+	<main class="wrap site__content page" role="main">
 
-		<div class="wrap">
-			<article class="grid hentry">
-				<div class="grid__col--4-of-6 grid__col--centered">
-						<header class="entry__header">
-							<h1 class="entry__title entry-title">{{ page.title | widont }}</h1>
-						</header>
-
-						{{ content }}
-				</div>
-			</article>
-		</div>
+		<article class="grid hentry">
+			<header class="page__header grid__col grid__col--2-of-6">
+				<h1 class="page__title">{{ page.title | widont }}</h1>
+			</header>
+			<div class="grid__col grid__col--4-of-6">
+				{{ content }}
+			</div>
+		</article>
 
 	</main>
 

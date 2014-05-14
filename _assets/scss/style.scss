@@ -6,6 +6,10 @@
 
 \*-----------------------------------*/
 
+// Set debugging
+// Turn this switch off for production!
+$debug: true;
+
 // Import required/base CSS first
 @import "partials/variables";
 @import "modules/base";

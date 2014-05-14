@@ -1,42 +1,31 @@
 /*-----------------------------------*\
 
-  Module: Content
+  Module: content
 
-  <body [class="page"]>
-    ...
-    <main class="site__content">
-      {{ content }}
-    </main>
-    ...
-  </body>
+  High-level styles for the main
+  content
 
 \*-----------------------------------*/
 
-.site__content {
-  padding-top: $baseline;
-  padding-bottom: $baseline*3;
 
-  @media screen and ( max-width: $breakpoint-small ) {
-    padding-top: 0;
+.posts__list {
+  .beta {
+    margin-bottom: 0;
+  }
+
+  a {
+    text-decoration: none;
   }
 }
 
-.entry__header {
-  padding: {
-    bottom: $baseline/2;
-  }
+.post__title {
+  margin-bottom: 0;
 }
 
-.grid__col--demo {
+p:empty {
+  display: none;
+}
 
-  div {
-    min-height: $baseline*2;
-    margin-bottom: $baseline;
-
-    background-color: $subtle-gray;
-  }
-
-  @media screen and ( max-width: $breakpoint-medium ) {
-    display: none !important;
-  }
+.hentry {
+  margin-bottom: $baseline*3;
 }
