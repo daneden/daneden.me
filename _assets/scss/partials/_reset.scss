@@ -27,3 +27,7 @@ h1, .alpha,
 h2, .beta {
   margin-bottom: $baseline;
 }
+
+li ol, li ul {
+  margin-bottom: 0;
+}

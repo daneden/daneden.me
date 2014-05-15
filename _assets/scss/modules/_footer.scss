@@ -14,14 +14,20 @@
     position: static;
 
     + section:before {
-      content: "";
-      position: absolute;
-      width: 1px;
-      margin-left: -$gutter-width/2;
-      top: 0;
-      bottom: 0;
+      content: none;
+      content: normal;
 
-      background-color: $lighter-gray;
+      @media screen and (min-width: 700px) {
+        content: "";
+        position: absolute;
+        width: 1px;
+        margin-left: -$gutter-width/2;
+        top: 0;
+        bottom: 0;
+
+        background-color: $lighter-gray;
+      }
+
     }
   }
 }

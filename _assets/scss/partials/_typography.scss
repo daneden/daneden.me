@@ -42,15 +42,15 @@ h4, .delta, %delta {
   margin-bottom: .7rem;
 
   font-family: $font-Sans-SC;
-  font-size: .6rem;
+  font-size: .65rem;
   font-weight: 400;
-  line-height: 1.75;
+  line-height: 1.615384615;
   letter-spacing: .05em;
 }
 
 small, .small, %small {
-  font-size: .7rem;
-  line-height: 1.357142857;
+  font-size: .8rem;
+  line-height: 1.3125;
 }
 
 .meta {
@@ -70,8 +70,8 @@ a {
 }
 
 figcaption, %figcaption {
-  @extend %small;
-
+  font-size: .65rem;
+  line-height: 1.615384615;
   font-family: $font-Sans;
 
   color: $light-gray;
@@ -91,5 +91,21 @@ hr {
     right: auto;
     bottom: $baseline*2;
     left: auto;
+  }
+}
+
+mark {
+  background-color: transparent;
+  color: $highlight;
+}
+
+blockquote {
+  font-style: italic;
+
+  padding: 0 $baseline;
+  border-left: 2px solid $highlight;
+
+  em {
+    font-style: normal;
   }
 }

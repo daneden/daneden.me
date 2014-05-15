@@ -31,6 +31,13 @@ html,
   font: 125%/1.4 "Hoefler Text A", "Hoefler Text B", Georgia, serif;
 }
 
+@media (max-width: 700px) {
+  html,
+  :root {
+    font-size: 100%;
+  }
+}
+
 /*-----------------------------------*\
 
   Partial: all
@@ -96,8 +103,13 @@ h1,
 .alpha,
 h2,
 .beta {
-  margin-bottom: 28px;
+  margin-bottom: 22px;
   margin-bottom: 1.4rem;
+}
+
+li ol,
+li ul {
+  margin-bottom: 0;
 }
 
 /*-----------------------------------*\
@@ -113,7 +125,7 @@ h2,
 }
 
 .o--p {
-  margin-bottom: 28px;
+  margin-bottom: 22px;
   margin-bottom: 1.4rem;
 }
 
@@ -356,51 +368,52 @@ h2,
 }
 
 .wrap {
-  max-width: 960px;
+  max-width: 768px;
   max-width: 48rem;
   margin: 0 auto;
 }
 
 body {
-  padding: 28px;
+  padding: 22px;
   padding: 1.4rem;
 }
 
 .island {
-  padding: 28px;
+  padding: 22px;
   padding: 1.4rem;
 }
 
 .island--v {
-  padding-top: 28px;
+  padding-top: 22px;
   padding-top: 1.4rem;
-  padding-bottom: 28px;
+  padding-bottom: 22px;
   padding-bottom: 1.4rem;
 }
 
-.isle {
-  padding: 14px;
+.isle,
+.highlight pre {
+  padding: 11px;
   padding: 0.7rem;
 }
 
 .isle--v,
 .site__footer section {
-  padding-top: 14px;
+  padding-top: 11px;
   padding-top: 0.7rem;
-  padding-botton: 14px;
+  padding-botton: 11px;
   padding-botton: 0.7rem;
 }
 
 .spit {
-  padding: 7px;
+  padding: 6px;
   padding: 0.35rem;
 }
 
 .spit--v,
 .site__nav a {
-  padding-top: 7px;
+  padding-top: 6px;
   padding-top: 0.35rem;
-  padding-bottom: 7px;
+  padding-bottom: 6px;
   padding-bottom: 0.35rem;
 }
 
@@ -441,7 +454,7 @@ h1,
 .alpha {
   font-family: "Requiem Display A", "Requiem Display B", "Hoefler Text A", "Hoefler Text B", Georgia, serif;
   font-weight: 400;
-  font-size: 36px;
+  font-size: 29px;
   font-size: 1.8rem;
   line-height: 1.166666667;
 }
@@ -453,7 +466,7 @@ h1 .caps,
 
 h2,
 .beta {
-  font-size: 24px;
+  font-size: 19px;
   font-size: 1.2rem;
   font-weight: 400;
   font-style: italic;
@@ -462,16 +475,16 @@ h2,
 
 * + h2,
 * + .beta {
-  padding-top: 28px;
+  padding-top: 22px;
   padding-top: 1.4rem;
 }
 
 h3,
 .gamma {
-  margin-bottom: 14px;
+  margin-bottom: 11px;
   margin-bottom: .7rem;
   font-family: "Hoefler Text SC A", "Hoefler Text SC B", "Hoefler Text A", "Hoefler Text B", Georgia, serif;
-  font-size: 20px;
+  font-size: 16px;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.4;
@@ -480,23 +493,21 @@ h3,
 
 h4,
 .delta {
-  margin-bottom: 14px;
+  margin-bottom: 11px;
   margin-bottom: .7rem;
   font-family: "Whitney SSm SC A", "Whitney SSm SC B", "Whitney SSm A", "Whitney SSm B", Geneva, Verdana, san-serif;
-  font-size: 12px;
-  font-size: .6rem;
+  font-size: 10px;
+  font-size: .65rem;
   font-weight: 400;
-  line-height: 1.75;
+  line-height: 1.615384615;
   letter-spacing: .05em;
 }
 
 small,
-.small,
-figcaption,
-.site__nav {
-  font-size: 14px;
-  font-size: .7rem;
-  line-height: 1.357142857;
+.small {
+  font-size: 13px;
+  font-size: .8rem;
+  line-height: 1.3125;
 }
 
 .meta {
@@ -517,6 +528,9 @@ a:hover {
 
 figcaption,
 .site__nav {
+  font-size: 10px;
+  font-size: .65rem;
+  line-height: 1.615384615;
   font-family: "Whitney SSm A", "Whitney SSm B", Geneva, Verdana, san-serif;
   color: #888888;
 }
@@ -529,15 +543,31 @@ figcaption .caps,
 hr {
   border: none;
   border-bottom: 2px solid #d0d2d4;
-  width: 120px;
+  width: 96px;
   width: 6rem;
-  padding-top: 42px;
+  padding-top: 34px;
   padding-top: 2.1rem;
   margin-top: -2px;
   margin-right: auto;
-  margin-bottom: 56px;
+  margin-bottom: 45px;
   margin-bottom: 2.8rem;
   margin-left: auto;
+}
+
+mark {
+  background-color: transparent;
+  color: #c64f52;
+}
+
+blockquote {
+  font-style: italic;
+  padding: 0 22px;
+  padding: 0 1.4rem;
+  border-left: 2px solid #c64f52;
+}
+
+blockquote em {
+  font-style: normal;
 }
 
 /*-----------------------------------*\
@@ -547,6 +577,12 @@ hr {
   Sprite and image helpers should go here
 
 \*-----------------------------------*/
+
+.figure img {
+  display: block;
+  margin-bottom: 11px;
+  margin-bottom: 0.7rem;
+}
 
 /*-----------------------------------*\
 
@@ -622,6 +658,13 @@ html,
   font: 125%/1.4 "Hoefler Text A", "Hoefler Text B", Georgia, serif;
 }
 
+@media (max-width: 700px) {
+  html,
+  :root {
+    font-size: 100%;
+  }
+}
+
 /*-----------------------------------*\
 
   Module: code
@@ -629,6 +672,320 @@ html,
   Code highlighting styles
 
 \*-----------------------------------*/
+
+code,
+pre {
+  font: 85%/1.647058824 "Source Code Pro", Menlo, Consolas, monospace;
+}
+
+.highlight pre {
+  max-width: 100%;
+  overflow: scroll;
+  border-radius: .25em;
+  background-color: #fafcfd;
+  -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+  /* Comment */
+  /* Error */
+  /* Keyword */
+  /* Comment.Multiline */
+  /* Comment.Preproc */
+  /* Comment.Single */
+  /* Comment.Special */
+  /* Generic.Deleted */
+  /* Generic.Emph */
+  /* Generic.Error */
+  /* Generic.Heading */
+  /* Generic.Inserted */
+  /* Generic.Output */
+  /* Generic.Prompt */
+  /* Generic.Strong */
+  /* Generic.Subheading */
+  /* Generic.Traceback */
+  /* Keyword.Constant */
+  /* Keyword.Declaration */
+  /* Keyword.Namespace */
+  /* Keyword.Pseudo */
+  /* Keyword.Reserved */
+  /* Keyword.Type */
+  /* Literal.Number */
+  /* Literal.String */
+  /* Name.Attribute */
+  /* Name.Builtin */
+  /* Name.Class */
+  /* Name.Constant */
+  /* Name.Decorator */
+  /* Name.Entity */
+  /* Name.Function */
+  /* Name.Namespace */
+  /* Name.Tag */
+  /* Name.Variable */
+  /* Operator.Word */
+  /* Text.Whitespace */
+  /* Literal.Number.Float */
+  /* Literal.Number.Hex */
+  /* Literal.Number.Integer */
+  /* Literal.Number.Oct */
+  /* Literal.String.Backtick */
+  /* Literal.String.Char */
+  /* Literal.String.Doc */
+  /* Literal.String.Double */
+  /* Literal.String.Escape */
+  /* Literal.String.Heredoc */
+  /* Literal.String.Interpol */
+  /* Literal.String.Other */
+  /* Literal.String.Regex */
+  /* Literal.String.Single */
+  /* Literal.String.Symbol */
+  /* Name.Builtin.Pseudo */
+  /* Name.Variable.Class */
+  /* Name.Variable.Global */
+  /* Name.Variable.Instance */
+  /* Literal.Number.Integer.Long */
+}
+
+.highlight pre .hll {
+  background-color: #ffffcc;
+}
+
+.highlight pre .c {
+  color: #aaaaaa;
+  font-style: italic;
+}
+
+.highlight pre .err {
+  color: #F00000;
+  background-color: #f0a0a0;
+}
+
+.highlight pre .k {
+  color: #0000aa;
+}
+
+.highlight pre .cm {
+  color: #aaaaaa;
+  font-style: italic;
+}
+
+.highlight pre .cp {
+  color: #4c8317;
+}
+
+.highlight pre .c1 {
+  color: #aaaaaa;
+  font-style: italic;
+}
+
+.highlight pre .cs {
+  color: #0000aa;
+  font-style: italic;
+}
+
+.highlight pre .gd {
+  color: #aa0000;
+}
+
+.highlight pre .ge {
+  font-style: italic;
+}
+
+.highlight pre .gr {
+  color: #aa0000;
+}
+
+.highlight pre .gh {
+  color: #000080;
+  font-weight: bold;
+}
+
+.highlight pre .gi {
+  color: #00aa00;
+}
+
+.highlight pre .go {
+  color: #888888;
+}
+
+.highlight pre .gp {
+  color: #555555;
+}
+
+.highlight pre .gs {
+  font-weight: bold;
+}
+
+.highlight pre .gu {
+  color: #800080;
+  font-weight: bold;
+}
+
+.highlight pre .gt {
+  color: #aa0000;
+}
+
+.highlight pre .kc {
+  color: #0000aa;
+}
+
+.highlight pre .kd {
+  color: #0000aa;
+}
+
+.highlight pre .kn {
+  color: #0000aa;
+}
+
+.highlight pre .kp {
+  color: #0000aa;
+}
+
+.highlight pre .kr {
+  color: #0000aa;
+}
+
+.highlight pre .kt {
+  color: #00aaaa;
+}
+
+.highlight pre .m {
+  color: #009999;
+}
+
+.highlight pre .s {
+  color: #aa5500;
+}
+
+.highlight pre .na {
+  color: dodgerblue;
+}
+
+.highlight pre .nb {
+  color: #00aaaa;
+}
+
+.highlight pre .nc {
+  color: #00aa00;
+  text-decoration: underline;
+}
+
+.highlight pre .no {
+  color: #aa0000;
+}
+
+.highlight pre .nd {
+  color: #888888;
+}
+
+.highlight pre .ni {
+  color: #800000;
+  font-weight: bold;
+}
+
+.highlight pre .nf {
+  color: #00aa00;
+}
+
+.highlight pre .nn {
+  color: #00aaaa;
+  text-decoration: underline;
+}
+
+.highlight pre .nt {
+  color: #1e90ff;
+  font-weight: bold;
+}
+
+.highlight pre .nv {
+  color: #aa0000;
+}
+
+.highlight pre .ow {
+  color: #0000aa;
+}
+
+.highlight pre .w {
+  color: #bbbbbb;
+}
+
+.highlight pre .mf {
+  color: #009999;
+}
+
+.highlight pre .mh {
+  color: #009999;
+}
+
+.highlight pre .mi {
+  color: #009999;
+}
+
+.highlight pre .mo {
+  color: #009999;
+}
+
+.highlight pre .sb {
+  color: #aa5500;
+}
+
+.highlight pre .sc {
+  color: #aa5500;
+}
+
+.highlight pre .sd {
+  color: #aa5500;
+}
+
+.highlight pre .s2 {
+  color: #aa5500;
+}
+
+.highlight pre .se {
+  color: #aa5500;
+}
+
+.highlight pre .sh {
+  color: #aa5500;
+}
+
+.highlight pre .si {
+  color: #aa5500;
+}
+
+.highlight pre .sx {
+  color: #aa5500;
+}
+
+.highlight pre .sr {
+  color: #009999;
+}
+
+.highlight pre .s1 {
+  color: #aa5500;
+}
+
+.highlight pre .ss {
+  color: #0000aa;
+}
+
+.highlight pre .bp {
+  color: #00aaaa;
+}
+
+.highlight pre .vc {
+  color: #aa0000;
+}
+
+.highlight pre .vg {
+  color: #aa0000;
+}
+
+.highlight pre .vi {
+  color: #aa0000;
+}
+
+.highlight pre .il {
+  color: #009999;
+}
 
 /*-----------------------------------*\
 
@@ -661,7 +1018,7 @@ html,
 }
 
 .site__nav li + li {
-  margin-left: 20px;
+  margin-left: 16px;
   margin-left: 1rem;
 }
 
@@ -706,7 +1063,7 @@ p:empty {
 }
 
 .hentry {
-  margin-bottom: 84px;
+  margin-bottom: 67px;
   margin-bottom: 4.2rem;
 }
 
@@ -727,13 +1084,20 @@ p:empty {
 }
 
 .site__footer section + section:before {
-  content: "";
-  position: absolute;
-  width: 1px;
-  margin-left: -10px;
-  top: 0;
-  bottom: 0;
-  background-color: #d0d2d4;
+  content: none;
+  content: normal;
+}
+
+@media screen and (min-width: 700px) {
+  .site__footer section + section:before {
+    content: "";
+    position: absolute;
+    width: 1px;
+    margin-left: -10px;
+    top: 0;
+    bottom: 0;
+    background-color: #d0d2d4;
+  }
 }
 
 /*===================================*\

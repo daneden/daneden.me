@@ -1,3 +1,5 @@
+{{ include.parent }}
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,5 +32,5 @@
       <span class="delta o--b">From the desk of</span>
       <span class="o--b">{{ site.name }}</span>
     </a>
-    {% include nav.html %}
+    {% include nav.html parent=parent %}
   </header>
