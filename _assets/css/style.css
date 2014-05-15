@@ -33,7 +33,14 @@ html,
   color: #3d464d;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 860px) {
+  html,
+  :root {
+    font-size: 112.5%;
+  }
+}
+
+@media (max-width: 780px) {
   html,
   :root {
     font-size: 100%;
@@ -676,7 +683,14 @@ html,
   color: #3d464d;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 860px) {
+  html,
+  :root {
+    font-size: 112.5%;
+  }
+}
+
+@media (max-width: 780px) {
   html,
   :root {
     font-size: 100%;

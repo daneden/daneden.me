@@ -12,7 +12,11 @@ html, :root {
   background-color: $background;
   color: $dark-gray;
 
-  @media (max-width: 700px) {
+  @media (max-width: 860px) {
+    font-size: 112.5%;
+  }
+
+  @media (max-width: 780px) {
     font-size: 100%;
   }
 
