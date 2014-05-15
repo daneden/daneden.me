@@ -8,6 +8,7 @@ These are the things I’ve heard and read that help me work, live, and think. T
 
 * * *
 
+- “Shut up and look.”—[Edward Tufte](class:caps)
 - “Brevity is a by-product of vigor.”—[W. Strunk & E.B. White](class:caps)
 - “I am made of earth, and my song made of words.”—[Pablo Neruda](class:caps)
 - “I get up. I walk. I fall down. Meanwhile, I keep dancing.”—[Daniel Hillel](class:caps)

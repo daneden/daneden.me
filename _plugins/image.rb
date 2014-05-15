@@ -30,7 +30,7 @@ module Jekyll
     end
 
     def render(context)
-      source = "<figure>"
+      source = "<figure class=\"#{@class}\">"
 
       if @url =~ /(https?:\/\/)/
         @local = false
@@ -46,14 +46,14 @@ module Jekyll
       end
 
       if @local
-        source += "<picture class=\"#{@class}\">"
+        source += "<picture>"
         source += "<source srcset=\"#{@name}-large.#{@ext}, #{@name}-large@2x.#{@ext} 2x\" media=\"(min-width: 1024px)\" />"
         source += "<source srcset=\"#{@name}-medium.#{@ext}, #{@name}-medium@2x.#{@ext} 2x\" media=\"(min-width: 640px)\" />"
         source += "<source srcset=\"#{@name}-small.#{@ext}, #{@name}-small@2x.#{@ext} 2x\" media=\"(min-width: 320px)\" />"
         source += "<img srcset=\"#{@name}-small.#{@ext}\" />"
         source += "</picture>"
       else
-        source += "<img class=\"#{@class}\" src=\"#{@url}\" />"
+        source += "<img src=\"#{@url}\" />"
       end
 
       source += "<figcaption>#{@caption}</figcaption>" if @caption

@@ -6,7 +6,15 @@
 
 \*-----------------------------------*/
 
-.figure img {
+figure img {
   display: block;
   margin-bottom: $baseline/2;
+}
+
+.alignleft, .alignright {
+  @media (min-width: 700px) {
+    float: left;
+    width: calc(50% - #{$baseline/2} );
+    margin-left: calc(-50% - #{$baseline/3} );
+  }
 }

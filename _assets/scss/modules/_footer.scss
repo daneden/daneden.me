@@ -9,6 +9,10 @@
 .site__footer {
   border-top: 1px solid $lighter-gray;
 
+  .night-mode & {
+    border-top-color: $lighter-gray-invert;
+  }
+
   section {
     @extend %isle--v;
     position: static;
@@ -26,6 +30,10 @@
         bottom: 0;
 
         background-color: $lighter-gray;
+
+        .night-mode & {
+          background-color: $lighter-gray-invert;
+        }
       }
 
     }

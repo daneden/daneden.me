@@ -29,6 +29,8 @@
 html,
 :root {
   font: 125%/1.4 "Hoefler Text A", "Hoefler Text B", Georgia, serif;
+  background-color: #fbf7f0;
+  color: #3d464d;
 }
 
 @media (max-width: 700px) {
@@ -36,6 +38,12 @@ html,
   :root {
     font-size: 100%;
   }
+}
+
+html.night-mode,
+:root.night-mode {
+  background-color: #1d1f21;
+  color: #999a9b;
 }
 
 /*-----------------------------------*\
@@ -516,6 +524,7 @@ small,
 
 .caps {
   font-family: "Hoefler Text SC A", "Hoefler Text SC B", "Hoefler Text A", "Hoefler Text B", Georgia, serif;
+  letter-spacing: .05em;
 }
 
 a {
@@ -535,6 +544,11 @@ figcaption,
   color: #888888;
 }
 
+.night-mode figcaption,
+.night-mode .site__nav {
+  color: #77797a;
+}
+
 figcaption .caps,
 .site__nav .caps {
   font-family: "Whitney SSm SC A", "Whitney SSm SC B", "Whitney SSm A", "Whitney SSm B", Geneva, Verdana, san-serif;
@@ -552,6 +566,10 @@ hr {
   margin-bottom: 45px;
   margin-bottom: 2.8rem;
   margin-left: auto;
+}
+
+.night-mode hr {
+  border-bottom-color: #282a2e;
 }
 
 mark {
@@ -578,10 +596,25 @@ blockquote em {
 
 \*-----------------------------------*/
 
-.figure img {
+figure img {
   display: block;
   margin-bottom: 11px;
   margin-bottom: 0.7rem;
+}
+
+@media (min-width: 700px) {
+  .alignleft,
+  .alignright {
+    float: left;
+    width: -webkit-calc(50% - 11px );
+    width: -webkit-calc(50% - 0.7rem );
+    width: calc(50% - 11px );
+    width: calc(50% - 0.7rem );
+    margin-left: -webkit-calc(-50% - 7px );
+    margin-left: -webkit-calc(-50% - 0.46667rem );
+    margin-left: calc(-50% - 7px );
+    margin-left: calc(-50% - 0.46667rem );
+  }
 }
 
 /*-----------------------------------*\
@@ -619,23 +652,6 @@ blockquote em {
 
 /*-----------------------------------*\
 
-    Partial: debug
-
-    Helpers for layout debugging, etc.
-
-  \*-----------------------------------*/
-
-.debug-outline * {
-  outline: 1px dotted rgba(0, 0, 0, 0.1);
-  outline-offset: -1px;
-}
-
-.debug-outline *:hover {
-  outline-color: red;
-}
-
-/*-----------------------------------*\
-
   Module: all
 
   Imports modules. Modules are site-
@@ -656,6 +672,8 @@ blockquote em {
 html,
 :root {
   font: 125%/1.4 "Hoefler Text A", "Hoefler Text B", Georgia, serif;
+  background-color: #fbf7f0;
+  color: #3d464d;
 }
 
 @media (max-width: 700px) {
@@ -663,6 +681,12 @@ html,
   :root {
     font-size: 100%;
   }
+}
+
+html.night-mode,
+:root.night-mode {
+  background-color: #1d1f21;
+  color: #999a9b;
 }
 
 /*-----------------------------------*\
@@ -1013,6 +1037,10 @@ pre {
   border-top: 1px solid #d0d2d4;
 }
 
+.night-mode .site__nav {
+  border-top-color: #282a2e;
+}
+
 .site__nav li {
   margin-top: -1px;
 }
@@ -1026,6 +1054,10 @@ pre {
   text-decoration: none;
   color: #888888;
   border-top: 1px solid transparent;
+}
+
+.night-mode .site__nav a {
+  color: #77797a;
 }
 
 .site__nav a.active {
@@ -1079,6 +1111,10 @@ p:empty {
   border-top: 1px solid #d0d2d4;
 }
 
+.night-mode .site__footer {
+  border-top-color: #282a2e;
+}
+
 .site__footer section {
   position: static;
 }
@@ -1097,6 +1133,10 @@ p:empty {
     top: 0;
     bottom: 0;
     background-color: #d0d2d4;
+  }
+
+  .night-mode .site__footer section + section:before {
+    background-color: #282a2e;
   }
 }
 

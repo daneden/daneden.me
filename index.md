@@ -3,7 +3,7 @@ layout: page
 title: About
 ---
 
-{% image alignright /uploads/2014/04/face.jpg "This is my face. There are many like it, but this one is mine." %}
+{% image /uploads/2014/04/face.jpg "This is my face. There are many like it, but this one is mine." %}
 
 My name is Daniel Eden, and I'm a designer. I’m intrigued by the stories behind objects;
 how they were made, and who made them. I like to make [tools](/portfolio) for the web

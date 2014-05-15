@@ -11,11 +11,11 @@ We have devices with us all the time which can help in situations like this. The
 
 * * *
 
+{% image alignleft /uploads/2014/02/emergency-mode-home.png %}
+
 The way I imagine it, this emergency functionality would certainly justify native implementation in a smartphone OS. Let’s say, for the sake of example, that someone with an emergency mode-enabled smartphone is involved in a car accident. The first person on the scene is alerted to the presence of the victim’s phone by an alert playing from it. Emergency mode—and the alert tone—are activated at the time of the accident thanks to the phone’s accelerometer sensing an exceptional and sudden change in motion (most likely a collision).
 
 When the person on scene picks up the phone, they are presented with a screen letting them know that the phone is in emergency mode, and prompts action.
-
-{% image alignleft /uploads/2014/02/emergency-mode-home.png %}
 
 Tapping the prompt reveals a series of actions and information about the device’s owner, contextual information (what’s the number for the local emergency services? It’s not 911 in Paris, for instance), emergency contacts, allergies and other medical information. These details may also be sent directly to the emergency services on demand or on placing a call, if the technology were developed to support something like that.
 

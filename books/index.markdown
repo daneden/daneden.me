@@ -2,10 +2,13 @@
 layout: page
 title: Books
 in-nav: true
-class: library
 ---
 
-These books will teach you more than their money’s worth about design and life. Don’t forget to close them every once in a while, too.
+When I was younger, I used to pride myself on not being one of those darned book-reading types. I scoffed at Rowling, retreated from Tolkein, and put up with Pratchett. Then, one day, I found myself packing several *boxes* of books to ship to America for my new life.
+
+Of course, the vast majority of these were design references (I think I owned all of one fiction book; a Warhammer short novel from my youth), but books are books, and I did indeed read them.
+
+These books will teach you more than their money’s worth about design, writing, and life. Don’t forget to close them every once in a while, too.
 
 * * *
 

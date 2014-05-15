@@ -9,7 +9,7 @@ At the time of writing ({{ site.time | pretty }}), the majority of typographic e
 
 > Blockquotes (like the one seen here) are set in Hoefler Text italic, whereas captions & other minor or supporting typographic elements are often set in Whitney ScreenSmart.
 
-{% image alignleft /uploads/2013/09/blanket-stories.jpg "This is a left aligned image and caption, set in Whitney ScreenSmart. The image is of “Blanket Stories” – an installation art piece from Marie Watts." %}
+{% image alignleft /uploads/2014/05/wedding-pavilion.jpg "This is a left aligned image and caption, set in Whitney ScreenSmart. The image is of Walt Disney World’s Wedding Pavilion." %}
 
 ## Heading Level Two
 
@@ -32,6 +32,6 @@ Third level headings are most often used to denote names rather than sections, s
 
 {% image /uploads/2013/12/herb-lubalin.jpg "This is an example image caption, set in Whitney. The image is of a desk in the Herb Lubalin Study Center of Design and Typography." %}
 
-Images may take one of two forms; aligned (left or right), or centered. Captions are encouraged, but not required.
+Images may take one of two forms; aligned (left), or centered (relative to the text column). Captions are encouraged, but not required.
 
 Images are currently used only sparingly, but must flow with the content. Captions should be readable, but not distract from the main article. Like images themselves, they are supplements.

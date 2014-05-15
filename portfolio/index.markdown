@@ -4,7 +4,11 @@ title: Portfolio
 in-nav: true
 ---
 
+“Portfolio” is a funny word for the work I’d like to show here. You see, my body of work is comprised mostly by tools; projects I’ve created to scratch an itch, then flung into the bosom of the web to find out if other people have the same itch. Tools, references, glorified calculators; these are the things that I spend my time working on.
+
 I’m currently working at [Dropbox](http://dropbox.com) as a Designer. My work outside of Dropbox is what you see here; side projects, open source contributions, and personal itch-scratchers. [Dribbble](http://dribbble.com/dte) may provide a more current, up-to-date representation of my work.
+
+* * *
 
 ## Ragged Write
 [Ragged Write](http://raggedwrite.net) is a website about typography; a place to share news, reviews, and personal commentary on the world of typography. Created out of a desire to write about type, as well as maintain a collection of typographic resources for personal reference. [Visit the site](http://raggedwrite.net).
@@ -28,7 +32,7 @@ Tired of only being able to access my iA Writer documents on my iOS devices, I c
 
 
 ## Webshaped 2012
-I was invited to speak at this year's [Webshaped](http://webshaped.fi) conference, alongside some incredible folk I've long admired. It was terrifying, amazing, and I'd love to do it again. My presentation tackled animation on the web, and how we can delight our audience by integrating animation in our websites and applications. You can [read more](/2012/05/18/i-have-no-idea-what-im-doing/) about my time there.
+I was invited to speak at the 2012 [Webshaped](http://webshaped.fi) conference, alongside some incredible folk I've long admired. It was terrifying, amazing, and I'd love to do it again. My presentation tackled animation on the web, and how we can delight our audience by integrating animation in our websites and applications. You can [read more](/2012/05/18/i-have-no-idea-what-im-doing/) about my time there.
 
 
 ## Brills

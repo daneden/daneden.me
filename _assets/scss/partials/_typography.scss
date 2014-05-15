@@ -59,6 +59,7 @@ small, .small, %small {
 
 .caps {
   font-family: $font-Serif-SC;
+  letter-spacing: .05em;
 }
 
 a {
@@ -76,6 +77,10 @@ figcaption, %figcaption {
 
   color: $light-gray;
 
+  .night-mode & {
+    color: $light-gray-invert;
+  }
+
   .caps {
     font-family: $font-Sans-SC;
   }
@@ -91,6 +96,10 @@ hr {
     right: auto;
     bottom: $baseline*2;
     left: auto;
+  }
+
+  .night-mode & {
+    border-bottom-color: $lighter-gray-invert;
   }
 }
 

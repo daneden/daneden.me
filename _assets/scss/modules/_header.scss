@@ -27,6 +27,10 @@
 
   border-top: 1px solid $lighter-gray;
 
+  .night-mode & {
+    border-top-color: $lighter-gray-invert;
+  }
+
   li {
     margin-top: -1px;
 
@@ -42,6 +46,10 @@
 
     color: $light-gray;
     border-top: 1px solid transparent;
+
+    .night-mode & {
+      color: $light-gray-invert;
+    }
 
     &.active {
       color: $highlight;

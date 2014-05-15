@@ -1,7 +1,5 @@
-{{ include.parent }}
-
 <!DOCTYPE html>
-<html>
+<html{% if page.class %} class="{{ page.class }}"{% endif %}>
 <head>
   <meta charset="utf-8">
   <title>{{ page.title }} | {{ site.name }}</title>
@@ -26,11 +24,11 @@
 
   <!-- You know, rather than reading the source like a chump, you can see it all on Bitbucket like a champ: https://bitbucket.org/daneden/daneden.me -->
 </head>
-<body{% if page.class %} class="{{ page.class }}"{% endif %}>
+<body>
   <header class="wrap site__header" role="banner">
     <a class="site__title o--b o--p" href="/" title="{{ site.name }} • Home">
       <span class="delta o--b">From the desk of</span>
       <span class="o--b">{{ site.name }}</span>
     </a>
-    {% include nav.html parent=parent %}
+    {% include nav.html %}
   </header>

@@ -9,8 +9,15 @@
 
 html, :root {
   font: 125%/1.4 $font-Serif;
+  background-color: $background;
+  color: $dark-gray;
 
   @media (max-width: 700px) {
     font-size: 100%;
+  }
+
+  &.night-mode {
+    background-color: $background-invert;
+    color: $dark-gray-invert;
   }
 }
