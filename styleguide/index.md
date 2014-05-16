@@ -30,7 +30,7 @@ Third level headings are most often used to denote names rather than sections, s
 	1. This is a second-level numbered list item
 3. Numbered lists, like bulleted lists, are not used particularly often on this site.
 
-{% image /uploads/2013/12/herb-lubalin.jpg "This is an example image caption, set in Whitney. The image is of a desk in the Herb Lubalin Study Center of Design and Typography." %}
+{% image imgbleed /uploads/2013/12/herb-lubalin.jpg "This is an example image caption, set in Whitney. The image is of a desk in the Herb Lubalin Study Center of Design and Typography." %}
 
 Images may take one of two forms; aligned (left), or centered (relative to the text column). Captions are encouraged, but not required.
 

@@ -18,3 +18,21 @@ figure img {
     margin-left: calc(-50% - #{$baseline/3} );
   }
 }
+
+.imgbleed {
+  @media (min-width: 700px) {
+    width: calc(150% + #{$baseline/3} );
+    margin-left: calc(-50% - #{$baseline/3} );
+
+    figcaption {
+      position: absolute;
+      margin-top: $baseline;
+      top: 100%;
+      left: 0;
+      width: percentage(1/3);
+      padding-right: $baseline/2;
+
+      text-align: right;
+    }
+  }
+}

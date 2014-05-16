@@ -28,6 +28,10 @@ h2, .beta {
   margin-bottom: $baseline;
 }
 
+picture {
+  display: block;
+}
+
 li ol, li ul {
   margin-bottom: 0;
 }

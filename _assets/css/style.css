@@ -122,6 +122,10 @@ h2,
   margin-bottom: 1.4rem;
 }
 
+picture {
+  display: block;
+}
+
 li ol,
 li ul {
   margin-bottom: 0;
@@ -621,6 +625,31 @@ figure img {
     margin-left: -webkit-calc(-50% - 0.46667rem );
     margin-left: calc(-50% - 7px );
     margin-left: calc(-50% - 0.46667rem );
+  }
+}
+
+@media (min-width: 700px) {
+  .imgbleed {
+    width: -webkit-calc(150% + 7px );
+    width: -webkit-calc(150% + 0.46667rem );
+    width: calc(150% + 7px );
+    width: calc(150% + 0.46667rem );
+    margin-left: -webkit-calc(-50% - 7px );
+    margin-left: -webkit-calc(-50% - 0.46667rem );
+    margin-left: calc(-50% - 7px );
+    margin-left: calc(-50% - 0.46667rem );
+  }
+
+  .imgbleed figcaption {
+    position: absolute;
+    margin-top: 22px;
+    margin-top: 1.4rem;
+    top: 100%;
+    left: 0;
+    width: 33.33333%;
+    padding-right: 11px;
+    padding-right: 0.7rem;
+    text-align: right;
   }
 }
 
