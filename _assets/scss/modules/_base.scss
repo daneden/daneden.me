@@ -11,6 +11,10 @@ html, :root {
   font: 125%/1.4 $font-Serif;
   background-color: $background;
   color: $dark-gray;
+  -webkit-text-size-adjust: none;
+     -moz-text-size-adjust: none;
+      -ms-text-size-adjust: none;
+          text-size-adjust: none;
 
   @media (max-width: 860px) {
     font-size: 112.5%;
