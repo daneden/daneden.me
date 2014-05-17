@@ -4,8 +4,6 @@ title: The Devices Blinding Us
 hidden: true
 ---
 
-![](/uploads/2012/02/blind.jpg)
-
 Step on to any busy train and look around you, and you'll notice something. The vast majority of the faces around you will be staring into their palm at a tiny screen. From these micro computers, we can instantly broadcast messages to hundreds of thousands of people all across the planet. We can see a loved one's face and hear their voice from half a world away. We can photograph moments and immediately share them. We can film videos, watch movies, play games, make plans, and talk our mouths off. But the closer we are to the wider world, the more blind we become to our immediate surroundings.
 
 <!-- more -->I spent a week without the use of my mobile phone. It was a strange, but liberating few days. At first, I found myself instinctively fishing into my pocket to browse twitter or check my emails - I was starting to realize just how much I used this miniature computer.

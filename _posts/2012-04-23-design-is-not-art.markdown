@@ -6,8 +6,6 @@ hidden: true
 
 This is something that's taken me the better part of 5 years to fully come to terms with. **Design is not art.**
 
-[![](/uploads/2012/04/eames.jpg)](http://www.vitra.com/en-gb/home/products/lounge-chair-ottoman/overview/)
-
 We are not artists. We aren't "creatives", whatever that means. We weren't hired to give those corporate brochures some flair, or impart our creative opinion on your colour choices. We are problem solvers.
 
 Art is, in its very nature, subjective. It achieves no goal, other than to serve as a decorative object. Art raises questions.

@@ -4,7 +4,7 @@ title: The Future is Now
 hidden: true
 ---
 
-![](/uploads/2011/10/siri.png) Jokes aside, ("Open the Pod Bay Doors, Siri") Apples announcement last night was nothing short of a glimpse at the future. Imagine a world where you speak aloud to a computer, while you're hurrying around your house looking for your car keys:
+Jokes aside, ("Open the Pod Bay Doors, Siri") Apples announcement last night was nothing short of a glimpse at the future. Imagine a world where you speak aloud to a computer, while you're hurrying around your house looking for your car keys:
 
 
 > Computer, what time does the train to Manchester leave from Stockport?

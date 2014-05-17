@@ -617,6 +617,7 @@ blockquote em {
 
 figure img {
   display: block;
+  width: 100%;
   margin-bottom: 11px;
   margin-bottom: 0.7rem;
 }
