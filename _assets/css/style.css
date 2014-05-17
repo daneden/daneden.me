@@ -599,6 +599,10 @@ blockquote em {
   font-style: normal;
 }
 
+.promo {
+  text-align: center;
+}
+
 /*-----------------------------------*\
 
   Partial: images
@@ -1181,6 +1185,14 @@ p:empty {
   .night-mode .site__footer section + section:before {
     background-color: #282a2e;
   }
+}
+
+.footer__copyright {
+  border-top: 1px solid #d0d2d4;
+}
+
+.night-mode .footer__copyright {
+  border-top-color: #282a2e;
 }
 
 /*===================================*\

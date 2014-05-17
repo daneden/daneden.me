@@ -88,16 +88,16 @@ module.exports = function(grunt) {
             width: 640
           }, {
             name: 'medium',
-            width: 480
+            width: 660
           }, {
             name: 'medium@2x',
-            width: 960
+            width: 1320
           }, {
             name: 'large',
-            width: 633
+            width: 960
           }, {
             name: 'large@2x',
-            width: 1266
+            width: 1920
           }],
         },
         files: [{

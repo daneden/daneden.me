@@ -39,3 +39,11 @@
     }
   }
 }
+
+.footer__copyright {
+  border-top: 1px solid $lighter-gray;
+
+  .night-mode & {
+    border-top-color: $lighter-gray-invert;
+  }
+}
