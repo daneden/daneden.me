@@ -6,6 +6,11 @@
   <meta name="viewport" content="initial-scale=1" />
   <meta name="p:domain_verify" content="aa712630840b421410cce3b56d2dc764" />
 
+  <meta property="og:title" content="{{ page.title }}"/>
+  <meta property="og:site_name" content="{{ site.name }}"/>
+  <meta property="og:url" content="{{ page.url }}"/>
+  <meta property="og:description" content="{{ page.excerpt }}"/>
+
   {% bundle_glob %}
   - /_assets/css/style.min.css
   {% endbundle_glob %}
