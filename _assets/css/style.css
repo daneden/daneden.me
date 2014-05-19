@@ -29,12 +29,16 @@
 html,
 :root {
   font: 125%/1.4 "Hoefler Text A", "Hoefler Text B", Georgia, serif;
-  background-color: #fbf7f0;
-  color: #3d464d;
   -webkit-text-size-adjust: none;
   -moz-text-size-adjust: none;
   -ms-text-size-adjust: none;
   text-size-adjust: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-feature-settings: 'liga' 1, 'onum' 1, 'dlig' 1;
+  -moz-font-feature-settings: 'liga' 1, 'onum' 1, 'dlig' 1;
+  font-feature-settings: 'liga' 1, 'onum' 1, 'dlig' 1;
+  background-color: #fbf7f0;
+  color: #3d464d;
 }
 
 @media (max-width: 860px) {
@@ -527,13 +531,15 @@ h4,
 }
 
 small,
-.small {
+.small,
+.footnotes {
   font-size: 13px;
   font-size: .8rem;
   line-height: 1.3125;
 }
 
-.meta {
+.meta,
+.footnotes {
   color: #888888;
 }
 
@@ -569,13 +575,14 @@ figcaption .caps,
   font-family: "Whitney SSm SC A", "Whitney SSm SC B", "Whitney SSm A", "Whitney SSm B", Geneva, Verdana, san-serif;
 }
 
-hr {
+hr,
+.footnotes:before {
   border: none;
   border-bottom: 2px solid #d0d2d4;
   width: 96px;
   width: 6rem;
-  padding-top: 34px;
-  padding-top: 2.1rem;
+  padding-top: 22px;
+  padding-top: 1.4rem;
   margin-top: -2px;
   margin-right: auto;
   margin-bottom: 45px;
@@ -583,7 +590,8 @@ hr {
   margin-left: auto;
 }
 
-.night-mode hr {
+.night-mode hr,
+.night-mode .footnotes:before {
   border-bottom-color: #282a2e;
 }
 
@@ -717,12 +725,16 @@ figure img {
 html,
 :root {
   font: 125%/1.4 "Hoefler Text A", "Hoefler Text B", Georgia, serif;
-  background-color: #fbf7f0;
-  color: #3d464d;
   -webkit-text-size-adjust: none;
   -moz-text-size-adjust: none;
   -ms-text-size-adjust: none;
   text-size-adjust: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-feature-settings: 'liga' 1, 'onum' 1, 'dlig' 1;
+  -moz-font-feature-settings: 'liga' 1, 'onum' 1, 'dlig' 1;
+  font-feature-settings: 'liga' 1, 'onum' 1, 'dlig' 1;
+  background-color: #fbf7f0;
+  color: #3d464d;
 }
 
 @media (max-width: 860px) {
@@ -1153,6 +1165,25 @@ p:empty {
 .hentry {
   margin-bottom: 67px;
   margin-bottom: 4.2rem;
+}
+
+.footnote {
+  padding: .15em;
+  color: #c64f52;
+  text-decoration: none;
+}
+
+.footnote:hover {
+  text-decoration: underline;
+}
+
+.footnotes:before {
+  content: '';
+  display: block;
+}
+
+.footnotes :last-child {
+  margin-bottom: 0;
 }
 
 /*-----------------------------------*\

@@ -29,3 +29,29 @@ p:empty {
 .hentry {
   margin-bottom: $baseline*3;
 }
+
+.footnote {
+  padding: .15em;
+
+  color: $highlight;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.footnotes {
+  @extend %meta;
+  @extend %small;
+
+  &:before {
+    content: '';
+    display: block;
+    @extend hr;
+  }
+
+  & :last-child {
+    margin-bottom: 0;
+  }
+}

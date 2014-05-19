@@ -53,7 +53,7 @@ small, .small, %small {
   line-height: 1.3125;
 }
 
-.meta {
+.meta, %meta {
   color: $light-gray;
 }
 
@@ -90,7 +90,7 @@ hr {
   border: none;
   border-bottom: 2px solid $lighter-gray;
   width: 6rem;
-  padding-top: $baseline*1.5;
+  padding-top: $baseline;
   margin: {
     top: -2px;
     right: auto;

@@ -2,11 +2,7 @@ name: "Daniel T. Eden, Designer"
 description: Designer
 url: https://daneden.me
 
-markdown: rdiscount
-rdiscount:
-  extensions:
-    - smart
-    - generate_toc
+markdown: kramdown
 
 highlighter: true
 
