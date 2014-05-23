@@ -156,7 +156,8 @@ END
       if @@current_config.nil?
         ret_config = nil
         if context.registers[:site].config.key?("asset_bundler")
-          ret_config = @@default_config.deep_merge(context.registers[:site].config["asset_bundler"])
+          ret_config = Utils.deep_merge_hashes(@@default_config,
+                                               context.registers[:site].config["asset_bundler"])
 
           ret_config['markup_templates'].keys.each {|k|
             if !ret_config['markup_templates'][k].instance_of?(Liquid::Template)
