@@ -18,15 +18,16 @@
 <script src="/static/js/picturefill.min.js"></script>
 
 <script>
-var d = document.documentElement;
-var toggle = document.querySelectorAll(".js--toggle-lights")[0];
-var mode = localStorage.getItem("nightmode");
+// Toggle night theme
+var d = document.documentElement,
+    t = document.querySelectorAll(".js--toggle-lights")[0],
+    m = localStorage.getItem("nightmode");
 
-if(mode == "true") {
+if(m == "true") {
   d.classList.add("night-mode");
 }
 
-toggle.addEventListener("click", function(){
+t.addEventListener("click", function(){
   if(d.classList.contains("night-mode")) {
     d.classList.remove("night-mode");
     localStorage.setItem("nightmode", "false");
