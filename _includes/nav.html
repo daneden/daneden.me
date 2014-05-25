@@ -3,5 +3,6 @@
     {% assign pages = site.pages | sort:"url" %}
     {% for p in pages order:ascending %}{% if p.in-nav == true %}<li><a {% if p.url == page.url or (page.layout == "post" and p.url == "/blog/" ) %}class="active"{% endif %} href="{{ p.url }}">{{ p.title }}</a></li>
     {% endif %}{% endfor %}
+    <li class="f--r meta"><span class="js--toggle-lights">&#9788;</span></li>
   </ul>
 </nav>

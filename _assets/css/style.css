@@ -165,6 +165,14 @@ li ul {
   list-style: none;
 }
 
+.f--l {
+  float: left;
+}
+
+.f--r {
+  float: right;
+}
+
 /*-----------------------------------*\
 
   Partial: layout
@@ -437,7 +445,8 @@ body {
 }
 
 .spit--v,
-.site__nav a {
+.site__nav a,
+.site__nav .js--toggle-lights {
   padding-top: 6px;
   padding-top: 0.35rem;
   padding-bottom: 6px;
@@ -462,10 +471,13 @@ body {
 
 .nav li,
 .nav a,
+.nav .js--toggle-lights,
 .nav ul li,
 .nav ul a,
+.nav ul .js--toggle-lights,
 .nav ol li,
-.nav ol a {
+.nav ol a,
+.nav ol .js--toggle-lights {
   display: inline-block;
 }
 
@@ -548,11 +560,14 @@ small,
   letter-spacing: .05em;
 }
 
-a {
+a,
+.js--toggle-lights {
   color: inherit;
+  cursor: pointer;
 }
 
-a:hover {
+a:hover,
+.js--toggle-lights:hover {
   color: #c64f52;
 }
 
@@ -592,7 +607,7 @@ hr,
 
 .night-mode hr,
 .night-mode .footnotes:before {
-  border-bottom-color: #282a2e;
+  border-bottom-color: #393b3f;
 }
 
 mark {
@@ -1106,7 +1121,7 @@ pre {
 }
 
 .night-mode .site__nav {
-  border-top-color: #282a2e;
+  border-top-color: #393b3f;
 }
 
 .site__nav li {
@@ -1118,23 +1133,31 @@ pre {
   margin-left: 1rem;
 }
 
-.site__nav a {
+.site__nav a,
+.site__nav .js--toggle-lights {
   text-decoration: none;
   color: #888888;
   border-top: 1px solid transparent;
 }
 
-.night-mode .site__nav a {
+.night-mode .site__nav a,
+.night-mode .site__nav .js--toggle-lights {
   color: #77797a;
 }
 
-.site__nav a.active {
+.site__nav a.active,
+.site__nav .active.js--toggle-lights {
   color: #c64f52;
   border-top-color: #c64f52;
 }
 
-.site__nav a:hover {
+.site__nav a:hover,
+.site__nav .js--toggle-lights:hover {
   color: #c64f52;
+}
+
+.js--toggle-lights {
+  font-family: sans-serif;
 }
 
 /*-----------------------------------*\
@@ -1150,7 +1173,8 @@ pre {
   margin-bottom: 0;
 }
 
-.posts__list a {
+.posts__list a,
+.posts__list .js--toggle-lights {
   text-decoration: none;
 }
 
@@ -1199,7 +1223,7 @@ p:empty {
 }
 
 .night-mode .site__footer {
-  border-top-color: #282a2e;
+  border-top-color: #393b3f;
 }
 
 .site__footer section {
@@ -1223,7 +1247,7 @@ p:empty {
   }
 
   .night-mode .site__footer section + section:before {
-    background-color: #282a2e;
+    background-color: #393b3f;
   }
 }
 
@@ -1232,7 +1256,7 @@ p:empty {
 }
 
 .night-mode .footer__copyright {
-  border-top-color: #282a2e;
+  border-top-color: #393b3f;
 }
 
 /*===================================*\

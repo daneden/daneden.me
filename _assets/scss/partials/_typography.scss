@@ -64,6 +64,7 @@ small, .small, %small {
 
 a {
   color: inherit;
+  cursor: pointer;
 
   &:hover {
     color: $highlight;
