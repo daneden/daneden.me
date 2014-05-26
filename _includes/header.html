@@ -9,7 +9,7 @@
   <meta property="og:title" content="{{ page.title }}"/>
   <meta property="og:site_name" content="{{ site.name }}"/>
   <meta property="og:url" content="{{ page.url }}"/>
-  <meta property="og:description" content="{{ page.excerpt }}"/>
+  <meta property="og:description" content="{{ page.excerpt | xml_escape }}"/>
 
   {% bundle %}
   - /_assets/css/style.min.css
