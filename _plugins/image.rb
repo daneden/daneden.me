@@ -60,6 +60,7 @@ module Jekyll
         source += "<img src=\"#{@url}\" />"
       end
 
+      @caption = Kramdown::Document.new(@caption).to_html if @caption
       source += "<figcaption>#{@caption}</figcaption>" if @caption
 
       source += "</figure>"
