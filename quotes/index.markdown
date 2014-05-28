@@ -8,13 +8,13 @@ These are the things I’ve heard and read that help me work, live, and think. T
 
 * * *
 
-- “Shut up and look.”—[Edward Tufte](class:caps)
-- “Brevity is a by-product of vigor.”—[W. Strunk & E.B. White](class:caps)
-- “I am made of earth, and my song made of words.”—[Pablo Neruda](class:caps)
-- “I get up. I walk. I fall down. Meanwhile, I keep dancing.”—[Daniel Hillel](class:caps)
-- “Money is circulated. Time is spent.”—[Frank Chimero](class:caps)
-- “Writing is like driving at night in the fog. You can only see as far as your headlights, but you can make the whole trip that way.” [E.L. Doctorow](class:caps)
-- “They can’t eat you.”—[Merlin Mann](class:caps)
-- “The Details are not the Details. They make the design.”—[Charles Eames](class:caps)
-- “Words mean things.”—[Erin Kissanne](class:caps)
-- “Less, but better.”—[Dieter Rams](class:caps)
+- “Shut up and look.”—<span class="caps">Edward Tufte</span>
+- “Brevity is a by-product of vigor.”—<span class="caps">W. Strunk & E.B. White</span>
+- “I am made of earth, and my song made of words.”—<span class="caps">Pablo Neruda</span>
+- “I get up. I walk. I fall down. Meanwhile, I keep dancing.”—<span class="caps">Daniel Hillel</span>
+- “Money is circulated. Time is spent.”—<span class="caps">Frank Chimero</span>
+- “Writing is like driving at night in the fog. You can only see as far as your headlights, but you can make the whole trip that way.”—<span class="caps">E.L. Doctorow</span>
+- “They can’t eat you.”—<span class="caps">Merlin Mann</span>
+- “The Details are not the Details. They make the design.”—<span class="caps">Charles Eames</span>
+- “Words mean things.”—<span class="caps">Erin Kissanne</span>
+- “Less, but better.”—<span class="caps">Dieter Rams</span>
