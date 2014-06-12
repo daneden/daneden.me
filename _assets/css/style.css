@@ -17,6 +17,8 @@
 
 \*-----------------------------------*/
 
+/* #663399Rebecca */
+
 /*-----------------------------------*\
 
   Module: base
@@ -37,8 +39,8 @@ html,
   -webkit-font-feature-settings: 'liga' 1, 'onum' 1, 'dlig' 1;
   -moz-font-feature-settings: 'liga' 1, 'onum' 1, 'dlig' 1;
   font-feature-settings: 'liga' 1, 'onum' 1, 'dlig' 1;
-  background-color: #fbf7f0;
-  color: #3d464d;
+  background-color: #f7f4fb;
+  color: #494063;
 }
 
 @media (max-width: 860px) {
@@ -57,8 +59,8 @@ html,
 
 html.night-mode,
 :root.night-mode {
-  background-color: #1d1f21;
-  color: #999a9b;
+  background-color: #190f24;
+  color: #897b9a;
 }
 
 /*-----------------------------------*\
@@ -77,6 +79,8 @@ html.night-mode,
   Global variables of all kinds
 
 \*-----------------------------------*/
+
+/* #663399Rebecca */
 
 /*-----------------------------------*\
 
@@ -552,7 +556,7 @@ small,
 
 .meta,
 .footnotes {
-  color: #888888;
+  color: #7d6e8d;
 }
 
 .caps {
@@ -568,7 +572,7 @@ a,
 
 a:hover,
 .js--toggle-lights:hover {
-  color: #c64f52;
+  color: #663399;
 }
 
 figcaption,
@@ -577,12 +581,12 @@ figcaption,
   font-size: .65rem;
   line-height: 1.615384615;
   font-family: "Whitney SSm A", "Whitney SSm B", Geneva, Verdana, san-serif;
-  color: #888888;
+  color: #7d6e8d;
 }
 
 .night-mode figcaption,
 .night-mode .site__nav {
-  color: #77797a;
+  color: #716383;
 }
 
 figcaption .caps,
@@ -593,7 +597,7 @@ figcaption .caps,
 hr,
 .footnotes:before {
   border: none;
-  border-bottom: 2px solid #d0d2d4;
+  border-bottom: 2px solid #b0a2c2;
   width: 96px;
   width: 6rem;
   padding-top: 22px;
@@ -607,19 +611,19 @@ hr,
 
 .night-mode hr,
 .night-mode .footnotes:before {
-  border-bottom-color: #393b3f;
+  border-bottom-color: #46385a;
 }
 
 mark {
   background-color: transparent;
-  color: #c64f52;
+  color: #663399;
 }
 
 blockquote {
   font-style: italic;
   padding: 0 22px;
   padding: 0 1.4rem;
-  border-left: 2px solid #c64f52;
+  border-left: 2px solid #663399;
 }
 
 blockquote em {
@@ -748,8 +752,8 @@ html,
   -webkit-font-feature-settings: 'liga' 1, 'onum' 1, 'dlig' 1;
   -moz-font-feature-settings: 'liga' 1, 'onum' 1, 'dlig' 1;
   font-feature-settings: 'liga' 1, 'onum' 1, 'dlig' 1;
-  background-color: #fbf7f0;
-  color: #3d464d;
+  background-color: #f7f4fb;
+  color: #494063;
 }
 
 @media (max-width: 860px) {
@@ -768,8 +772,8 @@ html,
 
 html.night-mode,
 :root.night-mode {
-  background-color: #1d1f21;
-  color: #999a9b;
+  background-color: #190f24;
+  color: #897b9a;
 }
 
 /*-----------------------------------*\
@@ -1117,11 +1121,11 @@ pre {
 .site__nav {
   font-family: "Whitney SSm SC A", "Whitney SSm SC B", "Whitney SSm A", "Whitney SSm B", Geneva, Verdana, san-serif;
   letter-spacing: .05em;
-  border-top: 1px solid #d0d2d4;
+  border-top: 1px solid #b0a2c2;
 }
 
 .night-mode .site__nav {
-  border-top-color: #393b3f;
+  border-top-color: #46385a;
 }
 
 .site__nav li {
@@ -1136,24 +1140,24 @@ pre {
 .site__nav a,
 .site__nav .js--toggle-lights {
   text-decoration: none;
-  color: #888888;
+  color: #7d6e8d;
   border-top: 1px solid transparent;
 }
 
 .night-mode .site__nav a,
 .night-mode .site__nav .js--toggle-lights {
-  color: #77797a;
+  color: #716383;
 }
 
 .site__nav a.active,
 .site__nav .active.js--toggle-lights {
-  color: #c64f52;
-  border-top-color: #c64f52;
+  color: #663399;
+  border-top-color: #663399;
 }
 
 .site__nav a:hover,
 .site__nav .js--toggle-lights:hover {
-  color: #c64f52;
+  color: #663399;
 }
 
 .js--toggle-lights {
@@ -1193,7 +1197,7 @@ p:empty {
 
 .footnote {
   padding: .15em;
-  color: #c64f52;
+  color: #663399;
   text-decoration: none;
 }
 
@@ -1219,11 +1223,11 @@ p:empty {
 \*-----------------------------------*/
 
 .site__footer {
-  border-top: 1px solid #d0d2d4;
+  border-top: 1px solid #b0a2c2;
 }
 
 .night-mode .site__footer {
-  border-top-color: #393b3f;
+  border-top-color: #46385a;
 }
 
 .site__footer section {
@@ -1243,20 +1247,20 @@ p:empty {
     margin-left: -10px;
     top: 0;
     bottom: 0;
-    background-color: #d0d2d4;
+    background-color: #b0a2c2;
   }
 
   .night-mode .site__footer section + section:before {
-    background-color: #393b3f;
+    background-color: #46385a;
   }
 }
 
 .footer__copyright {
-  border-top: 1px solid #d0d2d4;
+  border-top: 1px solid #b0a2c2;
 }
 
 .night-mode .footer__copyright {
-  border-top-color: #393b3f;
+  border-top-color: #46385a;
 }
 
 /*===================================*\
