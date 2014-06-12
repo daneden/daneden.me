@@ -6,17 +6,24 @@
 
 \*-----------------------------------*/
 
-
+// Make elements block-level
 .o--b {
   display: block;
 }
 
+// Give elements <p> margins
 .o--p {
   margin-bottom: $baseline;
 }
 
+// Give elements no bottom margin
 .o--mz {
   margin-bottom: 0;
+}
+
+// Raise elements on the z-index
+.o--z {
+  z-index: 100;
 }
 
 .unl {
