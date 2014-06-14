@@ -90,85 +90,80 @@ $gutter-width: 20px;
   > %pull-two-quarters   { margin-left: -(percentage(2/4)); }
   > %pull-three-quarters { margin-left: -(percentage(3/4)); }
 
-  // For each of our column groups...
-  @each $group in $col-groups {
+  // For each column width from 1 to the column group...
+  @for $i from 1 through 6 {
+    > .#{$grid-column-namespace}--#{$i}-of-#{$group} {
+      @extend %#{$grid-column-namespace};
 
-    // For each column width from 1 to the column group...
-    @for $i from 1 through $group {
-      > .#{$grid-column-namespace}--#{$i}-of-#{$group} {
-        @extend %#{$grid-column-namespace};
+      @if percentage($i/$group) == percentage(1/1) {
+        @extend %span-all;
+      } @else if percentage($i/$group) == percentage(1/2) {
+        @extend %one-half;
+      } @else if percentage($i/$group) == percentage(1/3) {
+        @extend %one-third;
+      } @else if percentage($i/$group) == percentage(2/3) {
+        @extend %two-thirds;
+      } @else if percentage($i/$group) == percentage(1/4) {
+        @extend %one-quarter;
+      } @else if percentage($i/$group) == percentage(2/4) {
+        @extend %two-quarters;
+      } @else if percentage($i/$group) == percentage(3/4) {
+        @extend %three-quarters;
+      } @else {
 
-        @if percentage($i/$group) == percentage(1/1) {
-          @extend %span-all;
-        } @else if percentage($i/$group) == percentage(1/2) {
-          @extend %one-half;
-        } @else if percentage($i/$group) == percentage(1/3) {
-          @extend %one-third;
-        } @else if percentage($i/$group) == percentage(2/3) {
-          @extend %two-thirds;
-        } @else if percentage($i/$group) == percentage(1/4) {
-          @extend %one-quarter;
-        } @else if percentage($i/$group) == percentage(2/4) {
-          @extend %two-quarters;
-        } @else if percentage($i/$group) == percentage(3/4) {
-          @extend %three-quarters;
-        } @else {
+        width: percentage($i/$group);
 
-          width: percentage($i/$group);
-
-        }
       }
+    }
 
-      > .#{$grid-column-namespace}--push-#{$i}-of-#{$group} {
-        @extend %#{$grid-column-namespace};
+    > .#{$grid-column-namespace}--push-#{$i}-of-#{$group} {
+      @extend %#{$grid-column-namespace};
 
-        @if percentage($i/$group) == percentage(1/1) {
-          @extend %push-span-all;
-        } @else if percentage($i/$group) == percentage(1/2) {
-          @extend %push-one-half;
-        } @else if percentage($i/$group) == percentage(1/3) {
-          @extend %push-one-third;
-        } @else if percentage($i/$group) == percentage(2/3) {
-          @extend %push-two-thirds;
-        } @else if percentage($i/$group) == percentage(1/4) {
-          @extend %push-one-quarter;
-        } @else if percentage($i/$group) == percentage(2/4) {
-          @extend %push-two-quarters;
-        } @else if percentage($i/$group) == percentage(3/4) {
-          @extend %push-three-quarters;
-        } @else {
+      @if percentage($i/$group) == percentage(1/1) {
+        @extend %push-span-all;
+      } @else if percentage($i/$group) == percentage(1/2) {
+        @extend %push-one-half;
+      } @else if percentage($i/$group) == percentage(1/3) {
+        @extend %push-one-third;
+      } @else if percentage($i/$group) == percentage(2/3) {
+        @extend %push-two-thirds;
+      } @else if percentage($i/$group) == percentage(1/4) {
+        @extend %push-one-quarter;
+      } @else if percentage($i/$group) == percentage(2/4) {
+        @extend %push-two-quarters;
+      } @else if percentage($i/$group) == percentage(3/4) {
+        @extend %push-three-quarters;
+      } @else {
 
-          margin-left: percentage($i/$group);
+        margin-left: percentage($i/$group);
 
-        }
       }
+    }
 
-      > .#{$grid-column-namespace}--pull-#{$i}-of-#{$group} {
-        @extend %#{$grid-column-namespace};
+    > .#{$grid-column-namespace}--pull-#{$i}-of-#{$group} {
+      @extend %#{$grid-column-namespace};
 
-        @if percentage($i/$group) == percentage(1/1) {
-          @extend %pull-span-all;
-        } @else if percentage($i/$group) == percentage(1/2) {
-          @extend %pull-one-half;
-        } @else if percentage($i/$group) == percentage(1/3) {
-          @extend %pull-one-third;
-        } @else if percentage($i/$group) == percentage(2/3) {
-          @extend %pull-two-thirds;
-        } @else if percentage($i/$group) == percentage(1/4) {
-          @extend %pull-one-quarter;
-        } @else if percentage($i/$group) == percentage(2/4) {
-          @extend %pull-two-quarters;
-        } @else if percentage($i/$group) == percentage(3/4) {
-          @extend %pull-three-quarters;
-        } @else {
+      @if percentage($i/$group) == percentage(1/1) {
+        @extend %pull-span-all;
+      } @else if percentage($i/$group) == percentage(1/2) {
+        @extend %pull-one-half;
+      } @else if percentage($i/$group) == percentage(1/3) {
+        @extend %pull-one-third;
+      } @else if percentage($i/$group) == percentage(2/3) {
+        @extend %pull-two-thirds;
+      } @else if percentage($i/$group) == percentage(1/4) {
+        @extend %pull-one-quarter;
+      } @else if percentage($i/$group) == percentage(2/4) {
+        @extend %pull-two-quarters;
+      } @else if percentage($i/$group) == percentage(3/4) {
+        @extend %pull-three-quarters;
+      } @else {
 
-          margin-left: -(percentage($i/$group));
+        margin-left: -(percentage($i/$group));
 
-        }
       }
-    } // end @for
-
-  } // end @each
+    }
+  } // end @for
 
   // All direct descendents of .grid get treated the same way.
   // This might be overkill for some, but it’s a time-saver for me.

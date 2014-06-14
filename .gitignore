@@ -18,6 +18,7 @@ node_modules/
 
 # Environment-dependent files
 _plugins/environment_variables.rb
+bower_components/
 
 # Ignore fonts. Easier to just upload directly to server.
 static/fonts/
