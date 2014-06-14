@@ -1,5 +1,3 @@
-@charset "UTF-8";
-
 /*-----------------------------------*\
 
   Root: style.scss
@@ -228,6 +226,30 @@ li ul {
 
 \*-----------------------------------*/
 
+.grid__col--1-of-6 {
+  width: 16.66667%;
+}
+
+.grid__col--push-1-of-6 {
+  margin-left: 16.66667%;
+}
+
+.grid__col--pull-1-of-6 {
+  margin-left: -16.66667%;
+}
+
+.grid__col--5-of-6 {
+  width: 83.33333%;
+}
+
+.grid__col--push-5-of-6 {
+  margin-left: 83.33333%;
+}
+
+.grid__col--pull-5-of-6 {
+  margin-left: -83.33333%;
+}
+
 .grid {
   list-style: none;
   margin-left: -20px;
@@ -281,81 +303,19 @@ li ul {
   margin-left: -66.66667%;
 }
 
-.grid > .grid__col--1-of-6 {
-  width: 16.66667%;
-}
-
-.grid > .grid__col--push-1-of-6 {
-  margin-left: 16.66667%;
-}
-
-.grid > .grid__col--pull-1-of-6 {
-  margin-left: -16.66667%;
-}
-
-.grid > .grid__col--5-of-6 {
-  width: 83.33333%;
-}
-
-.grid > .grid__col--push-5-of-6 {
-  margin-left: 83.33333%;
-}
-
-.grid > .grid__col--pull-5-of-6 {
-  margin-left: -83.33333%;
-}
-
-.grid > *,
-.grid > .grid__col--1-of-6,
-.grid > .grid__col--push-1-of-6,
-.grid > .grid__col--pull-1-of-6,
-.grid > .grid__col--2-of-6,
-.grid > .grid__col--push-2-of-6,
-.grid > .grid__col--pull-2-of-6,
-.grid > .grid__col--3-of-6,
-.grid > .grid__col--push-3-of-6,
-.grid > .grid__col--pull-3-of-6,
-.grid > .grid__col--4-of-6,
-.grid > .grid__col--push-4-of-6,
-.grid > .grid__col--pull-4-of-6,
-.grid > .grid__col--5-of-6,
-.grid > .grid__col--push-5-of-6,
-.grid > .grid__col--pull-5-of-6,
-.grid > .grid__col--6-of-6,
-.grid > .grid__col--push-6-of-6,
-.grid > .grid__col--pull-6-of-6,
-.grid > .grid__col--6-of-6 {
+.grid > .grid__col {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   display: inline-block;
-  margin-right: -.25em;
+  margin-right: -0.25em;
   min-height: 1px;
   padding-left: 20px;
   vertical-align: top;
 }
 
 @media screen and (max-width: 700px) {
-  .grid > *,
-  .grid > .grid__col--1-of-6,
-  .grid > .grid__col--push-1-of-6,
-  .grid > .grid__col--pull-1-of-6,
-  .grid > .grid__col--2-of-6,
-  .grid > .grid__col--push-2-of-6,
-  .grid > .grid__col--pull-2-of-6,
-  .grid > .grid__col--3-of-6,
-  .grid > .grid__col--push-3-of-6,
-  .grid > .grid__col--pull-3-of-6,
-  .grid > .grid__col--4-of-6,
-  .grid > .grid__col--push-4-of-6,
-  .grid > .grid__col--pull-4-of-6,
-  .grid > .grid__col--5-of-6,
-  .grid > .grid__col--push-5-of-6,
-  .grid > .grid__col--pull-5-of-6,
-  .grid > .grid__col--6-of-6,
-  .grid > .grid__col--push-6-of-6,
-  .grid > .grid__col--pull-6-of-6,
-  .grid > .grid__col--6-of-6 {
+  .grid > .grid__col {
     display: block;
     margin-left: 0;
     margin-right: 0;
@@ -425,12 +385,10 @@ body {
   padding-bottom: 1.4rem;
 }
 
-.isle,
 .highlight pre {
   padding: 0.7rem;
 }
 
-.isle--v,
 .site__footer section {
   padding-top: 0.7rem;
   padding-botton: 0.7rem;
@@ -440,7 +398,6 @@ body {
   padding: 0.35rem;
 }
 
-.spit--v,
 .site__nav a,
 .site__nav .js--toggle-lights {
   padding-top: 0.35rem;
@@ -488,7 +445,7 @@ h1,
   font-family: "Requiem Display A", "Requiem Display B", "Hoefler Text A", "Hoefler Text B", Georgia, serif;
   font-weight: 400;
   font-size: 1.8rem;
-  line-height: 1.166666667;
+  line-height: 1.16667;
 }
 
 h1 .caps,
@@ -501,7 +458,7 @@ h2,
   font-size: 1.2rem;
   font-weight: 400;
   font-style: italic;
-  line-height: 1.166666667;
+  line-height: 1.16667;
 }
 
 * + h2,
@@ -511,39 +468,36 @@ h2,
 
 h3,
 .gamma {
-  margin-bottom: .7rem;
+  margin-bottom: 0.7rem;
   font-family: "Hoefler Text SC A", "Hoefler Text SC B", "Hoefler Text A", "Hoefler Text B", Georgia, serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.4;
-  letter-spacing: .05em;
+  letter-spacing: 0.05em;
 }
 
 h4,
 .delta {
-  margin-bottom: .7rem;
+  margin-bottom: 0.7rem;
   font-family: "Whitney SSm SC A", "Whitney SSm SC B", "Whitney SSm A", "Whitney SSm B", Geneva, Verdana, san-serif;
-  font-size: .65rem;
+  font-size: 0.65rem;
   font-weight: 400;
-  line-height: 1.615384615;
-  letter-spacing: .05em;
+  line-height: 1.61538;
+  letter-spacing: 0.05em;
 }
 
-small,
-.small,
 .footnotes {
-  font-size: .8rem;
+  font-size: 0.8rem;
   line-height: 1.3125;
 }
 
-.meta,
 .footnotes {
   color: #7d6e8d;
 }
 
 .caps {
   font-family: "Hoefler Text SC A", "Hoefler Text SC B", "Hoefler Text A", "Hoefler Text B", Georgia, serif;
-  letter-spacing: .05em;
+  letter-spacing: 0.05em;
 }
 
 a,
@@ -554,23 +508,20 @@ a,
 
 a:hover,
 .js--toggle-lights:hover {
-  color: #663399;
+  color: #639;
 }
 
-figcaption,
 .site__nav {
-  font-size: .65rem;
-  line-height: 1.615384615;
+  font-size: 0.65rem;
+  line-height: 1.61538;
   font-family: "Whitney SSm A", "Whitney SSm B", Geneva, Verdana, san-serif;
   color: #7d6e8d;
 }
 
-.night-mode figcaption,
 .night-mode .site__nav {
   color: #716383;
 }
 
-figcaption .caps,
 .site__nav .caps {
   font-family: "Whitney SSm SC A", "Whitney SSm SC B", "Whitney SSm A", "Whitney SSm B", Geneva, Verdana, san-serif;
 }
@@ -594,13 +545,13 @@ hr,
 
 mark {
   background-color: transparent;
-  color: #663399;
+  color: #639;
 }
 
 blockquote {
   font-style: italic;
   padding: 0 1.4rem;
-  border-left: 2px solid #663399;
+  border-left: 2px solid #639;
 }
 
 blockquote em {
@@ -629,19 +580,19 @@ figure img {
   .alignleft,
   .alignright {
     float: left;
-    width: -webkit-calc(50% - 0.7rem );
-    width: calc(50% - 0.7rem );
-    margin-left: -webkit-calc(-50% - 0.46667rem );
-    margin-left: calc(-50% - 0.46667rem );
+    width: -webkit-calc(50% - 0.7rem);
+    width: calc(50% - 0.7rem);
+    margin-left: -webkit-calc(-50% - 0.46667rem);
+    margin-left: calc(-50% - 0.46667rem);
   }
 }
 
 @media (min-width: 700px) {
   .imgbleed {
-    width: -webkit-calc(150% + 0.46667rem );
-    width: calc(150% + 0.46667rem );
-    margin-left: -webkit-calc(-50% - 0.46667rem );
-    margin-left: calc(-50% - 0.46667rem );
+    width: -webkit-calc(150% + 0.46667rem);
+    width: calc(150% + 0.46667rem);
+    margin-left: -webkit-calc(-50% - 0.46667rem);
+    margin-left: calc(-50% - 0.46667rem);
   }
 
   .imgbleed figcaption {
@@ -758,7 +709,7 @@ pre {
 .highlight pre {
   max-width: 100%;
   overflow: scroll;
-  border-radius: .25em;
+  border-radius: 0.25em;
   background-color: #fafcfd;
   -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
@@ -832,7 +783,7 @@ pre {
 
 .highlight pre .err {
   color: #F00000;
-  background-color: #f0a0a0;
+  background-color: #F0A0A0;
 }
 
 .highlight pre .k {
@@ -933,7 +884,7 @@ pre {
 }
 
 .highlight pre .na {
-  color: dodgerblue;
+  color: #1e90ff;
 }
 
 .highlight pre .nb {
@@ -1086,7 +1037,7 @@ pre {
 
 .site__nav {
   font-family: "Whitney SSm SC A", "Whitney SSm SC B", "Whitney SSm A", "Whitney SSm B", Geneva, Verdana, san-serif;
-  letter-spacing: .05em;
+  letter-spacing: 0.05em;
   border-top: 1px solid #b0a2c2;
 }
 
@@ -1116,13 +1067,13 @@ pre {
 
 .site__nav a.active,
 .site__nav .active.js--toggle-lights {
-  color: #663399;
-  border-top-color: #663399;
+  color: #639;
+  border-top-color: #639;
 }
 
 .site__nav a:hover,
 .site__nav .js--toggle-lights:hover {
-  color: #663399;
+  color: #639;
 }
 
 .js--toggle-lights {
@@ -1160,8 +1111,8 @@ p:empty {
 }
 
 .footnote {
-  padding: .15em;
-  color: #663399;
+  padding: 0.15em;
+  color: #639;
   text-decoration: none;
 }
 

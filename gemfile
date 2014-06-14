@@ -2,10 +2,7 @@ source 'https://rubygems.org'
 
 gem 'jekyll', '~> 2.0.3'
 
-gem 'sass'
-gem 'compass'
-gem 'yuicompressor'
-
-gem 'rdiscount'
+gem 'kramdown'
 gem 'facets'
-gem 'typogruby'
+gem 'ffi'
+gem 'fast-aleck'

@@ -28,7 +28,7 @@ module.exports = function(grunt) {
     csso: {
       dist: {
         options: {
-          report: 'gzip',
+          report: 'min',
         },
         files: {
           '_assets/css/style.min.css': ['_assets/css/style.css'],
