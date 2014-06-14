@@ -39,24 +39,26 @@ module.exports = function(grunt) {
     responsive_images: {
       dist: {
         options: {
+          quality: 60,
+          engine: 'im',
           sizes: [{
             name: 'small',
-            width: 320
+            width: 320,
           }, {
             name: 'small@2x',
-            width: 640
+            width: 640,
           }, {
             name: 'medium',
-            width: 660
+            width: 660,
           }, {
             name: 'medium@2x',
-            width: 1320
+            width: 1320,
           }, {
             name: 'large',
-            width: 960
+            width: 960,
           }, {
             name: 'large@2x',
-            width: 1920
+            width: 1920,
           }],
         },
         files: [{
