@@ -43,6 +43,7 @@
 
 .footer__copyright {
   @extend %small;
+  @extend %isle--v;
   border-top: 1px solid $lighter-gray;
 
   .night-mode & {

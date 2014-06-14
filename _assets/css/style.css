@@ -389,7 +389,8 @@ body {
   padding: 0.7rem;
 }
 
-.site__footer section {
+.site__footer section,
+.footer__copyright {
   padding-top: 0.7rem;
   padding-botton: 0.7rem;
 }
