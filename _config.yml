@@ -2,6 +2,9 @@ name: "Daniel T. Eden, Designer"
 description: Designer
 url: https://daneden.me
 
+gems:
+- jekyll-sitemap
+
 markdown: kramdown
 
 highlighter: true
