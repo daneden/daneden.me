@@ -70,6 +70,17 @@ module.exports = function(grunt) {
       }
     },
 
+    imagemin: {
+      dynamic: {
+        files: [{
+          expand: true,
+          cwd: 'uploads',
+          src: ['**/*.{png,jpg,gif}'],
+          dest: 'uploads/',
+        }],
+      },
+    },
+
     // Jekyll with drafts
     jekyll: {
       dist: {
@@ -123,6 +134,7 @@ module.exports = function(grunt) {
   // Load tasks
   grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-csso');
   grunt.loadNpmTasks('grunt-jekyll');
@@ -130,6 +142,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-responsive-images');
 
   // Register tasks
+  grunt.registerTask('images', ['responsive_images', 'imagemin']);
   grunt.registerTask('default', ['sass', 'autoprefixer', 'csso', 'jekyll']);
   grunt.registerTask('dev', ['sass', 'autoprefixer', 'csso', 'jekyll', 'watch']);
+  grunt.registerTask('build', ['images', 'default']);
 };
