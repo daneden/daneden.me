@@ -25,21 +25,16 @@ $font-Code: "Source Code Pro", Monaco, monospace;
 
 
 // Group: Colors
-//$background: #fbf7f0;
-//$highlight: #c64f52;
-/* #663399Rebecca */
-$highlight: #639;
-$background: lighten($highlight, 57%);
+$background: #fbf7f0;
+$highlight: #c64f52;
 
 $dark-gray: mix($highlight, #3d464d, 30%);
 $light-gray: mix($highlight, #888, 30%);
 $lighter-gray: mix($highlight, #d0d2d4, 30%);
 
 // Group: Colors-invert
-//$background-invert: #1d1f21;
+$background-invert: #1d1f21;
 
-$background-invert: desaturate(darken($highlight, 30%), 10%);
-
-$dark-gray-invert: mix($highlight, #999a9b, 30%);
-$light-gray-invert: mix($highlight, #77797a, 30%);
-$lighter-gray-invert: mix($highlight, #393b3f, 30%);
+$dark-gray-invert: #999a9b;
+$light-gray-invert: #77797a;
+$lighter-gray-invert: #393b3f;

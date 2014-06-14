@@ -14,8 +14,6 @@
 
 \*-----------------------------------*/
 
-/* #663399Rebecca */
-
 /*-----------------------------------*\
 
   Module: base
@@ -36,8 +34,8 @@ html,
   -webkit-font-feature-settings: 'liga' 1, 'onum' 1, 'dlig' 1;
   -moz-font-feature-settings: 'liga' 1, 'onum' 1, 'dlig' 1;
   font-feature-settings: 'liga' 1, 'onum' 1, 'dlig' 1;
-  background-color: #f7f4fb;
-  color: #494063;
+  background-color: #fbf7f0;
+  color: #66484e;
 }
 
 @media (max-width: 860px) {
@@ -56,8 +54,8 @@ html,
 
 html.night-mode,
 :root.night-mode {
-  background-color: #190f24;
-  color: #897b9a;
+  background-color: #1d1f21;
+  color: #999a9b;
 }
 
 /*-----------------------------------*\
@@ -76,8 +74,6 @@ html.night-mode,
   Global variables of all kinds
 
 \*-----------------------------------*/
-
-/* #663399Rebecca */
 
 /*-----------------------------------*\
 
@@ -495,7 +491,7 @@ h4,
 }
 
 .footnotes {
-  color: #7d6e8d;
+  color: #9a7677;
 }
 
 .caps {
@@ -511,18 +507,18 @@ a,
 
 a:hover,
 .js--toggle-lights:hover {
-  color: #639;
+  color: #c64f52;
 }
 
 .site__nav {
   font-size: 0.65rem;
   line-height: 1.61538;
   font-family: "Whitney SSm A", "Whitney SSm B", Geneva, Verdana, san-serif;
-  color: #7d6e8d;
+  color: #9a7677;
 }
 
 .night-mode .site__nav {
-  color: #716383;
+  color: #77797a;
 }
 
 .site__nav .caps {
@@ -532,7 +528,7 @@ a:hover,
 hr,
 .footnotes:before {
   border: none;
-  border-bottom: 2px solid #b0a2c2;
+  border-bottom: 2px solid #cdaaac;
   width: 6rem;
   padding-top: 1.4rem;
   margin-top: -2px;
@@ -543,18 +539,18 @@ hr,
 
 .night-mode hr,
 .night-mode .footnotes:before {
-  border-bottom-color: #46385a;
+  border-bottom-color: #393b3f;
 }
 
 mark {
   background-color: transparent;
-  color: #639;
+  color: #c64f52;
 }
 
 blockquote {
   font-style: italic;
   padding: 0 1.4rem;
-  border-left: 2px solid #639;
+  border-left: 2px solid #c64f52;
 }
 
 blockquote em {
@@ -672,8 +668,8 @@ html,
   -webkit-font-feature-settings: 'liga' 1, 'onum' 1, 'dlig' 1;
   -moz-font-feature-settings: 'liga' 1, 'onum' 1, 'dlig' 1;
   font-feature-settings: 'liga' 1, 'onum' 1, 'dlig' 1;
-  background-color: #f7f4fb;
-  color: #494063;
+  background-color: #fbf7f0;
+  color: #66484e;
 }
 
 @media (max-width: 860px) {
@@ -692,8 +688,8 @@ html,
 
 html.night-mode,
 :root.night-mode {
-  background-color: #190f24;
-  color: #897b9a;
+  background-color: #1d1f21;
+  color: #999a9b;
 }
 
 /*-----------------------------------*\
@@ -1041,11 +1037,11 @@ pre {
 .site__nav {
   font-family: "Whitney SSm SC A", "Whitney SSm SC B", "Whitney SSm A", "Whitney SSm B", Geneva, Verdana, san-serif;
   letter-spacing: 0.05em;
-  border-top: 1px solid #b0a2c2;
+  border-top: 1px solid #cdaaac;
 }
 
 .night-mode .site__nav {
-  border-top-color: #46385a;
+  border-top-color: #393b3f;
 }
 
 .site__nav li {
@@ -1059,24 +1055,24 @@ pre {
 .site__nav a,
 .site__nav .js--toggle-lights {
   text-decoration: none;
-  color: #7d6e8d;
+  color: #9a7677;
   border-top: 1px solid transparent;
 }
 
 .night-mode .site__nav a,
 .night-mode .site__nav .js--toggle-lights {
-  color: #716383;
+  color: #77797a;
 }
 
 .site__nav a.active,
 .site__nav .active.js--toggle-lights {
-  color: #639;
-  border-top-color: #639;
+  color: #c64f52;
+  border-top-color: #c64f52;
 }
 
 .site__nav a:hover,
 .site__nav .js--toggle-lights:hover {
-  color: #639;
+  color: #c64f52;
 }
 
 .js--toggle-lights {
@@ -1115,7 +1111,7 @@ p:empty {
 
 .footnote {
   padding: 0.15em;
-  color: #639;
+  color: #c64f52;
   text-decoration: none;
 }
 
@@ -1141,11 +1137,11 @@ p:empty {
 \*-----------------------------------*/
 
 .site__footer {
-  border-top: 1px solid #b0a2c2;
+  border-top: 1px solid #cdaaac;
 }
 
 .night-mode .site__footer {
-  border-top-color: #46385a;
+  border-top-color: #393b3f;
 }
 
 .site__footer section {
@@ -1165,20 +1161,20 @@ p:empty {
     margin-left: -10px;
     top: 0;
     bottom: 0;
-    background-color: #b0a2c2;
+    background-color: #cdaaac;
   }
 
   .night-mode .site__footer section + section:before {
-    background-color: #46385a;
+    background-color: #393b3f;
   }
 }
 
 .footer__copyright {
-  border-top: 1px solid #b0a2c2;
+  border-top: 1px solid #cdaaac;
 }
 
 .night-mode .footer__copyright {
-  border-top-color: #46385a;
+  border-top-color: #393b3f;
 }
 
 /*===================================*\
