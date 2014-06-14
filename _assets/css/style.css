@@ -35,7 +35,7 @@ html,
   -moz-font-feature-settings: 'liga' 1, 'onum' 1, 'dlig' 1;
   font-feature-settings: 'liga' 1, 'onum' 1, 'dlig' 1;
   background-color: #fbf7f0;
-  color: #66484e;
+  color: #3d464d;
 }
 
 @media (max-width: 860px) {
@@ -491,7 +491,7 @@ h4,
 }
 
 .footnotes {
-  color: #9a7677;
+  color: #888;
 }
 
 .caps {
@@ -514,7 +514,7 @@ a:hover,
   font-size: 0.65rem;
   line-height: 1.61538;
   font-family: "Whitney SSm A", "Whitney SSm B", Geneva, Verdana, san-serif;
-  color: #9a7677;
+  color: #888;
 }
 
 .night-mode .site__nav {
@@ -528,7 +528,7 @@ a:hover,
 hr,
 .footnotes:before {
   border: none;
-  border-bottom: 2px solid #cdaaac;
+  border-bottom: 2px solid #d0d2d4;
   width: 6rem;
   padding-top: 1.4rem;
   margin-top: -2px;
@@ -669,7 +669,7 @@ html,
   -moz-font-feature-settings: 'liga' 1, 'onum' 1, 'dlig' 1;
   font-feature-settings: 'liga' 1, 'onum' 1, 'dlig' 1;
   background-color: #fbf7f0;
-  color: #66484e;
+  color: #3d464d;
 }
 
 @media (max-width: 860px) {
@@ -1037,7 +1037,7 @@ pre {
 .site__nav {
   font-family: "Whitney SSm SC A", "Whitney SSm SC B", "Whitney SSm A", "Whitney SSm B", Geneva, Verdana, san-serif;
   letter-spacing: 0.05em;
-  border-top: 1px solid #cdaaac;
+  border-top: 1px solid #d0d2d4;
 }
 
 .night-mode .site__nav {
@@ -1055,7 +1055,7 @@ pre {
 .site__nav a,
 .site__nav .js--toggle-lights {
   text-decoration: none;
-  color: #9a7677;
+  color: #888;
   border-top: 1px solid transparent;
 }
 
@@ -1137,7 +1137,7 @@ p:empty {
 \*-----------------------------------*/
 
 .site__footer {
-  border-top: 1px solid #cdaaac;
+  border-top: 1px solid #d0d2d4;
 }
 
 .night-mode .site__footer {
@@ -1161,7 +1161,7 @@ p:empty {
     margin-left: -10px;
     top: 0;
     bottom: 0;
-    background-color: #cdaaac;
+    background-color: #d0d2d4;
   }
 
   .night-mode .site__footer section + section:before {
@@ -1170,7 +1170,7 @@ p:empty {
 }
 
 .footer__copyright {
-  border-top: 1px solid #cdaaac;
+  border-top: 1px solid #d0d2d4;
 }
 
 .night-mode .footer__copyright {

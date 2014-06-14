@@ -40,7 +40,7 @@ module.exports = function(grunt) {
       dist: {
         options: {
           quality: 60,
-          engine: 'im',
+          engine: 'gm',
           sizes: [{
             name: 'small',
             width: 320,
