@@ -28,9 +28,9 @@ $font-Code: "Source Code Pro", Monaco, monospace;
 $background: #fbf7f0;
 $highlight: #c64f52;
 
-$dark-gray: mix($highlight, #3d464d, 30%);
-$light-gray: mix($highlight, #888, 30%);
-$lighter-gray: mix($highlight, #d0d2d4, 30%);
+$dark-gray: #3d464d;
+$light-gray: #888;
+$lighter-gray: #d0d2d4;
 
 // Group: Colors-invert
 $background-invert: #1d1f21;
