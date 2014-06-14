@@ -28,7 +28,7 @@ module.exports = function(grunt) {
     csso: {
       dist: {
         options: {
-          report: 'gzip',
+          report: 'min',
         },
         files: {
           '_assets/css/style.min.css': ['_assets/css/style.css'],
@@ -123,7 +123,7 @@ module.exports = function(grunt) {
   // Load tasks
   grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-csso');
   grunt.loadNpmTasks('grunt-jekyll');
   grunt.loadNpmTasks('grunt-notify');

@@ -3,10 +3,6 @@ source 'https://rubygems.org'
 gem 'jekyll', '~> 2.0.3'
 gem 'jekyll-sitemap'
 
-gem 'sass'
-gem 'compass'
-gem 'yuicompressor'
-
-gem 'rdiscount'
+gem 'kramdown'
 gem 'facets'
 gem 'typogruby'

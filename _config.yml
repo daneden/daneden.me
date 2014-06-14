@@ -12,7 +12,7 @@ highlighter: true
 permalink: pretty
 
 include: [".htaccess"]
-exclude: ["node_modules", "package.json", "config.rb", "Gruntfile.js"]
+exclude: ["node_modules", "package.json", "Gruntfile.js"]
 
 asset_bundler:
   markup_templates:
