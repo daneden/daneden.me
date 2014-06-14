@@ -1,40 +1,12 @@
 module.exports = function(grunt) {
+  require('time-grunt')(grunt);
+
   pkg: grunt.file.readJSON('package.json'),
   grunt.initConfig({
-
-    // Make our SVGs smaller
-    svgmin: {
-      options: { // Configuration that will be passed directly to SVGO
-        plugins: [{
-            removeViewBox: false
-        }],
-      },
-      dist: {
-        files: [{
-          expand: true,
-          cwd: 'static/images/_src', // Src matches are relative to this path.
-          src: ['**/*.svg'], // Actual pattern(s) to match.
-          dest: 'static/images/', // Destination path prefix.
-          ext: '.min.svg' // Dest filepaths will have this extension.
-        }],
-      },
-    },
-
-    // Make PNG copies of our SVGs
-    svg2png: {
-      all: {
-        files: [
-            { src: ['static/images/_src/**/*.svg'], dest: 'static/images/' },
-        ],
-      },
-    },
 
     // Sass
     sass: {
       dist: {
-        options: {
-          compass: true
-        },
         files: {
           '_assets/css/style.css' : '_assets/scss/style.scss'
         }
@@ -50,19 +22,6 @@ module.exports = function(grunt) {
       no_dest: {
         // File to output
         src: '_assets/css/style.css'
-      },
-    },
-
-    // Add rem px fallbacks
-    remfallback: {
-      options: {
-        log: true,
-        replace: false,
-      },
-      your_target: {
-        files: {
-          '_assets/css/style.css': ['_assets/css/style.css']
-        },
       },
     },
 
@@ -112,9 +71,7 @@ module.exports = function(grunt) {
     // Jekyll with drafts
     jekyll: {
       dist: {
-        options: {
-          drafts: true
-        }
+
       }
     },
 
@@ -126,7 +83,7 @@ module.exports = function(grunt) {
           '_assets/scss/**/*'
         ],
         // Run Sass, autoprefixer, and CSSO
-        tasks: ['sass', 'autoprefixer', 'remfallback', 'csso'],
+        tasks: ['sass', 'autoprefixer', 'csso'],
         options: {
           interrupt: true,
           spawn: false,
@@ -168,12 +125,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-csso');
   grunt.loadNpmTasks('grunt-jekyll');
   grunt.loadNpmTasks('grunt-notify');
-  grunt.loadNpmTasks('grunt-remfallback');
   grunt.loadNpmTasks('grunt-responsive-images');
-  grunt.loadNpmTasks('grunt-svg2png');
-  grunt.loadNpmTasks('grunt-svgmin');
 
   // Register tasks
-  grunt.registerTask('default', ['svgmin', 'svg2png', 'sass', 'autoprefixer', 'remfallback', 'csso', 'jekyll', 'watch']);
-  grunt.registerTask('images', ['responsive_images', 'svgmin', 'svg2png', 'styles']);
+  grunt.registerTask('default', ['sass', 'autoprefixer', 'csso', 'jekyll']);
+  grunt.registerTask('dev', ['sass', 'autoprefixer', 'csso', 'jekyll', 'watch']);
 };

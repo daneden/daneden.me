@@ -1,6 +1,5 @@
 @charset "UTF-8";
 
-
 /*-----------------------------------*\
 
   Root: style.scss
@@ -130,7 +129,6 @@ h1,
 .alpha,
 h2,
 .beta {
-  margin-bottom: 22px;
   margin-bottom: 1.4rem;
 }
 
@@ -156,7 +154,6 @@ li ul {
 }
 
 .o--p {
-  margin-bottom: 22px;
   margin-bottom: 1.4rem;
 }
 
@@ -411,53 +408,42 @@ li ul {
 }
 
 .wrap {
-  max-width: 768px;
   max-width: 48rem;
   margin: 0 auto;
 }
 
 body {
-  padding: 22px;
   padding: 1.4rem;
 }
 
 .island {
-  padding: 22px;
   padding: 1.4rem;
 }
 
 .island--v {
-  padding-top: 22px;
   padding-top: 1.4rem;
-  padding-bottom: 22px;
   padding-bottom: 1.4rem;
 }
 
 .isle,
 .highlight pre {
-  padding: 11px;
   padding: 0.7rem;
 }
 
 .isle--v,
 .site__footer section {
-  padding-top: 11px;
   padding-top: 0.7rem;
-  padding-botton: 11px;
   padding-botton: 0.7rem;
 }
 
 .spit {
-  padding: 6px;
   padding: 0.35rem;
 }
 
 .spit--v,
 .site__nav a,
 .site__nav .js--toggle-lights {
-  padding-top: 6px;
   padding-top: 0.35rem;
-  padding-bottom: 6px;
   padding-bottom: 0.35rem;
 }
 
@@ -501,7 +487,6 @@ h1,
 .alpha {
   font-family: "Requiem Display A", "Requiem Display B", "Hoefler Text A", "Hoefler Text B", Georgia, serif;
   font-weight: 400;
-  font-size: 29px;
   font-size: 1.8rem;
   line-height: 1.166666667;
 }
@@ -513,7 +498,6 @@ h1 .caps,
 
 h2,
 .beta {
-  font-size: 19px;
   font-size: 1.2rem;
   font-weight: 400;
   font-style: italic;
@@ -522,16 +506,13 @@ h2,
 
 * + h2,
 * + .beta {
-  padding-top: 22px;
   padding-top: 1.4rem;
 }
 
 h3,
 .gamma {
-  margin-bottom: 11px;
   margin-bottom: .7rem;
   font-family: "Hoefler Text SC A", "Hoefler Text SC B", "Hoefler Text A", "Hoefler Text B", Georgia, serif;
-  font-size: 16px;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.4;
@@ -540,10 +521,8 @@ h3,
 
 h4,
 .delta {
-  margin-bottom: 11px;
   margin-bottom: .7rem;
   font-family: "Whitney SSm SC A", "Whitney SSm SC B", "Whitney SSm A", "Whitney SSm B", Geneva, Verdana, san-serif;
-  font-size: 10px;
   font-size: .65rem;
   font-weight: 400;
   line-height: 1.615384615;
@@ -553,7 +532,6 @@ h4,
 small,
 .small,
 .footnotes {
-  font-size: 13px;
   font-size: .8rem;
   line-height: 1.3125;
 }
@@ -581,7 +559,6 @@ a:hover,
 
 figcaption,
 .site__nav {
-  font-size: 10px;
   font-size: .65rem;
   line-height: 1.615384615;
   font-family: "Whitney SSm A", "Whitney SSm B", Geneva, Verdana, san-serif;
@@ -602,13 +579,10 @@ hr,
 .footnotes:before {
   border: none;
   border-bottom: 2px solid #b0a2c2;
-  width: 96px;
   width: 6rem;
-  padding-top: 22px;
   padding-top: 1.4rem;
   margin-top: -2px;
   margin-right: auto;
-  margin-bottom: 45px;
   margin-bottom: 2.8rem;
   margin-left: auto;
 }
@@ -625,7 +599,6 @@ mark {
 
 blockquote {
   font-style: italic;
-  padding: 0 22px;
   padding: 0 1.4rem;
   border-left: 2px solid #663399;
 }
@@ -649,7 +622,6 @@ blockquote em {
 figure img {
   display: block;
   width: 100%;
-  margin-bottom: 11px;
   margin-bottom: 0.7rem;
 }
 
@@ -657,37 +629,27 @@ figure img {
   .alignleft,
   .alignright {
     float: left;
-    width: -webkit-calc(50% - 11px );
     width: -webkit-calc(50% - 0.7rem );
-    width: calc(50% - 11px );
     width: calc(50% - 0.7rem );
-    margin-left: -webkit-calc(-50% - 7px );
     margin-left: -webkit-calc(-50% - 0.46667rem );
-    margin-left: calc(-50% - 7px );
     margin-left: calc(-50% - 0.46667rem );
   }
 }
 
 @media (min-width: 700px) {
   .imgbleed {
-    width: -webkit-calc(150% + 7px );
     width: -webkit-calc(150% + 0.46667rem );
-    width: calc(150% + 7px );
     width: calc(150% + 0.46667rem );
-    margin-left: -webkit-calc(-50% - 7px );
     margin-left: -webkit-calc(-50% - 0.46667rem );
-    margin-left: calc(-50% - 7px );
     margin-left: calc(-50% - 0.46667rem );
   }
 
   .imgbleed figcaption {
     position: absolute;
-    margin-top: 22px;
     margin-top: 1.4rem;
     top: 100%;
     left: 0;
     width: 33.33333%;
-    padding-right: 11px;
     padding-right: 0.7rem;
     text-align: right;
   }
@@ -1137,7 +1099,6 @@ pre {
 }
 
 .site__nav li + li {
-  margin-left: 16px;
   margin-left: 1rem;
 }
 
@@ -1195,7 +1156,6 @@ p:empty {
 }
 
 .hentry {
-  margin-bottom: 67px;
   margin-bottom: 4.2rem;
 }
 
