@@ -486,7 +486,9 @@ h4,
   letter-spacing: 0.05em;
 }
 
-.footnotes {
+.footnotes,
+.site__footer section,
+.footer__copyright {
   font-size: 0.8rem;
   line-height: 1.3125;
 }
