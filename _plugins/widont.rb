@@ -23,20 +23,15 @@ module Jekyll
       # Split the sentence into an array of words
       words = text.split(' ')
 
-      # Extract the last two words
-      words = words[words.length-2, words.length-1] if words.length > 2
-
-      character_count = 0
-
       # Count the characters of the last two words
-      words.each { |word| character_count += word.length }
+      character_count = words.last(2).reduce(0) { |sum, word| sum + word.length }
 
       # Check whether to insert a space
       if character_count < 15
         text[text.rindex(' '), 1] = '&nbsp;' if text.rindex(' ')
       end
 
-      return text
+      text
     end
 
   end
