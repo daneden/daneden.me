@@ -1,34 +1,9 @@
-/*-----------------------------------*\
-
-  Root: style.scss
-
-  Imports all required SCSS files.
-
-\*-----------------------------------*/
-
-/*-----------------------------------*\
-
-  Partial: variables
-
-  Global variables of all kinds
-
-\*-----------------------------------*/
-
-/*-----------------------------------*\
-
-  Module: base
-
-  High-level styles. Basically just
-  the html/:root element.
-
-\*-----------------------------------*/
-
 html,
 :root {
-  font: 125%/1.4 "Hoefler Text A", "Hoefler Text B", Georgia, serif;
-  -webkit-text-size-adjust: none;
+  font: 125%/1.4 'Hoefler Text A', 'Hoefler Text B', Georgia, serif;
   -moz-text-size-adjust: none;
   -ms-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
   text-size-adjust: none;
   text-rendering: optimizeLegibility;
   -webkit-font-feature-settings: 'liga' 1, 'onum' 1, 'dlig' 1;
@@ -57,39 +32,6 @@ html.night-mode,
   background-color: #1d1f21;
   color: #999a9b;
 }
-
-/*-----------------------------------*\
-
-  Partial: all
-
-  Imports all abstracted components
-  and helpers
-
-\*-----------------------------------*/
-
-/*-----------------------------------*\
-
-  Partial: variables
-
-  Global variables of all kinds
-
-\*-----------------------------------*/
-
-/*-----------------------------------*\
-
-  Partial: mixins
-
-  Site-wide mixin definitions
-
-\*-----------------------------------*/
-
-/*-----------------------------------*\
-
-  Partial: reset
-
-  An overzealous CSS reset
-
-\*-----------------------------------*/
 
 * {
   margin: 0;
@@ -135,14 +77,6 @@ li ul {
   margin-bottom: 0;
 }
 
-/*-----------------------------------*\
-
-  Partial: helpers
-
-  Helper classes for allsorts
-
-\*-----------------------------------*/
-
 .o--b {
   display: block;
 }
@@ -171,56 +105,6 @@ li ul {
 .f--r {
   float: right;
 }
-
-/*-----------------------------------*\
-
-  Partial: layout
-
-  Layout rules
-
-\*-----------------------------------*/
-
-/*-----------------------------------*\
-
-  Partial: grid
-
-  Powerful grid derived from Toast.
-  You'd be mad to use it.
-
-  Usage
-  =====
-
-  Assuming default values:
-
-  <div class="grid">
-    <div class="grid__col grid__col--1-of-2">
-      A half-width column.
-    </div>
-    <div class="grid__col grid__col--1-of-4 grid__col--pull-1-of-4">
-      A quarter, pulled left by its own width. You get this, right?
-    </div>
-  </div>
-
-
-  Customisation
-  =============
-
-  $grid-namespace and $grid-column-namespace
-  adjusts the class names for the grid. With
-  default values, grid wrappers have a class
-  of '.grid' and columns '.grid__col'.
-
-  $col-groups(n) adjusts column divisions.
-  For example, $col-groups(12) will produce
-  a 12-column grid. $col-groups(3,6,8)
-  will produce a 3-, 6-, and 8-column grid.
-
-  $gutter-width is—you guessed it—the gutter
-  width. Accepts any unit.
-
-  That's it. Have fun.
-
-\*-----------------------------------*/
 
 .grid__col--1-of-6 {
   width: 16.66667%;
@@ -300,8 +184,8 @@ li ul {
 }
 
 .grid > .grid__col {
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   display: inline-block;
   margin-right: -0.25em;
@@ -388,27 +272,17 @@ body {
 .site__footer section,
 .footer__copyright {
   padding-top: 0.7rem;
-  padding-botton: 0.7rem;
+  padding-bottom: 0.7rem;
 }
 
 .spit {
   padding: 0.35rem;
 }
 
-.site__nav a,
-.site__nav .js--toggle-lights {
+.site__nav a {
   padding-top: 0.35rem;
   padding-bottom: 0.35rem;
 }
-
-/*-----------------------------------*\
-
-  Partial: objects
-
-  Abstractions that can't be categorised
-  anywhere else
-
-\*-----------------------------------*/
 
 .nav,
 .nav ul,
@@ -419,27 +293,16 @@ body {
 
 .nav li,
 .nav a,
-.nav .js--toggle-lights,
 .nav ul li,
 .nav ul a,
-.nav ul .js--toggle-lights,
 .nav ol li,
-.nav ol a,
-.nav ol .js--toggle-lights {
+.nav ol a {
   display: inline-block;
 }
 
-/*-----------------------------------*\
-
-  Partial: typography
-
-  Type styles
-
-\*-----------------------------------*/
-
 h1,
 .alpha {
-  font-family: "Requiem Display A", "Requiem Display B", "Hoefler Text A", "Hoefler Text B", Georgia, serif;
+  font-family: 'Requiem Display A', 'Requiem Display B', 'Hoefler Text A', 'Hoefler Text B', Georgia, serif;
   font-weight: 400;
   font-size: 1.8rem;
   line-height: 1.16667;
@@ -447,7 +310,7 @@ h1,
 
 h1 .caps,
 .alpha .caps {
-  font-family: "Requiem Display SC A", "Requiem Display SC B", "Requiem Display A", "Requiem Display B", "Hoefler Text A", "Hoefler Text B", Georgia, serif;
+  font-family: 'Requiem Display SC A', 'Requiem Display SC B', 'Requiem Display A', 'Requiem Display B', 'Hoefler Text A', 'Hoefler Text B', Georgia, serif;
 }
 
 h2,
@@ -466,7 +329,7 @@ h2,
 h3,
 .gamma {
   margin-bottom: 0.7rem;
-  font-family: "Hoefler Text SC A", "Hoefler Text SC B", "Hoefler Text A", "Hoefler Text B", Georgia, serif;
+  font-family: 'Hoefler Text SC A', 'Hoefler Text SC B', 'Hoefler Text A', 'Hoefler Text B', Georgia, serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.4;
@@ -476,7 +339,7 @@ h3,
 h4,
 .delta {
   margin-bottom: 0.7rem;
-  font-family: "Whitney SSm SC A", "Whitney SSm SC B", "Whitney SSm A", "Whitney SSm B", Geneva, Verdana, san-serif;
+  font-family: 'Whitney SSm SC A', 'Whitney SSm SC B', 'Whitney SSm A', 'Whitney SSm B', Geneva, Verdana, san-serif;
   font-size: 0.65rem;
   font-weight: 400;
   line-height: 1.61538;
@@ -495,17 +358,15 @@ h4,
 }
 
 .caps {
-  font-family: "Hoefler Text SC A", "Hoefler Text SC B", "Hoefler Text A", "Hoefler Text B", Georgia, serif;
+  font-family: 'Hoefler Text SC A', 'Hoefler Text SC B', 'Hoefler Text A', 'Hoefler Text B', Georgia, serif;
   letter-spacing: 0.05em;
 }
 
-a,
 .js--toggle-lights {
   color: inherit;
   cursor: pointer;
 }
 
-a:hover,
 .js--toggle-lights:hover {
   color: #c64f52;
 }
@@ -513,7 +374,7 @@ a:hover,
 .site__nav {
   font-size: 0.65rem;
   line-height: 1.61538;
-  font-family: "Whitney SSm A", "Whitney SSm B", Geneva, Verdana, san-serif;
+  font-family: 'Whitney SSm A', 'Whitney SSm B', Geneva, Verdana, san-serif;
   color: #888;
 }
 
@@ -522,12 +383,11 @@ a:hover,
 }
 
 .site__nav .caps {
-  font-family: "Whitney SSm SC A", "Whitney SSm SC B", "Whitney SSm A", "Whitney SSm B", Geneva, Verdana, san-serif;
+  font-family: 'Whitney SSm SC A', 'Whitney SSm SC B', 'Whitney SSm A', 'Whitney SSm B', Geneva, Verdana, san-serif;
 }
 
-hr,
 .footnotes:before {
-  border: none;
+  border: 0;
   border-bottom: 2px solid #d0d2d4;
   width: 6rem;
   padding-top: 1.4rem;
@@ -537,7 +397,6 @@ hr,
   margin-left: auto;
 }
 
-.night-mode hr,
 .night-mode .footnotes:before {
   border-bottom-color: #393b3f;
 }
@@ -560,14 +419,6 @@ blockquote em {
 .promo {
   text-align: center;
 }
-
-/*-----------------------------------*\
-
-  Partial: images
-
-  Sprite and image helpers should go here
-
-\*-----------------------------------*/
 
 figure img {
   display: block;
@@ -605,64 +456,12 @@ figure img {
   }
 }
 
-/*-----------------------------------*\
-
-  Partial: tables
-
-  Table styling
-
-\*-----------------------------------*/
-
-/*-----------------------------------*\
-
-  Partial: forms
-
-  Form & form element styles
-
-\*-----------------------------------*/
-
-.debug-outline * {
-  outline: 1px dotted rgba(0, 0, 0, 0.1);
-  outline-offset: -1px;
-}
-
-.debug-outline *:hover {
-  outline-color: red;
-}
-
-/*-----------------------------------*\
-
-  Partial: animations
-
-  Animation definitions
-
-\*-----------------------------------*/
-
-/*-----------------------------------*\
-
-  Module: all
-
-  Imports modules. Modules are site-
-  and page-specific styles that cannot
-  be easily abstracted.
-
-\*-----------------------------------*/
-
-/*-----------------------------------*\
-
-  Module: base
-
-  High-level styles. Basically just
-  the html/:root element.
-
-\*-----------------------------------*/
-
 html,
 :root {
-  font: 125%/1.4 "Hoefler Text A", "Hoefler Text B", Georgia, serif;
-  -webkit-text-size-adjust: none;
+  font: 125%/1.4 'Hoefler Text A', 'Hoefler Text B', Georgia, serif;
   -moz-text-size-adjust: none;
   -ms-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
   text-size-adjust: none;
   text-rendering: optimizeLegibility;
   -webkit-font-feature-settings: 'liga' 1, 'onum' 1, 'dlig' 1;
@@ -692,14 +491,6 @@ html.night-mode,
   color: #999a9b;
 }
 
-/*-----------------------------------*\
-
-  Module: code
-
-  Code highlighting styles
-
-\*-----------------------------------*/
-
 code,
 pre {
   font: 85%/1.647058824 "Source Code Pro", Menlo, Consolas, monospace;
@@ -712,85 +503,28 @@ pre {
   background-color: #fafcfd;
   -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
-  /* Comment */
-  /* Error */
-  /* Keyword */
-  /* Comment.Multiline */
-  /* Comment.Preproc */
-  /* Comment.Single */
-  /* Comment.Special */
-  /* Generic.Deleted */
-  /* Generic.Emph */
-  /* Generic.Error */
-  /* Generic.Heading */
-  /* Generic.Inserted */
-  /* Generic.Output */
-  /* Generic.Prompt */
-  /* Generic.Strong */
-  /* Generic.Subheading */
-  /* Generic.Traceback */
-  /* Keyword.Constant */
-  /* Keyword.Declaration */
-  /* Keyword.Namespace */
-  /* Keyword.Pseudo */
-  /* Keyword.Reserved */
-  /* Keyword.Type */
-  /* Literal.Number */
-  /* Literal.String */
-  /* Name.Attribute */
-  /* Name.Builtin */
-  /* Name.Class */
-  /* Name.Constant */
-  /* Name.Decorator */
-  /* Name.Entity */
-  /* Name.Function */
-  /* Name.Namespace */
-  /* Name.Tag */
-  /* Name.Variable */
-  /* Operator.Word */
-  /* Text.Whitespace */
-  /* Literal.Number.Float */
-  /* Literal.Number.Hex */
-  /* Literal.Number.Integer */
-  /* Literal.Number.Oct */
-  /* Literal.String.Backtick */
-  /* Literal.String.Char */
-  /* Literal.String.Doc */
-  /* Literal.String.Double */
-  /* Literal.String.Escape */
-  /* Literal.String.Heredoc */
-  /* Literal.String.Interpol */
-  /* Literal.String.Other */
-  /* Literal.String.Regex */
-  /* Literal.String.Single */
-  /* Literal.String.Symbol */
-  /* Name.Builtin.Pseudo */
-  /* Name.Variable.Class */
-  /* Name.Variable.Global */
-  /* Name.Variable.Instance */
-  /* Literal.Number.Integer.Long */
 }
 
 .highlight pre .hll {
-  background-color: #ffffcc;
+  background-color: #ffc;
 }
 
 .highlight pre .c {
-  color: #aaaaaa;
+  color: #aaa;
   font-style: italic;
 }
 
 .highlight pre .err {
-  color: #F00000;
-  background-color: #F0A0A0;
+  color: #f00;
+  background-color: #f0a0a0;
 }
 
 .highlight pre .k {
-  color: #0000aa;
+  color: #00a;
 }
 
 .highlight pre .cm {
-  color: #aaaaaa;
+  color: #aaa;
   font-style: italic;
 }
 
@@ -799,17 +533,17 @@ pre {
 }
 
 .highlight pre .c1 {
-  color: #aaaaaa;
+  color: #aaa;
   font-style: italic;
 }
 
 .highlight pre .cs {
-  color: #0000aa;
+  color: #00a;
   font-style: italic;
 }
 
 .highlight pre .gd {
-  color: #aa0000;
+  color: #a00;
 }
 
 .highlight pre .ge {
@@ -817,7 +551,7 @@ pre {
 }
 
 .highlight pre .gr {
-  color: #aa0000;
+  color: #a00;
 }
 
 .highlight pre .gh {
@@ -826,15 +560,15 @@ pre {
 }
 
 .highlight pre .gi {
-  color: #00aa00;
+  color: #0a0;
 }
 
 .highlight pre .go {
-  color: #888888;
+  color: #888;
 }
 
 .highlight pre .gp {
-  color: #555555;
+  color: #555;
 }
 
 .highlight pre .gs {
@@ -847,39 +581,39 @@ pre {
 }
 
 .highlight pre .gt {
-  color: #aa0000;
+  color: #a00;
 }
 
 .highlight pre .kc {
-  color: #0000aa;
+  color: #00a;
 }
 
 .highlight pre .kd {
-  color: #0000aa;
+  color: #00a;
 }
 
 .highlight pre .kn {
-  color: #0000aa;
+  color: #00a;
 }
 
 .highlight pre .kp {
-  color: #0000aa;
+  color: #00a;
 }
 
 .highlight pre .kr {
-  color: #0000aa;
+  color: #00a;
 }
 
 .highlight pre .kt {
-  color: #00aaaa;
+  color: #0aa;
 }
 
 .highlight pre .m {
-  color: #009999;
+  color: #099;
 }
 
 .highlight pre .s {
-  color: #aa5500;
+  color: #a50;
 }
 
 .highlight pre .na {
@@ -887,20 +621,20 @@ pre {
 }
 
 .highlight pre .nb {
-  color: #00aaaa;
+  color: #0aa;
 }
 
 .highlight pre .nc {
-  color: #00aa00;
+  color: #0a0;
   text-decoration: underline;
 }
 
 .highlight pre .no {
-  color: #aa0000;
+  color: #a00;
 }
 
 .highlight pre .nd {
-  color: #888888;
+  color: #888;
 }
 
 .highlight pre .ni {
@@ -909,11 +643,11 @@ pre {
 }
 
 .highlight pre .nf {
-  color: #00aa00;
+  color: #0a0;
 }
 
 .highlight pre .nn {
-  color: #00aaaa;
+  color: #0aa;
   text-decoration: underline;
 }
 
@@ -923,104 +657,96 @@ pre {
 }
 
 .highlight pre .nv {
-  color: #aa0000;
+  color: #a00;
 }
 
 .highlight pre .ow {
-  color: #0000aa;
+  color: #00a;
 }
 
 .highlight pre .w {
-  color: #bbbbbb;
+  color: #bbb;
 }
 
 .highlight pre .mf {
-  color: #009999;
+  color: #099;
 }
 
 .highlight pre .mh {
-  color: #009999;
+  color: #099;
 }
 
 .highlight pre .mi {
-  color: #009999;
+  color: #099;
 }
 
 .highlight pre .mo {
-  color: #009999;
+  color: #099;
 }
 
 .highlight pre .sb {
-  color: #aa5500;
+  color: #a50;
 }
 
 .highlight pre .sc {
-  color: #aa5500;
+  color: #a50;
 }
 
 .highlight pre .sd {
-  color: #aa5500;
+  color: #a50;
 }
 
 .highlight pre .s2 {
-  color: #aa5500;
+  color: #a50;
 }
 
 .highlight pre .se {
-  color: #aa5500;
+  color: #a50;
 }
 
 .highlight pre .sh {
-  color: #aa5500;
+  color: #a50;
 }
 
 .highlight pre .si {
-  color: #aa5500;
+  color: #a50;
 }
 
 .highlight pre .sx {
-  color: #aa5500;
+  color: #a50;
 }
 
 .highlight pre .sr {
-  color: #009999;
+  color: #099;
 }
 
 .highlight pre .s1 {
-  color: #aa5500;
+  color: #a50;
 }
 
 .highlight pre .ss {
-  color: #0000aa;
+  color: #00a;
 }
 
 .highlight pre .bp {
-  color: #00aaaa;
+  color: #0aa;
 }
 
 .highlight pre .vc {
-  color: #aa0000;
+  color: #a00;
 }
 
 .highlight pre .vg {
-  color: #aa0000;
+  color: #a00;
 }
 
 .highlight pre .vi {
-  color: #aa0000;
+  color: #a00;
 }
 
 .highlight pre .il {
-  color: #009999;
+  color: #099;
 }
-
-/*-----------------------------------*\
-
-  Module: header
-
-  High-level styles for the header
-
-\*-----------------------------------*/
 
 .site__title {
   text-decoration: none;
@@ -1035,7 +761,7 @@ pre {
 }
 
 .site__nav {
-  font-family: "Whitney SSm SC A", "Whitney SSm SC B", "Whitney SSm A", "Whitney SSm B", Geneva, Verdana, san-serif;
+  font-family: 'Whitney SSm SC A', 'Whitney SSm SC B', 'Whitney SSm A', 'Whitney SSm B', Geneva, Verdana, san-serif;
   letter-spacing: 0.05em;
   border-top: 1px solid #d0d2d4;
 }
@@ -1052,26 +778,22 @@ pre {
   margin-left: 1rem;
 }
 
-.site__nav a,
-.site__nav .js--toggle-lights {
+.site__nav a {
   text-decoration: none;
   color: #888;
   border-top: 1px solid transparent;
 }
 
-.night-mode .site__nav a,
-.night-mode .site__nav .js--toggle-lights {
+.night-mode .site__nav a {
   color: #77797a;
 }
 
-.site__nav a.active,
-.site__nav .active.js--toggle-lights {
+.site__nav a.active {
   color: #c64f52;
   border-top-color: #c64f52;
 }
 
-.site__nav a:hover,
-.site__nav .js--toggle-lights:hover {
+.site__nav a:hover {
   color: #c64f52;
 }
 
@@ -1079,21 +801,11 @@ pre {
   font-family: sans-serif;
 }
 
-/*-----------------------------------*\
-
-  Module: content
-
-  High-level styles for the main
-  content
-
-\*-----------------------------------*/
-
 .posts__list .beta {
   margin-bottom: 0;
 }
 
-.posts__list a,
-.posts__list .js--toggle-lights {
+.posts__list a {
   text-decoration: none;
 }
 
@@ -1170,14 +882,6 @@ p:empty {
   margin-bottom: 0;
 }
 
-/*-----------------------------------*\
-
-  Module: footer
-
-  High-level styles for the footer
-
-\*-----------------------------------*/
-
 .site__footer {
   border-top: 1px solid #d0d2d4;
 }
@@ -1197,7 +901,7 @@ p:empty {
 
 @media screen and (min-width: 700px) {
   .site__footer section + section:before {
-    content: "";
+    content: '';
     position: absolute;
     width: 1px;
     margin-left: -10px;
@@ -1218,69 +922,3 @@ p:empty {
 .night-mode .footer__copyright {
   border-top-color: #393b3f;
 }
-
-/*===================================*\
-
-  Sass Authoring Rules
-  --------------------
-
-  Some basic guidelines (that may be broken) for authoring manageable, readable Sass styles:
-
-  .block {
-    // 1. Layout Properties
-    // display, width, padding, margin, vertical-align, box-sizing, etc.
-    // Note: Bracketed expression values — such as calc() or linear-gradient() — must have spaces [e.g. calc( 100% + 2rem )] for Grunt tasks to run properly
-
-    // 2. Typography Properties
-    // font[-size, -weight, etc], line-height, text-align, letter-spacing, white-space, etc.
-
-    // 3. Appearance Properties
-    // color, box-shadow, background, border, text-shadow, opacity, etc.
-
-    // 4. UI Properties
-    // appearance, cursor, pointer-events, etc.
-
-    // Child elements are not always (and shouldn't be) nested in the parent block
-    .block__child {
-
-      // Modifiers are almost always nested in their parent element
-      &.block__child--modifier {
-
-      }
-
-      &:after {
-        // `content` counts as a layout property
-      }
-
-    }
-  }
-
-  Full Example:
-
-  .block {
-    width: 100%;
-
-    font-size: 1rem;
-    font-weight: 400;
-
-    color: $highlight;
-
-    .block__child {
-      display: inline-block;
-
-      &.block__child--modifier {
-        color: $gray;
-      }
-
-      &:after {
-        content: '';
-        padding: 1.5rem;
-
-        cursor: pointer;
-      }
-    }
-  }
-
-  If you want to pick a fight over/learn more about these rules, let me know – dan.eden@me.com
-
-\*===================================*/

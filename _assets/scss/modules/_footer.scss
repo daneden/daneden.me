@@ -1,10 +1,9 @@
-/*-----------------------------------*\
-
-  Module: footer
-
-  High-level styles for the footer
-
-\*-----------------------------------*/
+//
+// Module: footer
+// ==============
+//
+// High-level styles for the footer
+//
 
 .site__footer {
   border-top: 1px solid $lighter-gray;
@@ -23,7 +22,7 @@
       content: normal;
 
       @media screen and (min-width: 700px) {
-        content: "";
+        content: '';
         position: absolute;
         width: 1px;
         margin-left: -$gutter-width/2;

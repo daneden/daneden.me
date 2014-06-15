@@ -1,10 +1,10 @@
-/*-----------------------------------*\
+//
+// Partial: images
+// ===============
+//
+// Sprite and image helpers should go here
+//
 
-  Partial: images
-
-  Sprite and image helpers should go here
-
-\*-----------------------------------*/
 
 figure img {
   display: block;
@@ -15,15 +15,15 @@ figure img {
 .alignleft, .alignright {
   @media (min-width: 600px) {
     float: left;
-    width: calc(50% - #{$baseline/2} );
-    margin-left: calc(-50% - #{$baseline/3} );
+    width: calc(50% - #{$baseline/2});
+    margin-left: calc(-50% - #{$baseline/3});
   }
 }
 
 .imgbleed {
   @media (min-width: 600px) {
-    width: calc(150% + #{$baseline/3} );
-    margin-left: calc(-50% - #{$baseline/3} );
+    width: calc(150% + #{$baseline/3});
+    margin-left: calc(-50% - #{$baseline/3});
 
     figcaption {
       position: absolute;

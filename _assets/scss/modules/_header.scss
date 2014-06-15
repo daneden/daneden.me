@@ -1,10 +1,9 @@
-/*-----------------------------------*\
-
-  Module: header
-
-  High-level styles for the header
-
-\*-----------------------------------*/
+//
+// Module: header
+// ==============
+//
+// High-level styles for the header
+//
 
 
 .site__title {
@@ -22,7 +21,7 @@
 .site__nav {
   @extend %figcaption;
 
-  font-family: $font-Sans-SC;
+  font-family: $font-sans-sc;
   letter-spacing: .05em;
 
   border-top: 1px solid $lighter-gray;
@@ -63,6 +62,7 @@
 }
 
 .js--toggle-lights {
+  @extend %link;
+
   font-family: sans-serif;
-  @extend a;
 }

@@ -1,12 +1,12 @@
-/*-----------------------------------*\
+//
+// Partial: layout
+// ===============
+//
+// Layout rules
+//
 
-  Partial: layout
 
-  Layout rules
-
-\*-----------------------------------*/
-
-@import "grid";
+@import 'grid';
 
 .wrap {
   max-width: 48rem;
@@ -32,7 +32,7 @@ body {
 
 .isle--v, %isle--v {
   padding-top: $baseline/2;
-  padding-botton: $baseline/2;
+  padding-bottom: $baseline/2;
 }
 
 .spit, %spit {

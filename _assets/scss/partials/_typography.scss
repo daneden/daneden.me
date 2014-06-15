@@ -1,23 +1,27 @@
-/*-----------------------------------*\
+//
+// Partial: typography
+// ===================
+//
+// Type styles
+//
 
-  Partial: typography
 
-  Type styles
-
-\*-----------------------------------*/
-
-h1, .alpha, %alpha {
-  font-family: $font-Display;
+h1,
+.alpha,
+%alpha {
+  font-family: $font-display;
   font-weight: 400;
   font-size: 1.8rem;
   line-height: 1.166666667;
 
   .caps {
-    font-family: $font-Display-SC;
+    font-family: $font-display-sc;
   }
 }
 
-h2, .beta, %beta {
+h2,
+.beta,
+%beta {
   font-size: 1.2rem;
   font-weight: 400;
   font-style: italic;
@@ -28,41 +32,48 @@ h2, .beta, %beta {
   }
 }
 
-h3, .gamma, %gamma {
+h3,
+.gamma,
+%gamma {
   margin-bottom: .7rem;
 
-  font-family: $font-Serif-SC;
+  font-family: $font-serif-sc;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.4;
   letter-spacing: .05em;
 }
 
-h4, .delta, %delta {
+h4,
+.delta,
+%delta {
   margin-bottom: .7rem;
 
-  font-family: $font-Sans-SC;
+  font-family: $font-sans-sc;
   font-size: .65rem;
   font-weight: 400;
   line-height: 1.615384615;
   letter-spacing: .05em;
 }
 
-small, .small, %small {
+small,
+.small,
+%small {
   font-size: .8rem;
   line-height: 1.3125;
 }
 
-.meta, %meta {
+.meta,
+%meta {
   color: $light-gray;
 }
 
 .caps {
-  font-family: $font-Serif-SC;
+  font-family: $font-serif-sc;
   letter-spacing: .05em;
 }
 
-a {
+a, %link {
   color: inherit;
   cursor: pointer;
 
@@ -71,10 +82,11 @@ a {
   }
 }
 
-figcaption, %figcaption {
+figcaption,
+%figcaption {
   font-size: .65rem;
   line-height: 1.615384615;
-  font-family: $font-Sans;
+  font-family: $font-sans;
 
   color: $light-gray;
 
@@ -83,12 +95,12 @@ figcaption, %figcaption {
   }
 
   .caps {
-    font-family: $font-Sans-SC;
+    font-family: $font-sans-sc;
   }
 }
 
-hr {
-  border: none;
+hr, %hr {
+  border: 0;
   border-bottom: 2px solid $lighter-gray;
   width: 6rem;
   padding-top: $baseline;

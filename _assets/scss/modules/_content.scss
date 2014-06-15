@@ -1,11 +1,9 @@
-/*-----------------------------------*\
-
-  Module: content
-
-  High-level styles for the main
-  content
-
-\*-----------------------------------*/
+//
+// Module: content
+// ===============
+//
+// High-level styles for the main
+// content
 
 
 .posts__list {
@@ -34,7 +32,9 @@ p:empty {
   }
 }
 
-.post__header, .page__header {
+.post__header,
+.page__header {
+
   &.grid__col {
     @media (max-width: 860px) and (min-width: 600px) {
       text-align: center;
@@ -43,8 +43,11 @@ p:empty {
   }
 }
 
-.post__content, .page__content,
-.post__header, .page__header {
+.post__content,
+.page__content,
+.post__header,
+.page__header {
+
   &.grid__col {
     @media (max-width: 860px) and (min-width: 600px) {
       display: block;
@@ -79,9 +82,10 @@ p:empty {
   @extend %small;
 
   &:before {
+    @extend %hr;
+    
     content: '';
     display: block;
-    @extend hr;
   }
 
   & :last-child {

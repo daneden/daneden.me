@@ -39,7 +39,7 @@ module.exports = function(grunt) {
     responsive_images: {
       dist: {
         options: {
-          quality: 60,
+          quality: 75,
           engine: 'gm',
           sizes: [{
             name: 'small',
