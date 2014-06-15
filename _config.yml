@@ -18,3 +18,4 @@ asset_bundler:
   markup_templates:
     js: "<script type='text/javascript' src='{{url}}' async></script>\n"
     css: "<link rel='stylesheet' type='text/css' href='{{url}}' />\n"
+  compress: yui
