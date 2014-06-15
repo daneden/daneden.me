@@ -13,7 +13,7 @@ figure img {
 }
 
 .alignleft, .alignright {
-  @media (min-width: 700px) {
+  @media (min-width: 600px) {
     float: left;
     width: calc(50% - #{$baseline/2} );
     margin-left: calc(-50% - #{$baseline/3} );
@@ -21,7 +21,7 @@ figure img {
 }
 
 .imgbleed {
-  @media (min-width: 700px) {
+  @media (min-width: 600px) {
     width: calc(150% + #{$baseline/3} );
     margin-left: calc(-50% - #{$baseline/3} );
 

@@ -170,7 +170,7 @@ $gutter-width: 20px;
     padding-left: $gutter-width;
     vertical-align: top;
 
-    @media screen and (max-width: 700px) {
+    @media screen and (max-width: 600px) {
       display: block;
       margin-left: 0;
       margin-right: 0;
@@ -187,7 +187,7 @@ $gutter-width: 20px;
   }
 
 
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 600px) {
     margin-left: 0;
     width: auto;
   }

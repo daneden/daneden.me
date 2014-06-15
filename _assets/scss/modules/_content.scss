@@ -28,6 +28,39 @@ p:empty {
 
 .hentry {
   margin-bottom: $baseline*3;
+
+  @media (max-width: 860px) {
+    margin-left: 0;
+  }
+}
+
+.post__header, .page__header {
+  &.grid__col {
+    @media (max-width: 860px) and (min-width: 600px) {
+      text-align: center;
+      width: 66.67%;
+    }
+  }
+}
+
+.post__content, .page__content,
+.post__header, .page__header {
+  &.grid__col {
+    @media (max-width: 860px) and (min-width: 600px) {
+      display: block;
+      padding-left: 0;
+      margin: {
+        left: auto;
+        right: auto;
+      }
+
+      .alignleft, .alignright,
+      .imgbleed {
+        margin-left: -25%;
+        padding-right: $baseline;
+      }
+    }
+  }
 }
 
 .footnote {

@@ -45,7 +45,7 @@ html,
   }
 }
 
-@media (max-width: 780px) {
+@media (max-width: 500px) {
   html,
   :root {
     font-size: 100%;
@@ -310,7 +310,7 @@ li ul {
   vertical-align: top;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 600px) {
   .grid > .grid__col {
     display: block;
     margin-left: 0;
@@ -326,7 +326,7 @@ li ul {
   margin-right: auto;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 600px) {
   .grid {
     margin-left: 0;
     width: auto;
@@ -575,7 +575,7 @@ figure img {
   margin-bottom: 0.7rem;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 600px) {
   .alignleft,
   .alignright {
     float: left;
@@ -586,7 +586,7 @@ figure img {
   }
 }
 
-@media (min-width: 700px) {
+@media (min-width: 600px) {
   .imgbleed {
     width: -webkit-calc(150% + 0.46667rem);
     width: calc(150% + 0.46667rem);
@@ -679,7 +679,7 @@ html,
   }
 }
 
-@media (max-width: 780px) {
+@media (max-width: 500px) {
   html,
   :root {
     font-size: 100%;
@@ -1107,6 +1107,48 @@ p:empty {
 
 .hentry {
   margin-bottom: 4.2rem;
+}
+
+@media (max-width: 860px) {
+  .hentry {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 860px) and (min-width: 600px) {
+  .post__header.grid__col,
+  .page__header.grid__col {
+    text-align: center;
+    width: 66.67%;
+  }
+}
+
+@media (max-width: 860px) and (min-width: 600px) {
+  .post__content.grid__col,
+  .page__content.grid__col,
+  .post__header.grid__col,
+  .page__header.grid__col {
+    display: block;
+    padding-left: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .post__content.grid__col .alignleft,
+  .post__content.grid__col .alignright,
+  .post__content.grid__col .imgbleed,
+  .page__content.grid__col .alignleft,
+  .page__content.grid__col .alignright,
+  .page__content.grid__col .imgbleed,
+  .post__header.grid__col .alignleft,
+  .post__header.grid__col .alignright,
+  .post__header.grid__col .imgbleed,
+  .page__header.grid__col .alignleft,
+  .page__header.grid__col .alignright,
+  .page__header.grid__col .imgbleed {
+    margin-left: -25%;
+    padding-right: 1.4rem;
+  }
 }
 
 .footnote {
