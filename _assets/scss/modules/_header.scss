@@ -63,6 +63,7 @@
 
 .js--toggle-lights {
   @extend %link;
+  @extend %spit;
 
   font-family: sans-serif;
 }

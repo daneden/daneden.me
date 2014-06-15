@@ -63,17 +63,23 @@ small,
   line-height: 1.3125;
 }
 
-.meta,
+
 %meta {
   color: $light-gray;
 }
+
+.meta {
+  @extend %meta;
+}
+
 
 .caps {
   font-family: $font-serif-sc;
   letter-spacing: .05em;
 }
 
-a, %link {
+
+%link {
   color: inherit;
   cursor: pointer;
 
@@ -82,7 +88,10 @@ a, %link {
   }
 }
 
-figcaption,
+a, a:link, a:visited {
+  @extend %link;
+}
+
 %figcaption {
   font-size: .65rem;
   line-height: 1.615384615;
@@ -98,6 +107,11 @@ figcaption,
     font-family: $font-sans-sc;
   }
 }
+
+figcaption {
+  @extend %figcaption;
+}
+
 
 hr, %hr {
   border: 0;

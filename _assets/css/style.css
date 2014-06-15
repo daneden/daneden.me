@@ -265,20 +265,24 @@ body {
   padding-bottom: 1.4rem;
 }
 
+.isle,
 .highlight pre {
   padding: 0.7rem;
 }
 
+.isle--v,
 .site__footer section,
 .footer__copyright {
   padding-top: 0.7rem;
   padding-bottom: 0.7rem;
 }
 
-.spit {
+.spit,
+.js--toggle-lights {
   padding: 0.35rem;
 }
 
+.spit--v,
 .site__nav a {
   padding-top: 0.35rem;
   padding-bottom: 0.35rem;
@@ -353,6 +357,7 @@ h4,
   line-height: 1.3125;
 }
 
+.meta,
 .footnotes {
   color: #888;
 }
@@ -362,15 +367,22 @@ h4,
   letter-spacing: 0.05em;
 }
 
+a,
+a:link,
+a:visited,
 .js--toggle-lights {
   color: inherit;
   cursor: pointer;
 }
 
+a:hover,
+a:link:hover,
+a:visited:hover,
 .js--toggle-lights:hover {
   color: #c64f52;
 }
 
+figcaption,
 .site__nav {
   font-size: 0.65rem;
   line-height: 1.61538;
@@ -378,10 +390,12 @@ h4,
   color: #888;
 }
 
+.night-mode figcaption,
 .night-mode .site__nav {
   color: #77797a;
 }
 
+figcaption .caps,
 .site__nav .caps {
   font-family: 'Whitney SSm SC A', 'Whitney SSm SC B', 'Whitney SSm A', 'Whitney SSm B', Geneva, Verdana, san-serif;
 }

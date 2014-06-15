@@ -17,29 +17,59 @@ body {
   padding: $baseline;
 }
 
-.island, %island {
+
+.island {
+  @extend %island;
+}
+
+%island {
   padding: $baseline;
 }
 
-.island--v, %island--v {
+
+.island--v {
+  @extend %island--v
+}
+
+%island--v {
   padding-top: $baseline;
   padding-bottom: $baseline;
 }
 
-.isle, %isle {
+
+.isle {
+  @extend %isle;
+}
+
+%isle {
   padding: $baseline/2;
 }
 
-.isle--v, %isle--v {
+
+.isle--v {
+  @extend %isle--v;
+}
+
+%isle--v {
   padding-top: $baseline/2;
   padding-bottom: $baseline/2;
 }
 
-.spit, %spit {
+
+.spit {
+  @extend %spit;
+}
+
+%spit {
   padding: $baseline/4;
 }
 
-.spit--v, %spit--v {
+
+.spit--v {
+  @extend %spit--v;
+}
+
+%spit--v {
   padding-top: $baseline/4;
   padding-bottom: $baseline/4;
 }
