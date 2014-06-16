@@ -113,7 +113,11 @@ figcaption {
 }
 
 
-hr, %hr {
+hr {
+  @extend %hr;
+}
+
+%hr {
   border: 0;
   border-bottom: 2px solid $lighter-gray;
   width: 6rem;
@@ -129,6 +133,7 @@ hr, %hr {
     border-bottom-color: $lighter-gray-invert;
   }
 }
+
 
 mark {
   background-color: transparent;

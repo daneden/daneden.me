@@ -400,6 +400,7 @@ figcaption .caps,
   font-family: 'Whitney SSm SC A', 'Whitney SSm SC B', 'Whitney SSm A', 'Whitney SSm B', Geneva, Verdana, san-serif;
 }
 
+hr,
 .footnotes:before {
   border: 0;
   border-bottom: 2px solid #d0d2d4;
@@ -411,6 +412,7 @@ figcaption .caps,
   margin-left: auto;
 }
 
+.night-mode hr,
 .night-mode .footnotes:before {
   border-bottom-color: #393b3f;
 }
