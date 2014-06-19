@@ -334,8 +334,7 @@ RewriteRule "(^|/)\." - [F]
 # This files may be left by some text/html editors and
 # pose a great security danger, when someone can access them
 <FilesMatch "(\.(bak|config|sql|fla|psd|ini|log|sh|inc|swp|dist)|~)$">
-Order allow,deny
-Deny from all
+Require all denied
 Satisfy All
 </FilesMatch>
 
