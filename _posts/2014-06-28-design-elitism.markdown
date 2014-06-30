@@ -25,7 +25,7 @@ There is credit due to the creators of Yo for such a virally engaging app of suc
 
 If you can excuse my digression, there is a point to be made here. design has made a name for itself beyond traditional 2D graphic and print design, but at a severe cost; it has permeated the mainstream of investors and consumers alike, and as a result, has become a tacked-on word with connotations of immediate value and thoughtfulness.
 
-Consumers know that Yo, like iOS, and more recently, Android, is designed. They know that through exposure to media sources headlining “Company launches redesign.” They know it through social channels and financial reports. design has, through these high-bandwidth channels, become a frontman for countless devices, companies, apps, and brands. And that’s not really what I got into design for.
+Consumers know that Yo, like iOS, and more recently, Android, is designed. They know that through exposure to media sources headlining “Company launches redesign.” They know it through social channels and financial reports. Design has, through these high-bandwidth channels, become a frontman for countless devices, companies, apps, and brands. And that’s not really what I got into design for.
 
 I became a designer because of the satisfaction of solving a tough problem. Through the act of making something of use, and also striving to make that thing beautiful and delightful[^3]. Since then, I’ve seen design in digital media become a status symbol—a lacquer and finish tacked on to requisite interest. I’m pleased to say that the people I work with strive for better solutions to tough problems through design, and that is how design is upheld at Dropbox. This design prominence is recognised by our customers. The simplicity of Dropbox—which is not an attribute easily achieved when you consider the many things besides saying “Yo” that Dropbox does to help us live and work—is one of its most recognised features.
 
@@ -39,7 +39,7 @@ When news of a new app gaining monumental funding breaks, those who spend their 
 
 This may all start to sound like jealousy and petty affairs, and it may well be—but in a world where money is no object, there seems to be an awful lot of it going to undeserving causes. Amongst the myriad of issues facing the technology industry—sexism, racism, and general exclusivity & elitism—design, as it is known to the investors, has become an integral part of the reality distortion field making technology such a volatile and inaccessible industry.
 
-But when the tech bubble bursts—and it will—the investors and design elitists will be picking up the leftovers. Meanwhile, the designer looks up from her desk, peers through the window, and returns to the problems she so dearly loves solving.
+But when the tech bubble bursts—and it will—the investors and design elitists will be picking up the leftovers. Meanwhile, the designer looks up from her desk, peers through the window, and returns to the problems she so dearly loves to solve.
 
 [^1]: You lucky git.
 [^2]: Based on [2010 mortality rates](http://www.ons.gov.uk/ons/rel/mortality-ageing/mortality-in-england-and-wales/average-life-span/rpt-average-life-span.html) and [The Human Footprint](http://www.snagfilms.com/films/title/human_footprint).
