@@ -66,7 +66,7 @@ p:empty {
   }
 }
 
-.footnote {
+.footnote, .footnote:visited {
   padding: .15em;
 
   color: $highlight;
@@ -83,12 +83,16 @@ p:empty {
 
   &:before {
     @extend %hr;
-    
+
     content: '';
     display: block;
   }
 
   & :last-child {
     margin-bottom: 0;
+  }
+
+  :target {
+    color: $dark-gray;
   }
 }

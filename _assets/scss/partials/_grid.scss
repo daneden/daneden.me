@@ -44,12 +44,12 @@
 $col-groups: 6;
 
 // Gutter width
-$gutter-width: 20px;
+$gutter-width: $baseline;
 
 // For each column width from 1 to the column group...
 @for $i from 1 through 6 {
   $group: 6;
-  
+
   > .grid__col--#{$i}-of-#{$group} {
 
     @if (percentage($i / $group) == percentage(1/1)) {

@@ -63,6 +63,29 @@ small,
   line-height: 1.3125;
 }
 
+.mega {
+  font-size: 2.5rem;
+  line-height: $baseline-unitless;
+  font-weight: 200;
+}
+
+.sans {
+  font-family: $font-sans;
+
+  .caps {
+    font-family: $font-sans-sc;
+  }
+}
+
+.dropcap {
+  font-family: $font-display;
+  font-size: $baseline*3;
+  line-height: 1;
+  float: left;
+  color: $highlight;
+  margin-right: $baseline/4;
+}
+
 
 %meta {
   color: $light-gray;
@@ -88,7 +111,7 @@ small,
   }
 }
 
-a, a:link, a:visited {
+a, a:visited {
   @extend %link;
 }
 

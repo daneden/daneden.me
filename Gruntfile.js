@@ -107,7 +107,7 @@ module.exports = function(grunt) {
         files: [
           'static/images/**/*'
         ],
-        tasks: ['svgmin', 'svg2png', 'styles'],
+        tasks: ['styles'],
         options: {
           interrupt: true,
           spawn: false,

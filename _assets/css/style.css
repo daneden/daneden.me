@@ -6,9 +6,9 @@ html,
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
   text-rendering: optimizeLegibility;
-  -webkit-font-feature-settings: 'liga' 1, 'onum' 1, 'dlig' 1;
-  -moz-font-feature-settings: 'liga' 1, 'onum' 1, 'dlig' 1;
-  font-feature-settings: 'liga' 1, 'onum' 1, 'dlig' 1;
+  -webkit-font-feature-settings: "liga" 1, "onum" 1, "dlig" 1, "frac" 1;
+  -moz-font-feature-settings: "liga" 1, "onum" 1, "dlig" 1, "frac" 1;
+  font-feature-settings: "liga" 1, "onum" 1, "dlig" 1, "frac" 1;
   background-color: #fbf7f0;
   color: #3d464d;
 }
@@ -132,7 +132,7 @@ li ul {
 
 .grid {
   list-style: none;
-  margin-left: -20px;
+  margin-left: -1.4rem;
 }
 
 .grid > .grid__col--6-of-6 {
@@ -190,7 +190,7 @@ li ul {
   display: inline-block;
   margin-right: -0.25em;
   min-height: 1px;
-  padding-left: 20px;
+  padding-left: 1.4rem;
   vertical-align: top;
 }
 
@@ -248,7 +248,7 @@ li ul {
 }
 
 .wrap {
-  max-width: 48rem;
+  max-width: 45rem;
   margin: 0 auto;
 }
 
@@ -357,6 +357,29 @@ h4,
   line-height: 1.3125;
 }
 
+.mega {
+  font-size: 2.5rem;
+  line-height: 1.4;
+  font-weight: 200;
+}
+
+.sans {
+  font-family: 'Whitney SSm A', 'Whitney SSm B', Geneva, Verdana, san-serif;
+}
+
+.sans .caps {
+  font-family: 'Whitney SSm SC A', 'Whitney SSm SC B', 'Whitney SSm A', 'Whitney SSm B', Geneva, Verdana, san-serif;
+}
+
+.dropcap {
+  font-family: 'Requiem Display A', 'Requiem Display B', 'Hoefler Text A', 'Hoefler Text B', Georgia, serif;
+  font-size: 4.2rem;
+  line-height: 1;
+  float: left;
+  color: #c64f52;
+  margin-right: 0.35rem;
+}
+
 .meta,
 .footnotes {
   color: #888;
@@ -368,7 +391,6 @@ h4,
 }
 
 a,
-a:link,
 a:visited,
 .js--toggle-lights {
   color: inherit;
@@ -376,7 +398,6 @@ a:visited,
 }
 
 a:hover,
-a:link:hover,
 a:visited:hover,
 .js--toggle-lights:hover {
   color: #c64f52;
@@ -436,6 +457,11 @@ blockquote em {
   text-align: center;
 }
 
+figure {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 figure img {
   display: block;
   width: 100%;
@@ -480,9 +506,9 @@ html,
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
   text-rendering: optimizeLegibility;
-  -webkit-font-feature-settings: 'liga' 1, 'onum' 1, 'dlig' 1;
-  -moz-font-feature-settings: 'liga' 1, 'onum' 1, 'dlig' 1;
-  font-feature-settings: 'liga' 1, 'onum' 1, 'dlig' 1;
+  -webkit-font-feature-settings: "liga" 1, "onum" 1, "dlig" 1, "frac" 1;
+  -moz-font-feature-settings: "liga" 1, "onum" 1, "dlig" 1, "frac" 1;
+  font-feature-settings: "liga" 1, "onum" 1, "dlig" 1, "frac" 1;
   background-color: #fbf7f0;
   color: #3d464d;
 }
@@ -879,13 +905,15 @@ p:empty {
   }
 }
 
-.footnote {
+.footnote,
+.footnote:visited {
   padding: 0.15em;
   color: #c64f52;
   text-decoration: none;
 }
 
-.footnote:hover {
+.footnote:hover,
+.footnote:visited:hover {
   text-decoration: underline;
 }
 
@@ -896,6 +924,10 @@ p:empty {
 
 .footnotes :last-child {
   margin-bottom: 0;
+}
+
+.footnotes :target {
+  color: #3d464d;
 }
 
 .site__footer {
@@ -920,7 +952,7 @@ p:empty {
     content: '';
     position: absolute;
     width: 1px;
-    margin-left: -10px;
+    margin-left: -0.7rem;
     top: 0;
     bottom: 0;
     background-color: #d0d2d4;

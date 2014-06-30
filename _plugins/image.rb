@@ -48,14 +48,19 @@ module Jekyll
       if @local
         source += "<picture>"
 
-        if @class and @class.include? "imgbleed"
-          source += "<source srcset=\"#{@name}-large.#{@ext}, #{@name}-large@2x.#{@ext} 2x\" media=\"(min-width: 1024px)\" />"
-        end
+        if @ext != "svg"
+          if @class and @class.include? "imgbleed"
+            source += "<source srcset=\"#{@name}-large.#{@ext}, #{@name}-large@2x.#{@ext} 2x\" media=\"(min-width: 1024px)\" />"
+          end
 
-        source += "<source srcset=\"#{@name}-medium.#{@ext}, #{@name}-medium@2x.#{@ext} 2x\" media=\"(min-width: 640px)\" />"
-        source += "<source srcset=\"#{@name}-small.#{@ext}, #{@name}-small@2x.#{@ext} 2x\" media=\"(min-width: 320px)\" />"
-        source += "<img srcset=\"#{@name}-small.#{@ext}\" />"
-        source += "</picture>"
+          source += "<source srcset=\"#{@name}-medium.#{@ext}, #{@name}-medium@2x.#{@ext} 2x\" media=\"(min-width: 640px)\" />"
+          source += "<source srcset=\"#{@name}-small.#{@ext}, #{@name}-small@2x.#{@ext} 2x\" media=\"(min-width: 320px)\" />"
+          source += "<img srcset=\"#{@name}-small.#{@ext}\" />"
+          source += "</picture>"
+        else
+          source += "<img src=\"#{@url}\" />"
+          source += "</picture>"
+        end
       else
         source += "<img src=\"#{@url}\" />"
       end

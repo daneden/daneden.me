@@ -5,6 +5,10 @@
 // Sprite and image helpers should go here
 //
 
+figure {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
 figure img {
   display: block;

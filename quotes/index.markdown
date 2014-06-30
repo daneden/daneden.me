@@ -8,6 +8,8 @@ These are the things I’ve heard and read that help me work, live, and think. T
 
 * * *
 
+- “Ultimately there is no happiness in a world in which things are not as good as they can be.”—<span class="caps">Eric Gill</span>
+- “Whoever said that pleasure wasn’t useful?”—<span class="caps">Charles Eames</span>
 - “Shut up and look.”—<span class="caps">Edward Tufte</span>
 - “Brevity is a by-product of vigor.”—<span class="caps">W. Strunk & E.B. White</span>
 - “I am made of earth, and my song made of words.”—<span class="caps">Pablo Neruda</span>
