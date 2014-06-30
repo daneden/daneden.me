@@ -37,7 +37,7 @@ And what of the engineers optimising and speeding up processes and build times? 
 
 When news of a new app gaining monumental funding breaks, those who spend their days kneading their brain to coax a thoughtful solution lament the thought of a rabble of college graduates or tech bros—with little or no motivation or compassion for solving universal problems through design—celebrating a weekend hack that helps no one but themselves, their investors, and quite often a host of advertisers.
 
-This may all start to sound like jealousy and petty affairs, and it may well be—but in a world where money is no object, there seems to be an awful lot of it going to undeserving causes. Amongst the myriad of issues facing the technology industry—sexism, racism, and general exclusivity & elitism—design, as it is known to the investors, has become an integral part of the reality distortion field making technology such a volatile and inaccessible industry.
+This may all start to sound like jealousy and petty affairs, and it may well be—but in a world where money is no object, there seems to be an awful lot of it going to undeserving causes. Amongst the myriad issues facing the technology industry—sexism, racism, and general exclusivity & elitism—design, as it is known to the investors, has become an integral part of the reality distortion field making technology such a volatile and inaccessible industry.
 
 But when the tech bubble bursts—and it will—the investors and design elitists will be picking up the leftovers. Meanwhile, the designer looks up from her desk, peers through the window, and returns to the problems she so dearly loves to solve.
 
