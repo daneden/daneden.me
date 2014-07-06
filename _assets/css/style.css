@@ -457,11 +457,6 @@ blockquote em {
   text-align: center;
 }
 
-figure {
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
 figure img {
   display: block;
   width: 100%;
