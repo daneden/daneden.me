@@ -1,10 +1,9 @@
 source 'https://rubygems.org'
 
-gem 'jekyll', '~> 2.0.3'
+gem 'jekyll'
 
 group :jekyll_plugins do
   gem 'jekyll-sitemap'
-  gem 'jekyll-minify-html'
 end
 
 gem 'kramdown'
