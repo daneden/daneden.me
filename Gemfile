@@ -4,7 +4,7 @@ gem 'jekyll', '~> 2.0.3'
 
 group :jekyll_plugins do
   gem 'jekyll-sitemap'
-  #gem 'jekyll-minify-html'
+  gem 'jekyll-minify-html'
 end
 
 gem 'kramdown'
