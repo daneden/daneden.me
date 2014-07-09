@@ -9,7 +9,7 @@ html,
   -webkit-font-feature-settings: "liga" 1, "onum" 1, "dlig" 1, "frac" 1;
   -moz-font-feature-settings: "liga" 1, "onum" 1, "dlig" 1, "frac" 1;
   font-feature-settings: "liga" 1, "onum" 1, "dlig" 1, "frac" 1;
-  background-color: #fbf7f0;
+  background-color: #fff;
   color: #3d464d;
 }
 
@@ -376,7 +376,7 @@ h4,
   font-size: 4.2rem;
   line-height: 1;
   float: left;
-  color: #c64f52;
+  color: #508FAB;
   margin-right: 0.35rem;
 }
 
@@ -400,7 +400,7 @@ a:visited,
 a:hover,
 a:visited:hover,
 .js--toggle-lights:hover {
-  color: #c64f52;
+  color: #508FAB;
 }
 
 figcaption,
@@ -440,13 +440,13 @@ hr,
 
 mark {
   background-color: transparent;
-  color: #c64f52;
+  color: #508FAB;
 }
 
 blockquote {
   font-style: italic;
   padding: 0 1.4rem;
-  border-left: 2px solid #c64f52;
+  border-left: 2px solid #508FAB;
 }
 
 blockquote em {
@@ -504,7 +504,7 @@ html,
   -webkit-font-feature-settings: "liga" 1, "onum" 1, "dlig" 1, "frac" 1;
   -moz-font-feature-settings: "liga" 1, "onum" 1, "dlig" 1, "frac" 1;
   font-feature-settings: "liga" 1, "onum" 1, "dlig" 1, "frac" 1;
-  background-color: #fbf7f0;
+  background-color: #fff;
   color: #3d464d;
 }
 
@@ -826,12 +826,12 @@ pre {
 }
 
 .site__nav a.active {
-  color: #c64f52;
-  border-top-color: #c64f52;
+  color: #508FAB;
+  border-top-color: #508FAB;
 }
 
 .site__nav a:hover {
-  color: #c64f52;
+  color: #508FAB;
 }
 
 .js--toggle-lights {
@@ -903,7 +903,7 @@ p:empty {
 .footnote,
 .footnote:visited {
   padding: 0.15em;
-  color: #c64f52;
+  color: #508FAB;
   text-decoration: none;
 }
 

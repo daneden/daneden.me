@@ -16,7 +16,8 @@ html,
   text-rendering: optimizeLegibility;
   font-feature-settings: "liga" 1, "onum" 1, "dlig" 1, "frac" 1;
 
-  background-color: $background;
+  //background-color: $background;
+  background-color: #fff;
   color: $dark-gray;
 
   @media (max-width: 860px) {
