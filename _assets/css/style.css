@@ -304,16 +304,14 @@ body {
   display: inline-block;
 }
 
-h1,
-.alpha {
+.pullquote {
   font-family: 'Requiem Display A', 'Requiem Display B', 'Hoefler Text A', 'Hoefler Text B', Georgia, serif;
   font-weight: 400;
   font-size: 1.8rem;
   line-height: 1.16667;
 }
 
-h1 .caps,
-.alpha .caps {
+.pullquote .caps {
   font-family: 'Requiem Display SC A', 'Requiem Display SC B', 'Requiem Display A', 'Requiem Display B', 'Hoefler Text A', 'Hoefler Text B', Georgia, serif;
 }
 
@@ -371,13 +369,31 @@ h4,
   font-family: 'Whitney SSm SC A', 'Whitney SSm SC B', 'Whitney SSm A', 'Whitney SSm B', Geneva, Verdana, san-serif;
 }
 
-.dropcap {
-  font-family: 'Requiem Display A', 'Requiem Display B', 'Hoefler Text A', 'Hoefler Text B', Georgia, serif;
-  font-size: 4.2rem;
-  line-height: 1;
-  float: left;
-  color: #508FAB;
-  margin-right: 0.35rem;
+.pullquote {
+  padding-left: none;
+  font-style: normal;
+  text-align: center;
+  border-left: none;
+}
+
+@media (min-width: 600px) {
+  .pullquote {
+    float: left;
+    width: -webkit-calc(50% - 0.7rem);
+    width: calc(50% - 0.7rem);
+    margin-left: -webkit-calc(-50% - 0.46667rem);
+    margin-left: calc(-50% - 0.46667rem);
+  }
+}
+
+.pullquote:after,
+.pullquote:before {
+  content: '';
+  width: 2.8rem;
+  height: 2px;
+  display: block;
+  margin: 1.4rem auto;
+  background-color: #508FAB;
 }
 
 .meta,

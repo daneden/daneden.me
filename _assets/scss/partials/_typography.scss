@@ -77,13 +77,31 @@ small,
   }
 }
 
-.dropcap {
-  font-family: $font-display;
-  font-size: $baseline*3;
-  line-height: 1;
-  float: left;
-  color: $highlight;
-  margin-right: $baseline/4;
+.pullquote {
+  @extend %alpha;
+
+  @media (min-width: 600px) {
+    float: left;
+    width: calc(50% - #{$baseline/2});
+    margin-left: calc(-50% - #{$baseline/3});
+  }
+
+  padding-left: none;
+
+  font-style: normal;
+  text-align: center;
+
+  border-left: none;
+
+  &:after, &:before {
+    content: '';
+    width: $baseline*2;
+    height: 2px;
+    display: block;
+    margin: $baseline auto;
+
+    background-color: $highlight;
+  }
 }
 
 

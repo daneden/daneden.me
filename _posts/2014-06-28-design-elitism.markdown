@@ -11,7 +11,7 @@ Things have changed a lot since then. I haven’t given any more presentations, 
 
 {% image alignleft /uploads/2014/06/eames-dsr1.png "The [Eames DSR](http://www.vitra.com/en-it/product/eames-plastic-side-chair#) plastic side chair is the result of years of refinement, and will last for many years yet as both a functional artifact and a timeless design." %}
 
-In the digital realm, “design” seems to have become a catch-all term for a lot of things. That’s not an inherit problem, but the consequence of the overuse and underthinking of design has led to people—generally those lacking understanding of design—to accept it as a mythical, inaccessible process through which decisions are made, which, in any other setting, would be inappropriate.
+In the digital realm, “design” seems to have become a catch-all term for a lot of things. That’s not an inherent problem, but the consequence of the overuse and underthinking of design has led to people—generally those lacking understanding of design—to accept it as a mythical, inaccessible process through which decisions are made, which, in any other setting, would be inappropriate.
 
 The observation of this manipulation of design as a term is made through the lens of someone quite suddenly dropped into the petri dish of modern technology, San Francisco. In this bizarre city and the surrounding Bay Area, everyone is a designer. *Everyone*. And not in the “everyone can design” sense, but rather “everyone *does* design.” Decisions are made without apprehension of consequence. Questionable devices are broadcast, and when eyebrows are raised, design is used as the go-to rationalisation for poor decisions and broken philosophies.
 
@@ -22,6 +22,8 @@ And it managed to raise $1,000,000. A million dollars.
 One million US dollars is about 60% of what the average United Kingdom citizen will earn in their 87-year[^2] lifetime. Of course, the first 21 years are spent in diapers and education—sometimes both—and don’t really count. That means that in around 39 ½ years, one British human will earn as much money as an app did in just a few days.
 
 There is credit due to the creators of Yo for such a virally engaging app of such a high level of simplicity, but the investors seem to have become blind to the temporal nature of the virality of these things. You see, in Investorland, and particularly in Digital Investorland, design is the only currency that matters. Yo’s apparent success was contingent upon its ease of use and its insane simplicity—regardless of blatant and [glaring security issues](http://mashable.com/2014/06/20/yo-gets-hacked/)—and in a world where design is King, simplicity is all it takes to make several otherwise mentally sound adults go temporarily insane and throw literal fistfuls of money at whatever product happens to grace their inbox that morning.
+
+<blockquote class="pullquote">In around 39 ½ years, one British human will earn as much money as an app did in just a few days.</blockquote>
 
 If you can excuse my digression, there is a point to be made here. design has made a name for itself beyond traditional 2D graphic and print design, but at a severe cost; it has permeated the mainstream of investors and consumers alike, and as a result, has become a tacked-on word with connotations of immediate value and thoughtfulness.
 
