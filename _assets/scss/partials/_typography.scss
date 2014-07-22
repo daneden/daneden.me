@@ -7,8 +7,7 @@
 
 
 h1,
-.alpha,
-%alpha {
+.alpha {
   font-family: $font-display;
   font-weight: 400;
   font-size: 1.8rem;
@@ -20,8 +19,7 @@ h1,
 }
 
 h2,
-.beta,
-%beta {
+.beta {
   font-size: 1.2rem;
   font-weight: 400;
   font-style: italic;
@@ -33,8 +31,7 @@ h2,
 }
 
 h3,
-.gamma,
-%gamma {
+.gamma {
   margin-bottom: .7rem;
 
   font-family: $font-serif-sc;
@@ -45,8 +42,7 @@ h3,
 }
 
 h4,
-.delta,
-%delta {
+.delta {
   margin-bottom: .7rem;
 
   font-family: $font-sans-sc;

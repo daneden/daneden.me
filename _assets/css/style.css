@@ -304,14 +304,16 @@ body {
   display: inline-block;
 }
 
-.pullquote {
+h1,
+.alpha {
   font-family: 'Requiem Display A', 'Requiem Display B', 'Hoefler Text A', 'Hoefler Text B', Georgia, serif;
   font-weight: 400;
   font-size: 1.8rem;
   line-height: 1.16667;
 }
 
-.pullquote .caps {
+h1 .caps,
+.alpha .caps {
   font-family: 'Requiem Display SC A', 'Requiem Display SC B', 'Requiem Display A', 'Requiem Display B', 'Hoefler Text A', 'Hoefler Text B', Georgia, serif;
 }
 
