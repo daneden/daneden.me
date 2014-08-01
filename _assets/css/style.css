@@ -9,9 +9,12 @@ html,
   text-size-adjust: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  -webkit-font-feature-settings: "liga" 1, "onum" 1, "dlig" 1, "frac" 1;
-  -moz-font-feature-settings: "liga" 1, "onum" 1, "dlig" 1, "frac" 1;
-  font-feature-settings: "liga" 1, "onum" 1, "dlig" 1, "frac" 1;
+  -webkit-font-feature-settings: "liga" 1, "onum" 1, "kern" 1;
+  -moz-font-feature-settings: "liga" 1, "onum" 1, "kern" 1;
+  font-feature-settings: "liga" 1, "onum" 1, "kern" 1;
+  -webkit-font-kerning: normal;
+  -moz-font-kerning: normal;
+  font-kerning: normal;
   background-color: #fff;
   color: #3d464d;
 }
@@ -419,6 +422,12 @@ blockquote {
   text-align: center;
 }
 
+.caps {
+  -webkit-font-feature-settings: "smcp" 1;
+  -moz-font-feature-settings: "smcp" 1;
+  font-feature-settings: "smcp" 1;
+}
+
 figure img {
   display: block;
   width: 100%;
@@ -453,9 +462,12 @@ html,
   text-size-adjust: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  -webkit-font-feature-settings: "liga" 1, "onum" 1, "dlig" 1, "frac" 1;
-  -moz-font-feature-settings: "liga" 1, "onum" 1, "dlig" 1, "frac" 1;
-  font-feature-settings: "liga" 1, "onum" 1, "dlig" 1, "frac" 1;
+  -webkit-font-feature-settings: "liga" 1, "onum" 1, "kern" 1;
+  -moz-font-feature-settings: "liga" 1, "onum" 1, "kern" 1;
+  font-feature-settings: "liga" 1, "onum" 1, "kern" 1;
+  -webkit-font-kerning: normal;
+  -moz-font-kerning: normal;
+  font-kerning: normal;
   background-color: #fff;
   color: #3d464d;
 }

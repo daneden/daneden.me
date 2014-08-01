@@ -17,7 +17,8 @@ html,
   text-size-adjust: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  font-feature-settings: "liga" 1, "onum" 1, "dlig" 1, "frac" 1;
+  font-feature-settings: "liga" 1, "onum" 1, "kern" 1;
+  font-kerning: normal;
 
   //background-color: $background;
   background-color: #fff;
