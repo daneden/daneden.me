@@ -9,21 +9,16 @@
 h1,
 .alpha {
   font-family: $font-display;
-  font-weight: 400;
-  font-size: 1.8rem;
-  line-height: 1.166666667;
-
-  .caps {
-    font-family: $font-display-sc;
-  }
+  font-weight: 800;
+  font-size: 3rem;
+  line-height: 1;
 }
 
 h2,
 .beta {
-  font-size: 1.2rem;
-  font-weight: 400;
-  font-style: italic;
-  line-height: 1.166666667;
+  font-family: $font-sans;
+  font-size: 1.5rem;
+  font-weight: 700;
 
   * + & {
     padding-top: $baseline;
@@ -32,31 +27,28 @@ h2,
 
 h3,
 .gamma {
-  margin-bottom: .7rem;
+  margin-bottom: $baseline/2;
 
-  font-family: $font-serif-sc;
+  font-family: $font-sans;
   font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.4;
-  letter-spacing: .05em;
+  font-weight: 700;
 }
 
 h4,
 .delta {
-  margin-bottom: .7rem;
+  margin-bottom: $baseline/2;
 
-  font-family: $font-sans-sc;
-  font-size: .65rem;
+  font-family: $font-sans;
   font-weight: 400;
-  line-height: 1.615384615;
-  letter-spacing: .05em;
+}
+
+%small {
+  font-size: .9em;
 }
 
 small,
-.small,
-%small {
-  font-size: .8rem;
-  line-height: 1.3125;
+.small {
+  @extend %small;
 }
 
 .mega {
@@ -67,37 +59,6 @@ small,
 
 .sans {
   font-family: $font-sans;
-
-  .caps {
-    font-family: $font-sans-sc;
-  }
-}
-
-.pullquote {
-  @extend %alpha;
-
-  @media (min-width: 600px) {
-    float: left;
-    width: calc(50% - #{$baseline/2});
-    margin-left: calc(-50% - #{$baseline/3});
-  }
-
-  padding-left: none;
-
-  font-style: normal;
-  text-align: center;
-
-  border-left: none;
-
-  &:after, &:before {
-    content: '';
-    width: $baseline*2;
-    height: 2px;
-    display: block;
-    margin: $baseline auto;
-
-    background-color: $highlight;
-  }
 }
 
 
@@ -107,12 +68,6 @@ small,
 
 .meta {
   @extend %meta;
-}
-
-
-.caps {
-  font-family: $font-serif-sc;
-  letter-spacing: .05em;
 }
 
 
@@ -130,18 +85,13 @@ a, a:visited {
 }
 
 %figcaption {
-  font-size: .65rem;
-  line-height: 1.615384615;
+  @extend %small;
   font-family: $font-sans;
 
   color: $light-gray;
 
   .night-mode & {
     color: $light-gray-invert;
-  }
-
-  .caps {
-    font-family: $font-sans-sc;
   }
 }
 
@@ -178,14 +128,10 @@ mark {
 }
 
 blockquote {
-  font-style: italic;
-
   padding: 0 $baseline;
-  border-left: 2px solid $highlight;
 
-  em {
-    font-style: normal;
-  }
+  color: $light-gray;
+  border-left: 2px solid $highlight;
 }
 
 .promo {

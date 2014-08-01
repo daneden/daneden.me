@@ -13,8 +13,6 @@
   }
 
   section {
-    @extend %isle--v;
-    @extend %small;
     position: static;
 
     + section:before {

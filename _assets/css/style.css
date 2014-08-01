@@ -1,11 +1,14 @@
 html,
 :root {
-  font: 125%/1.4 'Hoefler Text A', 'Hoefler Text B', Georgia, serif;
+  font-family: "leitura-news", Georgia, serif;
+  font-size: 112.5%;
+  line-height: 1.55556;
   -moz-text-size-adjust: none;
   -ms-text-size-adjust: none;
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
   text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
   -webkit-font-feature-settings: "liga" 1, "onum" 1, "dlig" 1, "frac" 1;
   -moz-font-feature-settings: "liga" 1, "onum" 1, "dlig" 1, "frac" 1;
   font-feature-settings: "liga" 1, "onum" 1, "dlig" 1, "frac" 1;
@@ -16,14 +19,14 @@ html,
 @media (max-width: 860px) {
   html,
   :root {
-    font-size: 112.5%;
+    font-size: 101.25%;
   }
 }
 
 @media (max-width: 500px) {
   html,
   :root {
-    font-size: 100%;
+    font-size: 90%;
   }
 }
 
@@ -49,6 +52,7 @@ img {
 ul,
 ol {
   padding-left: 1.4em;
+  overflow: hidden;
 }
 
 header,
@@ -65,7 +69,7 @@ h1,
 .alpha,
 h2,
 .beta {
-  margin-bottom: 1.4rem;
+  margin-bottom: 1.55556rem;
 }
 
 picture {
@@ -82,7 +86,7 @@ li ul {
 }
 
 .o--p {
-  margin-bottom: 1.4rem;
+  margin-bottom: 1.55556rem;
 }
 
 .o--mz {
@@ -132,7 +136,7 @@ li ul {
 
 .grid {
   list-style: none;
-  margin-left: -1.4rem;
+  margin-left: -1.55556rem;
 }
 
 .grid > .grid__col--6-of-6 {
@@ -190,7 +194,7 @@ li ul {
   display: inline-block;
   margin-right: -0.25em;
   min-height: 1px;
-  padding-left: 1.4rem;
+  padding-left: 1.55556rem;
   vertical-align: top;
 }
 
@@ -248,44 +252,43 @@ li ul {
 }
 
 .wrap {
-  max-width: 45rem;
+  max-width: 50rem;
   margin: 0 auto;
 }
 
 body {
-  padding: 1.4rem;
+  padding: 1.55556rem;
 }
 
 .island {
-  padding: 1.4rem;
+  padding: 1.55556rem;
 }
 
 .island--v {
-  padding-top: 1.4rem;
-  padding-bottom: 1.4rem;
+  padding-top: 1.55556rem;
+  padding-bottom: 1.55556rem;
 }
 
 .isle,
 .highlight pre {
-  padding: 0.7rem;
+  padding: 0.77778rem;
 }
 
 .isle--v,
-.site__footer section,
 .footer__copyright {
-  padding-top: 0.7rem;
-  padding-bottom: 0.7rem;
+  padding-top: 0.77778rem;
+  padding-bottom: 0.77778rem;
 }
 
 .spit,
 .js--toggle-lights {
-  padding: 0.35rem;
+  padding: 0.38889rem;
 }
 
 .spit--v,
 .site__nav a {
-  padding-top: 0.35rem;
-  padding-bottom: 0.35rem;
+  padding-top: 0.38889rem;
+  padding-bottom: 0.38889rem;
 }
 
 .nav,
@@ -306,106 +309,60 @@ body {
 
 h1,
 .alpha {
-  font-family: 'Requiem Display A', 'Requiem Display B', 'Hoefler Text A', 'Hoefler Text B', Georgia, serif;
-  font-weight: 400;
-  font-size: 1.8rem;
-  line-height: 1.16667;
-}
-
-h1 .caps,
-.alpha .caps {
-  font-family: 'Requiem Display SC A', 'Requiem Display SC B', 'Requiem Display A', 'Requiem Display B', 'Hoefler Text A', 'Hoefler Text B', Georgia, serif;
+  font-family: "freight-display-pro", "leitura-news", Georgia, serif;
+  font-weight: 800;
+  font-size: 3rem;
+  line-height: 1;
 }
 
 h2,
 .beta {
-  font-size: 1.2rem;
-  font-weight: 400;
-  font-style: italic;
-  line-height: 1.16667;
+  font-family: "franklin-gothic-urw", Geneva, Verdana, san-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 
 * + h2,
 * + .beta {
-  padding-top: 1.4rem;
+  padding-top: 1.55556rem;
 }
 
 h3,
 .gamma {
-  margin-bottom: 0.7rem;
-  font-family: 'Hoefler Text SC A', 'Hoefler Text SC B', 'Hoefler Text A', 'Hoefler Text B', Georgia, serif;
+  margin-bottom: 0.77778rem;
+  font-family: "franklin-gothic-urw", Geneva, Verdana, san-serif;
   font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.4;
-  letter-spacing: 0.05em;
+  font-weight: 700;
 }
 
 h4,
 .delta {
-  margin-bottom: 0.7rem;
-  font-family: 'Whitney SSm SC A', 'Whitney SSm SC B', 'Whitney SSm A', 'Whitney SSm B', Geneva, Verdana, san-serif;
-  font-size: 0.65rem;
+  margin-bottom: 0.77778rem;
+  font-family: "franklin-gothic-urw", Geneva, Verdana, san-serif;
   font-weight: 400;
-  line-height: 1.61538;
-  letter-spacing: 0.05em;
 }
 
+small,
+.small,
+figcaption,
 .footnotes,
-.site__footer section,
 .footer__copyright {
-  font-size: 0.8rem;
-  line-height: 1.3125;
+  font-size: 0.9em;
 }
 
 .mega {
   font-size: 2.5rem;
-  line-height: 1.4;
+  line-height: 1.55556;
   font-weight: 200;
 }
 
 .sans {
-  font-family: 'Whitney SSm A', 'Whitney SSm B', Geneva, Verdana, san-serif;
-}
-
-.sans .caps {
-  font-family: 'Whitney SSm SC A', 'Whitney SSm SC B', 'Whitney SSm A', 'Whitney SSm B', Geneva, Verdana, san-serif;
-}
-
-.pullquote {
-  padding-left: none;
-  font-style: normal;
-  text-align: center;
-  border-left: none;
-}
-
-@media (min-width: 600px) {
-  .pullquote {
-    float: left;
-    width: -webkit-calc(50% - 0.7rem);
-    width: calc(50% - 0.7rem);
-    margin-left: -webkit-calc(-50% - 0.46667rem);
-    margin-left: calc(-50% - 0.46667rem);
-  }
-}
-
-.pullquote:after,
-.pullquote:before {
-  content: '';
-  width: 2.8rem;
-  height: 2px;
-  display: block;
-  margin: 1.4rem auto;
-  background-color: #508FAB;
+  font-family: "franklin-gothic-urw", Geneva, Verdana, san-serif;
 }
 
 .meta,
 .footnotes {
-  color: #888;
-}
-
-.caps {
-  font-family: 'Hoefler Text SC A', 'Hoefler Text SC B', 'Hoefler Text A', 'Hoefler Text B', Georgia, serif;
-  letter-spacing: 0.05em;
+  color: #667480;
 }
 
 a,
@@ -421,22 +378,13 @@ a:visited:hover,
   color: #508FAB;
 }
 
-figcaption,
-.site__nav {
-  font-size: 0.65rem;
-  line-height: 1.61538;
-  font-family: 'Whitney SSm A', 'Whitney SSm B', Geneva, Verdana, san-serif;
-  color: #888;
+figcaption {
+  font-family: "franklin-gothic-urw", Geneva, Verdana, san-serif;
+  color: #667480;
 }
 
-.night-mode figcaption,
-.night-mode .site__nav {
+.night-mode figcaption {
   color: #77797a;
-}
-
-figcaption .caps,
-.site__nav .caps {
-  font-family: 'Whitney SSm SC A', 'Whitney SSm SC B', 'Whitney SSm A', 'Whitney SSm B', Geneva, Verdana, san-serif;
 }
 
 hr,
@@ -444,10 +392,10 @@ hr,
   border: 0;
   border-bottom: 2px solid #d0d2d4;
   width: 6rem;
-  padding-top: 1.4rem;
+  padding-top: 1.55556rem;
   margin-top: -2px;
   margin-right: auto;
-  margin-bottom: 2.8rem;
+  margin-bottom: 3.11111rem;
   margin-left: auto;
 }
 
@@ -462,13 +410,9 @@ mark {
 }
 
 blockquote {
-  font-style: italic;
-  padding: 0 1.4rem;
+  padding: 0 1.55556rem;
+  color: #667480;
   border-left: 2px solid #508FAB;
-}
-
-blockquote em {
-  font-style: normal;
 }
 
 .promo {
@@ -478,47 +422,37 @@ blockquote em {
 figure img {
   display: block;
   width: 100%;
-  margin-bottom: 0.7rem;
+  margin-bottom: 0.77778rem;
 }
 
 @media (min-width: 600px) {
   .alignleft,
   .alignright {
     float: left;
-    width: -webkit-calc(50% - 0.7rem);
-    width: calc(50% - 0.7rem);
-    margin-left: -webkit-calc(-50% - 0.46667rem);
-    margin-left: calc(-50% - 0.46667rem);
+    width: 50%;
+    margin-left: -25%;
+    margin-right: 1.55556rem;
   }
 }
 
 @media (min-width: 600px) {
   .imgbleed {
-    width: -webkit-calc(150% + 0.46667rem);
-    width: calc(150% + 0.46667rem);
-    margin-left: -webkit-calc(-50% - 0.46667rem);
-    margin-left: calc(-50% - 0.46667rem);
-  }
-
-  .imgbleed figcaption {
-    position: absolute;
-    margin-top: 1.4rem;
-    top: 100%;
-    left: 0;
-    width: 33.33333%;
-    padding-right: 0.7rem;
-    text-align: right;
+    width: 150%;
+    margin-left: -25%;
   }
 }
 
 html,
 :root {
-  font: 125%/1.4 'Hoefler Text A', 'Hoefler Text B', Georgia, serif;
+  font-family: "leitura-news", Georgia, serif;
+  font-size: 112.5%;
+  line-height: 1.55556;
   -moz-text-size-adjust: none;
   -ms-text-size-adjust: none;
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
   text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
   -webkit-font-feature-settings: "liga" 1, "onum" 1, "dlig" 1, "frac" 1;
   -moz-font-feature-settings: "liga" 1, "onum" 1, "dlig" 1, "frac" 1;
   font-feature-settings: "liga" 1, "onum" 1, "dlig" 1, "frac" 1;
@@ -529,14 +463,14 @@ html,
 @media (max-width: 860px) {
   html,
   :root {
-    font-size: 112.5%;
+    font-size: 101.25%;
   }
 }
 
 @media (max-width: 500px) {
   html,
   :root {
-    font-size: 100%;
+    font-size: 90%;
   }
 }
 
@@ -803,7 +737,12 @@ pre {
   color: #099;
 }
 
+.site__header {
+  margin-bottom: 3.11111rem;
+}
+
 .site__title {
+  font-weight: 600;
   text-decoration: none;
 }
 
@@ -816,8 +755,6 @@ pre {
 }
 
 .site__nav {
-  font-family: 'Whitney SSm SC A', 'Whitney SSm SC B', 'Whitney SSm A', 'Whitney SSm B', Geneva, Verdana, san-serif;
-  letter-spacing: 0.05em;
   border-top: 1px solid #d0d2d4;
 }
 
@@ -835,7 +772,7 @@ pre {
 
 .site__nav a {
   text-decoration: none;
-  color: #888;
+  color: #667480;
   border-top: 1px solid transparent;
 }
 
@@ -873,7 +810,7 @@ p:empty {
 }
 
 .hentry {
-  margin-bottom: 4.2rem;
+  margin-bottom: 6.22222rem;
 }
 
 @media (max-width: 860px) {
@@ -882,12 +819,9 @@ p:empty {
   }
 }
 
-@media (max-width: 860px) and (min-width: 600px) {
-  .post__header.grid__col,
-  .page__header.grid__col {
-    text-align: center;
-    width: 66.67%;
-  }
+.post__header,
+.page__header {
+  margin-bottom: 4.66667rem;
 }
 
 @media (max-width: 860px) and (min-width: 600px) {
@@ -899,22 +833,6 @@ p:empty {
     padding-left: 0;
     margin-left: auto;
     margin-right: auto;
-  }
-
-  .post__content.grid__col .alignleft,
-  .post__content.grid__col .alignright,
-  .post__content.grid__col .imgbleed,
-  .page__content.grid__col .alignleft,
-  .page__content.grid__col .alignright,
-  .page__content.grid__col .imgbleed,
-  .post__header.grid__col .alignleft,
-  .post__header.grid__col .alignright,
-  .post__header.grid__col .imgbleed,
-  .page__header.grid__col .alignleft,
-  .page__header.grid__col .alignright,
-  .page__header.grid__col .imgbleed {
-    margin-left: -25%;
-    padding-right: 1.4rem;
   }
 }
 
@@ -965,7 +883,7 @@ p:empty {
     content: '';
     position: absolute;
     width: 1px;
-    margin-left: -0.7rem;
+    margin-left: -0.77778rem;
     top: 0;
     bottom: 0;
     background-color: #d0d2d4;

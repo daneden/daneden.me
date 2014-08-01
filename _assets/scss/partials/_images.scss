@@ -14,25 +14,15 @@ figure img {
 .alignleft, .alignright {
   @media (min-width: 600px) {
     float: left;
-    width: calc(50% - #{$baseline/2});
-    margin-left: calc(-50% - #{$baseline/3});
+    width: 50%;
+    margin-left: -25%;
+    margin-right: $gutter-width;
   }
 }
 
 .imgbleed {
   @media (min-width: 600px) {
-    width: calc(150% + #{$baseline/3});
-    margin-left: calc(-50% - #{$baseline/3});
-
-    figcaption {
-      position: absolute;
-      margin-top: $baseline;
-      top: 100%;
-      left: 0;
-      width: percentage(1/3);
-      padding-right: $baseline/2;
-
-      text-align: right;
-    }
+    width: 150%;
+    margin-left: -25%;
   }
 }

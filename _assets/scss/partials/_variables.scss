@@ -7,20 +7,22 @@
 
 
 // Group: Unit Sizes
-$base-font-size: (20/16)*100%;
-$baseline-unitless: 28 / (16*($base-font-size/100%));
+$base-font-size: (18/16)*100%;
+$baseline-unitless: 28/(16*($base-font-size/100%));
 $baseline: $baseline-unitless * 1rem;
 
 
 // Group: Fonts
-$font-serif: 'Hoefler Text A', 'Hoefler Text B', Georgia, serif;
-$font-serif-sc: 'Hoefler Text SC A', 'Hoefler Text SC B', $font-serif;
+$font-name-a: "franklin-gothic-urw";
+$font-name-b: "leitura-news";
+$font-name-c: "freight-display-pro";
 
-$font-sans: 'Whitney SSm A', 'Whitney SSm B', Geneva, Verdana, san-serif;
-$font-sans-sc: 'Whitney SSm SC A', 'Whitney SSm SC B', $font-sans;
+$font-serif: $font-name-b, Georgia, serif;
 
-$font-display: 'Requiem Display A', 'Requiem Display B', $font-serif;
-$font-display-sc: 'Requiem Display SC A', 'Requiem Display SC B', $font-display;
+$font-sans: $font-name-a, Geneva, Verdana, san-serif;
+
+$font-display: $font-name-c, $font-serif;
+
 $font-code: 'Source Code Pro', Monaco, monospace;
 
 
@@ -29,7 +31,7 @@ $background: #fbf7f0;
 $highlight: #508FAB;
 
 $dark-gray: #3d464d;
-$light-gray: #888;
+$light-gray: #667480;
 $lighter-gray: #d0d2d4;
 
 // Group: Colors-invert

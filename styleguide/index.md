@@ -5,11 +5,9 @@ title: Style Guide
 
 This page exists to demonstrate the visual styles of the various elements that comprise the design of this site. This is not only for my own benefit, as the designer and maintainer, but also to satisfy the curiosity of those interested in such things (like myself). To learn about my writing style, check the [writing style guide](/styleguide/writing).
 
-At the time of writing ({{ site.time | pretty }}), the majority of typographic elements on the site are set in H<span class="caps">oefler</span> &amp; C<span class="caps">o</span>&rsquo;s Hoefler Text. *This is Hoefler Text italic.* **This is Hoefler Text bold.** First level headings are set in Requiem Display. For more information about the typographic decisions behind the design of this site, read [this post](/2013/10/17/read-all-about-it/).
+At the time of writing ({{ site.time | pretty }}), body copy is set in Leitura News, headlines are set in Freight Display Pro, and headings & captions are set in Franklin Gothic.
 
-> Blockquotes (like the one seen here) are set in Hoefler Text italic, whereas captions & other minor or supporting typographic elements are often set in Whitney ScreenSmart.
-
-{% image alignleft /uploads/2014/05/wedding-pavilion.jpg "This is a left aligned image and caption, set in Whitney ScreenSmart. The image is of Walt Disney World’s Wedding Pavilion." %}
+{% image alignleft /uploads/2014/05/wedding-pavilion.jpg "This is a left aligned image and caption, set in Franklin Gothic. The image is of Walt Disney World’s Wedding Pavilion." %}
 
 ## Heading Level Two
 
@@ -30,7 +28,7 @@ Third level headings are most often used to denote names rather than sections, s
 	1. This is a second-level numbered list item
 3. Numbered lists, like bulleted lists, are not used particularly often on this site.
 
-{% image imgbleed /uploads/2013/12/herb-lubalin.jpg "This is an example image caption, set in Whitney. The image is of a desk in the Herb Lubalin Study Center of Design and Typography." %}
+{% image imgbleed /uploads/2013/12/herb-lubalin.jpg "This is an example image caption, set in Franklin Gothic. The image is of a desk in the Herb Lubalin Study Center of Design and Typography." %}
 
 Images may take one of two forms; aligned (left), or centered (relative to the text column). Captions are encouraged, but not required.
 

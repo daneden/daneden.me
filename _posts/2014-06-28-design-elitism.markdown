@@ -23,8 +23,6 @@ One million US dollars is about 60% of what the average United Kingdom citizen w
 
 There is credit due to the creators of Yo for such a virally engaging app of such a high level of simplicity, but the investors seem to have become blind to the temporal nature of the virality of these things. You see, in Investorland, and particularly in Digital Investorland, design is the only currency that matters. Yo’s apparent success was contingent upon its ease of use and its insane simplicity—regardless of blatant and [glaring security issues](http://mashable.com/2014/06/20/yo-gets-hacked/)—and in a world where design is King, simplicity is all it takes to make several otherwise mentally sound adults go temporarily insane and throw literal fistfuls of money at whatever product happens to grace their inbox that morning.
 
-<blockquote class="pullquote">In around 39 ½ years, one British human will earn as much money as an app did in just a few days.</blockquote>
-
 If you can excuse my digression, there is a point to be made here. design has made a name for itself beyond traditional 2D graphic and print design, but at a severe cost; it has permeated the mainstream of investors and consumers alike, and as a result, has become a tacked-on word with connotations of immediate value and thoughtfulness.
 
 Consumers know that Yo, like iOS, and more recently, Android, is designed. They know that through exposure to media sources headlining “Company launches redesign.” They know it through social channels and financial reports. Design has, through these high-bandwidth channels, become a frontman for countless devices, companies, apps, and brands. And that’s not really what I got into design for.

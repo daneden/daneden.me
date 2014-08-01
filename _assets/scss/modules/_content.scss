@@ -25,7 +25,7 @@ p:empty {
 }
 
 .hentry {
-  margin-bottom: $baseline*3;
+  margin-bottom: $baseline*4;
 
   @media (max-width: 860px) {
     margin-left: 0;
@@ -34,13 +34,7 @@ p:empty {
 
 .post__header,
 .page__header {
-
-  &.grid__col {
-    @media (max-width: 860px) and (min-width: 600px) {
-      text-align: center;
-      width: 66.67%;
-    }
-  }
+  margin-bottom: $baseline*3;
 }
 
 .post__content,
@@ -55,12 +49,6 @@ p:empty {
       margin: {
         left: auto;
         right: auto;
-      }
-
-      .alignleft, .alignright,
-      .imgbleed {
-        margin-left: -25%;
-        padding-right: $baseline;
       }
     }
   }

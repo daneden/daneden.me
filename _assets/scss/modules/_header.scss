@@ -6,7 +6,12 @@
 //
 
 
+.site__header {
+  margin-bottom: $baseline*2;
+}
+
 .site__title {
+  font-weight: 600;
   text-decoration: none;
 
   &:hover {
@@ -19,11 +24,6 @@
 }
 
 .site__nav {
-  @extend %figcaption;
-
-  font-family: $font-sans-sc;
-  letter-spacing: .05em;
-
   border-top: 1px solid $lighter-gray;
 
   .night-mode & {
