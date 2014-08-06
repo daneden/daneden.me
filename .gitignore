@@ -22,3 +22,6 @@ bower_components/
 
 # Ignore fonts. Easier to just upload directly to server.
 static/fonts/
+
+# Ignore CSS. This could trip me up some day.
+_assets/css/
