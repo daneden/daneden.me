@@ -3,7 +3,7 @@ layout: page
 title: About
 ---
 
-{% image /uploads/2014/06/portrait.jpg %}
+{% image /uploads/2014/08/portrait.jpg %}
 
 My name is Daniel Eden, and I'm a designer. I’m intrigued by the stories behind objects; how they were made, and who made them. I like to make [tools](/portfolio) for the web and [write](/blog) about design, courage, and lack thereof. I also like Disney, dogs, and looking up.
 
