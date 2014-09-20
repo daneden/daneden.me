@@ -1,11 +1,13 @@
-source 'https://rubygems.org'
+source "https://rubygems.org"
 
-gem 'jekyll'
+gem "jekyll"
 
 group :jekyll_plugins do
-  gem 'jekyll-sitemap'
+  gem "jekyll-sitemap"
 end
 
-gem 'kramdown'
-gem 'facets'
-gem 'typogruby'
+gem "kramdown"
+gem "facets"
+gem "typogruby"
+gem "jekyll-assets"
+gem "autoprefixer-rails"
