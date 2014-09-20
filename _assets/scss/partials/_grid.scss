@@ -50,7 +50,7 @@ $gutter-width: $baseline;
 @for $i from 1 through 6 {
   $group: 6;
 
-  > .grid__col--#{$i}-of-#{$group} {
+  .grid__col--#{$i}-of-#{$group} {
 
     @if (percentage($i / $group) == percentage(1/1)) {
       @extend %span-all;
@@ -73,7 +73,7 @@ $gutter-width: $baseline;
     }
   }
 
-  > .grid__col--push-#{$i}-of-#{$group} {
+  .grid__col--push-#{$i}-of-#{$group} {
 
     @if percentage($i / $group) == percentage(1/1) {
       @extend %push-span-all;
@@ -96,7 +96,7 @@ $gutter-width: $baseline;
     }
   }
 
-  > .grid__col--pull-#{$i}-of-#{$group} {
+  .grid__col--pull-#{$i}-of-#{$group} {
 
     @if percentage($i / $group) == percentage(1/1) {
       @extend %pull-span-all;
@@ -159,7 +159,7 @@ $gutter-width: $baseline;
 
   // All direct descendents of .grid get treated the same way.
   // This might be overkill for some, but it’s a time-saver for me.
-  > .grid__col {
+  .grid__col {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -207,7 +207,7 @@ $gutter-width: $baseline;
     margin-left: 0;
     width: 100%;
 
-    > * {
+    * {
       padding-left: 0;
     }
 

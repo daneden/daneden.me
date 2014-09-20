@@ -54,6 +54,11 @@ p:empty {
   }
 }
 
+.home__avatar {
+  shape-outside: url("/uploads/2014/09/sketch-portrait-large.png");
+  shape-margin: 20px;
+}
+
 .footnote, .footnote:visited {
   padding: .15em;
 

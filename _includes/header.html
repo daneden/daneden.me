@@ -11,9 +11,7 @@
   <meta property="og:url" content="{{ page.url }}"/>
   <meta property="og:description" content="{{ page.excerpt | strip_html }}"/>
 
-  {% bundle %}
-  - /_assets/css/style.min.css
-  {% endbundle %}
+  {% stylesheet style %}
 
   <!-- Touch icon -->
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
