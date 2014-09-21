@@ -125,7 +125,7 @@ module Jekyll
                 :width => if source[:width] then (source[:width].to_f * p).round else nil end,
                 :height => if source[:height] then (source[:height].to_f * p).round else nil end,
                 'media' => if source['media']
-                  "#{source['media']} and (-webkit-min-device-pixel-ratio: #{p}), #{source['media']} and (min-device-pixel-ratio: #{p}), #{source['media']} and (min-resolution: #{(p * 96).round}dpi)"
+                  "#{source['media']} and (-webkit-min-device-pixel-ratio: #{p}), #{source['media']} and (min-resolution: #{(p * 96).round}dpi)"
                 else
                   "(-webkit-min-device-pixel-ratio: #{p}), (min-resolution: #{(p * 96).to_i}dpi)"
                 end,
