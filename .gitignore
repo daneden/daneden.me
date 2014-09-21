@@ -7,6 +7,7 @@ _site
 # Ignore caches and logs
 .sass-cache
 _asset_bundler_cache/
+.jekyll-assets-cache/
 .bundle/
 Gemfile.lock
 

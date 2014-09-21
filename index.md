@@ -3,7 +3,7 @@ layout: page
 title: About
 ---
 
-{% image alignright /uploads/2014/09/sketch-portrait.png "Portrait courtesy of [Emily Brook](http://emilybrook.co.uk)" %}
+{% picture 2014/09/sketch-portrait.png class="alignright" %}
 
 My name is Daniel Eden, and I'm a designer. I’m intrigued by the stories behind objects; how they were made, and who made them. I like to make [tools](/portfolio) for the web and [write](/blog) about design, courage, and lack thereof. I also like Disney, dogs, and looking up.
 

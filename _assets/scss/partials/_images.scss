@@ -5,7 +5,8 @@
 // Sprite and image helpers should go here
 //
 
-figure img {
+figure img,
+picture img {
   display: block;
   width: 100%;
   margin-bottom: $baseline/2;
