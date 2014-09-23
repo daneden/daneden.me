@@ -32,6 +32,8 @@ Third level headings are most often used to denote names rather than sections, s
 
 {% picture 2013/12/herb-lubalin.jpg class="imgbleed" %}
 
+{% picture 2013/12/herb-lubalin.jpg class="imgbleed" %}
+
 Images may take one of two forms; aligned (left), or centered (relative to the text column). Captions are encouraged, but not required.
 
 Images are currently used only sparingly, but must flow with the content. Captions should be readable, but not distract from the main article. Like images themselves, they are supplements.

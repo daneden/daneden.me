@@ -72,8 +72,11 @@ window.matchMedia || (window.matchMedia = function() {
   pf.ns = "picturefill";
 
   // srcset support test
+  (function() {
   pf.srcsetSupported = "srcset" in doc.createElement( "img" );
+    pf.srcsetSupported = "srcset" in img;
   pf.sizesSupported = w.HTMLImageElement.sizes;
+  })();
 
   // just a string trim workaround
   pf.trim = function( str ) {
@@ -85,6 +88,12 @@ window.matchMedia || (window.matchMedia = function() {
     return str.endsWith ? str.endsWith( suffix ) : str.indexOf( suffix, str.length - suffix.length ) !== -1;
   };
 
+  /**
+   * Shortcut method for https://w3c.github.io/webappsec/specs/mixedcontent/#restricts-mixed-content ( for easy overriding in tests )
+   */
+  pf.restrictsMixedContent = function() {
+    return w.location.protocol === "https:";
+  };
   /**
    * Shortcut method for matchMedia ( for easy overriding in tests )
    */
@@ -394,10 +403,16 @@ window.matchMedia || (window.matchMedia = function() {
     }
 
     if ( bestCandidate && !pf.endsWith( picImg.src, bestCandidate.url ) ) {
+      if ( pf.restrictsMixedContent() && bestCandidate.url.substr(0, "http:".length).toLowerCase() === "http:" ) {
+        if ( typeof console !== undefined ) {
+          console.warn( "Blocked mixed content image " + bestCandidate.url );
+        }
+      } else {
       picImg.src = bestCandidate.url;
       // currentSrc attribute and property to match
       // http://picture.responsiveimages.org/#the-img-element
       picImg.currentSrc = picImg.src;
+      }
     }
   };
 
