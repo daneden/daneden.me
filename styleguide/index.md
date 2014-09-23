@@ -7,7 +7,7 @@ This page exists to demonstrate the visual styles of the various elements that c
 
 At the time of writing ({{ site.time | pretty }}), body copy is set in Leitura News, headlines are set in Freight Display Pro, and headings & captions are set in Franklin Gothic.
 
-{% image alignleft /uploads/2014/05/wedding-pavilion.jpg "This is a left aligned image and caption, set in Franklin Gothic. The image is of Walt Disney World’s Wedding Pavilion." %}
+{% picture "This is a left aligned image and caption, set in Franklin Gothic. The image is of Walt Disney World’s Wedding Pavilion." 2014/05/wedding-pavilion.jpg class="alignleft" %}
 
 ## Heading Level Two
 

@@ -21,7 +21,7 @@ This minor identity crisis bubbled up and way back down a few times. I went thro
 
 To emphasise the importance and relevance of this question, I should make it clear that my website has long been a sacred haven for me to answer the first question. Whenever I felt like I didn’t quite understand this whole Design shtick, I’d take to my site to figure it out. I’d tweak type and nudge columns until I felt some sort of satisfaction. But really, it’s all in the pursuit of one thing; a system.
 
-{% image imgbleed /uploads/2014/03/606-universal-shelving.jpg "Vitsœ’s 606 Universal Shelving System. Image courtesy of [Smow](http://www.smow.com/blog/2010/05/smowoffline-dieter-rams-less-and-more/)." %}
+{% picture "Vitsœ’s 606 Universal Shelving System. Image courtesy of [Smow](http://www.smow.com/blog/2010/05/smowoffline-dieter-rams-less-and-more/)." 2014/03/606-universal-shelving.jpg class="imgbleed" %}
 
 A working, scalable, modular system is really what I feel is the ultimate, end-of-all-ends outcome of successful design. Think of Vitsœ’s 606 Universal Shelving System, the National Park Service’s [Unigrid](http://npshistory.com/brochures/unigrid/index.htm), and the New York City Transit Authority [Graphics Standards Manual](http://thestandardsmanual.com/). Extendable, reliable, scalable, consistent systems. All scenarios accounted for, these systems are simple to follow, and difficult to break.
 

@@ -6,7 +6,7 @@ hidden: true
 
 Something I've come across a few times on the web recently is a feature I like to call "Navigation with nibbles". Let me show you what I mean:
 
-{% image /uploads/2011/11/banner.png "Navigation nibbles, here seen on Themble and Simplebits." %}
+{% picture "Navigation nibbles, here seen on Themble and Simplebits." 2011/11/banner.png %}
 
 When I talk about nibbles, I'm in fact referring to those little snippets of information between each page title. I _love_ this technique - it provides the user with a little piece of additional information about what to expect on the following page. It's simple and effective.
 

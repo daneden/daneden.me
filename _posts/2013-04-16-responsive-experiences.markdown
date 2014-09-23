@@ -60,7 +60,7 @@ I’ve seen these responsive experiences in other services, too. Websites that q
 
 The most recent example I've seen of this is in the Dropbox iOS application. The app notifies you when you're invited to a shared folder. Great! Exactly what I need when I'm on the move. Dropbox is great for accessing files on the move.
 
-{% image /uploads/2013/04/Dropbox-iOS.png "Dropbox won't let you accept folder invites unless you click on the notification itself." %}
+{% picture "Dropbox won't let you accept folder invites unless you click on the notification itself." 2013/04/Dropbox-iOS.png %}
 
 However, there's a slight problem. Unless I tap the notification itself, there's no way for me to accept the folder invitation inside the app itself. Irritating if I've dismissed the notification, or I have multiple invites to folders.
 

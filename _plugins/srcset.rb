@@ -38,6 +38,7 @@ module Jekyll
       # Gather settings
       site = context.registers[:site]
       settings = site.config['picture']
+      converter = site.getConverterImpl(Jekyll::Converters::Markdown)
       markup = /^(?:(?<caption>["'](.*)["']+)\s+)?(?<image_src>[^\s]+\.[a-zA-Z0-9]{3,4})\s*(?<source_src>(?:(source_[^\s.:\/]+:\s+[^\s]+\.[a-zA-Z0-9]{3,4})\s*)+)?(?<html_attr>[\s\S]+)?$/.match(render_markup)
       preset = settings['presets']['default']
       caption = markup[:caption].to_s[1..-2]
@@ -167,7 +168,7 @@ module Jekyll
         # Note: Added backslash+space escapes to bypass markdown parsing of indented code below -WD
         picture_tag = "<figure #{html_attr_string}>"\
         "#{markdown_escape * 2}<img src=\"#{instance['source_default'][:generated_src]}\" srcset=\"#{source_tags}\" sizes=\"100vw\">"
-        caption != nil ? picture_tag += "<figcaption>#{caption}</figcaption>" : nil
+        caption != nil ? picture_tag += "<figcaption>#{converter.convert(caption)}</figcaption>" : nil
         picture_tag += "</figure>\n"
 
       elsif settings['markup'] == 'img'
