@@ -9,7 +9,7 @@ This was an exciting time for me. I was attaining knowledge about digital design
 
 Things have changed a lot since then. I haven’t given any more presentations, but I have been doing a lot more observing. Design in the digital space has grown up, and during that maturation, it’s developed an attitude. A rotten one. Digital design has, unbeknownst to the majority of us, turned into a repulsive facade and bewilderingly powerful buzzword.
 
-{% image alignleft /uploads/2014/06/eames-dsr1.png "The [Eames DSR](http://www.vitra.com/en-it/product/eames-plastic-side-chair#) plastic side chair is the result of years of refinement, and will last for many years yet as both a functional artifact and a timeless design." %}
+{% picture "The [Eames DSR](http://www.vitra.com/en-it/product/eames-plastic-side-chair#) plastic side chair is the result of years of refinement, and will last for many years yet as both a functional artifact and a timeless design." 2014/06/eames-dsr1.png class="alignleft" %}
 
 In the digital realm, “design” seems to have become a catch-all term for a lot of things. That’s not an inherent problem, but the consequence of the overuse and underthinking of design has led to people—generally those lacking understanding of design—to accept it as a mythical, inaccessible process through which decisions are made, which, in any other setting, would be inappropriate.
 
@@ -28,8 +28,6 @@ If you can excuse my digression, there is a point to be made here. design has ma
 Consumers know that Yo, like iOS, and more recently, Android, is designed. They know that through exposure to media sources headlining “Company launches redesign.” They know it through social channels and financial reports. Design has, through these high-bandwidth channels, become a frontman for countless devices, companies, apps, and brands. And that’s not really what I got into design for.
 
 I became a designer because of the satisfaction of solving a tough problem. Through the act of making something of use, and also striving to make that thing beautiful and delightful[^3]. Since then, I’ve seen design in digital media become a status symbol—a lacquer and finish tacked on to requisite interest. I’m pleased to say that the people I work with strive for better solutions to tough problems through design, and that is how design is upheld at Dropbox. This design prominence is recognised by our customers. The simplicity of Dropbox—which is not an attribute easily achieved when you consider the many things besides saying “Yo” that Dropbox does to help us live and work—is one of its most recognised features.
-
-{% image alignleft /static/images/design-thinking-c.svg "Designing typefaces for an array of character sets and languages is an excruciating and costly process." %}
 
 But what of the type designers? Where is the million-dollar funding for the simplicity and exquisite form of a multi-lingual typeface? What of the designers of newsprint and its various forms? What of the data visualisers of The New York Times, The Guardian, and their ilk? What of the designers making it easier for people to pay their taxes? The designers making the lives of those less fortunate than ourselves just a little more enriched and fulfilling through intelligent product design?
 

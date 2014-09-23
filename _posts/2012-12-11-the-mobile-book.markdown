@@ -4,7 +4,7 @@ title: The Mobile Book
 hidden: true
 ---
 
-{% image alignleft /uploads/2012/12/the-mobile-book.png %}
+{% picture 2012/12/the-mobile-book.png class="alignleft" %}
 
 The always-brilliant Smashing Magazine gave me the opportunity to review their new book, [The Mobile Book](https://shop.smashingmagazine.com/the-mobile-book.html). _TL;DR_ -- buy this book. It'll change the way you work.
 
