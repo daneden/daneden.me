@@ -33,10 +33,7 @@ picture:
         width: "320"
       source_320:
         width: "320"
-        media: "(min-width: 320px)"
       source_600:
         width: "660"
-        media: "(min-width: 660px)"
       source_960:
         width: "960"
-        media: "(min-width: 960px)"

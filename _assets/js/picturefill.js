@@ -1,3 +1,52 @@
+/*! Picturefill - v2.1.0 - 2014-07-25
+* http://scottjehl.github.io/picturefill
+* Copyright (c) 2014 https://github.com/scottjehl/picturefill/blob/master/Authors.txt; Licensed MIT */
+/*! matchMedia() polyfill - Test a CSS media type/query in JS. Authors & copyright (c) 2012: Scott Jehl, Paul Irish, Nicholas Zakas, David Knight. Dual MIT/BSD license */
+
+window.matchMedia || (window.matchMedia = function() {
+  "use strict";
+
+  // For browsers that support matchMedium api such as IE 9 and webkit
+  var styleMedia = (window.styleMedia || window.media);
+
+  // For those that don't support matchMedium
+  if (!styleMedia) {
+    var style       = document.createElement('style'),
+      script      = document.getElementsByTagName('script')[0],
+      info        = null;
+
+    style.type  = 'text/css';
+    style.id    = 'matchmediajs-test';
+
+    script.parentNode.insertBefore(style, script);
+
+    // 'style.currentStyle' is used by IE <= 8 and 'window.getComputedStyle' for all other browsers
+    info = ('getComputedStyle' in window) && window.getComputedStyle(style, null) || style.currentStyle;
+
+    styleMedia = {
+      matchMedium: function(media) {
+        var text = '@media ' + media + '{ #matchmediajs-test { width: 1px; } }';
+
+        // 'style.styleSheet' is used by IE <= 8 and 'style.textContent' for all other browsers
+        if (style.styleSheet) {
+          style.styleSheet.cssText = text;
+        } else {
+          style.textContent = text;
+        }
+
+        // Test if media query is true or false
+        return info.width === '1px';
+      }
+    };
+  }
+
+  return function(media) {
+    return {
+      matches: styleMedia.matchMedium(media || 'all'),
+      media: media || 'all'
+    };
+  };
+}());
 /*! Picturefill - Responsive Images that work today.
 *  Author: Scott Jehl, Filament Group, 2012 ( new proposal implemented by Shawn Jansepar )
 *  License: MIT/GPLv2
@@ -23,11 +72,8 @@
   pf.ns = "picturefill";
 
   // srcset support test
-  (function() {
-    var img = doc.createElement( "img" );
-    pf.srcsetSupported = "srcset" in img;
-    pf.sizesSupported = "sizes" in img;
-  })();
+  pf.srcsetSupported = "srcset" in doc.createElement( "img" );
+  pf.sizesSupported = w.HTMLImageElement.sizes;
 
   // just a string trim workaround
   pf.trim = function( str ) {
@@ -39,12 +85,6 @@
     return str.endsWith ? str.endsWith( suffix ) : str.indexOf( suffix, str.length - suffix.length ) !== -1;
   };
 
-  /**
-   * Shortcut method for https://w3c.github.io/webappsec/specs/mixedcontent/#restricts-mixed-content ( for easy overriding in tests )
-   */
-  pf.restrictsMixedContent = function() {
-    return w.location.protocol === "https:";
-  };
   /**
    * Shortcut method for matchMedia ( for easy overriding in tests )
    */
@@ -64,8 +104,9 @@
    * http://dev.w3.org/csswg/css-values-3/#length-value
    */
   pf.getWidthFromLength = function( length ) {
-    // If a length is specified and doesn’t contain a percentage, and it is greater than 0 or using `calc`, use it. Else, use the `100vw` default.
-    length = length && length.indexOf( "%" ) > -1 === false && ( parseFloat( length ) > 0 || length.indexOf( "calc(" ) > -1 ) ? length : "100vw";
+    // If no length was specified, or it is 0 or negative, default to `100vw` (per the spec).
+    length = length && ( parseFloat( length ) > 0 || length.indexOf( "calc(" ) > -1 ) ? length : "100vw";
+
     /**
     * If length is specified in  `vw` units, use `%` instead since the div we’re measuring
     * is injected at the top of the document.
@@ -353,16 +394,10 @@
     }
 
     if ( bestCandidate && !pf.endsWith( picImg.src, bestCandidate.url ) ) {
-      if ( pf.restrictsMixedContent() && bestCandidate.url.substr(0, "http:".length).toLowerCase() === "http:" ) {
-        if ( typeof console !== undefined ) {
-          console.warn( "Blocked mixed content image " + bestCandidate.url );
-        }
-      } else {
-        picImg.src = bestCandidate.url;
-        // currentSrc attribute and property to match
-        // http://picture.responsiveimages.org/#the-img-element
-        picImg.currentSrc = picImg.src;
-      }
+      picImg.src = bestCandidate.url;
+      // currentSrc attribute and property to match
+      // http://picture.responsiveimages.org/#the-img-element
+      picImg.currentSrc = picImg.src;
     }
   };
 
