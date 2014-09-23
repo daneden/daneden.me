@@ -15,6 +15,7 @@ include: [".htaccess"]
 exclude: ["node_modules", "package.json", "Gruntfile.js"]
 
 assets:
+  js_compressor: uglifier
   css_compressor: sass
   cache: true
   sources:

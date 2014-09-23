@@ -38,10 +38,11 @@ module Jekyll
       # Gather settings
       site = context.registers[:site]
       settings = site.config['picture']
-      markup = /^(?:(?<preset>[^\s.:\/]+)\s+)?(?<image_src>[^\s]+\.[a-zA-Z0-9]{3,4})\s*(?<source_src>(?:(source_[^\s.:\/]+:\s+[^\s]+\.[a-zA-Z0-9]{3,4})\s*)+)?(?<html_attr>[\s\S]+)?$/.match(render_markup)
-      preset = settings['presets'][ markup[:preset] ] || settings['presets']['default']
+      markup = /^(?:(?<caption>["'](.*)["']+)\s+)?(?<image_src>[^\s]+\.[a-zA-Z0-9]{3,4})\s*(?<source_src>(?:(source_[^\s.:\/]+:\s+[^\s]+\.[a-zA-Z0-9]{3,4})\s*)+)?(?<html_attr>[\s\S]+)?$/.match(render_markup)
+      preset = settings['presets']['default']
+      caption = markup[:caption].to_s[1..-2]
 
-      raise "Picture Tag can't read this tag. Try {% picture [preset] path/to/img.jpg [source_key: path/to/alt-img.jpg] [attr=\"value\"] %}." unless markup
+      raise "Picture Tag can't read this tag. Try {% picture [caption] path/to/img.jpg [source_key: path/to/alt-img.jpg] [attr=\"value\"] %}." unless markup
 
       # Assign defaults
       settings['source'] ||= '.'
@@ -164,7 +165,10 @@ module Jekyll
 
         # Note: we can't indent html output because markdown parsers will turn 4 spaces into code blocks
         # Note: Added backslash+space escapes to bypass markdown parsing of indented code below -WD
-        picture_tag = "<figure #{html_attr_string}><img src=\"#{instance['source_default'][:generated_src]}\" srcset=\"#{source_tags}\" sizes=\"100vw\"></figure>\n"
+        picture_tag = "<figure #{html_attr_string}>"\
+        "#{markdown_escape * 2}<img src=\"#{instance['source_default'][:generated_src]}\" srcset=\"#{source_tags}\" sizes=\"100vw\">"
+        caption != nil ? picture_tag += "<figcaption>#{caption}</figcaption>" : nil
+        picture_tag += "</figure>\n"
 
       elsif settings['markup'] == 'img'
         # TODO implement <img srcset/sizes>
@@ -229,6 +233,9 @@ module Jekyll
           i.resize "#{gen_width}x#{gen_height}^"
           i.gravity "center"
           i.crop "#{gen_width}x#{gen_height}+0+0"
+          i.quality "80"
+          i.depth "8"
+          i.interlace "plane"
         end
 
         image.write gen_dest_file

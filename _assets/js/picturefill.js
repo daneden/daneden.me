@@ -74,7 +74,7 @@ window.matchMedia || (window.matchMedia = function() {
   // srcset support test
   (function() {
   pf.srcsetSupported = "srcset" in doc.createElement( "img" );
-    pf.srcsetSupported = "srcset" in img;
+    // pf.srcsetSupported = "srcset" in img;
   pf.sizesSupported = w.HTMLImageElement.sizes;
   })();
 
