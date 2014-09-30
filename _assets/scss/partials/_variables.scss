@@ -25,10 +25,10 @@ $font-code: 'Source Code Pro', Monaco, monospace;
 
 // Group: Colors
 $background: #fbf7f0;
-$highlight: #508FAB;
+$highlight: #cb5c42;
 
 $dark-gray: #3d464d;
-$light-gray: #667480;
+$light-gray: desaturate(#667480, 10%);
 $lighter-gray: #d0d2d4;
 
 // Group: Colors-invert
