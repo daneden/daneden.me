@@ -19,11 +19,6 @@ I’m currently working at [Dropbox](http://dropbox.com) as a Designer. My work 
 ## Just My Type
 [Just My Type](http://justmytype.co) is a library of font pairings from Adobe Typekit and [H&FJ](class:caps)’s Cloud.Typography. Created out of a desire for a place to keep track of my personal favorite web font pairings, Just My Type has grown to become a popular typography resource for many web designers. [Visit the site](http://justmytype.co).
 
-## Gateway
-[Gateway](http://gateway-learning.com) is a proof-of-concept website designed to help migrant workers learn the vocational skills needed for them to get a job in the UK. Me, [Jon](http://twitter.com/JWalter14), and [Stacy](http://twitter.com/StaceSlater) built Gateway in collaboration with [Greenhat Interactive](https://twitter.com/ghinteractive) as part of our degrees.
-
-I was responsible for the branding, design, and front-end development of Gateway. [Visit the site](http://gateway-learning.com).
-
 
 ## Onword
 Tired of only being able to access my iA Writer documents on my iOS devices, I created [Onword](http://onword.co), a simple web application for writing documents. It was designed and developed in just 10 days, and introduced me to the world of Ruby.

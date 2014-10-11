@@ -26,7 +26,7 @@ Unless part of a phrase or word group, punctuation always falls outside of a hyp
 
 The last words in any given paragraph or other block-level elements are (automatically) separated by a non-breaking space to prevent widows.
 
-<mark>“</mark>Smart<mark>”</mark> quotes are preferred over straight quotes. A period is followed by a single space. Regular dashes are used for compound words (e.g. one-time fee, comma-separated list), en dashes (<mark>–</mark>) are used for ranges (e.g. 1–10, January–December), and em dashes (<mark>—</mark>) are used to cite authors and origins of quotes, preceding closing remarks, and for abrupt breaks in text (similar to, but more aggressive than parentheses.)
+Smart quotes (<mark>“ ”</mark>) are preferred over straight quotes. A period is followed by a single space. Regular dashes are used for compound words (e.g. one-time fee, comma-separated list), en dashes (<mark>–</mark>) are used for ranges (e.g. 1–10, January–December), and em dashes (<mark>—</mark>) are used to cite authors and origins of quotes, preceding closing remarks, and for abrupt breaks in text (similar to, but more aggressive than parentheses.)
 
 Here’s an example of all these dashes in use:
 
