@@ -5,7 +5,7 @@ title: Style Guide
 
 This page exists to demonstrate the visual styles of the various elements that comprise the design of this site. This is not only for my own benefit, as the designer and maintainer, but also to satisfy the curiosity of those interested in such things (like myself). To learn about my writing style, check the [writing style guide](/styleguide/writing).
 
-At the time of writing ({{ site.time | pretty }}), body copy is set in Leitura News, headlines are set in Freight Display Pro, and headings & captions are set in Franklin Gothic.
+At the time of writing ({{ site.time | pretty }}), body copy and titles are set in Leitura News, and other headings & captions are set in Franklin Gothic.
 
 {% picture "This is a left aligned image and caption, set in Franklin Gothic. The image is of Walt Disney World’s Wedding Pavilion." 2014/05/wedding-pavilion.jpg class="alignleft" %}
 
