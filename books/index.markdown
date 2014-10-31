@@ -14,14 +14,18 @@ These books will teach you more than their money’s worth about design, writing
 
 ## Design
 
+### [Designing News](http://usshop.gestalten.com/designing-news.html)
+
+Francesco Franchi’s sizeable essay is one of the latest additions to my library, and a welcome one. My initial attraction to it was, admittedly, its unusual form and excellent typography, but it didn’t take long for me to admire its substantial quality of content. Francesco examines and predicts the fruitful history, difficult present, and digital future of news outlets and other traditionally printed media. Well worth purchasing, if only to make a wonderful typographer’s reference. [Buy it from Gestalten.](http://usshop.gestalten.com/designing-news.html)
+
 ### [Ordering Disorder](http://www.amazon.co.uk/gp/product/0321703537/ref=as_li_ss_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN=0321703537&linkCode=as2&tag=danedesblo-21)
 
 Khoi Vinh’s book gives a straight to-the-point overview of how to make grid systems that work in web design. I’ve used the book as my trusted guide for three websites now, all of them resulting in beautifully designed and futureproof grid systems. A must read. [Buy it on Amazon.](http://www.amazon.co.uk/gp/product/0321703537/ref=as_li_ss_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN=0321703537&linkCode=as2&tag=danedesblo-21)
 
 
-### [The Shape of Design](http://shop.frankchimero.com/collections/frontpage/products/the-shape-of-design)
+### [The Shape of Design](http://www.buyolympia.com/q/Item=frank-chimero-the-shape-of-design)
 
-Frank Chimero is incredibly passionate about design — this is clear from his talks at NAconf, Build, and the Do Lectures, as well as his book “The Shape Of Design”. Frank manages to communicate his thoughts and ideas in a way that is both entertaining and enlightening. It’s hard to pinpoint one takeaway from this book — it changed me. [Buy it from Frank’s store.](http://shop.frankchimero.com/collections/frontpage/products/the-shape-of-design)
+Frank Chimero is incredibly passionate about design — this is clear from his talks at NAconf, Build, and the Do Lectures, as well as his book “The Shape Of Design”. Frank manages to communicate his thoughts and ideas in a way that is both entertaining and enlightening. It’s hard to pinpoint one takeaway from this book — it changed me. [Buy it from Buyolympia.](http://www.buyolympia.com/q/Item=frank-chimero-the-shape-of-design)
 
 
 ### [Design As Art](http://www.amazon.co.uk/gp/product/0141035811/ref=as_li_ss_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN=0141035811&linkCode=as2&tag=danedesblo-21)
