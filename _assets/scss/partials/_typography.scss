@@ -140,3 +140,12 @@ blockquote {
 .caps {
   font-feature-settings: "c2sc" 1, "smcp" 1;
 }
+
+sup, sub {
+   vertical-align: baseline;
+   top: -0.4em;
+}
+
+sub {
+  top: 0.4em;
+}
