@@ -349,8 +349,6 @@ AddOutputFilterByType DEFLATE text/text text/html text/plain text/xml text/css a
 </ifmodule>
 # END GZIP
 
-RewriteRule ^.git/ - [NC,F,L]
-
 Redirect 301 /favicon.ico /favicon.png
 Redirect 301 /about /
 
@@ -363,5 +361,3 @@ Redirect /animate http://daneden.github.io/animate.css
 
 # Redirect /toast to the GitHub page
 Redirect /toast http://daneden.github.io/Toast
-
-RewriteRule (.+)-[a-zA-Z0-9]+(\.(js|css))$ $1$2 [L]
