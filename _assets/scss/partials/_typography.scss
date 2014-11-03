@@ -11,6 +11,10 @@ h1,
   font-weight: 800;
   font-size: 2.5rem;
   line-height: 1;
+
+  @media (max-width: 500px) {
+    font-size: 2rem;
+  }
 }
 
 h2,

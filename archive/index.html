@@ -11,7 +11,7 @@ title: Archive
   <li class="o--p">
     <a class="a--plain" href="{{ post.url }}">
       <span class="o--b beta o--mz">{{ post.title }}</span>
-      <span class="meta delta o--b">{{ post.date | pretty }}</span>
+      <span class="meta delta o--b">{{ post.date | date: "%A %-d %B %Y" }}</span>
     </a>
   </li>
 {% endfor %}
