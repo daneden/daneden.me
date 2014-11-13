@@ -242,7 +242,7 @@ module Jekyll
 
         image.write gen_dest_file
 
-        image_optim = ImageOptim.new
+        image_optim = ImageOptim.new(:pngout => false, :svgo => false)
         image_optim.optimize_image!(gen_dest_file)
       end
 
