@@ -20,6 +20,7 @@ require 'fileutils'
 require 'pathname'
 require 'digest/md5'
 require 'mini_magick'
+require 'image_optim'
 
 module Jekyll
 
@@ -240,6 +241,9 @@ module Jekyll
         end
 
         image.write gen_dest_file
+
+        image_optim = ImageOptim.new
+        image_optim.optimize_image!(gen_dest_file)
       end
 
       # Return path relative to the site root for html
