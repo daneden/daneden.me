@@ -9,7 +9,7 @@ There is both a great pleasure and a great ache in the search for well-made prod
 
 The search, for the designer, is a cleansing one. “Better” is, more often than not, the dispelling of complexity until the product is as simple as possible, but no simpler[^1]. Design is more to do with the process of how one might remove features, functions, and flourishes, than it is about the resulting output. Design is a verb.
 
-The simplicity, then, of products such as the MacBook, or the iPhone, or Muji’s humble aluminium pencil (pictured above) is no accident or chance occurance. And the more I think about the products myself or others around me use every day, the more connected I feel to and enamoured with the designers behind them.
+The simplicity, then, of products such as the MacBook, or the iPhone, or Muji’s humble aluminium pencil (pictured above) is no accident or chance occurrence. And the more I think about the products myself or others around me use every day, the more connected I feel to and enamoured with the designers behind them.
 
 I’m writing this in Sublime Text, which was probably designed by Jon Skinner, the app’s developer. The theme I’m using was probably the result of years of separated collaboration and the consequence of many makers minds. The typeface I’m writing with (Input Mono) was designed by David Jonathan Ross, who no doubt was influenced by at least a handful of type designers for this typeface alone. Add to that the years of education and the fine minds behind centuries of typographic knowledge and you’ve got a long family tree.
 
