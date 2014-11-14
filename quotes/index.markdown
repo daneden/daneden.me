@@ -8,6 +8,7 @@ These are the things I’ve heard and read that help me work, live, and think. T
 
 * * *
 
+“Profit comes from what is there, usefulness from what is not there.”—<span class="caps">Lao-Tzu</span>
 
 “Ultimately there is no happiness in a world in which things are not as good as they can be.”—<span class="caps">Eric Gill</span>
 
