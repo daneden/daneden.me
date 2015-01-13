@@ -31,9 +31,4 @@ html,
   @media (max-width: 500px) {
     font-size: $base-font-size*.8;
   }
-
-  &.night-mode {
-    background-color: $background-invert;
-    color: $dark-gray-invert;
-  }
 }

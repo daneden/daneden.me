@@ -31,6 +31,17 @@ p:empty {
 .post__header,
 .page__header {
   margin-bottom: $baseline*3;
+
+  &--hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    > * {
+      margin: 0 auto;
+    }
+  }
 }
 
 .post__content,

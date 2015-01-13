@@ -8,10 +8,6 @@
 .site__footer {
   border-top: 1px solid $lighter-gray;
 
-  .night-mode & {
-    border-top-color: $lighter-gray-invert;
-  }
-
   section {
     position: static;
 
@@ -28,10 +24,6 @@
         bottom: 0;
 
         background-color: $lighter-gray;
-
-        .night-mode & {
-          background-color: $lighter-gray-invert;
-        }
       }
 
     }
@@ -42,8 +34,4 @@
   @extend %small;
   @extend %isle--v;
   border-top: 1px solid $lighter-gray;
-
-  .night-mode & {
-    border-top-color: $lighter-gray-invert;
-  }
 }

@@ -1,16 +1,25 @@
 {% include header.html %}
 
-	<main class="wrap site__content page" role="main">
+<main class="wrap site__content page" role="main">
 
-		<article class="grid hentry">
-			<header class="page__header grid__col grid__col--4-of-6 grid__col--centered promo">
-				<h1 class="page__title">{{ page.title | widont }}</h1>
-			</header>
-			<div class=" page__content grid__col grid__col--4-of-6 grid__col--centered">
-				{{ content }}
-			</div>
-		</article>
+{% if page.hero %}
+  <header class="grid page__header page__header--hero promo">
+    <h1 class="page__title grid__col grid__col--4-of-6 grid__col--centered">{{ page.title | widont }}</h1>
+  </header>
+  <article class="grid hentry">
 
-	</main>
+{% else %}
 
-{% include footer.html %}
+  <article class="grid hentry">
+    <header class="page__header grid__col grid__col--4-of-6 grid__col--centered promo">
+      <h1 class="page__title">{{ page.title | widont }}</h1>
+    </header>
+{% endif %}
+    <div class=" page__content grid__col grid__col--4-of-6 grid__col--centered">
+      {{ content }}
+    </div>
+  </article>
+
+</main>
+
+  {% include footer.html %}

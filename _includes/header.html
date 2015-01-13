@@ -40,10 +40,13 @@
 
   <!-- You know, rather than reading the source like a chump, you can see it all on GitHub like a champ: https://github.com/daneden/daneden.me -->
 </head>
-<body>
+<body{% if page.hero %} class="has-hero"{% endif %}>
   <header class="wrap site__header" role="banner">
     <a class="site__title o--b o--p" href="/" title="{{ site.name }} • Home">
       {{ site.name }}
     </a>
     {% include nav.html %}
   </header>
+  {% if page.hero %}
+  {% picture {{ page.hero }} class="page__hero" %}
+  {% endif %}

@@ -92,10 +92,6 @@ a, a:visited {
   font-family: $font-sans;
 
   color: $light-gray;
-
-  .night-mode & {
-    color: $light-gray-invert;
-  }
 }
 
 figcaption {
@@ -117,10 +113,6 @@ hr {
     right: auto;
     bottom: $baseline*2;
     left: auto;
-  }
-
-  .night-mode & {
-    border-bottom-color: $lighter-gray-invert;
   }
 }
 
