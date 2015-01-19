@@ -7,7 +7,7 @@ This page exists to demonstrate the visual styles of the various elements that c
 
 At the time of writing ({{ site.time | pretty }}), body copy and titles are set in Leitura News, and other headings & captions are set in Franklin Gothic.
 
-{% picture "This is a left aligned image and caption, set in Franklin Gothic. The image is of Walt Disney World’s Wedding Pavilion." 2014/05/wedding-pavilion.jpg class="alignleft" %}
+{% picture "This is a left aligned image and caption, set in Franklin Gothic."  2015/01/books-square.jpg class="alignleft" %}
 
 ## Heading Level Two
 
@@ -30,6 +30,6 @@ Third level headings are most often used to denote names rather than sections, s
 
 {% picture "This is an example image caption, set in Franklin Gothic. The image is of a desk in the Herb Lubalin Study Center of Design and Typography." 2013/12/herb-lubalin.jpg class="imgbleed" %}
 
-Images may take one of two forms; aligned (left), or centered (relative to the text column). Captions are encouraged, but not required.
+Images may take one of two forms; aligned (left or right), centered, or enlarged, as seen above. Captions are encouraged, but not required.
 
 Images are currently used only sparingly, but must flow with the content. Captions should be readable, but not distract from the main article. Like images themselves, they are supplements.

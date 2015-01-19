@@ -36,3 +36,7 @@ picture img {
     margin-left: -25%;
   }
 }
+
+figcaption :last-child {
+  margin-bottom: 0;
+}
