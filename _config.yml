@@ -7,6 +7,8 @@ gems:
 
 markdown: kramdown
 
+color: "#cb5c42"
+
 highlighter: true
 
 permalink: pretty
