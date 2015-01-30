@@ -3,7 +3,7 @@ layout: page
 title: About
 ---
 
-{% picture 2014/11/portrait.jpg %}
+{% picture "Photo courtesy of [Julia Robbs](http://juliarobbs.com)" 2015/01/in-the-office.jpg class="imgbleed" %}
 
 My name is Daniel Eden, and I’m a designer with a penchant for the web, interaction design, and typography. I like [scratching my own itch](/portfolio) and [writing](/blog) about design, courage, and lack thereof.
 
