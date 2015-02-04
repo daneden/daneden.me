@@ -7,7 +7,7 @@ gems:
 
 markdown: kramdown
 
-color: "#cb5c42"
+color: "#a881a2"
 
 highlighter: true
 
@@ -19,7 +19,7 @@ exclude: ["node_modules", "package.json", "Gruntfile.js"]
 assets:
   js_compressor: uglifier
   css_compressor: sass
-  cache: true
+  cache: false
   sources:
     - _assets/scss
     - _assets/js
