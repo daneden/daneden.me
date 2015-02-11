@@ -59,6 +59,14 @@ p:empty {
       }
     }
   }
+
+  .invert &, .invert-header & {
+    color: #fff;
+
+    .post__meta {
+      color: rgba(255,255,255,.5);
+    }
+  }
 }
 
 .home__avatar {

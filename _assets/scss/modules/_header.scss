@@ -35,6 +35,10 @@
     left: $baseline;
     right: $baseline;
   }
+
+  .invert &, .invert-header & {
+    color: #fff;
+  }
 }
 
 .site__title {
@@ -55,6 +59,10 @@
 
   .has-hero & {
     border-top-color: rgba(0,0,0,.2);
+
+    .invert &, .invert-header & {
+      border-top-color: rgba(255,255,255,.2);
+    }
   }
 
   ul {
@@ -77,13 +85,26 @@
     color: $light-gray;
     border-top: 1px solid transparent;
 
+    .invert &, .invert-header & {
+      color: rgba(255,255,255,.5);
+    }
+
     &.active {
       color: $highlight;
       border-top-color: $highlight;
+
+      .invert &, .invert-header & {
+        color: #fff;
+        border-top-color: #fff;
+      }
     }
 
     &:hover {
       color: $highlight;
+
+      .invert &, .invert-header & {
+        color: #fff;
+      }
     }
   }
 }
