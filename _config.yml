@@ -19,7 +19,7 @@ exclude: ["node_modules", "package.json", "Gruntfile.js"]
 assets:
   js_compressor: uglifier
   css_compressor: sass
-  cache: false
+  cache: true
   sources:
     - _assets/scss
     - _assets/js
