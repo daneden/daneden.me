@@ -59,7 +59,10 @@ p:empty {
       }
     }
   }
+}
 
+.post__header,
+.page__header {
   .invert &, .invert-header & {
     color: #fff;
 
