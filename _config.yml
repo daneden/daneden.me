@@ -14,7 +14,7 @@ highlighter: true
 permalink: pretty
 
 include: [".htaccess"]
-exclude: ["node_modules", "package.json", "Gruntfile.js"]
+exclude: ["vendor", "node_modules", "package.json", "Gruntfile.js"]
 
 assets:
   js_compressor: uglifier
