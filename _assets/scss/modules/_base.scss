@@ -19,9 +19,17 @@ html,
   font-feature-settings: "liga" 1, "onum" 1, "kern" 1;
   font-kerning: normal;
 
-  //background-color: $background;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
   background-color: #fff;
   color: $dark-gray;
+
+  // Reset font-smoothing on HiDPI screens
+  @media (min-device-pixel-ratio: 2) {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+  }
 
   @media (max-width: 860px) {
     font-size: $base-font-size*.9;
