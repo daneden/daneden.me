@@ -10,6 +10,7 @@ _asset_bundler_cache/
 .jekyll-assets-cache/
 .bundle/
 Gemfile.lock
+.ruby-version
 
 # Ignore node dependencies. Ensure you run `node install`!
 node_modules/
