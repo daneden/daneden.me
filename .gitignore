@@ -26,3 +26,6 @@ static/fonts/
 
 # Ignore CSS. This could trip me up some day.
 _assets/css/
+
+# Ignore Bundle-installed gems
+vendor/
