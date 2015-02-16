@@ -1,5 +1,6 @@
 ---
 layout: post
+title: "The Landscape of Web Typography"
 hero: 2015/02/herb-lubalin.jpg
 class: invert-header
 ---
