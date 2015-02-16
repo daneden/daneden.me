@@ -168,7 +168,7 @@ module Jekyll
         # Note: we can't indent html output because markdown parsers will turn 4 spaces into code blocks
         # Note: Added backslash+space escapes to bypass markdown parsing of indented code below -WD
         picture_tag = "<figure #{html_attr_string}>"\
-        "#{markdown_escape * 2}<img src=\"#{instance['source_default'][:generated_src]}\" srcset=\"#{source_tags}\" sizes=\"100vw\">"
+        "#{markdown_escape * 2}<img src=\"#{instance['source_default'][:generated_src]}\" srcset=\"#{source_tags}\" sizes=\"(min-width: 36em) 33.3vw, 100vw\">"
         caption != nil ? picture_tag += "<figcaption>#{converter.convert(caption)}</figcaption>" : nil
         picture_tag += "</figure>\n"
 
@@ -235,7 +235,7 @@ module Jekyll
           i.resize "#{gen_width}x#{gen_height}^"
           i.gravity "center"
           i.crop "#{gen_width}x#{gen_height}+0+0"
-          i.quality "75"
+          i.quality "100"
           i.depth "8"
           i.interlace "plane"
         end

@@ -31,12 +31,9 @@ picture:
   markup: "picture"
   presets:
     default:
-      ppi: [1, 2]
+      ppi: [1]
       source_default:
         width: "320"
-      source_320:
-        width: "320"
-        media: "(min-width: 320px)"
       source_600:
         width: "620"
         media: "(min-width: 620px)"
