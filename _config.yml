@@ -33,10 +33,10 @@ picture:
     default:
       ppi: [1]
       source_default:
-        width: "320"
+        width: "480"
       source_600:
-        width: "620"
+        width: "630"
         media: "(min-width: 620px)"
       source_960:
-        width: "900"
+        width: "1350"
         media: "(min-width: 900px)"
