@@ -9,7 +9,7 @@ This was an exciting time for me. I was attaining knowledge about digital design
 
 Things have changed a lot since then. I haven’t given any more presentations, but I have been doing a lot more observing. Design in the digital space has grown up, and during that maturation, it’s developed an attitude. A rotten one. Digital design has, unbeknownst to the majority of us, turned into a repulsive facade and bewilderingly powerful buzzword.
 
-{% picture "The [Eames molded plastic armchair](http://www.vitra.com/en-it/product/eames-plastic-side-chair#) is the result of years of refinement, and will last for many years yet as both a functional artifact and a timeless design." 2014/10/eames-plastic-armchair.png class="alignleft" %}
+{% image alignleft 2014/10/eames-plastic-armchair.png "The [Eames molded plastic armchair](http://www.vitra.com/en-it/product/eames-plastic-side-chair#) is the result of years of refinement, and will last for many years yet as both a functional artifact and a timeless design." %}
 
 In the digital realm, “design” seems to have become a catch-all term for a lot of things. That’s not an inherent problem, but the consequence of the overuse and underthinking of design has led to people—generally those lacking understanding of design—to accept it as a mythical, inaccessible process through which decisions are made, which, in any other setting, would be inappropriate.
 

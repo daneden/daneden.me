@@ -12,15 +12,11 @@ _asset_bundler_cache/
 Gemfile.lock
 .ruby-version
 
-# Ignore node dependencies. Ensure you run `node install`!
-node_modules/
-
 # Ignore junk files
 .DS_Store
 
 # Environment-dependent files
-_plugins/environment_variables.rb
-bower_components/
+_config_local.yml
 
 # Ignore fonts. Easier to just upload directly to server.
 static/fonts/

@@ -6,39 +6,9 @@
 //
 
 
-.page__hero {
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
-  position: absolute;
-  margin-top: -$baseline;
-  margin-left: -$baseline;
-
-  img {
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   height: 100%;
-   width: 100%;
-  
-   object-fit: cover;
-   transform: translateX(-50%) translateY(-50%);
-  }
-}
-
 .site__header {
   z-index: 1000;
   margin-bottom: $baseline*2;
-
-  .has-hero & {
-    position: absolute;
-    left: $baseline;
-    right: $baseline;
-  }
-
-  .invert &, .invert-header & {
-    color: #fff;
-  }
 }
 
 .site__title {
@@ -56,14 +26,6 @@
 
 .site__nav {
   border-top: 1px solid $lighter-gray;
-
-  .has-hero & {
-    border-top-color: rgba(0,0,0,.2);
-
-    .invert &, .invert-header & {
-      border-top-color: rgba(255,255,255,.2);
-    }
-  }
 
   ul {
     overflow: visible;
@@ -85,26 +47,13 @@
     color: $light-gray;
     border-top: 1px solid transparent;
 
-    .invert &, .invert-header & {
-      color: rgba(255,255,255,.5);
-    }
-
     &.active {
       color: $highlight;
       border-top-color: $highlight;
-
-      .invert &, .invert-header & {
-        color: #fff;
-        border-top-color: #fff;
-      }
     }
 
     &:hover {
       color: $highlight;
-
-      .invert &, .invert-header & {
-        color: #fff;
-      }
     }
   }
 }

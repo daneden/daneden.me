@@ -7,7 +7,7 @@ This page exists to demonstrate the visual styles of the various elements that c
 
 At the time of writing ({{ site.time | pretty }}), body copy and titles are set in Leitura News, and other headings & captions are set in Franklin Gothic.
 
-{% picture "This is a left aligned image and caption, set in Franklin Gothic."  2015/01/books-square.jpg class="alignleft" %}
+{% image alignleft 2015/01/books-square.jpg "This is a left aligned image and caption, set in Franklin Gothic." %}
 
 ## Heading Level Two
 
@@ -28,7 +28,7 @@ Third level headings are most often used to denote names rather than sections, s
 	1. This is a second-level numbered list item
 3. Numbered lists, like bulleted lists, are not used particularly often on this site.
 
-{% picture "This is an example image caption, set in Franklin Gothic." 2015/02/chairs.jpg class="imgbleed" %}
+{% image imgbleed 2015/02/chairs.jpg "This is an example image caption, set in Franklin Gothic." %}
 
 Images may take one of three forms; aligned (left or right), centered, or enlarged, as seen above. Captions are encouraged, but not required.
 

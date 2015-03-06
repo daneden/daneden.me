@@ -15,10 +15,6 @@
 
   {% stylesheet style %}
 
-  {% if page.art-direction %}
-    {{ page.art-direction | stylesheet }}
-  {% endif %}
-
   <!-- Touch icon -->
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
@@ -32,21 +28,12 @@
   <!-- RSS, brotha -->
  <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml" />
 
- <!-- Heap analytics -->
- <script type="text/javascript">
- window.heap=window.heap||[],heap.load=function(t,e){window.heap.appid=t,window.heap.config=e;var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https:":"http:")+"//cdn.heapanalytics.com/js/heap.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n);for(var o=function(t){return function(){heap.push([t].concat(Array.prototype.slice.call(arguments,0)))}},p=["clearEventProperties","identify","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=o(p[c])};
- heap.load("1352449550");
- </script>
-
   <!-- You know, rather than reading the source like a chump, you can see it all on GitHub like a champ: https://github.com/daneden/daneden.me -->
 </head>
-<body{% if page.hero %} class="has-hero"{% endif %}>
+<body>
   <header class="wrap site__header" role="banner">
     <a class="site__title o--b o--p" href="/" title="{{ site.name }} • Home">
       {{ site.name }}
     </a>
     {% include nav.html %}
   </header>
-  {% if page.hero %}
-  {% picture {{ page.hero }} class="page__hero" %}
-  {% endif %}

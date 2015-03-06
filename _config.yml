@@ -1,6 +1,6 @@
 name: "Daniel T. Eden, Designer"
 description: Designer
-url: https://daneden.me
+url: http://daneden.me
 
 gems:
 - jekyll-sitemap
@@ -24,19 +24,3 @@ assets:
     - _assets/scss
     - _assets/js
   cachebust: hard
-
-picture:
-  source: _uploads
-  output: uploads
-  markup: "picture"
-  presets:
-    default:
-      ppi: [1]
-      source_default:
-        width: "480"
-      source_600:
-        width: "630"
-        media: "(min-width: 620px)"
-      source_960:
-        width: "1350"
-        media: "(min-width: 900px)"

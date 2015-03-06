@@ -1,4 +1,3 @@
-{% if site.env == 'production' %}
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new
@@ -11,6 +10,26 @@ ga('require', 'displayfeatures');
 ga('send', 'pageview');
 
 </script>
-{% endif %}
 
-{% javascript app %}
+<!-- async load resrc -->
+<script>
+(function () {
+  var d = false;
+  var r = document.createElement("script");
+  r.src = "//use.resrc.it/0.9";
+  r.type = "text/javascript";
+  r.async = "true";
+  r.onload = r.onreadystatechange = function () {
+    var rs = this.readyState;
+    if (d || rs && rs != "complete" && rs != "loaded") return;
+    d = true;
+    try {
+      resrc.ready(function () {
+        resrc.run();
+      });
+    } catch (e) {}
+  };
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(r, s);
+})();
+</script>

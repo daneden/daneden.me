@@ -7,7 +7,7 @@ Around three years ago, I paid Amazon the grand sum of £13.00 for a little red 
 
 At that time, my library was somewhat lacking in bulk. The Vignelli Canon was amongst the first dozen books that graced my shelves and comprised my technical design know-how. It was certainly one of my most-read books. Whenever I’d hit a creative block, it’d be the little red book that came off the shelf to get the juices flowing again.
 
-{% picture 2014/05/vignelli-canon.jpg class="alignleft" %}
+{% image alignleft 2014/05/vignelli-canon.jpg %}
 
 I was well aware of Massimo Vignelli’s work before I bought the book. You’d have to live in a cave not to be; he developed the previous American Airlines identity and design system, the US National Park’s “Unigrid” system for all print collateral, the New York City Transit design system, Bloomingdale’s famous “Little Brown Bags,” and countless other iconic designs. His work has touched the lives of millions of people, and the vast majority of those people will never know his name.
 
@@ -15,7 +15,7 @@ But that is the very beauty of the design that Vignelli strived for. His is the 
 
 Some years later, during a trip to New York, I visited the Herb Lubalin Study Center of Design and Typography. Contained therein is an incomparably vast collection of print, type, and graphic design from renowned designers such as Josef Müller-Brockmann, Eduard Hoffmann, Antonio DiSpigna, John Pistilli, and, of course, Herb Lubalin himself.
 
-{% picture 2014/05/nyctagsm.jpg class="imgbleed" %}
+{% image imgbleed 2014/05/nyctagsm.jpg %}
 
 Also found in the collection is one of the original, printed copies of the New York City Transit Authority Graphics Standards Manual. The pages of this compendium were bafflingly precise and went into painstaking detail about the design guidelines set out by Vignelli and his cohorts. As the pages of the manual were passed between the designers in the room, I realised that there was an entirely separate layer to Vignelli’s work I hadn’t seen before. Beyond clarity, understanding, and beauty, there can be found consistency, uniformity, specificity, precision, and reliability.
 
