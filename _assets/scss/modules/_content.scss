@@ -50,17 +50,6 @@ p:empty {
   }
 }
 
-.post__header,
-.page__header {
-  .invert &, .invert-header & {
-    color: #fff;
-
-    .post__meta {
-      color: rgba(255,255,255,.5);
-    }
-  }
-}
-
 .home__avatar {
   shape-outside: url("/uploads/2014/09/sketch-portrait-large.png");
   shape-margin: 20px;
