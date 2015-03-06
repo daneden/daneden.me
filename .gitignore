@@ -1,6 +1,3 @@
-# Ignore grunt-generated files
-uploads/
-
 # Ignore Jekyll generated files
 _site
 
