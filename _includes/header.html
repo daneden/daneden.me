@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html{% if page.class %} class="{{ page.class }}"{% endif %}>
-<head>
+<html lang=en{% if page.class %} class="{{ page.class }}"{% endif %}>
   <meta charset="utf-8">
   <title>{{ page.title }} | {{ site.name }}</title>
   <meta name="viewport" content="initial-scale=1" />
@@ -26,11 +25,11 @@
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
   <!-- RSS, brotha -->
- <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml" />
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml" />
 
   <!-- You know, rather than reading the source like a chump, you can see it all on GitHub like a champ: https://github.com/daneden/daneden.me -->
-</head>
-<body>
+
+
   <header class="wrap site__header" role="banner">
     <a class="site__title o--b o--p" href="/" title="{{ site.name }} • Home">
       {{ site.name }}
