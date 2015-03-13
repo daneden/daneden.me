@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang=en{% if page.class %} class="{{ page.class }}"{% endif %}>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   <title>{{ page.title }} | {{ site.name }}</title>
   <meta name="viewport" content="initial-scale=1" />
   <meta name="p:domain_verify" content="aa712630840b421410cce3b56d2dc764" />
@@ -10,12 +10,9 @@
   <meta property="og:url" content="{{ page.url }}"/>
   <meta property="og:description" content="{{ page.excerpt | strip_html }}"/>
 
-  <meta name="theme-color" content="{{ site.color }}">
+  <meta name="theme-color" content="{{ site.color }}" />
 
   {% stylesheet style %}
-
-  <!-- Touch icon -->
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
   <!-- Favicon -->
   <link rel="shortcut icon" href="https://secure.gravatar.com/avatar/ce22c94e6c291345223e0118bfdd8714?s=64" />
@@ -23,9 +20,6 @@
   <!-- Type, y'all -->
   <script type="text/javascript" src="//use.typekit.net/dkj5obg.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-
-  <!-- RSS, brotha -->
-  <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml" />
 
   <!-- You know, rather than reading the source like a chump, you can see it all on GitHub like a champ: https://github.com/daneden/daneden.me -->
 
