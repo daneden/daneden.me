@@ -28,6 +28,10 @@ h2,
   * + & {
     padding-top: $baseline;
   }
+
+  .wf-loading & {
+    font-family: Geneva, Verdana, sans-serif;
+  }
 }
 
 h3,
@@ -37,6 +41,10 @@ h3,
   font-family: $font-sans;
   font-size: 1rem;
   font-weight: 700;
+
+  .wf-loading & {
+    font-family: Geneva, Verdana, sans-serif;
+  }
 }
 
 h4,
@@ -45,6 +53,10 @@ h4,
 
   font-family: $font-sans;
   font-weight: 400;
+
+  .wf-loading & {
+    font-family: Geneva, Verdana, sans-serif;
+  }
 }
 
 %small {
@@ -64,6 +76,10 @@ small,
 
 .sans {
   font-family: $font-sans;
+
+  .wf-loading & {
+    font-family: Geneva, Verdana, sans-serif;
+  }
 }
 
 
@@ -96,6 +112,10 @@ a, a:visited {
   font-family: $font-sans;
 
   color: $light-gray;
+
+  .wf-loading & {
+    font-family: Geneva, Verdana, sans-serif;
+  }
 }
 
 figcaption {
