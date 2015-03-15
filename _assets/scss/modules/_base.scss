@@ -22,7 +22,7 @@ html,
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   
-  background-color: #fff;
+  background-color: $background;
   color: $dark-gray;
 
   // Reset font-smoothing on HiDPI screens
