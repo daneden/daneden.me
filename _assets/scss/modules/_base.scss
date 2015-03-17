@@ -22,7 +22,7 @@ html,
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   
-  background-color: #fff;
+  background-color: $background;
   color: $dark-gray;
 
   // Reset font-smoothing on HiDPI screens
@@ -37,9 +37,5 @@ html,
 
   @media (max-width: 500px) {
     font-size: $base-font-size*.8;
-  }
-
-  .wf-loading & {
-    font-family: Times New Roman, Georgia, serif;
   }
 }
