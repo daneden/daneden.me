@@ -47,13 +47,14 @@
     color: $light-gray;
     border-top: 1px solid transparent;
 
-    &.active {
+    &.active, &.active:hover {
       color: $highlight;
       border-top-color: $highlight;
     }
 
     &:hover {
-      color: $highlight;
+      color: $dark-gray;
+      border-top-color: currentColor;
     }
   }
 }
