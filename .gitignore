@@ -15,9 +15,6 @@ Gemfile.lock
 # Environment-dependent files
 _config_local.yml
 
-# Ignore fonts. Easier to just upload directly to server.
-static/fonts/
-
 # Ignore CSS. This could trip me up some day.
 _assets/css/
 
