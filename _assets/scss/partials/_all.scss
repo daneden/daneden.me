@@ -6,6 +6,9 @@
 // and helpers
 //
 
+// webfonts partial has to come first for the fonts to work
+@import 'webfonts';
+
 @import 'variables';
 @import 'mixins';
 @import 'reset';

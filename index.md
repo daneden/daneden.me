@@ -1,9 +1,10 @@
 ---
 layout: page
 title: About
+displayTitle: Daniel T. Eden, Designer
 ---
 
-{% image imgbleed 2015/01/in-the-office.jpg "Photo courtesy of [Julia Robbs](http://juliarobbs.com)" %}
+{% image imgbleed 2015/03/couch.jpg %}
 
 My name is Daniel Eden, and I’m a designer with a penchant for the web, interaction design, and typography. I like [scratching my own itch](/portfolio) and [writing](/blog) about design, courage, and lack thereof.
 
