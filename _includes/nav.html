@@ -1,7 +1,10 @@
 <nav class="site__nav" role="navigation">
   <ul class="nav delta">
     {% assign pages = site.pages | sort:"url" %}
-    {% for p in pages order:ascending %}{% if p.in-nav == true %}<li><a {% if p.url == page.url or (page.layout == "post" and p.url == "/blog/" ) %}class="active"{% endif %} href="{{ p.url }}">{{ p.title }}</a></li>
-    {% endif %}{% endfor %}
+    {% for p in pages %}
+      {% if p.in-nav == true %}
+        <li><a {% if p.url == page.url %}class="active"{% endif %} href="{{ p.url }}">{{ p.title }}</a></li>
+      {% endif %}
+    {% endfor %}
   </ul>
 </nav>
