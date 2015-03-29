@@ -4,6 +4,8 @@ date: 2012-07-05 20:00:55+00:00
 slug: words-and-pictures
 layout: post
 title: Words and Pictures
+categories:
+- Design
 hidden: true
 ---
 
