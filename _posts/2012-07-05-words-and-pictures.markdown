@@ -1,13 +1,8 @@
 ---
 author: dte
-comments: true
 date: 2012-07-05 20:00:55+00:00
 layout: post
-slug: words-and-pictures
 title: Words and Pictures
-wordpress_id: 1450
-categories:
-- Design
 hidden: true
 ---
 
@@ -17,7 +12,7 @@ hidden: true
 
 > Time never stops: the clock shows us the hours, calendars show us the days, and time goes on and on and eats up everything. It makes even iron fall to dust and it draws the lines on old people's faces. After a hundred years, in a second, one man dies and another is born.
 
-__—Bruno Munari, “Design as Art”__
+—Bruno Munari, “Design as Art”
 
 
 It's not very often I read something that knocks the wind right out of me. This part in Bruno Munari's book hits me every time I read it. What makes that feeling even more worrying is the fact that this particular passage is intended for a children's book. A few paragraphs intended to make a child think for nothing more than a few seconds has managed to knock the wind out of me, stop me in my tracks and force a mighty sigh from my lips – wow.
