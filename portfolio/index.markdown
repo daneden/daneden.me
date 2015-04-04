@@ -10,6 +10,9 @@ I’m currently working at [Dropbox](http://dropbox.com) as a Designer. My work 
 
 * * *
 
+## Digital Ruin
+[Digital Ruin](http://digitalruin.tumblr.com/) is—for lack of a more fitting description—an art project dedicated to giving form to both real and fictional digital exchanges, with an emphasis on difficult interactions. It’s bleak, and hard to describe. [Visit the site](http://digitalruin.tumblr.com/).
+
 ## Ragged Write
 [Ragged Write](http://raggedwrite.net) is a website about typography; a place to share news, reviews, and personal commentary on the world of typography. Created out of a desire to write about type, as well as maintain a collection of typographic resources for personal reference. [Visit the site](http://raggedwrite.net).
 
