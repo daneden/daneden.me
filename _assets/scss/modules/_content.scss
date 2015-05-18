@@ -22,37 +22,6 @@ p:empty {
 
 .hentry {
   margin-bottom: $baseline*4;
-
-  @media (max-width: 860px) {
-    margin-left: 0;
-  }
-}
-
-.post__header,
-.page__header {
-  margin-bottom: $baseline*3;
-}
-
-.post__content,
-.page__content,
-.post__header,
-.page__header {
-
-  &.grid__col {
-    @media (max-width: 860px) and (min-width: 600px) {
-      display: block;
-      padding-left: 0;
-      margin: {
-        left: auto;
-        right: auto;
-      }
-    }
-  }
-}
-
-.home__avatar {
-  shape-outside: url("/uploads/2014/09/sketch-portrait-large.png");
-  shape-margin: 20px;
 }
 
 .footnote, .footnote:visited {

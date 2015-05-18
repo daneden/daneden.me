@@ -25,8 +25,6 @@
 }
 
 .site__nav {
-  border-top: 1px solid $lighter-gray;
-
   ul {
     overflow: visible;
   }
@@ -35,26 +33,22 @@
     margin-top: -1px;
 
     + li {
-      margin-left: 1rem;
+      margin-left: $baseline;
     }
   }
 
   a {
-    @extend %spit--v;
-
     text-decoration: none;
 
     color: $light-gray;
-    border-top: 1px solid transparent;
 
     &.active, &.active:hover {
       color: $highlight;
-      border-top-color: $highlight;
+      font-weight: 700;
     }
 
     &:hover {
       color: $dark-gray;
-      border-top-color: currentColor;
     }
   }
 }

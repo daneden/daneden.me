@@ -8,7 +8,7 @@
 
 html,
 :root {
-  font-family: $font-serif;
+  font-family: "NeueHaasUnica";
   font-size: $base-font-size;
   line-height: $baseline-unitless;
   -moz-text-size-adjust: none;
@@ -21,8 +21,7 @@ html,
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
-  background-color: $background;
+
   color: $dark-gray;
 
   // Reset font-smoothing on HiDPI screens

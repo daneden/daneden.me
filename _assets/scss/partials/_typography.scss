@@ -8,79 +8,44 @@
 
 h1,
 .alpha {
-  font-family: "LeituraDisplay-Roman", $font-serif;
-  font-weight: 400;
-  font-size: 3rem;
-  font-feature-settings: "onum" 0;
-  line-height: 1.25;
-  letter-spacing: -.01em;
-
-  @media (max-width: 500px) {
-    font-size: 2rem;
-  }
-}
-
-h2,
-.beta {
-  font-family: $font-sans;
-  font-size: 1.5rem;
-  font-weight: 700;
-  line-height: 1.25;
-
-  * + & {
-    padding-top: $baseline;
-  }
-}
-
-h3,
-.gamma {
-  margin-bottom: $baseline/2;
-
-  font-family: $font-sans;
   font-size: 1rem;
   font-weight: 700;
 }
 
-h4,
-.delta {
-  margin-bottom: $baseline/2;
+h2,
+.beta {
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: 700;
+}
 
-  font-family: $font-sans;
+h3,
+.gamma {
+  font-size: 1rem;
   font-weight: 400;
 }
 
+h4,
+.delta {
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: 400;
+}
+
+small, .small,
 %small {
   font-size: .8em;
 }
 
-small,
-.small {
-  @extend %small;
-}
-
-.mega {
-  font-size: 2.5rem;
-  line-height: $baseline-unitless;
-  font-weight: 200;
-}
-
-.sans {
-  font-family: $font-sans;
-}
-
-
+.meta,
 %meta {
   color: $light-gray;
 }
 
-.meta {
-  @extend %meta;
-}
-
-
+a, a:visited,
 %link {
   text-decoration: underline;
-  
+
   color: inherit;
   cursor: pointer;
 
@@ -89,26 +54,14 @@ small,
   }
 }
 
-a, a:visited {
-  @extend %link;
-}
-
+figcaption,
 %figcaption {
   @extend %small;
-  font-family: $font-sans;
 
   color: $light-gray;
 }
 
-figcaption {
-  @extend %figcaption;
-}
-
-
-hr {
-  @extend %hr;
-}
-
+hr,
 %hr {
   border: 0;
   border-bottom: 2px solid $lighter-gray;
@@ -122,16 +75,14 @@ hr {
   }
 }
 
-
 mark {
   background-color: transparent;
   color: $highlight;
 }
 
 blockquote {
-  padding: 0 $baseline;
+  padding-left: $baseline;
 
-  color: $light-gray;
   border-left: 2px solid $highlight;
 }
 
