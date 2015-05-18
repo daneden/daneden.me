@@ -3,7 +3,7 @@ layout: page
 title: About
 ---
 
-{% image imgbleed 2014/11/portrait.jpg %}
+{% image imgbleed 2015/05/portrait.jpg %}
 
 My name is Daniel Eden, and I’m a designer with a penchant for the web, interaction design, and typography. I like [scratching my own itch](/portfolio) and [writing](/blog) about design, courage, and lack thereof.
 
