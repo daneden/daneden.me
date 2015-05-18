@@ -4,6 +4,7 @@ url: http://daneden.me
 
 gems:
 - jekyll-sitemap
+- octopress-autoprefixer
 
 markdown: kramdown
 

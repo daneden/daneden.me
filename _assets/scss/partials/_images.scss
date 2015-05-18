@@ -13,7 +13,7 @@ picture img {
 }
 
 .alignleft {
-  @media (min-width: 600px) {
+  @media (min-width: $DE-breakpoint-medium) {
     float: left;
     width: calc(50% - #{$baseline/2});
     margin-left: calc(-50% - #{$baseline/2});
@@ -22,7 +22,7 @@ picture img {
 }
 
 .alignright {
-  @media (min-width: 600px) {
+  @media (min-width: $DE-breakpoint-medium) {
     float: right;
     width: calc(50% - #{$baseline/2});
     margin-right: calc(-50% - #{$baseline/2});
@@ -31,7 +31,7 @@ picture img {
 }
 
 .imgbleed {
-  @media (min-width: 600px) {
+  @media (min-width: $DE-breakpoint-medium) {
     width: calc(150% + #{$baseline/2});
   }
 }
