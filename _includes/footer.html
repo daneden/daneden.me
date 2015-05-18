@@ -1,20 +1,11 @@
-  <footer class="wrap site__footer" role="contentinfo">
-    <div class="grid">
-      <section class="small isle--v grid__col grid__col--3-of-6 p-author vcard">
-        <h4>About</h4>
-        <p class="o--mz">My name is <span class="fn">Daniel Eden</span>. I&rsquo;m a designer from Manchester, <span class="caps">UK</span> currently living and working in San&nbsp;Francisco.</p>
-      </section>
-
-      <section class="small isle--v grid__col grid__col--3-of-6">
-        <h4>Colophon</h4>
-        <p class="o--mz">Designed, developed, and maintained by <a href="/about">Daniel Eden</a>. Hosted by <a title="RamNode" href="https://clientarea.ramnode.com/aff.php?aff=088">RamNode</a>. Set in Leitura News and Franklin Gothic <span class="caps">URW</span>, delivered by Typekit. Check the&nbsp;<a href="/styleguide/">style guide</a>. View <a href="https://github.com/daneden/daneden.me">the&nbsp;source</a>.</p>
-      </section>
+<footer class="wrap site__footer island--v" role="contentinfo">
+  <div class="grid">
+    <div class="grid__col grid__col--4-of-8 grid__col--push-2-of-8">
+      <p class="meta">&copy; {{ site.time | date: '%Y' }} Daniel Eden, unless otherwise noted.</p>
     </div>
-  </footer>
-  <div class="footer__copyright wrap small isle--v">
-    <p>&copy; {{ site.time | date: '%Y' }} Daniel Eden, unless otherwise noted.</p>
   </div>
+</footer>
 
-  {% include scripts.html %}
+{% include scripts.html %}
 
 </html>

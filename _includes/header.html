@@ -20,16 +20,18 @@
   <!-- Favicon -->
   <link rel="shortcut icon" href="https://secure.gravatar.com/avatar/ce22c94e6c291345223e0118bfdd8714?s=64" />
 
-  <!-- Type, y'all -->
-  <script type="text/javascript" src="//use.typekit.net/dkj5obg.js"></script>
-  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-
   <!-- You know, rather than reading the source like a chump, you can see it all on GitHub like a champ: https://github.com/daneden/daneden.me -->
 
 
   <header class="wrap site__header" role="banner">
-    <a class="site__title o--b o--p" href="/" title="{{ site.name }} • Home">
-      {{ site.name }}
-    </a>
-    {% include nav.html %}
+    <div class="grid">
+      <div class="grid__col grid__col--2-of-8">
+        <a class="site__title o--b o--p" href="/" title="{{ site.name }} • Home">
+          {{ site.name }}
+        </a>
+      </div>
+      <div class="grid__col grid__col--6-of-8">
+        {% include nav.html %}
+      </div>
+    </div>
   </header>

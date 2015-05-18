@@ -2,24 +2,12 @@
 
 <main class="wrap site__content page" role="main">
 
-{% if page.hero %}
-<header class="grid page__header page__header--hero promo">
-  <div class="grid__col grid__col--4-of-6 grid__col--centered">
-    <h1 class="page__title">{{ page.title | widont }}</h1>
-    <p class="delta post__meta meta">{{ page.date | date: "%A %-d %B %Y" }}</p>
-  </div>
-</header>
 <article class="grid hentry">
-
-{% else %}
-
-<article class="grid hentry">
-  <header class="page__header grid__col grid__col--4-of-6 grid__col--centered promo">
-    <h1 class="page__title">{{ page.title | widont }}</h1>
-    <p class="delta post__meta meta">{{ page.date | date: "%A %-d %B %Y" }}</p>
+  <header class="page__header grid__col grid__col--2-of-8">
+    <h1 class="page__title o--mz">{{ page.title | widont }}</h1>
+    <p class="post__meta meta">{{ page.date | date: "%A %-d %B %Y" }}</p>
   </header>
-{% endif %}
-  <div class=" page__content grid__col grid__col--4-of-6 grid__col--centered">
+  <div class=" page__content grid__col grid__col--4-of-8">
     {{ content }}
   </div>
 </article>

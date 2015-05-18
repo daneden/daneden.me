@@ -7,27 +7,21 @@
 
 
 // Group: Unit Sizes
-$base-font-size: (18/16)*100%;
-$baseline-unitless: 28/(16*($base-font-size/100%));
+$base-font-size: (16/16)*100%;
+$baseline-unitless: 24/(16*($base-font-size/100%));
 $baseline: $baseline-unitless * 1rem;
-
-
-// Group: Fonts
-$font-name-a: "franklin-gothic-urw";
-$font-name-b: "leitura-news";
-
-$font-serif: $font-name-b, Georgia, serif;
-
-$font-sans: $font-name-a, Geneva, Verdana, sans-serif;
 
 $font-code: 'Source Code Pro', Monaco, monospace;
 
 
 // Group: Colors
-$background: #fbf7f0;
 $highlight: <%= site.config['color'] %>;
 
 $dark-gray: #3d464d;
 $light-gray: rgba($dark-gray, .6);
 $lighter-gray: rgba($dark-gray, .1);
 
+
+// Group: Grid config
+$DE-col-groups: 8;
+$DE-gutter-width: $baseline;

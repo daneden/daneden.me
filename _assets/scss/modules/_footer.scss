@@ -7,31 +7,4 @@
 
 .site__footer {
   border-top: 1px solid $lighter-gray;
-
-  section {
-    position: static;
-
-    + section:before {
-      content: none;
-      content: normal;
-
-      @media screen and (min-width: 700px) {
-        content: '';
-        position: absolute;
-        width: 1px;
-        margin-left: -$gutter-width/2;
-        top: 0;
-        bottom: 0;
-
-        background-color: $lighter-gray;
-      }
-
-    }
-  }
-}
-
-.footer__copyright {
-  @extend %small;
-  @extend %isle--v;
-  border-top: 1px solid $lighter-gray;
 }

@@ -9,7 +9,7 @@
 @import 'grid';
 
 .wrap {
-  max-width: 50rem;
+  max-width: ($baseline * 39);
   margin: 0 auto;
 }
 

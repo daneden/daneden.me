@@ -8,8 +8,8 @@ in-nav: true
 	{% if post.hidden != true %}
   <li class="o--p">
     <a class="a--plain" href="{{ post.url }}">
-      <span class="o--b beta o--z">{{ post.title }}</span>
-      <span class="meta delta o--b">{{ post.date | date: "%A %-d %B %Y" }}</span>
+      <span class="o--b o--z">{{ post.title }}</span>
+      <span class="meta o--b">{{ post.date | date: "%A %-d %B %Y" }}</span>
     </a>
   </li>
   {% endif %}
