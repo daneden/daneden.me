@@ -5,9 +5,9 @@ title: Style Guide
 
 This page exists to demonstrate the visual styles of the various elements that comprise the design of this site. This is not only for my own benefit, as the designer and maintainer, but also to satisfy the curiosity of those interested in such things (like myself). To learn about my writing style, check the [writing style guide](/styleguide/writing).
 
-At the time of writing ({{ site.time | pretty }}), body copy and titles are set in Leitura News, and other headings & captions are set in Franklin Gothic.
+At the time of writing ({{ site.time | pretty }}), this website is set in Neue Haas Unica.
 
-{% image alignleft 2015/01/books-square.jpg "This is a left aligned image and caption, set in Franklin Gothic." %}
+{% image alignleft 2015/05/coffee.jpg "This is a left aligned image and caption." %}
 
 ## Heading Level Two
 
@@ -28,7 +28,7 @@ Third level headings are most often used to denote names rather than sections, s
 	1. This is a second-level numbered list item
 3. Numbered lists, like bulleted lists, are not used particularly often on this site.
 
-{% image imgbleed 2015/02/chairs.jpg "This is an example image caption, set in Franklin Gothic." %}
+{% image imgbleed 2015/02/chairs.jpg "This is an example image caption." %}
 
 Images may take one of three forms; aligned (left or right), centered, or enlarged, as seen above. Captions are encouraged, but not required.
 

@@ -4,12 +4,6 @@ title: Portfolio
 in-nav: true
 ---
 
-“Portfolio” is a funny word for the work I’d like to show here. You see, my body of work is comprised mostly by tools; projects I’ve created to scratch an itch, then flung into the bosom of the web to find out if other people have the same itch. Tools, references, glorified calculators; these are the things that I spend my time working on.
-
-I’m currently working at [Dropbox](http://dropbox.com) as a Designer. My work outside of Dropbox is what you see here; side projects, open source contributions, and personal itch-scratchers. [Dribbble](http://dribbble.com/dte) may provide a more current, up-to-date representation of my work.
-
-* * *
-
 ## Digital Ruin
 [Digital Ruin](http://digitalru.in/) is—for lack of a more fitting description—an art project dedicated to giving form to both real and fictional digital exchanges, with an emphasis on difficult interactions. It’s bleak, and hard to describe. [Visit the site](http://digitalru.in/).
 
