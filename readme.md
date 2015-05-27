@@ -4,6 +4,16 @@ so far, lasted longer than any of its predecessors, which is a staggering
 achievement considering the rate at which I once designed, implemented, tore
 down, and redesigned my website. The big reasons for this are its flexibility—introduced primarily by a sturdy grid system—and its speed, something that is under constant scrutiny by myself, and hopefully, as a result, is always improving.
  
+## Installation
+If you want to run this site locally:
+
+- `git clone` it somewhere
+- Create a file called `_config_local.yml` with the following contents:
+  ```
+  production: false
+  ```
+- Run `bundle install` and then `bundle exec jekyll serve`
+- Party.
 
 ## Who This Repo is For
 This repo is mostly for me. I, like many of you, host my code on GitHub for reasons of portability, ease of work, and peace of mind. Beyond my own needs, I have also open-sourced this repo for you, the reader (and most likely developer), to explore the things that make my site tick.
