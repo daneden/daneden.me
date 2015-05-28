@@ -3,8 +3,10 @@ description: Designer
 url: http://daneden.me
 
 gems:
-- jekyll-sitemap
 - autoprefixer-rails
+- coffee-script
+- jekyll-assets
+- jekyll-sitemap
 
 markdown: kramdown
 
