@@ -18,8 +18,5 @@ _config_local.yml
 # Ignore CSS. This could trip me up some day.
 _assets/css/
 
-# Ignore Bundle-installed gems
-vendor/
-
 # Ignore .jekyll-metadata (introduced by Jekyll 3.0 for incremental builds)
 .jekyll-metadata
