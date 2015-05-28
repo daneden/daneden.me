@@ -102,3 +102,8 @@ sup, sub {
 sub {
   top: 0.4em;
 }
+
+// Hanging punctuation
+.p--oq {
+  text-indent: -.4em;
+}
