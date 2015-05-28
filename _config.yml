@@ -1,12 +1,10 @@
+#==============================
+# General site config
+#==============================
+
 name: "Daniel T. Eden, Designer"
 description: Designer
 url: http://daneden.me
-
-gems:
-- autoprefixer-rails
-- coffee-script
-- jekyll-assets
-- jekyll-sitemap
 
 markdown: kramdown
 
@@ -16,8 +14,17 @@ highlighter: true
 
 permalink: pretty
 
+
+#==============================
+# File inclusions/exclusions
+#==============================
+
 include: [".htaccess"]
-exclude: ["vendor", "node_modules", "package.json", "Gruntfile.js"]
+
+
+#==============================
+# Plugins
+#==============================
 
 assets:
   js_compressor: uglifier
