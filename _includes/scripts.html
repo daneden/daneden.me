@@ -7,6 +7,11 @@
   {{ 'app' | asset }}
 
   // Set up Google Analytics
+  var ga = ga || function(){
+    ga.q = ga.q || [];
+    ga.q.push(arguments);
+  };
+  ga.l = 1 * new Date();
   ga('create', 'UA-43231078-2', 'auto');
   ga('require', 'displayfeatures');
   ga('send', 'pageview');
