@@ -18,9 +18,7 @@ in-nav: true
 
 
 ## Onword
-Tired of only being able to access my iA Writer documents on my iOS devices, I created [Onword](http://onword.co), a simple web application for writing documents. It was designed and developed in just 10 days, and introduced me to the world of Ruby.
-
-[Visit the site](http://onword.co).
+Tired of only being able to access my iA Writer documents on my iOS devices, I created [Onword](http://onword.co), a simple web application for writing documents. It was designed and developed in just 10 days, and introduced me to the world of Ruby. [Visit the site](http://onword.co).
 
 
 ## Webshaped 2012

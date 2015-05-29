@@ -5,31 +5,52 @@
 // Type styles
 //
 
+body {counter-reset: h2}
+h2 {counter-reset: h3}
 
-h1,
-.alpha {
-  font-size: 1rem;
-  font-weight: 700;
+.page__content {
+  > h2:before {
+    counter-increment: h2;
+    content: counter(h2) ". ";
+  }
+
+  > h3:before {
+    counter-increment: h3;
+    content: counter(h2) "." counter(h3) ". ";
+  }
+
+  > h2:before, > h3:before {
+    position: absolute;
+    right: 100%;
+    margin-right: .25em;
+
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+
+    opacity: .3;
+  }
 }
 
+h1,
+.alpha,
 h2,
 .beta {
   font-size: 1rem;
-  font-style: italic;
   font-weight: 700;
 }
 
 h3,
 .gamma {
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 h4,
 .delta {
   font-size: 1rem;
   font-style: italic;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 small, .small,

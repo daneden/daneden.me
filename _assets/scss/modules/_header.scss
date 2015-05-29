@@ -44,7 +44,7 @@
 
     &.active, &.active:hover {
       color: $dark-gray;
-      font-weight: 600;
+      text-decoration: underline;
     }
 
     &:hover {
