@@ -20,6 +20,11 @@ p:empty {
   display: none;
 }
 
+.page__header,
+.post__header {
+  margin-bottom: $baseline*2;
+}
+
 .hentry {
   margin-bottom: $baseline*4;
 }
