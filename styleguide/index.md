@@ -7,9 +7,9 @@ This page exists to demonstrate the visual styles of the various elements that c
 
 At the time of writing ({{ site.time | pretty }}), this website is set in Neue Haas Unica.
 
-{% image alignleft 2015/05/time.jpg "This is a left aligned image and caption." %}
-
 ## Heading Level Two
+
+{% image alignleft 2015/05/time.jpg "This is a left aligned image and caption." %}
 
 Second level headings are used to split text into sections. First level headings are only used once per page, in the page or post title. [Hyperlinks](/styleguide) are underlined and coloured when hovered.
 
