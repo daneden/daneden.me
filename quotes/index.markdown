@@ -42,3 +42,6 @@ in-nav: true
 
 “Less, but better.”
 <br>—<span class="caps">Dieter Rams</span>
+
+“Let me not die while I am still alive.”
+<br>—<span class="caps">Unknown source
