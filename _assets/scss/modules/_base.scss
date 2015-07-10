@@ -38,3 +38,7 @@ html,
     font-size: $base-font-size*.8;
   }
 }
+
+.wf-fallback, .wf-loading {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
