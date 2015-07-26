@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Twenty Fourteen
+hidden: true
 ---
 
 Here’s something you might already know if you follow me on Twitter—the end of my 2014 was, for lack of a better word, disastrous. Its last months were full of nothing but significant loss, not only for myself, but for the people I hold closest to my heart.
