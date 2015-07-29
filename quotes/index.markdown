@@ -34,7 +34,7 @@ in-nav: true
 “They can’t eat you.”
 <br>—<span class="caps">Merlin Mann</span>
 
-“The Details are not the Details. They make the design.”
+“The details are not details—they make the product. It is, in the end, these details that give the product its life.”
 <br>—<span class="caps">Charles Eames</span>
 
 “Words mean things.”
