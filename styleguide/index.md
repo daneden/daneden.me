@@ -18,8 +18,6 @@ Second level headings are used to split text into sections. First level headings
 	- This is an example of a second-level bullet
 - Lists tend not to be used very often on this site, but they exist nonetheless.
 
-It would be precarious to design a bulleted list without preparing a numbered list styling.
-
 ### Heading Level Three
 Third level headings are most often used to denote names rather than sections, so have a lower visual priority. Headings should avoid containing or being themselves hyperlinks, but when this rule is broken, heading hyperlinks do not differ in style from the heading itself.
 
@@ -28,7 +26,7 @@ Third level headings are most often used to denote names rather than sections, s
 	1. This is a second-level numbered list item
 3. Numbered lists, like bulleted lists, are not used particularly often on this site.
 
-{% image imgbleed 2015/05/shadows.jpg "This is an example image caption." %}
+{% image imgbleed 2015/08/oakland.jpg "This is an example image caption." %}
 
 Images may take one of three forms; aligned (left or right), centered, or enlarged, as seen above. Captions are encouraged, but not required.
 
