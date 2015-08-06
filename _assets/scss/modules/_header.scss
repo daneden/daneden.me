@@ -49,7 +49,7 @@ $logo-colors: (
 
 $l: length($logo-colors);
 
-.site-logo {
+.site__title {
   .site-logo__bg {
     animation: color-cycle #{$l/8}s steps(1, end) infinite;
     animation-play-state: paused;
