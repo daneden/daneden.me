@@ -45,11 +45,11 @@ $logo-colors: (
 
 $l: length($logo-colors);
 
-.site-logo__bg {
+.site__title {
   animation: color-cycle #{$l/8}s steps(1, end) infinite;
   animation-play-state: paused;
 
-  .site__title:hover & {
+  &:hover {
     animation-play-state: running;
   }
 }
@@ -57,7 +57,7 @@ $l: length($logo-colors);
 @keyframes color-cycle {
   @for $i from 1 through $l {
     #{(100/$l)*($i - 1)}% {
-      fill: nth($logo-colors, $i);
+      background-color: nth($logo-colors, $i);
     }
   }
 }
