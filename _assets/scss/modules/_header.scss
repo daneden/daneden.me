@@ -16,12 +16,8 @@
     overflow: visible;
   }
 
-  li {
-    margin-top: -1px;
-
-    + li {
-      margin-left: $baseline;
-    }
+  li + li {
+    margin-left: $baseline;
   }
 
   a {
@@ -49,16 +45,12 @@ $logo-colors: (
 
 $l: length($logo-colors);
 
-.site__title {
-  .site-logo__bg {
-    animation: color-cycle #{$l/8}s steps(1, end) infinite;
-    animation-play-state: paused;
-  }
+.site-logo__bg {
+  animation: color-cycle #{$l/8}s steps(1, end) infinite;
+  animation-play-state: paused;
 
-  &:hover {
-    .site-logo__bg {
-      animation-play-state: running;
-    }
+  .site__title:hover & {
+    animation-play-state: running;
   }
 }
 
