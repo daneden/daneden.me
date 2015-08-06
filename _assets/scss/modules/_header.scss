@@ -11,19 +11,6 @@
   margin-bottom: $baseline*3;
 }
 
-.site__title {
-  font-weight: 400;
-  text-decoration: none;
-
-  &:hover {
-    color: inherit;
-  }
-
-  span {
-    margin-bottom: 0;
-  }
-}
-
 .site__nav {
   ul {
     overflow: visible;
@@ -49,6 +36,36 @@
 
     &:hover {
       color: $dark-gray;
+    }
+  }
+}
+
+$logo-colors: (
+  $highlight, // Summer
+  #4fb5c6,    // Spring
+  #c64f51,    // Fall
+  #a881a2     // Winter
+);
+
+$l: length($logo-colors);
+
+.site-logo {
+  .site-logo__bg {
+    animation: color-cycle #{$l/8}s steps(1, end) infinite;
+    animation-play-state: paused;
+  }
+
+  &:hover {
+    .site-logo__bg {
+      animation-play-state: running;
+    }
+  }
+}
+
+@keyframes color-cycle {
+  @for $i from 1 through $l {
+    #{(100/$l)*($i - 1)}% {
+      fill: nth($logo-colors, $i);
     }
   }
 }
