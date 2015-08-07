@@ -44,4 +44,7 @@ in-nav: true
 <br>—<span class="caps">Dieter Rams</span>
 
 “Let me not die while I am still alive.”
-<br>—<span class="caps">Unknown source
+<br>—<span class="caps">Unknown source</span>
+
+“Start thinking from subtraction. Not addition.”
+<br>—<span class="caps">Naoto Fukasawa</span>
