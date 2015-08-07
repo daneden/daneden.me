@@ -51,29 +51,46 @@ $l: length($logo-colors);
 
   &:hover {
     animation-play-state: running;
+
+    .logo__line {
+        animation: wraparound 1s ease;
+
+        &--bottom {
+          animation-delay: .1s;
+        }
+    }
   }
 }
 
 .logo__line {
   stroke-dasharray: 40px;
   stroke-dashoffset: 0;
-  animation: dash 1s .25s cubic-bezier(0.785, 0.135, 0.150, 0.860);
-  animation-fill-mode: backwards;
 
-  &--top, &--bottom {
-    animation-duration: 1s;
-    animation-delay: .95s;
-    animation-timing-function: cubic-bezier(0.230, 0.020, 0.130, 0.895);
-  }
+  .js-init & {
+    animation: dash 1s .25s cubic-bezier(.785, .135, .15, .85);
+    animation-fill-mode: backwards;
 
-  &--bottom {
-    animation-delay: 1s;
+    &--top, &--bottom {
+      animation-duration: 1s;
+      animation-delay: .75s;
+      animation-timing-function: cubic-bezier(.5,.1,0,.8);
+    }
+
+    &--bottom {
+      animation-delay: .9s;
+    }
   }
 }
 
 @keyframes dash {
   from {
     stroke-dashoffset: 40;
+  }
+}
+
+@keyframes wraparound {
+  to {
+    stroke-dashoffset: 80;
   }
 }
 
