@@ -54,6 +54,29 @@ $l: length($logo-colors);
   }
 }
 
+.logo__line {
+  stroke-dasharray: 40px;
+  stroke-dashoffset: 0;
+  animation: dash 1s cubic-bezier(0.785, 0.135, 0.150, 0.860);
+  animation-fill-mode: backwards;
+
+  &--top, &--bottom {
+    animation-duration: 1s;
+    animation-delay: .6s;
+    animation-timing-function: cubic-bezier(0.230, 0.020, 0.130, 0.895);
+  }
+
+  &--bottom {
+    animation-delay: .75s;
+  }
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 40;
+  }
+}
+
 @keyframes color-cycle {
   @for $i from 1 through $l {
     #{(100/$l)*($i - 1)}% {
