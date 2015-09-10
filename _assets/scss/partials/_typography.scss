@@ -38,6 +38,15 @@ h4,
   font-weight: 400;
 }
 
+p + p {
+  text-indent: 1em;
+}
+
+p + ul,
+p + ol {
+  margin-top: $baseline;
+}
+
 small, .small,
 %small {
   font-size: .8em;
@@ -110,6 +119,7 @@ sub {
 }
 
 // Hanging punctuation
-.p--oq {
-  text-indent: -.4em;
+.p--oq:first-letter {
+  position: relative;
+  margin-left: -.4em;
 }
