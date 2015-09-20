@@ -48,11 +48,11 @@ $l: length($logo-colors);
     animation-play-state: running;
 
     .logo__line {
-        animation: wraparound 1s ease;
+      animation: wraparound 1s ease;
 
-        &--bottom {
-          animation-delay: .1s;
-        }
+      &--bottom {
+        animation-delay: .1s;
+      }
     }
   }
 }
