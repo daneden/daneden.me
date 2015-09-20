@@ -25,6 +25,10 @@ ul, ol {
 header, main, footer,
 table, figure, blockquote, pre, ul, ol {
   margin-bottom: $baseline;
+
+  p + & {
+    margin-top: $baseline;
+  }
 }
 
 picture {
