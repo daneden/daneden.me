@@ -36,12 +36,7 @@
   }
 }
 
-$logo-colors: (
-  $highlight, // Summer
-  #4fb5c6,    // Spring
-  #c64f51,    // Fall
-  #a881a2     // Winter
-);
+$logo-colors: $seasons;
 
 $l: length($logo-colors);
 

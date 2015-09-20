@@ -15,7 +15,11 @@ $font-code: 'Source Code Pro', Monaco, monospace;
 
 
 // Group: Colors
-$highlight: <%= site.config['color'] %>;
+$seasons: (
+<%= site.config['color'].join(",") %>
+);
+
+$highlight: nth($seasons, 1);
 
 $dark-gray: #3d464d;
 $light-gray: rgba($dark-gray, .6);
