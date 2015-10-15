@@ -11,9 +11,10 @@ interaction design, and typography. I like [scratching my own itch](/portfolio
 design, courage, and lack thereof.
 
 I’m currently working in San Francisco for [Dropbox](http://dropbox.com
-"Dropbox") as a Designer. More specifically, I work with the Network Growth and
-Revenue teams, helping to grow our user base, help those users make the most of
-Dropbox, and then monetize our most engaged users.
+"Dropbox") as a Designer. More specifically, I work with the Web Experience
+team, rearchitecting Dropbox's CSS codebase, providing developer tools for
+Dropbox's web engineers, and fostering better collaboration between the
+engineering and design teams.
 
 Outside of Dropbox, I work on a few
 [side projects](/portfolio "Daniel Eden’s portfolio"), many of which are open
