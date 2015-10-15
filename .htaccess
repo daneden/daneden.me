@@ -349,6 +349,28 @@ AddOutputFilterByType DEFLATE text/text text/html text/plain text/xml text/css a
 </ifmodule>
 # END GZIP
 
+# Begin WEB FONT CACHING
+# Add correct content-type for fonts
+AddType application/vnd.ms-fontobject .eot
+AddType application/x-font-ttf .ttf
+AddType application/x-font-opentype .otf
+AddType application/x-font-woff .woff
+AddType image/svg+xml .svg
+
+# Compress compressible fonts
+AddOutputFilterByType DEFLATE application/x-font-ttf application/x-font-opentype image/svg+xml
+
+ExpiresActive on
+
+# Add a far future Expires header for fonts
+ExpiresByType application/vnd.ms-fontobject "access plus 1 year"
+ExpiresByType application/x-font-ttf "access plus 1 year"
+ExpiresByType application/x-font-opentype "access plus 1 year"
+ExpiresByType application/x-font-woff "access plus 1 year"
+ExpiresByType image/svg+xml "access plus 1 year"
+# END WEB FONT CACHING
+
+# BEGIN REDIRECTS
 Redirect 301 /favicon.ico /favicon.png
 Redirect 301 /about /
 
@@ -361,3 +383,4 @@ Redirect /animate http://daneden.github.io/animate.css
 
 # Redirect /toast to the GitHub page
 Redirect /toast http://daneden.github.io/Toast
+# END REDIRECTS
