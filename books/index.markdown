@@ -19,6 +19,7 @@ others far removed, but they all have had an impact on my way of thinking.
 - [Grid Systems in Graphic Design](http://amzn.to/1M6qe8G), Josef Müller-Brockmann
 - [Odes to Common Things](http://amzn.to/1GRW9YY), Pablo Neruda
 - [One More Thing](http://amzn.to/1GRVBCt), B.J. Novak
+- [Shady Characters](http://amzn.to/1kr1ZMs), Keith Houston
 - [The Shape of Design](http://www.shapeofdesignbook.com), Frank Chimero
 - [The Vignelli Canon](http://amzn.to/1GRVkzl), Massimo Vignelli
 - [The Visual Display of Quantitative Information](http://amzn.to/1M6qoge), Edward R. Tufte
