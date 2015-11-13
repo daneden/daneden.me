@@ -26,6 +26,8 @@ module Jekyll
         @url = $1
       end
 
+      @ulr += "?fm=webp&q=65"
+
     end
 
     def render(context)
