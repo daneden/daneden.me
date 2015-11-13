@@ -26,7 +26,7 @@ module Jekyll
         @url = $1
       end
 
-      @url += "?fm=webp&q=65"
+      @url += "?auto=format&q=65"
 
     end
 
