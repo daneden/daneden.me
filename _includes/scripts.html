@@ -6,10 +6,12 @@
   // Load our main JS
   {{ 'app' | asset }}
 
-  // Initialise ReSRC
-  resrc.ready(function () {
-    resrc.configure({
-      imageQuality: 80
-    }).run();
+  // Initialise Imgix
+  imgix.onready(function() {
+    imgix.fluid({
+      updateOnResizeDown: true,
+          pixelStep: 5,
+          autoInsertCSSBestPractices: true
+    });
   });
 </script>

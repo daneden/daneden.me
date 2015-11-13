@@ -2,7 +2,7 @@
 # =================
 #
 #= require vendor/myfonts
-#= require vendor/resrc
+#= require vendor/imgix
 
 # Home-made scripts
 # =================
