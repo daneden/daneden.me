@@ -26,16 +26,18 @@ module Jekyll
         @url = $1
       end
 
+      @url += "?auto=format&q=65"
+
     end
 
     def render(context)
       source = "<figure class='#{@class}'>"
 
       if Jekyll.configuration({'config' => ['_config.yml', '_config_local.yml']})['production'] == true
-        source += "<img data-src=\"http://daneden.me/uploads/#{@url}\" class=\"resrc\" />"
+        source += "<img data-src=\"//daneden.imgix.net/#{@url}\" class=\"imgix-fluid\" />"
         source += "<noscript><img src=\"http://daneden.me/uploads/#{@url}\" /></noscript>"
       else
-        source += "<img data-src=\"http://127.0.0.1:4000/uploads/#{@url}\" class=\"resrc\" />"
+        source += "<img data-src=\"http://127.0.0.1:4000/uploads/#{@url}\" class=\"imgix-fluid\" />"
         source += "<noscript><img src=\"http://127.0.0.1:4000/uploads/#{@url}\" /></noscript>"
       end
 
