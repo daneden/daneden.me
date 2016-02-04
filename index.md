@@ -11,7 +11,7 @@ interaction design, and typography. I like [scratching my own itch](/portfolio
 design, courage, and lack thereof.
 
 I’m currently working in San Francisco for [Dropbox](http://dropbox.com
-"Dropbox") as a Designer. More specifically, I work with the Web Experience
+"Dropbox") as a Design Engineer. More specifically, I work with the Web Core
 team, rearchitecting Dropbox's CSS codebase, providing developer tools for
 Dropbox's web engineers, and fostering better collaboration between the
 engineering and design teams.
