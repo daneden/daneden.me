@@ -32,11 +32,6 @@ verbose, and simple-to-use out of the box. It uses no floats, no `first` or `las
 to both real and fictional digital exchanges, with an emphasis on difficult interactions. It’s bleak, and hard to
 describe. [Visit the site](http://digitalru.in/).
 
-## Ragged Write
-[Ragged Write](http://raggedwrite.net) is a website about typography; a place to share news, reviews, and personal
-commentary on the world of typography. Created out of a desire to write about type, as well as maintain a collection of
-typographic resources for personal reference. [Visit the site](http://raggedwrite.net).
-
 ## Untones
 [Untones](http://unton.es/) are occasional, delightful ringtones for mobile devices and beyond. I’ve long been playing
 around in sound creation software, and thought I’d make something productive out of the process. The tones are released
