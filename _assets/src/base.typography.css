@@ -9,6 +9,7 @@ h2, .h2,
 h3, .h3 {
   font-family: var(--sans-serif);
   font-weight: 400;
+  text-align: center;
 }
 
 h1, .h1 {

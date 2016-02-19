@@ -1,0 +1,12 @@
+/*
+ * Footer
+ * ======
+ *
+ */
+
+.site__footer {
+  font-family: var(--sans-serif);
+
+  border-top: 1px solid;
+  opacity: .5;
+}

@@ -1,0 +1,9 @@
+/*
+ * Content
+ * =======
+ *
+ */
+
+.page__content {
+  margin-bottom: calc(var(--baseline) * 2);
+}

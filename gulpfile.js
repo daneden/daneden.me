@@ -6,6 +6,7 @@ var shell        = require('gulp-shell');
 var autoprefixer = require('gulp-autoprefixer');
 var atImport     = require('postcss-import');
 var cp           = require('child_process');
+var browserSync  = require('browser-sync').create();
 
 var processors = [
   atImport,
@@ -31,10 +32,13 @@ gulp.task('styles', function() {
   .pipe(gulp.dest('./_assets/css'));
 });
 
-gulp.task('jekyll-serve', shell.task(['bundle exec jekyll serve --incremental --watch']));
+gulp.task('jekyll-build', shell.task(['bundle exec jekyll build --incremental --watch']));
 
-gulp.task('style-watch', function() {
-  gulp.watch('./_assets/src/**/*.css', ['styles']);
+gulp.task('jekyll-serve', function() {
+  browserSync.init({ server: { baseDir: '_site/' } });
+  gulp.watch('./_assets/src/*.css', ['styles']);
+  gulp.watch('_site/**/*.*').on('change', browserSync.reload);
+  gulp.watch('_assets/css/index.css').on('change', browserSync.reload);
 });
 
-gulp.task('default', ['style-watch', 'jekyll-serve', 'styles']);
+gulp.task('default', ['jekyll-build', 'jekyll-serve', 'styles']);

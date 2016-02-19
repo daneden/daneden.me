@@ -2,12 +2,12 @@
 
 <main class="wrap site__content page" role="main">
 
-<article class="grid hentry">
-  <header class="page__header grid__col grid__col--2-of-8">
-    <h1 class="page__title o--mz">{{ page.title | widont }}</h1>
-    <p class="post__meta meta">{{ page.date | date: "%A %-d %B %Y" }}</p>
+<article class="hentry">
+  <header class="page__header">
+    <h1 class="page__title">{{ page.title | widont }}</h1>
+    <p class="post__date hide">{{ page.date | date: "%A %-d %B %Y" }}</p>
   </header>
-  <div class=" page__content grid__col grid__col--4-of-8">
+  <div class=" page__content">
     {{ content }}
   </div>
 </article>

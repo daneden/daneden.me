@@ -1,0 +1,37 @@
+/*
+ * Header
+ * ======
+ *
+ */
+
+.site__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--baseline) 0;
+  margin-bottom: calc(var(--baseline) * 2);
+
+  border-bottom: 1px solid;
+}
+
+  .site__nav {
+    font-family: var(--sans-serif);
+  }
+
+    .site__nav a {
+      text-decoration: none;
+      opacity: .5;
+    }
+
+      .site__nav a:hover,
+      .site__nav a.active {
+        opacity: 1;
+      }
+
+  .site__title {
+    background-color: var(--text-color);
+  }
+
+.page__header {
+  margin-bottom: calc(var(--baseline) * 2);
+}

@@ -8,11 +8,13 @@
 
 html {
   font: 112.5%/1.7778 var(--serif);
+  color: var(--text-color);
+  background-color: #fff;
+
+  -webkit-font-smoothing: antialiased;
 }
 
   .wf-loading {
     --serif: var(--serif-fallback);
     --sans-serif: var(--sans-serif-fallback);
-
-    color: red;
   }

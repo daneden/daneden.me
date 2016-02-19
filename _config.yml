@@ -32,6 +32,8 @@ exclude: ["node_modules", "gulpfile.js", "Gemfile", "Gemfile.lock"]
 #==============================
 
 assets:
+  digest: true
+  cache: false
   sources:
     - "_assets/css"
     - "_assets/js"

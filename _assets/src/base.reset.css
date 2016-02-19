@@ -19,3 +19,11 @@ h1, h2, h3,
 p, table, form, figure, blockquote {
   margin-bottom: var(--baseline);
 }
+
+img {
+  max-width: 100%;
+}
+
+ul, ol {
+  padding-left: var(--baseline);
+}
