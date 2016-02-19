@@ -1,0 +1,18 @@
+/*
+ * Base Styles
+ * ===========
+ *
+ * Base CSS styles for common HTML elements
+ *
+ */
+
+html {
+  font: 112.5%/1.7778 var(--serif);
+}
+
+  .wf-loading {
+    --serif: var(--serif-fallback);
+    --sans-serif: var(--sans-serif-fallback);
+
+    color: red;
+  }

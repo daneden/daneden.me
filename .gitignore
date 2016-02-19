@@ -20,3 +20,6 @@ _assets/css/
 
 # Ignore .jekyll-metadata (introduced by Jekyll 3.0 for incremental builds)
 .jekyll-metadata
+
+# Ignore npm stuff
+node_modules/

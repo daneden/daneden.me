@@ -1,0 +1,58 @@
+/*
+ * Fonts
+ * =====
+ *
+ * Custom @font-face rules
+ *
+ */
+@import url("//hello.myfonts.net/count/306f26");
+
+@font-face {
+  font-family: 'Neue Haas Unica';
+  font-weight: normal;
+  font-style: normal;
+  src: url('/static/webfonts/306F26_1_0.eot');
+  src: url('/static/webfonts/306F26_1_0.eot?#iefix') format('embedded-opentype'),
+       url('/static/webfonts/306F26_1_0.woff2') format('woff2'),
+       url('/static/webfonts/306F26_1_0.woff') format('woff'),
+       url('/static/webfonts/306F26_1_0.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Neue Haas Unica';
+  font-weight: normal;
+  font-style: italic;
+  src: url('/static/webfonts/306F26_0_0.eot');
+  src: url('/static/webfonts/306F26_0_0.eot?#iefix') format('embedded-opentype'),
+       url('/static/webfonts/306F26_0_0.woff2') format('woff2'),
+       url('/static/webfonts/306F26_0_0.woff') format('woff'),
+       url('/static/webfonts/306F26_0_0.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: "Tiempos Text";
+  font-weight: normal;
+  font-style: normal;
+  src: url('/static/webfonts/TiemposTextWeb-Regular.eot');
+  src: url('/static/webfonts/TiemposTextWeb-Regular.eot?iefix') format('embedded-opentype'),
+       url('/static/webfonts/TiemposTextWeb-Regular.woff2') format('woff2'),
+       url('/static/webfonts/TiemposTextWeb-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: "Tiempos Text";
+  font-weight: normal;
+  font-style: italic;
+  src: url('/static/webfonts/TiemposTextWeb-RegularItalic.eot');
+  src: url('/static/webfonts/TiemposTextWeb-RegularItalic.eot?iefix') format('embedded-opentype'),
+       url('/static/webfonts/TiemposTextWeb-RegularItalic.woff2') format('woff2'),
+       url('/static/webfonts/TiemposTextWeb-RegularItalic.woff') format('woff');
+}
+
+:root {
+  --sans-serif-fallback: "Helvetica Neue", Helvetica, sans-serif;
+  --sans-serif: "Neue Haas Unica", var(--sans-serif-fallback);
+
+  --serif-fallback: "Georgia", "Times New Roman", serif;
+  --serif: "Tiempos Text", var(--serif-fallback);
+}

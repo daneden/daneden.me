@@ -1,0 +1,42 @@
+/*
+ * Typography
+ * ==========
+ *
+ */
+
+h1, .h1,
+h2, .h2,
+h3, .h3 {
+  font-family: var(--sans-serif);
+  font-weight: 400;
+}
+
+h1, .h1 {
+  font-size: 1.333rem;
+}
+
+h2, .h2,
+h3, .h3 {
+  font-size: 1rem;
+}
+
+h3, .h3 {
+  text-transform: uppercase;
+  letter-spacing: .25em;
+}
+
+h4, .h4 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 1rem;
+  font-style: italic;
+}
+
+a {
+  text-decoration: underline;
+  color: inherit;
+}
+
+  a:hover, a:focus {
+    color: var(--site-color);
+  }

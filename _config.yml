@@ -32,9 +32,8 @@ include: [".htaccess"]
 
 assets:
   js_compressor: uglifier
-  css_compressor: sass
   cache: true
   sources:
-    - _assets/scss
+    - _assets/css
     - _assets/js
   cachebust: hard

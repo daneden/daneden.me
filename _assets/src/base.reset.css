@@ -1,0 +1,21 @@
+/*
+ * Reset
+ * =====
+ *
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  box-sizing: border-box;
+}
+
+input, button, textarea {
+  font: inherit;
+}
+
+h1, h2, h3,
+p, table, form, figure, blockquote {
+  margin-bottom: var(--baseline);
+}
