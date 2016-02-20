@@ -19,7 +19,7 @@ engineering and design teams.
 Outside of Dropbox, I work on a few
 [side projects](/portfolio "Daniel Eden’s portfolio"), many of which are open
 source. I also spend a lot of time thinking about social justice and diversity
-in the tech industry.
+in the technology industry.
 
 Take a look at
 [my résumé](https://www.dropbox.com/s/kq431p4ey1b1ayu/R%C3%A9sum%C3%A9.pdf
