@@ -24,7 +24,7 @@ permalink: pretty
 #==============================
 
 include: [".htaccess"]
-exclude: ["node_modules", "gulpfile.js", "Gemfile", "Gemfile.lock", "commit-hook.sh"]
+exclude: ["node_modules", "gulpfile.js", "Gemfile", "Gemfile.lock", "commit-hook.sh", "package.json"]
 
 
 #==============================
