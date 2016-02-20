@@ -25,3 +25,9 @@ html {
       font-size: 100%;
     }
   }
+
+  @media (max-width: 30rem) {
+    html {
+      font-size: 87.5%;
+    }
+  }

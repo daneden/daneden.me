@@ -23,7 +23,7 @@ Vignelli and his team were not just producing beautiful design. They were creati
 
 Vignelli’s work resonates at a different tune than it did when I first opened the little red book. When I read it now, I find myself reading over and over again the things I once skimmed past to get to the tangible advice. One particular section of the conclusion is particularly wonderful.
 
-> As much as I love things in flux, I love them within a frame of reference - a consistent reassurance that at least and at last I am the one responsible for every detail.
+> As much as I love things in flux, I love them within a frame of reference—a consistent reassurance that at least and at last I am the one responsible for every detail.
 
 Today, of all days, I am grateful for the things I’ve learned from Massimo Vignelli. His influence on my work is one of rare volume, and I have no doubt that his legacy will continue to inspire and encourage myself and countless other designers.
 

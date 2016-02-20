@@ -9,7 +9,7 @@
   align-items: center;
   justify-content: space-between;
   padding: var(--baseline) 0;
-  margin-bottom: calc(var(--baseline) * 2);
+  margin-bottom: var(--baseline);
 }
 
   .site__nav {
