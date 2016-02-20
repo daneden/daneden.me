@@ -3,7 +3,7 @@ title: Making Sense
 layout: post
 ---
 
-{% image 2014/10/Muji-Aluminium-Pen.png %}
+{% figure 2014/10/Muji-Aluminium-Pen.png %}
 
 There is both a great pleasure and a great ache in the search for well-made products. Products that are lasting and unambiguous. This search is what leads us to products like those from companies such as Apple or Muji. Things that are beautiful and considered, through and through, thorough to the last and smallest detail. And it’s the same search that drives companies like Apple and Muji to pursue that achievement; a discontent with the now, in favor of *the better*.
 

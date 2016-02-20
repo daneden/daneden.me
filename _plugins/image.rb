@@ -51,4 +51,4 @@ module Jekyll
   end
 end
 
-Liquid::Template.register_tag('image', Jekyll::ImageTag)
+Liquid::Template.register_tag('figure', Jekyll::ImageTag)

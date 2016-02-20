@@ -3,7 +3,7 @@ layout: page
 title: About
 ---
 
-{% image imgbleed 2016/02/tahoe.jpg %}
+{% figure imgbleed 2016/02/tahoe.jpg %}
 
 My name is Daniel Eden, and I’m a designer with a penchant for the web,
 interaction design, and typography. I like [scratching my own itch](/portfolio

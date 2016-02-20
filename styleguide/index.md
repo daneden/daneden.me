@@ -9,7 +9,7 @@ At the time of writing ({{ site.time | pretty }}), this website is set in Neue H
 
 ## Heading Level Two
 
-{% image alignleft 2015/05/time.jpg "This is a left aligned image and caption." %}
+{% figure alignleft 2015/05/time.jpg "This is a left aligned image and caption." %}
 
 Second level headings are used to split text into sections. First level headings are only used once per page, in the page or post title. [Hyperlinks](/styleguide) are underlined and coloured when hovered.
 
@@ -26,7 +26,7 @@ Third level headings are most often used to denote names rather than sections, s
 	1. This is a second-level numbered list item
 3. Numbered lists, like bulleted lists, are not used particularly often on this site.
 
-{% image imgbleed 2015/08/oakland.jpg "This is an example image caption." %}
+{% figure imgbleed 2015/08/oakland.jpg "This is an example image caption." %}
 
 Images may take one of three forms; aligned (left or right), centered, or enlarged, as seen above. Captions are encouraged, but not required.
 

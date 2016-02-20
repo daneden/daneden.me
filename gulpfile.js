@@ -33,6 +33,7 @@ gulp.task('styles', function() {
 });
 
 gulp.task('jekyll-build', shell.task(['bundle exec jekyll build --incremental --watch']));
+gulp.task('jekyll-build-once', shell.task(['bundle exec jekyll build --incremental']));
 
 gulp.task('jekyll-serve', function() {
   browserSync.init({ server: { baseDir: '_site/' } });
@@ -42,3 +43,4 @@ gulp.task('jekyll-serve', function() {
 });
 
 gulp.task('default', ['jekyll-build', 'jekyll-serve', 'styles']);
+gulp.task('build', ['styles', 'jekyll-build-once']);
