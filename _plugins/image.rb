@@ -37,8 +37,8 @@ module Jekyll
         source += "<img data-src=\"//daneden.imgix.net/#{@url}\" class=\"imgix-fluid\" />"
         source += "<noscript><img src=\"http://daneden.me/uploads/#{@url}\" /></noscript>"
       else
-        source += "<img data-src=\"http://127.0.0.1:4000/uploads/#{@url}\" class=\"imgix-fluid\" />"
-        source += "<noscript><img src=\"http://127.0.0.1:4000/uploads/#{@url}\" /></noscript>"
+        source += "<img data-src=\"http://localhost:3000/uploads/#{@url}\" class=\"imgix-fluid\" />"
+        source += "<noscript><img src=\"http://localhost:3000/uploads/#{@url}\" /></noscript>"
       end
 
       @caption = Kramdown::Document.new(@caption).to_html if @caption

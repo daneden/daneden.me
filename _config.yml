@@ -24,6 +24,7 @@ permalink: pretty
 #==============================
 
 include: [".htaccess"]
+exclude: ["node_modules", "gulpfile.js", "Gemfile", "Gemfile.lock"]
 
 
 #==============================
@@ -31,10 +32,8 @@ include: [".htaccess"]
 #==============================
 
 assets:
-  js_compressor: uglifier
-  css_compressor: sass
-  cache: true
+  digest: true
+  cache: false
   sources:
-    - _assets/scss
-    - _assets/js
-  cachebust: hard
+    - "_assets/css"
+    - "_assets/js"

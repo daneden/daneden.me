@@ -1,0 +1,51 @@
+/*
+ * Content
+ * =======
+ *
+ */
+
+.post-list {
+  padding-left: 0;
+}
+
+  .post-list__item {
+    list-style: none;
+  }
+
+    .post-list__item a {
+      text-decoration: none;
+    }
+
+.page__content {
+  margin-bottom: calc(var(--baseline) * 2);
+}
+
+sup[id*="fnref"] a {
+  margin: 0 .2em;
+
+  text-decoration: none;
+  font-family: var(--sans-serif);
+  font-size: .7778rem;
+
+  color: var(--site-color);
+}
+
+.footnotes {
+  padding-top: calc(var(--baseline) * 2);
+  font-size: .7778rem;
+  font-family: var(--sans-serif);
+
+  color: var(--meta-color)
+}
+
+  .footnotes ol {
+    padding-left: 0;
+  }
+
+  .footnotes p {
+    margin-bottom: calc(var(--baseline) / 2);
+  }
+
+  .footnotes li:target {
+    color: var(--text-color);
+  }

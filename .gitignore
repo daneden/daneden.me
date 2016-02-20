@@ -3,8 +3,7 @@ _site
 
 # Ignore caches and logs
 .sass-cache
-_asset_bundler_cache/
-.jekyll-assets-cache/
+.asset-cache/
 .bundle/
 Gemfile.lock
 .ruby-version
@@ -20,3 +19,6 @@ _assets/css/
 
 # Ignore .jekyll-metadata (introduced by Jekyll 3.0 for incremental builds)
 .jekyll-metadata
+
+# Ignore npm stuff
+node_modules/

@@ -16,11 +16,11 @@
   <meta name="theme-color" content="{{ site.color[0] }}" />
 
   <style>
-    {{ 'style.css' | asset }}
+    {% asset 'style' %}
   </style>
 
   <script>
-    {{ 'vendor/zenfonts.js' | asset }}
+    {% asset 'vendor/zenfonts' %}
   </script>
 
   <!-- Icons -->
@@ -28,29 +28,23 @@
   <link rel="apple-touch-icon" href="static/images/icon.png" />
   <link rel="icon" sizes="any" mask href="/static/images/icon-mask.svg" />
 
-  <body>
+  <body class="phl">
     <!-- You know, rather than reading the source like a chump, you can see it all on GitHub like a champ: https://github.com/daneden/daneden.me -->
     <script>
-      Zenfonts("NeueHaasUnica", {fallbackClass: "wf-fallback", loadingClass: "wf-loading"});
+      Zenfonts(["Neue Haas Unica", "Tiempos Text"], {fallbackClass: "wf-fallback", loadingClass: "wf-loading"});
     </script>
     <header class="wrap site__header" role="banner">
-      <div class="grid">
-        <div class="grid__col grid__col--2-of-8">
-          <a class="site__title o--p o--ib" href="/">
-            <svg class="site-logo o--b" width="24" height="32" viewBox="0 0 24 32" xmlns="http://www.w3.org/2000/svg">
-              <title>{{ site.name }}</title>
-              <g fill="none" fill-rule="evenodd">
-                <g class="logo">
-                  <path d="M5,20.89 L18,20.89" class="logo__line logo__line--top" stroke="#fff" stroke-width="2" stroke-linecap="square"></path>
-                  <path d="M5,25.89 L18,25.89" class="logo__line logo__line--bottom" stroke="#fff" stroke-width="2" stroke-linecap="square"></path>
-                  <path d="M4,5.89 L14.005,5.89 C16.764,5.89 19,8.134 19,10.89 C19,13.651 16.754,15.89 14.005,15.89 L4,15.89" class="logo__line" stroke="#fff" stroke-width="2"></path>
-                </g>
-              </g>
-            </svg>
-          </a>
-        </div>
-        <div class="grid__col grid__col--6-of-8">
-          {% include nav.html %}
-        </div>
-      </div>
+      <a class="site__title ib" href="/">
+        <svg class="site-logo b" width="24" height="32" viewBox="0 0 24 32" xmlns="http://www.w3.org/2000/svg">
+          <title>{{ site.name }}</title>
+          <g fill="none" fill-rule="evenodd">
+            <g class="logo">
+              <path d="M5,20.89 L18,20.89" class="logo__line logo__line--top" stroke="#fff" stroke-width="2" stroke-linecap="square"></path>
+              <path d="M5,25.89 L18,25.89" class="logo__line logo__line--bottom" stroke="#fff" stroke-width="2" stroke-linecap="square"></path>
+              <path d="M4,5.89 L14.005,5.89 C16.764,5.89 19,8.134 19,10.89 C19,13.651 16.754,15.89 14.005,15.89 L4,15.89" class="logo__line" stroke="#fff" stroke-width="2"></path>
+            </g>
+          </g>
+        </svg>
+      </a>
+      {% include nav.html %}
     </header>

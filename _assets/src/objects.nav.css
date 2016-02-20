@@ -1,0 +1,19 @@
+/*
+ * Nav
+ * ===
+ *
+ */
+
+.nav {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+  .nav li {
+    display: inline-block;
+  }
+
+  .nav li + li {
+    margin-left: calc( var(--baseline) / 2 );
+  }

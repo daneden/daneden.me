@@ -1,0 +1,105 @@
+/*
+ * Typography
+ * ==========
+ *
+ */
+
+h1, .h1,
+h2, .h2,
+h3, .h3 {
+  font-weight: 400;
+  text-align: center;
+}
+
+h1, .h1 {
+  font-size: 1.333rem;
+}
+
+h2, .h2,
+h3, .h3 {
+  font-size: 1.111rem;
+}
+
+  * + h2, * + .h2,
+  * + h3, * + .h3 {
+    padding-top: var(--baseline);
+  }
+
+h2, .h2 {
+  font-family: var(--sans-serif);
+}
+
+h3, .h3 {
+  text-transform: uppercase;
+  font-feature-settings: "smcp", "c2sc";
+  letter-spacing: .2em;
+  font-style: normal;
+  text-align: left;
+}
+
+h4, .h4 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 1rem;
+  font-style: italic;
+}
+
+a {
+  text-decoration: underline;
+  color: inherit;
+}
+
+  a:hover, a:focus {
+    color: var(--site-color);
+  }
+
+code, pre {
+  font-family: var(--monospace);
+  font-size: .875rem;
+}
+
+hr, .footnotes::before {
+  content: '';
+  display: block;
+  width: 6rem;
+  padding-top: var(--baseline);
+  margin-top: -2px;
+  margin-right: auto;
+  margin-bottom: calc(var(--baseline) * 2);
+  margin-left: auto;
+
+  border: 0;
+  border-bottom: 2px solid var(--meta-color);
+  opacity: .5;
+}
+
+.footnotes::before {
+  padding-top: 0;
+}
+
+.meta {
+  color: var(--meta-color);
+}
+
+blockquote {
+  padding-left: var(--baseline);
+
+  font-style: italic;
+
+  border-left: 2px solid var(--site-color);
+}
+
+  blockquote em, blockquote strong {
+    font-weight: 400;
+    font-style: normal;
+  }
+
+mark {
+  color: #EF540D;
+  background-color: rgba(239, 84, 13, .1);
+}
+
+.caps {
+  font-feature-settings: "smcp", "c2sc", "lnum";
+  letter-spacing: .05em;
+}
