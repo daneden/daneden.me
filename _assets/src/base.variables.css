@@ -9,4 +9,13 @@
 
   --site-color: #4AB5C7;
   --text-color: #3D464D;
+  --meta-color: #9EA3A6;
+
+  --monospace: "Input Mono", "Source Code Pro", "Monaco", monospace;
+
+  --sans-serif-fallback: "Helvetica Neue", Helvetica, sans-serif;
+  --sans-serif: "Neue Haas Unica", var(--sans-serif-fallback);
+
+  --serif-fallback: "Georgia", "Times New Roman", serif;
+  --serif: "Tiempos Text", var(--serif-fallback);
 }

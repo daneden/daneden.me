@@ -10,8 +10,6 @@
   justify-content: space-between;
   padding: var(--baseline) 0;
   margin-bottom: calc(var(--baseline) * 2);
-
-  border-bottom: 1px solid;
 }
 
   .site__nav {
@@ -20,12 +18,12 @@
 
     .site__nav a {
       text-decoration: none;
-      opacity: .5;
+      color: var(--meta-color);
     }
 
       .site__nav a:hover,
       .site__nav a.active {
-        opacity: 1;
+        color: var(--text-color);
       }
 
   .site__title {

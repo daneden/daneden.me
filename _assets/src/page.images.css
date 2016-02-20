@@ -1,0 +1,49 @@
+/*
+ * Images
+ * ======
+ *
+ */
+
+figure {
+  font-family: var(--sans-serif);
+  font-size: .7778rem;
+
+  color: var(--meta-color);
+}
+
+.alignleft, .alignright {
+  max-width: 50%;
+}
+
+.alignleft {
+  float: left;
+  margin-left: -25%;
+  margin-right: var(--baseline);
+}
+
+.alignright {
+  float: right;
+  margin-right: -25%;
+  margin-left: var(--baseline);
+}
+
+@media (max-width: 56rem) {
+  .alignleft, .alignright {
+    max-width: 40%;
+  }
+
+  .alignleft {
+    margin-left: 0;
+  }
+
+  .alignright {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 30rem){
+  .alignleft, .alignright {
+    max-width: 100%;
+    float: none;
+  }
+}

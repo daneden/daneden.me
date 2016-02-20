@@ -49,10 +49,3 @@
        url('/static/webfonts/TiemposTextWeb-RegularItalic.woff') format('woff');
 }
 
-:root {
-  --sans-serif-fallback: "Helvetica Neue", Helvetica, sans-serif;
-  --sans-serif: "Neue Haas Unica", var(--sans-serif-fallback);
-
-  --serif-fallback: "Georgia", "Times New Roman", serif;
-  --serif: "Tiempos Text", var(--serif-fallback);
-}

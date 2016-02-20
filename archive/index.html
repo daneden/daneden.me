@@ -6,12 +6,12 @@ title: Archive
 
 <hr>
 
-<ul class="unl posts__list">
+<ul class="unl post-list">
 {% for post in site.posts %}
-  <li class="o--p">
-    <a class="a--plain" href="{{ post.url }}">
-      <span class="o--b beta o--mz">{{ post.title }}</span>
-      <span class="meta delta o--b">{{ post.date | date: "%A %-d %B %Y" }}</span>
+  <li class="post-list__item ml">
+    <a href="{{ post.url }}">
+      <span class="b m0">{{ post.title }}</span>
+      <span class="meta h4 b">{{ post.date | date: "%A %-d %B %Y" }}</span>
     </a>
   </li>
 {% endfor %}

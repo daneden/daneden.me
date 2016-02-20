@@ -7,7 +7,7 @@ class: invert-header
 
 ## Preface
 
-This post was originally drafted as a talk for CSSConf, which I sadly had to back out of speaking at. In lieu of the talk itself, I thought I’d instead publish a torrent of thoughts on the titled subject. And let’s not ignore the fact that this formatting may in fact be better, given its proximity to the subject at hand. This will be read on a vast number of browsers, in people’s hands and at their desks, and in anywhere between a few months and a few years, many of the facts pointed out herein will be false or irrelevant. It’s an exciting and frustrating time to be enthusiastic about typography on the web. Let’s dig in.
+This post was originally drafted as a talk for CSSConf, which I sadly had to back out of speaking at. In lieu of the talk itself, I thought I’d instead publish a torrent of thoughts on the titled subject. And let's not ignore the fact that this formatting may in fact be better, given its proximity to the subject at hand. This will be read on a vast number of browsers, in people’s hands and at their desks, and in anywhere between a few months and a few years, many of the facts pointed out herein will be false or irrelevant. It’s an exciting and frustrating time to be enthusiastic about typography on the web. Let’s dig in.
 
 ## Introduction
 

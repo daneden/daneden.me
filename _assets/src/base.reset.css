@@ -15,7 +15,8 @@ input, button, textarea {
   font: inherit;
 }
 
-h1, h2, h3,
+h1, h2,
+ul, ol,
 p, table, form, figure, blockquote {
   margin-bottom: var(--baseline);
 }

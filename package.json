@@ -1,0 +1,26 @@
+{
+  "name": "daneden.me",
+  "version": "1.0.0",
+  "description": "This is my website. There are many like it, but this one is mine.",
+  "main": "gulpfile.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daneden/daneden.me.git"
+  },
+  "author": "Daniel Eden",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daneden/daneden.me/issues"
+  },
+  "homepage": "https://github.com/daneden/daneden.me#readme",
+  "devDependencies": {
+    "browser-sync": "^2.11.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-cssnano": "^2.1.1",
+    "gulp-postcss": "^6.1.0",
+    "gulp-shell": "^0.5.2",
+    "postcss-cssnext": "^2.4.0",
+    "postcss-import": "^8.0.2"
+  }
+}

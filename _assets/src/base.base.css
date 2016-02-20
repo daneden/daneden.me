@@ -12,9 +12,16 @@ html {
   background-color: #fff;
 
   -webkit-font-smoothing: antialiased;
+  font-feature-settings: "liga", "hist", "onum";
 }
 
   .wf-loading {
     --serif: var(--serif-fallback);
     --sans-serif: var(--sans-serif-fallback);
+  }
+
+  @media (max-width: 40rem) {
+    html {
+      font-size: 100%;
+    }
   }
