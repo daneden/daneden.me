@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/sh
 
 git pull
 gulp build
