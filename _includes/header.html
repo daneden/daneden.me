@@ -8,10 +8,10 @@
   <meta rel="dns-prefetch" href="//app.resrc.it" />
   <meta rel="dns-prefetch" href="//hello.myfonts.net" />
 
-  <meta property="og:title" content="{{ page.title }}"/>
-  <meta property="og:site_name" content="{{ site.name }}"/>
+  <meta property="og:title" content="{{ page.title | xml_escape }}"/>
+  <meta property="og:site_name" content="{{ site.name | xml_escape }}"/>
   <meta property="og:url" content="{{ page.url }}"/>
-  <meta property="og:description" content="{{ page.excerpt | strip_html }}"/>
+  <meta property="og:description" content="{{ page.excerpt | strip_html | xml_escape }}"/>
 
   <meta name="theme-color" content="{{ site.color[0] }}" />
 
