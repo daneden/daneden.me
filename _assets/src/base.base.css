@@ -15,9 +15,13 @@ html {
   font-feature-settings: "liga", "hist", "onum";
 }
 
-  .wf-loading {
+  .wf-loading:root {
     --serif: var(--serif-fallback);
     --sans-serif: var(--sans-serif-fallback);
+
+    font-family: --serif-fallback;
+    font-size: 118.75%;
+    line-height: 1.6842;
   }
 
   @media (max-width: 40rem) {
