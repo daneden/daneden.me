@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang=en{% if page.class %} class="{{ page.class }}"{% endif %}>
+<html lang="en"{% if page.class %} class="{{ page.class }}"{% endif %}>
   <meta charset="utf-8" />
   <title>{{ page.title }} | {{ site.name }}</title>
   <meta name="viewport" content="initial-scale=1" />
   <meta name="p:domain_verify" content="aa712630840b421410cce3b56d2dc764" />
 
-  <meta rel="dns-prefetch" href="//app.resrc.it" />
-  <meta rel="dns-prefetch" href="//hello.myfonts.net" />
+  <meta rel="dns-prefetch" href="//daneden.imgix.net" />
 
   <meta property="og:title" content="{{ page.title | xml_escape }}"/>
   <meta property="og:site_name" content="{{ site.name | xml_escape }}"/>
@@ -25,7 +24,7 @@
 
   <!-- Icons -->
   <link rel="shortcut icon" href="https://secure.gravatar.com/avatar/ce22c94e6c291345223e0118bfdd8714?s=64" />
-  <link rel="apple-touch-icon" href="static/images/icon.png" />
+  <link rel="apple-touch-icon" href="/static/images/icon.png" />
   <link rel="icon" sizes="any" mask href="/static/images/icon-mask.svg" />
 
   <body class="phl">
