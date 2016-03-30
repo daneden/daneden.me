@@ -5,8 +5,6 @@ title: Style Guide
 
 This page exists to demonstrate the visual styles of the various elements that comprise the design of this site. This is not only for my own benefit, as the designer and maintainer, but also to satisfy the curiosity of those interested in such things (like myself). To learn about my writing style, check the [writing style guide](/styleguide/writing).
 
-At the time of writing ({{ site.time | pretty }}), this website is set in Neue Haas Unica.
-
 ## Heading Level Two
 
 {% figure alignleft 2015/05/time.jpg "This is a left aligned image and caption." %}
