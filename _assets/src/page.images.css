@@ -11,6 +11,10 @@ figure {
   color: var(--meta-color);
 }
 
+figcaption, figcaption :last-child {
+  margin: 0;
+}
+
 .alignleft, .alignright {
   width: 50%;
 }
