@@ -25,7 +25,9 @@ a {
   }
 
 html {
-  min-height: 100%;
+  min-height: 100vh;
+  max-width: 100vw;
+  overflow-x: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -47,6 +49,10 @@ html {
 }
 
 body {
+  position: static;
+}
+
+.main {
   display: flex;
   align-items: stretch;
   background-color: #fff;
@@ -71,6 +77,9 @@ body {
   font-weight: 400;
   font-size: 4.5rem;
   line-height: 1;
+
+  cursor: default;
+  user-select: none;
 }
 
 .main-image {
@@ -93,10 +102,38 @@ body {
   top: -3.5rem;
   right: -3.5rem;
   animation: badge-spin 5s infinite linear;
+  transform-origin: center center;
 }
 
 @keyframes badge-spin {
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 1000px) {
+  .main {
+    max-height: none;
+    max-width: 500px;
+    height: auto;
+    flex-direction: column;
+  }
+
+  .main-content {
+    padding: 1.5rem;
+  }
+
+  .main-image {
+    min-height: 40vh;
+  }
+
+  .uc-badge {
+    animation-direction: reverse;
+  }
+
+  .site-title {
+    font-size: 3rem;
+    top: -.5rem;
+    left: -.5rem;
   }
 }
