@@ -8,7 +8,6 @@ var i = 0;
 document.addEventListener('click', function(e){
   if(e.target == ja) {
     el.textContent = el.textContent.substr(0, i) + em[Math.floor(Math.random() * em.length)] + el.textContent.substr(i + 1);
-    console.log(i);
     i++;
   } else if (e.target == jb) {
     var n = document.createElement('span');
