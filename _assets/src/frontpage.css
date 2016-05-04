@@ -112,11 +112,19 @@ body {
 }
 
 @media (max-width: 1000px) {
+  html {
+    min-height: none;
+  }
+
   .main {
     max-height: none;
     max-width: 500px;
     height: auto;
     flex-direction: column;
+  }
+
+  .fl50 {
+    flex: none;
   }
 
   .main-content {
