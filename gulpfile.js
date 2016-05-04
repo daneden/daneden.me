@@ -28,7 +28,7 @@ var processors = [
 ];
 
 gulp.task('styles', function() {
-  return gulp.src('./_assets/src/style.css')
+  return gulp.src(['./_assets/src/style.css', './_assets/src/frontpage.css'])
   .pipe(postcss(processors))
   .pipe(nano({discardComments: {removeAll: true}}))
   .pipe(gulp.dest('./_assets/css'));
