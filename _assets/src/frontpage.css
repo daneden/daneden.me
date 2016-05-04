@@ -1,0 +1,139 @@
+
+@import "base.variables.css";
+@import "base.reset.css";
+
+@import "utilities.display.css";
+@import "utilities.spacing.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+}
+
+header {
+  position: static;
+}
+
+a {
+  color: inherit;
+}
+
+  a:hover {
+    color: var(--site-color);
+  }
+
+html {
+  min-height: 100vh;
+  max-width: 100vw;
+  overflow-x: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font: 100%/1.5 var(--sans-serif);
+  -webkit-font-smoothing: antialiased;
+  color: #25282B;
+  background-color: #D9D9D9;
+
+  background-image: url('/static/images/t1.svg'),
+                    url('/static/images/t2.svg'),
+                    url('/static/images/t3.svg'),
+                    url('/static/images/t4.svg');
+  background-repeat: no-repeat;
+  background-position: top 1.5rem center,
+                       center right 1.5rem,
+                       bottom 1.5rem center,
+                       center left 1.5rem;
+}
+
+body {
+  position: static;
+}
+
+.main {
+  display: flex;
+  align-items: stretch;
+  background-color: #fff;
+  width: 100vw;
+  height: 100vh;
+  max-width: 1000px;
+  max-height: 500px;
+}
+
+.fl50 {
+  flex: 1 1 50%;
+}
+
+.site-title {
+  position: absolute;
+  top: -3rem;
+  left: -1.5rem;
+  width: 4em;
+  z-index: 1;
+
+  color: #fff;
+  font-weight: 400;
+  font-size: 4.5rem;
+  line-height: 1;
+
+  cursor: default;
+  user-select: none;
+}
+
+.main-image {
+  margin: 0;
+}
+
+  .main-image__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+  }
+
+.main-content {
+  padding: 3rem;
+}
+
+.uc-badge {
+  position: absolute;
+  top: -3.5rem;
+  right: -3.5rem;
+  animation: badge-spin 5s infinite linear;
+  transform-origin: center center;
+}
+
+@keyframes badge-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 1000px) {
+  .main {
+    max-height: none;
+    max-width: 500px;
+    height: auto;
+    flex-direction: column;
+  }
+
+  .main-content {
+    padding: 1.5rem;
+  }
+
+  .main-image {
+    min-height: 40vh;
+  }
+
+  .uc-badge {
+    animation-direction: reverse;
+  }
+
+  .site-title {
+    font-size: 3rem;
+    top: -.5rem;
+    left: -.5rem;
+  }
+}
