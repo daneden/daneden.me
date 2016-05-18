@@ -132,6 +132,15 @@ body {
   }
 }
 
+.emegg {
+  fill: #fff;
+  mix-blend-mode: hard-light;
+}
+
+  .emegg path {
+    fill: inherit;
+  }
+
 @media (max-width: 1000px) {
   html {
     min-height: none;
