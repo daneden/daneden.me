@@ -87,6 +87,8 @@ body {
   font-size: 4.5rem;
   line-height: 1;
 
+  mix-blend-mode: hard-light;
+
   cursor: default;
   user-select: none;
   animation: rotate-color 10s steps(1, end) infinite;
