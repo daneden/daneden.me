@@ -105,6 +105,8 @@ body {
 
 .main-image {
   margin: 0;
+  animation: rotate-bg-color 10s steps(1, end) infinite;
+  animation-delay: -4s;
 }
 
   .main-image__image {
