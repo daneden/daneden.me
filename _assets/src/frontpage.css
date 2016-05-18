@@ -35,7 +35,8 @@ html {
   font: 100%/1.5 var(--sans-serif);
   -webkit-font-smoothing: antialiased;
   color: #25282B;
-  background-color: #D9D9D9;
+  background-color: var(--site-color);
+  animation: rotate-bg-color 10s steps(1, end) infinite;
 
   background-image: url('/static/images/t1.svg'),
                     url('/static/images/t2.svg'),
@@ -46,6 +47,14 @@ html {
                        center right 1.5rem,
                        bottom 1.5rem center,
                        center left 1.5rem;
+}
+
+@keyframes rotate-bg-color {
+   0% { background-color: #866FED; }
+  20% { background-color: #72B6EC; }
+  40% { background-color: #ED7A6F; }
+  60% { background-color: #86C49A; }
+  80% { background-color: #FCE897; }
 }
 
 body {
@@ -80,6 +89,16 @@ body {
 
   cursor: default;
   user-select: none;
+  animation: rotate-color 10s steps(1, end) infinite;
+  animation-delay: -2s;
+}
+
+@keyframes rotate-color {
+   0% { color: #866FED; }
+  20% { color: #72B6EC; }
+  40% { color: #ED7A6F; }
+  60% { color: #86C49A; }
+  80% { color: #FCE897; }
 }
 
 .main-image {
@@ -132,7 +151,9 @@ body {
   }
 
   .main-image {
-    min-height: 40vh;
+    height: 40vh;
+    min-height: 12rem;
+    margin-bottom: 1.5rem;
   }
 
   .uc-badge {
@@ -141,7 +162,7 @@ body {
 
   .site-title {
     font-size: 3rem;
-    top: -.5rem;
-    left: -.5rem;
+    top: .5rem;
+    left: .5rem;
   }
 }
