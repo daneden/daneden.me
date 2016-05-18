@@ -64,7 +64,6 @@ body {
 .main {
   display: flex;
   align-items: stretch;
-  background-color: #fff;
   width: 100vw;
   height: 100vh;
   max-width: 1000px;
@@ -105,9 +104,17 @@ body {
 
 .main-image {
   margin: 0;
+  overflow: hidden;
+
   animation: rotate-bg-color 10s steps(1, end) infinite;
   animation-delay: -4s;
 }
+
+  @media (min-width: 1000px) {
+    .main-image {
+      border-bottom-left-radius: 4000px;
+    }
+  }
 
   .main-image__image {
     width: 100%;
@@ -118,6 +125,7 @@ body {
 
 .main-content {
   padding: 3rem;
+  background-color: #fff;
 }
 
 .uc-badge {
@@ -160,13 +168,12 @@ body {
   }
 
   .main-content {
-    padding: 1.5rem;
+    padding: 3rem 1.5rem;
   }
 
   .main-image {
     height: 40vh;
     min-height: 12rem;
-    margin-bottom: 1.5rem;
   }
 
   .uc-badge {
