@@ -126,11 +126,13 @@ body {
   right: -3.5rem;
   animation: badge-spin 5s infinite linear;
   transform-origin: center center;
+  transform: rotate3d(0,0,1,0);
+  will-change: transform;
 }
 
 @keyframes badge-spin {
   to {
-    transform: rotate(360deg);
+    transform: rotate3d(0,0,1,360deg);
   }
 }
 
