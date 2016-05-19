@@ -25,4 +25,7 @@ document.addEventListener('click', function(e){
 
     document.body.appendChild(n);
   }
-})
+});
+
+var c = ['c1', 'c2', 'c3', 'c4', 'c5'];
+document.documentElement.classList.add(c[Math.floor(Math.random() * c.length)])

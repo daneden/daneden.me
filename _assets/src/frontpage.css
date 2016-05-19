@@ -36,7 +36,6 @@ html {
   -webkit-font-smoothing: antialiased;
   color: #25282B;
   background-color: var(--site-color);
-  animation: rotate-bg-color 10s steps(1, end) infinite;
 
   background-image: url('/static/images/t1.svg'),
                     url('/static/images/t2.svg'),
@@ -49,13 +48,11 @@ html {
                        center left 1.5rem;
 }
 
-@keyframes rotate-bg-color {
-   0% { background-color: #866FED; }
-  20% { background-color: #72B6EC; }
-  40% { background-color: #ED7A6F; }
-  60% { background-color: #86C49A; }
-  80% { background-color: #FCE897; }
-}
+  .c1 { background-color: #866FED; }
+  .c2 { background-color: #72B6EC; }
+  .c3 { background-color: #ED7A6F; }
+  .c4 { background-color: #86C49A; }
+  .c5 { background-color: #FCE897; }
 
 body {
   position: static;
@@ -90,24 +87,19 @@ body {
 
   cursor: default;
   user-select: none;
-  animation: rotate-color 10s steps(1, end) infinite;
-  animation-delay: -2s;
 }
 
-@keyframes rotate-color {
-   0% { color: #866FED; }
-  20% { color: #72B6EC; }
-  40% { color: #ED7A6F; }
-  60% { color: #86C49A; }
-  80% { color: #FCE897; }
-}
+  .c1 .site-title { color: #72B6EC; }
+  .c2 .site-title { color: #ED7A6F; }
+  .c3 .site-title { color: #86C49A; }
+  .c4 .site-title { color: #FCE897; }
+  .c5 .site-title { color: #866FED; }
 
 .main-image {
   margin: 0;
   overflow: hidden;
 
-  animation: rotate-bg-color 10s steps(1, end) infinite;
-  animation-delay: -4s;
+  background-color: currentColor;
 }
 
   @media (min-width: 1000px) {
