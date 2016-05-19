@@ -169,7 +169,7 @@ body {
   }
 
   .uc-badge {
-    animation-direction: reverse;
+    display: none;
   }
 
   .site-title {
