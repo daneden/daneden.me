@@ -58,7 +58,18 @@ body {
   position: static;
 }
 
+.wrap {
+  position: static;
+  perspective: 800px;
+  perspective-origin: top center;
+}
+
 .main {
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.main-wrap {
   display: flex;
   align-items: stretch;
   width: 100vw;
@@ -83,7 +94,7 @@ body {
   font-size: 4.5rem;
   line-height: 1;
 
-  mix-blend-mode: hard-light;
+  transform: translateZ(50px) scale(0.95);
 
   cursor: default;
   user-select: none;
@@ -124,10 +135,13 @@ body {
   position: absolute;
   top: -3.5rem;
   right: -3.5rem;
+
   animation: badge-spin 5s infinite linear;
-  transform-origin: center center;
   transform: rotate3d(0,0,1,0);
+  transform-origin: center center;
+
   will-change: transform;
+  user-select: none;
 }
 
 @keyframes badge-spin {
@@ -150,7 +164,7 @@ body {
     min-height: none;
   }
 
-  .main {
+  .main-wrap {
     max-height: none;
     max-width: 500px;
     height: auto;
@@ -178,5 +192,6 @@ body {
     font-size: 3rem;
     top: .5rem;
     left: .5rem;
+    transform: none;
   }
 }
