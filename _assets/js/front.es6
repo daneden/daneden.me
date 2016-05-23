@@ -1,6 +1,7 @@
 let el = document.querySelector('.j1'),
     jb = document.querySelector('.jb'),
-    main = document.querySelector('.main')
+    main = document.querySelector('.main'),
+    mainImg = document.querySelector('.main-image__image')
     em = ['em-poop', 'em-hundred', 'em-sparkles', 'em-peace'],
     z = [-1, 0, 1];
 
@@ -40,7 +41,9 @@ document.addEventListener('mousemove', function(e){
 
   if(mq.matches) {
     main.style.transform = `rotateX(${rx}deg) rotateY(${-ry}deg)`
+    mainImg.style.objectPosition = `${ry*2}px ${rx}px`
   } else {
     main.style.transform = ""
+    main.style.objectPosition = ""
   }
 });

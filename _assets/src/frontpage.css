@@ -110,7 +110,7 @@ body {
   margin: 0;
   overflow: hidden;
 
-  background-color: currentColor;
+  background-color: #000207;
 }
 
   @media (min-width: 1000px) {
