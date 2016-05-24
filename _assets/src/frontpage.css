@@ -111,6 +111,8 @@ body {
   overflow: hidden;
 
   background-color: #000207;
+  transform-style: preserve-3d;
+  will-change: transform;
 }
 
   @media (min-width: 1000px) {
@@ -124,6 +126,7 @@ body {
     height: 100%;
     object-fit: cover;
     position: absolute;
+    transform: scale(1.05);
   }
 
 .main-content {
@@ -162,12 +165,23 @@ body {
 @media (max-width: 1000px) {
   html {
     min-height: none;
+    padding: 2.5rem;
+
+    font-size: 87.5%;
+
+    background-size: auto .5rem,
+                     .5rem auto;
+    background-position: top 1rem center,
+                         center right 1rem,
+                         bottom 1rem center,
+                         center left 1rem;
   }
 
   .main-wrap {
     max-height: none;
     max-width: 500px;
     height: auto;
+    width: auto;
     flex-direction: column;
   }
 
@@ -176,7 +190,7 @@ body {
   }
 
   .main-content {
-    padding: 3rem 1.5rem;
+    padding: 1.5rem;
   }
 
   .main-image {
@@ -190,8 +204,7 @@ body {
 
   .site-title {
     font-size: 3rem;
-    top: .5rem;
-    left: .5rem;
-    transform: none;
+    top: -1rem;
+    left: -1rem;
   }
 }

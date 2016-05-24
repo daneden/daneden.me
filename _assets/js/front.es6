@@ -33,17 +33,12 @@ let c = ['c1', 'c2', 'c3', 'c4', 'c5'];
 document.documentElement.classList.add(c[Math.floor(Math.random() * c.length)])
 
 document.addEventListener('mousemove', function(e){
-  let mq = window.matchMedia("(min-width: 1000px)"),
-      w = getComputedStyle(document.documentElement).width.slice(0,-2),
+  let w = getComputedStyle(document.documentElement).width.slice(0,-2),
       h = getComputedStyle(document.documentElement).height.slice(0,-2),
       rx = ((h / 2) - e.pageY) / 50,
       ry = ((w / 2) - e.pageX) / 100;
 
-  if(mq.matches) {
-    main.style.transform = `rotateX(${rx}deg) rotateY(${-ry}deg)`
-    mainImg.style.objectPosition = `${ry*2}px ${rx}px`
-  } else {
-    main.style.transform = ""
-    main.style.objectPosition = ""
-  }
+  main.style.transform = `rotateX(${rx}deg) rotateY(${-ry}deg)`
+  mainImg.style.transform = `translate3d(${ry*2}px, ${rx*2}px, 0)
+                             scale(1.05)`
 });
