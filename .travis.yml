@@ -13,3 +13,6 @@ before_install:
   - bundle install
   - npm install -g gulp-cli
   - ./scripts/setup-prod.sh
+
+script:
+  - gulp build
