@@ -10,8 +10,8 @@ cache:
 
 before_install:
   - rvm install 2.3.0
-  - bundle install
   - npm install -g gulp-cli
+  - npm install
   - ./scripts/setup-prod.sh
 
 script:
