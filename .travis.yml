@@ -11,5 +11,5 @@ cache:
 before_install:
   - rvm install 2.3.0
   - bundle install
-  - npm install -g gulp gulp-cli
+  - npm install -g gulp-cli
   - cat "production: true" > _config_local.yml
