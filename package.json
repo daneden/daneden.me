@@ -13,6 +13,9 @@
     "url": "https://github.com/daneden/daneden.me/issues"
   },
   "homepage": "https://github.com/daneden/daneden.me#readme",
+  "scripts": {
+    "test": "gulp build"
+  },
   "devDependencies": {
     "browser-sync": "*",
     "gulp": "*",

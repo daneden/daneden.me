@@ -1,0 +1,14 @@
+sudo: false
+
+language: node
+node_js:
+  - "6"
+
+cache:
+  directories:
+    - node_modules
+
+before_install:
+  - bundle install
+  - npm install -g gulp gulp-cli
+  - cat "production: true" > _config_local.yml
