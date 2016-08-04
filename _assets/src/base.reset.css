@@ -27,7 +27,6 @@ img {
 
 ul, ol {
   padding-left: var(--baseline);
-  overflow: auto;
 }
 
   li ul, li ol {
