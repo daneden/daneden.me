@@ -4,7 +4,7 @@
 
 name: "Daniel T. Eden, Designer"
 description: Designer
-url: http://daneden.me
+url: https://daneden.me
 
 markdown: kramdown
 
@@ -18,6 +18,13 @@ highlighter: true
 
 permalink: pretty
 
+defaults:
+  -
+    scope:
+      path: ""
+      type: posts
+    values:
+      is_post: true
 
 #==============================
 # File inclusions/exclusions
