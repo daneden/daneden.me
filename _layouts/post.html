@@ -2,12 +2,12 @@
 
 <main class="wrap site__content page" role="main">
 
-<article class="hentry">
+<article class="hentry" itemscope itemtype="http://schema.org/Article">
   <header class="page__header">
-    <h1 class="page__title">{{ page.title | widont }}</h1>
-    <p class="post__date hide">{{ page.date | date: "%A %-d %B %Y" }}</p>
+    <h1 class="page__title" itemprop="name headline">{{ page.title | widont }}</h1>
+    <p class="post__date hide"><time itemprop="datePublished" datetime={{page.date}}>{{ page.date | date: "%A %-d %B %Y" }}</time></p>
   </header>
-  <div class=" page__content">
+  <div class="page__content" itemprop="articleBody">
     {{ content }}
   </div>
 </article>

@@ -10,7 +10,7 @@
   <meta property="og:title" content="{{ page.title | xml_escape }}"/>
   <meta property="og:type" content="{% if page.is_post %}article{% else %}website{% endif %}" />
   <meta property="og:site_name" content="{{ site.name | xml_escape }}"/>
-  <meta property="og:url" content="{{ page.url }}"/>
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}"/>
   <meta property="og:description" content="{{ page.excerpt | strip_html | xml_escape }}"/>
   <meta property="og:image" content={% if page.hero %}
     "{{ site.url }}/uploads/{{ page.hero }}"
