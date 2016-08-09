@@ -11,7 +11,7 @@ I'm currently living and working in San Francisco as a Product Designer for
 Engineer for [Dropbox](https://dropbox.com).
 
 I spend my time [Tweeting](http://twitter.com/_dte "@_dte on Twitter"),
-taking [photographs](https://www.instagram.com/_dte/ "@_dte on Instagram"),
+taking [photographs](https://photos.daneden.me/ "Daniel's Photography"),
 and [writing code](https://github.com/daneden "daneden on GitHub").
 
 I'm currently unavailable for work, but you can take a look at
