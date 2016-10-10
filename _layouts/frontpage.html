@@ -5,8 +5,6 @@
   <meta name="viewport" content="initial-scale=1" />
   <meta name="p:domain_verify" content="aa712630840b421410cce3b56d2dc764" />
 
-  <meta rel="dns-prefetch" href="//daneden.imgix.net" />
-
   <meta property="og:title" content="Daniel Eden, Designer"/>
   <meta property="og:url" content="{{ page.url }}"/>
   <meta property="og:description" content="{{ page.excerpt | strip_html | xml_escape }}"/>
@@ -34,7 +32,6 @@
     <main class="fl50 main-content">
       {{ content }}
     </main>
-    {% include scripts.html %}
     <script>
       {% asset 'front' %}
     </script>

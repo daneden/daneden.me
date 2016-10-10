@@ -1,13 +1,9 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  position: relative;
-}
+@import "base.variables.css";
+@import "base.reset.css";
 
 html {
   height: 100%;
-  font: 125%/1.5 "BlinkMacSystemFont", -apple-system, "Helvetica Neue", sans-serif;
+  font: 125%/1.5 var(--sans-serif);
   background-color: #000207;
   color: #ebeef1;
 }

@@ -9,10 +9,10 @@ url: https://daneden.me
 markdown: kramdown
 
 color:
-  - "#72B6EC" # Spring
-  - "#fcb500" # Summer
-  - "#c64f51" # Fall
-  - "#a881a2" # Winter
+  - "#ED5522"
+  - "#72B6EC"
+  - "#c64f51"
+  - "#a881a2"
 
 highlighter: true
 

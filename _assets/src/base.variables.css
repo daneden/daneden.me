@@ -7,13 +7,13 @@
 :root {
   --baseline: 1.7778rem;
 
-  --site-color: #72B6EC;
+  --site-color: #ED5522;
   --text-color: #3D464D;
   --meta-color: #9EA3A6;
 
   --monospace: "Input Mono", "Source Code Pro", "Monaco", monospace;
 
-  --sans-serif-fallback: "Helvetica Neue", Helvetica, sans-serif;
+  --sans-serif-fallback: "BlinkMacSystemFont", -apple-system, "Helvetica Neue", Helvetica, sans-serif;
   --sans-serif: "Neue Haas Unica Web", var(--sans-serif-fallback);
 
   --serif-fallback: "Georgia", "Times New Roman", serif;
