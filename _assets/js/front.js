@@ -1,13 +1,3 @@
-// Simple requestAnimationFrame polyfill/fallback
-window.requestAnimFrame = (function(){
-  return window.requestAnimationFrame  ||
-    window.webkitRequestAnimationFrame ||
-    window.mozRequestAnimationFrame    ||
-    function(callback) {
-      window.setTimeout(callback, 1000 / 60);
-    };
-})();
-
 let noOfPoints = 3; // the initial number of points for our shape
 let points = initPoints(noOfPoints); // array of 2-dimensional vectors
 let width, height; // width & height globals to set canvas size
@@ -65,7 +55,8 @@ function clearCanvas(ctx, p) {
   let ymax = py.reduce((a, b) => Math.max(a, b)) * (height/100);
   let ymin = py.reduce((a, b) => Math.min(a, b)) * (height/100);
 
-  ctx.clearRect(xmin, ymin, xmax, ymax);
+  ctx.fillStyle = '#000207';
+  ctx.fillRect(xmin - 1, ymin - 1, xmax + 1, ymax + 1);
 }
 
 // drawPoints takes a canvas context and an array of points, iterates over
@@ -73,12 +64,22 @@ function clearCanvas(ctx, p) {
 function drawPoints(ctx, p) {
   ctx.fillStyle = 'rgba(239, 84, 13, 1)';
   ctx.beginPath();
-  ctx.moveTo(p[0][0] * (width/100), p[0][1] * (height/100));
+  ctx.moveTo(Math.round(p[0][0] * (width/100)), Math.round(p[0][1] * (height/100)));
   for(let i = 1; i < p.length; i++) {
-    ctx.lineTo(p[i][0] * (width/100), p[i][1] * (height/100));
+    ctx.lineTo(Math.round(p[i][0] * (width/100)), Math.round(p[i][1] * (height/100)));
   }
   ctx.closePath();
   ctx.fill();
+}
+
+function growPoints() {
+  noOfPoints++;
+  if(noOfPoints == 10) {
+    noOfPoints = 3;
+  }
+  points = initPoints(noOfPoints)
+  c.fillStyle = '#000207';
+  c.fillRect(0,0,width,height)
 }
 
 // jitter accepts an array of 2-dimensional points and randomly shifts them
@@ -93,26 +94,19 @@ function jitter(p) {
 }
 
 function animloop(){
-  requestAnimFrame(animloop);
+  requestAnimationFrame(animloop);
   clearCanvas(c, points); // clear the canvas of old points
   points = jitter(points); // shuffle the points around a tad
   drawPoints(c, points); // draw the new points to the canvas
 }
 
-// Showtime
-render();
-
-
 // Event listeners
 // When the user clicks, generate a new, more complex polygon
-document.addEventListener('click', function() {
-  noOfPoints++;
-  if(noOfPoints == 10) {
-    noOfPoints = 3;
-  }
-  points = initPoints(noOfPoints)
-  c.clearRect(0,0,width,height)
-});
+document.addEventListener('click', growPoints);
+document.addEventListener('touchend', growPoints);
 
 // When the user resizes the window, rerender
 window.addEventListener('resize', render);
+
+// Showtime
+render();
