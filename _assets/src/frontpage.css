@@ -1,6 +1,8 @@
 @import "base.variables.css";
 @import "base.reset.css";
 
+@import "utilities.display.css";
+
 html {
   height: 100%;
   font: 125%/1.5 var(--sans-serif);
@@ -9,8 +11,9 @@ html {
 }
 
 h1 {
+  color: #F59B3C;
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 h1, p {
