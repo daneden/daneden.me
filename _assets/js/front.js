@@ -65,7 +65,7 @@ function clearCanvas(ctx, p) {
   let ymax = py.reduce((a, b) => Math.max(a, b)) * (height/100);
   let ymin = py.reduce((a, b) => Math.min(a, b)) * (height/100);
 
-  ctx.clearRect(0, 0, xmax, ymax);
+  ctx.clearRect(xmin, ymin, xmax, ymax);
 }
 
 // drawPoints takes a canvas context and an array of points, iterates over
