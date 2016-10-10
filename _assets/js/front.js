@@ -1,45 +1,77 @@
-'use strict';
+(function() {
+  var width = document.documentElement.clientWidth;
+  var height = document.documentElement.clientHeight;
 
-var el = document.querySelector('.j1'),
-    jb = document.querySelector('.jb'),
-    main = document.querySelector('.main'),
-    mainImg = document.querySelector('.main-image__image'),
-    em = ['em-poop', 'em-hundred', 'em-sparkles', 'em-peace'],
-    z = [-1, 0, 1];
+  var canvas = document.createElement('canvas');
+  canvas.style.position = 'absolute';
+  canvas.style.top = '0px';
+  canvas.style.left = '0px';
+  canvas.style.zIndex = '-1';
+  canvas.width = width;
+  canvas.height = height;
+  var c = canvas.getContext('2d');
+  c.fillStyle = 'rgba(239, 84, 13, 1)';
+  document.body.appendChild(canvas);
 
-document.addEventListener('click', function (e) {
-    if (e.target == jb) {
-        var s = Math.round(Math.random() * (70 + 10) + 10),
-            n = document.createElement('span'),
-            d = document.createElementNS('http://www.w3.org/2000/svg', 'svg'),
-            ds = document.createElementNS('http://www.w3.org/2000/svg', 'use');
+  window.requestAnimFrame = (function(){
+    return  window.requestAnimationFrame       ||
+            window.webkitRequestAnimationFrame ||
+            window.mozRequestAnimationFrame    ||
+            function( callback ){
+              window.setTimeout(callback, 1000 / 60);
+            };
+  })();
 
-        ds.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', "#" + em[Math.floor(Math.random() * em.length)]);
+  var noOfPoints = 3;
+  var points = [];
 
-        d.classList.add('emegg');
-        d.setAttribute('width', s);
-        d.setAttribute('height', s);
-
-        d.appendChild(ds);
-        n.appendChild(d);
-        n.style.position = "absolute";
-        n.style.top = String(Math.random() * 90 + "vh");
-        n.style.left = String(Math.random() * 90 + "vw");
-        n.style.zIndex = z[Math.floor(Math.random() * z.length)];
-
-        document.body.appendChild(n);
+  function initPoints(n) {
+    points = [];
+    for(var i = 0; i < n; i++) {
+      points.push(getRandomPoint(width, height));
     }
-});
+  }
 
-var c = ['c1', 'c2', 'c3', 'c4', 'c5'];
-document.documentElement.classList.add(c[Math.floor(Math.random() * c.length)]);
+  initPoints(noOfPoints);
 
-document.addEventListener('mousemove', function (e) {
-    var w = getComputedStyle(document.documentElement).width.slice(0, -2),
-        h = getComputedStyle(document.documentElement).height.slice(0, -2),
-        rx = (h / 2 - e.pageY) / 50,
-        ry = (w / 2 - e.pageX) / 100;
+  function getRandomPoint(w, h) {
+    return [Math.random() * w, Math.random() * h];
+  }
 
-    main.style.transform = 'rotateX(' + rx + 'deg) rotateY(' + -ry + 'deg)';
-    mainImg.style.transform = 'translate3d(' + ry * 2 + 'px, ' + rx * 2 + 'px, 0)\n                             scale(1.05)';
-});
+  function drawPoints(p) {
+    c.clearRect(0, 0, width, height);
+    c.beginPath();
+    c.moveTo(p[0][0], p[0][1]);
+    for(var i = 1; i < p.length; i++) {
+      c.lineTo(p[i][0], p[i][1]);
+    }
+    c.closePath();
+    c.fill();
+  }
+
+  (function animloop(){
+    requestAnimFrame(animloop);
+    jitter(points);
+  })();
+
+  function jitter(p) {
+    for(var j = 0; j < p.length; j++) {
+      (function(i) {
+        p[i][0] += (Math.random() * 2) - 1;
+        p[i][1] += (Math.random() * 2) - 1;
+      })(j);
+    }
+
+    drawPoints(p);
+  }
+
+  drawPoints(points);
+
+  document.addEventListener('click', function() {
+    noOfPoints++;
+    if(noOfPoints == 10) {
+      noOfPoints = 3;
+    }
+    initPoints(noOfPoints)
+  });
+})();

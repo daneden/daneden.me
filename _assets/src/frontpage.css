@@ -1,10 +1,3 @@
-
-@import "base.variables.css";
-@import "base.reset.css";
-
-@import "utilities.display.css";
-@import "utilities.spacing.css";
-
 * {
   margin: 0;
   padding: 0;
@@ -12,205 +5,47 @@
   position: relative;
 }
 
-header {
-  position: static;
+html {
+  height: 100%;
+  font: 125%/1.5 "BlinkMacSystemFont", -apple-system, "Helvetica Neue", sans-serif;
+  background-color: #000207;
+  color: #ebeef1;
+}
+
+h1 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+h1, p {
+  margin-bottom: 1.5rem;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 3rem;
+  max-width: 30rem;
 }
 
 a {
   color: inherit;
+  text-decoration: none;
+  border-bottom: 2px solid rgba(255,255,255,.3);
 }
 
-  a:hover {
-    color: var(--site-color);
+  a:hover, a:focus {
+    border-bottom-color: inherit;
   }
 
-html {
-  min-height: 100vh;
-  max-width: 100vw;
-  overflow-x: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  font: 100%/1.5 var(--sans-serif);
-  -webkit-font-smoothing: antialiased;
-  color: #25282B;
-  background-color: var(--site-color);
-
-  background-image: url('/static/images/t1.svg'),
-                    url('/static/images/t2.svg'),
-                    url('/static/images/t3.svg'),
-                    url('/static/images/t4.svg');
-  background-repeat: no-repeat;
-  background-position: top 1.5rem center,
-                       center right 1.5rem,
-                       bottom 1.5rem center,
-                       center left 1.5rem;
-}
-
-  .c1 { background-color: #866FED; }
-  .c2 { background-color: #72B6EC; }
-  .c3 { background-color: #ED7A6F; }
-  .c4 { background-color: #86C49A; }
-  .c5 { background-color: #F1B8CB; }
-
-body {
-  position: static;
-}
-
-.wrap {
-  position: static;
-  perspective: 800px;
-  perspective-origin: top center;
-}
-
-.main {
-  transform-style: preserve-3d;
-  will-change: transform;
-}
-
-.main-wrap {
-  display: flex;
-  align-items: stretch;
-  width: 100vw;
-  height: 100vh;
-  max-width: 1000px;
-  max-height: 500px;
-}
-
-.fl50 {
-  flex: 1 1 50%;
-}
-
-.site-title {
-  position: absolute;
-  top: -3rem;
-  left: -1.5rem;
-  width: 5em;
-  z-index: 1;
-
-  color: #fff;
-  font-weight: 400;
-  font-size: 4.5rem;
-  line-height: 1;
-
-  transform: translateZ(50px) scale(0.95);
-
-  cursor: default;
-  user-select: none;
-}
-
-  .site-title svg {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-
-  .c1 .site-title path { fill: #72B6EC; }
-  .c2 .site-title path { fill: #ED7A6F; }
-  .c3 .site-title path { fill: #86C49A; }
-  .c4 .site-title path { fill: #FCE897; }
-  .c5 .site-title path { fill: #866FED; }
-
-.main-image {
-  margin: 0;
-  overflow: hidden;
-
-  background-color: #000207;
-  transform-style: preserve-3d;
-  will-change: transform;
-}
-
-  @media (min-width: 1000px) {
-    .main-image {
-      border-bottom-left-radius: 4000px;
-    }
-  }
-
-  .main-image__image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    transform: scale(1.05);
-  }
-
-.main-content {
-  padding: 3rem;
-  background-color: #fff;
-}
-
-.uc-badge {
-  position: absolute;
-  top: -3.5rem;
-  right: -3.5rem;
-
-  animation: badge-spin 5s infinite linear;
-  transform: rotate3d(0,0,1,0);
-  transform-origin: center center;
-
-  will-change: transform;
-  user-select: none;
-}
-
-@keyframes badge-spin {
-  to {
-    transform: rotate3d(0,0,1,360deg);
-  }
-}
-
-.emegg {
-  fill: #fff;
-  mix-blend-mode: hard-light;
-}
-
-  .emegg path {
-    fill: inherit;
-  }
-
-@media (max-width: 1000px) {
+@media(max-width: 500px) {
   html {
-    min-height: none;
-    padding: 2.5rem;
-
-    font-size: 87.5%;
-
-    background-size: auto .5rem,
-                     .5rem auto;
-    background-position: top 1rem center,
-                         center right 1rem,
-                         bottom 1rem center,
-                         center left 1rem;
+    font-size: 100%;
   }
 
-  .main-wrap {
-    max-height: none;
-    max-width: 500px;
-    height: auto;
-    width: auto;
-    flex-direction: column;
-  }
-
-  .fl50 {
-    flex: none;
-  }
-
-  .main-content {
-    padding: 1.5rem;
-  }
-
-  .main-image {
-    height: 40vh;
-    min-height: 12rem;
-  }
-
-  .uc-badge {
-    display: none;
-  }
-
-  .site-title {
-    font-size: 3rem;
-    top: -1rem;
-    left: -1rem;
+  body {
+    padding: 2rem;
   }
 }
+
