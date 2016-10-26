@@ -39,6 +39,7 @@ body {
   flex-grow: 1;
   max-width: 50%;
   mix-blend-mode: multiply;
+  z-index: -1;
   opacity: 0.5;
 }
 
