@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Drawing With Numbers
+hero: 2016/11/dwn-moons.png
 ---
 
 I’ve never considered myself much of an artist. My creativity has always found
@@ -25,6 +26,8 @@ LeWitt. One piece features thousands, perhaps millions, of hand-drawn lines, in
 a variety of patterns. The cumulative effect of line after line creates an
 array of sometimes wildly different visualizations.
 
+{% figure img-fullbleed 2016/11/dwn-sollewitt.jpg "A close-up of one of Sol LeWitt’s intricate pieces. It’s hard to do his work justice on a screen." %}
+
 The dedication and vision to create installations like this was boggling. It
 made me itch to create. I can’t draw, but I *can* tell computers to draw for
 me.
@@ -36,7 +39,7 @@ back of one of Dropbox’s design team sweatshirts, created by [Kristen
 Spilman](https://twitter.com/kspilman). It’s simple enough—an array of
 rectangles, each rotated so they’re pointing towards a point in space.
 
-[Picture of the sweatshirt]
+{% figure img-fullbleed 2016/11/dwn-dropbox.jpg %}
 
 I started by trying to recreate this design with a single rectangle using HTML
 canvas. This taught me two things:
@@ -56,7 +59,7 @@ drawing toolkit.
 I moved what I had learned into a p5 sketch, and before long, I had a real-life
 version of what I had first set out to create.
 
-<p data-height="432" data-theme-id="light" data-slug-hash="MjNZJa" data-default-tab="result" data-user="daneden" data-embed-version="2" data-pen-title="p5.js A2" class="codepen">See the Pen <a href="http://codepen.io/daneden/pen/MjNZJa/">p5.js A2</a> by Daniel Eden (<a href="http://codepen.io/daneden">@daneden</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<p data-height="300" data-theme-id="26171" data-slug-hash="MjNZJa" data-default-tab="result" data-user="daneden" data-embed-version="2" data-pen-title="p5.js A2" class="codepen">See the Pen <a href="http://codepen.io/daneden/pen/MjNZJa/">p5.js A2</a> by Daniel Eden (<a href="http://codepen.io/daneden">@daneden</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 ## Graduating From JavaScript
