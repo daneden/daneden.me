@@ -1,79 +1,210 @@
+
 @import "base.variables.css";
 @import "base.reset.css";
 
 @import "utilities.display.css";
+@import "utilities.spacing.css";
 
-html {
-  height: 100%;
-  font: 125%/1.5 var(--sans-serif);
-  background-color: #ebeef1;
-  color: #000207;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
 }
 
-h1 {
-  color: var(--site-color);
-  font-size: 1rem;
-  font-weight: 400;
+header {
+  position: static;
 }
-
-h1, p {
-  margin-bottom: 1.5rem;
-}
-
-body {
-  display: flex;
-  align-items: space-between;
-  height: 100%;
-}
-
-.main-content {
-  padding: 3rem;
-  flex-basis: 40%;
-  max-width: 30rem;
-  flex-shrink: 0;
-}
-
-.frontpage__shell {
-  display: flex;
-  align-items: center;
-  flex-grow: 1;
-  max-width: 50%;
-  mix-blend-mode: multiply;
-  z-index: -1;
-  opacity: 0.5;
-}
-
-  .frontpage__shell > img {
-    max-height: 100vh;
-  }
 
 a {
   color: inherit;
-  text-decoration: none;
-  border-bottom: 2px solid rgba(0,0,0,.3);
 }
 
-  a:hover, a:focus {
-    border-bottom-color: inherit;
+  a:hover {
+    color: var(--site-color);
   }
 
-@media(max-width: 1000px) {
+html {
+  min-height: 100vh;
+  max-width: 100vw;
+  overflow-x: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font: 100%/1.5 var(--sans-serif);
+  -webkit-font-smoothing: antialiased;
+  color: #25282B;
+  background-color: var(--site-color);
+
+  background-image: url('/static/images/t1.svg'),
+                    url('/static/images/t2.svg'),
+                    url('/static/images/t3.svg'),
+                    url('/static/images/t4.svg');
+  background-repeat: no-repeat;
+  background-position: top 1.5rem center,
+                       center right 1.5rem,
+                       bottom 1.5rem center,
+                       center left 1.5rem;
+}
+
+  .c1 { background-color: #866FED; }
+  .c2 { background-color: #72B6EC; }
+  .c3 { background-color: #ED7A6F; }
+  .c4 { background-color: #86C49A; }
+  .c5 { background-color: #F1B8CB; }
+
+body {
+  position: static;
+}
+
+.wrap {
+  position: static;
+  perspective: 800px;
+  perspective-origin: top center;
+}
+
+.main {
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.main-wrap {
+  display: flex;
+  align-items: stretch;
+  width: 100vw;
+  height: 100vh;
+  max-width: 1000px;
+  max-height: 500px;
+}
+
+.fl50 {
+  flex: 1 1 50%;
+}
+
+.site-title {
+  position: absolute;
+  top: -3rem;
+  left: -1.5rem;
+  width: 4em;
+  z-index: 1;
+
+  color: #fff;
+  font-weight: 400;
+  font-size: 4.5rem;
+  line-height: 1;
+
+  transform: translateZ(50px) scale(0.95);
+
+  cursor: default;
+  user-select: none;
+}
+
+  .c1 .site-title { color: #72B6EC; }
+  .c2 .site-title { color: #ED7A6F; }
+  .c3 .site-title { color: #86C49A; }
+  .c4 .site-title { color: #FCE897; }
+  .c5 .site-title { color: #866FED; }
+
+.main-image {
+  margin: 0;
+  overflow: hidden;
+
+  background-color: #000207;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+  @media (min-width: 1000px) {
+    .main-image {
+      border-bottom-left-radius: 4000px;
+    }
+  }
+
+  .main-image__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    transform: scale(1.05);
+  }
+
+.main-content {
+  padding: 3rem;
+  background-color: #fff;
+}
+
+.uc-badge {
+  position: absolute;
+  top: -3.5rem;
+  right: -3.5rem;
+
+  animation: badge-spin 5s infinite linear;
+  transform: rotate3d(0,0,1,0);
+  transform-origin: center center;
+
+  will-change: transform;
+  user-select: none;
+}
+
+@keyframes badge-spin {
+  to {
+    transform: rotate3d(0,0,1,360deg);
+  }
+}
+
+.emegg {
+  fill: #fff;
+  mix-blend-mode: hard-light;
+}
+
+  .emegg path {
+    fill: inherit;
+  }
+
+@media (max-width: 1000px) {
   html {
-    font-size: 100%;
+    min-height: none;
+    padding: 2.5rem;
+
+    font-size: 87.5%;
+
+    background-size: auto .5rem,
+                     .5rem auto;
+    background-position: top 1rem center,
+                         center right 1rem,
+                         bottom 1rem center,
+                         center left 1rem;
   }
 
-  body {
+  .main-wrap {
+    max-height: none;
+    max-width: 500px;
+    height: auto;
+    width: auto;
     flex-direction: column;
   }
 
-  .main-content {
-    flex-basis: auto;
-    padding: 2rem;
+  .fl50 {
+    flex: none;
   }
 
-  .frontpage__shell {
-    max-width: none;
-    opacity: 0.2;
+  .main-content {
+    padding: 1.5rem;
+  }
+
+  .main-image {
+    height: 40vh;
+    min-height: 12rem;
+  }
+
+  .uc-badge {
+    display: none;
+  }
+
+  .site-title {
+    font-size: 3rem;
+    top: -1rem;
+    left: -1rem;
   }
 }
-

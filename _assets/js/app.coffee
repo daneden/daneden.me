@@ -6,4 +6,5 @@
 # Home-made scripts
 # =================
 #
+#= require init
 #= require punctuation

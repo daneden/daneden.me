@@ -5,6 +5,8 @@
   <meta name="viewport" content="initial-scale=1" />
   <meta name="p:domain_verify" content="aa712630840b421410cce3b56d2dc764" />
 
+  <meta rel="dns-prefetch" href="//daneden.imgix.net" />
+
   <meta property="og:title" content="Daniel Eden, Designer"/>
   <meta property="og:url" content="{{ page.url }}"/>
   <meta property="og:description" content="{{ page.excerpt | strip_html | xml_escape }}"/>
@@ -25,20 +27,52 @@
   <link rel="mask-icon" sizes="any" href="/static/images/icon-mask.svg" color="{{ site.color[0] }}" />
 
   <body>
+    <aside class="hide">
+      {% asset_source 'emoji-sprite.svg' %}
+    </aside>
     <!-- You know, rather than reading the source like a chump, you can see it all on GitHub like a champ: https://github.com/daneden/daneden.me -->
-    <main class="main-content">
-      <h1 class="site-title">
-        {{ site.name }}
-      </h1>
-      {{ content }}
-    </main>
+    <div class="wrap">
+      <div class="main">
+        <h1 class="site-title">Dan<span class="jb">i</span>el Eden<span class="ja">,</span> Designer</h1>
+        <div class="main-wrap">
+          <figure class="main-image fl50">
+            <img alt="A photo of Daniel Eden"
+                 data-src="//daneden.imgix.net/2016/05/face.jpeg?auto=format&amp;q=65"
+                 class="imgix-fluid main-image__image" />
 
-    {% figure frontpage__shell shells/export-0001.png %}
+            <noscript>
+              <img alt="A photo of Daniel Eden" src="/uploads/2016/05/face.jpeg" class="main-image__image" />
+            </noscript>
+          </figure>
+          <main class="fl50 main-content">
+            {{ content }}
+          </main>
+        </div>
 
+        <svg class="uc-badge" width=120 height=120 viewBox="-18 -18 120 120"
+             xmlns="http://www.w3.org/2000/svg"
+             xmlns:xlink="http://www.w3.org/1999/xlink">
+          <defs>
+            <path d="M41.5,83 C18.5801829,83 0,64.4198171 0,41.5 C0,18.5801829 18.5801829,0 41.5,0 C64.4198171,0 83,18.5801829 83,41.5 C83,64.4198171 64.4198171,83 41.5,83 L41.5,83 Z" id="text-path"></path>
+          </defs>
+          <text font-family="inherit"
+                font-weight=700
+                font-size="13"
+                letter-spacing=".3em"
+                text-align="justify"
+                text-anchor="start"
+                word-spacing="1.25em">
+            <textPath class="j1" xlink:href="#text-path">
+              UNDER CONSTRUCTION
+            </textPath>
+          </text>
+        </svg>
+      </div>
+    </div>
+    {% include scripts.html %}
     <script>
       {% asset 'front' %}
     </script>
-    {% include scripts.html %}
 
   </body>
 </html>
