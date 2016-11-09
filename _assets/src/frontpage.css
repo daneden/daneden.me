@@ -92,6 +92,7 @@ body {
   color: #fff;
   font-weight: 400;
   font-size: 4.5rem;
+  letter-spacing: -.03em;
   line-height: 1;
 
   transform: translateZ(50px) scale(0.95);
@@ -115,12 +116,6 @@ body {
   will-change: transform;
 }
 
-  @media (min-width: 1000px) {
-    .main-image {
-      border-bottom-left-radius: 4000px;
-    }
-  }
-
   .main-image__image {
     width: 100%;
     height: 100%;
@@ -132,6 +127,7 @@ body {
 .main-content {
   padding: 3rem;
   background-color: #fff;
+  transform: translateZ(1px);
 }
 
 .uc-badge {
