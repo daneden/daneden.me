@@ -1,8 +1,10 @@
 ---
 layout: post
 title: Drawing With Numbers
-hero: 2016/11/dwn-moons.png
+hero: 2016/11/dwn-cover.png
 ---
+
+{% figure 2016/11/dwn-cover.png %}
 
 I’ve never considered myself much of an artist. My creativity has always found
 its home in design and photography, practices which feel far less dependent on
