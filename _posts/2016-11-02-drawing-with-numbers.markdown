@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Drawing With Numbers
-hero: 2016/11/dwn-cover.png
+hero: 2017/01/shell.png
 ---
 
 {% figure 2016/11/dwn-cover.png %}
