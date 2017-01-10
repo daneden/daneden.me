@@ -4,7 +4,7 @@ title: Drawing With Numbers
 hero: 2017/01/shell.png
 ---
 
-{% figure 2016/11/dwn-cover.png %}
+{% figure 2017/01/shell.png %}
 
 I’ve never considered myself much of an artist. My creativity has always found
 its home in design and photography, practices which feel far less dependent on
