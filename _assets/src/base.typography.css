@@ -58,7 +58,7 @@ code, pre {
   font-size: .875rem;
 }
 
-hr, .footnotes::before {
+hr {
   content: '';
   display: block;
   width: 6rem;
@@ -95,8 +95,8 @@ blockquote {
   }
 
 mark {
-  color: #EF540D;
-  background-color: rgba(239, 84, 13, .1);
+  color: inherit;
+  background-color: rgba(0,0,0,.075);
 }
 
 .caps {

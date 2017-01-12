@@ -26,10 +26,6 @@
         color: var(--text-color);
       }
 
-  .site__title {
-    background-color: var(--text-color);
-  }
-
 .page__header {
   margin-bottom: calc(var(--baseline) * 2);
 }
