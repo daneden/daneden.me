@@ -12,7 +12,6 @@ cache:
 before_install:
   - rvm install 2.3.0
   - npm install -g gulp-cli
-  - yarn
   - ./scripts/setup-prod.sh
 
 script:
