@@ -2,7 +2,7 @@ sudo: false
 
 language: node
 node_js:
-  - "6"
+  - "6.1"
 
 cache:
   yarn: true
