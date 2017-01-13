@@ -54,7 +54,6 @@ gulp.task('jekyll-serve', function() {
   browserSync.init({ server: { baseDir: '_site/' } });
   gulp.watch('./_assets/src/*.css', ['styles']);
   gulp.watch('_site/**/*.*').on('change', browserSync.reload);
-  gulp.watch('_assets/css/index.css').on('change', browserSync.reload);
 });
 
 gulp.task('default', ['jekyll-build', 'jekyll-serve', 'styles']);
