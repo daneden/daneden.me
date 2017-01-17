@@ -35,7 +35,7 @@ html {
   font: 100%/1.5 var(--sans-serif);
   -webkit-font-smoothing: antialiased;
   color: #25282B;
-  background-color: #E5E0DA;
+  background-color: #D1CDC7;
 
   background-image: url('/static/images/t1.svg'),
                     url('/static/images/t2.svg'),
@@ -140,6 +140,22 @@ body {
 .emegg {
   fill: #fff;
 }
+
+  .emegg.em-poop {
+    fill: #6A4F3B;
+  }
+
+  .emegg.em-hundred {
+    fill: #F35369;
+  }
+
+  .emegg.em-sparkles {
+    fill: #FCD872;
+  }
+
+  .emegg.em-peace {
+    fill: #F1D2B6;
+  }
 
   .emegg path {
     fill: inherit;
