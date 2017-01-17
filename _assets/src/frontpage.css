@@ -35,7 +35,7 @@ html {
   font: 100%/1.5 var(--sans-serif);
   -webkit-font-smoothing: antialiased;
   color: #25282B;
-  background-color: var(--site-color);
+  background-color: #E5E0DA;
 
   background-image: url('/static/images/t1.svg'),
                     url('/static/images/t2.svg'),
@@ -47,12 +47,6 @@ html {
                        bottom 1.5rem center,
                        center left 1.5rem;
 }
-
-  .c1 { background-color: #866FED; }
-  .c2 { background-color: #72B6EC; }
-  .c3 { background-color: #ED7A6F; }
-  .c4 { background-color: #86C49A; }
-  .c5 { background-color: #F1B8CB; }
 
 body {
   position: static;
@@ -101,12 +95,6 @@ body {
   user-select: none;
 }
 
-  .c1 .site-title { color: #72B6EC; }
-  .c2 .site-title { color: #ED7A6F; }
-  .c3 .site-title { color: #86C49A; }
-  .c4 .site-title { color: #FCE897; }
-  .c5 .site-title { color: #866FED; }
-
 .main-image {
   margin: 0;
   overflow: hidden;
@@ -135,7 +123,7 @@ body {
   top: -3.5rem;
   right: -3.5rem;
 
-  animation: badge-spin 5s infinite linear;
+  animation: badge-spin 7.5s infinite linear;
   transform: rotate3d(0,0,1,0);
   transform-origin: center center;
 
@@ -151,7 +139,6 @@ body {
 
 .emegg {
   fill: #fff;
-  mix-blend-mode: hard-light;
 }
 
   .emegg path {
