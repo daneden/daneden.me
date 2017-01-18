@@ -40,5 +40,5 @@ document.addEventListener('mousemove', function (e) {
         ry = (w / 2 - e.pageX) / 100;
 
     main.style.transform = 'rotateX(' + rx + 'deg) rotateY(' + -ry + 'deg)';
-    mainImg.style.transform = 'translate3d(' + ry * 2 + 'px, ' + rx * 2 + 'px, 0) scale(1.05)';
+    mainImg.style.transform = 'translate3d(' + ry * 3 + 'px, ' + rx * 3 + 'px, 0)';
 });

@@ -99,7 +99,7 @@ body {
   margin: 0;
   overflow: hidden;
 
-  background-color: #000207;
+  background-color: #010001;
   transform-style: preserve-3d;
   will-change: transform;
 }
@@ -202,8 +202,9 @@ body {
   }
 
   .site-title {
-    font-size: 3rem;
+    font-size: 2.5rem;
     top: -1rem;
     left: -1rem;
+    transform: none;
   }
 }
