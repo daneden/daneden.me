@@ -48,4 +48,4 @@ function videoLoad() {
   v.setAttribute('src', v.getAttribute('data-src'))
 }
 
-window.onLoad = videoLoad
+window.onload = videoLoad
