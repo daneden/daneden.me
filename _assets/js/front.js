@@ -42,3 +42,10 @@ document.addEventListener('mousemove', function (e) {
     main.style.transform = 'rotateX(' + rx + 'deg) rotateY(' + -ry + 'deg)';
     mainImg.style.transform = 'translate3d(' + ry * 3 + 'px, ' + rx * 3 + 'px, 0)';
 });
+
+function videoLoad() {
+  let v = document.querySelector('.main-image__image')
+  v.setAttribute('src', v.getAttribute('data-src'))
+}
+
+window.onLoad = videoLoad
