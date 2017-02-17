@@ -12,6 +12,7 @@ Engineer for [Dropbox](https://dropbox.com).
 
 I spend my time [Tweeting](http://twitter.com/_dte "@_dte on Twitter"),
 taking [photographs](https://photos.daneden.me/ "Daniel's Photography"),
+making [art](https://art.daneden.me/ "Daniel's generative art"),
 and [writing code](https://github.com/daneden "daneden on GitHub").
 
 I'm currently unavailable for work, but you can take a look at
