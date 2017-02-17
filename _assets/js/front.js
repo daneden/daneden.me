@@ -1,6 +1,6 @@
 'use strict';
 
-var el = document.querySelector('.j1'),
+let el = document.querySelector('.j1'),
     jb = document.querySelector('.jb'),
     main = document.querySelector('.main'),
     mainImg = document.querySelector('.main-image__image'),
@@ -9,14 +9,16 @@ var el = document.querySelector('.j1'),
 
 document.addEventListener('click', function (e) {
     if (e.target == jb) {
-        var s = Math.round(Math.random() * (70 + 10) + 10),
+        let s = Math.round(Math.random() * (70 + 10) + 10),
             n = document.createElement('span'),
             d = document.createElementNS('http://www.w3.org/2000/svg', 'svg'),
-            ds = document.createElementNS('http://www.w3.org/2000/svg', 'use');
+            ds = document.createElementNS('http://www.w3.org/2000/svg', 'use'),
+            e = em[Math.floor(Math.random() * em.length)];
 
-        ds.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', "#" + em[Math.floor(Math.random() * em.length)]);
+        ds.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', "#" + e);
 
         d.classList.add('emegg');
+        d.classList.add(e);
         d.setAttribute('width', s);
         d.setAttribute('height', s);
 
@@ -31,15 +33,19 @@ document.addEventListener('click', function (e) {
     }
 });
 
-var c = ['c1', 'c2', 'c3', 'c4', 'c5'];
-document.documentElement.classList.add(c[Math.floor(Math.random() * c.length)]);
-
 document.addEventListener('mousemove', function (e) {
-    var w = getComputedStyle(document.documentElement).width.slice(0, -2),
+    let w = getComputedStyle(document.documentElement).width.slice(0, -2),
         h = getComputedStyle(document.documentElement).height.slice(0, -2),
         rx = (h / 2 - e.pageY) / 50,
         ry = (w / 2 - e.pageX) / 100;
 
     main.style.transform = 'rotateX(' + rx + 'deg) rotateY(' + -ry + 'deg)';
-    mainImg.style.transform = 'translate3d(' + ry * 2 + 'px, ' + rx * 2 + 'px, 0)\n                             scale(1.05)';
+    mainImg.style.transform = 'translate3d(' + ry * 3 + 'px, ' + rx * 3 + 'px, 0)';
 });
+
+function videoLoad() {
+  let v = document.querySelector('.main-image__image')
+  v.setAttribute('src', v.getAttribute('data-src'))
+}
+
+window.onload = videoLoad

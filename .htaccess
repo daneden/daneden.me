@@ -64,31 +64,6 @@ Options -MultiViews
 
 
 # ######################################################################
-# # INTERNET EXPLORER                                                  #
-# ######################################################################
-
-# ----------------------------------------------------------------------
-# | Document modes                                                     |
-# ----------------------------------------------------------------------
-
-# Force Internet Explorer 8/9/10 to render pages in the highest mode
-# available in the various cases when it may not.
-
-<IfModule mod_headers.c>
-
-    Header set X-UA-Compatible "IE=edge"
-
-    # `mod_headers` cannot match based on the content-type, however,
-    # the `X-UA-Compatible` response header should be send only for
-    # HTML documents and not for the other resources.
-
-    <FilesMatch "\.(appcache|atom|bbaw|bmp|crx|css|cur|eot|f4[abpv]|flv|geojson|gif|htc|ico|jpe?g|js|json(ld)?|m4[av]|manifest|map|mp4|oex|og[agv]|opus|otf|pdf|png|rdf|rss|safariextz|svgz?|swf|topojson|tt[cf]|txt|vcard|vcf|vtt|webapp|web[mp]|webmanifest|woff2?|xloc|xml|xpi)$">
-        Header unset X-UA-Compatible
-    </FilesMatch>
-
-</IfModule>
-
-# ######################################################################
 # # MEDIA TYPES AND CHARACTER ENCODINGS                                #
 # ######################################################################
 
@@ -241,17 +216,6 @@ AddDefaultCharset utf-8
 
 </IfModule>
 
-# ----------------------------------------------------------------------
-# | Suppressing / Forcing the `www.` at the beginning of URLs          |
-# ----------------------------------------------------------------------
-
-<IfModule mod_rewrite.c>
-    RewriteEngine On
-    RewriteCond %{HTTPS} !=on
-    RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
-    RewriteRule ^ %{ENV:PROTO}://%1%{REQUEST_URI} [R=301,L]
-</IfModule>
-
 # ######################################################################
 # # SECURITY                                                           #
 # ######################################################################
@@ -268,31 +232,6 @@ AddDefaultCharset utf-8
 
 <IfModule mod_autoindex.c>
     Options -Indexes
-</IfModule>
-
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-# Block access to all hidden files and directories with the exception of
-# the visible content from within the `/.well-known/` hidden directory.
-#
-# These types of files usually contain user preferences or the preserved
-# state of an utility, and can include rather private places like, for
-# example, the `.git` or `.svn` directories.
-#
-# The `/.well-known/` directory represents the standard (RFC 5785) path
-# prefix for "well-known locations" (e.g.: `/.well-known/manifest.json`,
-# `/.well-known/keybase.txt`), and therefore, access to its visible
-# content should not be blocked.
-#
-# https://www.mnot.net/blog/2010/04/07/well-known
-# https://tools.ietf.org/html/rfc5785
-
-<IfModule mod_rewrite.c>
-    RewriteEngine On
-    RewriteCond %{REQUEST_URI} "!(^|/)\.well-known/([^./]+./?)+$" [NC]
-    RewriteCond %{SCRIPT_FILENAME} -d [OR]
-    RewriteCond %{SCRIPT_FILENAME} -f
-    RewriteRule "(^|/)\." - [F]
 </IfModule>
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

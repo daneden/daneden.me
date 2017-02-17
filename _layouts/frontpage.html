@@ -22,9 +22,9 @@
   </script>
 
   <!-- Icons -->
-  <link rel="shortcut icon" href="/static/images/icon.png" />
+  <link rel="shortcut icon" href="/static/images/favicon@2x.png" />
   <link rel="apple-touch-icon" href="/static/images/icon.png" />
-  <link rel="mask-icon" sizes="any" href="/static/images/icon-mask.svg" color="{{ site.color[0] }}" />
+  <link rel="mask-icon" sizes="any" href="/static/images/favicon.svg" color="{{ site.color[0] }}" />
 
   <body>
     <aside class="hide">
@@ -36,13 +36,10 @@
         <h1 class="site-title">Dan<span class="jb">i</span>el Eden<span class="ja">,</span> Designer</h1>
         <div class="main-wrap">
           <figure class="main-image fl50">
-            <img alt="A photo of Daniel Eden"
-                 data-src="//daneden.imgix.net/2016/05/face.jpeg?auto=format&amp;q=65"
-                 class="imgix-fluid main-image__image" />
-
-            <noscript>
-              <img alt="A photo of Daniel Eden" src="/uploads/2016/05/face.jpeg" class="main-image__image" />
-            </noscript>
+            <video data-src="/uploads/2017/01/shell.mp4"
+              class="main-image__image"
+              poster="/uploads/2017/01/shell-still.jpg"
+              muted playsinline autoplay loop />
           </figure>
           <main class="fl50 main-content">
             {{ content }}

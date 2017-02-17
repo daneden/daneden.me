@@ -35,7 +35,7 @@ html {
   font: 100%/1.5 var(--sans-serif);
   -webkit-font-smoothing: antialiased;
   color: #25282B;
-  background-color: var(--site-color);
+  background-color: #D1CDC7;
 
   background-image: url('/static/images/t1.svg'),
                     url('/static/images/t2.svg'),
@@ -47,12 +47,6 @@ html {
                        bottom 1.5rem center,
                        center left 1.5rem;
 }
-
-  .c1 { background-color: #866FED; }
-  .c2 { background-color: #72B6EC; }
-  .c3 { background-color: #ED7A6F; }
-  .c4 { background-color: #86C49A; }
-  .c5 { background-color: #F1B8CB; }
 
 body {
   position: static;
@@ -101,17 +95,11 @@ body {
   user-select: none;
 }
 
-  .c1 .site-title { color: #72B6EC; }
-  .c2 .site-title { color: #ED7A6F; }
-  .c3 .site-title { color: #86C49A; }
-  .c4 .site-title { color: #FCE897; }
-  .c5 .site-title { color: #866FED; }
-
 .main-image {
   margin: 0;
   overflow: hidden;
 
-  background-color: #000207;
+  background-color: #010001;
   transform-style: preserve-3d;
   will-change: transform;
 }
@@ -135,7 +123,7 @@ body {
   top: -3.5rem;
   right: -3.5rem;
 
-  animation: badge-spin 5s infinite linear;
+  animation: badge-spin 7.5s infinite linear;
   transform: rotate3d(0,0,1,0);
   transform-origin: center center;
 
@@ -151,8 +139,23 @@ body {
 
 .emegg {
   fill: #fff;
-  mix-blend-mode: hard-light;
 }
+
+  .emegg.em-poop {
+    fill: #6A4F3B;
+  }
+
+  .emegg.em-hundred {
+    fill: #F35369;
+  }
+
+  .emegg.em-sparkles {
+    fill: #FCD872;
+  }
+
+  .emegg.em-peace {
+    fill: #F1D2B6;
+  }
 
   .emegg path {
     fill: inherit;
@@ -199,8 +202,9 @@ body {
   }
 
   .site-title {
-    font-size: 3rem;
+    font-size: 2.5rem;
     top: -1rem;
     left: -1rem;
+    transform: none;
   }
 }

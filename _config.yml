@@ -6,15 +6,18 @@ name: "Daniel T. Eden, Designer"
 description: The website and blog of Daniel Eden, Designer.
 url: https://daneden.me
 
-markdown: kramdown
+gems:
+  - jekyll-typogrify
+
+markdown: redcarpet
+redcarpet:
+  extensions: ["tables", "fenced_code_blocks", "footnotes", "highlight"]
 
 color:
   - "#ED5522"
   - "#72B6EC"
   - "#c64f51"
   - "#a881a2"
-
-highlighter: true
 
 permalink: pretty
 

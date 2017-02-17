@@ -1,17 +1,19 @@
 sudo: false
 
-language: node
+language: node_js
 node_js:
-  - "6"
+  - "6.1"
 
 cache:
+  yarn: true
   directories:
     - node_modules
 
 before_install:
   - rvm install 2.3.0
   - npm install -g gulp-cli
-  - npm install
+  - npm install -g yarn
+  - bundle
   - ./scripts/setup-prod.sh
 
 script:

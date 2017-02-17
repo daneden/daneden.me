@@ -17,7 +17,8 @@ input, button, textarea {
 
 h1, h2,
 ul, ol,
-p, table, form, figure, blockquote {
+p, table, form, figure, blockquote,
+pre {
   margin-bottom: var(--baseline);
 }
 
