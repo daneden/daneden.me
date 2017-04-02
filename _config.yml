@@ -14,10 +14,7 @@ redcarpet:
   extensions: ["tables", "fenced_code_blocks", "footnotes", "highlight"]
 
 color:
-  - "#ED5522"
-  - "#72B6EC"
-  - "#c64f51"
-  - "#a881a2"
+  - "#00C266"
 
 permalink: pretty
 
