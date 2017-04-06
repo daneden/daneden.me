@@ -4,65 +4,106 @@ title: Portfolio
 in-nav: true
 ---
 
-## Golden Hour
-[Golden Hour](https://goldenhour.photos) is a place for me to post some of my favorite and best photographs. They're all
-shot at sunrise or sunset, and they're all available to download for personal, non-commercial use (such as your desktop
-or mobile wallpaper). [Visit the site](https://goldenhour.photos).
+## Facebook
 
-## Gifme
-[Gifme](https://gif.daneden.me) is a personal clone/rip-off/emulation of Giphy, the popular gif search engine. Tired of
-Giphy's suboptimal Slack integration, I built Gifme as a web app and a [Slack app](https://gif.daneden.me/slack) to
-search my own massive gif collection. View the [source on GitHub](https://github.com/daneden/gifme) or
-[visit the site](https://gif.daneden.me).
+I’m currently employed by Facebook as a Product Designer. The exact details of
+my projects are, for the time being, a secret. However, I can tell you that I’m
+working on the Brand Measurement team, as well as some internal design tools.
 
-## Scooter
-[Scooter](http://dropbox.github.io/scooter/) is an SCSS framework built to provide base styles, CSS components, and
-rapid static prototyping for Dropbox. Conceived in an effort to both drastically reduce the amount of new CSS being
-written at Dropbox, and to foster and maintain design consistency across Dropbox Web, Scooter encapsulates all of
-Dropbox's main UI design patterns in a fraction of the size of the previous CSS.
-[Visit the site](http://dropbox.github.io/scooter/).
+The first project I worked on at Facebook was [Split
+Testing](https://www.facebook.com/business/news/optimize-your-ads-with-split-testing?pnref=story),
+a tool allowing advertisers to test different ad strategies against one another
+to find the most effective way to spend their ad budgets on Facebook.
 
-## Toast
-[Toast](http://daneden.github.io/Toast) is a Sass/CSS grid system, designed to be highly customisable, extremely
-verbose, and simple-to-use out of the box. It uses no floats, no `first` or `last` classes, and allows nesting.
+## Dropbox
+
+During my two and a half years at Dropbox, I worked on numerous projects across
+several different teams. Most notably, I worked with the Revenue & Growth team
+on redesigning and [relaunching Dropbox
+Pro](https://blogs.dropbox.com/dropbox/2014/08/introducing-more-powerful-dropbox-pro/)
+(now known as Dropbox Plus), an effort which involved both product work (in the
+form of building new features, such as password-protected shared links) and
+marketing efforts. Additionally, I
+helped lead the engineering efforts to build the marketing pages for Dropbox
+Pro.
+
+After the initial launch of the new offering, our team was poised to grow
+adoption. We spent months experimenting with marketing efforts, as well as
+refining the checkout experience. We saw a direct and substantial positive
+impact on subscriptions through our improvements.
+
+After working on Dropbox Pro, we spun off a small “blue sky” growth team to
+explore how we could foster increased adoption of our sharing tools. The most
+successful project to emerge from that team was the addition of [user
+avatars](https://dribbble.com/shots/1972358-Faceholder) in the Dropbox Product.
+Adding user photos to the product led to increased sharing activity, just as we
+had hoped, but it also unlocked possibilities for other product teams to build
+richer, more user-centric experiences.
+
+In my final year at the company, I joined the Web Infrastructure team as a
+Design Engineer to work on Design Systems. I had spent all my tenure at Dropbox
+maintaining a suite of design tools, so was able to provide historical knowledge
+and engineering principles to address inconsistencies in both the design and
+implementation of many product surfaces. The result of my work was
+[Scooter](http://dropbox.github.io/scooter/), an open-source (S)CSS framework
+and design system adopted by several product teams to speed up their work.
+
+## Side Projects
+
+If the work I do for money is my bread and butter, my side projects are the jam
+on top. I routinely embark on new side projects to explore coding opportunities
+and design styles outside of my employment.
+
+### Lucid
+[Lucid](https://chrome.google.com/webstore/detail/lucid/achogfadpkcepkepcpegehpiiioihmik)
+is a Google Chrome extension that replaces the New Tab page with a simple
+notepad. It's useful for avoiding bad browsing habits and jotting down ideas or
+errands.
+
+### Golden Hour
+[Golden Hour](https://goldenhour.photos) is a place for me to
+post some of my favorite and best photographs. They're all shot at sunrise or
+sunset, and they're all available to download for personal, non-commercial use
+(such as your desktop or mobile wallpaper). [Visit the
+site](https://goldenhour.photos).
+
+### Gifme
+[Gifme](https://gif.daneden.me) is a personal clone/rip-off/emulation
+of Giphy, the popular gif search engine. Tired of Giphy's suboptimal Slack
+integration, I built Gifme as a web app and a [Slack
+app](https://gif.daneden.me/slack) to search my own massive gif collection. View
+the [source on GitHub](https://github.com/daneden/gifme) or [visit the
+site](https://gif.daneden.me).
+
+### Toast
+[Toast](http://daneden.github.io/Toast) is a Sass/CSS grid system,
+designed to be highly customisable, extremely verbose, and simple-to-use out of
+the box. It uses no floats, no `first` or `last` classes, and allows nesting.
 [Visit the site](http://daneden.github.io/Toast)
 
-## Digital Ruin
-[Digital Ruin](http://digitalru.in/) is—for lack of a more fitting description—an art project dedicated to giving form
-to both real and fictional digital exchanges, with an emphasis on difficult interactions. It’s bleak, and hard to
-describe. [Visit the site](http://digitalru.in/).
+### Digital Ruin
+[Digital Ruin](http://digitalru.in/) is—for lack of a more
+fitting description—an art project dedicated to giving form to both real and
+fictional digital exchanges, with an emphasis on difficult interactions. It’s
+bleak, and hard to describe. [Visit the site](http://digitalru.in/).
 
-## Untones
-[Untones](http://unton.es/) are occasional, delightful ringtones for mobile devices and beyond. I’ve long been playing
-around in sound creation software, and thought I’d make something productive out of the process. The tones are released
-in pairs—one for calls, and one for messages/alerts—as often as I feel like it. [Visit the site](http://unton.es).
+### Just My Type
+[Just My Type](http://justmytype.co) is a library of font
+pairings from Adobe Typekit and [H&FJ](class:caps)’s Cloud.Typography. Created
+out of a desire for a place to keep track of my personal favorite web font
+pairings, Just My Type has grown to become a popular typography resource for
+many web designers. [Visit the site](http://justmytype.co).
 
-## Just My Type
-[Just My Type](http://justmytype.co) is a library of font pairings from Adobe Typekit and [H&FJ](class:caps)’s
-Cloud.Typography. Created out of a desire for a place to keep track of my personal favorite web font pairings, Just My
-Type has grown to become a popular typography resource for many web designers. [Visit the site](http://justmytype.co).
+### Onword
+[Onword](http://onword.co) is a simple web application for writing documents. It
+was designed and developed in just 10 days, and introduced me to the world of
+Ruby. [Visit the site](http://onword.co).
 
-## Onword
-Tired of only being able to access my iA Writer documents on my iOS devices, I created [Onword](http://onword.co), a
-simple web application for writing documents. It was designed and developed in just 10 days, and introduced me to the
-world of Ruby. [Visit the site](http://onword.co).
+### Brills
+[Brills](http://brills.me) is a simple money management web application built
+for budgeting quickly. [Visit the site](http://brills.me).
 
-## Webshaped 2012
-I was invited to speak at the 2012 [Webshaped](http://webshaped.fi) conference, alongside some incredible folk I've
-long admired. It was terrifying, amazing, and I'd love to do it again. My presentation tackled animation on the web,
-and how we can delight our audience by integrating animation in our websites and applications. You can
-[read more](/2012/05/18/i-have-no-idea-what-im-doing/) about my time there.
-
-## Brills
-I designed and developed [Brills](http://brills.me) to quench my thirst for a simpler money management application that
-worked on all my devices, with a no-nonsense interface. I wrote it in vanilla PHP, before later discovering that
-CodeIgniter does a much better job than me at a lot of important stuff, and moving the code onto the framework with
-great ease. [Visit the site](http://brills.me).
-
-## Animate.css
-During the development of Brills, I found myself spending a lot of time writing CSS animation keyframes. It became quite
-a repetitive task, especially with the requirement for multiple keyframe declarations for different browsers. “There
-must be an easier way!” I cried, but there wasn't. So I made one.
-
-[Animate.css](http://daneden.github.io/animate.css/) is a cross-browser plug-and-play CSS animation library for
-delightful animation in websites and web applications. [Visit the site](http://daneden.github.io/animate.css/).
+### Animate.css
+[Animate.css](http://daneden.github.io/animate.css/) is a cross-browser
+plug-and-play CSS animation library for delightful animation in websites and web
+applications. [Visit the site](http://daneden.github.io/animate.css/).

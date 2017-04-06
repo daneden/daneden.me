@@ -11,7 +11,7 @@ gems:
 
 markdown: redcarpet
 redcarpet:
-  extensions: ["tables", "fenced_code_blocks", "footnotes", "highlight"]
+  extensions: ["smart", "tables", "fenced_code_blocks", "footnotes", "highlight"]
 
 color:
   - "#00C266"
