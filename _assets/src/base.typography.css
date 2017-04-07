@@ -47,6 +47,7 @@ h4, .h4 {
 
 a {
   text-decoration: underline;
+  text-decoration-skip: ink;
   color: inherit;
 }
 
