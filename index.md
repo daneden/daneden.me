@@ -6,7 +6,7 @@ title: About
 Daniel Eden is a Designer with a penchant for the web, typography, and
 interaction design. He prefers to refer to himself in the first person.
 
-I'm currently living and working in San Francisco as a Product Designer for
+I'm currently living in Oakland, California and working as a Product Designer for
 [Facebook](https://facebook.com). Previously, I worked as a Designer and
 Engineer for [Dropbox](https://dropbox.com).
 
