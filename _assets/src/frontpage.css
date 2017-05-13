@@ -34,7 +34,7 @@ html {
 
   font: 100%/1.5 var(--sans-serif);
   -webkit-font-smoothing: antialiased;
-  color: #25282B;
+  color: #000207;
   background-color: #D1CDC7;
 
   background-image: url('/static/images/t1.svg'),
@@ -83,7 +83,6 @@ body {
   width: 4em;
   z-index: 1;
 
-  color: #fff;
   font-weight: 400;
   font-size: 4.5rem;
   letter-spacing: -.03em;
@@ -99,7 +98,7 @@ body {
   margin: 0;
   overflow: hidden;
 
-  background-color: #010001;
+  background-color: #fff;
   transform-style: preserve-3d;
   will-change: transform;
 }

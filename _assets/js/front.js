@@ -40,5 +40,8 @@ document.addEventListener('mousemove', function (e) {
         ry = (w / 2 - e.pageX) / 100;
 
     main.style.transform = 'rotateX(' + rx + 'deg) rotateY(' + -ry + 'deg)';
-    mainImg.style.transform = 'translate3d(' + ry * 3 + 'px, ' + rx * 3 + 'px, 0)';
+    mainImg.style.transform = `
+      translate3d(${ry * 3}px, ${rx * 3}px, 0)
+      rotateX(${rx*-2}deg) rotateY(${ry*-2}deg)
+    `
 });
