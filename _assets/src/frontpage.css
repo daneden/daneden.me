@@ -5,205 +5,91 @@
 @import "utilities.display.css";
 @import "utilities.spacing.css";
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  position: relative;
+html {
+  font: 100%/1.5 var(--serif);
+  font-feature-settings: "liga" 1, "hist" 1, "swsh" 1;
+  background-color: #f7f7f7;
+  color: var(--text-color);
 }
 
-header {
-  position: static;
+body {
+  padding: 1.5rem;
+}
+
+.sans {
+  font-family: var(--sans-serif);
+}
+
+.small {
+  font-size: .875rem;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+figcaption {
+  position: absolute;
+  top: .25em;
+  left: .5em;
+  color: #fff;
+  font-family: var(--sans-serif);
+  font-size: .875rem;
 }
 
 a {
   color: inherit;
+  font-family: var(--sans-serif);
 }
 
   a:hover {
-    color: var(--site-color);
+    color: #00C266;
   }
 
-html {
-  min-height: 100vh;
-  max-width: 100vw;
-  overflow-x: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  font: 100%/1.5 var(--sans-serif);
-  -webkit-font-smoothing: antialiased;
-  color: #000207;
-  background-color: #D1CDC7;
-
-  background-image: url('/static/images/t1.svg'),
-                    url('/static/images/t2.svg'),
-                    url('/static/images/t3.svg'),
-                    url('/static/images/t4.svg');
-  background-repeat: no-repeat;
-  background-position: top 1.5rem center,
-                       center right 1.5rem,
-                       bottom 1.5rem center,
-                       center left 1.5rem;
+p, figure {
+  margin-bottom: 1rem;
 }
 
-body {
-  position: static;
+.site__title {
+  border-bottom: 1px solid;
+  margin-bottom: 1.5rem;
 }
 
-.wrap {
-  position: static;
-  perspective: 800px;
-  perspective-origin: top center;
+.grid {
+  columns: 2 1rem;
+  max-width: 60rem;
 }
 
-.main {
-  transform-style: preserve-3d;
-  will-change: transform;
+main {
+  column-span: all;
+  margin-bottom: 2rem;
 }
 
-.main-wrap {
-  display: flex;
-  align-items: stretch;
-  width: 100vw;
-  height: 100vh;
-  max-width: 1000px;
-  max-height: 500px;
-}
-
-.fl50 {
-  flex: 1 1 50%;
-}
-
-.site-title {
-  position: absolute;
-  top: -3rem;
-  left: -1.5rem;
-  width: 4em;
-  z-index: 1;
-
-  font-weight: 400;
-  font-size: 4.5rem;
-  letter-spacing: -.03em;
-  line-height: 1;
-
-  transform: translateZ(50px) scale(0.95);
-
-  cursor: default;
-  user-select: none;
-}
-
-.main-image {
-  margin: 0;
-  overflow: hidden;
-
-  background-color: #fff;
-  transform-style: preserve-3d;
-  will-change: transform;
-}
-
-  .main-image__image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    transform: scale(1.05);
+@media (min-width: 36rem) {
+  .grid {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
-.main-content {
-  padding: 3rem;
-  background-color: #fff;
-  transform: translateZ(1px);
-}
+  main {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+  }
 
-.uc-badge {
-  position: absolute;
-  top: -3.5rem;
-  right: -3.5rem;
-
-  animation: badge-spin 7.5s infinite linear;
-  transform: rotate3d(0,0,1,0);
-  transform-origin: center center;
-
-  will-change: transform;
-  user-select: none;
-}
-
-@keyframes badge-spin {
-  to {
-    transform: rotate3d(0,0,1,360deg);
+  figure {
+    margin-bottom: 0;
   }
 }
 
-.emegg {
-  fill: #fff;
-}
-
-  .emegg.em-poop {
-    fill: #6A4F3B;
+@media (min-width: 50rem) {
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-flow: column;
   }
 
-  .emegg.em-hundred {
-    fill: #F35369;
-  }
-
-  .emegg.em-sparkles {
-    fill: #FCD872;
-  }
-
-  .emegg.em-peace {
-    fill: #F1D2B6;
-  }
-
-  .emegg path {
-    fill: inherit;
-  }
-
-@media (max-width: 1000px) {
-  html {
-    min-height: none;
-    padding: 2.5rem;
-
-    font-size: 87.5%;
-
-    background-size: auto .5rem,
-                     .5rem auto;
-    background-position: top 1rem center,
-                         center right 1rem,
-                         bottom 1rem center,
-                         center left 1rem;
-  }
-
-  .main-wrap {
-    max-height: none;
-    max-width: 500px;
-    height: auto;
-    width: auto;
-    flex-direction: column;
-  }
-
-  .fl50 {
-    flex: none;
-  }
-
-  .main-content {
-    padding: 1.5rem;
-  }
-
-  .main-image {
-    height: 40vh;
-    min-height: 12rem;
-  }
-
-  .uc-badge {
-    display: none;
-  }
-
-  .site-title {
-    font-size: 2.5rem;
-    top: -1rem;
-    left: -1rem;
-    transform: none;
+  main {
+    grid-row: 1 / 3;
   }
 }
