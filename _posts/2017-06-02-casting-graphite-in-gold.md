@@ -81,7 +81,7 @@ expressed, understood, and acted upon, the output can be truly magical.
 The themes outlined here are inevitably one-sided—I assume the role of a
 designer much more often than that of an engineer—but hopefully still prove
 useful or interesting to product teams of all shapes. Similarly, there are
-immensly important dimensions missing from the relationship described here; the
+immensely important dimensions missing from the relationship described here; the
 roles of research, content strategy, data science, and product management are
 certainly needed to solidify the success of a product. My experiences with these
 partners are varied, and I invite anyone to critique my narrow views and share
