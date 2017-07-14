@@ -32,7 +32,7 @@ h2, .h2 {
 h3, .h3 {
   text-transform: uppercase;
   font-feature-settings: "smcp", "c2sc";
-  letter-spacing: .1em;
+  letter-spacing: .025em;
   font-style: normal;
   font-size: inherit;
   text-align: left;
