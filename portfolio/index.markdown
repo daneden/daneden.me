@@ -6,11 +6,15 @@ in-nav: true
 
 ## Facebook
 
-I’m currently employed by Facebook as a Product Designer. The exact details of
-my projects are, for the time being, a secret. However, I can tell you that I’m
-working on the Brand Measurement team, as well as some internal design tools.
+I’m currently employed by Facebook as a Product Designer. In June 2017, I joined
+the Business Interface Guidelines (BIG) team to aid the creation and maintenance
+of a design system for Facebook's Ads and Business interfaces.
 
-The first project I worked on at Facebook was [Split
+Prior to joining the BIG team, I worked on the Brand Measurement team, devoting
+my time to creating new ways to measure and report ad effectiveness as it
+pertains to brand advertising.
+
+My first project at Facebook was [Split
 Testing](https://www.facebook.com/business/news/optimize-your-ads-with-split-testing?pnref=story),
 a tool allowing advertisers to test different ad strategies against one another
 to find the most effective way to spend their ad budgets on Facebook.
