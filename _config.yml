@@ -6,8 +6,7 @@ name: "Daniel T. Eden, Designer"
 description: The website and blog of Daniel Eden, Designer.
 url: https://daneden.me
 
-gems:
-  - jekyll-typogrify
+plugins: [jekyll-typogrify, jekyll-assets]
 
 markdown: redcarpet
 redcarpet:
@@ -40,7 +39,6 @@ exclude: ["node_modules", "gulpfile.js", "Gemfile", "Gemfile.lock", "package.jso
 
 assets:
   digest: true
-  cache: false
   sources:
     - "_assets/css"
     - "_assets/js"
