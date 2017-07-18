@@ -22,7 +22,7 @@ pre {
   margin-bottom: var(--baseline);
 }
 
-img {
+img, object {
   max-width: 100%;
 }
 
