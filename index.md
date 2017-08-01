@@ -9,7 +9,9 @@ person.
 
 I'm currently living in Oakland, California<sup class="sans">2</sup> and working
 as a Product Designer for [Facebook](https://facebook.com). Previously, I worked
-as a Designer and Engineer for [Dropbox](https://dropbox.com).
+as a Designer and Engineer for [Dropbox](https://dropbox.com). I specialize in
+Design Systems: how they break, the teams that maintain them, and how they work
+at scale and across mediums.
 
 I spend my time [Tweeting](http://twitter.com/_dte "@_dte on Twitter"),
 taking [photographs](https://photos.daneden.me/ "Daniel's Photography"),
