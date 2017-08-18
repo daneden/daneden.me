@@ -53,3 +53,7 @@
 .ml {
   margin-bottom: var(--baseline);
 }
+
+.mbs {
+  margin-bottom: cal(var(--baseline) / 2);
+}

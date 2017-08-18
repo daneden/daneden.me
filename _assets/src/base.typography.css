@@ -4,6 +4,14 @@
  *
  */
 
+.serif {
+  font-family: var(--serif);
+}
+
+.sans {
+  font-family: var(--sans-serif);
+}
+
 h1, .h1,
 h2, .h2,
 h3, .h3 {
@@ -49,6 +57,10 @@ a {
   text-decoration: underline;
   text-decoration-skip: ink;
   color: inherit;
+}
+
+.plainLink {
+  text-decoration: none;
 }
 
   a:hover, a:focus {

@@ -14,6 +14,7 @@
   },
   "homepage": "https://github.com/daneden/daneden.me#readme",
   "devDependencies": {
+    "babel-plugin-transform-react-jsx": "^6.24.1",
     "browser-sync": "*",
     "gulp": "*",
     "gulp-autoprefixer": "*",

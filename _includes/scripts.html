@@ -2,6 +2,10 @@
   // Load our main JS
   {% asset 'app' %}
 
+  {% if page.title == "Library" %}
+    {% asset 'library' %}
+  {% endif %}
+
   // Initialise Imgix
   imgix.onready(function() {
     imgix.fluid({
