@@ -61,16 +61,23 @@ const books = [
   },
 ]
 
+// the div we want to insert our books into
 const holder = document.querySelector('.js-library')
+
+// use the same domain/port as the rest of the page
+// this is required for imgix to work properly
 const loc = window.location.hostname + (
   window.location.port ?
     ':' + window.location.port :
     ''
   )
 
+// removes "the" or "a" from the start of a string
+// so we can sort book titles properly
 const strippedTitle = str => str.replace(/^(the|a) /i, '')
 
-const list = books.sort((a, b) => strippedTitle(a.title) > strippedTitle(b.title))
+const list = books
+  .sort((a, b) => strippedTitle(a.title) > strippedTitle(b.title))
   .map(book => `
     <div class="library__book">
       <a href=${book.url} class="plainLink">

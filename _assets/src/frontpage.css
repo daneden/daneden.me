@@ -1,6 +1,7 @@
 
 @import "base.variables.css";
 @import "base.reset.css";
+@import "base.typography.css";
 
 @import "utilities.display.css";
 @import "utilities.spacing.css";
@@ -14,14 +15,6 @@ html {
 
 body {
   padding: 1.5rem;
-}
-
-.sans {
-  font-family: var(--sans-serif);
-}
-
-.small {
-  font-size: .875rem;
 }
 
 img {
@@ -39,13 +32,8 @@ figcaption {
 }
 
 a {
-  color: inherit;
   font-family: var(--sans-serif);
 }
-
-  a:hover {
-    color: #00C266;
-  }
 
 p, figure {
   margin-bottom: 1rem;

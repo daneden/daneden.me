@@ -12,6 +12,12 @@
   font-family: var(--sans-serif);
 }
 
+:not(.wf-loading) sup {
+  vertical-align: inherit;
+  font-size: inherit;
+  font-feature-settings: "sups" 1;
+}
+
 h1, .h1,
 h2, .h2,
 h3, .h3 {
