@@ -12,7 +12,7 @@ html {
   background-color: #fff;
 
   -webkit-font-smoothing: antialiased;
-  font-feature-settings: "liga", "hist", "onum", "pnum";
+  font-feature-settings: "calt", "liga", "hist", "onum", "pnum";
 }
 
   .wf-loading:root {
