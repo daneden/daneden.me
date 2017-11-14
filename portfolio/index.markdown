@@ -86,10 +86,10 @@ the box. It uses no floats, no `first` or `last` classes, and allows nesting.
 [Visit the site](http://daneden.github.io/Toast)
 
 ### Digital Ruin
-[Digital Ruin](http://digitalru.in/) is—for lack of a more
+[Digital Ruin](http://digitalruin.tumblr.com/) is—for lack of a more
 fitting description—an art project dedicated to giving form to both real and
 fictional digital exchanges, with an emphasis on difficult interactions. It’s
-bleak, and hard to describe. [Visit the site](http://digitalru.in/).
+bleak, and hard to describe. [Visit the site](http://digitalruin.tumblr.com/).
 
 ### Just My Type
 [Just My Type](http://justmytype.co) is a library of font
