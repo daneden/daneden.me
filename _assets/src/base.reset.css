@@ -5,10 +5,10 @@
  */
 
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   position: relative;
-  box-sizing: border-box;
 }
 
 input, button, textarea {
@@ -17,9 +17,21 @@ input, button, textarea {
 
 h1, h2,
 ul, ol,
-p, table, form, figure, blockquote,
+table, form, figure, blockquote,
 pre {
   margin-bottom: var(--baseline);
+}
+
+figure:not(.alignleft):not(.alignright) {
+  margin-top: var(--baseline);
+}
+
+p + *:not(p) {
+  margin-top: var(--baseline);
+}
+
+p + p {
+  text-indent: 1.5em;
 }
 
 img, object {

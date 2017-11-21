@@ -7,10 +7,10 @@
 @import "utilities.spacing.css";
 
 html {
-  font: 100%/1.5 var(--serif);
-  font-feature-settings: "liga" 1, "hist" 1, "swsh" 1;
   background-color: #f7f7f7;
   color: var(--text-color);
+  font-feature-settings: "liga" 1, "hist" 1, "swsh" 1;
+  font: 100%/1.5 var(--serif);
 }
 
 body {
@@ -18,17 +18,17 @@ body {
 }
 
 img {
-  max-width: 100%;
   display: block;
+  max-width: 100%;
 }
 
 figcaption {
-  position: absolute;
-  top: .25em;
-  left: .5em;
   color: #fff;
   font-family: var(--sans-serif);
   font-size: .875rem;
+  left: .5em;
+  position: absolute;
+  top: .25em;
 }
 
 a {
@@ -73,8 +73,8 @@ main {
 
 @media (min-width: 50rem) {
   .grid {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-auto-flow: column;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 
   main {

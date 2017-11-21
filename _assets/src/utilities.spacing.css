@@ -32,18 +32,18 @@
 }
 
 .pvs {
-  padding-top: calc(var(--baseline) / 4);
   padding-bottom: calc(var(--baseline) / 4);
+  padding-top: calc(var(--baseline) / 4);
 }
 
 .pvm {
-  padding-top: calc(var(--baseline) / 2);
   padding-bottom: calc(var(--baseline) / 2);
+  padding-top: calc(var(--baseline) / 2);
 }
 
 .pvl {
-  padding-top: var(--baseline);
   padding-bottom: var(--baseline);
+  padding-top: var(--baseline);
 }
 
 .m0 {
@@ -52,6 +52,10 @@
 
 .ml {
   margin-bottom: var(--baseline);
+}
+
+.mxl {
+  margin-bottom: calc(var(--baseline) * 2);
 }
 
 .mbs {

@@ -4,37 +4,16 @@
  *
  */
 
-.post-list {
-  padding-left: 0;
-}
-
-  .post-list__item {
-    list-style: none;
-  }
-
-    .post-list__item a {
-      text-decoration: none;
-    }
-
-.page__content {
-  margin-bottom: calc(var(--baseline) * 2);
-}
-
 sup[id*="fnref"] a {
-  margin: 0 .2em;
-
-  text-decoration: none;
-  font-family: var(--sans-serif);
-
   color: var(--site-color);
+  font-family: var(--sans-serif);
+  margin: 0 .2em;
+  text-decoration: none;
 }
 
 .footnotes {
-  padding-top: calc(var(--baseline) * 2);
-  font-size: .7778rem;
-  font-family: var(--sans-serif);
-
-  color: var(--meta-color)
+  color: var(--meta-color);
+  font-size: var(--small);
 }
 
   .footnotes ol {

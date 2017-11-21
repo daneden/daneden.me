@@ -6,10 +6,11 @@
 
 :root {
   --baseline: 1.7778rem;
+  --small: .875rem;
 
   --site-color: #00C266;
   --text-color: #000207;
-  --meta-color: #929598;
+  --meta-color: #747474;
 
   --monospace: "Input Mono", "Source Code Pro", "Monaco", monospace;
 

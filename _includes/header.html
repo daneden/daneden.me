@@ -38,15 +38,9 @@
 
   <body class="phl">
     <!-- You know, rather than reading the source like a chump, you can see it all on GitHub like a champ: https://github.com/daneden/daneden.me -->
-    <header class="wrap site__header" role="banner">
-      <a class="site__title ib" href="/">
-        <svg class="site-logo b" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <title>{{ site.name }}</title>
-          <g fill="none" fill-rule="evenodd" stroke="#000000" stroke-width="2">
-            <path d="M6 22L18 22M6 16L18 16" stroke-linecap="square"/>
-            <path d="M5,10 L14.0028126,10 C14.0028126,10 18.5,10 18.5,5.54504395 C18.5,1.09008789 14.0028126,1 14.0028126,1 L5,1"/>
-          </g>
-        </svg>
+    <header class="wrap sans site__header" role="banner">
+      <a class="site__title b plainlink" href="/">
+        {{ site.name }}
       </a>
       {% include nav.html %}
     </header>

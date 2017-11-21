@@ -5,8 +5,8 @@
  */
 
 .site__footer {
-  font-family: var(--sans-serif);
-
-  color: var(--meta-color);
   border-top: 1px solid currentColor;
+  color: var(--meta-color);
+  font-family: var(--sans-serif);
+  margin-top: cal(var(--baseline) * 2);
 }

@@ -3,11 +3,11 @@ layout: page
 title: Blog
 in-nav: true
 ---
-<ul class="unl post-list">
+<ul class="unlist post-list">
 {% for post in site.posts %}
 	{% if post.hidden != true %}
   <li class="post-list__item ml">
-    <a href="{{ post.url }}">
+    <a class="plainlink" href="{{ post.url }}">
       <span class="b m0">{{ post.title }}</span>
       <span class="meta h4 b">{{ post.date | date: "%A %-d %B %Y" }}</span>
     </a>

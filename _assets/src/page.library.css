@@ -1,8 +1,8 @@
 .library {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: var(--baseline);
   align-items: baseline;
+  display: grid;
+  grid-gap: var(--baseline);
+  grid-template-columns: repeat(3, 1fr);
 }
 
 @media (max-width: 40rem) {

@@ -13,16 +13,15 @@
 }
 
 :not(.wf-loading) sup {
-  vertical-align: inherit;
-  font-size: inherit;
   font-feature-settings: "sups" 1;
+  font-size: inherit;
+  vertical-align: inherit;
 }
 
 h1, .h1,
 h2, .h2,
 h3, .h3 {
   font-weight: 400;
-  text-align: center;
 }
 
 h1, .h1 {
@@ -44,28 +43,28 @@ h2, .h2 {
 }
 
 h3, .h3 {
-  text-transform: uppercase;
   font-feature-settings: "smcp", "c2sc";
-  letter-spacing: .025em;
-  font-style: normal;
   font-size: inherit;
+  font-style: normal;
+  letter-spacing: .025em;
   text-align: left;
+  text-transform: uppercase;
 }
 
 h4, .h4 {
   font-family: var(--serif);
-  font-weight: 400;
   font-size: 1rem;
   font-style: italic;
+  font-weight: 400;
 }
 
 a {
-  text-decoration: underline;
-  text-decoration-skip: ink;
   color: inherit;
+  text-decoration-skip: ink;
+  text-decoration: underline;
 }
 
-.plainLink {
+.plainlink {
   text-decoration: none;
 }
 
@@ -75,22 +74,15 @@ a {
 
 code, pre {
   font-family: var(--monospace);
-  font-size: .875rem;
+  font-size: var(--small);
 }
 
 hr {
+  border: 0;
   content: '';
   display: block;
-  width: 6rem;
-  padding-top: var(--baseline);
-  margin-top: -2px;
-  margin-right: auto;
-  margin-bottom: calc(var(--baseline) * 2);
-  margin-left: auto;
-
-  border: 0;
-  border-bottom: 2px solid var(--meta-color);
-  opacity: .5;
+  height: 1px;
+  margin: var(--baseline) 0;
 }
 
 .footnotes::before {
@@ -102,24 +94,27 @@ hr {
 }
 
 blockquote {
-  padding-left: var(--baseline);
-
-  font-style: italic;
-
   border-left: 2px solid var(--site-color);
+  font-style: italic;
+  padding-left: var(--baseline);
 }
 
   blockquote em, blockquote strong {
-    font-weight: 400;
     font-style: normal;
+    font-weight: 400;
   }
 
 mark {
-  color: inherit;
   background-color: rgba(0,0,0,.075);
+  color: inherit;
 }
 
 .caps {
   font-feature-settings: "smcp", "c2sc", "lnum";
   letter-spacing: .05em;
+}
+
+.unlist {
+  list-style: none;
+  padding-left: 0;
 }

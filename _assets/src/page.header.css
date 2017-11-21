@@ -5,26 +5,13 @@
  */
 
 .site__header {
-  display: flex;
   align-items: center;
+  border-bottom: 1px solid;
+  display: flex;
   justify-content: space-between;
-  padding: var(--baseline) 0;
   margin-bottom: var(--baseline);
+  padding: var(--baseline) 0 0;
 }
-
-  .site__nav {
-    font-family: var(--sans-serif);
-  }
-
-    .site__nav a {
-      text-decoration: none;
-      color: var(--meta-color);
-    }
-
-      .site__nav a:hover,
-      .site__nav a.active {
-        color: var(--text-color);
-      }
 
 .page__header {
   margin-bottom: calc(var(--baseline) * 2);

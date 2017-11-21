@@ -5,10 +5,8 @@
  */
 
 figure {
-  font-family: var(--sans-serif);
-  font-size: .7778rem;
-
   color: var(--meta-color);
+  font-size: var(--small);
 }
 
 figcaption, figcaption :last-child {
@@ -27,8 +25,8 @@ figcaption, figcaption :last-child {
 
 .alignright {
   float: right;
-  margin-right: -25%;
   margin-left: var(--baseline);
+  margin-right: -25%;
 }
 
 @media (max-width: 56rem) {
@@ -47,7 +45,7 @@ figcaption, figcaption :last-child {
 
 @media (max-width: 30rem){
   .alignleft, .alignright {
-    width: 100%;
     float: none;
+    width: 100%;
   }
 }
