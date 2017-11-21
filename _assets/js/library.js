@@ -59,6 +59,12 @@ const books = [
     cover: "/uploads/books/time-machine.jpg",
     url: "http://amzn.to/2fSXb5F",
   },
+  {
+    title: "Unjustified Texts",
+    author: "Robin Kinross",
+    cover: "/uploads/books/ut.jpg",
+    url: "http://amzn.to/2iDwgZO",
+  },
 ]
 
 // the div we want to insert our books into
@@ -74,13 +80,21 @@ const loc = window.location.hostname + (
 
 // removes "the" or "a" from the start of a string
 // so we can sort book titles properly
-const strippedTitle = str => str.replace(/^(the|a) /i, '')
+const strippedTitle = str => str.replace(/^(the|a) /i, '').toLowerCase()
 
 const list = books
-  .sort((a, b) => strippedTitle(a.title) > strippedTitle(b.title))
+  // Replace the last space with a non-breaking space
+  .map(book => {
+    return Object.assign(book, {
+      title: book.title.replace(/ ([^ ]*)$/, '\u00A0$1'),
+    })
+  })
+  // Sort the books alphabetically by their title, excluding 'The' or 'A'
+  .sort((a, b) => strippedTitle(a.title).localeCompare(strippedTitle(b.title)))
+  // Spit out the HTML
   .map(book => `
-    <div class="library__book">
-      <a href=${book.url} class="plainLink">
+    <div class="library__book small">
+      <a href=${book.url} class="sans plainlink">
         <img data-src=${'//' + loc + book.cover} class="imgix-fluid" />
         ${book.title} <br/>
         <em class="meta">${book.author}</em>

@@ -118,3 +118,7 @@ mark {
   list-style: none;
   padding-left: 0;
 }
+
+small, .small {
+  font-size: var(--small);
+}
