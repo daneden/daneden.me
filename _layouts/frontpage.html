@@ -1,43 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-  <meta charset="utf-8" />
-  <title>Daniel Eden, Designer</title>
-  <meta name="viewport" content="initial-scale=1" />
-  <meta name="p:domain_verify" content="aa712630840b421410cce3b56d2dc764" />
+{% include header.html %}
 
-  <meta rel="dns-prefetch" href="//daneden.imgix.net" />
+<main class="wrap site__content page mxl" role="main">
 
-  <meta property="og:title" content="Daniel Eden, Designer"/>
-  <meta property="og:url" content="{{ page.url }}"/>
-  <meta property="og:description" content="{{ page.excerpt | strip_html | xml_escape }}"/>
-
-  <meta name="theme-color" content="{{ site.color[0] }}" />
-
-  <style>
-    {% asset 'frontpage' %}
-  </style>
-
-  <script>
-    {% asset 'fonts' %}
-  </script>
-
-  <!-- Icons -->
-  <link rel="shortcut icon" href="/static/images/favicon@2x.png" />
-  <link rel="apple-touch-icon" href="/static/images/icon.png" />
-  <link rel="mask-icon" sizes="any" href="/static/images/favicon.svg" color="{{ site.color[0] }}" />
-
-  <body>
-    <!-- You know, rather than reading the source like a chump, you can see it all on GitHub like a champ: https://github.com/daneden/daneden.me -->
-    <div class="site__title sans">Daniel Eden, Designer</div>
-    <div class="grid">
-      <main>
-        {{content}}
-      </main>
-      {% figure 2016/05/face.jpeg "1." %}
-      {% figure 2017/05/oakland.jpg "2." %}
-      {% figure 2017/05/genart.jpg "3." %}
-
+  <article class="hentry">
+    <div class="h1 page__content">
+      {{ content | improve }}
     </div>
-    {% include scripts.html %}
-  </body>
-</html>
+  </article>
+
+</main>
+
+  {% include footer.html %}
