@@ -35,7 +35,7 @@ a {
   font-family: var(--sans-serif);
 }
 
-p, figure {
+figure {
   margin-bottom: 1rem;
 }
 
