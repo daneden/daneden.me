@@ -65,6 +65,18 @@ const books = [
     cover: "/uploads/books/ut.jpg",
     url: "http://amzn.to/2iDwgZO",
   },
+  {
+    title: "Typographie",
+    author: "Emil Ruder",
+    cover: "/uploads/books/typographie.jpg",
+    url: "http://amzn.to/2znEDz6",
+  },
+  {
+    title: "Thinking, Fast and Slow",
+    author: "Daniel Kahneman",
+    cover: "/uploads/books/tfas.jpg",
+    url: "http://amzn.to/2hTHQiU",
+  },
 ]
 
 // the div we want to insert our books into
