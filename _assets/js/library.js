@@ -77,6 +77,12 @@ const books = [
     cover: "/uploads/books/tfas.jpg",
     url: "http://amzn.to/2hTHQiU",
   },
+  {
+    title: "Designing Design",
+    author: "Kenya Hara",
+    cover: "/uploads/books/designing-design.jpg",
+    url: "http://amzn.to/2CZzSxR",
+  },
 ]
 
 // the div we want to insert our books into
