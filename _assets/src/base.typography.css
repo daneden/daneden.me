@@ -60,8 +60,9 @@ h4, .h4 {
 
 a {
   color: inherit;
-  text-decoration-skip: ink;
   text-decoration: underline;
+  text-decoration-skip: ink;
+  text-decoration-skip-ink: auto;
 }
 
 .plainlink {
