@@ -123,3 +123,15 @@ mark {
 small, .small {
   font-size: var(--small);
 }
+
+dl > dt::before {
+  content: "—";
+}
+
+dl > dt {
+  font-style: italic;
+}
+
+dl > dd {
+  text-indent: 1em;
+}
