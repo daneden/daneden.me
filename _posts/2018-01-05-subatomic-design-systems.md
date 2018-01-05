@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Subatomic Design Systems
+hidden: true
 ---
 
 The following theory of "Subatomic Design Systems" is loosely based on an
