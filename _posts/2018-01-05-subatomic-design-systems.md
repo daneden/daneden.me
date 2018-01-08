@@ -92,6 +92,34 @@ of the responsibility to provide _every required Element of the system_.
 Instead, new compositions can be created as necessary, by decomposing and
 reassembling UI Elements from a common set of properties.
 
+## Particles are stateless
+
+A less abstract way of demonstrating the immutability of particles in SDS is
+thinking of them as stateless. A particle represents a particular, unchanging
+visual or behavioural property: their only responsibility is to represent that
+property.
+
+## States determine compositions
+
+'State' in this manner refers to the state of data or value, or changes in
+time-based sequences (for example, the state of a piece of UI (a composition)
+may change based on user input or interaction). Changes in state result in
+changes in UI, or, as we have defined them, changes in compositions.
+
+It's through states—changes, presence or absence of data—that we derive
+compositions of particles that make our UI. As such, a given composition may be
+expressed as a function of state:
+
+\\[f(x) = A\\]
+\\[f(\Delta x) = B\\]
+
+Where $f$ is a function that takes state and returns UI (composed particles),
+$x$ is a state and $\Delta x$ is a changed state, and $A$ and $B$ are the
+resulting compositions.
+
+This is the basis through which data can been seen to augment and flow through a
+user interface powered by SDS.
+
 ## Compositions can be composed
 
 Let’s clarify the term ‘composition’ by simply defining it (for our purposes) as
@@ -149,7 +177,7 @@ composition of compositions of Views.
 
 ## Abstract rules define the particles and the highest-level compositions
 
-By "abstract rules," I'm talking about things like brand values, context, and
+By 'abstract rules,' I'm talking about things like brand values, context, and
 audience. It's these variables that determine the colors you choose; the
 typefaces in use; the mediums you decide to build the system(s) for.
 
@@ -187,15 +215,15 @@ The ideas exhibited above are inspired and reinforced by notions set out by a
 number of folks before me. Some pieces of particular interest for continued
 research in this area include:
 
-- Jon Gold's "[Declarative Design
-  Tools](http://jon.gold/2016/06/declarative-design-tools/)"
-- Brad Frost's "[Atomic
-  Design](http://bradfrost.com/blog/post/atomic-web-design/)"
-- Adam Morse's "[CSS and
-  Scalability](http://mrmrs.github.io/writing/2016/03/24/scalable-css/)"
+- Jon Gold's '[Declarative Design
+  Tools](http://jon.gold/2016/06/declarative-design-tools/)'
+- Brad Frost's '[Atomic
+  Design](http://bradfrost.com/blog/post/atomic-web-design/)'
+- Adam Morse's '[CSS and
+  Scalability](http://mrmrs.github.io/writing/2016/03/24/scalable-css/)'
 - All of Nicole Sullivan's [writing on Object-Oriented CSS
   (OOCSS)](http://www.stubbornella.org/content/category/general/geek/css/oocss-css-geek-general/)
-- "[Structure and Interpretation of Computer Programs](http://amzn.to/2CZq9YZ)"
+- '[Structure and Interpretation of Computer Programs](http://amzn.to/2CZq9YZ)'
   from Harold Abelson, Gerald Jay Sussman, Julie Sussman, and Alan J. Perlis
 
 Additionally, preliminary thinking about the above system theory can be found
@@ -208,10 +236,10 @@ in other posts on my blog, namely:
 - [Design System Structure](/2017/07/17/design-system-structure/)
 
 [^1]: In my previous writing on the subject of design systems, I've referred to
-      these compositions as "Components," but have found that term to be loaded or
+      these compositions as 'Components,' but have found that term to be loaded or
       confusing, especially in engineering contexts. Consider them
       interchangeable.
 [^2]: Again, in my previous writing, these compositions have been referred to as
-      "Patterns": in the interest of avoiding conflation of terms, I've tried to
+      'Patterns': in the interest of avoiding conflation of terms, I've tried to
       reduce the definitions herein to simply those of particles and
       compositions.
