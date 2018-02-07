@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Subatomic Design Systems
-hidden: true
 ---
 
 The following theory of "Subatomic Design Systems" is loosely based on an
@@ -17,11 +16,11 @@ The rules of the theory are straightforward and intentionally quite loose; they
 are based principally on 2D digital design systems, but could easily be applied
 to 3D mediums such as Virtual Reality or exhibition spaces.
 
-Above all, the distinguishing feature of Subatomic Design Systems (SDS) is the
-property of change through composition. These systems are _designed_ to change
-over time and as an organisation or product grows—to be restrictive enough to
-represent a whole, but flexible enough to easily evolve and meet divergent
-needs.
+Above all, the distinguishing feature of Subatomic Design Systems (hereafter SDS)
+is the property of change through composition. These systems are _designed_ to
+change over time and as an organisation or product grows—to be restrictive
+enough to represent a whole, but flexible enough to easily evolve and meet
+divergent needs.
 
 ## Glossary of terms
 
@@ -141,7 +140,7 @@ then our composition $d$ would also change.
 \\[d = e + a = e + f + g\\]
 
 This chain of events makes it straightforward to propagate changes to the
-appearance of our entire system in a few simple moves. Note that this still
+appearance of our entire system in a few simple motions. Note that this still
 isn’t quite what you’d consider mutability; we’re not changing the values of the
 composed particles $b$ or $c$, but changing the arrangements of the compositions
 to create new compositions.
@@ -193,7 +192,7 @@ composition of particles.
 
 With the structural rules of the system in place, we may turn our attention to
 the organisational aspects of design system maintenance. While the system may be
-intialised by a single team, its long-term maintenance is a byproduct of its
+initialised by a single team, its long-term maintenance is a byproduct of its
 continued use and organic growth.
 
 With the right infrastructure in place, simple rules about preventing
@@ -234,6 +233,23 @@ in other posts on my blog, namely:
 - [Paving The Path of Least Resistance](/2017/06/27/paving-the-path-of-least-resistance/)
 - [A Design System Grammar](/2017/07/12/a-design-system-grammar/)
 - [Design System Structure](/2017/07/17/design-system-structure/)
+
+Finally, the present and abrupt conclusion above is one I am aware of. Many of
+these ideas are still in their infancy and have had only minimal purchase in
+the real-life design systems I've worked on. I plan to concentrate efforts on
+getting from the "Why" of SDS to the "How": how, in current tools and different
+organisations, can a design system based on these principles be created (or,
+with increasing urgency, borne out of an existing system), maintained, and
+scaled.
+
+I'm also aware of the lack of source material and further reading from more
+diverse sources and underrepresented groups. It's easy for underrepresented
+voices to be drowned out, especially in the midst of posts like this written by
+people like me. I would be very glad to hear from you about your thoughts on
+this subject, or if you want to share the work of someone else you think is
+important, interesting, or unheard. For public discussion, find me on
+[Twitter](https://twitter.com/_dte), or for 1-to-1 correspondence, [email
+me](mailto:dan.eden@me.com).
 
 [^1]: In my previous writing on the subject of design systems, I've referred to
       these compositions as 'Components,' but have found that term to be loaded or
