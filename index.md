@@ -5,11 +5,14 @@ title: About
 Daniel Eden is a Designer with a penchant for the web, typography, and
 interaction design. He prefers to refer to himself in the first person.
 
-I'm currently living in Oakland, California and working as a Product Designer
-for [Facebook](https://facebook.com). Previously, I worked as a Designer and
-Engineer for [Dropbox](https://dropbox.com). I specialize in Design Systems: how
-they break, the teams that maintain them, and how they work at scale and across
-mediums.
+I'm currently living in Oakland, California and working as a Designer for
+[Facebook](https://facebook.com). I help to create and maintain the Facebook
+Design System: a set of components, patterns, guidance, and tools to help
+hundreds of product teams build experiences for billions of people.
+
+Previously, I worked as a Designer and Engineer for
+[Dropbox](https://dropbox.com). I specialize in Design Systems: how they break,
+the teams that maintain them, and how they work at scale and across mediums.
 
 I spend my time [Tweeting](http://twitter.com/_dte "@_dte on Twitter"), taking
 [photographs](https://photos.daneden.me/ "Daniel's Photography"), making
