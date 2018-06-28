@@ -1,0 +1,19 @@
+/*
+ * Header
+ * ======
+ *
+ */
+
+.site__header {
+  align-items: center;
+  border-bottom: 1px solid;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: var(--baseline);
+  padding: var(--baseline) 0 0;
+}
+
+.site__title {
+  margin-right: var(--baseline);
+}

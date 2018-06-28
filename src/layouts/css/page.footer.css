@@ -1,0 +1,12 @@
+/*
+ * Footer
+ * ======
+ *
+ */
+
+.site__footer {
+  border-top: 1px solid currentColor;
+  color: var(--meta-color);
+  font-family: var(--sans-serif);
+  margin-top: cal(var(--baseline) * 2);
+}

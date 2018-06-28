@@ -1,0 +1,10 @@
+/*
+ * Wrap object
+ * ===========
+ *
+ */
+
+.wrap {
+  margin: 0 auto;
+  max-width: 34rem;
+}

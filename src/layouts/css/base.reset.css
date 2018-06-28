@@ -1,0 +1,47 @@
+/*
+ * Reset
+ * =====
+ *
+ */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+input, button, textarea {
+  font: inherit;
+}
+
+h1, h2,
+ul, ol,
+table, form, figure, blockquote,
+pre {
+  margin-bottom: var(--baseline);
+}
+
+figure:not(.alignleft):not(.alignright) {
+  margin-top: var(--baseline);
+}
+
+p + *:not(p) {
+  margin-top: var(--baseline);
+}
+
+p + p {
+  text-indent: 1.5em;
+}
+
+img, object {
+  max-width: 100%;
+}
+
+ul, ol {
+  padding-left: var(--baseline);
+}
+
+  li ul, li ol {
+    margin-bottom: 0;
+  }

@@ -1,0 +1,23 @@
+/*
+ * Base Variables
+ * ==============
+ *
+ */
+
+:root {
+  --baseline: 1.7778rem;
+  --small: .875rem;
+
+  --wash-color: #fefefe;
+  --site-color: #00C266;
+  --text-color: #000207;
+  --meta-color: #747474;
+
+  --monospace: "Input Mono", "Source Code Pro", "Monaco", monospace;
+
+  --sans-serif-fallback: "BlinkMacSystemFont", -apple-system, "Helvetica Neue", Helvetica, sans-serif;
+  --sans-serif: "Neue Haas Unica Web", var(--sans-serif-fallback);
+
+  --serif-fallback: "Georgia", "Times New Roman", serif;
+  --serif: "Tiempos Text Web", var(--serif-fallback);
+}
