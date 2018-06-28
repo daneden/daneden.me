@@ -1,24 +1,9 @@
-# Ignore Jekyll generated files
-_site
-
-# Ignore caches and logs
-.sass-cache
-.asset-cache/
-.bundle/
-Gemfile.lock
-.ruby-version
+# Ignore Gatsby generated files
+public/
 
 # Ignore junk files
 .DS_Store
-
-# Environment-dependent files
-_config_local.yml
-
-# Ignore CSS. This could trip me up some day.
-_assets/css/
-
-# Ignore .jekyll-metadata (introduced by Jekyll 3.0 for incremental builds)
-.jekyll-metadata
+*.log
 
 # Ignore npm stuff
 node_modules/
