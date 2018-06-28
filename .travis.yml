@@ -10,11 +10,8 @@ cache:
     - node_modules
 
 before_install:
-  - rvm install 2.3.0
-  - npm install -g gulp-cli
+  - npm install -g gatsby-cli
   - npm install -g yarn
-  - bundle
-  - ./scripts/setup-prod.sh
 
 script:
-  - gulp build
+  - gatsby build
