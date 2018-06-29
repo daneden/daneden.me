@@ -8,85 +8,79 @@ const books = [
   {
     title: "Bird By Bird",
     author: "Anne Lamott",
-    cover: "/books/bird.jpg",
+    cover: "books/bird.jpg",
     url: "http://amzn.to/2wi5jDH",
   },
   {
     title: "Dataclysm",
     author: "Christian Rudder",
-    cover: "/books/dataclysm.jpg",
+    cover: "books/dataclysm.webp",
     url: "http://amzn.to/2vPTGRf",
   },
   {
     title: "Design as Art",
     author: "Bruno Munari",
-    cover: "/books/design-art.jpg",
+    cover: "books/design-art.jpg",
     url: "http://amzn.to/2vQ0Rcd",
   },
   {
     title: "Designing News",
     author: "Francesco Franchi",
-    cover: "/books/designing-news.jpg",
+    cover: "books/designing-news.jpg",
     url: "http://amzn.to/2vLnoZb",
   },
   {
     title: "Drunk Tank Pink",
     author: "Adam Alter",
-    cover: "/books/drunk-tank-pink.jpg",
+    cover: "books/drunk-tank-pink.jpg",
     url: "http://amzn.to/2fSSb0M",
   },
   {
     title: "The Signal and The Noise",
     author: "Nate Silver",
-    cover: "/books/signal-noise.jpg",
+    cover: "books/signal-noise.jpg",
     url: "http://amzn.to/2fSSHfe",
   },
   {
     title: "Grid Systems in Graphic Design",
     author: "Josef Müller-Brockmann",
-    cover: "/books/grid-systems.jpg",
+    cover: "books/grid-systems.jpg",
     url: "http://amzn.to/2vLDH8k",
   },
   {
     title: "The Code Book",
     author: "Simon Singh",
-    cover: "/books/the-code-book.jpg",
+    cover: "books/the-code-book.jpg",
     url: "http://amzn.to/2fTpu3A",
   },
   {
     title: "A Short History of Nearly Everything",
     author: "Bill Bryson",
-    cover: "/books/short-history.jpg",
+    cover: "books/short-history.jpg",
     url: "http://amzn.to/2wYOvP4",
   },
   {
     title: "Your Brain Is a Time Machine",
     author: "Dean Buonomano",
-    cover: "/books/time-machine.jpg",
+    cover: "books/time-machine.jpg",
     url: "http://amzn.to/2fSXb5F",
-  },
-  {
-    title: "Unjustified Texts",
-    author: "Robin Kinross",
-    cover: "/books/ut.jpg",
-    url: "http://amzn.to/2iDwgZO",
   },
   {
     title: "Typographie",
     author: "Emil Ruder",
-    cover: "/books/typographie.jpg",
+    cover: "books/typographie.jpg",
     url: "http://amzn.to/2znEDz6",
   },
   {
     title: "Thinking, Fast and Slow",
     author: "Daniel Kahneman",
-    cover: "/books/tfas.jpg",
+    cover: "books/tfas.jpg",
     url: "http://amzn.to/2hTHQiU",
   },
   {
     title: "Designing Design",
     author: "Kenya Hara",
-    cover: "/books/designing-design.jpg",
+    cover: "books/designing-design.jpg",
     url: "http://amzn.to/2CZzSxR",
   },
 ]
@@ -108,6 +102,7 @@ export default function BookList() {
         cover={cover}
         title={title}
         url={url}
+        key={title}
       />
       ))}
   </div>

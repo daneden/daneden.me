@@ -33,7 +33,7 @@ const Header = ({ siteTitle }) => (
 
     <nav className="site__nav">
       <ul className="nav">
-        {links.map(({to, label}) => <li>
+        {links.map(({to, label}) => <li key={to}>
           <NavLink to={to} label={label} />
         </li>)}
       </ul>
