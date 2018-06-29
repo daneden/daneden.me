@@ -1,8 +1,11 @@
-export const frontmatter = {
-  layout: "page",
-  title: "Portfolio",
-}
+import React from 'react'
 
+import mdToHTML from '../utils/mdToHTML'
+
+export default function PortfolioPage() {
+  return <div>
+    <h1>Portfolio</h1>
+    {mdToHTML(`
 ## Facebook
 
 I’m currently employed by Facebook as a Product Designer. I work on the Facebook
@@ -81,7 +84,7 @@ site](https://gif.daneden.me).
 ### Toast
 [Toast](http://daneden.github.io/Toast) is a Sass/CSS grid system,
 designed to be highly customisable, extremely verbose, and simple-to-use out of
-the box. It uses no floats, no `first` or `last` classes, and allows nesting.
+the box. It uses no floats, no \`first\` or \`last\` classes, and allows nesting.
 [Visit the site](http://daneden.github.io/Toast)
 
 ### Digital Ruin
@@ -110,3 +113,7 @@ for budgeting quickly. [Visit the site](http://brills.me).
 [Animate.css](http://daneden.github.io/animate.css/) is a cross-browser
 plug-and-play CSS animation library for delightful animation in websites and web
 applications. [Visit the site](http://daneden.github.io/animate.css/).
+    `)}
+  </div>
+}
+

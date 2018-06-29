@@ -8,6 +8,11 @@ figcaption, figcaption :last-child {
   margin: 0;
 }
 
+figure img[src*=".svg"],
+figure img[srcset*=".svg"] {
+  width: 100%;
+}
+
 .alignleft, .alignright {
   width: 50%;
 }

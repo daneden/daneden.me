@@ -46,10 +46,6 @@
   padding-top: var(--baseline);
 }
 
-.m0 {
-  margin: 0;
-}
-
 .ml {
   margin-bottom: var(--baseline);
 }
@@ -60,4 +56,12 @@
 
 .mbs {
   margin-bottom: cal(var(--baseline) / 2);
+}
+
+.m0 {
+  margin: 0;
+}
+
+.mb0 {
+  margin-bottom: 0;
 }

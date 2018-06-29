@@ -15,7 +15,7 @@ module.exports = async ({
     return
   }
 
-  const filename = createFilePath({ node, getNode, basePath: `pages` })
+  const filename = createFilePath({ node, getNode })
 
   // get the date and title from the file name
   const [, date, title] = filename.match(

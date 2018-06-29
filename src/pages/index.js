@@ -30,14 +30,3 @@ résumé](https://www.dropbox.com/s/kq431p4ey1b1ayu/R%C3%A9sum%C3%A9.pdf "Daniel
 }
 
 export default IndexPage
-
-export const pageQuery = graphql`
-  query IndexQuery {
-    site {
-      siteMetadata {
-        authorName
-        title
-      }
-    }
-  }
-`
