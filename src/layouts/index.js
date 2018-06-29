@@ -30,10 +30,6 @@ const Layout = ({ children, data, location }) => {
     <React.Fragment>
       <Helmet
         title={data.site.siteMetadata.title}
-        meta={[
-          { name: 'description', content: 'Sample' },
-          { name: 'keywords', content: 'sample, something' },
-        ]}
       >
         <body
           className={[

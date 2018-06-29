@@ -1,4 +1,5 @@
 import React from "react"
+import Helmet from 'react-helmet'
 
 import Header from '../components/Header'
 import Wrapper from '../components/Wrapper'
@@ -12,7 +13,12 @@ export default function Template({
   const { frontmatter } = mdx
 
   return (
-    <Wrapper className="phl">
+    <Wrapper>
+      <Helmet
+        title={`${frontmatter.title} | ${site.siteMetadata.title}`}
+      >
+        <body className='phl' />
+      </Helmet>
       <Header siteTitle={site.siteMetadata.title} />
       <main className="mxl">
         <header className="mxl">
