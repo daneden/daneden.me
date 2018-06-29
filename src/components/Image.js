@@ -6,11 +6,11 @@ import mdToHTML from '../utils/mdToHTML'
 class Image extends React.Component {
   render() {
     const url = (
-      process.env.PUBLIC_URL !== undefined &&
       process.env.NODE_ENV &&
       process.env.NODE_ENV.toUpperCase() === 'DEVELOPMENT'
-    ) ? `https://dephotos.imgix.net/${this.props.src}`
-      : `${process.env.PUBLIC_URL || ''}/uploads/${this.props.src}`
+    )
+      ? `${process.env.PUBLIC_URL || ''}/uploads/${this.props.src}`
+      : `https://dephotos.imgix.net/${this.props.src}`
 
     const img = (
       <Imgix
