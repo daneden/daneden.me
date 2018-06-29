@@ -15,8 +15,10 @@ export default function Template({
     <Wrapper>
       <Header siteTitle={site.siteMetadata.title} />
       <main className="mxl">
-        <h1>{frontmatter.title}</h1>
-        <h2>{frontmatter.date}</h2>
+        <header className="mxl">
+          <h1>{frontmatter.title}</h1>
+          <p className="hide">{frontmatter.date}</p>
+        </header>
         {children()}
       </main>
       <Footer author={site.siteMetadata.authorName} />
