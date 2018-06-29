@@ -1,29 +1,45 @@
 {
-  "name": "daneden.me",
+  "name": "gatsby-starter-default",
+  "description": "Gatsby default starter",
   "version": "1.0.0",
-  "description": "This is my website. There are many like it, but this one is mine.",
-  "main": "gulpfile.js",
+  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "dependencies": {
+    "babel-plugin-config-export": "^1.0.0",
+    "gatsby": "^1.9.247",
+    "gatsby-link": "^1.6.40",
+    "gatsby-plugin-mdx": "^1.0.1",
+    "gatsby-plugin-react-helmet": "^2.0.10",
+    "gatsby-plugin-react-next": "^1.0.11",
+    "gatsby-source-filesystem": "^1.5.39",
+    "gatsby-transformer-remark": "^1.7.44",
+    "react-codepen-embed": "^0.1.0",
+    "react-helmet": "^5.2.0",
+    "react-imgix": "^7.1.1",
+    "react-katex": "^2.0.2",
+    "remark": "^9.0.0",
+    "remark-numbered-footnotes": "^1.0.5",
+    "remark-react": "^4.0.3",
+    "retext-smartypants": "^3.0.1",
+    "slug": "^0.9.1"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write 'src/**/*.js'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@mdx-js/loader": "^0.12.0",
+    "@mdx-js/mdx": "^0.12.0",
+    "loader-utils": "^1.1.0",
+    "prettier": "^1.12.0"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/daneden/daneden.me.git"
-  },
-  "author": "Daniel Eden",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/daneden/daneden.me/issues"
-  },
-  "homepage": "https://github.com/daneden/daneden.me#readme",
-  "devDependencies": {
-    "babel-plugin-transform-react-jsx": "^6.24.1",
-    "browser-sync": "*",
-    "gulp": "*",
-    "gulp-autoprefixer": "*",
-    "gulp-cssnano": "*",
-    "gulp-html-minifier": "*",
-    "gulp-htmlmin": "*",
-    "gulp-postcss": "*",
-    "gulp-shell": "*",
-    "postcss-cssnext": "*",
-    "postcss-import": "*"
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
   }
 }

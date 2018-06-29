@@ -1,0 +1,51 @@
+/*
+ * Images
+ * ======
+ *
+ */
+
+figcaption, figcaption :last-child {
+  margin: 0;
+}
+
+figure img[src*=".svg"],
+figure img[srcset*=".svg"] {
+  width: 100%;
+}
+
+.alignleft, .alignright {
+  width: 50%;
+}
+
+.alignleft {
+  float: left;
+  margin-left: -25%;
+  margin-right: var(--baseline);
+}
+
+.alignright {
+  float: right;
+  margin-left: var(--baseline);
+  margin-right: -25%;
+}
+
+@media (max-width: 56rem) {
+  .alignleft, .alignright {
+    width: 40%;
+  }
+
+  .alignleft {
+    margin-left: 0;
+  }
+
+  .alignright {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 30rem){
+  .alignleft, .alignright {
+    float: none;
+    width: 100%;
+  }
+}
