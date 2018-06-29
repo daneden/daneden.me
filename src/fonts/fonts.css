@@ -28,9 +28,10 @@
 
 
 @font-face {
+  font-display: fallback;
   font-family: 'Neue Haas Unica Web';
-  font-weight: normal;
   font-style: italic;
+  font-weight: normal;
   src: url('webfonts/36F252_0_0.eot');
   src: url('webfonts/36F252_0_0.eot?#iefix') format('embedded-opentype'),
        url('webfonts/36F252_0_0.woff2') format('woff2'),
@@ -39,9 +40,10 @@
 }
 
 @font-face {
+  font-display: fallback;
   font-family: 'Neue Haas Unica Web';
-  font-weight: normal;
   font-style: normal;
+  font-weight: normal;
   src: url('webfonts/36F252_1_0.eot');
   src: url('webfonts/36F252_1_0.eot?#iefix') format('embedded-opentype'),
        url('webfonts/36F252_1_0.woff2') format('woff2'),
@@ -50,18 +52,20 @@
 }
 
 @font-face {
+  font-display: fallback;
   font-family: 'Tiempos Text Web';
-  font-weight: normal;
   font-style: italic;
+  font-weight: normal;
   src: url('webfonts/TiemposTextWeb-RegularItalic.eot'),
        url('webfonts/TiemposTextWeb-RegularItalic.woff2') format('woff2'),
        url('webfonts/TiemposTextWeb-RegularItalic.woff') format('woff');
 }
 
 @font-face {
+  font-display: fallback;
   font-family: 'Tiempos Text Web';
-  font-weight: normal;
   font-style: normal;
+  font-weight: normal;
   src: url('webfonts/TiemposTextWeb-Regular.eot'),
        url('webfonts/TiemposTextWeb-Regular.woff2') format('woff2'),
        url('webfonts/TiemposTextWeb-Regular.woff') format('woff');

@@ -1,5 +1,6 @@
 # Ignore Gatsby generated files
 public/
+.cache/
 
 # Ignore junk files
 .DS_Store
