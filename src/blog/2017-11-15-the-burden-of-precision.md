@@ -1,7 +1,10 @@
+import Image from '../components/Image'
+
 export const frontmatter = {
-layout: "post",
-title: "The Burden of Precision",
+  layout: "post",
+  title: "The Burden of Precision",
 }
+
 > "If the idea is there, the brush can spare itself the work"
 > *—Chinese painter's proverb*
 
@@ -18,7 +21,7 @@ a small fraction of the real-world states the product may encounter. We spend
 all this time and energy using precise tools to produce perfect caricatures of
 things we rarely understand the complexities of making real.
 
-{% figure 2017/11/Simplicity.png  %}
+<Image src="2017/11/Simplicity.png" />
 
 Why do we design in this way? An architect's time surely isn't best spent
 producing perfect virtual reality environments of the buildings she plans. One

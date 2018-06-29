@@ -20,7 +20,11 @@ sup[id*="fnref"] a {
     padding-left: 0;
   }
 
-  .footnotes p {
+  .footnotes li > p {
+    display: inline;
+  }
+
+  .footnotes li {
     margin-bottom: calc(var(--baseline) / 2);
   }
 
