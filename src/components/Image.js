@@ -20,10 +20,6 @@ class Image extends React.Component {
       />
     )
 
-    if(this.props.caption) {
-      console.log(mdToHTML(this.props.caption))
-    }
-
     return (
       <figure
         className={[
