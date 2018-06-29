@@ -25,14 +25,19 @@ class Image extends React.Component {
     }
 
     return (
-      <div className={this.props.className}>
+      <figure
+        className={[
+          this.props.className,
+          "ml"
+        ].join(' ')}
+      >
         {img}
         {this.props.caption && (
-          <figcaption className="meta">
+          <figcaption className="small meta">
             {mdToHTML(this.props.caption)}
           </figcaption>
         )}
-      </div>
+      </figure>
     )
   }
 }

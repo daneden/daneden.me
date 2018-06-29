@@ -1,4 +1,5 @@
 import Image from '../components/Image'
+import Codepen from 'react-codepen-embed'
 
 export const frontmatter = {
   layout: "post",
@@ -63,8 +64,12 @@ drawing toolkit.
 I moved what I had learned into a p5 sketch, and before long, I had a real-life
 version of what I had first set out to create.
 
-<p data-height="300" data-theme-id="26171" data-slug-hash="MjNZJa" data-default-tab="result" data-user="daneden" data-embed-version="2" data-pen-title="p5.js A2" class="codepen">See the Pen <a href="http://codepen.io/daneden/pen/MjNZJa/">p5.js A2</a> by Daniel Eden (<a href="http://codepen.io/daneden">@daneden</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+<Codepen
+  hash="MjNZJa"
+  user="daneden"
+  themeId="26171"
+  defaultTab="result"
+  />
 
 ## Graduating From JavaScript
 

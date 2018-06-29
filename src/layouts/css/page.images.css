@@ -4,11 +4,6 @@
  *
  */
 
-figure {
-  color: var(--meta-color);
-  font-size: var(--small);
-}
-
 figcaption, figcaption :last-child {
   margin: 0;
 }
