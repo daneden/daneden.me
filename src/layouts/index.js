@@ -11,7 +11,7 @@ import '../fonts/fonts.css'
 
 const Content = ({ isFrontpage, children }) => {
   if(isFrontpage) {
-    return <Wrapper className="mxl">
+    return <Wrapper>
       {children}
     </Wrapper>
   }

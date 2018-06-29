@@ -24,7 +24,7 @@
 
 
 /* @import must be at top of file, otherwise CSS will not work */
-@import url("//hello.myfonts.net/count/36f252");
+@import url("//hello.myfonts.net/count/36f8c4");
 
 
 @font-face {
@@ -32,11 +32,9 @@
   font-family: 'Neue Haas Unica Web';
   font-style: italic;
   font-weight: normal;
-  src: url('webfonts/36F252_0_0.eot');
-  src: url('webfonts/36F252_0_0.eot?#iefix') format('embedded-opentype'),
-       url('webfonts/36F252_0_0.woff2') format('woff2'),
-       url('webfonts/36F252_0_0.woff') format('woff'),
-       url('webfonts/36F252_0_0.ttf') format('truetype');
+  src: url('webfonts/36F8C4_0_0.woff2') format('woff2'),
+       url('webfonts/36F8C4_0_0.woff') format('woff'),
+       url('webfonts/36F8C4_0_0.eot') format('embedded-opentype');
 }
 
 @font-face {
@@ -44,11 +42,9 @@
   font-family: 'Neue Haas Unica Web';
   font-style: normal;
   font-weight: normal;
-  src: url('webfonts/36F252_1_0.eot');
-  src: url('webfonts/36F252_1_0.eot?#iefix') format('embedded-opentype'),
-       url('webfonts/36F252_1_0.woff2') format('woff2'),
-       url('webfonts/36F252_1_0.woff') format('woff'),
-       url('webfonts/36F252_1_0.ttf') format('truetype');
+  src: url('webfonts/36F8C4_1_0.woff2') format('woff2'),
+       url('webfonts/36F8C4_1_0.woff') format('woff'),
+       url('webfonts/36F8C4_1_0.eot') format('embedded-opentype');
 }
 
 @font-face {
@@ -56,9 +52,9 @@
   font-family: 'Tiempos Text Web';
   font-style: italic;
   font-weight: normal;
-  src: url('webfonts/TiemposTextWeb-RegularItalic.eot'),
-       url('webfonts/TiemposTextWeb-RegularItalic.woff2') format('woff2'),
-       url('webfonts/TiemposTextWeb-RegularItalic.woff') format('woff');
+  src: url('webfonts/TiemposTextWeb-RegularItalic.woff2') format('woff2'),
+       url('webfonts/TiemposTextWeb-RegularItalic.woff') format('woff'),
+       url('webfonts/TiemposTextWeb-RegularItalic.eot') format('embedded-opentype');
 }
 
 @font-face {
@@ -66,7 +62,7 @@
   font-family: 'Tiempos Text Web';
   font-style: normal;
   font-weight: normal;
-  src: url('webfonts/TiemposTextWeb-Regular.eot'),
-       url('webfonts/TiemposTextWeb-Regular.woff2') format('woff2'),
-       url('webfonts/TiemposTextWeb-Regular.woff') format('woff');
+  src: url('webfonts/TiemposTextWeb-Regular.woff2') format('woff2'),
+       url('webfonts/TiemposTextWeb-Regular.woff') format('woff'),
+       url('webfonts/TiemposTextWeb-Regular.eot') format('embedded-opentype');
 }
