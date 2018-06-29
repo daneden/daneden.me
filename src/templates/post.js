@@ -12,7 +12,7 @@ export default function Template({
   const { frontmatter } = mdx
 
   return (
-    <Wrapper>
+    <Wrapper className="phl">
       <Header siteTitle={site.siteMetadata.title} />
       <main className="mxl">
         <header className="mxl">
