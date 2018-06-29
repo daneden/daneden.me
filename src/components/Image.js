@@ -10,7 +10,7 @@ class Image extends React.Component {
       process.env.NODE_ENV.toUpperCase() === 'DEVELOPMENT'
     )
       ? `${process.env.PUBLIC_URL || ''}/uploads/${this.props.src}`
-      : `https://dephotos.imgix.net/${this.props.src}`
+      : `https://daneden.imgix.net/${this.props.src}`
 
     const img = (
       <Imgix
