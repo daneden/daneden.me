@@ -3,7 +3,7 @@ import React from 'react'
 import mdToHTML from '../utils/mdToHTML'
 
 export default function PortfolioPage() {
-  return <div>
+  return <div className="mxl">
     <h1>Portfolio</h1>
     {mdToHTML(`
 ## Facebook
