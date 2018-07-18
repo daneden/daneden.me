@@ -14,7 +14,7 @@ const books = [
   {
     title: "Dataclysm",
     author: "Christian Rudder",
-    cover: "books/dataclysm.webp",
+    cover: "books/dataclysm.jpg",
     url: "http://amzn.to/2vPTGRf",
   },
   {
@@ -40,12 +40,6 @@ const books = [
     author: "Nate Silver",
     cover: "books/signal-noise.jpg",
     url: "http://amzn.to/2fSSHfe",
-  },
-  {
-    title: "Grid Systems in Graphic Design",
-    author: "Josef Müller-Brockmann",
-    cover: "books/grid-systems.jpg",
-    url: "http://amzn.to/2vLDH8k",
   },
   {
     title: "The Code Book",
@@ -82,6 +76,30 @@ const books = [
     author: "Kenya Hara",
     cover: "books/designing-design.jpg",
     url: "http://amzn.to/2CZzSxR",
+  },
+  {
+    title: "Object-Oriented Ontology",
+    author: "Graham Harman",
+    cover: "books/ooo.jpg",
+    url: "https://amzn.to/2mpLHpZ",
+  },
+  {
+    title: "The Order of Time",
+    author: "Carlo Rovelli",
+    cover: "books/order-of-time.jpg",
+    url: "https://amzn.to/2zKooB2",
+  },
+  {
+    title: "Algorithms To Live By",
+    author: "Brian Christian, Tom Griffiths",
+    cover: "books/algorithms.jpg",
+    url: "https://amzn.to/2uILaDt",
+  },
+  {
+    title: "One More Thing",
+    author: "BJ Novak",
+    cover: "books/one-more-thing.jpg",
+    url: "https://amzn.to/2zQrZxm",
   },
 ]
 
