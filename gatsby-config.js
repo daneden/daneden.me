@@ -4,10 +4,15 @@ module.exports = {
     title: 'Daniel Eden, Designer',
   },
   plugins: [
-    'gatsby-plugin-react-next',
-    'gatsby-plugin-mdx',
     'gatsby-plugin-react-helmet',
-    'gatsby-transformer-mdx',
+    'gatsby-plugin-mdx',
+    'gatsby-plugin-postcss',
+    {
+      resolve: 'gatsby-transformer-mdx',
+      options: {
+        remarkPlugins: [ 'gatsby-remark-smartypants', ],
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

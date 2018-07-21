@@ -1,11 +1,15 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 
+import Layout from '../components/Layout'
 import mdToHTML from '../utils/mdToHTML'
 
 const NotFoundPage = () => (
-  <div className="mxl">
-    <h1>404 Page Not Found</h1>
-    {mdToHTML(`
+  <Layout>
+    <Helmet title="404 Page Not Found" />
+    <div className="mxl">
+      <h1>404 Page Not Found</h1>
+      {mdToHTML(`
 The page you were looking for was not found.
 
 Maybe it was deleted. Maybe the URL is incorrect. Maybe you wanted to come to
@@ -18,8 +22,9 @@ Maybe you'll tell your friends or coworkers about the page being missing. Maybe
 you won't.
 
 Maybe you'll be OK. Maybe.
-    `)}
-  </div>
+      `)}
+    </div>
+  </Layout>
 )
 
 export default NotFoundPage

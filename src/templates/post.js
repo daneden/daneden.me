@@ -5,10 +5,24 @@ import Header from '../components/Header'
 import Wrapper from '../components/Wrapper'
 import Footer from '../components/Footer'
 
-export default function Template({
-  data,
-  children,
-}) {
+const QUERY = graphql`
+  query BlogPostBySlug($slug: String!) {
+    site {
+      siteMetadata {
+        title
+        authorName
+      }
+    }
+    mdx(frontmatter: { slug: { eq: $slug } }) {
+      frontmatter {
+        date(formatString: "MMMM DD, YYYY")
+        title
+      }
+    }
+  }
+`
+
+const Post = ({ data }) => {
   const { mdx, site } = data
   const { frontmatter } = mdx
 
@@ -32,19 +46,7 @@ export default function Template({
   )
 }
 
-export const pageQuery = graphql`
-  query BlogPostBySlug($slug: String!) {
-    site {
-      siteMetadata {
-        title
-        authorName
-      }
-    }
-    mdx(frontmatter: { slug: { eq: $slug } }) {
-      frontmatter {
-        date(formatString: "MMMM DD, YYYY")
-        title
-      }
-    }
-  }
-`
+export default function Template({ children }) {
+  return <StaticQuery query={QUERY} render={Post} />
+}
+

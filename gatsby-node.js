@@ -41,11 +41,11 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         const { absolutePath, frontmatter } = node
         const id = Math.random() + ''
 
-        createLayout({
-          component: resolvePath('./src/templates/post.js'),
-          id,
-          context: { slug: frontmatter.slug }
-        })
+        // createLayout({
+        //   component: resolvePath('./src/templates/post.js'),
+        //   id,
+        //   context: { slug: frontmatter.slug }
+        // })
 
         createPage({
           path: `${frontmatter.slug}`,

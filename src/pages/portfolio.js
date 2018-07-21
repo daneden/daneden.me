@@ -1,11 +1,15 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 
+import Layout from '../components/Layout'
 import mdToHTML from '../utils/mdToHTML'
 
 export default function PortfolioPage() {
-  return <div className="mxl">
-    <h1>Portfolio</h1>
-    {mdToHTML(`
+  return <Layout>
+    <Helmet title="Portfolio" />
+    <div className="mxl">
+      <h1>Portfolio</h1>
+      {mdToHTML(`
 ## Facebook
 
 I’m currently employed by Facebook as a Product Designer. I work on the Facebook
@@ -113,7 +117,8 @@ for budgeting quickly. [Visit the site](http://brills.me).
 [Animate.css](http://daneden.github.io/animate.css/) is a cross-browser
 plug-and-play CSS animation library for delightful animation in websites and web
 applications. [Visit the site](http://daneden.github.io/animate.css/).
-    `)}
-  </div>
+      `)}
+    </div>
+  </Layout>
 }
 

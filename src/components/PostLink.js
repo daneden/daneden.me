@@ -1,5 +1,5 @@
-import React from "react";
-import Link from "gatsby-link";
+import React from "react"
+import { Link } from "gatsby"
 
 const PostLink = ({ post }) => (
   <div>
@@ -11,6 +11,6 @@ const PostLink = ({ post }) => (
       <span className="b h4 em meta">{post.frontmatter.date}</span>
     </Link>
   </div>
-);
+)
 
-export default PostLink;
+export default PostLink
