@@ -1,5 +1,4 @@
 import React from "react"
-import PostLink from "../components/PostLink"
 import Layout from "../components/Layout"
 
 import mdToHTML from '../utils/mdToHTML'

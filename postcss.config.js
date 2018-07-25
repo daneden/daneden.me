@@ -1,13 +1,9 @@
 const postcssImport = require(`postcss-import`);
-const postcssCssNext = require(`postcss-cssnext`);
-const postcssBrowserReporter = require(`postcss-browser-reporter`);
-const postcssReporter = require(`postcss-reporter`);
+const postcssPresetEnv = require(`postcss-preset-env`);
 
 module.exports = () => ({
   plugins: [
     postcssImport(),
-    postcssCssNext(),
-    postcssBrowserReporter(),
-    postcssReporter(),
+    postcssPresetEnv(),
   ],
 })
