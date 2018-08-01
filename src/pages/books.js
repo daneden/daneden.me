@@ -5,8 +5,8 @@ import BookList from '../components/BookList'
 import Layout from "../components/Layout"
 import mdToHTML from '../utils/mdToHTML'
 
-export default function LibraryPage() {
-  return <Layout>
+export default function LibraryPage(props) {
+  return <Layout {...props}>
     <Helmet title="Library" />
     <div className="mxl">
       <h1>Library</h1>

@@ -9,11 +9,8 @@ const resolvePath = path.resolve
 const slugify = require('slug')
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
-// remark plugins
-const footnotes = require('remark-numbered-footnotes')
-
-exports.createPages = ({ graphql, boundActionCreators }) => {
-  const { createPage, createLayout } = boundActionCreators
+exports.createPages = ({ graphql, actions }) => {
+  const { createPage, createLayout } = actions
 
   return new Promise((resolve, reject) => {
     graphql(`
@@ -21,10 +18,8 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
       allMdx {
         edges {
           node {
-            relativeDirectory
-            absolutePath
-            frontmatter {
-              title
+            fileAbsolutePath
+            fields {
               slug
             }
           }
@@ -38,22 +33,34 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
 
       // Create blog post pages.
       result.data.allMdx.edges.forEach(({ node }) => {
-        const { absolutePath, frontmatter } = node
-        const id = Math.random() + ''
-
-        // createLayout({
-        //   component: resolvePath('./src/templates/post.js'),
-        //   id,
-        //   context: { slug: frontmatter.slug }
-        // })
+        const { fileAbsolutePath, fields } = node
 
         createPage({
-          path: `${frontmatter.slug}`,
-          layout: id,
-          component: absolutePath
+          path: `${fields.slug}`,
+          component: fileAbsolutePath
         })
       })
     })
     .then(resolve)
   })
+}
+
+exports.onCreateNode = ({ node, actions }) => {
+  if (node.internal.type === `Mdx`) {
+    const { createNodeField } = actions
+    const filename = path.basename(node.fileAbsolutePath, path.extname(node.fileAbsolutePath));
+
+    // get the date and title from the file name
+    const [, date, title] = filename.match(
+      /^([\d]{4}-[\d]{2}-[\d]{2})-{1}(.+)$/
+    )
+
+    // create a new slug concatenating everything
+    const slug = `/${slugify(
+      date,
+      "/"
+    )}/${title}/`
+
+    createNodeField({ node, name: `slug`, value: slug })
+  }
 }

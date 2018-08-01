@@ -4,8 +4,8 @@ import Helmet from 'react-helmet'
 import Layout from '../components/Layout'
 import mdToHTML from '../utils/mdToHTML'
 
-export default function PortfolioPage() {
-  return <Layout>
+export default function PortfolioPage(props) {
+  return <Layout {...props}>
     <Helmet title="Portfolio" />
     <div className="mxl">
       <h1>Portfolio</h1>

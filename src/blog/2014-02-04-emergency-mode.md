@@ -3,6 +3,7 @@ import Image from '../components/Image'
 export const frontmatter = {
   layout: "post",
   title: "Emergency Mode",
+  date: "2014-02-04"
 }
 
 “What would happen if I were struck down by a car right now?”

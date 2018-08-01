@@ -9,17 +9,6 @@ import Wrapper from '../components/Wrapper'
 import './css/style.css'
 import '../fonts/fonts.css'
 
-const QUERY = graphql`
-  query SiteTitleQuery {
-    site {
-      siteMetadata {
-        title
-        authorName
-      }
-    }
-  }
-`
-
 const Content = ({ isFrontpage, children }) => {
   if(isFrontpage) {
     return <Wrapper>
@@ -37,7 +26,16 @@ const Layout = ({ children, location }) => {
 
   return (
     <StaticQuery
-      query={QUERY}
+      query={graphql`
+        query SiteTitleQuery {
+          site {
+            siteMetadata {
+              title
+              authorName
+            }
+          }
+        }
+      `}
       render={data => (
         <React.Fragment>
           <Helmet

@@ -5,29 +5,26 @@ import { StaticQuery, graphql } from 'gatsby'
 import PostLink from "../components/PostLink"
 import Layout from "../components/Layout"
 
-const QUERY = graphql`
-  query BlogQuery {
-    allMdx(sort: {fields: [frontmatter___date], order: DESC}) {
-      edges {
-        node {
-          frontmatter {
-            title
-            slug
-            date(formatString: "dddd, MMMM Do YYYY")
+const BlogPage = (props) => <StaticQuery
+  query={graphql`
+    query BlogQuery {
+      allMdx(sort: {fields: [frontmatter___date], order: DESC}) {
+        edges {
+          node {
+            frontmatter {
+              title
+              date(formatString: "dddd, MMMM Do YYYY")
+            }
+            fields {
+              slug
+            }
           }
         }
       }
     }
-  }
-`
-
-const BlogPage = () => <StaticQuery
-  query={QUERY}
-  render={({
-    data: {
-      allMdx: { edges },
-    },
-    }) => <Layout>
+  `}
+  render={({ allMdx: { edges }, }) => (
+    <Layout {...props}>
       <Helmet title="Blog" />
       <div className="mxl">
         <h1>Blog</h1>
@@ -35,7 +32,7 @@ const BlogPage = () => <StaticQuery
           {edges.map(edge => (
           <li
             className="ml"
-            key={edge.node.frontmatter.slug}
+            key={edge.node.fields.slug}
           >
             <PostLink
               post={edge.node}
@@ -45,7 +42,7 @@ const BlogPage = () => <StaticQuery
         </ul>
       </div>
     </Layout>
-  }
+  )}
 />
 
 export default BlogPage

@@ -3,8 +3,8 @@ import Layout from "../components/Layout"
 
 import mdToHTML from '../utils/mdToHTML'
 
-const IndexPage = () => {
-  return <Layout>
+const IndexPage = (props) => {
+  return <Layout {...props}>
     <div className="h1">
       <div className="mega sans mxl">
         Daniel Eden is writing, thinking, and talking about Design Systems: how they

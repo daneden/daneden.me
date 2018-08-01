@@ -3,6 +3,7 @@ import Image from '../components/Image'
 export const frontmatter = {
   layout: "post",
   title: "Design System Structure",
+  date: "2017-07-17"
 }
 
 > "If you wish to make apple pie from scratch, you must first invent the

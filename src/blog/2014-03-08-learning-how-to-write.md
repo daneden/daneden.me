@@ -1,6 +1,7 @@
 export const frontmatter = {
 layout: "post",
 title: "Learning How To Write",
+date: "2014-03-08"
 }
 
 It feels like it’s been quite some time since I wrote anything. That’s not the
