@@ -1289,12 +1289,6 @@
   dependencies:
     unist-util-visit "^1.3.0"
 
-"@mdx-js/loader@^0.12.0":
-  version "0.12.0"
-  resolved "https://registry.yarnpkg.com/@mdx-js/loader/-/loader-0.12.0.tgz#194dc1248c603285d252fd1fa22e546e3abc26b0"
-  dependencies:
-    "@mdx-js/tag" "^0.11.0"
-
 "@mdx-js/mdx@^0.15.0-1":
   version "0.15.0-1"
   resolved "https://registry.yarnpkg.com/@mdx-js/mdx/-/mdx-0.15.0-1.tgz#5c34bc7b810ff7f8640558769be227170bca6953"
@@ -1304,12 +1298,6 @@
     remark-squeeze-paragraphs "^3.0.1"
     unified "^6.1.6"
     unist-util-visit "^1.3.0"
-
-"@mdx-js/tag@^0.11.0":
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/@mdx-js/tag/-/tag-0.11.0.tgz#d4e3f4e384e862302908e10c23dc1959da5ca91b"
-  dependencies:
-    prop-types "^15.6.1"
 
 "@mdx-js/tag@^0.15.0-1":
   version "0.15.0-1"
