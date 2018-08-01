@@ -5,6 +5,7 @@ export const frontmatter = {
   layout: "post",
   title: "Drawing With Numbers",
   hero: "2017/01/diff-growth.png",
+  date: "2016-11-02"
 }
 
 <Image src="2017/01/diff-growth.png" className="" />

@@ -1,6 +1,7 @@
 export const frontmatter = {
 layout: "post",
 title: "Out With The Old, In With The Good",
+date: "2013-09-02"
 }
 
 I’ve long maintained the opinion that you should discard from your portfolio any work which you are not proud of. I’ve practiced it, too. My [Dribbble](http://dribbble.com/dte) profile is very telling of the work you don’t see in my [portfolio](/portfolio); it’s messy. Unfinished. But that’s just the way I use the platform. It’s a feedback machine – I post, someone replies. My portfolio, however, is more of an announcement. A visual elevator pitch of my abilities.

@@ -4,6 +4,7 @@ export const frontmatter = {
   layout: "post",
   title: "Designing Product UI Systems",
   hero: "2017/03/design-systems.png",
+  date: "2017-03-29"
 }
 
 <Image src="2017/03/design-systems.png" className="" />

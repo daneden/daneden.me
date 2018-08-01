@@ -4,6 +4,7 @@ import { InlineMath, BlockMath } from 'react-katex'
 export const frontmatter = {
   layout: "post",
   title: "Subatomic Design Systems",
+  date: "2018-01-05"
 }
 
 The following theory of "Subatomic Design Systems" is loosely based on an

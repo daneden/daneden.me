@@ -1,6 +1,7 @@
 export const frontmatter = {
 layout: "post",
 title: "Things I’ve Learned On Planet Earth",
+date: "2014-01-30"
 }
 
 - Everyone is kind of messed up. It’s best we talk more about it.

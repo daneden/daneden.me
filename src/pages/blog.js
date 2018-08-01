@@ -5,7 +5,6 @@ import { graphql } from 'gatsby'
 import PostLink from "../components/PostLink"
 import Layout from "../components/Layout"
 
-
 class BlogPage extends React.Component {
   render() {
     const { data, location } = this.props
@@ -17,7 +16,7 @@ class BlogPage extends React.Component {
           {[].map(edge => (
           <li
             className="ml"
-            key={edge.node.frontmatter.slug}
+            key={edge.node.fields.slug}
           >
             <PostLink
               post={edge.node}
@@ -30,7 +29,7 @@ class BlogPage extends React.Component {
   }
 }
 
-    export default BlogPage
+export default BlogPage
 
 export const pageQuery = graphql`
   query {

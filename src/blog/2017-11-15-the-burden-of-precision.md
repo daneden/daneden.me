@@ -3,6 +3,7 @@ import Image from '../components/Image'
 export const frontmatter = {
   layout: "post",
   title: "The Burden of Precision",
+  date: "2017-11-15"
 }
 
 > "If the idea is there, the brush can spare itself the work"

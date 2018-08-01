@@ -4,8 +4,8 @@ import Helmet from 'react-helmet'
 import Layout from '../components/Layout'
 import mdToHTML from '../utils/mdToHTML'
 
-const NotFoundPage = () => (
-  <Layout>
+const NotFoundPage = (props) => (
+  <Layout {...props}>
     <Helmet title="404 Page Not Found" />
     <div className="mxl">
       <h1>404 Page Not Found</h1>

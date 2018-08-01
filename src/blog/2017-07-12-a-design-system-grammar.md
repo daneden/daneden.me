@@ -1,6 +1,7 @@
 export const frontmatter = {
 layout: "post",
 title: "A Design System Grammar",
+date: "2017-07-12"
 }
 
 In my posts about Design Systems so far, I’ve theorized about the structural

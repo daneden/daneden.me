@@ -4,6 +4,7 @@ export const frontmatter = {
   layout: "post",
   title: "The Weird Wide Web",
   hero: "2016/08/www.png",
+  date: "2016-08-04"
 }
 
 <Image src="2016/08/www.png" className="" />

@@ -1,6 +1,7 @@
 export const frontmatter = {
 layout: "post",
 title: "Practice & Fear",
+date: "2013-07-24"
 }
 
 There’s a fundamental flaw in the phrase “Practice makes Perfect”, particularly when it comes to the web. “Perfect” implies too much subjectivity. It also implies a static target. The fact is, on the web, at least, there are no static targets. Web designers have a great advantage over those in print; we can’t afford to stand still. There’s very little risk of us being “left behind” because if we stop, it’s for good. The designers still using tables for layout have either died out, or are new to the game and will soon realise they need to evolve or quit.

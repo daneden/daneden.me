@@ -1,6 +1,7 @@
 export const frontmatter = {
 layout: "post",
 title: "Read All About It",
+date: "2013-10-17"
 }
 
 This website has gone through a lot of iterations, the vast majority of which have—unfortunately—been lost to my trigger-happy self. Now seems as good a time as ever to document something about the formal design decisions behind the current iteration. Specifically, the typographic decisions.

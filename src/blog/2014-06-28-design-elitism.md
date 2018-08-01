@@ -3,6 +3,7 @@ import Image from '../components/Image'
 export const frontmatter = {
   layout: "post",
   title: "Design Elitism",
+  date: "2014-06-28"
 }
 
 About 3 years ago, I was standing on a stage, delivering a presentation about animation, design, and delight on the web. It was wretchedly terrifying, but ultimately successful and liberating.

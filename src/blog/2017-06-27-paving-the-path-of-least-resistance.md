@@ -3,6 +3,7 @@ import Image from '../components/Image'
 export const frontmatter = {
   title: "Paving the Path of Least Resistance",
   layout: "post",
+  date: "2017-06-27"
 }
 
 Design systems can sometimes feel like a shackle on the product development

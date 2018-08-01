@@ -1,6 +1,7 @@
 export const frontmatter = {
 layout: "post",
 title: "Feeling Out Loud",
+date: "2013-12-19"
 }
 
 When I get home from work each day, I plop down my bags and settle in. My significant other does the same thing not long before me. We both make dinner, put on some telly, and talk. Not about anything in particular, but the conversation always starts the same way:

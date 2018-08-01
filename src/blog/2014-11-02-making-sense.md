@@ -3,6 +3,7 @@ import Image from '../components/Image'
 export const frontmatter = {
   title: "Making Sense",
   layout: "post",
+  date: "2014-11-02"
 }
 
 <Image src="2014/10/Muji-Aluminium-Pen.png" className="" />
