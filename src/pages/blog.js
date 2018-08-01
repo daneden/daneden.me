@@ -13,7 +13,7 @@ class BlogPage extends React.Component {
       <div className="mxl">
         <h1>Blog</h1>
         <ul className="unlist">
-          {[].map(edge => (
+          {data.allMdx.edges.map(edge => (
           <li
             className="ml"
             key={edge.node.fields.slug}
@@ -39,17 +39,18 @@ export const pageQuery = graphql`
         authorName
       }
     }
-  }`
-//     allMdx(sort: {fields: [frontmatter___date], order: DESC}) {
-//       edges {
-//         node {
-//           frontmatter {
-//             title
-//             slug
-//             date(formatString: "dddd, MMMM Do YYYY")
-//           }
-//         }
-//       }
-//     }
-//   }
-// `
+    allMdx(sort: {fields: [frontmatter___date], order: DESC}) {
+      edges {
+        node {
+          frontmatter {
+            title
+            date(formatString: "dddd, MMMM Do YYYY")
+          }
+          fields {
+            slug
+          }
+        }
+      }
+    }
+  }
+`

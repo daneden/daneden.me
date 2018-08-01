@@ -15,13 +15,13 @@ module.exports = {
         extensions: ['.mdx', '.md'],
       },
     },
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     path: `${__dirname}/src/blog/`,
-    //     name: "blog",
-    //   },
-    // },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/blog/`,
+        name: "blog",
+      },
+    },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
