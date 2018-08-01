@@ -1,6 +1,7 @@
 import React from "react"
-import Layout from "../components/Layout"
+import { graphql } from 'gatsby'
 
+import Layout from "../components/Layout"
 import mdToHTML from '../utils/mdToHTML'
 
 class IndexPage extends React.Component {
