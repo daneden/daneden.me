@@ -5,12 +5,14 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-mdx',
     'gatsby-plugin-postcss',
     {
-      resolve: 'gatsby-transformer-mdx',
+      resolve: 'gatsby-mdx',
       options: {
-        remarkPlugins: [ 'gatsby-remark-smartypants', ],
+        defaultLayout: require.resolve(
+          "./src/components/Layout.js"
+        ),
+        extensions: ['.mdx', '.md'],
       },
     },
     {
