@@ -1,38 +1,20 @@
 import React from "react"
 import Helmet from 'react-helmet'
-import { StaticQuery, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 
 import PostLink from "../components/PostLink"
 import Layout from "../components/Layout"
 
-const QUERY = graphql`
-  query BlogQuery {
-    allMdx(sort: {fields: [frontmatter___date], order: DESC}) {
-      edges {
-        node {
-          frontmatter {
-            title
-            slug
-            date(formatString: "dddd, MMMM Do YYYY")
-          }
-        }
-      }
-    }
-  }
-`
 
-const BlogPage = () => <StaticQuery
-  query={QUERY}
-  render={({
-    data: {
-      allMdx: { edges },
-    },
-    }) => <Layout>
+class BlogPage extends React.Component {
+  render() {
+    const { data, location } = this.props
+    return <Layout data={data} location={location}>
       <Helmet title="Blog" />
       <div className="mxl">
         <h1>Blog</h1>
         <ul className="unlist">
-          {edges.map(edge => (
+          {[].map(edge => (
           <li
             className="ml"
             key={edge.node.frontmatter.slug}
@@ -46,6 +28,29 @@ const BlogPage = () => <StaticQuery
       </div>
     </Layout>
   }
-/>
+}
 
-export default BlogPage
+    export default BlogPage
+
+export const pageQuery = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+        authorName
+      }
+    }
+  }`
+//     allMdx(sort: {fields: [frontmatter___date], order: DESC}) {
+//       edges {
+//         node {
+//           frontmatter {
+//             title
+//             slug
+//             date(formatString: "dddd, MMMM Do YYYY")
+//           }
+//         }
+//       }
+//     }
+//   }
+// `
