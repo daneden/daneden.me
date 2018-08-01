@@ -10,7 +10,7 @@ const slugify = require('slug')
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
 exports.createPages = ({ graphql, actions }) => {
-  const { createPage, createLayout } = actions
+  const { createPage } = actions
 
   return new Promise((resolve, reject) => {
     graphql(`
@@ -19,6 +19,9 @@ exports.createPages = ({ graphql, actions }) => {
         edges {
           node {
             fileAbsolutePath
+            frontmatter {
+              title
+            }
             fields {
               slug
             }
@@ -33,11 +36,16 @@ exports.createPages = ({ graphql, actions }) => {
 
       // Create blog post pages.
       result.data.allMdx.edges.forEach(({ node }) => {
-        const { fileAbsolutePath, fields } = node
+        const { fileAbsolutePath, fields, frontmatter } = node
 
         createPage({
           path: `${fields.slug}`,
-          component: fileAbsolutePath
+          component: fileAbsolutePath,
+          context: {
+            slug: fields.slug,
+            title: frontmatter.title,
+            date: frontmatter.date,
+          }
         })
       })
     })
