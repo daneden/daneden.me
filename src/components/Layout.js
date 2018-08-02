@@ -1,51 +1,57 @@
 import React from 'react'
 import Helmet from 'react-helmet'
+import { graphql, StaticQuery } from 'gatsby'
 
-import Header from '../components/Header'
-import Footer from '../components/Footer'
-import Wrapper from '../components/Wrapper'
+import Header from './Header'
+import Footer from './Footer'
+import Wrapper from './Wrapper'
 
 import './css/style.css'
 import '../fonts/fonts.css'
 
-const Content = ({ isFrontpage, children }) => {
-  if(isFrontpage) {
-    return <Wrapper>
-      {children}
-    </Wrapper>
-  }
+const PostHeader = ({ title, date }) => <header className="">
+  <h1>{title}</h1>
+  <p className="hide">{date}</p>
+</header>
 
-  return children
-}
+export default function Layout({children, location, pageContext }) {
+  const { title, date } = pageContext
+  const pageClass = location.pathname === '/'
+    ? 'frontpage'
+    : null
 
-class Layout extends React.Component {
-  render() {
-    const { children, location, data } = this.props
-    const pageClass = location.pathname === '/'
-      ? 'frontpage'
-      : ''
-
-    return (
+  return <StaticQuery
+    query={graphql`
+      query {
+        site {
+          siteMetadata {
+            title
+            authorName
+          }
+        }
+      }
+    `}
+    render={data => (
       <React.Fragment>
         <Helmet
+          title={title}
           defaultTitle={data.site.siteMetadata.title}
           titleTemplate={`%s | ${data.site.siteMetadata.title}`}
         >
-          <body
-            className={[
-              pageClass,
-              'phl',
-            ].join(' ')}
-          />
+          <body className={`phl ${pageClass}`} />
         </Helmet>
-        <Content isFrontpage={pageClass !== 'frontpage'}>
+        <Wrapper isConstrained={pageClass == null}>
           <Header siteTitle={data.site.siteMetadata.title} />
-          {children}
+          <main className="mxl">
+            {title !== undefined
+                ? (<PostHeader title={title} date={date} />)
+                : null
+            }
+            {children}
+          </main>
           <Footer author={data.site.siteMetadata.authorName} />
-        </Content>
+        </Wrapper>
       </React.Fragment>
-    )
-  }
+    )}
+  />
 }
-
-export default Layout

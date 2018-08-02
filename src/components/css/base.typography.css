@@ -33,6 +33,7 @@ h3, .h3 {
 
 h1, .h1 {
   font-size: 1.333rem;
+  margin-bottom: calc(var(--baseline) * 2);
 }
 
 h2, .h2,
@@ -40,7 +41,7 @@ h3, .h3 {
   font-size: 1.111rem;
 }
 
-  * + h2, * + .h2,
+  *:not(h1) + h2, * + .h2,
   * + h3, * + .h3 {
     padding-top: var(--baseline);
   }

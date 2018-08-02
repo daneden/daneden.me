@@ -1,18 +1,9 @@
-import React from 'react'
 import Helmet from 'react-helmet'
-import { graphql } from 'gatsby'
 
-import Layout from '../components/Layout'
-import mdToHTML from '../utils/mdToHTML'
+<Helmet title="Portfolio" />
 
-class PortfolioPage extends React.Component {
-  render() {
-    const { data, location } = this.props
-    return <Layout data={data} location={location}>
-      <Helmet title="Portfolio" />
-      <div className="mxl">
-        <h1>Portfolio</h1>
-        {mdToHTML(`
+# Portfolio
+
 ## Facebook
 
 I’m currently employed by Facebook as a Product Designer. I work on the Facebook
@@ -120,20 +111,3 @@ for budgeting quickly. [Visit the site](http://brills.me).
 [Animate.css](http://daneden.github.io/animate.css/) is a cross-browser
 plug-and-play CSS animation library for delightful animation in websites and web
 applications. [Visit the site](http://daneden.github.io/animate.css/).
-        `)}
-      </div>
-    </Layout>
-  }
-}
-
-export default PortfolioPage
-
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-        authorName
-      }
-    }
-  }`
