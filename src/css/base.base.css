@@ -14,17 +14,17 @@ html {
   hyphens: auto;
 }
 
-  .wf-loading:root {
-    --serif: var(--serif-fallback);
-    --sans-serif: var(--sans-serif-fallback);
+.wf-loading:root {
+  --serif: var(--serif-fallback);
+  --sans-serif: var(--sans-serif-fallback);
 
-    font-family: --serif-fallback;
-    font-size: 112.5%;
-    line-height: 1.55;
-  }
+  font-family: --serif-fallback;
+  font-size: 112.5%;
+  line-height: 1.55;
+}
 
-  @media (max-width: 30rem) {
-    html {
-      font-size: 87.5%;
-    }
+@media (max-width: 30rem) {
+  html {
+    font-size: 87.5%;
   }
+}
