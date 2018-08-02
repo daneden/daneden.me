@@ -1,6 +1,9 @@
 import React from "react"
 import { Link } from "gatsby"
 
+import "../fonts/fonts.css"
+import "./css/style.css"
+
 const NavLink = ({ to, label }) => (
   <Link className="plainlink" to={to}>
     {label}

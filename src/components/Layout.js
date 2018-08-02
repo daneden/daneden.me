@@ -8,9 +8,6 @@ import Header from "./Header"
 import Link from "./Link"
 import Wrapper from "./Wrapper"
 
-import "../fonts/fonts.css"
-import "./css/style.css"
-
 const PostHeader = ({ title, date }) => (
   <header className="">
     <h1>{title}</h1>
