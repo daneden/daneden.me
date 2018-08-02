@@ -1,5 +1,3 @@
-// @format
-
 import React from "react"
 import PostLink from "./PostLink"
 import { graphql, StaticQuery } from "gatsby"
