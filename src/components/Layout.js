@@ -8,7 +8,7 @@ import Header from "./Header"
 import Link from "./Link"
 import Wrapper from "./Wrapper"
 
-export default function Layout({ children, location, pageContext }) {
+export default function Layout({ children, location }) {
   const pageClass = location.pathname === "/" ? "frontpage" : null
 
   return (
