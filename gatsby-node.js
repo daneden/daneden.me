@@ -3,10 +3,10 @@
  *
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
-const fs = require('fs-extra')
-const path = require('path')
+const fs = require("fs-extra")
+const path = require("path")
 const resolvePath = path.resolve
-const slugify = require('slug')
+const slugify = require("slug")
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
 exports.createPages = ({ graphql, actions }) => {
@@ -14,49 +14,56 @@ exports.createPages = ({ graphql, actions }) => {
 
   return new Promise((resolve, reject) => {
     graphql(`
-    {
-      allMdx {
-        edges {
-          node {
-            fileAbsolutePath
-            frontmatter {
-              title
-            }
-            fields {
-              slug
+      {
+        allMdx {
+          edges {
+            node {
+              fileAbsolutePath
+              frontmatter {
+                title
+              }
+              fields {
+                slug
+              }
             }
           }
         }
       }
-    }
-    `).then(result => {
-      if (result.errors) {
-        return reject(result.errors)
-      }
+    `)
+      .then(result => {
+        if (result.errors) {
+          return reject(result.errors)
+        }
 
-      // Create blog post pages.
-      result.data.allMdx.edges.forEach(({ node }) => {
-        const { fileAbsolutePath, fields, frontmatter } = node
+        // Create blog post pages.
+        result.data.allMdx.edges.forEach(({ node }) => {
+          const { fileAbsolutePath, fields, frontmatter } = node
 
-        createPage({
-          path: `${fields.slug}`,
-          component: fileAbsolutePath,
-          context: {
-            slug: fields.slug,
-            title: frontmatter.title,
-            date: frontmatter.date,
-          }
+          createPage({
+            path: `${fields.slug}`,
+            component: fileAbsolutePath,
+            context:
+              frontmatter !== undefined
+                ? {
+                    slug: fields.slug,
+                    title: frontmatter.title,
+                    date: frontmatter.date,
+                  }
+                : null,
+          })
         })
       })
-    })
-    .then(resolve)
+      .then(resolve)
   })
 }
 
 exports.onCreateNode = ({ node, actions }) => {
   if (node.internal.type === `Mdx`) {
     const { createNodeField } = actions
-    const filename = path.basename(node.fileAbsolutePath, path.extname(node.fileAbsolutePath));
+    const filename = path.basename(
+      node.fileAbsolutePath,
+      path.extname(node.fileAbsolutePath)
+    )
 
     // get the date and title from the file name
     const [, date, title] = filename.match(
@@ -64,10 +71,7 @@ exports.onCreateNode = ({ node, actions }) => {
     )
 
     // create a new slug concatenating everything
-    const slug = `/${slugify(
-      date,
-      "/"
-    )}/${title}/`
+    const slug = `/${slugify(date, "/")}/${title}/`
 
     createNodeField({ node, name: `slug`, value: slug })
   }
