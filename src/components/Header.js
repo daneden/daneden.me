@@ -2,10 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 const NavLink = ({to, label}) => (
-  <Link
-    className="plainlink"
-    to={to}
-  >
+  <Link className="plainlink" to={to} >
     {label}
   </Link>
 )
