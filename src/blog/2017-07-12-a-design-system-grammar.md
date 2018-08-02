@@ -1,7 +1,10 @@
 export const frontmatter = {
 layout: "post",
 title: "A Design System Grammar",
+date: "2017-07-12"
 }
+
+# A Design System Grammer
 
 In my posts about Design Systems so far, I’ve theorized about the structural
 approach that causes existing design systems to fail, and an [alternative
@@ -49,12 +52,12 @@ documenting UI components:
 
 > ### Form
 >
-> *Composes: Login Page, Entity Creation Page, Search Form*
+> _Composes: Login Page, Entity Creation Page, Search Form_
 >
 > At a minimum, a form is composed of a label, input, and button. They are
 > required to capture user input. {Further problem definition and discussion…}
 >
-> *Composed of: Button, Input, Label*
+> _Composed of: Button, Input, Label_
 
 We can imagine coming to the definition of this Form pattern after deciding we
 need to have some way for the user to create some kind of data entity. If so
@@ -62,19 +65,19 @@ inclined, we can dig further to find the definition of the Button pattern:
 
 > ### Button
 >
-> *Composes: Form, Banner, Navigation*
+> _Composes: Form, Banner, Navigation_
 >
 > A Button is a low-level component that represents a familiar user concept.
 > {Further problem definition and discussion…}
 >
-> *Composed of: Background, Border, Text, Spacing, Cursor*
+> _Composed of: Background, Border, Text, Spacing, Cursor_
 
-*Aha!* From our definition of the Button pattern, we start to see the primitive,
+_Aha!_ From our definition of the Button pattern, we start to see the primitive,
 atomic components surface. With further investigation, we might find the very
 bottom of our system hierarchy, with an illustrative example of all permutations
 of text size, background color, or spacing units.
 
-One final detail I find particularly pleasing about *A Pattern Language* is the
+One final detail I find particularly pleasing about _A Pattern Language_ is the
 notable addition of asterisks (<mark>\*</mark>) in some pattern titles. Two
 asterisks after the pattern title (<mark>\*\*</mark>) indicates almost complete
 certainty in the pattern’s validity to solve the given problem. One asterisk
@@ -108,12 +111,12 @@ aside, design systems are almost identical across platforms, products, and
 locales, and all but the atomic components can be accounted for without
 knowledge of this context.
 
-***
+---
 
 This approach to building a grammar for our design vocabulary seems sound, and
 certainly makes a strong case for writing easy-to-understand documentation, but
 a question that remains for myself and for others building design systems is
-*how this works in practice*. How do these definitions of patterns manifest in
+_how this works in practice_. How do these definitions of patterns manifest in
 design tools and engineering workflows? What are the technical limits and debts
 associated with composing and deconstructing patterns in this way? Certainly
 composition, even across platforms, is viable, as can be seen through AirBnB's
@@ -127,12 +130,12 @@ architecture and traditional graphic design, the infancy of digital design syste
 presents us with a rich variety of avenues for experimentation—and that's a very
 exciting invitation indeed.
 
-***
+---
 
-*This post is one in a loosely-connected series of posts about design systems
+_This post is one in a loosely-connected series of posts about design systems
 and the teams that maintain them. Other installments include a conceptual view
 of how a [design system ecosystem is
 maintained](/2017/06/27/paving-the-path-of-least-resistance/), a [theoretical
 exploration](/2017/03/29/designing-systems/) of compositional design systems,
 and a [collection of thoughts](/2017/06/02/casting-graphite-in-gold/) on how the
-relationship between designers and engineers should be approached.*
+relationship between designers and engineers should be approached._

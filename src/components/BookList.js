@@ -1,8 +1,8 @@
-import React from 'react'
+import React from "react"
 
-import Book from './Book'
+import Book from "./Book"
 
-const strippedTitle = str => str.replace(/^(the|a) /i, '').toLowerCase()
+const strippedTitle = str => str.replace(/^(the|a) /i, "").toLowerCase()
 
 const books = [
   {
@@ -107,21 +107,23 @@ const list = books
   .map(book => {
     return {
       ...book,
-      title: book.title.replace(/ ([^ ]*)$/, '\u00A0$1'),
+      title: book.title.replace(/ ([^ ]*)$/, "\u00A0$1"),
     }
   })
   .sort((a, b) => strippedTitle(a.title).localeCompare(strippedTitle(b.title)))
 
 export default function BookList() {
-  return <div className="library">
-    {list.map(({title, author, cover, url}) => (
-      <Book
-        author={author}
-        cover={cover}
-        title={title}
-        url={url}
-        key={title}
-      />
+  return (
+    <div className="library">
+      {list.map(({ title, author, cover, url }) => (
+        <Book
+          author={author}
+          cover={cover}
+          title={title}
+          url={url}
+          key={title}
+        />
       ))}
-  </div>
+    </div>
+  )
 }

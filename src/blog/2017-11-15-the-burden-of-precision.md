@@ -1,12 +1,15 @@
 import Image from '../components/Image'
 
 export const frontmatter = {
-  layout: "post",
-  title: "The Burden of Precision",
+layout: "post",
+title: "The Burden of Precision",
+date: "2017-11-15"
 }
 
+# The Burden of Precision
+
 > "If the idea is there, the brush can spare itself the work"
-> *—Chinese painter's proverb*
+> _—Chinese painter's proverb_
 
 Design tools today confine us to an unrealistic and ill-advised goal: one of
 perfection. Tools like Photoshop and Sketch are highly precise, and demand
@@ -39,11 +42,11 @@ a signal for direction:
 > lines at the front and back to suggest the softness of the feathers.
 > ‘Otherwise,’ some critic of the times is sure to have said, ‘no one will
 > understand what it is.’”
-> *—Bruno Munari, Design as Art*
+> _—Bruno Munari, Design as Art_
 
 This passage struck me as a parallel to the moment in modern design tools we
-currently face. We design things *precisely* as they appear in our minds,
-otherwise *no one will understand what it is.* But I think we underestimate the
+currently face. We design things _precisely_ as they appear in our minds,
+otherwise _no one will understand what it is._ But I think we underestimate the
 connections we and our fellow product manufacturers are able to make with
 limited information.
 
@@ -57,7 +60,7 @@ to forget about questions like “how big is a point?” and “how do points ch
 on different devices?”
 
 We can draw our button as big or as small as we want, and it doesn’t matter—the
-design becomes the *description* of the artifact. We can express this in
+design becomes the _description_ of the artifact. We can express this in
 pictorial form, as we do in tools like Photoshop or Sketch (though now
 forgetting how precise we need to be, we can simply gesture at the intent), or
 we can write it in plain text, JSON, or some other text format. The precision is
@@ -71,7 +74,7 @@ and releases us from the burden of precision to think about more pressing
 
 "matters": "Why does this state need to exist? How does this fit with the rest of",
 the product? What is the place of this product in the world? How might people
-use this to cause harm?  These questions are rarely answered by a designer,
+use this to cause harm? These questions are rarely answered by a designer,
 principally because we are so wrapped up in making sure we craft something
 appealing enough to get the resources to actually build the thing.
 

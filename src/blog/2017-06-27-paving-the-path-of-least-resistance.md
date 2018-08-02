@@ -1,9 +1,12 @@
 import Image from '../components/Image'
 
 export const frontmatter = {
-  title: "Paving the Path of Least Resistance",
-  layout: "post",
+title: "Paving the Path of Least Resistance",
+layout: "post",
+date: "2017-06-27"
 }
+
+# Paving the Path of Least Resistance
 
 Design systems can sometimes feel like a shackle on the product development
 process. Where they are rigid, as is often required of design systems in order
@@ -27,7 +30,7 @@ generalized to broader uses.
 
 <Image src="2017/06/designSystems.png" className="" />
 
-More concretely, product teams have a narrow yet extremely *deep* understanding
+More concretely, product teams have a narrow yet extremely _deep_ understanding
 of a particular problem set. They may, for instance, stretch a particular
 component in a system so thin that they need to build their own set of
 extensions to the component. Rather than preventing this kind of apparent misuse
@@ -59,11 +62,11 @@ those responsible for paving those roads to enable the travelers to arrive with
 haste and safety. It is a job that requires constant maintenance, and when done
 well, shouldn't be noticed by its customers at all.
 
-***
+---
 
-*This post is one in a loosely-connected series of posts about design systems
+_This post is one in a loosely-connected series of posts about design systems
 and the teams that maintain them. Other installments include a [theoretical
 exploration](https://daneden.me/2017/03/29/designing-systems/) of compositional
 design systems, and a [collection of
 thoughts](https://daneden.me/2017/06/02/casting-graphite-in-gold/) on how the
-relationship between designers and engineers should be approached.*
+relationship between designers and engineers should be approached._

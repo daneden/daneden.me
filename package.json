@@ -3,17 +3,32 @@
   "description": "Gatsby default starter",
   "version": "1.0.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json,css,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
   "dependencies": {
-    "babel-plugin-config-export": "^1.0.0",
-    "gatsby": "^1.9.277",
-    "gatsby-link": "^1.6.40",
-    "gatsby-plugin-google-analytics": "^1.0.31",
-    "gatsby-plugin-mdx": "^1.0.1",
-    "gatsby-plugin-react-helmet": "^2.0.10",
-    "gatsby-plugin-react-next": "^1.0.11",
-    "gatsby-source-filesystem": "^1.5.39",
-    "gatsby-transformer-remark": "^1.7.44",
+    "@mdx-js/mdx": "^0.15.0-1",
+    "@mdx-js/tag": "^0.15.0-1",
+    "gatsby": "^2.0.0-beta.64",
+    "gatsby-link": "^1.6.46",
+    "gatsby-mdx": "0.0.6",
+    "gatsby-plugin-google-analytics": "next",
+    "gatsby-plugin-postcss": "^2.0.0-beta.2",
+    "gatsby-plugin-react-helmet": "^2.0.11",
+    "gatsby-source-filesystem": "^2.0.1-beta.10",
+    "postcss-import": "^11.1.0",
+    "postcss-preset-env": "^5.2.3",
+    "react": "^16.4.1",
     "react-codepen-embed": "^0.1.0",
+    "react-dom": "^16.4.1",
     "react-helmet": "^5.2.0",
     "react-imgix": "^7.1.1",
     "react-katex": "^2.0.2",
@@ -21,7 +36,8 @@
     "remark-numbered-footnotes": "^1.0.5",
     "remark-react": "^4.0.3",
     "retext-smartypants": "^3.0.1",
-    "slug": "^0.9.1"
+    "slug": "^0.9.1",
+    "webpack": "^4.16.1"
   },
   "keywords": [
     "gatsby"
@@ -34,10 +50,15 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "@mdx-js/loader": "^0.12.0",
-    "@mdx-js/mdx": "^0.12.0",
+    "@babel/cli": "^7.0.0-beta.32",
+    "@babel/core": "^7.0.0-beta.54",
+    "@babel/preset-env": "^7.0.0-beta.54",
+    "@babel/preset-react": "^7.0.0-beta.54",
+    "eslint-plugin-prettier": "^2.6.2",
+    "husky": "^1.0.0-rc.13",
+    "lint-staged": "^7.2.0",
     "loader-utils": "^1.1.0",
-    "prettier": "^1.12.0"
+    "prettier": "^1.14.0"
   },
   "repository": {
     "type": "git",

@@ -4,7 +4,8 @@
  *
  */
 
-figcaption, figcaption :last-child {
+figcaption,
+figcaption :last-child {
   margin: 0;
 }
 
@@ -13,7 +14,8 @@ figure img[srcset*=".svg"] {
   width: 100%;
 }
 
-.alignleft, .alignright {
+.alignleft,
+.alignright {
   width: 50%;
 }
 
@@ -30,7 +32,8 @@ figure img[srcset*=".svg"] {
 }
 
 @media (max-width: 56rem) {
-  .alignleft, .alignright {
+  .alignleft,
+  .alignright {
     width: 40%;
   }
 
@@ -43,8 +46,9 @@ figure img[srcset*=".svg"] {
   }
 }
 
-@media (max-width: 30rem){
-  .alignleft, .alignright {
+@media (max-width: 30rem) {
+  .alignleft,
+  .alignright {
     float: none;
     width: 100%;
   }

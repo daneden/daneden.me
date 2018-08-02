@@ -2,17 +2,20 @@ import Image from '../components/Image'
 import Codepen from 'react-codepen-embed'
 
 export const frontmatter = {
-  layout: "post",
-  title: "Drawing With Numbers",
-  hero: "2017/01/diff-growth.png",
+layout: "post",
+title: "Drawing With Numbers",
+hero: "2017/01/diff-growth.png",
+date: "2016-11-02"
 }
+
+# Drawing With Numbers
 
 <Image src="2017/01/diff-growth.png" className="" />
 
 I’ve never considered myself much of an artist. My creativity has always found
 its home in design and photography, practices which feel far less dependent on
 natural creativity and talent. I can’t draw; I try to stay away from paint;
-sculpting is one of those things that *sounds* more fun to me than it actually
+sculpting is one of those things that _sounds_ more fun to me than it actually
 is.
 
 <Image src="2016/11/dwn-serra.jpg" caption="An installation from Richard Serra in Dia:Beacon." className="alignleft" />
@@ -34,7 +37,7 @@ array of sometimes wildly different visualizations.
 <Image src="2016/11/dwn-sollewitt.jpg" caption="A close-up of one of Sol LeWitt’s intricate pieces. It’s hard to do his work justice on a screen." className="img-fullbleed" />
 
 The dedication and vision to create installations like this was boggling. It
-made me itch to create. I can’t draw, but I *can* tell computers to draw for
+made me itch to create. I can’t draw, but I _can_ tell computers to draw for
 me.
 
 ## Humble Beginnings
@@ -56,8 +59,8 @@ Thanks to some light tuition in mathematics from [Allen
 Rabinovich](http://www.allenrabinovich.com/) and some persistence, I had a
 functioning prototype of the design. During the course of building the first
 prototype, I stumbled across [p5.js](https://p5js.org/), a JavaScript library
-that *“makes coding accessible for artists, designers, educators, and
-beginners”*. Thankfully, this description also works in reverse; it makes art
+that _“makes coding accessible for artists, designers, educators, and
+beginners”_. Thankfully, this description also works in reverse; it makes art
 and design accessible for people fluent in coding, by providing a comprehensive
 drawing toolkit.
 
@@ -114,7 +117,7 @@ System](http://n-e-r-v-o-u-s.com/), whose algorithms and works continue to fuel
 a growing ambition.
 
 I started moving my focus from motion towards sketches that gave the
-*impression* of motion, be it through the apparent movement of their lines, or
+_impression_ of motion, be it through the apparent movement of their lines, or
 the stages of evolution they exhibited.
 
 <Image src="2016/11/dwn-moons.png" caption="“Moons” series, expressing a single algorithm in several different ways. [Full size.](/uploads/2016/11/dwn-moons.png)" className="img-fullbleed" />
@@ -142,7 +145,7 @@ Exploring generative art through Processing has not only given me a creative
 outlet and a medium to express ideas, but it's helping me become a more
 proficient programmer and a more creative designer. It's also given me a reason
 to finally explore print as a medium and produce physical works that I can keep
-and give to friends. You can't really *give* someone a website.
+and give to friends. You can't really _give_ someone a website.
 
 I'm keen to learn more about this space, and it's leading me to more fertile
 ground for learning—artificial intelligence and programming natural systems
@@ -160,6 +163,10 @@ number of people for their help and inspiration to work on these pieces.
 - [Defne Beyce](https://defne-beyce.squarespace.com/), for her help with printing;
 - Facebook’s [Analog Lab](https://twitter.com/analoglab) staff for allowing me to hang out, use the equipment, and ask dumb questions.
 
+[^1]:
 
-[^1]: Daniel’s videos on YouTube showed the successes and stumbles of writing JavaScript in a way I hadn’t seen before—I highly recommend subscribing to [his channel](https://www.youtube.com/user/shiffman).
-[^2]: Anders’ [Generative](http://inconvergent.net/generative/) visual essay brings clarity to his beautiful work, and gave me a new perspective on how expressive the simplest ideas can be when the only variable is time (provided you can be patient enough for the results to be pleasing)
+  Daniel’s videos on YouTube showed the successes and stumbles of writing JavaScript in a way I hadn’t seen before—I highly recommend subscribing to [his channel](https://www.youtube.com/user/shiffman).
+
+[^2]:
+
+  Anders’ [Generative](http://inconvergent.net/generative/) visual essay brings clarity to his beautiful work, and gave me a new perspective on how expressive the simplest ideas can be when the only variable is time (provided you can be patient enough for the results to be pleasing)

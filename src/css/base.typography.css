@@ -21,44 +21,56 @@
 .mega {
   font-size: 6vw;
   line-height: 1;
-  letter-spacing: -.015em;
+  letter-spacing: -0.015em;
 }
 
-h1, .h1,
-h2, .h2,
-h3, .h3 {
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3 {
   font-weight: 400;
   hyphens: initial;
 }
 
-h1, .h1 {
+h1,
+.h1 {
   font-size: 1.333rem;
+  margin-bottom: calc(var(--baseline) * 2);
 }
 
-h2, .h2,
-h3, .h3 {
+h2,
+.h2,
+h3,
+.h3 {
   font-size: 1.111rem;
 }
 
-  * + h2, * + .h2,
-  * + h3, * + .h3 {
-    padding-top: var(--baseline);
-  }
+*:not(h1) + h2,
+* + .h2,
+* + h3,
+* + .h3 {
+  padding-top: var(--baseline);
+}
 
-h2, .h2 {
+h2,
+.h2 {
   font-family: var(--sans-serif);
 }
 
-h3, .h3 {
+h3,
+.h3 {
   font-feature-settings: "smcp", "c2sc";
   font-size: inherit;
   font-style: normal;
-  letter-spacing: .025em;
+  letter-spacing: 0.025em;
   text-align: left;
   text-transform: uppercase;
 }
 
-h4, .h4 {
+h4,
+.h4 {
   font-family: var(--serif);
   font-size: 1rem;
   font-style: italic;
@@ -76,18 +88,20 @@ a {
   text-decoration: none;
 }
 
-  a:hover, a:focus {
-    color: var(--site-color);
-  }
+a:hover,
+a:focus {
+  color: var(--site-color);
+}
 
-code, pre {
+code,
+pre {
   font-family: var(--monospace);
   font-size: var(--small);
 }
 
 hr {
   border: 0;
-  content: '';
+  content: "";
   display: block;
   height: 1px;
   margin: var(--baseline) 0;
@@ -107,19 +121,20 @@ blockquote {
   padding-left: var(--baseline);
 }
 
-  blockquote em, blockquote strong {
-    font-style: normal;
-    font-weight: 400;
-  }
+blockquote em,
+blockquote strong {
+  font-style: normal;
+  font-weight: 400;
+}
 
 mark {
-  background-color: rgba(0,0,0,.075);
+  background-color: rgba(0, 0, 0, 0.075);
   color: inherit;
 }
 
 .caps {
   font-feature-settings: "smcp", "c2sc", "lnum";
-  letter-spacing: .05em;
+  letter-spacing: 0.05em;
 }
 
 .unlist {
@@ -127,7 +142,8 @@ mark {
   padding-left: 0;
 }
 
-small, .small {
+small,
+.small {
   font-size: var(--small);
 }
 

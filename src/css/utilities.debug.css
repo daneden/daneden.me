@@ -1,4 +1,5 @@
-html::after, html::before {
+html::after,
+html::before {
   /* Gatsby shows some pretty aggressive errors, so lets hide them */
   display: none !important;
 }
