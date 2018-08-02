@@ -1,10 +1,10 @@
-import React from 'react'
-import Helmet from 'react-helmet'
+import React from "react"
+import Helmet from "react-helmet"
 
-import Layout from '../components/Layout'
-import mdToHTML from '../utils/mdToHTML'
+import Layout from "../components/Layout"
+import mdToHTML from "../utils/mdToHTML"
 
-const NotFoundPage = (props) => (
+const NotFoundPage = props => (
   <Layout {...props}>
     <Helmet title="404 Page Not Found" />
     <div className="mxl">

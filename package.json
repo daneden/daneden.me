@@ -43,8 +43,9 @@
     "@babel/core": "^7.0.0-beta.54",
     "@babel/preset-env": "^7.0.0-beta.54",
     "@babel/preset-react": "^7.0.0-beta.54",
+    "eslint-plugin-prettier": "^2.6.2",
     "loader-utils": "^1.1.0",
-    "prettier": "^1.12.0"
+    "prettier": "^1.14.0"
   },
   "repository": {
     "type": "git",
