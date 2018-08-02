@@ -1,13 +1,15 @@
 import React from "react"
 import Helmet from "react-helmet"
+import { MDXProvider } from "@mdx-js/tag"
 import { graphql, StaticQuery } from "gatsby"
 
-import Header from "./Header"
 import Footer from "./Footer"
+import Header from "./Header"
+import Link from "./Link"
 import Wrapper from "./Wrapper"
 
-import "./css/style.css"
 import "../fonts/fonts.css"
+import "./css/style.css"
 
 const PostHeader = ({ title, date }) => (
   <header className="">
@@ -33,7 +35,17 @@ export default function Layout({ children, location, pageContext }) {
         }
       `}
       render={data => (
-        <React.Fragment>
+        <MDXProvider
+          components={{
+            a: props => (
+              <Link
+                to={props.href}
+                title={props.title}
+                children={props.children}
+              />
+            ),
+          }}
+        >
           <Helmet
             title={title}
             defaultTitle={data.site.siteMetadata.title}
@@ -51,7 +63,7 @@ export default function Layout({ children, location, pageContext }) {
             </main>
             <Footer author={data.site.siteMetadata.authorName} />
           </Wrapper>
-        </React.Fragment>
+        </MDXProvider>
       )}
     />
   )
