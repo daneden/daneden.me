@@ -2,10 +2,12 @@ import 'katex/dist/katex.min.css'
 import { InlineMath, BlockMath } from 'react-katex'
 
 export const frontmatter = {
-  layout: "post",
-  title: "Subatomic Design Systems",
-  date: "2018-01-05"
+layout: "post",
+title: "Subatomic Design Systems",
+date: "2018-01-05"
 }
+
+# Subatomic Design Systems
 
 The following theory of "Subatomic Design Systems" is loosely based on an
 amalgam of existing design system theories and programming architecture
@@ -215,15 +217,15 @@ number of folks before me. Some pieces of particular interest for continued
 research in this area include:
 
 - Jon Gold's '[Declarative Design
-Tools](http://jon.gold/2016/06/declarative-design-tools/)'
+  Tools](http://jon.gold/2016/06/declarative-design-tools/)'
 - Brad Frost's '[Atomic
-Design](http://bradfrost.com/blog/post/atomic-web-design/)'
+  Design](http://bradfrost.com/blog/post/atomic-web-design/)'
 - Adam Morse's '[CSS and
-Scalability](http://mrmrs.github.io/writing/2016/03/24/scalable-css/)'
+  Scalability](http://mrmrs.github.io/writing/2016/03/24/scalable-css/)'
 - All of Nicole Sullivan's [writing on Object-Oriented CSS
-(OOCSS)](http://www.stubbornella.org/content/category/general/geek/css/oocss-css-geek-general/)
+  (OOCSS)](http://www.stubbornella.org/content/category/general/geek/css/oocss-css-geek-general/)
 - '[Structure and Interpretation of Computer Programs](http://amzn.to/2CZq9YZ)'
-from Harold Abelson, Gerald Jay Sussman, Julie Sussman, and Alan J. Perlis
+  from Harold Abelson, Gerald Jay Sussman, Julie Sussman, and Alan J. Perlis
 
 Additionally, preliminary thinking about the above system theory can be found in
 other posts on my blog, namely:
@@ -231,7 +233,7 @@ other posts on my blog, namely:
 - [Designing Product UI Systems](/2017/03/29/designing-systems/)
 - [Casting Graphite in Gold](/2017/06/02/casting-graphite-in-gold/)
 - [Paving The Path of Least
-Resistance](/2017/06/27/paving-the-path-of-least-resistance/)
+  Resistance](/2017/06/27/paving-the-path-of-least-resistance/)
 - [A Design System Grammar](/2017/07/12/a-design-system-grammar/)
 - [Design System Structure](/2017/07/17/design-system-structure/)
 
@@ -252,9 +254,14 @@ important, interesting, or unheard. For public discussion, find me on
 [Twitter](https://twitter.com/_dte), or for 1-to-1 correspondence, [email
 me](mailto:dan.eden@me.com).
 
-[^1]: In my previous writing on the subject of design systems, I've referred to
-      these compositions as 'Components,' but have found that term to be loaded or
-      confusing, especially in engineering contexts. Consider them interchangeable.
-[^2]: Again, in my previous writing, these compositions have been referred to as
-      'Patterns': in the interest of avoiding conflation of terms, I've tried to
-      reduce the definitions herein to simply those of particles and compositions.
+[^1]:
+
+  In my previous writing on the subject of design systems, I've referred to
+  these compositions as 'Components,' but have found that term to be loaded or
+  confusing, especially in engineering contexts. Consider them interchangeable.
+
+[^2]:
+
+  Again, in my previous writing, these compositions have been referred to as
+  'Patterns': in the interest of avoiding conflation of terms, I've tried to
+  reduce the definitions herein to simply those of particles and compositions.

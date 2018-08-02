@@ -1,20 +1,21 @@
 import Image from '../components/Image'
 
 export const frontmatter = {
-  layout: "post",
-  title: "Designing Product UI Systems",
-  hero: "2017/03/design-systems.png",
-  date: "2017-03-29"
+layout: "post",
+title: "Designing Product UI Systems",
+hero: "2017/03/design-systems.png",
+date: "2017-03-29"
 }
+
+# Designing Product UI Systems
 
 <Image src="2017/03/design-systems.png" className="" />
 
-*(Short preface/definition: “UI systems”—collections of functional UI
+_(Short preface/definition: “UI systems”—collections of functional UI
 components and their stylistic appearances—are referred to as “design systems”
 in this article. Where necessary, functionality and appearance are discussed
 individually, but know that “design system” here encompasses both appearance and
-function.)*
-
+function.)_
 
 At any scale, design systems are important in product development. At their
 simplest, they help reduce redundancies and inconsistencies in design and
@@ -79,12 +80,11 @@ surprised how little we need to build a complex system.
 
 ## Separating Form and Function
 
-*Note: the code henceforth is simply for demonstrative purposes. Also, you
+_Note: the code henceforth is simply for demonstrative purposes. Also, you
 might be thinking “Code? I thought this was a Design Systems post,” and rightly
 so. It's become a natural tendency for me to anchor my ideas in engineering
 principles. Bear with me—hopefully you'll make it through with some
-understanding of what I'm getting at.*
-
+understanding of what I'm getting at._
 
 Some of you may at this point be thinking that this method of composing
 components only works at a styling level, and not at a functional level. And
@@ -175,6 +175,7 @@ crude CSS selectors or specificity hacks.
 And of course, we can ensure deviation from standards is prohibited through
 
 "types": "",
+
 ```js
 type Style = {
   width?: oneOf(...Width.values()),
@@ -190,7 +191,7 @@ type ControlStyle = {
 }
 ```
 
-* * *
+---
 
 Given my limited ability to implement and test a design system like this at
 scale, there are undoubtedly flaws in its approach and hurdles that will be
@@ -198,11 +199,10 @@ glaringly obvious to many folks. But we can approach these weak points as
 opportunities to learn in order to create a process and system that can become
 an industry standard.
 
-* * *
+---
 
-*This post and design system methodology takes inspiration from Apple’s Cocoa
+_This post and design system methodology takes inspiration from Apple’s Cocoa
 APIs, Brent Jackson’s [CXS](https://github.com/jxnblk/cxs) and
 [Rebass](https://github.com/jxnblk/rebass), Adam Morse’s
 [Tachyons](https://github.com/tachyons-css/tachyons), and my own work on [design
-systems](http://dropbox.github.io/scooter/) and UI frameworks for Dropbox.*
-
+systems](http://dropbox.github.io/scooter/) and UI frameworks for Dropbox._

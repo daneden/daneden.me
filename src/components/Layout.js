@@ -8,15 +8,7 @@ import Header from "./Header"
 import Link from "./Link"
 import Wrapper from "./Wrapper"
 
-const PostHeader = ({ title, date }) => (
-  <header className="">
-    <h1>{title}</h1>
-    <p className="hide">{date}</p>
-  </header>
-)
-
 export default function Layout({ children, location, pageContext }) {
-  const { title, date } = pageContext
   const pageClass = location.pathname === "/" ? "frontpage" : null
 
   return (
@@ -44,7 +36,6 @@ export default function Layout({ children, location, pageContext }) {
           }}
         >
           <Helmet
-            title={title}
             defaultTitle={data.site.siteMetadata.title}
             titleTemplate={`%s | ${data.site.siteMetadata.title}`}
           >
@@ -52,12 +43,7 @@ export default function Layout({ children, location, pageContext }) {
           </Helmet>
           <Wrapper isConstrained={pageClass == null}>
             <Header siteTitle={data.site.siteMetadata.title} />
-            <main className="mxl">
-              {title !== undefined ? (
-                <PostHeader title={title} date={date} />
-              ) : null}
-              {children}
-            </main>
+            <main className="mxl">{children}</main>
             <Footer author={data.site.siteMetadata.authorName} />
           </Wrapper>
         </MDXProvider>

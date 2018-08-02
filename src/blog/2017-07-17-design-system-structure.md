@@ -1,14 +1,16 @@
 import Image from '../components/Image'
 
 export const frontmatter = {
-  layout: "post",
-  title: "Design System Structure",
-  date: "2017-07-17"
+layout: "post",
+title: "Design System Structure",
+date: "2017-07-17"
 }
+
+# Design System Structure
 
 > "If you wish to make apple pie from scratch, you must first invent the
 > universe."
-> *—Carl Sagan*
+> _—Carl Sagan_
 
 We've come a long way in this theoretical exploration of an atomic design
 system. The first step was discarding preconceived notions of a design library
@@ -20,10 +22,10 @@ a log in screen.
 
 In the [last post](/2017/07/12/a-design-system-grammar/) I wrote about design
 systems, I compared a possible approach for building atomic design systems to
-the book *A Pattern Language*, solidifying a framework for documenting
-compositions of "atoms" into components and patterns.  This style of documenting
+the book _A Pattern Language_, solidifying a framework for documenting
+compositions of "atoms" into components and patterns. This style of documenting
 the ready-made components reveals the atomic structure without burdening product
-teams with the challenge of figuring out their combinations.  I concluded the
+teams with the challenge of figuring out their combinations. I concluded the
 post with a challenge, positing that most design systems already in existence
 share the vast majority of their patterns and components with one another,
 regardless of platform, audience, or context. I'd like to further clarify this
@@ -77,7 +79,7 @@ pieces that comprise the patterns and components—colors, text, and other
 "atomic" properties that make a brand or product distinct. This can be thought
 of as the "expression," or in linguistic terms, the alphabet.
 
-***
+---
 
 A system designed in this domain hierarchy may best be documented in plain
 writing, describing the Concept, Patterns, and Components in conceptual terms,
@@ -112,13 +114,12 @@ device's location, even though these capabilities have been available for years.
 More routinely forgetting convention might open new opportunities that are
 ordinarily hard to see.
 
+---
 
-***
-
-*This post is one in a loosely-connected series of posts about design systems
+_This post is one in a loosely-connected series of posts about design systems
 and the teams that maintain them. Other installments include a [framework for
 composing](/2017/07/12/a-design-system-grammar/) and documenting atomic systems,
 a conceptual view of how a [design system ecosystem is
 maintained](/2017/06/27/paving-the-path-of-least-resistance/), and a
 [theoretical exploration](/2017/03/29/designing-systems/) of compositional
-design systems.*
+design systems._

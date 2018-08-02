@@ -4,6 +4,8 @@ title: "Learning How To Write",
 date: "2014-03-08"
 }
 
+# Learning How To Write
+
 It feels like it’s been quite some time since I wrote anything. That’s not the
 case at all, in reality. Far from it, in fact. I write thousands of words every
 single week, in microscopic thought-bites, scattered around the web on Twitter,
@@ -46,7 +48,7 @@ and my blog a blog, but rather just “things.” Places, maybe. Lists and words
 and pictures. The weirdest magazine on Earth.
 
 So, if not for my reader, I must write for me. That, therefore, is where this
-daunting feeling is coming from. I have to look *inside*. Isn’t it funny how
+daunting feeling is coming from. I have to look _inside_. Isn’t it funny how
 confidence comes in glasses and crippling self-doubt comes in waves?
 
 Where to start? I can’t really start at “Why can’t I write as well or as often
@@ -80,7 +82,7 @@ to peer at and wonder about. Maybe if I did it more or at a higher standard, I
 wouldn’t enjoy it as much. So for now, at least, I think I’m content with the
 discontent it brings me.
 
-So *how* do I write? In all honesty, I’m not very sure. I’ve tried everything I
+So _how_ do I write? In all honesty, I’m not very sure. I’ve tried everything I
 can think of to help coax words out of my stupid brain. I’ve tried writing more,
 writing less, writing often, writing rarely, planning writing, brainstorming,
 flash-carding, note-taking, coffee-drinking, and can honestly say that the only

@@ -42,14 +42,6 @@ exports.createPages = ({ graphql, actions }) => {
           createPage({
             path: `${fields.slug}`,
             component: fileAbsolutePath,
-            context:
-              frontmatter !== undefined
-                ? {
-                    slug: fields.slug,
-                    title: frontmatter.title,
-                    date: frontmatter.date,
-                  }
-                : null,
           })
         })
       })
