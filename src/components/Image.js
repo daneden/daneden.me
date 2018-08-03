@@ -15,7 +15,7 @@ class Image extends React.Component {
       <Imgix
         aggressiveLoad={true}
         customParams={{ fm: "pjpg" }}
-        defaultWidth={200}
+        defaultWidth={600}
         fit="max"
         src={url}
       />
