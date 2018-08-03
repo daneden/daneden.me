@@ -13,6 +13,10 @@ const Figure = styled.figure`
   ${Align.Left} &, ${Align.Right} & {
     margin-top: 0;
   }
+
+  img {
+    width: 100%;
+  }
 `
 
 const Caption = styled.figcaption`
