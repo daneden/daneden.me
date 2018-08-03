@@ -1,3 +1,4 @@
+import Align from '../components/designSystem/Align'
 import Image from '../components/Image'
 import Codepen from 'react-codepen-embed'
 
@@ -10,7 +11,7 @@ date: "2016-11-02"
 
 # Drawing With Numbers
 
-<Image src="2017/01/diff-growth.png" className="" />
+<Image src="2017/01/diff-growth.png" />
 
 I’ve never considered myself much of an artist. My creativity has always found
 its home in design and photography, practices which feel far less dependent on
@@ -18,7 +19,9 @@ natural creativity and talent. I can’t draw; I try to stay away from paint;
 sculpting is one of those things that _sounds_ more fun to me than it actually
 is.
 
-<Image src="2016/11/dwn-serra.jpg" caption="An installation from Richard Serra in Dia:Beacon." className="alignleft" />
+<Align.Left>
+<Image src="2016/11/dwn-serra.jpg" caption="An installation from Richard Serra in Dia:Beacon." />
+</Align.Left>
 
 I have, however, become deeply interested in generative art. How numbers can be
 governed to create visually interesting works, with seemingly complex but
@@ -34,7 +37,7 @@ LeWitt. One piece features thousands, perhaps millions, of hand-drawn lines, in
 a variety of patterns. The cumulative effect of line after line creates an
 array of sometimes wildly different visualizations.
 
-<Image src="2016/11/dwn-sollewitt.jpg" caption="A close-up of one of Sol LeWitt’s intricate pieces. It’s hard to do his work justice on a screen." className="img-fullbleed" />
+<Image src="2016/11/dwn-sollewitt.jpg" caption="A close-up of one of Sol LeWitt’s intricate pieces. It’s hard to do his work justice on a screen." />
 
 The dedication and vision to create installations like this was boggling. It
 made me itch to create. I can’t draw, but I _can_ tell computers to draw for
@@ -47,7 +50,7 @@ back of one of Dropbox’s design team sweatshirts, created by [Kristen
 Spilman](https://twitter.com/kspilman). It’s simple enough—an array of
 rectangles, each rotated so they’re pointing towards a point in space.
 
-<Image src="2016/11/dwn-dropbox.jpg" className="img-fullbleed" />
+<Image src="2016/11/dwn-dropbox.jpg" />
 
 I started by trying to recreate this design with a single rectangle using HTML
 canvas. This taught me two things:
@@ -92,7 +95,7 @@ never written Java before, but since it was so syntactically similar to
 JavaScript, with just a few Google searches, I was able to start porting over
 some of my more ambitious p5.js sketches into Processing.
 
-<Image src="2016/11/dwn-fabric.png" caption="One example of the kinds of sketches that would collapse on p5.js and demanded a more powerful medium. “Fabric,” [full size.](/uploads/2016/11/dwn-fabric.png)" className="img-fullbleed" />
+<Image src="2016/11/dwn-fabric.png" caption="One example of the kinds of sketches that would collapse on p5.js and demanded a more powerful medium. “Fabric,” [full size.](/uploads/2016/11/dwn-fabric.png)" />
 
 A more performant environment and toolkit meant I could work on more demanding
 and expressive ideas. Instead of drawing hundreds of points to a canvas, I
@@ -120,9 +123,9 @@ I started moving my focus from motion towards sketches that gave the
 _impression_ of motion, be it through the apparent movement of their lines, or
 the stages of evolution they exhibited.
 
-<Image src="2016/11/dwn-moons.png" caption="“Moons” series, expressing a single algorithm in several different ways. [Full size.](/uploads/2016/11/dwn-moons.png)" className="img-fullbleed" />
-<Image src="2016/11/dwn-dashes.png" caption="Complexity borne out of simplicity. Fill a circle with dashes of random length, ensuring none of them overlap. “Dashes,” [full size.](/uploads/2016/11/dwn-dashes.png)" className="img-fullbleed" />
-<Image src="2016/11/dwn-sandlines.png" caption="“Sandlines,” inspired by Anders Hoff’s [Sand Spline](http://inconvergent.net/generative/sand-spline/). [Full size.](/uploads/2016/11/dwn-sandlines.png)" className="img-fullbleed" />
+<Image src="2016/11/dwn-moons.png" caption="“Moons” series, expressing a single algorithm in several different ways. [Full size.](/uploads/2016/11/dwn-moons.png)" />
+<Image src="2016/11/dwn-dashes.png" caption="Complexity borne out of simplicity. Fill a circle with dashes of random length, ensuring none of them overlap. “Dashes,” [full size.](/uploads/2016/11/dwn-dashes.png)" />
+<Image src="2016/11/dwn-sandlines.png" caption="“Sandlines,” inspired by Anders Hoff’s [Sand Spline](http://inconvergent.net/generative/sand-spline/). [Full size.](/uploads/2016/11/dwn-sandlines.png)" />
 
 ## Making It Real
 
@@ -137,9 +140,9 @@ After some trial and error, my first prints were born, and along with them, a
 torrent of new ideas. Each new print would prompt another, developing a series
 and planting seeds for evolved ideas.
 
-<Image src="2016/11/dwn-print1.jpg" className="img-fullbleed" />
-<Image src="2016/11/dwn-print2.jpg" className="img-fullbleed" />
-<Image src="2016/11/dwn-print3.jpg" className="img-fullbleed" />
+<Image src="2016/11/dwn-print1.jpg" />
+<Image src="2016/11/dwn-print2.jpg" />
+<Image src="2016/11/dwn-print3.jpg" />
 
 Exploring generative art through Processing has not only given me a creative
 outlet and a medium to express ideas, but it's helping me become a more

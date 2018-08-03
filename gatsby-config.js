@@ -1,18 +1,17 @@
 module.exports = {
   siteMetadata: {
-    authorName: 'Daniel Eden',
-    title: 'Daniel Eden, Designer',
+    authorName: "Daniel Eden",
+    title: "Daniel Eden, Designer",
   },
   plugins: [
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-postcss',
+    "gatsby-plugin-postcss",
+    "gatsby-plugin-react-helmet",
+    "gatsby-plugin-styled-components",
     {
-      resolve: 'gatsby-mdx',
+      resolve: "gatsby-mdx",
       options: {
-        defaultLayout: require.resolve(
-          "./src/components/Layout.js"
-        ),
-        extensions: ['.mdx', '.md'],
+        defaultLayout: require.resolve("./src/components/Layout.js"),
+        extensions: [".mdx", ".md"],
       },
     },
     {

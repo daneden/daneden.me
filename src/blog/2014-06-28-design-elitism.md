@@ -1,4 +1,5 @@
 import Image from '../components/Image'
+import Align from '../components/designSystem/Align'
 
 export const frontmatter = {
 layout: "post",
@@ -24,10 +25,12 @@ grown up, and during that maturation, it’s developed an attitude. A rotten one
 Digital design has, unbeknownst to the majority of us, turned into a repulsive
 facade and bewilderingly powerful buzzword.
 
+<Align.Left>
 <Image src="2014/10/eames-plastic-armchair.png" caption="The [Eames molded
-plastic armchair](http://www.vitra.com/en-it/product/eames-plastic-side-chair#)
-is the result of years of refinement, and will last for many years yet as both a
-functional artifact and a timeless design." className="alignleft" />
+  plastic armchair](http://www.vitra.com/en-it/product/eames-plastic-side-chair#)
+  is the result of years of refinement, and will last for many years yet as both a
+  functional artifact and a timeless design." />
+</Align.Left>
 
 In the digital realm, “design” seems to have become a catch-all term for a lot
 of things. That’s not an inherent problem, but the consequence of the overuse

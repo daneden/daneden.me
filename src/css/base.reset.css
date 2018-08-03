@@ -29,10 +29,6 @@ pre {
   margin-bottom: var(--baseline);
 }
 
-figure:not(.alignleft):not(.alignright) {
-  margin-top: var(--baseline);
-}
-
 p + *:not(p) {
   margin-top: var(--baseline);
 }

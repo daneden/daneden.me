@@ -1,4 +1,5 @@
 import Image from '../components/Image'
+import Align from '../components/designSystem/Align'
 
 export const frontmatter = {
 layout: "post",
@@ -26,7 +27,9 @@ shall we?
 
 ---
 
-<Image src="2014/02/emergency-mode-home.png" className="alignleft" />
+<Align.Left>
+<Image src="2014/02/emergency-mode-home.png" />
+</Align.Left>
 
 The way I imagine it, this emergency functionality would certainly justify
 native implementation in a smartphone OS. Let’s say, for the sake of example,
@@ -47,7 +50,9 @@ allergies and other medical information. These details may also be sent directly
 to the emergency services on demand or on placing a call, if the technology were
 developed to support something like that.
 
-<Image src="2014/02/emergency-mode-detail.png" className="alignright" />
+<Align.Right>
+<Image src="2014/02/emergency-mode-detail.png" />
+</Align.Right>
 
 The device could also send extra information automatically to the emergency
 services; rough details of the events leading up to the accident, such as

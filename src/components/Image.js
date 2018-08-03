@@ -1,15 +1,33 @@
 import React from "react"
 import Imgix from "react-imgix"
+import styled from "styled-components"
 
+import Align from "./designSystem/Align"
+import Atoms from "./designSystem/atoms"
 import mdToHTML from "../utils/mdToHTML"
+
+const Figure = styled.figure`
+  margin-bottom: ${Atoms.spacing.large};
+  margin-top: ${Atoms.spacing.large};
+
+  ${Align.Left} &, ${Align.Right} & {
+    margin-top: 0;
+  }
+`
+
+const Caption = styled.figcaption`
+  font-size: ${Atoms.font.size.small};
+  color: ${Atoms.colors.meta};
+`
 
 class Image extends React.Component {
   render() {
+    const { className, caption, src } = this.props
     const url =
       process.env.NODE_ENV &&
       process.env.NODE_ENV.toUpperCase() === "DEVELOPMENT"
-        ? `${process.env.PUBLIC_URL || ""}/uploads/${this.props.src}`
-        : `https://daneden.imgix.net/${this.props.src}`
+        ? `${process.env.PUBLIC_URL || ""}/uploads/${src}`
+        : `https://daneden.imgix.net/${src}`
 
     const img = (
       <Imgix
@@ -22,14 +40,10 @@ class Image extends React.Component {
     )
 
     return (
-      <figure className={[this.props.className, "ml"].join(" ")}>
+      <Figure className={className}>
         {img}
-        {this.props.caption && (
-          <figcaption className="small meta">
-            {mdToHTML(this.props.caption)}
-          </figcaption>
-        )}
-      </figure>
+        {caption && <Caption>{mdToHTML(caption)}</Caption>}
+      </Figure>
     )
   }
 }

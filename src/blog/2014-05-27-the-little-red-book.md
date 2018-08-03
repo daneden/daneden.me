@@ -1,3 +1,4 @@
+import Align from '../components/designSystem/Align'
 import Image from '../components/Image'
 
 export const frontmatter = {
@@ -17,7 +18,9 @@ design know-how. It was certainly one of my most-read books. Whenever I’d hit 
 creative block, it’d be the little red book that came off the shelf to get the
 juices flowing again.
 
-<Image src="2014/05/vignelli-canon.jpg" className="alignleft" />
+<Align.Left>
+<Image src="2014/05/vignelli-canon.jpg" />
+</Align.Left>
 
 I was well aware of Massimo Vignelli’s work before I bought the book. You’d have
 to live in a cave not to be; he developed the previous American Airlines
@@ -39,7 +42,7 @@ collection of print, type, and graphic design from renowned designers such as
 Josef Müller-Brockmann, Eduard Hoffmann, Antonio DiSpigna, John Pistilli, and,
 of course, Herb Lubalin himself.
 
-<Image src="2014/05/nyctagsm.jpg" className="imgbleed" />
+<Image src="2014/05/nyctagsm.jpg" />
 
 Also found in the collection is one of the original, printed copies of the New
 York City Transit Authority Graphics Standards Manual. The pages of this

@@ -23,6 +23,7 @@
     "gatsby-plugin-google-analytics": "^2.0.0-rc.2",
     "gatsby-plugin-postcss": "^2.0.0-beta.2",
     "gatsby-plugin-react-helmet": "^2.0.11",
+    "gatsby-plugin-styled-components": "^2.0.11",
     "gatsby-source-filesystem": "^2.0.1-beta.10",
     "postcss-import": "^11.1.0",
     "postcss-preset-env": "^5.2.3",
@@ -37,6 +38,7 @@
     "remark-react": "^4.0.3",
     "retext-smartypants": "^3.0.1",
     "slug": "^0.9.1",
+    "styled-components": "^3.4.0",
     "webpack": "^4.16.1"
   },
   "keywords": [
