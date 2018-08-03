@@ -23,7 +23,7 @@
     "gatsby-plugin-google-analytics": "^2.0.0-rc.2",
     "gatsby-plugin-postcss": "^2.0.0-beta.2",
     "gatsby-plugin-react-helmet": "^2.0.11",
-    "gatsby-plugin-styled-components": "^2.0.11",
+    "gatsby-plugin-styled-components": "3.0.0-beta.3",
     "gatsby-source-filesystem": "^2.0.1-beta.10",
     "postcss-import": "^11.1.0",
     "postcss-preset-env": "^5.2.3",
