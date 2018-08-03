@@ -2738,9 +2738,9 @@ css-to-react-native@^2.0.3:
     fbjs "^0.8.5"
     postcss-value-parser "^3.3.0"
 
-css-tree@1.0.0-alpha.28:
-  version "1.0.0-alpha.28"
-  resolved "https://registry.yarnpkg.com/css-tree/-/css-tree-1.0.0-alpha.28.tgz#8e8968190d886c9477bc8d61e96f61af3f7ffa7f"
+css-tree@1.0.0-alpha.29:
+  version "1.0.0-alpha.29"
+  resolved "https://registry.yarnpkg.com/css-tree/-/css-tree-1.0.0-alpha.29.tgz#3fa9d4ef3142cbd1c301e7664c1f352bd82f5a39"
   dependencies:
     mdn-data "~1.1.0"
     source-map "^0.5.3"
@@ -4174,9 +4174,15 @@ gatsby-plugin-react-helmet@^2.0.11:
   dependencies:
     babel-runtime "^6.26.0"
 
-gatsby-plugin-styled-components@3.0.0-beta.3:
-  version "3.0.0-beta.3"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-styled-components/-/gatsby-plugin-styled-components-3.0.0-beta.3.tgz#da93c5feb4c87cac39733de6366e0eb15b35feca"
+gatsby-plugin-styled-components@^2.0.11:
+  version "2.0.11"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-styled-components/-/gatsby-plugin-styled-components-2.0.11.tgz#c3d3438c7970bbcc116e821fb966687098bdaf57"
+  dependencies:
+    babel-runtime "^6.26.0"
+
+gatsby-react-router-scroll@^2.0.0-beta.3:
+  version "2.0.0-beta.3"
+  resolved "https://registry.yarnpkg.com/gatsby-react-router-scroll/-/gatsby-react-router-scroll-2.0.0-beta.3.tgz#43864979266d5f7f889864d2550606d4347c95a1"
   dependencies:
     "@babel/runtime" "7.0.0-beta.52"
 
