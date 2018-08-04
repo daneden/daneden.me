@@ -3,6 +3,7 @@ module.exports = {
     authorName: "Daniel Eden",
     title: "Daniel Eden, Designer",
   },
+  polyfill: false,
   plugins: [
     "gatsby-plugin-postcss",
     "gatsby-plugin-react-helmet",
