@@ -58,7 +58,7 @@ export default function Layout({ children, location }) {
             </Helmet>
             <Wrapper isConstrained={!isFrontPage}>
               <Header siteTitle={data.site.siteMetadata.title} />
-              <main className="mxl">{children}</main>
+              {children}
               <Footer author={data.site.siteMetadata.authorName} />
             </Wrapper>
           </React.Fragment>
