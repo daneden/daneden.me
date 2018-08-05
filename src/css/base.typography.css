@@ -25,42 +25,32 @@
 }
 
 h1,
-.h1,
 h2,
-.h2,
-h3,
-.h3 {
+h3 {
   font-weight: 400;
   hyphens: initial;
 }
 
-h1,
-.h1 {
+h1 {
   font-size: 1.333rem;
   margin-bottom: calc(var(--baseline) * 2);
 }
 
 h2,
-.h2,
-h3,
-.h3 {
+h3 {
   font-size: 1.111rem;
 }
 
 *:not(h1) + h2,
-* + .h2,
-* + h3,
-* + .h3 {
+* + h3 {
   padding-top: var(--baseline);
 }
 
-h2,
-.h2 {
+h2 {
   font-family: var(--sans-serif);
 }
 
-h3,
-.h3 {
+h3 {
   font-feature-settings: "smcp", "c2sc";
   font-size: inherit;
   font-style: normal;
@@ -69,8 +59,7 @@ h3,
   text-transform: uppercase;
 }
 
-h4,
-.h4 {
+h4 {
   font-family: var(--serif);
   font-size: 1rem;
   font-style: italic;
@@ -82,10 +71,6 @@ a {
   text-decoration: underline;
   text-decoration-skip: ink;
   text-decoration-skip-ink: auto;
-}
-
-.plainlink {
-  text-decoration: none;
 }
 
 a:hover,
@@ -135,11 +120,6 @@ mark {
 .caps {
   font-feature-settings: "smcp", "c2sc", "lnum";
   letter-spacing: 0.05em;
-}
-
-.unlist {
-  list-style: none;
-  padding-left: 0;
 }
 
 small,

@@ -117,7 +117,7 @@ const list = books
 const Library = styled("div")`
   align-items: baseline;
   display: grid;
-  grid-gap: ${Atoms.vertGutter};
+  grid-gap: ${Atoms.spacing.medium};
   grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
 `
 

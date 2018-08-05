@@ -1,11 +1,24 @@
 import React from "react"
-import { Link } from "gatsby"
+import styled from "react-emotion"
 
-const NavLink = ({ to, label }) => (
-  <Link className="plainlink" to={to}>
-    {label}
-  </Link>
-)
+import Atoms from "./designSystem/atoms"
+import PlainList from "./designSystem/PlainList"
+import PlainLink from "./designSystem/PlainLink"
+
+const StyledHeader = styled("header")`
+  font-family: ${Atoms.font.family.sans};
+  border-bottom: 1px solid;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: ${Atoms.spacing.medium};
+  padding-top: ${Atoms.spacing.medium};
+`
+
+const StyledNav = styled("nav")`
+  li + li {
+    margin-left: ${Atoms.spacing.xsmall};
+  }
+`
 
 const links = [
   {
@@ -23,21 +36,19 @@ const links = [
 ]
 
 const Header = ({ siteTitle }) => (
-  <header className="sans site__header">
-    <Link className="site__title plainlink" to="/">
-      {siteTitle}
-    </Link>
+  <StyledHeader>
+    <PlainLink to="/">{siteTitle}</PlainLink>
 
-    <nav className="site__nav">
-      <ul className="nav">
+    <StyledNav>
+      <PlainList inline={true}>
         {links.map(({ to, label }) => (
           <li key={to}>
-            <NavLink to={to} label={label} />
+            <PlainLink to={to}>{label}</PlainLink>
           </li>
         ))}
-      </ul>
-    </nav>
-  </header>
+      </PlainList>
+    </StyledNav>
+  </StyledHeader>
 )
 
 export default Header

@@ -16,7 +16,7 @@ const AlignedContainer = styled("div")`
 const Left = styled(AlignedContainer)`
   float: left;
   margin-left: -25%;
-  margin-right: ${Atoms.vertGutter};
+  margin-right: ${Atoms.spacing.medium};
 
   @media (max-width: ${Atoms.breakpoints.medium}) {
     margin-left: 0;
@@ -30,7 +30,7 @@ const Left = styled(AlignedContainer)`
 
 const Right = styled(AlignedContainer)`
   float: right;
-  margin-left: ${Atoms.vertGutter};
+  margin-left: ${Atoms.spacing.medium};
   margin-right: -25%;
 
   @media (max-width: ${Atoms.breakpoints.medium}) {

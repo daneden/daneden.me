@@ -1,15 +1,16 @@
 import React from "react"
 
 import Image from "./Image"
+import PlainLink from "./designSystem/PlainLink"
 
 export default function Book({ author, cover, title, url }) {
   return (
     <div className="library__book small">
-      <a href={url} className="sans plainlink">
-        <Image className="m0" src={cover} />
-        <span className="b">{title}</span>
-        <em className="meta b">{author}</em>
-      </a>
+      <PlainLink to={url}>
+        <Image margin="none" src={cover} />
+        <div>{title}</div>
+        <em className="meta">{author}</em>
+      </PlainLink>
     </div>
   )
 }

@@ -34,10 +34,10 @@ export default {
     },
   },
   scales,
-  spacing: {
-    small: `${scales.small}rem`,
-    medium: `${scales.medium}rem`,
-    large: `${scales.large}rem`,
-  },
-  vertGutter: `${BASELINE}rem`,
+  spacing: Object.assign(
+    {},
+    ...Object.keys(scales).map(n => ({
+      [n]: `${BASELINE * scales[n]}rem`,
+    }))
+  ),
 }
