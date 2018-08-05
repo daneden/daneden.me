@@ -1,25 +1,19 @@
 import React from "react"
 import Imgix from "react-imgix"
-import styled from "styled-components"
+import styled from "react-emotion"
 
-import Align from "./designSystem/Align"
 import Atoms from "./designSystem/atoms"
 import mdToHTML from "../utils/mdToHTML"
 
-const Figure = styled.figure`
-  margin-bottom: ${Atoms.spacing.large};
-  margin-top: ${Atoms.spacing.large};
-
-  ${Align.Left} &, ${Align.Right} & {
-    margin-top: 0;
-  }
+const Figure = styled("figure")`
+  margin-bottom: ${Atoms.vertGutter};
 
   img {
     width: 100%;
   }
 `
 
-const Caption = styled.figcaption`
+const Caption = styled("figcaption")`
   font-size: ${Atoms.font.size.small};
   color: ${Atoms.colors.meta};
 `

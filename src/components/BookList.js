@@ -1,5 +1,5 @@
 import React from "react"
-import styled from "styled-components"
+import styled from "react-emotion"
 
 import Atoms from "./designSystem/atoms"
 import Book from "./Book"
@@ -114,7 +114,7 @@ const list = books
   })
   .sort((a, b) => strippedTitle(a.title).localeCompare(strippedTitle(b.title)))
 
-const Library = styled.div`
+const Library = styled("div")`
   align-items: baseline;
   display: grid;
   grid-gap: ${Atoms.vertGutter};

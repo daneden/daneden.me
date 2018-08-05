@@ -1,7 +1,7 @@
 import Atoms from "./atoms"
-import styled from "styled-components"
+import styled from "react-emotion"
 
-const AlignedContainer = styled.div`
+const AlignedContainer = styled("div")`
   width: 50%;
 
   @media (max-width: ${Atoms.breakpoints.medium}) {

@@ -25,17 +25,19 @@ export default function Layout({ children, location }) {
             ),
           }}
         >
-          <Helmet
-            defaultTitle={data.site.siteMetadata.title}
-            titleTemplate={`%s | ${data.site.siteMetadata.title}`}
-          >
-            <body className={`phl ${pageClass}`} />
-          </Helmet>
-          <Wrapper isConstrained={pageClass == null}>
-            <Header siteTitle={data.site.siteMetadata.title} />
-            <main className="mxl">{children}</main>
-            <Footer author={data.site.siteMetadata.authorName} />
-          </Wrapper>
+          <React.Fragment>
+            <Helmet
+              defaultTitle={data.site.siteMetadata.title}
+              titleTemplate={`%s | ${data.site.siteMetadata.title}`}
+            >
+              <body className={`phl ${pageClass}`} />
+            </Helmet>
+            <Wrapper isConstrained={pageClass == null}>
+              <Header siteTitle={data.site.siteMetadata.title} />
+              <main className="mxl">{children}</main>
+              <Footer author={data.site.siteMetadata.authorName} />
+            </Wrapper>
+          </React.Fragment>
         </MDXProvider>
       )}
     />

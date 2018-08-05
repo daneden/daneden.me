@@ -5,9 +5,9 @@ module.exports = {
   },
   polyfill: false,
   plugins: [
+    "gatsby-plugin-emotion",
     "gatsby-plugin-postcss",
     "gatsby-plugin-react-helmet",
-    "gatsby-plugin-styled-components",
     {
       resolve: "gatsby-mdx",
       options: {
