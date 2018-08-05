@@ -24,9 +24,14 @@ const bodyStyles = props => {
     ? css`
         ${baseStyle};
         p {
+          font-size: ${Atoms.spacing.small};
+          margin-bottom: var(--baseline);
           max-width: 36rem;
           text-indent: 0;
-          margin-bottom: var(--baseline);
+
+          @media (max-width: ${Atoms.breakpoints.medium}) {
+            font-size: 1rem;
+          }
         }
       `
     : baseStyle
