@@ -12,36 +12,9 @@
   font-family: var(--sans-serif);
 }
 
-:not(.wf-loading) sup {
-  font-feature-settings: "sups" 1;
-  font-size: inherit;
-  vertical-align: inherit;
-}
-
-h1,
-h2,
-h3 {
-  font-weight: 400;
-  hyphens: initial;
-}
-
-h1 {
-  font-size: 1.333rem;
-  margin-bottom: calc(var(--baseline) * 2);
-}
-
-h2,
-h3 {
-  font-size: 1.111rem;
-}
-
 *:not(h1) + h2,
 * + h3 {
   padding-top: var(--baseline);
-}
-
-h2 {
-  font-family: var(--sans-serif);
 }
 
 h3 {
@@ -51,25 +24,6 @@ h3 {
   letter-spacing: 0.025em;
   text-align: left;
   text-transform: uppercase;
-}
-
-h4 {
-  font-family: var(--serif);
-  font-size: 1rem;
-  font-style: italic;
-  font-weight: 400;
-}
-
-a {
-  color: inherit;
-  text-decoration: underline;
-  text-decoration-skip: ink;
-  text-decoration-skip-ink: auto;
-}
-
-a:hover,
-a:focus {
-  color: var(--site-color);
 }
 
 code,
@@ -92,18 +46,6 @@ hr {
 
 .meta {
   color: var(--meta-color);
-}
-
-blockquote {
-  border-left: 2px solid var(--site-color);
-  font-style: italic;
-  padding-left: var(--baseline);
-}
-
-blockquote em,
-blockquote strong {
-  font-style: normal;
-  font-weight: 400;
 }
 
 mark {

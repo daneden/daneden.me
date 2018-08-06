@@ -1,9 +1,8 @@
 import React from "react"
 import { css } from "react-emotion"
 
-import Atoms from "./designSystem/atoms"
+import { Atoms, PlainList } from "./designSystem/designSystem"
 import PostLink from "./PostLink"
-import PlainList from "./designSystem/PlainList"
 import AllBlogPostsQuery from "../queries/AllBlogPostsQuery"
 
 const liStyle = css`

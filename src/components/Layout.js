@@ -1,12 +1,13 @@
 import React from "react"
 import Helmet from "react-helmet"
-import { MDXProvider } from "@mdx-js/tag"
 import { css } from "react-emotion"
 
-import Atoms from "./designSystem/atoms"
+import svgmask from "../../static/images/svgmask.svg"
+import favicon from "../../static/images/favicon.png"
+
+import { Atoms, DesignSystemProvider } from "./designSystem/designSystem"
 import Footer from "./Footer"
 import Header from "./Header"
-import Link from "./Link"
 import SiteMetadataQuery from "../queries/SiteMetadataQuery"
 import Wrapper from "./Wrapper"
 
@@ -43,22 +44,14 @@ export default function Layout({ children, location }) {
   return (
     <SiteMetadataQuery
       render={data => (
-        <MDXProvider
-          components={{
-            a: props => (
-              <Link
-                to={props.href}
-                title={props.title}
-                children={props.children}
-              />
-            ),
-          }}
-        >
+        <DesignSystemProvider isFrontPage={isFrontPage}>
           <React.Fragment>
             <Helmet
               defaultTitle={data.site.siteMetadata.title}
               titleTemplate={`%s | ${data.site.siteMetadata.title}`}
             >
+              <link rel="icon" href={favicon} />
+              <link rel="mask-icon" href={svgmask} color={Atoms.colors.text} />
               <body className={bodyStyles({ isFrontPage })} />
             </Helmet>
             <Wrapper isConstrained={!isFrontPage}>
@@ -67,7 +60,7 @@ export default function Layout({ children, location }) {
               <Footer author={data.site.siteMetadata.authorName} />
             </Wrapper>
           </React.Fragment>
-        </MDXProvider>
+        </DesignSystemProvider>
       )}
     />
   )

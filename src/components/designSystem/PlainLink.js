@@ -1,10 +1,5 @@
-import styled from "react-emotion"
-import { Link } from "gatsby"
+import React from "react"
 
-export default styled(Link)`
-  text-decoration: none;
+import { Link } from "./designSystem"
 
-  &:hover {
-    text-decoration: none;
-  }
-`
+export default props => <Link underline={false} {...props} />
