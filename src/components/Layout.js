@@ -1,28 +1,18 @@
 import React from "react"
 import Helmet from "react-helmet"
 import { MDXProvider } from "@mdx-js/tag"
-import { graphql, StaticQuery } from "gatsby"
 
 import Footer from "./Footer"
 import Header from "./Header"
 import Link from "./Link"
+import SiteMetadataQuery from "../queries/SiteMetadataQuery"
 import Wrapper from "./Wrapper"
 
 export default function Layout({ children, location }) {
   const pageClass = location.pathname === "/" ? "frontpage" : null
 
   return (
-    <StaticQuery
-      query={graphql`
-        query {
-          site {
-            siteMetadata {
-              title
-              authorName
-            }
-          }
-        }
-      `}
+    <SiteMetadataQuery
       render={data => (
         <MDXProvider
           components={{
