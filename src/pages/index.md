@@ -1,4 +1,4 @@
-import Mega from "../components/designSystem/Mega"
+import Mega from "components/designSystem/Mega"
 
 <Mega>
   Daniel Eden is writing, thinking, and talking about Design Systems: how they

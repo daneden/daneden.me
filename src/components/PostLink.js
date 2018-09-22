@@ -4,7 +4,7 @@ import PlainLink from "./designSystem/PlainLink"
 
 const PostLink = ({ post }) => (
   <div>
-    <PlainLink to={post.fields.slug}>
+    <PlainLink to={post.slug}>
       <div>{post.frontmatter.title}</div>
       <em className="em meta">{post.frontmatter.date}</em>
     </PlainLink>

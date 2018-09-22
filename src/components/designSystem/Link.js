@@ -16,10 +16,8 @@ const styles = underline => css`
   }
 `
 
-const Link = ({ children, to, underline = true, ...other }) => {
-  const internal = /^\/(?!\/)/.test(to)
-
-  if (internal) {
+const Link = ({ children, href, to, underline = true, ...other }) => {
+  if (to !== undefined) {
     return (
       <GatsbyLink
         className={`${other.className} ${styles(underline)}`}
@@ -33,7 +31,7 @@ const Link = ({ children, to, underline = true, ...other }) => {
   return (
     <a
       className={`${other.className} ${styles(underline)}`}
-      href={to}
+      href={href}
       {...other}
     >
       {children}

@@ -1,3 +1,5 @@
+const path = require("path")
+
 module.exports = {
   siteMetadata: {
     authorName: "Daniel Eden",
@@ -8,7 +10,14 @@ module.exports = {
     "gatsby-plugin-emotion",
     "gatsby-plugin-postcss",
     "gatsby-plugin-react-helmet",
-    "gatsby-plugin-resolve-src",
+    {
+      resolve: "gatsby-plugin-root-import",
+      options: {
+        components: path.join(__dirname, "src/components"),
+        designSystem: path.join(__dirname, "src/components/designSystem"),
+        utils: path.join(__dirname, "src/utils"),
+      },
+    },
     {
       resolve: "gatsby-mdx",
       options: {

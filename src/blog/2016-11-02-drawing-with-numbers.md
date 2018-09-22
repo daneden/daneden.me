@@ -1,5 +1,5 @@
-import Align from '../components/designSystem/Align'
-import Image from '../components/Image'
+import Align from 'components/designSystem/Align'
+import Image from 'components/Image'
 import Codepen from 'react-codepen-embed'
 
 export const frontmatter = {

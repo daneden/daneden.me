@@ -38,7 +38,7 @@ const bodyStyles = props => {
     : baseStyle
 }
 
-export default function Layout({ children, location }) {
+export default function Layout({ children, location, ...props }) {
   const isFrontPage = location.pathname === "/"
 
   return (
