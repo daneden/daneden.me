@@ -9,6 +9,8 @@ const resolvePath = path.resolve
 const slugify = require("slug")
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
+const componentWithMDXScope = require("gatsby-mdx/component-with-mdx-scope")
+
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
@@ -18,12 +20,17 @@ exports.createPages = ({ graphql, actions }) => {
         allMdx {
           edges {
             node {
-              fileAbsolutePath
+              parent {
+                ... on File {
+                  name
+                  sourceInstanceName
+                }
+              }
               frontmatter {
                 title
               }
-              fields {
-                slug
+              code {
+                scope
               }
             }
           }
@@ -37,11 +44,22 @@ exports.createPages = ({ graphql, actions }) => {
 
         // Create blog post pages.
         result.data.allMdx.edges.forEach(({ node }) => {
-          const { fileAbsolutePath, fields, frontmatter } = node
+          const filename = node.parent.name
+
+          // get the date and title from the file name
+          const [, date, title] = filename.match(
+            /^([\d]{4}-[\d]{2}-[\d]{2})-{1}(.+)$/
+          )
+
+          // create a new slug concatenating everything
+          const slug = `/${slugify(date, "/")}/${title}/`
 
           createPage({
-            path: `${fields.slug}`,
-            component: fileAbsolutePath,
+            path: slug,
+            component: componentWithMDXScope(
+              path.resolve("./src/components/Layout.js"),
+              node.code.scope
+            ),
           })
         })
       })
@@ -49,22 +67,22 @@ exports.createPages = ({ graphql, actions }) => {
   })
 }
 
-exports.onCreateNode = ({ node, actions }) => {
-  if (node.internal.type === `Mdx`) {
-    const { createNodeField } = actions
-    const filename = path.basename(
-      node.fileAbsolutePath,
-      path.extname(node.fileAbsolutePath)
-    )
-
-    // get the date and title from the file name
-    const [, date, title] = filename.match(
-      /^([\d]{4}-[\d]{2}-[\d]{2})-{1}(.+)$/
-    )
-
-    // create a new slug concatenating everything
-    const slug = `/${slugify(date, "/")}/${title}/`
-
-    createNodeField({ node, name: `slug`, value: slug })
-  }
-}
+// exports.onCreateNode = ({ node, actions }) => {
+//   if (node.internal.type === `Mdx`) {
+//     const { createNodeField } = actions
+//     const filename = path.basename(
+//       node.fileAbsolutePath,
+//       path.extname(node.fileAbsolutePath)
+//     )
+//
+//     // get the date and title from the file name
+//     const [, date, title] = filename.match(
+//       /^([\d]{4}-[\d]{2}-[\d]{2})-{1}(.+)$/
+//     )
+//
+//     // create a new slug concatenating everything
+//     const slug = `/${slugify(date, "/")}/${title}/`
+//
+//     createNodeField({ node, name: `slug`, value: slug })
+//   }
+// }

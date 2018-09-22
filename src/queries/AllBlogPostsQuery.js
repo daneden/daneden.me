@@ -12,9 +12,6 @@ const AllBlogPostsQuery = ({ render }) => (
                 title
                 date(formatString: "dddd, MMMM Do YYYY")
               }
-              fields {
-                slug
-              }
             }
           }
         }

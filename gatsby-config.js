@@ -8,11 +8,14 @@ module.exports = {
     "gatsby-plugin-emotion",
     "gatsby-plugin-postcss",
     "gatsby-plugin-react-helmet",
+    "gatsby-plugin-resolve-src",
     {
       resolve: "gatsby-mdx",
       options: {
-        defaultLayout: require.resolve("./src/components/Layout.js"),
         extensions: [".mdx", ".md"],
+        defaultLayouts: {
+          default: require.resolve("./src/components/Layout.js"),
+        },
       },
     },
     {
