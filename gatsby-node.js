@@ -27,9 +27,6 @@ exports.createPages = ({ graphql, actions }) => {
                   absolutePath
                 }
               }
-              code {
-                scope
-              }
             }
           }
         }

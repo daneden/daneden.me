@@ -7,7 +7,6 @@
 sup[id*="fnref"] a {
   color: var(--site-color);
   font-family: var(--sans-serif);
-  margin: 0 0.2em;
   text-decoration: none;
 }
 
@@ -16,12 +15,12 @@ sup[id*="fnref"] a {
   font-size: var(--small);
 }
 
-.footnotes ol {
-  padding-left: 0;
+.footnotes a {
+  color: inherit;
 }
 
-.footnotes li > p {
-  display: inline;
+.footnotes ol {
+  padding-left: 0;
 }
 
 .footnotes li {

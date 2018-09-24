@@ -11,7 +11,9 @@ const DesignSystemProvider = ({ children, isFrontPage }) => (
       h1: designSystem.H1,
       h2: designSystem.H2,
       h3: designSystem.H3,
+      hr: designSystem.Hr,
       p: !isFrontPage ? designSystem.P : null,
+      table: designSystem.Table,
     }}
   >
     {children}
