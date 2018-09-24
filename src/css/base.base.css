@@ -9,9 +9,11 @@
 html {
   background-color: #fff;
   color: var(--text-color);
+  display: flex;
   font-feature-settings: "calt", "liga", "hist", "onum", "pnum";
   font: 100%/1.6 var(--serif);
   hyphens: auto;
+  min-height: 100%;
 }
 
 .wf-loading:root {

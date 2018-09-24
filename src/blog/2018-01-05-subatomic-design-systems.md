@@ -34,18 +34,12 @@ I've avoided using too many indirect terms in this writing, but it may still be
 helpful to have a permanent reference of the terms used to define this system
 thoery.
 
-<dl> <dt>Particle</dt> <dd>The primary, lowest-level building blocks of a
-Subatomic Design System</dd>
-
-  <dt>Element</dt> <dd>Another way of saying "composition of particles". Loaded,
-  and therefore avoided wherever possible.</dd>
-
-  <dt>Pattern</dt> <dd>Another loaded term, but in this context meaning "complex
-  compositions," or compositions of compositions.</dd>
-
-  <dt>Composition</dt> <dd>The combination (a.k.a. addition, merging,
-  multiplication, applying) of particles (or other compositions) to create
-  something new, typically an Element or a Pattern.</dd> </dl>
+|          Term | Definition                                                                                                                                                            |
+| ------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|    _Particle_ | The primary, lowest-level building blocks of a Subatomic Design System                                                                                                |
+|     _Element_ | Another way of saying "composition of particles". Loaded, and therefore avoided wherever possible.                                                                    |
+|     _Pattern_ | Another loaded term, but in this context meaning "complex compositions," or compositions of compositions.                                                             |
+| _Composition_ | The combination (a.k.a. addition, merging, multiplication, applying) of particles (or other compositions) to create something new, typically an Element or a Pattern. |
 
 ## Everything is a composition
 

@@ -1,42 +1,66 @@
 import React from "react"
 import Helmet from "react-helmet"
-import { MDXProvider } from "@mdx-js/tag"
+import { css } from "react-emotion"
 
+import svgmask from "../../static/images/svgmask.svg"
+import favicon from "../../static/images/favicon.png"
+
+import { Atoms, DesignSystemProvider } from "./designSystem/designSystem"
 import Footer from "./Footer"
 import Header from "./Header"
-import Link from "./Link"
 import SiteMetadataQuery from "../queries/SiteMetadataQuery"
 import Wrapper from "./Wrapper"
 
-export default function Layout({ children, location }) {
-  const pageClass = location.pathname === "/" ? "frontpage" : null
+const bodyStyles = props => {
+  const baseStyle = css`
+    background-color: ${props.isFrontPage
+      ? Atoms.colors.text
+      : Atoms.colors.wash};
+    color: ${!props.isFrontPage ? Atoms.colors.text : Atoms.colors.wash};
+    flex: 1;
+    padding-left: ${Atoms.spacing.medium};
+    padding-right: ${Atoms.spacing.medium};
+  `
+  return props.isFrontPage
+    ? css`
+        ${baseStyle};
+        p {
+          font-size: ${Atoms.spacing.small};
+          margin-bottom: var(--baseline);
+          max-width: 36rem;
+          text-indent: 0;
+
+          @media (max-width: ${Atoms.breakpoints.medium}) {
+            font-size: 1rem;
+          }
+        }
+      `
+    : baseStyle
+}
+
+export default function Layout({ children, location, ...props }) {
+  const isFrontPage = location.pathname === "/"
 
   return (
     <SiteMetadataQuery
       render={data => (
-        <MDXProvider
-          components={{
-            a: props => (
-              <Link
-                to={props.href}
-                title={props.title}
-                children={props.children}
-              />
-            ),
-          }}
-        >
-          <Helmet
-            defaultTitle={data.site.siteMetadata.title}
-            titleTemplate={`%s | ${data.site.siteMetadata.title}`}
-          >
-            <body className={`phl ${pageClass}`} />
-          </Helmet>
-          <Wrapper isConstrained={pageClass == null}>
-            <Header siteTitle={data.site.siteMetadata.title} />
-            <main className="mxl">{children}</main>
-            <Footer author={data.site.siteMetadata.authorName} />
-          </Wrapper>
-        </MDXProvider>
+        <DesignSystemProvider isFrontPage={isFrontPage}>
+          <React.Fragment>
+            <Helmet
+              defaultTitle={data.site.siteMetadata.title}
+              titleTemplate={`%s | ${data.site.siteMetadata.title}`}
+            >
+              <link rel="icon" href={favicon} />
+              <link rel="mask-icon" href={svgmask} color={Atoms.colors.text} />
+              <body className={bodyStyles({ isFrontPage })} />
+            </Helmet>
+            <Wrapper isConstrained={!isFrontPage}>
+              <Header siteTitle={data.site.siteMetadata.title} />
+              {children}
+              <Footer author={data.site.siteMetadata.authorName} />
+            </Wrapper>
+          </React.Fragment>
+        </DesignSystemProvider>
       )}
     />
   )

@@ -8,12 +8,14 @@ const AllBlogPostsQuery = ({ render }) => (
         allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
           edges {
             node {
+              parent {
+                ... on File {
+                  name
+                }
+              }
               frontmatter {
                 title
                 date(formatString: "dddd, MMMM Do YYYY")
-              }
-              fields {
-                slug
               }
             }
           }

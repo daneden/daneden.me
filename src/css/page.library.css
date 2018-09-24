@@ -1,6 +1,0 @@
-.library {
-  align-items: baseline;
-  display: grid;
-  grid-gap: var(--baseline);
-  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
-}

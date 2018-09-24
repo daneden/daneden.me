@@ -1,18 +1,30 @@
+const path = require("path")
+
 module.exports = {
   siteMetadata: {
-    authorName: 'Daniel Eden',
-    title: 'Daniel Eden, Designer',
+    authorName: "Daniel Eden",
+    title: "Daniel Eden, Designer",
   },
+  polyfill: false,
   plugins: [
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-postcss',
+    "gatsby-plugin-emotion",
+    "gatsby-plugin-postcss",
+    "gatsby-plugin-react-helmet",
     {
-      resolve: 'gatsby-mdx',
+      resolve: "gatsby-plugin-root-import",
       options: {
-        defaultLayout: require.resolve(
-          "./src/components/Layout.js"
-        ),
-        extensions: ['.mdx', '.md'],
+        components: path.join(__dirname, "src/components"),
+        designSystem: path.join(__dirname, "src/components/designSystem"),
+        utils: path.join(__dirname, "src/utils"),
+      },
+    },
+    {
+      resolve: "gatsby-mdx",
+      options: {
+        extensions: [".mdx", ".md"],
+        defaultLayouts: {
+          default: require.resolve("./src/components/Layout.js"),
+        },
       },
     },
     {

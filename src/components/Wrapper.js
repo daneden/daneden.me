@@ -1,9 +1,12 @@
 import React from "react"
+import styled from "react-emotion"
 
-export default function Wrapper({ isConstrained = true, children, className }) {
-  const classes = [isConstrained ? "wrap" : null, className]
-    .filter(e => e !== undefined)
-    .join(" ")
+const StyledWrapper = styled("div")`
+  box-sizing: initial;
+  margin: 0 auto;
+  max-width: ${props => (props.isConstrained ? "34rem" : "none")};
+`
 
-  return <div className={classes}>{children}</div>
+export default function Wrapper(props) {
+  return <StyledWrapper {...props} />
 }

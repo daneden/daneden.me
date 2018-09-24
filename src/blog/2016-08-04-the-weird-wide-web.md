@@ -1,4 +1,4 @@
-import Image from '../components/Image'
+import Image from 'components/Image'
 
 export const frontmatter = {
 layout: "post",
@@ -88,7 +88,8 @@ visual interfaces at all. It seems like preparing for those worlds means
 throwing out the rulebook, making web and digital design a spectator sport, and
 waiting to see what emerges as the victor.
 
-[^1]: I confess, I even [jumped on the
+[^1]:
 
-bandwagon](https://dribbble.com/shots/2725905-) myself. [^2]: Guilty as
-charged.
+  I confess, I even [jumped on the bandwagon](https://dribbble.com/shots/2725905-) myself.
+
+[^2]: Guilty as charged.

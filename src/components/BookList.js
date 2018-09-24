@@ -1,5 +1,7 @@
 import React from "react"
+import styled from "react-emotion"
 
+import Atoms from "./designSystem/atoms"
 import Book from "./Book"
 
 const strippedTitle = str => str.replace(/^(the|a) /i, "").toLowerCase()
@@ -112,9 +114,16 @@ const list = books
   })
   .sort((a, b) => strippedTitle(a.title).localeCompare(strippedTitle(b.title)))
 
+const Library = styled("div")`
+  align-items: baseline;
+  display: grid;
+  grid-gap: ${Atoms.spacing.medium};
+  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+`
+
 export default function BookList() {
   return (
-    <div className="library">
+    <Library>
       {list.map(({ title, author, cover, url }) => (
         <Book
           author={author}
@@ -124,6 +133,6 @@ export default function BookList() {
           key={title}
         />
       ))}
-    </div>
+    </Library>
   )
 }
