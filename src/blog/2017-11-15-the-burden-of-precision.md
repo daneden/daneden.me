@@ -71,8 +71,7 @@ the final design, and nothing less.
 This newfangled process makes us more thoughtful writers, proximally closer to
 the engineers (who are now crucial to and deeply involved in the design process)
 and releases us from the burden of precision to think about more pressing
-
-"matters": "Why does this state need to exist? How does this fit with the rest of",
+matters: "Why does this state need to exist? How does this fit with the rest of",
 the product? What is the place of this product in the world? How might people
 use this to cause harm? These questions are rarely answered by a designer,
 principally because we are so wrapped up in making sure we craft something
