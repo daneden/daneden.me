@@ -1,9 +1,9 @@
 import React from "react"
 import styled from "react-emotion"
 
-import Atoms from "./designSystem/atoms"
-import PlainList from "./designSystem/PlainList"
-import PlainLink from "./designSystem/PlainLink"
+import Atoms from "designSystem/atoms"
+import PlainList from "designSystem/PlainList"
+import PlainLink from "designSystem/PlainLink"
 
 const StyledHeader = styled("header")`
   font-family: ${Atoms.font.family.sans};

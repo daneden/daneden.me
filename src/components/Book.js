@@ -1,7 +1,7 @@
 import React from "react"
 
 import Image from "./Image"
-import PlainLink from "./designSystem/PlainLink"
+import PlainLink from "designSystem/PlainLink"
 
 export default function Book({ author, cover, title, url }) {
   return (

@@ -1,7 +1,7 @@
 import React from "react"
 import { css } from "react-emotion"
 
-import { Atoms, PlainList } from "./designSystem/designSystem"
+import { Atoms, PlainList } from "designSystem/designSystem"
 import PostLink from "./PostLink"
 import AllBlogPostsQuery from "../queries/AllBlogPostsQuery"
 import slug from "utils/slugFromPath"

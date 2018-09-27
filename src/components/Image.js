@@ -2,8 +2,8 @@ import React from "react"
 import Imgix from "react-imgix"
 import styled from "react-emotion"
 
-import Atoms from "./designSystem/atoms"
-import mdToHTML from "../utils/mdToHTML"
+import Atoms from "designSystem/atoms"
+import mdToHTML from "utils/mdToHTML"
 
 const Figure = styled("figure")`
   margin-bottom: ${props =>

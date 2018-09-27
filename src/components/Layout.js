@@ -5,7 +5,7 @@ import { css } from "react-emotion"
 import svgmask from "../../static/images/svgmask.svg"
 import favicon from "../../static/images/favicon.png"
 
-import { Atoms, DesignSystemProvider } from "./designSystem/designSystem"
+import { Atoms, DesignSystemProvider } from "designSystem/designSystem"
 import Footer from "./Footer"
 import Header from "./Header"
 import SiteMetadataQuery from "../queries/SiteMetadataQuery"

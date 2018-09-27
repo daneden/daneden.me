@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "react-emotion"
 
-import Atoms from "./designSystem/atoms"
+import Atoms from "designSystem/atoms"
 import Book from "./Book"
 
 const strippedTitle = str => str.replace(/^(the|a) /i, "").toLowerCase()

@@ -1,6 +1,6 @@
 import React from "react"
 
-import PlainLink from "./designSystem/PlainLink"
+import PlainLink from "designSystem/PlainLink"
 
 const PostLink = ({ post }) => (
   <div>
