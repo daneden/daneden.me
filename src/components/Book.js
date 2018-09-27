@@ -6,7 +6,7 @@ import PlainLink from "designSystem/PlainLink"
 export default function Book({ author, cover, title, url }) {
   return (
     <div className="library__book small">
-      <PlainLink to={url}>
+      <PlainLink href={url}>
         <Image margin="none" src={cover} />
         <div>{title}</div>
         <em className="meta">{author}</em>
