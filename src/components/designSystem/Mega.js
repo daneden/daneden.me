@@ -8,5 +8,7 @@ export default styled("h1")`
   font-weight: 400;
   letter-spacing: -0.015em;
   line-height: 1;
-  margin-bottom: ${Atoms.spacing.large};
+  margin-bottom: ${Atoms.spacing.medium};
+  margin-left: -0.075em;
+  margin-right: -0.075em;
 `

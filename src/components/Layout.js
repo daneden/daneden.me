@@ -14,7 +14,7 @@ import Wrapper from "./Wrapper"
 const bodyStyles = props => {
   const baseStyle = css`
     background-color: ${props.isFrontPage
-      ? Atoms.colors.text
+      ? Atoms.colors.complementary
       : Atoms.colors.wash};
     color: ${!props.isFrontPage ? Atoms.colors.text : Atoms.colors.wash};
     flex: 1;
@@ -24,10 +24,14 @@ const bodyStyles = props => {
   return props.isFrontPage
     ? css`
         ${baseStyle};
+
+        padding-bottom: ${Atoms.spacing.medium};
+
         p {
           font-size: ${Atoms.spacing.small};
           margin-bottom: var(--baseline);
           max-width: 36rem;
+          line-height: 1.5;
           text-indent: 0;
 
           @media (max-width: ${Atoms.breakpoints.medium}) {
@@ -57,7 +61,9 @@ export default function Layout({ children, location, ...props }) {
             <Wrapper isConstrained={!isFrontPage}>
               <Header siteTitle={data.site.siteMetadata.title} />
               {children}
-              <Footer author={data.site.siteMetadata.authorName} />
+              {isFrontPage ? null : (
+                <Footer author={data.site.siteMetadata.authorName} />
+              )}
             </Wrapper>
           </React.Fragment>
         </DesignSystemProvider>

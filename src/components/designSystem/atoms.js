@@ -19,6 +19,7 @@ export default {
     site: "#00c266",
     text: "#000207",
     meta: "#747474",
+    complementary: "#005bc2",
   },
   font: {
     family: {
