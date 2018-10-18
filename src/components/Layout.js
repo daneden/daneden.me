@@ -13,10 +13,8 @@ import Wrapper from "./Wrapper"
 
 const bodyStyles = props => {
   const baseStyle = css`
-    background-color: ${props.isFrontPage
-      ? Atoms.colors.complementary
-      : Atoms.colors.wash};
-    color: ${!props.isFrontPage ? Atoms.colors.text : Atoms.colors.wash};
+    background-color: ${Atoms.colors.wash};
+    color: ${Atoms.colors.text};
     flex: 1;
     padding-left: ${Atoms.spacing.medium};
     padding-right: ${Atoms.spacing.medium};
@@ -24,20 +22,6 @@ const bodyStyles = props => {
   return props.isFrontPage
     ? css`
         ${baseStyle};
-
-        padding-bottom: ${Atoms.spacing.medium};
-
-        p {
-          font-size: ${Atoms.spacing.small};
-          margin-bottom: var(--baseline);
-          max-width: 36rem;
-          line-height: 1.5;
-          text-indent: 0;
-
-          @media (max-width: ${Atoms.breakpoints.medium}) {
-            font-size: 1rem;
-          }
-        }
       `
     : baseStyle
 }
@@ -48,7 +32,7 @@ export default function Layout({ children, location, ...props }) {
   return (
     <SiteMetadataQuery
       render={data => (
-        <DesignSystemProvider isFrontPage={isFrontPage}>
+        <DesignSystemProvider isFrontPage={false}>
           <React.Fragment>
             <Helmet
               defaultTitle={data.site.siteMetadata.title}
@@ -58,12 +42,10 @@ export default function Layout({ children, location, ...props }) {
               <link rel="mask-icon" href={svgmask} color={Atoms.colors.text} />
               <body className={bodyStyles({ isFrontPage })} />
             </Helmet>
-            <Wrapper isConstrained={!isFrontPage}>
+            <Wrapper isConstrained={true}>
               <Header siteTitle={data.site.siteMetadata.title} />
               {children}
-              {isFrontPage ? null : (
-                <Footer author={data.site.siteMetadata.authorName} />
-              )}
+              <Footer author={data.site.siteMetadata.authorName} />
             </Wrapper>
           </React.Fragment>
         </DesignSystemProvider>

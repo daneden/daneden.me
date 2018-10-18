@@ -25,6 +25,12 @@ html {
   line-height: 1.55;
 }
 
+@media (min-width: 1200px) {
+  html {
+    font-size: 125%;
+  }
+}
+
 @media (max-width: 30rem) {
   html {
     font-size: 87.5%;

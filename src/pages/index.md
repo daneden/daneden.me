@@ -1,9 +1,9 @@
-import Mega from "components/designSystem/Mega"
+import Showcase from 'components/Showcase'
 
-<Mega>
-  Daniel Eden is writing, thinking, and talking about Design Systems: how they
-  break, how they scale, and the people that maintain them.
-</Mega>
+<Showcase />
+
+Daniel Eden is writing, thinking, and talking about Design Systems: how they
+break, how they scale, and the people that maintain them.
 
 I’m currently living in Oakland, California and working as a Designer for
 [Facebook](https://facebook.com). I help to create and maintain the Facebook
