@@ -35,9 +35,12 @@ export default {
     },
   },
   scales,
+  // This confusing little function takes `scales` and creates
+  // rem-based values for each size
   spacing: Object.assign(
     {},
     ...Object.keys(scales).map(n => ({
+      // e.g. small: '0.875rem'
       [n]: `${BASELINE * scales[n]}rem`,
     }))
   ),
