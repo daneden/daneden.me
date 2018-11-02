@@ -40,7 +40,7 @@ export default {
   spacing: Object.assign(
     {},
     ...Object.keys(scales).map(n => ({
-      // e.g. small: '0.875rem'
+      // e.g. small: '(BASELINE * 0.875)rem'
       [n]: `${BASELINE * scales[n]}rem`,
     }))
   ),
