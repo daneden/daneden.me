@@ -11,24 +11,15 @@ import Header from "./Header"
 import SiteMetadataQuery from "../queries/SiteMetadataQuery"
 import Wrapper from "./Wrapper"
 
-const bodyStyles = props => {
-  const baseStyle = css`
-    background-color: ${Atoms.colors.wash};
-    color: ${Atoms.colors.text};
-    flex: 1;
-    padding-left: ${Atoms.spacing.medium};
-    padding-right: ${Atoms.spacing.medium};
-  `
-  return props.isFrontPage
-    ? css`
-        ${baseStyle};
-      `
-    : baseStyle
-}
+const bodyStyles = css`
+  background-color: ${Atoms.colors.wash};
+  color: ${Atoms.colors.text};
+  flex: 1;
+  padding-left: ${Atoms.spacing.medium};
+  padding-right: ${Atoms.spacing.medium};
+`
 
 export default function Layout({ children, location, ...props }) {
-  const isFrontPage = location.pathname === "/"
-
   return (
     <SiteMetadataQuery
       render={data => (
@@ -40,9 +31,9 @@ export default function Layout({ children, location, ...props }) {
             >
               <link rel="icon" href={favicon} />
               <link rel="mask-icon" href={svgmask} color={Atoms.colors.text} />
-              <body className={bodyStyles({ isFrontPage })} />
+              <body className={bodyStyles} />
             </Helmet>
-            <Wrapper isConstrained={true}>
+            <Wrapper>
               <Header siteTitle={data.site.siteMetadata.title} />
               {children}
               <Footer author={data.site.siteMetadata.authorName} />

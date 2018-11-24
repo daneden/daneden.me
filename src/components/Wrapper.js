@@ -4,7 +4,7 @@ import styled from "react-emotion"
 const StyledWrapper = styled("div")`
   box-sizing: initial;
   margin: 0 auto;
-  max-width: ${props => (props.isConstrained ? "34rem" : "none")};
+  max-width: 34rem;
 `
 
 export default function Wrapper(props) {
