@@ -1,5 +1,5 @@
-import React from "react"
-import { css } from "react-emotion"
+/** @jsx jsx */
+import { css, jsx } from "@emotion/core"
 
 import { Atoms, PlainList } from "designSystem/designSystem"
 import PostLink from "./PostLink"
@@ -18,7 +18,7 @@ export default function BlogPosts() {
           {data.allMdx.edges.map(edge => {
             const path = slug(edge.node.parent.name)
             return (
-              <li className={liStyle} key={path}>
+              <li css={liStyle} key={path}>
                 <PostLink post={{ ...edge.node, slug: path }} />
               </li>
             )

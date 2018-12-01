@@ -1,6 +1,6 @@
-import React from "react"
+/** @jsx jsx */
 import { Link as GatsbyLink } from "gatsby"
-import { css } from "react-emotion"
+import { css, jsx } from "@emotion/core"
 
 import { Atoms } from "./designSystem"
 
@@ -20,7 +20,8 @@ const Link = ({ children, href, to, underline = true, ...other }) => {
   if (to !== undefined) {
     return (
       <GatsbyLink
-        className={`${other.className} ${styles(underline)}`}
+        className={other.className}
+        css={styles(underline)}
         to={to}
         {...other}
       >
@@ -30,7 +31,8 @@ const Link = ({ children, href, to, underline = true, ...other }) => {
   }
   return (
     <a
-      className={`${other.className} ${styles(underline)}`}
+      className={other.className}
+      css={styles(underline)}
       href={href}
       {...other}
     >

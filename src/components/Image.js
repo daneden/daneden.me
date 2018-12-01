@@ -1,6 +1,6 @@
 import React from "react"
 import Imgix from "react-imgix"
-import styled from "react-emotion"
+import styled from "@emotion/styled"
 
 import Atoms from "designSystem/atoms"
 import mdToHTML from "utils/mdToHTML"

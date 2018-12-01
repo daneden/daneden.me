@@ -3,7 +3,7 @@ import { MDXProvider } from "@mdx-js/tag"
 
 import * as designSystem from "./designSystem"
 
-const DesignSystemProvider = ({ children, isFrontPage }) => (
+const DesignSystemProvider = ({ children }) => (
   <MDXProvider
     components={{
       a: designSystem.Link,
@@ -12,7 +12,7 @@ const DesignSystemProvider = ({ children, isFrontPage }) => (
       h2: designSystem.H2,
       h3: designSystem.H3,
       hr: designSystem.Hr,
-      p: !isFrontPage ? designSystem.P : null,
+      p: designSystem.P,
       table: designSystem.Table,
     }}
   >
