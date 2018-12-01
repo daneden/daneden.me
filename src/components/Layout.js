@@ -8,7 +8,7 @@ import favicon from "../../static/images/favicon.png"
 import { Atoms, DesignSystemProvider } from "designSystem/designSystem"
 import Footer from "./Footer"
 import Header from "./Header"
-import SiteMetadataQuery from "../queries/SiteMetadataQuery"
+import SiteMetadataQuery from "queries/SiteMetadataQuery"
 import Wrapper from "./Wrapper"
 
 export default function Layout({ children, location, ...props }) {

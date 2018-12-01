@@ -3,7 +3,7 @@ import { css, jsx } from "@emotion/core"
 
 import { Atoms, PlainList } from "designSystem/designSystem"
 import PostLink from "./PostLink"
-import AllBlogPostsQuery from "../queries/AllBlogPostsQuery"
+import AllBlogPostsQuery from "queries/AllBlogPostsQuery"
 import slug from "utils/slugFromPath"
 
 const liStyle = css`
