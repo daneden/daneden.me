@@ -58,13 +58,19 @@ If the work I do for money is my bread and butter, my side projects are the jam
 on top. I routinely embark on new side projects to explore coding opportunities
 and design styles outside of my employment.
 
+### Who Would Win Bot
+
+[Who Would Win Bot](https://twitter.com/WhoWouldWinBot) is a Twitter bot that asks followers: in a fight between two random emoji, who would win? [A Genie, or a potato?](https://twitter.com/WhoWouldWinBot/status/1070173517528866817) [A bouquet, or a curling stone?](https://twitter.com/WhoWouldWinBot/status/1069992274665320448) View the [source of GitHub](https://github.com/daneden/who-would-win) or [follow it on Twitter](https://twitter.com/WhoWouldWinBot).
+
 ### Lucid
+
 [Lucid](https://chrome.google.com/webstore/detail/lucid/achogfadpkcepkepcpegehpiiioihmik)
 is a Google Chrome extension that replaces the New Tab page with a simple
 notepad. It's useful for avoiding bad browsing habits and jotting down ideas or
 errands.
 
 ### Golden Hour
+
 [Golden Hour](https://goldenhour.photos) is a place for me to
 post some of my favorite and best photographs. They're all shot at sunrise or
 sunset, and they're all available to download for personal, non-commercial use
@@ -72,6 +78,7 @@ sunset, and they're all available to download for personal, non-commercial use
 site](https://goldenhour.photos).
 
 ### Gifme
+
 [Gifme](https://gif.daneden.me) is a personal clone/rip-off/emulation
 of Giphy, the popular gif search engine. Tired of Giphy's suboptimal Slack
 integration, I built Gifme as a web app and a [Slack
@@ -80,18 +87,21 @@ the [source on GitHub](https://github.com/daneden/gifme) or [visit the
 site](https://gif.daneden.me).
 
 ### Toast
+
 [Toast](http://daneden.github.io/Toast) is a Sass/CSS grid system,
 designed to be highly customisable, extremely verbose, and simple-to-use out of
 the box. It uses no floats, no \`first\` or \`last\` classes, and allows nesting.
 [Visit the site](http://daneden.github.io/Toast)
 
 ### Digital Ruin
+
 [Digital Ruin](http://digitalruin.tumblr.com/) is—for lack of a more
 fitting description—an art project dedicated to giving form to both real and
 fictional digital exchanges, with an emphasis on difficult interactions. It’s
 bleak, and hard to describe. [Visit the site](http://digitalruin.tumblr.com/).
 
 ### Just My Type
+
 [Just My Type](http://justmytype.co) is a library of font
 pairings from Adobe Typekit and [H&FJ](class:caps)’s Cloud.Typography. Created
 out of a desire for a place to keep track of my personal favorite web font
@@ -99,15 +109,18 @@ pairings, Just My Type has grown to become a popular typography resource for
 many web designers. [Visit the site](http://justmytype.co).
 
 ### Onword
+
 [Onword](http://onword.co) is a simple web application for writing documents. It
 was designed and developed in just 10 days, and introduced me to the world of
 Ruby. [Visit the site](http://onword.co).
 
 ### Brills
+
 [Brills](http://brills.me) is a simple money management web application built
 for budgeting quickly. [Visit the site](http://brills.me).
 
 ### Animate.css
+
 [Animate.css](http://daneden.github.io/animate.css/) is a cross-browser
 plug-and-play CSS animation library for delightful animation in websites and web
 applications. [Visit the site](http://daneden.github.io/animate.css/).
