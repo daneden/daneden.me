@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "daneden.me",
+  "description": "Daniel Eden’s website",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Daniel Eden <dan.eden@me.com>",
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
@@ -69,6 +69,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/daneden/daneden.me"
   }
 }
