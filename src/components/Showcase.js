@@ -9,7 +9,7 @@ const StyledShowcase = styled("div")`
   grid-template-columns: repeat(4, auto);
   grid-template-rows: repeat(6, auto);
   max-width: 24rem;
-  margin: 0 auto ${Atoms.spacing.medium};
+  margin: ${Atoms.spacing.large} auto 0;
 
   & > figure {
     margin: 0;
@@ -19,7 +19,7 @@ const StyledShowcase = styled("div")`
 
   & > figure:hover {
     filter: none;
-    z-index: 3;
+    z-index: 4;
   }
 
   & > figure:nth-child(1) {
@@ -34,6 +34,12 @@ const StyledShowcase = styled("div")`
   & > figure:nth-child(3) {
     grid-area: 3 / 3 / 7 / 5;
   }
+
+  & > figure:nth-child(4) {
+    grid-area: 1 / 1 / 6 / 5;
+    pointer-events: none;
+    margin-top: -15%;
+  }
 `
 
 export default function Showcase() {
@@ -41,7 +47,8 @@ export default function Showcase() {
     <StyledShowcase>
       <Image src="2018/10/portrait.jpg" />
       <Image src="2018/10/GenArt.png" />
-      <Image src="2018/10/home.jpg" />
+      <Image src="2019/01/home.jpg" />
+      <Image src="2019/01/wavy.png" />
     </StyledShowcase>
   )
 }
