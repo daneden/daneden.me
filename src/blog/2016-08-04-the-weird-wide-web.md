@@ -9,7 +9,7 @@ date: "2016-08-04"
 
 # The Weird Wide Web
 
-<Image src="2016/08/www.png" className="" />
+<Image src="2016/08/www.png" />
 
 From my “hotel desk” in Facebook’s New York office, I can see a handful of
 different environments. A cluster of soft chairs for people to sit & work
@@ -29,7 +29,7 @@ prevalence[^1] continues, it becomes an increasingly interesting statement of
 our place as designers for screens.
 
 <Image src="2016/08/fbny.jpg" caption="Pillars in the Facebook New York office
-echo a recent trend in web design" className="" />
+echo a recent trend in web design" />
 
 Popular opinion is that brutalist web design emerged in response to the dominant
 aesthetic of web design over the last half a decade; plainly-made websites with
@@ -88,8 +88,5 @@ visual interfaces at all. It seems like preparing for those worlds means
 throwing out the rulebook, making web and digital design a spectator sport, and
 waiting to see what emerges as the victor.
 
-[^1]:
-
-  I confess, I even [jumped on the bandwagon](https://dribbble.com/shots/2725905-) myself.
-
+[^1]: I confess, I even [jumped on the bandwagon](https://dribbble.com/shots/2725905-) myself.
 [^2]: Guilty as charged.

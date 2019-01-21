@@ -2,7 +2,6 @@ export const frontmatter = {
 layout: "post",
 title: "The Landscape of Web Typography",
 hero: "2015/02/herb-lubalin.jpg",
-className: "invert-header",
 date: "2015-02-15"
 }
 
