@@ -10,6 +10,7 @@ const StyledHeader = styled("header")`
   font-size: ${Atoms.font.size.small};
   border-bottom: 1px solid;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: ${Atoms.spacing.medium};
   padding-top: ${Atoms.spacing.medium};
@@ -19,6 +20,10 @@ const StyledNav = styled("nav")`
   li + li {
     margin-left: ${Atoms.spacing.xsmall};
   }
+`
+
+const HomeLink = styled(PlainLink)`
+  margin-right: ${Atoms.spacing.medium};
 `
 
 const links = [
@@ -38,7 +43,7 @@ const links = [
 
 const Header = ({ siteTitle }) => (
   <StyledHeader>
-    <PlainLink to="/">{siteTitle}</PlainLink>
+    <HomeLink to="/">{siteTitle}</HomeLink>
 
     <StyledNav>
       <PlainList inline={true}>
