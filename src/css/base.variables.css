@@ -13,11 +13,10 @@
   --text-color: #000207;
   --meta-color: #747474;
 
-  --monospace: "Input Mono", "Source Code Pro", "Monaco", monospace;
+  --monospace-fallback: "Input Mono", "Source Code Pro", "Monaco", monospace;
+  --monospace: "Founders Grotesk Mono Web", var(--monospace-fallback);
 
-  --sans-serif-fallback: "BlinkMacSystemFont", -apple-system, "Helvetica Neue",
-    Helvetica, sans-serif;
-  --sans-serif: "Neue Haas Unica Web", var(--sans-serif-fallback);
+  --sans-serif: var(--monospace);
 
   --serif-fallback: "Georgia", "Times New Roman", serif;
   --serif: "Tiempos Text Web", var(--serif-fallback);

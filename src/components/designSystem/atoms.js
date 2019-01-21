@@ -24,8 +24,7 @@ export default {
   font: {
     family: {
       serif: `"Tiempos Text Web", "Georgia", serif`,
-      sans: `"Neue Haas Unica Web", -apple-system, BlinkMacSystemFont, sans-serif`,
-      mono: `"Input Mono", "Source Code Pro", "Monaco", monospace`,
+      sans: `"Founders Grotesk Mono Web", "Input Mono", "Source Code Pro", "Monaco", monospace`,
     },
     size: {
       small: `${scales.small}rem`,

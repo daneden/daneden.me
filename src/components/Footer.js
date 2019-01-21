@@ -7,8 +7,9 @@ const StyledFooter = styled("footer")`
   border-top: 1px solid;
   color: ${Atoms.colors.meta};
   font-family: ${Atoms.font.family.sans};
+  font-size: ${Atoms.font.size.small};
   margin-top: ${Atoms.spacing.large};
-  padding: ${Atoms.spacing.medium} 0;
+  padding: ${Atoms.spacing.small} 0;
 `
 
 export default function Footer({ author }) {

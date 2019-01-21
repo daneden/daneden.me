@@ -3,6 +3,7 @@ import Imgix from "react-imgix"
 import styled from "@emotion/styled"
 
 import Atoms from "designSystem/atoms"
+import Sans from "designSystem/Sans"
 import mdToHTML from "utils/mdToHTML"
 
 const Figure = styled("figure")`
@@ -14,7 +15,7 @@ const Figure = styled("figure")`
   }
 `
 
-const Caption = styled("figcaption")`
+const Caption = styled(Sans)`
   font-size: ${Atoms.font.size.small};
   color: ${Atoms.colors.meta};
 `

@@ -7,6 +7,7 @@ import PlainLink from "designSystem/PlainLink"
 
 const StyledHeader = styled("header")`
   font-family: ${Atoms.font.family.sans};
+  font-size: ${Atoms.font.size.small};
   border-bottom: 1px solid;
   display: flex;
   justify-content: space-between;
