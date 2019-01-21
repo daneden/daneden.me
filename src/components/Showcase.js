@@ -39,6 +39,7 @@ const StyledShowcase = styled("div")`
     grid-area: 1 / 1 / 6 / 5;
     pointer-events: none;
     margin-top: -15%;
+    mix-blend-mode: exclusion;
   }
 `
 
