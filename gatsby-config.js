@@ -4,6 +4,8 @@ module.exports = {
   siteMetadata: {
     authorName: "Daniel Eden",
     title: "Daniel Eden, Designer",
+    description:
+      "The personal site, blog, and portfolio of Daniel Eden, a designer who cares about the web and design systems",
   },
   polyfill: false,
   plugins: [
