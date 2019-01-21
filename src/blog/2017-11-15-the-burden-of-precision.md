@@ -8,7 +8,7 @@ date: "2017-11-15"
 
 # The Burden of Precision
 
-> "If the idea is there, the brush can spare itself the work"
+> “If the idea is there, the brush can spare itself the work”
 > _—Chinese painter's proverb_
 
 Design tools today confine us to an unrealistic and ill-advised goal: one of

@@ -98,8 +98,8 @@ with me a different perspective.
 
 [^1]:
 
-  For the unititiated, "diffs" are code reviews where changes
-  ("differences" between the old and new code, hence the name) are approved,
+  For the unititiated, “diffs” are code reviews where changes
+  (“differences” between the old and new code, hence the name) are approved,
   denied, or commented on by peers.
 
 [^2]:

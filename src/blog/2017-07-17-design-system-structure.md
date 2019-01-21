@@ -23,7 +23,7 @@ a log in screen.
 In the [last post](/2017/07/12/a-design-system-grammar/) I wrote about design
 systems, I compared a possible approach for building atomic design systems to
 the book _A Pattern Language_, solidifying a framework for documenting
-compositions of "atoms" into components and patterns. This style of documenting
+compositions of “atoms” into components and patterns. This style of documenting
 the ready-made components reveals the atomic structure without burdening product
 teams with the challenge of figuring out their combinations. I concluded the
 post with a challenge, positing that most design systems already in existence
@@ -62,12 +62,12 @@ properties at the very bottom, we can see three rough divisions of the system.
 
 The conceptual domain is the home of overarching principles. This domain
 describes the environment, audience, and overall purpose of a product, and it
-changes based on those variables. I also think of this as the "essence," or in
+changes based on those variables. I also think of this as the “essence,” or in
 linguistic terms, the story.
 
 The pattern domain is the fixed, middle piece. It describes the patterns and
 components that are utilized in order to make the story a reality. This can be
-thought of as the "execution," or in linguistic terms, words and sentences.
+thought of as the “execution,” or in linguistic terms, words and sentences.
 These elements stay roughly the same no matter what the concept is, but their
 frequency of use and degree of usefulness varies with different concepts. In
 other words, both a horror story and a nonfiction reference book may use the
@@ -76,8 +76,8 @@ same language and terms, but to a different end.
 The final domain is the visual domain, and like the conceptual domain, it
 changes between products, contexts, and platforms. It describes the primitive
 pieces that comprise the patterns and components—colors, text, and other
-"atomic" properties that make a brand or product distinct. This can be thought
-of as the "expression," or in linguistic terms, the alphabet.
+“atomic” properties that make a brand or product distinct. This can be thought
+of as the “expression,” or in linguistic terms, the alphabet.
 
 ---
 
