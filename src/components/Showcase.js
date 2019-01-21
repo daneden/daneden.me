@@ -38,8 +38,7 @@ const StyledShowcase = styled("div")`
   & > figure:nth-child(4) {
     grid-area: 1 / 1 / 5 / 5;
     pointer-events: none;
-    margin-top: -8%;
-    margin-bottom: -8%;
+    margin: -8% -2%;
     mix-blend-mode: exclusion;
   }
 `
