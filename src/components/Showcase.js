@@ -7,9 +7,9 @@ import Image from "components/Image"
 const StyledShowcase = styled("div")`
   display: grid;
   grid-template-columns: repeat(4, auto);
-  grid-template-rows: repeat(6, auto);
+  grid-template-rows: repeat(5, auto);
   max-width: 24rem;
-  margin: ${Atoms.spacing.large} auto 0;
+  margin: ${Atoms.spacing.large} auto;
 
   & > figure {
     margin: 0;
@@ -23,22 +23,23 @@ const StyledShowcase = styled("div")`
   }
 
   & > figure:nth-child(1) {
-    grid-area: 1 / 1 / 4 / 3;
+    grid-area: 1 / 1 / 3 / 3;
   }
 
   & > figure:nth-child(2) {
-    grid-area: 2 / 2 / 5 / 4;
+    grid-area: 2 / 2 / 4 / 4;
     z-index: 2;
   }
 
   & > figure:nth-child(3) {
-    grid-area: 3 / 3 / 7 / 5;
+    grid-area: 3 / 3 / 5 / 5;
   }
 
   & > figure:nth-child(4) {
-    grid-area: 1 / 1 / 6 / 5;
+    grid-area: 1 / 1 / 5 / 5;
     pointer-events: none;
-    margin-top: -15%;
+    margin-top: -8%;
+    margin-bottom: -8%;
     mix-blend-mode: exclusion;
   }
 `
