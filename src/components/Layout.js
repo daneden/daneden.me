@@ -39,6 +39,7 @@ export default function Layout({ children, location, ...props }) {
               <link rel="mask-icon" href={svgmask} color={Atoms.colors.text} />
             </Helmet>
             <Metatags
+              defaultTitle={data.site.siteMetadata.title}
               title={title !== null ? title : data.site.siteMetadata.title}
               description={data.site.siteMetadata.description}
               thumbnail={"/uploads/2019/01/og.png"}

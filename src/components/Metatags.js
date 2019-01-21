@@ -2,13 +2,10 @@ import React from "react"
 import Helmet from "react-helmet"
 
 function Metatags(props) {
-  const { title, description, url, pathname, thumbnail } = props
+  const { title, defaultTitle, description, url, pathname, thumbnail } = props
 
   return (
-    <Helmet
-      defaultTitle={data.site.siteMetadata.title}
-      titleTemplate={`%s | ${data.site.siteMetadata.title}`}
-    >
+    <Helmet defaultTitle={defaultTitle} titleTemplate={`%s | ${defaultTitle}`}>
       <html lang="en" />
       <title>{title}</title>
       <meta name="title" content={title} />
