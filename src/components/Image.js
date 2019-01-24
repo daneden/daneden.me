@@ -1,10 +1,9 @@
 import React from "react"
 import Imgix from "react-imgix"
 import styled from "@emotion/styled"
-
-import Atoms from "designSystem/atoms"
-import Sans from "designSystem/Sans"
 import mdToHTML from "utils/mdToHTML"
+import { Atoms, DesignSystemProvider } from "designSystem/designSystem"
+import Sans from "designSystem/Sans"
 
 const Figure = styled("figure")`
   margin-bottom: ${props =>
@@ -26,7 +25,7 @@ class Image extends React.Component {
   }
 
   render() {
-    const { className, caption, margin, src } = this.props
+    const { alt, className, caption, margin, src } = this.props
     const url =
       process.env.NODE_ENV &&
       process.env.NODE_ENV.toUpperCase() === "DEVELOPMENT"
@@ -36,17 +35,23 @@ class Image extends React.Component {
     const img = (
       <Imgix
         aggressiveLoad={true}
-        customParams={{ fm: "pjpg" }}
+        imgixParams={{ fm: "pjpg", fit: "max" }}
         defaultWidth={600}
-        fit="max"
         src={url}
+        htmlAttributes={{
+          alt,
+        }}
       />
     )
 
     return (
       <Figure margin={margin} className={className}>
         {img}
-        {caption && <Caption>{mdToHTML(caption)}</Caption>}
+        {caption && (
+          <DesignSystemProvider>
+            <Caption>{mdToHTML(caption)}</Caption>
+          </DesignSystemProvider>
+        )}
       </Figure>
     )
   }

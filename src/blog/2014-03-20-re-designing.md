@@ -48,10 +48,11 @@ shtick, I’d take to my site to figure it out. I’d tweak type and nudge colum
 until I felt some sort of satisfaction. But really, it’s all in the pursuit of
 one thing; a system.
 
-<Image src="2014/03/606-universal-shelving.jpg" caption="Vitsœ’s 606 Universal
-Shelving System. Image courtesy of
-[Smow](http://www.smow.com/blog/2010/05/smowoffline-dieter-rams-less-and-more/)."
- />
+<Image
+  alt="A photo of Vitsœs’s 606 Universal Shelving System"
+  src="2014/03/606-universal-shelving.jpg"
+  caption="Vitsœ’s 606 Universal Shelving System. Image courtesy of [Smow](http://www.smow.com/blog/2010/05/smowoffline-dieter-rams-less-and-more/)."
+/>
 
 A working, scalable, modular system is really what I feel is the ultimate,
 end-of-all-ends outcome of successful design. Think of Vitsœ’s 606 Universal

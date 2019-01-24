@@ -24,7 +24,10 @@ a small fraction of the real-world states the product may encounter. We spend
 all this time and energy using precise tools to produce perfect caricatures of
 things we rarely understand the complexities of making real.
 
-<Image src="2017/11/Simplicity.png" />
+<Image
+  alt="A diagram comparing an ornate illustration of an arrow with a block color, simple arrow shape"
+  src="2017/11/Simplicity.png"
+/>
 
 Why do we design in this way? An architect's time surely isn't best spent
 producing perfect virtual reality environments of the buildings she plans. One

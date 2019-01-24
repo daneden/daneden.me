@@ -17,7 +17,11 @@ const Meta = styled(Sans)`
 export default function Book({ author, cover, title, url }) {
   return (
     <BookLink href={url}>
-      <Image margin="none" src={cover} />
+      <Image
+        alt={`The book cover for “${title}” by ${author}`}
+        margin="none"
+        src={cover}
+      />
       <div>{title}</div>
       <Meta>{author}</Meta>
     </BookLink>

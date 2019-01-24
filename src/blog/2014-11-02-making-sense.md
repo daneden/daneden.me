@@ -8,7 +8,7 @@ date: "2014-11-02"
 
 # Making Sense
 
-<Image src="2014/10/Muji-Aluminium-Pen.png" />
+<Image alt="A photo of Muji’s aliminium ballpoint pen" src="2014/10/Muji-Aluminium-Pen.png" />
 
 There is both a great pleasure and a great ache in the search for well-made
 products. Products that are lasting and unambiguous. This search is what leads

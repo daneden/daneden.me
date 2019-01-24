@@ -9,7 +9,7 @@
     }
   },
   "lint-staged": {
-    "*.{js,json,css,md}": [
+    "*.{js,json,css}": [
       "prettier --write",
       "git add"
     ]
@@ -36,7 +36,7 @@
     "react-codepen-embed": "^0.1.0",
     "react-dom": "^16.4.1",
     "react-helmet": "^5.2.0",
-    "react-imgix": "^7.1.1",
+    "react-imgix": "^8.5.1",
     "react-katex": "^2.0.2",
     "remark": "^9.0.0",
     "remark-numbered-footnotes": "^1.0.5",

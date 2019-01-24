@@ -3,6 +3,7 @@ import styled from "@emotion/styled"
 
 const AlignedContainer = styled("div")`
   width: 50%;
+  z-index: 1;
 
   @media (max-width: ${Atoms.breakpoints.medium}) {
     width: 40%;

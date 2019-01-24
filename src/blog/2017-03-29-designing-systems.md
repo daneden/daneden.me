@@ -9,7 +9,10 @@ date: "2017-03-29"
 
 # Designing Product UI Systems
 
-<Image src="2017/03/design-systems.png" />
+<Image
+  alt="An illustration of a stick figure looking at shapes falling out of a box"
+  src="2017/03/design-systems.png"
+/>
 
 _(Short preface/definition: “UI systems”—collections of functional UI
 components and their stylistic appearances—are referred to as “design systems”

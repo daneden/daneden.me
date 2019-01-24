@@ -46,10 +46,16 @@ const StyledShowcase = styled("div")`
 export default function Showcase() {
   return (
     <StyledShowcase>
-      <Image src="2018/10/portrait.jpg" />
-      <Image src="2018/10/GenArt.png" />
-      <Image src="2019/01/home.jpg" />
-      <Image src="2019/01/wavy.svg" />
+      <Image alt="A portrait photo of Daniel Eden" src="2018/10/portrait.jpg" />
+      <Image
+        alt="A piece of Daniel’s generative art"
+        src="2018/10/GenArt.png"
+      />
+      <Image alt="A photograph of Daniel’s home" src="2019/01/home.jpg" />
+      <Image
+        alt="An distorted illustration of Daniel’s name"
+        src="2019/01/wavy.svg"
+      />
     </StyledShowcase>
   )
 }

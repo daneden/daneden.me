@@ -28,7 +28,7 @@ shall we?
 ---
 
 <Align.Left>
-<Image src="2014/02/emergency-mode-home.png" />
+<Image alt="Mockup showing an emergency mode screen" src="2014/02/emergency-mode-home.png" />
 </Align.Left>
 
 The way I imagine it, this emergency functionality would certainly justify
@@ -51,7 +51,10 @@ to the emergency services on demand or on placing a call, if the technology were
 developed to support something like that.
 
 <Align.Right>
-<Image src="2014/02/emergency-mode-detail.png" />
+<Image
+  alt="Mockup showing emergency mode’s details, like the phone’s current location and health information about the phone’s owner"
+  src="2014/02/emergency-mode-detail.png"
+/>
 </Align.Right>
 
 The device could also send extra information automatically to the emergency
