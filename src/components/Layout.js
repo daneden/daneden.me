@@ -46,7 +46,7 @@ export default function Layout({ children, location, ...props }) {
             />
             <Wrapper>
               <Header siteTitle={data.site.siteMetadata.title} />
-              {children}
+              <main>{children}</main>
               <Footer author={data.site.siteMetadata.authorName} />
             </Wrapper>
           </React.Fragment>

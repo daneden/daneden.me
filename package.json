@@ -27,6 +27,8 @@
     "gatsby-mdx": "^0.1.4",
     "gatsby-plugin-emotion": "^3.0.0",
     "gatsby-plugin-google-analytics": "^2.0.8",
+    "gatsby-plugin-manifest": "^2.0.13",
+    "gatsby-plugin-offline": "^2.0.21",
     "gatsby-plugin-postcss": "^2.0.2",
     "gatsby-plugin-react-helmet": "^3.0.4",
     "gatsby-source-filesystem": "^2.0.12",
@@ -41,7 +43,6 @@
     "remark": "^9.0.0",
     "remark-numbered-footnotes": "^1.0.5",
     "remark-react": "^4.0.3",
-    "retext-smartypants": "^3.0.1",
     "slug": "^0.9.1",
     "webpack": "^4.16.1"
   },
@@ -56,10 +57,6 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "@babel/cli": "^7.0.0-beta.32",
-    "@babel/core": "^7.0.0-beta.54",
-    "@babel/preset-env": "^7.0.0-beta.54",
-    "@babel/preset-react": "^7.0.0-beta.54",
     "eslint-plugin-prettier": "^2.6.2",
     "gatsby-plugin-root-import": "^2.0.4",
     "husky": "^1.0.0-rc.13",
