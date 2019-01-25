@@ -19,7 +19,7 @@ module.exports = {
         short_name: `daneden.me`,
         start_url: `/`,
         background_color: `#fefefe`,
-        theme_color: `#00c266`,
+        theme_color: `#fefefe`,
       },
     },
     "gatsby-plugin-offline",
