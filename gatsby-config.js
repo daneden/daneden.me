@@ -12,17 +12,6 @@ module.exports = {
   polyfill: false,
   plugins: [
     "gatsby-plugin-emotion",
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: SITE_NAME,
-        short_name: `daneden.me`,
-        start_url: `/`,
-        background_color: `#fefefe`,
-        theme_color: `#fefefe`,
-      },
-    },
-    "gatsby-plugin-offline",
     "gatsby-plugin-postcss",
     "gatsby-plugin-react-helmet",
     {
@@ -64,5 +53,17 @@ module.exports = {
         exclude: [],
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: SITE_NAME,
+        short_name: `daneden.me`,
+        start_url: `/`,
+        background_color: `#fefefe`,
+        theme_color: `#fefefe`,
+        icon: `static/images/icon.png`,
+      },
+    },
+    "gatsby-plugin-offline",
   ],
 }
