@@ -31,6 +31,7 @@
     "gatsby-plugin-offline": "^2.0.21",
     "gatsby-plugin-postcss": "^2.0.2",
     "gatsby-plugin-react-helmet": "^3.0.4",
+    "gatsby-plugin-remove-serviceworker": "^1.0.0",
     "gatsby-source-filesystem": "^2.0.12",
     "postcss-import": "^11.1.0",
     "postcss-preset-env": "^5.2.3",
