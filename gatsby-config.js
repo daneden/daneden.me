@@ -53,6 +53,17 @@ module.exports = {
         exclude: [],
       },
     },
-    "gatsby-plugin-remove-serviceworker",
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: SITE_NAME,
+        short_name: `daneden.me`,
+        start_url: `/`,
+        background_color: `#fefefe`,
+        theme_color: `#fefefe`,
+        icon: `static/images/icon.png`,
+      },
+    },
+    "gatsby-plugin-offline",
   ],
 }
