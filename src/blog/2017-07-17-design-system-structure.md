@@ -23,7 +23,7 @@ a log in screen.
 In the [last post](/2017/07/12/a-design-system-grammar/) I wrote about design
 systems, I compared a possible approach for building atomic design systems to
 the book _A Pattern Language_, solidifying a framework for documenting
-compositions of "atoms" into components and patterns. This style of documenting
+compositions of “atoms” into components and patterns. This style of documenting
 the ready-made components reveals the atomic structure without burdening product
 teams with the challenge of figuring out their combinations. I concluded the
 post with a challenge, positing that most design systems already in existence
@@ -44,7 +44,11 @@ and a button on another product, but how does one whittle down the multitude of
 available patterns across all contexts to only those relevant to the immediate
 context?
 
-<Image src="2017/07/fig-1-1.png" caption="The structural elements of an atomic design system: Concept, Pattern, Component, and Atom." className="" />
+<Image
+  alt="A diagram of the structural elements of a design system"
+  src="2017/07/fig-1-1.png"
+  caption="The structural elements of an atomic design system: Concept, Pattern, Component, and Atom."
+/>
 
 I'd like to introduce a top-level element of the tree of our design system; the
 concept. Think of the concept as the definition of the environment, audience,
@@ -58,16 +62,20 @@ environments.
 With the notion of a concept at the top of our tree, and that of atomic
 properties at the very bottom, we can see three rough divisions of the system.
 
-<Image src="2017/07/fig-1-4.png" caption="The three domains/layers of the system: Conceptual (Essence), Pattern (Execution), and Visual (Expression)" className="" />
+<Image
+  alt="A diagram of the “domains” of a design system"
+  src="2017/07/fig-1-4.png"
+  caption="The three domains/layers of the system: Conceptual (Essence), Pattern (Execution), and Visual (Expression)"
+/>
 
 The conceptual domain is the home of overarching principles. This domain
 describes the environment, audience, and overall purpose of a product, and it
-changes based on those variables. I also think of this as the "essence," or in
+changes based on those variables. I also think of this as the “essence,” or in
 linguistic terms, the story.
 
 The pattern domain is the fixed, middle piece. It describes the patterns and
 components that are utilized in order to make the story a reality. This can be
-thought of as the "execution," or in linguistic terms, words and sentences.
+thought of as the “execution,” or in linguistic terms, words and sentences.
 These elements stay roughly the same no matter what the concept is, but their
 frequency of use and degree of usefulness varies with different concepts. In
 other words, both a horror story and a nonfiction reference book may use the
@@ -76,8 +84,8 @@ same language and terms, but to a different end.
 The final domain is the visual domain, and like the conceptual domain, it
 changes between products, contexts, and platforms. It describes the primitive
 pieces that comprise the patterns and components—colors, text, and other
-"atomic" properties that make a brand or product distinct. This can be thought
-of as the "expression," or in linguistic terms, the alphabet.
+“atomic” properties that make a brand or product distinct. This can be thought
+of as the “expression,” or in linguistic terms, the alphabet.
 
 ---
 

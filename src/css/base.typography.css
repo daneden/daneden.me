@@ -28,10 +28,6 @@ pre {
   padding-top: 0;
 }
 
-.meta {
-  color: var(--meta-color);
-}
-
 mark {
   background-color: rgba(0, 0, 0, 0.075);
   color: inherit;

@@ -9,7 +9,7 @@ date: "2018-01-05"
 
 # Subatomic Design Systems
 
-The following theory of "Subatomic Design Systems" is loosely based on an
+The following theory of “Subatomic Design Systems’ is loosely based on an
 amalgam of existing design system theories and programming architecture
 approaches, including Brad Frost’s Atomic Design, Yandex’s
 Block-Element-Modifier, Harry Roberts’ Inverted Triangle CSS, Nicole Sullivan’s
@@ -37,8 +37,8 @@ thoery.
 |          Term | Definition                                                                                                                                                            |
 | ------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 |    _Particle_ | The primary, lowest-level building blocks of a Subatomic Design System                                                                                                |
-|     _Element_ | Another way of saying "composition of particles". Loaded, and therefore avoided wherever possible.                                                                    |
-|     _Pattern_ | Another loaded term, but in this context meaning "complex compositions," or compositions of compositions.                                                             |
+|     _Element_ | Another way of saying “composition of particles”. Loaded, and therefore avoided wherever possible.                                                                    |
+|     _Pattern_ | Another loaded term, but in this context meaning “complex compositions,” or compositions of compositions.                                                             |
 | _Composition_ | The combination (a.k.a. addition, merging, multiplication, applying) of particles (or other compositions) to create something new, typically an Element or a Pattern. |
 
 ## Everything is a composition
@@ -108,8 +108,7 @@ expressed as a function of state:
 
 Where <InlineMath math="f" /> is a function that takes state and
 returns UI (composed particles), <InlineMath math="x" /> is a state
-and <InlineMath math="\Delta x" /> is a changed state, and
-<InlineMath math="A" /> and <InlineMath math="B" /> are
+and <InlineMath math="\Delta x" /> is a changed state, and <InlineMath math="A" /> and <InlineMath math="B" /> are
 the resulting compositions.
 
 This is the basis through which data can been seen to augment and flow through a
@@ -125,8 +124,7 @@ things we’d compose:
 
 <BlockMath math="d = e + b + c" />
 
-Above are two simple compositions. We can further simplify our composition
-<InlineMath math="d" /> so it becomes:
+Above are two simple compositions. We can further simplify our composition <InlineMath math="d" /> so it becomes:
 
 <BlockMath math="d = e + a" />
 
@@ -234,7 +232,7 @@ other posts on my blog, namely:
 Finally, the present and abrupt conclusion above is one I am aware of. Many of
 these ideas are still in their infancy and have had only minimal purchase in the
 real-life design systems I've worked on. I plan to concentrate efforts on
-getting from the "Why" of SDS to the "How": how, in current tools and different
+getting from the “Why” of SDS to the “How”: how, in current tools and different
 organisations, can a design system based on these principles be created (or,
 with increasing urgency, borne out of an existing system), maintained, and
 scaled.

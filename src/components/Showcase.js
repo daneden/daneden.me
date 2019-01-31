@@ -7,9 +7,9 @@ import Image from "components/Image"
 const StyledShowcase = styled("div")`
   display: grid;
   grid-template-columns: repeat(4, auto);
-  grid-template-rows: repeat(6, auto);
+  grid-template-rows: repeat(5, auto);
   max-width: 24rem;
-  margin: 0 auto ${Atoms.spacing.medium};
+  margin: ${Atoms.spacing.large} auto ${Atoms.spacing.medium};
 
   & > figure {
     margin: 0;
@@ -19,29 +19,43 @@ const StyledShowcase = styled("div")`
 
   & > figure:hover {
     filter: none;
-    z-index: 3;
+    z-index: 4;
   }
 
   & > figure:nth-child(1) {
-    grid-area: 1 / 1 / 4 / 3;
+    grid-area: 1 / 1 / 3 / 3;
   }
 
   & > figure:nth-child(2) {
-    grid-area: 2 / 2 / 5 / 4;
+    grid-area: 2 / 2 / 4 / 4;
     z-index: 2;
   }
 
   & > figure:nth-child(3) {
-    grid-area: 3 / 3 / 7 / 5;
+    grid-area: 3 / 3 / 5 / 5;
+  }
+
+  & > figure:nth-child(4) {
+    grid-area: 1 / 1 / 5 / 5;
+    pointer-events: none;
+    margin: -12% 0;
+    mix-blend-mode: exclusion;
   }
 `
 
 export default function Showcase() {
   return (
     <StyledShowcase>
-      <Image src="2018/10/portrait.jpg" />
-      <Image src="2018/10/GenArt.png" />
-      <Image src="2018/10/home.jpg" />
+      <Image alt="A portrait photo of Daniel Eden" src="2018/10/portrait.jpg" />
+      <Image
+        alt="A piece of Daniel’s generative art"
+        src="2018/10/GenArt.png"
+      />
+      <Image alt="A photograph of Daniel’s home" src="2019/01/home.jpg" />
+      <Image
+        alt="An distorted illustration of Daniel’s name"
+        src="2019/01/wavy.svg"
+      />
     </StyledShowcase>
   )
 }

@@ -28,7 +28,10 @@ the limits of the system, detect the abstracts of the problem the product team
 is trying to solve, and apply those abstracts to a solution that can be
 generalized to broader uses.
 
-<Image src="2017/06/designSystems.png" className="" />
+<Image
+  alt="A diagram of how product teams have specialties that exceed a design system"
+  src="2017/06/designSystems.png"
+/>
 
 More concretely, product teams have a narrow yet extremely _deep_ understanding
 of a particular problem set. They may, for instance, stretch a particular

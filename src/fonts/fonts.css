@@ -1,48 +1,12 @@
-/**
- * @license
- * MyFonts Webfont Build ID 3600978, 2018-06-27T01:25:11-0400
- *
- * The fonts listed in this notice are subject to the End User License
- * Agreement(s) entered into by the website owner. All other parties are
- * explicitly restricted from using the Licensed Webfonts(s).
- *
- * You may obtain a valid license at the URLs below.
- *
- * Webfont: NeueHaasUnicaPro-Italic by Linotype
- * URL: https://www.myfonts.com/fonts/linotype/neue-haas-unica/italic/
- *
- * Webfont: NeueHaasUnicaPro-Regular by Linotype
- * URL: https://www.myfonts.com/fonts/linotype/neue-haas-unica/regular/
- *
- *
- * License: https://www.myfonts.com/viewlicense?type=web&buildid=3600978
- * Licensed pageviews: 250,000
- * Webfonts copyright: Copyright &#x00A9; 2015 Monotype Imaging Inc.  All rights reserved.
- *
- * © 2018 MyFonts Inc
-*/
-
-/* @import must be at top of file, otherwise CSS will not work */
-@import url("//hello.myfonts.net/count/36f8c4");
-
 @font-face {
   font-display: fallback;
-  font-family: "Neue Haas Unica Web";
-  font-style: italic;
-  font-weight: normal;
-  src: url("webfonts/36F8C4_0_0.woff2") format("woff2"),
-    url("webfonts/36F8C4_0_0.woff") format("woff"),
-    url("webfonts/36F8C4_0_0.eot") format("embedded-opentype");
-}
-
-@font-face {
-  font-display: fallback;
-  font-family: "Neue Haas Unica Web";
+  font-family: "Founders Grotesk Mono Web";
   font-style: normal;
   font-weight: normal;
-  src: url("webfonts/36F8C4_1_0.woff2") format("woff2"),
-    url("webfonts/36F8C4_1_0.woff") format("woff"),
-    url("webfonts/36F8C4_1_0.eot") format("embedded-opentype");
+  src: url("webfonts/FoundersGroteskMonoWeb-Regular.woff2") format("woff2"),
+    url("webfonts/FoundersGroteskMonoWeb-Regular.woff") format("woff"),
+    url("webfonts/FoundersGroteskMonoWeb-Regular.eot")
+      format("embedded-opentype");
 }
 
 @font-face {

@@ -11,7 +11,10 @@ date: "2016-11-02"
 
 # Drawing With Numbers
 
-<Image src="2017/01/diff-growth.png" />
+<Image
+  alt="A generative art piece produced by myself, reminiscient of ocean coral"
+  src="2017/01/diff-growth.png"
+/>
 
 I’ve never considered myself much of an artist. My creativity has always found
 its home in design and photography, practices which feel far less dependent on
@@ -20,7 +23,11 @@ sculpting is one of those things that _sounds_ more fun to me than it actually
 is.
 
 <Align.Left>
-<Image src="2016/11/dwn-serra.jpg" caption="An installation from Richard Serra in Dia:Beacon." />
+<Image
+  alt="A photo of Richard Serra’s installation at the Dia:Beacon"
+  src="2016/11/dwn-serra.jpg"
+  caption="An installation from Richard Serra in Dia:Beacon."
+/>
 </Align.Left>
 
 I have, however, become deeply interested in generative art. How numbers can be
@@ -37,7 +44,11 @@ LeWitt. One piece features thousands, perhaps millions, of hand-drawn lines, in
 a variety of patterns. The cumulative effect of line after line creates an
 array of sometimes wildly different visualizations.
 
-<Image src="2016/11/dwn-sollewitt.jpg" caption="A close-up of one of Sol LeWitt’s intricate pieces. It’s hard to do his work justice on a screen." />
+<Image
+  alt="A close-up photo of some of Sol LeWitt’s artwork"
+  src="2016/11/dwn-sollewitt.jpg"
+  caption="A close-up of one of Sol LeWitt’s intricate pieces. It’s hard to do his work justice on a screen."
+/>
 
 The dedication and vision to create installations like this was boggling. It
 made me itch to create. I can’t draw, but I _can_ tell computers to draw for
@@ -50,7 +61,10 @@ back of one of Dropbox’s design team sweatshirts, created by [Kristen
 Spilman](https://twitter.com/kspilman). It’s simple enough—an array of
 rectangles, each rotated so they’re pointing towards a point in space.
 
-<Image src="2016/11/dwn-dropbox.jpg" />
+<Image
+  alt="A photo of a Dropbox Design hoodie with some abstract, geometric art on the back"
+  src="2016/11/dwn-dropbox.jpg"
+/>
 
 I started by trying to recreate this design with a single rectangle using HTML
 canvas. This taught me two things:
@@ -95,7 +109,11 @@ never written Java before, but since it was so syntactically similar to
 JavaScript, with just a few Google searches, I was able to start porting over
 some of my more ambitious p5.js sketches into Processing.
 
-<Image src="2016/11/dwn-fabric.png" caption="One example of the kinds of sketches that would collapse on p5.js and demanded a more powerful medium. “Fabric,” [full size.](/uploads/2016/11/dwn-fabric.png)" />
+<Image
+  alt="A piece of generative art, reminiscient of fabric that is tattered and wind-swept"
+  src="2016/11/dwn-fabric.png"
+  caption="One example of the kinds of sketches that would collapse on p5.js and demanded a more powerful medium. “Fabric,” [full size.](/uploads/2016/11/dwn-fabric.png)"
+/>
 
 A more performant environment and toolkit meant I could work on more demanding
 and expressive ideas. Instead of drawing hundreds of points to a canvas, I
@@ -123,9 +141,23 @@ I started moving my focus from motion towards sketches that gave the
 _impression_ of motion, be it through the apparent movement of their lines, or
 the stages of evolution they exhibited.
 
-<Image src="2016/11/dwn-moons.png" caption="“Moons” series, expressing a single algorithm in several different ways. [Full size.](/uploads/2016/11/dwn-moons.png)" />
-<Image src="2016/11/dwn-dashes.png" caption="Complexity borne out of simplicity. Fill a circle with dashes of random length, ensuring none of them overlap. “Dashes,” [full size.](/uploads/2016/11/dwn-dashes.png)" />
-<Image src="2016/11/dwn-sandlines.png" caption="“Sandlines,” inspired by Anders Hoff’s [Sand Spline](http://inconvergent.net/generative/sand-spline/). [Full size.](/uploads/2016/11/dwn-sandlines.png)" />
+<Image
+  alt="A set of generative art pieces, exploring different mutations of a circle"
+  src="2016/11/dwn-moons.png"
+  caption="“Moons” series, expressing a single algorithm in several different ways. [Full size.](/uploads/2016/11/dwn-moons.png)"
+/>
+
+<Image
+  alt="A generative art piece that demonstrates filling a circle with dashed lines"
+  src="2016/11/dwn-dashes.png"
+  caption="Complexity borne out of simplicity. Fill a circle with dashes of random length, ensuring none of them overlap. “Dashes,” [full size.](/uploads/2016/11/dwn-dashes.png)"
+/>
+
+<Image
+  alt="A generative art piece that looks a little like seismometer readings"
+  src="2016/11/dwn-sandlines.png"
+  caption="“Sandlines,” inspired by Anders Hoff’s [Sand Spline](http://inconvergent.net/generative/sand-spline/). [Full size.](/uploads/2016/11/dwn-sandlines.png)"
+/>
 
 ## Making It Real
 
@@ -140,9 +172,18 @@ After some trial and error, my first prints were born, and along with them, a
 torrent of new ideas. Each new print would prompt another, developing a series
 and planting seeds for evolved ideas.
 
-<Image src="2016/11/dwn-print1.jpg" />
-<Image src="2016/11/dwn-print2.jpg" />
-<Image src="2016/11/dwn-print3.jpg" />
+<Image
+  alt="A printed piece of generative art"
+  src="2016/11/dwn-print1.jpg"
+/>
+<Image
+  alt="A printed piece of generative art"
+  src="2016/11/dwn-print2.jpg"
+/>
+<Image
+  alt="A printed piece of generative art"
+  src="2016/11/dwn-print3.jpg"
+/>
 
 Exploring generative art through Processing has not only given me a creative
 outlet and a medium to express ideas, but it's helping me become a more
@@ -166,10 +207,5 @@ number of people for their help and inspiration to work on these pieces.
 - [Defne Beyce](https://defne-beyce.squarespace.com/), for her help with printing;
 - Facebook’s [Analog Lab](https://twitter.com/analoglab) staff for allowing me to hang out, use the equipment, and ask dumb questions.
 
-[^1]:
-
-  Daniel’s videos on YouTube showed the successes and stumbles of writing JavaScript in a way I hadn’t seen before—I highly recommend subscribing to [his channel](https://www.youtube.com/user/shiffman).
-
-[^2]:
-
-  Anders’ [Generative](http://inconvergent.net/generative/) visual essay brings clarity to his beautiful work, and gave me a new perspective on how expressive the simplest ideas can be when the only variable is time (provided you can be patient enough for the results to be pleasing)
+[^1]: Daniel’s videos on YouTube showed the successes and stumbles of writing JavaScript in a way I hadn’t seen before—I highly recommend subscribing to [his channel](https://www.youtube.com/user/shiffman).
+[^2]: Anders’ [Generative](http://inconvergent.net/generative/) visual essay brings clarity to his beautiful work, and gave me a new perspective on how expressive the simplest ideas can be when the only variable is time (provided you can be patient enough for the results to be pleasing)

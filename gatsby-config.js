@@ -1,9 +1,13 @@
 const path = require("path")
 
+const SITE_NAME = "Daniel Eden, Designer"
+
 module.exports = {
   siteMetadata: {
     authorName: "Daniel Eden",
-    title: "Daniel Eden, Designer",
+    title: SITE_NAME,
+    description:
+      "The personal site, blog, and portfolio of Daniel Eden, a designer who cares about the web and design systems",
   },
   polyfill: false,
   plugins: [
@@ -49,5 +53,17 @@ module.exports = {
         exclude: [],
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: SITE_NAME,
+        short_name: `daneden.me`,
+        start_url: `/`,
+        background_color: `#fefefe`,
+        theme_color: `#fefefe`,
+        icon: `static/images/icon.png`,
+      },
+    },
+    "gatsby-plugin-offline",
   ],
 }

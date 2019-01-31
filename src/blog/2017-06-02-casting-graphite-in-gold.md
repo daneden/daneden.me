@@ -9,7 +9,7 @@ date: "2017-06-02"
 
 # Casting Graphite in Gold
 
-<Image src="2017/06/graphite.png" className="" />
+<Image src="2017/06/graphite.png" />
 
 I’ve spent a number of years oscillating between both sides of the
 Designer-Engineer spectrum, improvising, learning, and faltering along the way.
@@ -98,8 +98,8 @@ with me a different perspective.
 
 [^1]:
 
-  For the unititiated, "diffs" are code reviews where changes
-  ("differences" between the old and new code, hence the name) are approved,
+  For the unititiated, “diffs” are code reviews where changes
+  (“differences” between the old and new code, hence the name) are approved,
   denied, or commented on by peers.
 
 [^2]:

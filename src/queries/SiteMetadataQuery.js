@@ -9,6 +9,7 @@ const SiteMetadataQuery = ({ render }) => (
           siteMetadata {
             title
             authorName
+            description
           }
         }
       }

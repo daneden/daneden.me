@@ -26,10 +26,14 @@ Digital design has, unbeknownst to the majority of us, turned into a repulsive
 facade and bewilderingly powerful buzzword.
 
 <Align.Left>
-<Image src="2014/10/eames-plastic-armchair.png" caption="The [Eames molded
+<Image
+  alt="A photo of the Eames molded plastic armchair"
+  src="2014/10/eames-plastic-armchair.png"
+  caption="The [Eames molded
   plastic armchair](http://www.vitra.com/en-it/product/eames-plastic-side-chair#)
   is the result of years of refinement, and will last for many years yet as both a
-  functional artifact and a timeless design." />
+  functional artifact and a timeless design."
+/>
 </Align.Left>
 
 In the digital realm, “design” seems to have become a catch-all term for a lot
@@ -53,7 +57,7 @@ For those who aren’t yet acquainted[^1], Yo is an app that does one thing: it
 sends a one-word message—“Yo”—to your contact(s) of choice. It’s novel, silly,
 and immediately disposable.
 
-And it managed to raise $1,000,000. A million dollars.
+And it managed to raise \$1,000,000. A million dollars.
 
 One million US dollars is about 60% of what the average United Kingdom citizen
 will earn in their 87-year[^2] lifetime. Of course, the first 21 years are spent
@@ -130,8 +134,6 @@ will be picking up the leftovers. Meanwhile, the designer looks up from her
 desk, peers through the window, and returns to the problems she so dearly loves
 to solve.
 
-[^1]: You lucky git. [^2]: Based on [2010 mortality
-
-rates](http://www.ons.gov.uk/ons/rel/mortality-ageing/mortality-in-england-and-wales/average-life-span/rpt-average-life-span.html)
-and [The Human Footprint](http://www.snagfilms.com/films/title/human_footprint).
+[^1]: You lucky git.
+[^2]: Based on [2010 mortality rates](http://www.ons.gov.uk/ons/rel/mortality-ageing/mortality-in-england-and-wales/average-life-span/rpt-average-life-span.html) and [The Human Footprint](http://www.snagfilms.com/films/title/human_footprint).
 [^3]: “Whoever said that pleasure wasn’t useful?”—Charles Eames
