@@ -2,7 +2,7 @@ sudo: false
 
 language: node_js
 node_js:
-  - "9.4.0"
+  - "10.8.0"
 
 cache:
   yarn: true
