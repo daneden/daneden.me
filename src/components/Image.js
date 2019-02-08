@@ -2,7 +2,7 @@ import React from "react"
 import Imgix from "react-imgix"
 import styled from "@emotion/styled"
 import mdToHTML from "utils/mdToHTML"
-import { Atoms, DesignSystemProvider } from "designSystem/designSystem"
+import { Atoms } from "designSystem/designSystem"
 import Sans from "designSystem/Sans"
 
 const Figure = styled("figure")`
@@ -42,11 +42,7 @@ function Image({ alt, className, caption, margin, src }) {
   return (
     <Figure margin={margin} className={className}>
       {img}
-      {caption && (
-        <DesignSystemProvider>
-          <Caption>{mdToHTML(caption)}</Caption>
-        </DesignSystemProvider>
-      )}
+      {caption && <Caption>{mdToHTML(caption)}</Caption>}
     </Figure>
   )
 }
