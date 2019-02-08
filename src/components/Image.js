@@ -19,44 +19,40 @@ const Caption = styled(Sans)`
   color: ${Atoms.colors.meta};
 `
 
-class Image extends React.Component {
-  static defaultProps = {
-    margin: "bottom",
-  }
+function Image({ alt, className, caption, margin, src }) {
+  const url =
+    process.env.NODE_ENV && process.env.NODE_ENV.toUpperCase() === "DEVELOPMENT"
+      ? `${process.env.PUBLIC_URL || ""}/uploads/${src}`
+      : `https://daneden.imgix.net/${src}`
 
-  render() {
-    const { alt, className, caption, margin, src } = this.props
-    const url =
-      process.env.NODE_ENV &&
-      process.env.NODE_ENV.toUpperCase() === "DEVELOPMENT"
-        ? `${process.env.PUBLIC_URL || ""}/uploads/${src}`
-        : `https://daneden.imgix.net/${src}`
+  const img = (
+    <Imgix
+      aggressiveLoad={true}
+      defaultWidth={600}
+      fit="max"
+      imgProps={{ alt }}
+      imgixParams={{ fm: "pjpg" }}
+      src={url}
+      htmlAttributes={{
+        alt,
+      }}
+    />
+  )
 
-    const img = (
-      <Imgix
-        aggressiveLoad={true}
-        defaultWidth={600}
-        fit="max"
-        imgProps={{ alt }}
-        imgixParams={{ fm: "pjpg" }}
-        src={url}
-        htmlAttributes={{
-          alt,
-        }}
-      />
-    )
+  return (
+    <Figure margin={margin} className={className}>
+      {img}
+      {caption && (
+        <DesignSystemProvider>
+          <Caption>{mdToHTML(caption)}</Caption>
+        </DesignSystemProvider>
+      )}
+    </Figure>
+  )
+}
 
-    return (
-      <Figure margin={margin} className={className}>
-        {img}
-        {caption && (
-          <DesignSystemProvider>
-            <Caption>{mdToHTML(caption)}</Caption>
-          </DesignSystemProvider>
-        )}
-      </Figure>
-    )
-  }
+Image.defaultProps = {
+  margin: "bottom",
 }
 
 export default Image
