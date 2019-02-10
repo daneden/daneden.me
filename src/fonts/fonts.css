@@ -1,5 +1,5 @@
 @font-face {
-  font-display: fallback;
+  font-display: swap;
   font-family: "Founders Grotesk Mono Web";
   font-style: normal;
   font-weight: normal;
@@ -10,7 +10,7 @@
 }
 
 @font-face {
-  font-display: fallback;
+  font-display: swap;
   font-family: "Tiempos Text Web";
   font-style: italic;
   font-weight: normal;
@@ -20,7 +20,7 @@
 }
 
 @font-face {
-  font-display: fallback;
+  font-display: swap;
   font-family: "Tiempos Text Web";
   font-style: normal;
   font-weight: normal;
