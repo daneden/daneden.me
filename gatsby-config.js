@@ -40,6 +40,15 @@ module.exports = {
       },
     },
     {
+      resolve: "gatsby-plugin-web-font-loader",
+      options: {
+        custom: {
+          families: ["Tiempos Text Web", "Founders Grotesk Mono Web"],
+          urls: ["./fonts/fonts.css"],
+        },
+      },
+    },
+    {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: "UA-122108242-1",
