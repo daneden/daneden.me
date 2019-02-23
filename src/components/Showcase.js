@@ -22,20 +22,20 @@ const StyledShowcase = styled("div")`
     z-index: 4;
   }
 
-  & > figure:nth-child(1) {
+  & > figure:nth-of-type(1) {
     grid-area: 1 / 1 / 3 / 3;
   }
 
-  & > figure:nth-child(2) {
+  & > figure:nth-of-type(2) {
     grid-area: 2 / 2 / 4 / 4;
     z-index: 2;
   }
 
-  & > figure:nth-child(3) {
+  & > figure:nth-of-type(3) {
     grid-area: 3 / 3 / 5 / 5;
   }
 
-  & > figure:nth-child(4) {
+  & > figure:nth-of-type(4) {
     grid-area: 1 / 1 / 5 / 5;
     pointer-events: none;
     margin: -12% 0;

@@ -17,9 +17,6 @@ html {
 }
 
 .wf-loading:root {
-  --serif: var(--serif-fallback);
-  --sans-serif: var(--sans-serif-fallback);
-
   font-family: --serif-fallback;
   font-size: 112.5%;
   line-height: 1.55;
@@ -28,11 +25,5 @@ html {
 @media (min-width: 1200px) {
   html {
     font-size: 125%;
-  }
-}
-
-@media (max-width: 30rem) {
-  html {
-    font-size: 87.5%;
   }
 }
