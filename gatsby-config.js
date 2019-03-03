@@ -44,7 +44,7 @@ module.exports = {
       options: {
         custom: {
           families: ["Tiempos Text Web", "Founders Grotesk Mono Web"],
-          urls: ["./fonts/fonts.css"],
+          urls: ["/fonts/fonts.css"],
         },
       },
     },
