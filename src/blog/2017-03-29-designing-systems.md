@@ -175,9 +175,7 @@ Unlike CSS, expressing styles through objects like this means that you’re
 decomposing and recomposing/replacing styles rather than overriding them with
 crude CSS selectors or specificity hacks.
 
-And of course, we can ensure deviation from standards is prohibited through
-
-"types": "",
+And of course, we can ensure deviation from standards is prohibited through "types":
 
 ```js
 type Style = {

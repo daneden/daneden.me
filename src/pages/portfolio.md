@@ -92,7 +92,7 @@ site](https://gif.daneden.me).
 
 [Toast](http://daneden.github.io/Toast) is a Sass/CSS grid system,
 designed to be highly customisable, extremely verbose, and simple-to-use out of
-the box. It uses no floats, no \`first\` or \`last\` classes, and allows nesting.
+the box. It uses no floats, no `first` or `last` classes, and allows nesting.
 [Visit the site](http://daneden.github.io/Toast)
 
 ### Digital Ruin

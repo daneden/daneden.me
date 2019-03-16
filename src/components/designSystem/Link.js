@@ -1,6 +1,6 @@
-/** @jsx jsx */
+import React from "react"
 import { Link as GatsbyLink } from "gatsby"
-import { css, jsx } from "@emotion/core"
+import { css } from "@emotion/core"
 
 import { Atoms } from "./designSystem"
 

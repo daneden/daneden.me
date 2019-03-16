@@ -1,14 +1,33 @@
-export { default as Align } from "./Align"
-export { default as Atoms } from "./atoms"
-export { default as Blockquote } from "./Blockquote"
-export { default as DesignSystemProvider } from "./DesignSystemProvider"
-export { default as H1 } from "./H1"
-export { default as H2 } from "./H2"
-export { default as H3 } from "./H3"
-export { default as Hr } from "./Hr"
-export { default as Link } from "./Link"
-export { default as P } from "./P"
-export { default as PlainLink } from "./PlainLink"
-export { default as PlainList } from "./PlainList"
-export { default as Sans } from "./Sans"
-export { default as Table } from "./Table"
+import Align from "./Align"
+import Atoms from "./atoms"
+import Blockquote from "./Blockquote"
+import Code from "./Code"
+import H1 from "./H1"
+import H2 from "./H2"
+import H3 from "./H3"
+import Hr from "./Hr"
+import Link from "./Link"
+import P from "./P"
+import PlainLink from "./PlainLink"
+import PlainList from "./PlainList"
+import Pre from "./Pre"
+import Sans from "./Sans"
+import Table from "./Table"
+
+export {
+  Align,
+  Atoms,
+  Blockquote,
+  Code,
+  H1,
+  H2,
+  H3,
+  Hr,
+  Link,
+  P,
+  PlainLink,
+  PlainList,
+  Pre,
+  Sans,
+  Table,
+}
