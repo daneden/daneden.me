@@ -2,7 +2,7 @@ const BASELINE = 1.5
 
 const scales = {
   xsmall: 0.5,
-  small: 0.875,
+  small: 0.75,
   medium: 1,
   large: 1.5,
   xlarge: 3,
@@ -30,7 +30,7 @@ export default {
     wash: "#fefefe",
     site: "#e33d26",
     text: "#000207",
-    meta: "#747474",
+    meta: "#44464B",
     complementary: "#005bc2",
     additive: "rgba(0,0,0,.05)",
   },

@@ -16,6 +16,7 @@ const Figure = styled("figure")`
 const Caption = styled("p")`
   font-size: ${Atoms.font.size.small};
   color: ${Atoms.colors.meta};
+  letter-spacing: 0.025em;
 `
 
 function Image({ alt, className, caption, margin, src }) {

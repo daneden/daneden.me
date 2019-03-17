@@ -57,7 +57,7 @@ For those who aren’t yet acquainted[^1], Yo is an app that does one thing: it
 sends a one-word message—“Yo”—to your contact(s) of choice. It’s novel, silly,
 and immediately disposable.
 
-And it managed to raise \$1,000,000. A million dollars.
+And it managed to raise $1,000,000. A million dollars.
 
 One million US dollars is about 60% of what the average United Kingdom citizen
 will earn in their 87-year[^2] lifetime. Of course, the first 21 years are spent
