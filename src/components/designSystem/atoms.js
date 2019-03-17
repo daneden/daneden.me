@@ -5,7 +5,7 @@ const scales = {
   small: 0.875,
   medium: 1,
   large: 1.5,
-  xlarge: 2,
+  xlarge: 3,
 }
 
 const widths = {
@@ -15,6 +15,7 @@ const widths = {
 }
 
 widths.page = `calc(${widths.container} + ${scales.medium * 2}rem)`
+widths.content = `calc((100vw - ${widths.page}) / 2)`
 
 export default {
   baseline: BASELINE,
@@ -33,6 +34,7 @@ export default {
   },
   font: {
     family: {
+      display: `"Orelo Variable", "Times New Roman", serif`,
       sans: `"Untitled Sans Web", "Helvetica Neue", -system-font, -apple-system, sans-serif`,
       mono: `"Founders Grotesk Mono Web", "Input Mono", "Source Code Pro", "Monaco", monospace`,
     },

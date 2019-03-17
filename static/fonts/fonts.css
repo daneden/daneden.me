@@ -39,3 +39,9 @@
     url("webfonts/UntitledSansWeb-Bold.woff") format("woff"),
     url("webfonts/UntitledSansWeb-Bold.eot") format("embedded-opentype");
 }
+
+@font-face {
+  font-display: swap;
+  font-family: "Orelo Variable";
+  src: url("webfonts/OreloVariable.ttf") format("truetype-variations");
+}

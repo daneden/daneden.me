@@ -44,6 +44,10 @@ export default function Layout({ children, location, ...props }) {
                   color: Atoms.colors.wash,
                   backgroundColor: Atoms.colors.text,
                 },
+
+                [`@media (max-width: ${Atoms.breakpoints.medium})`]: {
+                  fontSize: "100%",
+                },
               },
             }}
           />
@@ -59,10 +63,8 @@ export default function Layout({ children, location, ...props }) {
               thumbnail={"/uploads/2019/01/og.png"}
             />
             <Header siteTitle={data.site.siteMetadata.title} />
-            <Wrapper>
-              {children}
-              <Footer author={data.site.siteMetadata.authorName} />
-            </Wrapper>
+            <Wrapper>{children}</Wrapper>
+            <Footer author={data.site.siteMetadata.authorName} />
           </React.Fragment>
         </DesignSystemProvider>
       )}

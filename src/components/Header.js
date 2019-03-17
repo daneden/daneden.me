@@ -10,7 +10,7 @@ const StyledHeader = styled("header")`
   display: flex;
   flex-wrap: wrap;
 
-  margin-bottom: ${Atoms.spacing.xlarge};
+  margin-bottom: ${Atoms.spacing.small};
   padding-top: ${Atoms.spacing.xsmall};
 `
 
@@ -19,8 +19,12 @@ const StyledNav = styled("nav")`
 `
 
 const HomeLink = styled(PlainLink)`
-  flex-basis: calc((100vw - ${Atoms.widths.page}) / 2);
+  flex-basis: ${Atoms.widths.content};
   flex-shrink: 1;
+
+  @media (max-width: ${Atoms.breakpoints.medium}) {
+    flex-basis: 50%;
+  }
 `
 
 const links = [
