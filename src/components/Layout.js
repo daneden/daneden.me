@@ -30,6 +30,7 @@ export default function Layout({ children, location, ...props }) {
                 margin: 0,
                 padding: 0,
               },
+
               html: {
                 backgroundColor: Atoms.colors.wash,
                 color: Atoms.colors.text,
