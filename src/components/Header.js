@@ -6,24 +6,21 @@ import PlainList from "designSystem/PlainList"
 import PlainLink from "designSystem/PlainLink"
 
 const StyledHeader = styled("header")`
-  font-family: ${Atoms.font.family.sans};
-  font-size: ${Atoms.font.size.small};
   border-bottom: 1px solid;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  margin-bottom: ${Atoms.spacing.medium};
-  padding-top: ${Atoms.spacing.medium};
+
+  margin-bottom: ${Atoms.spacing.xlarge};
+  padding-top: ${Atoms.spacing.xsmall};
 `
 
 const StyledNav = styled("nav")`
-  li + li {
-    margin-left: ${Atoms.spacing.xsmall};
-  }
+  flex-shrink: 0;
 `
 
 const HomeLink = styled(PlainLink)`
-  margin-right: ${Atoms.spacing.medium};
+  flex-basis: calc((100vw - ${Atoms.widths.page}) / 2);
+  flex-shrink: 1;
 `
 
 const links = [
@@ -46,7 +43,7 @@ const Header = ({ siteTitle }) => (
     <HomeLink to="/">{siteTitle}</HomeLink>
 
     <StyledNav>
-      <PlainList inline={true}>
+      <PlainList>
         {links.map(({ to, label }) => (
           <li key={to}>
             <PlainLink to={to}>{label}</PlainLink>

@@ -25,12 +25,25 @@ export default function Layout({ children, location, ...props }) {
         <DesignSystemProvider>
           <Global
             styles={{
-              body: {
+              "*": {
+                boxSizing: "border-box",
+                margin: 0,
+                padding: 0,
+              },
+              html: {
                 backgroundColor: Atoms.colors.wash,
                 color: Atoms.colors.text,
                 flex: 1,
+                fontFamily: Atoms.font.family.sans,
+                fontSize: "125%",
+                lineHeight: Atoms.baseline,
                 paddingLeft: Atoms.spacing.medium,
                 paddingRight: Atoms.spacing.medium,
+
+                "@media (prefers-color-scheme: dark)": {
+                  color: Atoms.colors.wash,
+                  backgroundColor: Atoms.colors.text,
+                },
               },
             }}
           />
@@ -45,9 +58,9 @@ export default function Layout({ children, location, ...props }) {
               description={data.site.siteMetadata.description}
               thumbnail={"/uploads/2019/01/og.png"}
             />
+            <Header siteTitle={data.site.siteMetadata.title} />
             <Wrapper>
-              <Header siteTitle={data.site.siteMetadata.title} />
-              <main>{children}</main>
+              {children}
               <Footer author={data.site.siteMetadata.authorName} />
             </Wrapper>
           </React.Fragment>
