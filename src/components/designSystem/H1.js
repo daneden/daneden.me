@@ -3,6 +3,10 @@ import { css } from "@emotion/core"
 
 import Atoms from "./atoms"
 
+/* VALUES FOR EACH AXES */
+/* Weight : Min 100 / Max 900 */
+/* Width : Min 30 / Max 130 */
+/* Italic : Min 0 / Max 13 */
 const H1 = ({ weight = 500, width = 30, slant = 0, ...props }) => {
   const style = css`
     font-family: ${Atoms.font.family.display};

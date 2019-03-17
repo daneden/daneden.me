@@ -7,7 +7,7 @@ export default styled("table")`
 
   th {
     font-weight: normal;
-    font-family: ${Atoms.font.family.sans};
+    font-family: ${Atoms.font.family.mono};
   }
 
   th,

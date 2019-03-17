@@ -14,15 +14,17 @@ const widths = {
   container: "34rem",
 }
 
-widths.page = `calc(${widths.container} + ${scales.medium * 2}rem)`
-widths.content = `calc((100vw - ${widths.page}) / 2)`
+widths.page = `calc(${widths.container} + ${BASELINE * scales.medium * 2}rem)`
+
+// Not entirely sure where this stray .25rem comes from, but it’s needed to align things properly
+widths.content = `calc(.25rem + (100vw - ${widths.page}) / 2)`
 
 export default {
   baseline: BASELINE,
   widths,
   breakpoints: {
-    medium: `56rem`,
-    narrow: `30rem`,
+    medium: `64rem`,
+    narrow: `50rem`,
   },
   colors: {
     wash: "#fefefe",

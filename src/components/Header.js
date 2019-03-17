@@ -22,7 +22,7 @@ const HomeLink = styled(PlainLink)`
   flex-basis: ${Atoms.widths.content};
   flex-shrink: 1;
 
-  @media (max-width: ${Atoms.breakpoints.medium}) {
+  @media (max-width: ${Atoms.breakpoints.narrow}) {
     flex-basis: 50%;
   }
 `

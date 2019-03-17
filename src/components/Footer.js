@@ -7,7 +7,7 @@ const StyledFooter = styled("footer")`
   border-top: 1px solid;
   color: ${Atoms.colors.meta};
   font-family: ${Atoms.font.family.sans};
-  margin-top: ${Atoms.spacing.large};
+  margin-top: ${Atoms.spacing.xlarge};
   padding: ${Atoms.spacing.small} 0;
   padding-left: calc(${Atoms.widths.content});
 `
