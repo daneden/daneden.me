@@ -3,9 +3,9 @@ import styled from "@emotion/styled"
 import { Atoms } from "./designSystem"
 
 export default styled("hr")`
-  border: 0;
+  border: 2px solid;
   content: "";
   display: block;
   height: 1px;
-  margin: ${Atoms.spacing.medium} 0;
+  margin: ${Atoms.spacing.large} 0;
 `
