@@ -59,7 +59,7 @@ module.exports = {
 
         gtagConfig: {
           optimize_id: "GTM-MNBLGN7",
-          experiments: [{ id: "ehwnOgtUSgS-HOcHsYkt0g", variant: "0" }],
+          experiments: [{ id: "ehwnOgtUSgS-HOcHsYkt0g", variant: "1" }],
           anonymize_ip: true,
           cookie_expires: 0,
         },
