@@ -30,6 +30,7 @@ export default function Layout({ children, location, ...props }) {
                 margin: 0,
                 padding: 0,
               },
+
               html: {
                 backgroundColor: Atoms.colors.wash,
                 color: Atoms.colors.text,
@@ -48,6 +49,10 @@ export default function Layout({ children, location, ...props }) {
                 [`@media (max-width: ${Atoms.breakpoints.medium})`]: {
                   fontSize: "100%",
                 },
+              },
+
+              "ul, ol": {
+                marginBottom: Atoms.spacing.medium,
               },
             }}
           />
