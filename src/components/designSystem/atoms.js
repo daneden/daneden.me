@@ -1,6 +1,7 @@
 const BASELINE = 1.5
 
 const scales = {
+  xxsmall: 0.125,
   xsmall: 0.5,
   small: 0.75,
   medium: 1,

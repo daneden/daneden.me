@@ -9,6 +9,7 @@ const StyledH1 = styled(H1)`
   margin: 0;
   padding: 0;
   color: ${Atoms.colors.site};
+  font-size: 8.7vw;
 `
 
 export default function FourOhFour() {
@@ -22,7 +23,10 @@ export default function FourOhFour() {
     <div
       style={{
         textAlign: "center",
-        paddingTop: Atoms.spacing.xlarge,
+        width: "100vw",
+        marginLeft: `calc((${Atoms.widths.content} * -1) - ${
+          Atoms.spacing.medium
+        })`,
         marginBottom: Atoms.spacing.large,
       }}
     >

@@ -27,6 +27,7 @@ is.
   alt="A photo of Richard Serra’s installation at the Dia:Beacon"
   src="2016/11/dwn-serra.jpg"
   caption="An installation from Richard Serra in Dia:Beacon."
+  captionPosition="left"
 />
 </Align.Left>
 
