@@ -16,9 +16,9 @@ before_install:
 jobs:
   include:
     - stage: Build
-      install: yarn install --frozen-lockfile
+      install: yarn install
       script: gatsby build
     - stage: Lighthouse
       if: type = pull_request
-      install: yarn install --frozen-lockfile
+      install: yarn install
       script: yarn run lh --perf 90 --pwa 90 --a11y 90 --bp 90 --seo 90 "$(wait-for-netlify-preview)"
