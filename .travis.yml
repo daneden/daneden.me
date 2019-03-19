@@ -21,4 +21,4 @@ jobs:
     - stage: Lighthouse
       if: type = pull_request
       install: yarn install
-      script: echo "$(TRAVIS_REPO_SLUG) $(TRAVIS_PULL_REQUEST_SHA)"
+      script: echo $TRAVIS_REPO_SLUG $TRAVIS_PULL_REQUEST_SHA
