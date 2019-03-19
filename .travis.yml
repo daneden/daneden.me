@@ -21,4 +21,4 @@ jobs:
     - stage: Lighthouse
       if: type = pull_request
       install: yarn install
-      script: echo "$(wait-for-netlify-preview)"
+      script: echo "$(TRAVIS_REPO_SLUG) $(TRAVIS_PULL_REQUEST_SHA)"
