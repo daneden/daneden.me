@@ -13,5 +13,12 @@ before_install:
   - npm install -g gatsby-cli
   - npm install -g yarn
 
-script:
-  - gatsby build
+jobs:
+  include:
+    - stage: Build
+      install: yarn install --frozen-lockfile
+      script: gatsby build
+    - stage: Lighthouse
+      if: type = pull_request
+      install: yarn install --frozen-lockfile
+      script: yarn run lh --perf 80 --pwa 80 --a11y 80 --bp 80 --seo 80 "$(wait-for-netlify-preview)"
