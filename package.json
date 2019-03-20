@@ -43,7 +43,7 @@
     "remark": "10.0.1",
     "remark-react": "5.0.1",
     "slug": "0.9.3",
-    "webpack": "4.28.1"
+    "webpack": "4.29.6"
   },
   "keywords": [
     "gatsby"
