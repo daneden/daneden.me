@@ -8411,7 +8411,7 @@ react-lifecycles-compat@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
 
-react-prop-matrix@^1.0.0:
+react-prop-matrix@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/react-prop-matrix/-/react-prop-matrix-1.0.0.tgz#9bc1b367d690f3a32059645244d9c008c81dede7"
   integrity sha512-0k/745lZGUvlRCSVT/r9zMH8Ro0PrHl5ok5G1ZOL8jFFeHDr2sqRLiLmRg14doPBngjIGYNsa50sNL5PJ4wZ3A==
