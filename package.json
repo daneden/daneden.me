@@ -42,7 +42,7 @@
     "react-katex": "2.0.2",
     "remark": "10.0.1",
     "remark-react": "5.0.1",
-    "slug": "0.9.3"
+    "slug": "0.9.4"
   },
   "keywords": [
     "gatsby"
