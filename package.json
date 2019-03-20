@@ -15,12 +15,12 @@
     ]
   },
   "dependencies": {
-    "@emotion/core": "10.0.6",
-    "@emotion/styled": "10.0.6",
+    "@emotion/core": "10.0.9",
+    "@emotion/styled": "10.0.9",
     "@mdx-js/mdx": "0.20.3",
     "@mdx-js/tag": "0.20.3",
-    "emotion": "10.0.6",
-    "emotion-server": "10.0.6",
+    "emotion": "10.0.9",
+    "emotion-server": "10.0.9",
     "gatsby": "2.0.111",
     "gatsby-link": "2.0.10",
     "gatsby-mdx": "0.4.3",
