@@ -82,7 +82,7 @@ export default function FourOhFour() {
           width={map(position.x, 0, 1, n.width[0], n.width[1])}
           role="presentation"
         >
-          404 Page Not Found{" "}
+          404 Page Not Found
         </StyledH1>
       ))}
     </div>
