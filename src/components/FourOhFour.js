@@ -46,12 +46,12 @@ export default function FourOhFour() {
   // decreasing-and-increasing margins
   const headings = times(5).map((n, i, arr) => {
     const multiplier = map(i, 0, arr.length - 1, -1, 1)
-    const width = ranges.width.map(n => Math.abs(n * multiplier))
     const weight = ranges.weight.map(n => Math.abs(n * multiplier))
+    const width = ranges.width.map(n => Math.abs(n * multiplier))
 
     return {
-      width,
       weight,
+      width,
     }
   })
 
@@ -66,21 +66,21 @@ export default function FourOhFour() {
   return (
     <div
       style={{
-        textAlign: "center",
-        width: "100vw",
+        marginBottom: Atoms.spacing.large,
         marginLeft: `calc((${Atoms.widths.content} * -1) - ${
           Atoms.spacing.medium
         })`,
-        marginBottom: Atoms.spacing.large,
+        textAlign: "center",
+        width: "100vw",
       }}
     >
       {headings.map(n => (
         <StyledH1
           as="span"
-          weight={map(position.y, 0, 1, n.weight[0], n.weight[1])}
-          slant={3}
-          width={map(position.x, 0, 1, n.width[0], n.width[1])}
           role="presentation"
+          slant={3}
+          weight={map(position.y, 0, 1, n.weight[0], n.weight[1])}
+          width={map(position.x, 0, 1, n.width[0], n.width[1])}
         >
           404 Page Not Found
         </StyledH1>
