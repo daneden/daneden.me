@@ -32,7 +32,7 @@ divergent needs.
 
 I've avoided using too many indirect terms in this writing, but it may still be
 helpful to have a permanent reference of the terms used to define this system
-thoery.
+theory.
 
 |          Term | Definition                                                                                                                                                            |
 | ------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
