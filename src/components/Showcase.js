@@ -9,7 +9,7 @@ const StyledShowcase = styled("div")`
   grid-template-columns: repeat(4, auto);
   grid-template-rows: repeat(5, auto);
   max-width: 24rem;
-  margin: ${Atoms.spacing.xlarge} auto ${Atoms.spacing.medium};
+  margin: ${Atoms.spacing.xlarge} auto ${Atoms.spacing.xlarge};
 
   & > figure {
     margin: 0;
