@@ -24,8 +24,8 @@ export default {
   baseline: BASELINE,
   widths,
   breakpoints: {
-    medium: `64rem`,
-    narrow: `50rem`,
+    medium: `64em`,
+    narrow: `50em`,
   },
   colors: {
     wash: "#fefefe",
