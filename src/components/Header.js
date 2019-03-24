@@ -7,23 +7,16 @@ import PlainLink from "designSystem/PlainLink"
 
 const StyledHeader = styled("header")`
   border-bottom: 1px solid;
-  display: flex;
+  display: grid;
+  grid-template-columns: calc(${Atoms.widths.content} - ${Atoms.spacing.medium}) 1fr;
+  grid-gap: ${Atoms.spacing.medium};
   flex-wrap: wrap;
 
   margin-bottom: ${Atoms.spacing.small};
   padding-top: ${Atoms.spacing.xsmall};
-`
-
-const StyledNav = styled("nav")`
-  flex-shrink: 0;
-`
-
-const HomeLink = styled(PlainLink)`
-  flex-basis: ${Atoms.widths.content};
-  flex-shrink: 1;
 
   @media (max-width: ${Atoms.breakpoints.narrow}) {
-    flex-basis: 50%;
+    grid-template-columns: 1fr 1fr;
   }
 `
 
@@ -44,9 +37,9 @@ const links = [
 
 const Header = ({ siteTitle }) => (
   <StyledHeader>
-    <HomeLink to="/">{siteTitle}</HomeLink>
+    <PlainLink to="/">{siteTitle}</PlainLink>
 
-    <StyledNav>
+    <nav>
       <PlainList>
         {links.map(({ to, label }) => (
           <li key={to}>
@@ -54,7 +47,7 @@ const Header = ({ siteTitle }) => (
           </li>
         ))}
       </PlainList>
-    </StyledNav>
+    </nav>
   </StyledHeader>
 )
 
