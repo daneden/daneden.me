@@ -7,9 +7,6 @@ import H1 from "designSystem/H1"
 import map from "utils/map"
 import times from "utils/times"
 
-const wash = Atoms.colors.site
-Atoms.colors.site = Atoms.colors.text
-
 const { useLayoutEffect, useState } = React
 
 const StyledH1 = styled(H1)`
@@ -81,8 +78,14 @@ export default function FourOhFour() {
       <Global
         styles={{
           html: {
-            backgroundColor: wash,
+            backgroundColor: Atoms.colors.site,
             color: Atoms.colors.wash,
+          },
+
+          a: {
+            ":hover": {
+              color: `${Atoms.colors.text} !important`,
+            },
           },
         }}
       />
