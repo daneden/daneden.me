@@ -21,7 +21,7 @@ export default function Book({ author, cover, title, url }) {
         margin="none"
         src={cover}
       />
-      <div>{title}</div>
+      <div style={{ paddingTop: Atoms.spacing.xxsmall }}>{title}</div>
       <Meta>{author}</Meta>
     </BookLink>
   )
