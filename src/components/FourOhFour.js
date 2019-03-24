@@ -1,15 +1,18 @@
 import React from "react"
 import styled from "@emotion/styled"
+import { Global } from "@emotion/core"
 
 import Atoms from "designSystem/atoms"
 import H1 from "designSystem/H1"
 import map from "utils/map"
 import times from "utils/times"
 
+const wash = Atoms.colors.site
+Atoms.colors.site = Atoms.colors.text
+
 const { useLayoutEffect, useState } = React
 
 const StyledH1 = styled(H1)`
-  color: ${Atoms.colors.site};
   font-size: 8vw;
   margin: 0;
   margin-left: -50vw;
@@ -75,6 +78,14 @@ export default function FourOhFour() {
         width: "0",
       }}
     >
+      <Global
+        styles={{
+          html: {
+            backgroundColor: wash,
+            color: Atoms.colors.wash,
+          },
+        }}
+      />
       {headings.map(n => (
         <StyledH1
           as="span"

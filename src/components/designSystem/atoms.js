@@ -32,7 +32,7 @@ export default {
     site: "#e33d26",
     text: "#000207",
     meta: "#44464B",
-    complementary: "#005bc2",
+    complementary: "#058cff",
     additive: "rgba(0,0,0,.05)",
   },
   font: {
