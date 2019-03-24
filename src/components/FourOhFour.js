@@ -9,10 +9,12 @@ import times from "utils/times"
 const { useLayoutEffect, useState } = React
 
 const StyledH1 = styled(H1)`
-  margin: 0;
-  padding: 0;
   color: ${Atoms.colors.site};
   font-size: 8vw;
+  margin: 0;
+  margin-left: -50vw;
+  padding: 0;
+  width: 100vw;
 `
 
 export default function FourOhFour() {
@@ -67,11 +69,10 @@ export default function FourOhFour() {
     <div
       style={{
         marginBottom: Atoms.spacing.large,
-        marginLeft: `calc((${Atoms.widths.content} * -1) - ${
-          Atoms.spacing.medium
-        })`,
+        marginLeft: "auto",
+        marginRight: "auto",
         textAlign: "center",
-        width: "100vw",
+        width: "0",
       }}
     >
       {headings.map(n => (
