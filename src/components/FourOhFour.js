@@ -22,7 +22,7 @@ const StyledH1 = styled(H1)`
 
 export default function FourOhFour() {
   const [position, setPosition] = useState({
-    x: 0.5,
+    x: 1,
     y: 0.5,
   })
 
