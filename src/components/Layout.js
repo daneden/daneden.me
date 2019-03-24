@@ -67,7 +67,10 @@ export default function Layout({ children, location, ...props }) {
               description={data.site.siteMetadata.description}
               thumbnail={"/uploads/2019/01/og.png"}
             />
-            <Header siteTitle={data.site.siteMetadata.title} />
+            <Header
+              siteTitle={data.site.siteMetadata.title}
+              path={location.pathname}
+            />
             <Wrapper>{children}</Wrapper>
             <Footer author={data.site.siteMetadata.authorName} />
           </React.Fragment>

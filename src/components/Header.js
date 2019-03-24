@@ -35,7 +35,7 @@ const links = [
   },
 ]
 
-const Header = ({ siteTitle }) => (
+const Header = ({ path, siteTitle }) => (
   <StyledHeader>
     <PlainLink to="/">{siteTitle}</PlainLink>
 
@@ -43,7 +43,10 @@ const Header = ({ siteTitle }) => (
       <PlainList>
         {links.map(({ to, label }) => (
           <li key={to}>
-            <PlainLink to={to}>{label}</PlainLink>
+            <PlainLink to={to}>
+              {label}
+              {path.includes(to) ? " ☚" : ""}
+            </PlainLink>
           </li>
         ))}
       </PlainList>
