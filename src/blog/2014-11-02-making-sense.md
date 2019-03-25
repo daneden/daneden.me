@@ -88,6 +88,5 @@ myself and others like me to do what we must; continue making things that make
 sense.
 
 [^1]: This is, of course, a quote from Albert Einstein. Einstein was no
-
-designer—at least not by trade—but he was certainly onto something here. [^2]:
-Or, more realistically, in the overlap of Art, Design, and Advertising
+      designer—at least not by trade—but he was certainly onto something here.
+[^2]: Or, more realistically, in the overlap of Art, Design, and Advertising
