@@ -2,7 +2,7 @@ import { H1 } from "designSystem/designSystem"
 
 export const frontmatter = {
   layout: "post",
-  title: "Designing For Systems",
+  title: "Designing And Building For Systems",
   date: "2019-03-29",
 }
 

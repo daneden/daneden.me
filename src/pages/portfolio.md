@@ -7,11 +7,10 @@ import H1 from 'designSystem/H1'
 
 ## Facebook
 
-I’m currently employed by Facebook as a Product Designer. I work on the Facebook
-Design System, on the Business Interfaces team. My team and I create and maintain
-the visual language and web React components that power Facebook’s Ads and Business
-products, serving millions of Facebook Ads customers and thousands of Facebook
-engineers and designers.
+I’m currently working as a Design Lead for Facebook’s Ads and Business Design
+System. My team and I create and maintain the visual language and web React
+components that power Facebook’s Ads and Business products, serving millions of
+Facebook Ads customers and thousands of Facebook engineers and designers.
 
 I previously worked on Facebook's Brand Measurement team, devoting my time to
 creating new ways to measure and report ad effectiveness as it pertains to brand

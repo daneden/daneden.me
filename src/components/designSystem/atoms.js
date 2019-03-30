@@ -38,7 +38,7 @@ export default {
   font: {
     family: {
       display: `"Orelo Variable", "Times New Roman", serif`,
-      sans: `"Untitled Sans Web", "Helvetica Neue", -system-font, -apple-system, sans-serif`,
+      sans: `"Untitled Sans Web", -apple-system, system-ui, BlinkMacSystemFont, sans-serif`,
       mono: `"Founders Grotesk Mono Web", "Input Mono", "Source Code Pro", "Monaco", monospace`,
     },
     size: {

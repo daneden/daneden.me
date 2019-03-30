@@ -6,8 +6,6 @@ import { Atoms } from "./designSystem"
 
 const styles = underline => css`
   color: inherit;
-  text-decoration-skip-ink: auto;
-  text-decoration-skip: ink;
   text-decoration: ${underline ? "underline" : "none"};
 
   &:hover,
