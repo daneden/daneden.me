@@ -82,6 +82,6 @@ module.exports = {
         icon: `static/images/icon.png`,
       },
     },
-    "gatsby-plugin-offline",
+    "gatsby-plugin-remove-serviceworker",
   ],
 }
