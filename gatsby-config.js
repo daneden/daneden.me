@@ -1,4 +1,7 @@
 const path = require("path")
+const md5File = require("md5-file")
+
+const fontFileHash = md5File.sync("./static/fonts/fonts.css")
 
 const SITE_NAME = "Daniel Eden, Designer"
 
@@ -49,7 +52,7 @@ module.exports = {
             "Unititled Sans Web",
             "Founders Grotesk Mono Web",
           ],
-          urls: ["/fonts/fonts.css"],
+          urls: [`/fonts/fonts.css?v=${fontFileHash}`],
         },
       },
     },
