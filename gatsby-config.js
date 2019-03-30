@@ -82,6 +82,11 @@ module.exports = {
         icon: `static/images/icon.png`,
       },
     },
-    "gatsby-plugin-offline",
+    {
+      resolve: "gatsby-plugin-offline",
+      options: {
+        dontCacheBustUrlsMatching: /(\.js$\/)/,
+      },
+    },
   ],
 }
