@@ -25,12 +25,34 @@ export default function Layout({ children, location, ...props }) {
         <DesignSystemProvider>
           <Global
             styles={{
-              body: {
+              "*": {
+                boxSizing: "border-box",
+                margin: 0,
+                padding: 0,
+              },
+
+              html: {
                 backgroundColor: Atoms.colors.wash,
                 color: Atoms.colors.text,
                 flex: 1,
+                fontFamily: Atoms.font.family.sans,
+                fontSize: "125%",
+                lineHeight: Atoms.baseline,
                 paddingLeft: Atoms.spacing.medium,
                 paddingRight: Atoms.spacing.medium,
+
+                "@media (prefers-color-scheme: dark)": {
+                  color: Atoms.colors.wash,
+                  backgroundColor: Atoms.colors.text,
+                },
+
+                [`@media (max-width: ${Atoms.breakpoints.medium})`]: {
+                  fontSize: "100%",
+                },
+              },
+
+              "ul, ol": {
+                marginBottom: Atoms.spacing.medium,
               },
             }}
           />
@@ -45,11 +67,12 @@ export default function Layout({ children, location, ...props }) {
               description={data.site.siteMetadata.description}
               thumbnail={"/uploads/2019/01/og.png"}
             />
-            <Wrapper>
-              <Header siteTitle={data.site.siteMetadata.title} />
-              <main>{children}</main>
-              <Footer author={data.site.siteMetadata.authorName} />
-            </Wrapper>
+            <Header
+              siteTitle={data.site.siteMetadata.title}
+              path={location.pathname}
+            />
+            <Wrapper>{children}</Wrapper>
+            <Footer author={data.site.siteMetadata.authorName} />
           </React.Fragment>
         </DesignSystemProvider>
       )}

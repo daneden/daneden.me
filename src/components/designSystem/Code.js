@@ -7,7 +7,7 @@ export default styled("code")`
   vertical-align: baseline;
   background-color: rgba(0, 0, 0, 0.05);
   border-radius: 4px;
-  font-family: ${Atoms.font.family.sans};
+  font-family: ${Atoms.font.family.mono};
   line-height: 1;
   letter-spacing: -0.025em;
 `

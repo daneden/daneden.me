@@ -1,5 +1,6 @@
 import 'katex/dist/katex.min.css'
 import { InlineMath, BlockMath } from 'react-katex'
+import H1 from 'designSystem/H1'
 
 export const frontmatter = {
 layout: "post",
@@ -7,7 +8,7 @@ title: "Subatomic Design Systems",
 date: "2018-01-05"
 }
 
-# Subatomic Design Systems
+<H1 width={67} weight={700}>Subatomic Design Systems</H1>
 
 The following theory of “Subatomic Design Systems’ is loosely based on an
 amalgam of existing design system theories and programming architecture

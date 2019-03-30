@@ -30,6 +30,7 @@ module.exports = {
         defaultLayouts: {
           default: require.resolve("./src/components/Layout.js"),
         },
+        gatsbyRemarkPlugins: [{ resolve: `gatsby-remark-widows` }],
       },
     },
     {
@@ -43,7 +44,11 @@ module.exports = {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
         custom: {
-          families: ["Tiempos Text Web", "Founders Grotesk Mono Web"],
+          families: [
+            "Orelo Variable",
+            "Unititled Sans Web",
+            "Founders Grotesk Mono Web",
+          ],
           urls: ["/fonts/fonts.css"],
         },
       },
@@ -55,7 +60,7 @@ module.exports = {
 
         gtagConfig: {
           optimize_id: "GTM-MNBLGN7",
-          experiments: [{ id: "ehwnOgtUSgS-HOcHsYkt0g", variant: "0" }],
+          experiments: [{ id: "ehwnOgtUSgS-HOcHsYkt0g", variant: "1" }],
           anonymize_ip: true,
           cookie_expires: 0,
         },

@@ -6,24 +6,18 @@ import PlainList from "designSystem/PlainList"
 import PlainLink from "designSystem/PlainLink"
 
 const StyledHeader = styled("header")`
-  font-family: ${Atoms.font.family.sans};
-  font-size: ${Atoms.font.size.small};
   border-bottom: 1px solid;
-  display: flex;
+  display: grid;
+  grid-template-columns: calc(${Atoms.widths.content} - ${Atoms.spacing.medium}) 1fr;
+  grid-gap: ${Atoms.spacing.medium};
   flex-wrap: wrap;
-  justify-content: space-between;
-  margin-bottom: ${Atoms.spacing.medium};
-  padding-top: ${Atoms.spacing.medium};
-`
 
-const StyledNav = styled("nav")`
-  li + li {
-    margin-left: ${Atoms.spacing.xsmall};
+  margin-bottom: ${Atoms.spacing.small};
+  padding-top: ${Atoms.spacing.xsmall};
+
+  @media (max-width: ${Atoms.breakpoints.narrow}) {
+    grid-template-columns: 1fr 1fr;
   }
-`
-
-const HomeLink = styled(PlainLink)`
-  margin-right: ${Atoms.spacing.medium};
 `
 
 const links = [
@@ -41,19 +35,22 @@ const links = [
   },
 ]
 
-const Header = ({ siteTitle }) => (
+const Header = ({ path, siteTitle }) => (
   <StyledHeader>
-    <HomeLink to="/">{siteTitle}</HomeLink>
+    <PlainLink to="/">{siteTitle}</PlainLink>
 
-    <StyledNav>
-      <PlainList inline={true}>
+    <nav>
+      <PlainList>
         {links.map(({ to, label }) => (
           <li key={to}>
-            <PlainLink to={to}>{label}</PlainLink>
+            <PlainLink to={to}>
+              {label}
+              {path.includes(to) ? " ☚" : ""}
+            </PlainLink>
           </li>
         ))}
       </PlainList>
-    </StyledNav>
+    </nav>
   </StyledHeader>
 )
 

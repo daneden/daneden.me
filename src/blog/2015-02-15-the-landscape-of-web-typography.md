@@ -166,15 +166,14 @@ Sure, things aren’t great. But we’re well through the worst of it. Happy
 typesetting.
 
 [^1]: I’m not sure how to capitalise Cloud.Typography—seriously, is it all
-
-lowercase? CamelCase? Sentence case? Title Case? I have absolutely no idea so,
-please, if you know, let us all know. [^2]: This has changed! I’m not sure
-exactly when, but Typekit moved the OpenType features outside of the opaque
-“Default” vs. “All characters” selection. Thank you, Typekit! [^3]: That’s my
-birthday, for those who wondered. [^4]: Together with Microsoft, Apple
-developed TrueType, one of the first—and most popular—font formats for digital
-type. [^5]: I remember a particularly interesting and nasty bug in Google
-Chrome related to their implementation of kerning and ligatures. If you made a
-selection with your mouse over a ligature, the selected text would _appear_ to
-actually be text that was several characters or words away from the true
-selection. Digital text is hard to wrangle.
+     lowercase? CamelCase? Sentence case? Title Case? I have absolutely no idea so,
+     please, if you know, let us all know.
+[^2]: This has changed! I’m not sure exactly when, but Typekit moved the OpenType
+      features outside of the opaque “Default” vs. “All characters” selection. Thank you, Typekit!
+[^3]: That’s my birthday, for those who wondered.
+[^4]: Together with Microsoft, Apple developed TrueType, one of the first—and most popular—font
+      formats for digital type.
+[^5]: I remember a particularly interesting and nasty bug in Google Chrome related to their
+      implementation of kerning and ligatures. If you made a selection with your mouse over a
+      ligature, the selected text would _appear_ to actually be text that was several characters
+      or words away from the true selection. Digital text is hard to wrangle.
