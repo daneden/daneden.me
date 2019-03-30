@@ -54,7 +54,7 @@ before deciding to change it.
 
 Once you’ve started, this actually becomes the more difficult question. Designing
 for systems can be a bit like pulling a rope out of water: you’re not sure how
-long the rope it, or what’s at the end of it. Before you know it, you may end
+long the rope is, or what’s at the end of it. Before you know it, you may end
 up scoping a problem for so long that the original constraints or requirements
 have shifted in your absence.
 
