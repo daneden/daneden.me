@@ -6,7 +6,7 @@
 const fs = require("fs-extra")
 const path = require("path")
 const resolvePath = path.resolve
-const slugify = require("slug")
+const slugFromPath = require("./src/utils/slugFromPath.module")
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
 const componentWithMDXScope = require("gatsby-mdx/component-with-mdx-scope")
@@ -41,13 +41,8 @@ exports.createPages = ({ graphql, actions }) => {
         result.data.allMdx.edges.forEach(({ node }) => {
           const filename = node.parent.name
 
-          // get the date and title from the file name
-          const [, date, title] = filename.match(
-            /^([\d]{4}-[\d]{2}-[\d]{2})-{1}(.+)$/
-          )
-
           // create a new slug concatenating everything
-          const slug = `/${slugify(date, "/")}/${title}/`
+          const slug = slugFromPath(filename)
 
           createPage({
             path: slug,
