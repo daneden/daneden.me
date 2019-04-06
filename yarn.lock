@@ -11786,9 +11786,9 @@ vm-browserify@0.0.4:
   dependencies:
     indexof "0.0.1"
 
-"wait-for-netlify-preview@git+https://github.com/daneden/wait-for-netlify-preview.git":
+"wait-for-netlify-preview@git+https://github.com/Developmint/wait-for-netlify-preview.git":
   version "1.2.0"
-  resolved "git+https://github.com/daneden/wait-for-netlify-preview.git#dd797f5cf5b69ffbead69ac3e0d31cc5790c5361"
+  resolved "git+https://github.com/Developmint/wait-for-netlify-preview.git#7b54326b526f0a3f508cf15c9a446f1f151b7eaa"
   dependencies:
     "@octokit/rest" "^16.15.0"
     consola "^2.4.1"
