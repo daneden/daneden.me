@@ -2,7 +2,7 @@ import React from "react"
 import Imgix from "react-imgix"
 import styled from "@emotion/styled"
 import mdToHTML from "utils/mdToHTML"
-import { Atoms } from "designSystem/designSystem"
+import { Align, Atoms } from "designSystem/designSystem"
 
 const Figure = styled("figure")`
   display: flex;
@@ -19,10 +19,7 @@ const Figure = styled("figure")`
     display: block;
     max-width: 100%;
     width: 100%;
-    flex-basis: 100%;
-    flex-grow: 1;
-    flex-shrink: 1;
-    height: auto;
+    flex: 0 0 auto;
     order: 2;
   }
 
@@ -47,7 +44,47 @@ const Caption = styled("span")`
   letter-spacing: 0.025em;
 `
 
-function Image({ alt, className, caption, captionPosition, margin, src }) {
+function Image({
+  align,
+  alt,
+  className,
+  caption,
+  captionPosition,
+  margin,
+  src,
+}) {
+  let Wrapper
+  let sizes
+
+  switch (align) {
+    case "left":
+      Wrapper = Align.Left
+      break
+    case "right":
+      Wrapper = Align.Right
+      break
+    default:
+      Wrapper = React.Fragment
+  }
+
+  switch (align) {
+    case "left":
+    case "right":
+      sizes = `
+        (min-width: ${Atoms.breakpoints.medium}) calc(${
+        Atoms.widths.container
+      } * .5),
+        (min-width: ${Atoms.breakpoints.narrow}) calc(${
+        Atoms.widths.container
+      } * .4),
+        100vw`
+      break
+    default:
+      sizes = `(min-width: ${Atoms.breakpoints.narrow}) ${
+        Atoms.widths.container
+      }, 100vw`
+  }
+
   const url =
     process.env.NODE_ENV && process.env.NODE_ENV.toUpperCase() === "DEVELOPMENT"
       ? `${process.env.PUBLIC_URL || ""}/uploads/${src}`
@@ -55,27 +92,25 @@ function Image({ alt, className, caption, captionPosition, margin, src }) {
 
   const img = (
     <Imgix
-      aggressiveLoad={true}
-      defaultWidth={600}
-      fit="max"
-      imgProps={{ alt }}
-      imgixParams={{ fm: "pjpg" }}
       src={url}
       htmlAttributes={{
         alt,
       }}
+      sizes={sizes}
     />
   )
 
   return (
-    <Figure
-      margin={margin}
-      captionPosition={captionPosition}
-      className={className}
-    >
-      {img}
-      {caption && <Caption>{mdToHTML(caption)}</Caption>}
-    </Figure>
+    <Wrapper>
+      <Figure
+        margin={margin}
+        captionPosition={captionPosition}
+        className={className}
+      >
+        {img}
+        {caption && <Caption>{mdToHTML(caption)}</Caption>}
+      </Figure>
+    </Wrapper>
   )
 }
 
