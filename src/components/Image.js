@@ -19,10 +19,7 @@ const Figure = styled("figure")`
     display: block;
     max-width: 100%;
     width: 100%;
-    flex-basis: 100%;
-    flex-grow: 1;
-    flex-shrink: 1;
-    height: auto;
+    flex: 0 0 auto;
     order: 2;
   }
 
