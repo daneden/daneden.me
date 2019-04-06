@@ -1,5 +1,10 @@
 {
-  "extends": [
-    "config:base"
+  "extends": ["config:base"],
+  "packageRules": [
+    {
+      "packageNames": ["gatsby"],
+      "groupName": "gatsby monorepo",
+      "schedule": ["weekly"]
+    }
   ]
 }
