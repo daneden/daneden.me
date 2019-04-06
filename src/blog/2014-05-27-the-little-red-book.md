@@ -1,4 +1,3 @@
-import Align from 'components/designSystem/Align'
 import Image from 'components/Image'
 
 export const frontmatter = {
@@ -18,9 +17,7 @@ design know-how. It was certainly one of my most-read books. Whenever I’d hit 
 creative block, it’d be the little red book that came off the shelf to get the
 juices flowing again.
 
-<Align.Left>
-<Image alt="The cover of the book “The Vignelli Canon”" src="2014/05/vignelli-canon.jpg" />
-</Align.Left>
+<Image align="left" alt="The cover of the book “The Vignelli Canon”" src="2014/05/vignelli-canon.jpg" />
 
 I was well aware of Massimo Vignelli’s work before I bought the book. You’d have
 to live in a cave not to be; he developed the previous American Airlines

@@ -1,4 +1,3 @@
-import Align from 'components/designSystem/Align'
 import Image from 'components/Image'
 import Codepen from 'react-codepen-embed'
 
@@ -22,14 +21,13 @@ natural creativity and talent. I can’t draw; I try to stay away from paint;
 sculpting is one of those things that _sounds_ more fun to me than it actually
 is.
 
-<Align.Left>
 <Image
+  align="left"
   alt="A photo of Richard Serra’s installation at the Dia:Beacon"
   src="2016/11/dwn-serra.jpg"
   caption="An installation from Richard Serra in Dia:Beacon."
   captionPosition="left"
 />
-</Align.Left>
 
 I have, however, become deeply interested in generative art. How numbers can be
 governed to create visually interesting works, with seemingly complex but

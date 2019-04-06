@@ -2,15 +2,15 @@ import Atoms from "./atoms"
 import styled from "@emotion/styled"
 
 const AlignedContainer = styled("div")`
-  width: 50%;
+  width: 100%;
   z-index: 1;
 
-  @media (max-width: ${Atoms.breakpoints.medium}) {
+  @media (min-width: ${Atoms.breakpoints.narrow}) {
     width: 40%;
   }
 
-  @media (max-width: ${Atoms.breakpoints.narrow}) {
-    width: 100%;
+  @media (min-width: ${Atoms.breakpoints.medium}) {
+    width: 50%;
   }
 `
 
