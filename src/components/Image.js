@@ -1,3 +1,4 @@
+/* @flow */
 import React from "react"
 import Imgix from "react-imgix"
 import styled from "@emotion/styled"
@@ -12,8 +13,7 @@ const Figure = styled("figure")`
   align-items: ${props =>
     props.captionPosition === "left" ? "start" : "initial"};
   
-  margin-bottom: ${props =>
-    props.margin === "bottom" ? Atoms.spacing.medium : 0};
+  margin-bottom: ${props => (props.marginBottom ? Atoms.spacing.medium : 0)};
 
   img {
     display: block;
@@ -44,15 +44,25 @@ const Caption = styled("span")`
   letter-spacing: 0.025em;
 `
 
+type Props = {
+  align?: "left" | "right",
+  alt?: string,
+  className?: string,
+  caption?: string,
+  captionPosition: "left" | "bottom",
+  marginBottom: boolean,
+  src: string,
+}
+
 function Image({
   align,
   alt,
   className,
   caption,
-  captionPosition,
-  margin,
+  captionPosition = "bottom",
+  marginBottom = true,
   src,
-}) {
+}: Props) {
   let Wrapper
   let sizes
 
@@ -103,7 +113,7 @@ function Image({
   return (
     <Wrapper>
       <Figure
-        margin={margin}
+        marginBottom={marginBottom}
         captionPosition={captionPosition}
         className={className}
       >
@@ -114,8 +124,11 @@ function Image({
   )
 }
 
+// TODO: See if there’s a way to use Object destructuring default values instead of defaultProps
+// facebook/flow #5752
 Image.defaultProps = {
-  margin: "bottom",
+  captionPosition: "bottom",
+  marginBottom: true,
 }
 
 export default Image

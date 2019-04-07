@@ -1,3 +1,4 @@
+// @flow
 import React from "react"
 import styled from "@emotion/styled"
 
@@ -13,7 +14,11 @@ const StyledFooter = styled("footer")`
   padding-top: ${Atoms.spacing.small};
 `
 
-export default function Footer({ author }) {
+type Props = {|
+  author: string,
+|}
+
+export default function Footer({ author }: Props) {
   return (
     <StyledFooter>
       Content &copy; {new Date().getUTCFullYear()} {author}, unless otherwise

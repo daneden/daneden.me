@@ -1,0 +1,3 @@
+[options]
+module.name_mapper='^designSystem\(.*\)$' -> '<PROJECT_ROOT>/src/components/designSystem/\1'
+module.name_mapper='^utils\(.*\)$' -> '<PROJECT_ROOT>/src/utils/\1'

@@ -17,6 +17,7 @@ module.exports = {
   },
   polyfill: false,
   plugins: [
+    "gatsby-plugin-flow",
     "gatsby-plugin-emotion",
     "gatsby-plugin-postcss",
     "gatsby-plugin-react-helmet",
