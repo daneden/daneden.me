@@ -1,3 +1,5 @@
+import times from "utils/times"
+
 const BASELINE = 1.5
 
 const scales = {
@@ -7,6 +9,32 @@ const scales = {
   medium: 1,
   large: 1.5,
   xlarge: 3,
+}
+
+const rawColors = {
+  black: "#000207",
+  blackAlphas: times(10).map(i => `rgba(0, 2, 7, ${i * 0.1})`),
+  blue: "#058cff",
+  red: "#e33d26",
+  white: "#fefefe",
+  whiteAlphas: times(10).map(i => `rgba(254, 254, 254, ${i * 0.1})`),
+}
+
+const colors = {
+  wash: rawColors.white,
+  site: rawColors.red,
+  text: rawColors.black,
+  meta: rawColors.blackAlphas[8],
+  complementary: rawColors.blue,
+}
+
+if (
+  typeof window !== "undefined" &&
+  window.matchMedia?.("(prefers-color-scheme: dark)").matches
+) {
+  colors.text = rawColors.white
+  colors.wash = rawColors.blackAlphas[9]
+  colors.meta = rawColors.whiteAlphas[7]
 }
 
 const widths = {
@@ -27,14 +55,7 @@ export default {
     medium: `64em`,
     narrow: `50em`,
   },
-  colors: {
-    wash: "#fefefe",
-    site: "#e33d26",
-    text: "#000207",
-    meta: "#44464B",
-    complementary: "#058cff",
-    additive: "rgba(0,0,0,.05)",
-  },
+  colors,
   font: {
     family: {
       display: `"Orelo Variable", "Times New Roman", serif`,
