@@ -95,6 +95,7 @@ function Image({
       src={url}
       htmlAttributes={{
         alt,
+        loading: "lazy",
       }}
       sizes={sizes}
     />
