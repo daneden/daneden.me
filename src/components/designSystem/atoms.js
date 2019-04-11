@@ -28,13 +28,24 @@ const colors = {
   complementary: rawColors.blue,
 }
 
-if (
-  typeof window !== "undefined" &&
-  window.matchMedia?.("(prefers-color-scheme: dark)").matches
-) {
-  colors.text = rawColors.white
-  colors.wash = rawColors.blackAlphas[9]
-  colors.meta = rawColors.whiteAlphas[7]
+const colorSchemeMQ =
+  typeof window !== "undefined"
+    ? window.matchMedia?.("(prefers-color-scheme: dark")
+    : null
+
+if (colorSchemeMQ !== null) {
+  colorSchemeMQ.addListener(switchColorScheme)
+
+  const switchColorScheme = mediaQuery => {
+    console.log(mediaQuery.matches)
+    ;(colors.wash = mediaQuery.matches ? rawColors.black : rawColors.white),
+      (colors.text = mediaQuery.matches ? rawColors.white : rawColors.black),
+      (colors.meta = mediaQuery.matches
+        ? rawColors.whiteAlphas[7]
+        : rawColors.blackAlphas[8])
+  }
+
+  switchColorScheme(colorSchemeMQ)
 }
 
 const widths = {
@@ -49,6 +60,7 @@ widths.page = `calc(${widths.container} + ${BASELINE * scales.medium * 2}rem)`
 widths.content = `calc(.25rem + (100vw - ${widths.page}) / 2)`
 
 export default {
+  colorSchemeMQ,
   baseline: BASELINE,
   widths,
   breakpoints: {

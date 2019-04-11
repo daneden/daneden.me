@@ -41,11 +41,6 @@ export default function Layout({ children, location, ...props }) {
                 paddingLeft: Atoms.spacing.medium,
                 paddingRight: Atoms.spacing.medium,
 
-                "@media (prefers-color-scheme: dark)": {
-                  color: Atoms.colors.wash,
-                  backgroundColor: Atoms.colors.text,
-                },
-
                 [`@media (max-width: ${Atoms.breakpoints.medium})`]: {
                   fontSize: "100%",
                 },
