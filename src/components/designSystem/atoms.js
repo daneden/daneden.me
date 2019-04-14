@@ -28,26 +28,6 @@ const colors = {
   complementary: rawColors.blue,
 }
 
-const colorSchemeMQ =
-  typeof window !== "undefined"
-    ? window.matchMedia?.("(prefers-color-scheme: dark")
-    : null
-
-if (colorSchemeMQ !== null) {
-  colorSchemeMQ.addListener(switchColorScheme)
-
-  const switchColorScheme = mediaQuery => {
-    console.log(mediaQuery.matches)
-    ;(colors.wash = mediaQuery.matches ? rawColors.black : rawColors.white),
-      (colors.text = mediaQuery.matches ? rawColors.white : rawColors.black),
-      (colors.meta = mediaQuery.matches
-        ? rawColors.whiteAlphas[7]
-        : rawColors.blackAlphas[8])
-  }
-
-  switchColorScheme(colorSchemeMQ)
-}
-
 const widths = {
   auto: "auto",
   fill: "100%",
@@ -59,8 +39,7 @@ widths.page = `calc(${widths.container} + ${BASELINE * scales.medium * 2}rem)`
 // Not entirely sure where this stray .25rem comes from, but it’s needed to align things properly
 widths.content = `calc(.25rem + (100vw - ${widths.page}) / 2)`
 
-export default {
-  colorSchemeMQ,
+const atoms = {
   baseline: BASELINE,
   widths,
   breakpoints: {
@@ -92,3 +71,29 @@ export default {
     }))
   ),
 }
+
+const colorSchemeMQ =
+  typeof window !== "undefined"
+    ? window.matchMedia?.("(prefers-color-scheme: dark)")
+    : null
+
+const switchColorScheme = mediaQuery => {
+  ;(atoms.colors.wash = mediaQuery.matches
+    ? rawColors.blackAlphas[8]
+    : rawColors.white),
+    (atoms.colors.text = mediaQuery.matches
+      ? rawColors.white
+      : rawColors.black),
+    (atoms.colors.meta = mediaQuery.matches
+      ? rawColors.whiteAlphas[7]
+      : rawColors.blackAlphas[8])
+}
+
+if (colorSchemeMQ !== null) {
+  colorSchemeMQ.addListener(mq => switchColorScheme(mq, atoms))
+  console.log(colorSchemeMQ)
+
+  switchColorScheme(colorSchemeMQ, atoms)
+}
+
+export default atoms
