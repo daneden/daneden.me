@@ -67,7 +67,7 @@ const atoms = {
     {},
     ...Object.keys(scales).map(n => ({
       // e.g. small: '(BASELINE * 0.875)rem'
-      [n]: `${BASELINE * scales[n]}rem`,
+      [n]: `calc(${BASELINE}rem * ${scales[n]})`,
     }))
   ),
 }
@@ -90,10 +90,8 @@ const switchColorScheme = mediaQuery => {
 }
 
 if (colorSchemeMQ !== null) {
-  colorSchemeMQ.addListener(mq => switchColorScheme(mq, atoms))
-  console.log(colorSchemeMQ)
-
-  switchColorScheme(colorSchemeMQ, atoms)
+  colorSchemeMQ.addListener(mq => switchColorScheme(mq))
+  switchColorScheme(colorSchemeMQ)
 }
 
 export default atoms
