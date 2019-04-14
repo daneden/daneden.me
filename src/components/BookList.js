@@ -115,7 +115,8 @@ const list = books
   .sort((a, b) => strippedTitle(a.title).localeCompare(strippedTitle(b.title)))
 
 const Library = styled("div")`
-  align-items: baseline;
+  align-content: start;
+  place-items: start;
   display: grid;
   grid-gap: ${Atoms.spacing.medium};
   grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));

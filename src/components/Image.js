@@ -17,7 +17,6 @@ const Figure = styled("figure")`
 
   img {
     display: block;
-    max-width: 100%;
     width: 100%;
     flex: 0 0 auto;
     order: 2;
