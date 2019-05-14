@@ -10,6 +10,7 @@ const SiteMetadataQuery = ({ render }) => (
             title
             authorName
             description
+            siteUrl
           }
         }
       }

@@ -2,7 +2,6 @@ import React from "react"
 import Helmet from "react-helmet"
 import { Global } from "@emotion/core"
 
-import svgmask from "../../static/images/svgmask.svg"
 import favicon from "../../static/images/favicon.png"
 
 import { Atoms } from "designSystem/designSystem"
@@ -59,13 +58,14 @@ export default function Layout({ children, location, ...props }) {
           <React.Fragment>
             <Helmet>
               <link rel="icon" href={favicon} />
-              <link rel="mask-icon" href={svgmask} color={Atoms.colors.text} />
             </Helmet>
             <Metatags
               defaultTitle={data.site.siteMetadata.title}
               title={title !== null ? title : data.site.siteMetadata.title}
               description={data.site.siteMetadata.description}
-              thumbnail={"/uploads/2019/01/og.png"}
+              thumbnail={`${
+                data.site.siteMetadata.siteUrl
+              }/uploads/2019/01/og.png`}
             />
             <Header
               siteTitle={data.site.siteMetadata.title}
