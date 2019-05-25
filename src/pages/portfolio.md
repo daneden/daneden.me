@@ -1,5 +1,5 @@
-import Helmet from 'react-helmet'
-import H1 from 'designSystem/H1'
+import Helmet from "react-helmet"
+import H1 from "designSystem/H1"
 
 <Helmet title="Portfolio" />
 
@@ -12,9 +12,16 @@ System. My team and I create and maintain the visual language and web React
 components that power Facebook’s Ads and Business products, serving millions of
 Facebook Ads customers and thousands of Facebook engineers and designers.
 
-I previously worked on Facebook's Brand Measurement team, devoting my time to
-creating new ways to measure and report ad effectiveness as it pertains to brand
-advertising.
+In late 2018–early 2019, our team worked closely with Facebook’s primary
+revenue-impacting product, Ads Manager, to help them [redesign the product](https://www.facebook.com/business/news/improving-ads-manager-and-business-manager)
+in the pursuit of increased advertiser efficiency and customer value. This work
+was the first result of a coordinated effort to create a more cohesive advertising
+and marketing experience across all of Facebook’s business tools. More about this
+work can be found on the [Facebook Business website](https://www.facebook.com/business/m/one-sheeters/DesigningBetterAdvertiserExperiences).
+
+Before working on the Ads and Business Design System I worked as a Product Designer
+on Facebook's Brand Measurement team, devoting my time to creating new ways to
+measure and report ad effectiveness as it pertains to brand advertising.
 
 My first project at Facebook was [Split
 Testing](https://www.facebook.com/business/news/optimize-your-ads-with-split-testing?pnref=story),
