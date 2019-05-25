@@ -1,14 +1,17 @@
-import Image from 'components/Image'
+import Image from "components/Image"
 
 export const frontmatter = {
-title: "Making Sense",
-layout: "post",
-date: "2014-11-02"
+  title: "Making Sense",
+  layout: "post",
+  date: "2014-11-02",
 }
 
 # Making Sense
 
-<Image alt="A photo of Muji’s aliminium ballpoint pen" src="2014/10/Muji-Aluminium-Pen.png" />
+<Image
+  alt="Muji’s aliminium ballpoint pen"
+  src="2014/10/Muji-Aluminium-Pen.png"
+/>
 
 There is both a great pleasure and a great ache in the search for well-made
 products. Products that are lasting and unambiguous. This search is what leads
@@ -87,6 +90,9 @@ consistency that unlocks a life of fulfilment and completeness. And they empower
 myself and others like me to do what we must; continue making things that make
 sense.
 
-[^1]: This is, of course, a quote from Albert Einstein. Einstein was no
-      designer—at least not by trade—but he was certainly onto something here.
+[^1]:
+
+  This is, of course, a quote from Albert Einstein. Einstein was no
+  designer—at least not by trade—but he was certainly onto something here.
+
 [^2]: Or, more realistically, in the overlap of Art, Design, and Advertising

@@ -1,15 +1,18 @@
-import Image from 'components/Image'
+import Image from "components/Image"
 
 export const frontmatter = {
-layout: "post",
-title: "The Weird Wide Web",
-hero: "2016/08/www.png",
-date: "2016-08-04"
+  layout: "post",
+  title: "The Weird Wide Web",
+  hero: "2016/08/www.png",
+  date: "2016-08-04",
 }
 
 # The Weird Wide Web
 
-<Image alt="A distorted image of the Internet Explorer logo" src="2016/08/www.png" />
+<Image
+  alt="A distorted image of the Internet Explorer logo"
+  src="2016/08/www.png"
+/>
 
 From my “hotel desk” in Facebook’s New York office, I can see a handful of
 different environments. A cluster of soft chairs for people to sit & work
@@ -29,7 +32,7 @@ prevalence[^1] continues, it becomes an increasingly interesting statement of
 our place as designers for screens.
 
 <Image
-  alt="A photo of the interior of the Facebook New York office"
+  alt="The interior of the Facebook New York office"
   src="2016/08/fbny.jpg"
   caption="Pillars in the Facebook New York office echo a recent trend in web design"
 />

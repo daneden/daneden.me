@@ -1,9 +1,9 @@
-import Image from 'components/Image'
+import Image from "components/Image"
 
 export const frontmatter = {
-layout: "post",
-title: "Design Elitism",
-date: "2014-06-28"
+  layout: "post",
+  title: "Design Elitism",
+  date: "2014-06-28",
 }
 
 # Design Elitism
@@ -26,7 +26,7 @@ facade and bewilderingly powerful buzzword.
 
 <Image
   align="left"
-  alt="A photo of the Eames molded plastic armchair"
+  alt="The Eames molded plastic armchair"
   src="2014/10/eames-plastic-armchair.png"
   caption="The [Eames molded
   plastic armchair](http://www.vitra.com/en-it/product/eames-plastic-side-chair#)
@@ -55,7 +55,7 @@ For those who aren’t yet acquainted[^1], Yo is an app that does one thing: it
 sends a one-word message—“Yo”—to your contact(s) of choice. It’s novel, silly,
 and immediately disposable.
 
-And it managed to raise $1,000,000. A million dollars.
+And it managed to raise \$1,000,000. A million dollars.
 
 One million US dollars is about 60% of what the average United Kingdom citizen
 will earn in their 87-year[^2] lifetime. Of course, the first 21 years are spent

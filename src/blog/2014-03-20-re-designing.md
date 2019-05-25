@@ -1,9 +1,9 @@
-import Image from 'components/Image'
+import Image from "components/Image"
 
 export const frontmatter = {
-layout: "post",
-title: "Re; Designing",
-date: "2014-03-20"
+  layout: "post",
+  title: "Re; Designing",
+  date: "2014-03-20",
 }
 
 # Re; Designing
@@ -49,7 +49,7 @@ until I felt some sort of satisfaction. But really, it’s all in the pursuit of
 one thing; a system.
 
 <Image
-  alt="A photo of Vitsœs’s 606 Universal Shelving System"
+  alt="Vitsœs’s 606 Universal Shelving System"
   src="2014/03/606-universal-shelving.jpg"
   caption="Vitsœ’s 606 Universal Shelving System. Image courtesy of [Smow](http://www.smow.com/blog/2010/05/smowoffline-dieter-rams-less-and-more/)."
 />

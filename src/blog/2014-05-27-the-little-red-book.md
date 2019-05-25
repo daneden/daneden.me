@@ -1,9 +1,9 @@
-import Image from 'components/Image'
+import Image from "components/Image"
 
 export const frontmatter = {
-layout: "post",
-title: "The Little Red Book",
-date: "2014-05-27"
+  layout: "post",
+  title: "The Little Red Book",
+  date: "2014-05-27",
 }
 
 # The Little Red Book
@@ -17,7 +17,11 @@ design know-how. It was certainly one of my most-read books. Whenever I’d hit 
 creative block, it’d be the little red book that came off the shelf to get the
 juices flowing again.
 
-<Image align="left" alt="The cover of the book “The Vignelli Canon”" src="2014/05/vignelli-canon.jpg" />
+<Image
+  align="left"
+  alt="The cover of the book “The Vignelli Canon”"
+  src="2014/05/vignelli-canon.jpg"
+/>
 
 I was well aware of Massimo Vignelli’s work before I bought the book. You’d have
 to live in a cave not to be; he developed the previous American Airlines
@@ -39,7 +43,10 @@ collection of print, type, and graphic design from renowned designers such as
 Josef Müller-Brockmann, Eduard Hoffmann, Antonio DiSpigna, John Pistilli, and,
 of course, Herb Lubalin himself.
 
-<Image alt="A photo of the New York City Transit Authority Graphics Standards Manual" src="2014/05/nyctagsm.jpg" />
+<Image
+  alt="The New York City Transit Authority Graphics Standards Manual"
+  src="2014/05/nyctagsm.jpg"
+/>
 
 Also found in the collection is one of the original, printed copies of the New
 York City Transit Authority Graphics Standards Manual. The pages of this

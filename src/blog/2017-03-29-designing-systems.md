@@ -1,16 +1,16 @@
-import Image from 'components/Image'
+import Image from "components/Image"
 
 export const frontmatter = {
-layout: "post",
-title: "Designing Product UI Systems",
-hero: "2017/03/design-systems.png",
-date: "2017-03-29"
+  layout: "post",
+  title: "Designing Product UI Systems",
+  hero: "2017/03/design-systems.png",
+  date: "2017-03-29",
 }
 
 # Designing Product UI Systems
 
 <Image
-  alt="An illustration of a stick figure looking at shapes falling out of a box"
+  alt="A stick figure looking at shapes falling out of a box"
   src="2017/03/design-systems.png"
 />
 

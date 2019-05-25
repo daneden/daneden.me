@@ -1,11 +1,11 @@
-import Image from 'components/Image'
-import Codepen from 'react-codepen-embed'
+import Image from "components/Image"
+import Codepen from "react-codepen-embed"
 
 export const frontmatter = {
-layout: "post",
-title: "Drawing With Numbers",
-hero: "2017/01/diff-growth.png",
-date: "2016-11-02"
+  layout: "post",
+  title: "Drawing With Numbers",
+  hero: "2017/01/diff-growth.png",
+  date: "2016-11-02",
 }
 
 # Drawing With Numbers
@@ -23,7 +23,7 @@ is.
 
 <Image
   align="left"
-  alt="A photo of Richard Serra’s installation at the Dia:Beacon"
+  alt="Richard Serra’s installation at the Dia:Beacon"
   src="2016/11/dwn-serra.jpg"
   caption="An installation from Richard Serra in Dia:Beacon."
   captionPosition="left"
@@ -61,7 +61,7 @@ Spilman](https://twitter.com/kspilman). It’s simple enough—an array of
 rectangles, each rotated so they’re pointing towards a point in space.
 
 <Image
-  alt="A photo of a Dropbox Design hoodie with some abstract, geometric art on the back"
+  alt="A Dropbox Design sweatshirt with some abstract, geometric art on the back"
   src="2016/11/dwn-dropbox.jpg"
 />
 
@@ -83,12 +83,7 @@ drawing toolkit.
 I moved what I had learned into a p5 sketch, and before long, I had a real-life
 version of what I had first set out to create.
 
-<Codepen
-  hash="MjNZJa"
-  user="daneden"
-  themeId="26171"
-  defaultTab="result"
-  />
+<Codepen hash="MjNZJa" user="daneden" themeId="26171" defaultTab="result" />
 
 ## Graduating From JavaScript
 

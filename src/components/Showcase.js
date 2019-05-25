@@ -51,11 +51,8 @@ export default function Showcase() {
         alt="A piece of Daniel’s generative art"
         src="2018/10/GenArt.png"
       />
-      <Image alt="A photograph of Daniel’s home" src="2019/04/home.jpeg" />
-      <Image
-        alt="An distorted illustration of Daniel’s name"
-        src="2019/01/wavy.svg"
-      />
+      <Image alt="Daniel’s home" src="2019/04/home.jpeg" />
+      <Image alt="An illustration of Daniel’s name" src="2019/01/wavy.svg" />
     </StyledShowcase>
   )
 }
