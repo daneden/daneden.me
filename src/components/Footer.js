@@ -5,7 +5,7 @@ import Atoms from "designSystem/atoms"
 
 const StyledFooter = styled("footer")`
   border-top: 1px solid;
-  color: ${Atoms.colors.meta};
+  color: var(--meta-color, ${Atoms.colors.meta});
   font-family: ${Atoms.font.family.sans};
   margin-top: ${Atoms.spacing.xlarge};
   padding-bottom: ${Atoms.spacing.large};

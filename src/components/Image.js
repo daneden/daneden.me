@@ -39,7 +39,7 @@ const Figure = styled("figure")`
 
 const Caption = styled("span")`
   font-size: ${Atoms.font.size.small};
-  color: ${Atoms.colors.meta};
+  color: var(--meta-color, ${Atoms.colors.meta});
   letter-spacing: 0.025em;
 `
 

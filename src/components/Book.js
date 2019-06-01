@@ -10,7 +10,7 @@ const BookLink = styled(PlainLink)`
 `
 
 const Meta = styled("span")`
-  color: ${Atoms.colors.meta};
+  color: var(--meta-color, ${Atoms.colors.meta});
 `
 
 export default function Book({ author, cover, title, url }) {

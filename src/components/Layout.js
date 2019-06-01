@@ -24,6 +24,19 @@ export default function Layout({ children, location, ...props }) {
         <DesignSystemProvider>
           <Global
             styles={{
+              ":root": {
+                colorScheme: "light dark",
+                "--text-color": Atoms.colors.text,
+                "--meta-color": Atoms.colors.blackAlpha,
+                "--wash-color": Atoms.colors.wash,
+
+                "@media (prefers-color-scheme: dark)": {
+                  "--text-color": Atoms.colors.wash,
+                  "--meta-color": Atoms.colors.whiteAlpha,
+                  "--wash-color": Atoms.colors.text,
+                },
+              },
+
               "*": {
                 boxSizing: "border-box",
                 margin: 0,
@@ -31,19 +44,14 @@ export default function Layout({ children, location, ...props }) {
               },
 
               html: {
-                backgroundColor: Atoms.colors.wash,
-                color: Atoms.colors.text,
+                backgroundColor: "var(--wash-color)",
+                color: "var(--text-color)",
                 flex: 1,
                 fontFamily: Atoms.font.family.sans,
                 fontSize: "125%",
                 lineHeight: Atoms.baseline,
                 paddingLeft: Atoms.spacing.medium,
                 paddingRight: Atoms.spacing.medium,
-
-                "@media (prefers-color-scheme: dark)": {
-                  color: Atoms.colors.wash,
-                  backgroundColor: Atoms.colors.text,
-                },
 
                 [`@media (max-width: ${Atoms.breakpoints.medium})`]: {
                   fontSize: "100%",
