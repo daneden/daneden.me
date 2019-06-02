@@ -26,7 +26,7 @@ const Figure = styled("figure")`
     ${props =>
       props.captionPosition === "left"
         ? `
-          writing-mode: vertical-lr;
+          writing-mode: vertical-rl;
           transform: rotate(180deg);
           order: 1;
         `
