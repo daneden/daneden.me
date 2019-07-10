@@ -29,6 +29,7 @@ export default function Layout({ children, location, ...props }) {
                 "--text-color": Atoms.colors.text,
                 "--meta-color": Atoms.colors.blackAlpha,
                 "--wash-color": Atoms.colors.wash,
+                "--font-mono": Atoms.font.family.mono,
 
                 "@media (prefers-color-scheme: dark)": {
                   "--text-color": Atoms.colors.wash,

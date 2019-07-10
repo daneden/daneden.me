@@ -36,7 +36,17 @@ module.exports = {
         defaultLayouts: {
           default: require.resolve("./src/components/Layout.js"),
         },
-        gatsbyRemarkPlugins: [{ resolve: `gatsby-remark-widows` }],
+        gatsbyRemarkPlugins: [
+          { resolve: `gatsby-remark-widows` },
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              classPrefix: "language-",
+              inlineCodeMarker: null,
+              aliases: {},
+            },
+          },
+        ],
       },
     },
     {
