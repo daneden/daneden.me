@@ -1,13 +1,15 @@
 import Image from "components/Image"
 import H1 from "designSystem/H1"
 
+import { Button } from "./2019-07-09-typed-systems-components"
+
 export const frontmatter = {
   layout: "post",
   title: "Square Peg, Round Hole: Typed Programming For Designers",
   date: "2019-07-09",
 }
 
-<H1 weight={200} width={90}>
+<H1 weight={400} width={80}>
   Square Peg, Round Hole: Typed Programming For Designers
 </H1>
 
@@ -50,7 +52,7 @@ It doesn’t make sense to try and add together a number and a string. In order
 to prevent people from trying to make that operation happen, you would add
 types to the function to limit what arguments people can pass to it.
 
-```js
+```typescript
 // These are “type signatures”, indicating the types
 // of data the function can accept and return
 //              👇         👇       👇
@@ -78,11 +80,7 @@ components we’re creating.
 Let’s start with a simple button component. Our Button component is essentially
 just a rectangle with some text inside it.
 
-<Image
-  alt="A diagram of a button"
-  responsive={false}
-  src="2019/07/single-button.svg"
-/>
+<Button>Confirm</Button>
 
 ```js
 Button("Confirm")
@@ -90,11 +88,9 @@ Button("Confirm")
 
 But what would happen if we were to put another Button inside this one?
 
-<Image
-  alt="A diagram of a button inside another button"
-  responsive={false}
-  src="2019/07/nested-button.svg"
-/>
+<Button>
+  <Button>Confirm</Button>
+</Button>
 
 ```js
 Button(Button("Confirm"))
@@ -137,8 +133,8 @@ the same way that the engineer implementing the list might do:
 - The city’s country is a string
 - The photo representing the city is either a string or an image component
 
-In Flow, a type-checking system for JavaScript, the type signature for our
-list item might look like this:
+In Flow or Typescript, type-checking systems for JavaScript, the type signature
+for our list item might look like this:
 
 ```typescript
 type CityListItemData = {
