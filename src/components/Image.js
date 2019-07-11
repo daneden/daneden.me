@@ -106,9 +106,10 @@ function Image({
   return (
     <Wrapper>
       <Figure
-        margin={margin}
         captionPosition={captionPosition}
         className={className}
+        margin={margin}
+        responsive={responsive}
       >
         {img}
         {caption && <Caption>{mdToHTML(caption)}</Caption>}
