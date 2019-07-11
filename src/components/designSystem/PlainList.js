@@ -1,7 +1,5 @@
 import styled from "@emotion/styled"
 
-import { Atoms } from "./designSystem"
-
 const PlainList = styled("ul")`
   list-style: none;
   padding: 0;
