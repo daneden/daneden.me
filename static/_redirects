@@ -1,2 +1,9 @@
-/animate*    https://daneden.github.io/animate.css
+# External redirects
+/animate*                   https://daneden.github.io/animate.css
+/toast                      https://daneden.github.io/Toast/
+
+# Internal redirects
+/feed.xml                   /rss.xml
+/static/images/favicon.*    /images/favicon.png
+
 # TODO: Consider redirecting /:year/:month/:date/:slug to /blog/:year/:month/:date/:slug
