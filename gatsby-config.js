@@ -1,6 +1,5 @@
 const path = require("path")
 const md5File = require("md5-file")
-const mdxFeed = require("gatsby-mdx/feed")
 
 const slugFromPath = require("./src/utils/slugFromPath.module")
 
@@ -59,7 +58,66 @@ module.exports = {
     },
     {
       resolve: `gatsby-plugin-feed`,
-      options: mdxFeed,
+      options: {
+        query: `
+        {
+          site {
+            siteMetadata {
+              title
+              description
+              siteUrl
+              site_url: siteUrl
+            }
+          }
+        }
+      `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allMdx } }) => {
+              return allMdx.edges.map(edge => {
+                const filename = edge.node.parent.name
+
+                // create a new slug concatenating everything
+                const slug = slugFromPath(filename)
+
+                return Object.assign({}, edge.node.frontmatter, {
+                  description: edge.node.excerpt,
+                  date: edge.node.frontmatter.date,
+                  url: site.siteMetadata.siteUrl + slug,
+                  guid: site.siteMetadata.siteUrl + slug,
+                  custom_elements: [{ "content:encoded": edge.node.html }],
+                })
+              })
+            },
+            query: `
+            {
+              allMdx(
+                limit: 1000,
+                sort: { order: DESC, fields: [frontmatter___date] }
+              ) {
+                edges {
+                  node {
+                    excerpt
+                    html
+                    frontmatter {
+                      title
+                      date
+                    }
+                    parent {
+                      ... on File {
+                        name
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          `,
+            output: "/rss.xml",
+            title: "daneden.me RSS Feed",
+          },
+        ],
+      },
     },
     {
       resolve: "gatsby-plugin-web-font-loader",
