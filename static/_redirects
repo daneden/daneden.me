@@ -1,2 +1,2 @@
-/animate    https://daneden.github.io/animate.css
+/animate*    https://daneden.github.io/animate.css
 # TODO: Consider redirecting /:year/:month/:date/:slug to /blog/:year/:month/:date/:slug
