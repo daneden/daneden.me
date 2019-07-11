@@ -77,9 +77,7 @@ export default function Layout({ children, location, ...props }) {
               defaultTitle={data.site.siteMetadata.title}
               title={title !== null ? title : data.site.siteMetadata.title}
               description={data.site.siteMetadata.description}
-              thumbnail={`${
-                data.site.siteMetadata.siteUrl
-              }/uploads/2019/01/og.png`}
+              thumbnail={`${data.site.siteMetadata.siteUrl}/images/og.png`}
             />
             <Header
               siteTitle={data.site.siteMetadata.title}
