@@ -6,5 +6,6 @@
       "groupName": "gatsby monorepo",
       "schedule": ["every weekend"]
     }
-  ]
+  ],
+  "rebaseStalePrs": true
 }
