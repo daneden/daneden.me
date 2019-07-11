@@ -17,7 +17,7 @@ const Figure = styled("figure")`
 
   img {
     display: block;
-    width: 100%;
+    width: ${props => (props.responsive ? "100%" : "auto")};
     flex: 0 0 auto;
     order: 2;
   }
@@ -49,6 +49,7 @@ function Image({
   className,
   caption,
   captionPosition,
+  responsive = true,
   margin,
   src,
 }) {
@@ -89,7 +90,7 @@ function Image({
       ? `${process.env.PUBLIC_URL || ""}/uploads/${src}`
       : `https://daneden.imgix.net/${src}`
 
-  const img = (
+  const img = responsive ? (
     <Imgix
       src={url}
       htmlAttributes={{
@@ -98,6 +99,8 @@ function Image({
       }}
       sizes={sizes}
     />
+  ) : (
+    <img src={url} loading="lazy" />
   )
 
   return (

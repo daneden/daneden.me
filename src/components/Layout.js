@@ -61,6 +61,11 @@ export default function Layout({ children, location, ...props }) {
 
               "ul, ol": {
                 marginBottom: Atoms.spacing.medium,
+                paddingLeft: Atoms.spacing.medium,
+              },
+
+              ".footnotes ol": {
+                paddingLeft: 0,
               },
             }}
           />
