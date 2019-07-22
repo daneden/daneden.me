@@ -46,8 +46,8 @@
     "react-imgix": "8.6.3",
     "react-katex": "2.0.2",
     "react-prop-matrix": "1.0.0",
-    "remark": "10.0.1",
-    "remark-react": "5.0.1",
+    "remark": "11.0.0",
+    "remark-react": "6.0.0",
     "slug": "1.1.0"
   },
   "keywords": [
