@@ -38,6 +38,7 @@ module.exports = {
         },
         gatsbyRemarkPlugins: [
           { resolve: `gatsby-remark-widows` },
+          { resolve: `gatsby-remark-smartypants` },
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
