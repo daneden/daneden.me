@@ -1,9 +1,7 @@
-import Image from 'components/Image'
-
 export const frontmatter = {
-layout: "post",
-title: "Design System Structure",
-date: "2017-07-17"
+  layout: "post",
+  title: "Design System Structure",
+  date: "2017-07-17",
 }
 
 # Design System Structure

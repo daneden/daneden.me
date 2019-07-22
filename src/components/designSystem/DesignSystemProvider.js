@@ -1,5 +1,6 @@
 import React from "react"
 import { MDXProvider } from "@mdx-js/react"
+import Image from "../Image"
 
 import * as designSystem from "./designSystem"
 
@@ -14,6 +15,8 @@ const components = {
   p: designSystem.P,
   pre: designSystem.Pre,
   table: designSystem.Table,
+  // Custom Components
+  Image,
 }
 
 const DesignSystemProvider = ({ children }) => (

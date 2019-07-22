@@ -1,9 +1,7 @@
-import Image from 'components/Image'
-
 export const frontmatter = {
-layout: "post",
-title: "Emergency Mode",
-date: "2014-02-04"
+  layout: "post",
+  title: "Emergency Mode",
+  date: "2014-02-04",
 }
 
 # Emergency Mode
@@ -26,7 +24,11 @@ shall we?
 
 ---
 
-<Image align="left" alt="Mockup showing an emergency mode screen" src="2014/02/emergency-mode-home.png" />
+<Image
+  align="left"
+  alt="Mockup showing an emergency mode screen"
+  src="2014/02/emergency-mode-home.png"
+/>
 
 The way I imagine it, this emergency functionality would certainly justify
 native implementation in a smartphone OS. Let’s say, for the sake of example,

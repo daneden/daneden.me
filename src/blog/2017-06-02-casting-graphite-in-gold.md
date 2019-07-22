@@ -1,10 +1,8 @@
-import Image from 'components/Image'
-
 export const frontmatter = {
-layout: "post",
-title: "Casting Graphite in Gold",
-hero: "2017/06/graphite.png",
-date: "2017-06-02"
+  layout: "post",
+  title: "Casting Graphite in Gold",
+  hero: "2017/06/graphite.png",
+  date: "2017-06-02",
 }
 
 # Casting Graphite in Gold

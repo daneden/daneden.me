@@ -1,9 +1,7 @@
-import Image from 'components/Image'
-
 export const frontmatter = {
-layout: "post",
-title: "The Burden of Precision",
-date: "2017-11-15"
+  layout: "post",
+  title: "The Burden of Precision",
+  date: "2017-11-15",
 }
 
 # The Burden of Precision
