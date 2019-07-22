@@ -9,7 +9,7 @@ const resolvePath = path.resolve
 const slugFromPath = require("./src/utils/slugFromPath.module")
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
-const componentWithMDXScope = require("gatsby-mdx/component-with-mdx-scope")
+const componentWithMDXScope = require("gatsby-plugin-mdx/component-with-mdx-scope")
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
