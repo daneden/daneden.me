@@ -1,7 +1,6 @@
+import { Link } from "designSystem/designSystem"
 import remark from "remark"
 import reactRenderer from "remark-react"
-
-import { Link } from "designSystem/designSystem"
 
 export default function mdToHTML(markdown) {
   return remark()

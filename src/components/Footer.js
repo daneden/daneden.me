@@ -1,7 +1,6 @@
-import React from "react"
 import styled from "@emotion/styled"
-
 import Atoms from "designSystem/atoms"
+import React from "react"
 
 const StyledFooter = styled("footer")`
   border-top: 1px solid;

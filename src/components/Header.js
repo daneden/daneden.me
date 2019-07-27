@@ -1,9 +1,8 @@
-import React from "react"
 import styled from "@emotion/styled"
-
 import Atoms from "designSystem/atoms"
-import PlainList from "designSystem/PlainList"
 import PlainLink from "designSystem/PlainLink"
+import PlainList from "designSystem/PlainList"
+import React from "react"
 
 const StyledHeader = styled("header")`
   border-bottom: 1px solid;
