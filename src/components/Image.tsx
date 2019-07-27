@@ -1,19 +1,19 @@
-import React from "react"
-import Imgix from "react-imgix"
 import styled from "@emotion/styled"
-import mdToHTML from "utils/mdToHTML"
-import { Align, Atoms } from "designSystem/designSystem"
+import React, { FunctionComponent } from "react"
+import Imgix from "react-imgix"
+import { FigureProps, ImageProps } from "../interfaces/Image.interface"
+import mdToHTML from "../utils/mdToHTML"
+import { Align, Atoms } from "./designSystem/designSystem"
 
 const Figure = styled("figure")`
   display: flex;
-  flex-direction: ${props =>
+  flex-direction: ${(props: FigureProps) =>
     props.captionPosition === "left" ? "row" : "column"};
   justify-content: center;
   align-items: ${props =>
     props.captionPosition === "left" ? "start" : "initial"};
   
-  margin-bottom: ${props =>
-    props.margin === "bottom" ? Atoms.spacing.medium : 0};
+  margin-bottom: ${props => (props.margin ? Atoms.spacing.medium : 0)};
 
   img {
     display: block;
@@ -43,16 +43,16 @@ const Caption = styled("span")`
   letter-spacing: 0.025em;
 `
 
-function Image({
+const Image: FunctionComponent<ImageProps> = ({
   align,
   alt,
   className,
   caption,
   captionPosition,
   responsive = true,
-  margin,
+  margin = true,
   src,
-}) {
+}) => {
   let Wrapper
   let sizes
 
@@ -71,18 +71,12 @@ function Image({
     case "left":
     case "right":
       sizes = `
-        (min-width: ${Atoms.breakpoints.medium}) calc(${
-        Atoms.widths.container
-      } * .5),
-        (min-width: ${Atoms.breakpoints.narrow}) calc(${
-        Atoms.widths.container
-      } * .4),
+        (min-width: ${Atoms.breakpoints.medium}) calc(${Atoms.widths.container} * .5),
+        (min-width: ${Atoms.breakpoints.narrow}) calc(${Atoms.widths.container} * .4),
         100vw`
       break
     default:
-      sizes = `(min-width: ${Atoms.breakpoints.narrow}) ${
-        Atoms.widths.container
-      }, 100vw`
+      sizes = `(min-width: ${Atoms.breakpoints.narrow}) ${Atoms.widths.container}, 100vw`
   }
 
   const url =
@@ -100,7 +94,7 @@ function Image({
       sizes={sizes}
     />
   ) : (
-    <img src={url} loading="lazy" />
+    <img src={url} />
   )
 
   return (
@@ -116,10 +110,6 @@ function Image({
       </Figure>
     </Wrapper>
   )
-}
-
-Image.defaultProps = {
-  margin: "bottom",
 }
 
 export default Image

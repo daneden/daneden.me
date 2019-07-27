@@ -1,12 +1,11 @@
-import React from "react"
 import styled from "@emotion/styled"
-
-import Atoms from "designSystem/atoms"
+import { BookData } from "../interfaces/Book.interface"
 import Book from "./Book"
+import Atoms from "./designSystem/atoms"
 
 const strippedTitle = str => str.replace(/^(the|a) /i, "").toLowerCase()
 
-const books = [
+const books: Array<BookData> = [
   {
     title: "Bird By Bird",
     author: "Anne Lamott",
@@ -104,8 +103,6 @@ const books = [
     url: "https://amzn.to/2zQrZxm",
   },
 ]
-
-const list = books
   .map(book => {
     return {
       ...book,
@@ -122,18 +119,12 @@ const Library = styled("div")`
   grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
 `
 
-export default function BookList() {
-  return (
-    <Library>
-      {list.map(({ title, author, cover, url }) => (
-        <Book
-          author={author}
-          cover={cover}
-          title={title}
-          url={url}
-          key={title}
-        />
-      ))}
-    </Library>
-  )
-}
+const BookList = () => (
+  <Library>
+    {books.map(({ title, author, cover, url }) => (
+      <Book author={author} cover={cover} title={title} url={url} key={title} />
+    ))}
+  </Library>
+)
+
+export default BookList
