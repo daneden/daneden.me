@@ -3,7 +3,6 @@ jobs:
   build:
     docker:
       - image: circleci/node:12.7.0
-    working_directory: ~/repo
 
     steps:
       - restore_cache:
@@ -22,11 +21,13 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       - run:
-          name: Build Site
-          command: yarn build
-      - run:
           name: Run Tests
           command: yarn test
+
+      - run:
+          name: Build Site
+          command: yarn build
+
       - run:
           name: Run Lighthouse Performance Tests
           command: yarn run lh --perf 80 --pwa 80 --a11y 80 --bp 80 --seo 80 "$(wait-for-netlify-preview)"
