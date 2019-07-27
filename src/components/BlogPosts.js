@@ -1,7 +1,7 @@
 import { css } from "@emotion/core"
-import { Atoms, PlainList } from "designSystem/designSystem"
-import useBlogPostsQuery from "hooks/useBlogPostsQuery"
-import slug from "utils/slugFromPath"
+import useBlogPostsQuery from "../hooks/useBlogPostsQuery"
+import slug from "../utils/slugFromPath"
+import { Atoms, PlainList } from "./designSystem/designSystem"
 import PostLink from "./PostLink"
 
 const liStyle = css`

@@ -1,6 +1,6 @@
 import styled from "@emotion/styled"
-import { Atoms } from "designSystem/designSystem"
 import React from "react"
+import { Atoms } from "./designSystem/designSystem"
 
 const StyledWrapper = styled("div")`
   box-sizing: initial;

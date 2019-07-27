@@ -1,5 +1,5 @@
 import Helmet from "react-helmet"
-import H1 from "designSystem/H1"
+import H1 from "../components/designSystem/H1"
 
 <Helmet title="Portfolio" />
 

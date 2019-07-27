@@ -1,4 +1,4 @@
-import Showcase from "components/Showcase"
+import Showcase from "../components/Showcase"
 
 <Showcase />
 

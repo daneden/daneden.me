@@ -1,11 +1,11 @@
-import 'katex/dist/katex.min.css'
-import { InlineMath, BlockMath } from 'react-katex'
-import H1 from 'designSystem/H1'
+import "katex/dist/katex.min.css"
+import { InlineMath, BlockMath } from "react-katex"
+import H1 from "../components/designSystem/H1"
 
 export const frontmatter = {
-layout: "post",
-title: "Subatomic Design Systems",
-date: "2018-01-05"
+  layout: "post",
+  title: "Subatomic Design Systems",
+  date: "2018-01-05",
 }
 
 <H1 width={67} weight={700}>Subatomic Design Systems</H1>

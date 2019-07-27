@@ -1,6 +1,6 @@
 import Helmet from "react-helmet"
-import BlogPosts from "components/BlogPosts"
-import H1 from "designSystem/H1"
+import BlogPosts from "../components/BlogPosts"
+import H1 from "../components/designSystem/H1"
 
 <Helmet title="Blog" />
 

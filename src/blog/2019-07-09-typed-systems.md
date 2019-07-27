@@ -1,5 +1,5 @@
-import Image from "components/Image"
-import H1 from "designSystem/H1"
+import Image from "../components/Image"
+import H1 from "../components/designSystem/H1"
 
 import { Button } from "./2019-07-09-typed-systems-components"
 

@@ -1,4 +1,4 @@
-import Image from "components/Image"
+import Image from "../components/Image"
 import Codepen from "react-codepen-embed"
 
 export const frontmatter = {

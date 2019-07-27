@@ -1,4 +1,4 @@
-import { H1 } from "designSystem/designSystem"
+import { H1 } from "../components/designSystem/designSystem"
 
 export const frontmatter = {
   layout: "post",

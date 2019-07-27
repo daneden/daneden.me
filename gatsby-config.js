@@ -22,15 +22,6 @@ module.exports = {
     "gatsby-plugin-webpack-size",
     "gatsby-plugin-typescript",
     {
-      resolve: "gatsby-plugin-root-import",
-      options: {
-        components: path.join(__dirname, "src/components"),
-        designSystem: path.join(__dirname, "src/components/designSystem"),
-        hooks: path.join(__dirname, "src/hooks"),
-        utils: path.join(__dirname, "src/utils"),
-      },
-    },
-    {
       resolve: "gatsby-plugin-mdx",
       options: {
         extensions: [".mdx", ".md"],

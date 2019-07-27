@@ -1,10 +1,10 @@
 import { Global } from "@emotion/core"
 import styled from "@emotion/styled"
-import Atoms from "designSystem/atoms"
-import H1 from "designSystem/H1"
 import React from "react"
-import map from "utils/map"
-import times from "utils/times"
+import map from "../utils/map"
+import times from "../utils/times"
+import Atoms from "./designSystem/atoms"
+import H1 from "./designSystem/H1"
 
 const { useLayoutEffect, useState } = React
 
