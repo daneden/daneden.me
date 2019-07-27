@@ -19,6 +19,7 @@ module.exports = {
   plugins: [
     "gatsby-plugin-emotion",
     "gatsby-plugin-react-helmet",
+    "gatsby-plugin-webpack-size",
     {
       resolve: "gatsby-plugin-root-import",
       options: {

@@ -45,6 +45,7 @@
     "gatsby-plugin-offline": "2.2.4",
     "gatsby-plugin-react-helmet": "3.1.2",
     "gatsby-plugin-web-font-loader": "1.0.4",
+    "gatsby-plugin-webpack-size": "^1.0.0",
     "gatsby-remark-prismjs": "^3.3.3",
     "gatsby-remark-smartypants": "^2.1.2",
     "gatsby-remark-widows": "1.0.0",
