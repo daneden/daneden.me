@@ -1,8 +1,7 @@
-import React from "react"
 import styled from "@emotion/styled"
-
-import { Atoms } from "./designSystem"
+import React from "react"
 import Code from "./Code"
+import { Atoms } from "./designSystem"
 
 const StyledCode = styled(Code)`
   line-height: 1.5;

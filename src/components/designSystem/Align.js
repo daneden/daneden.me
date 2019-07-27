@@ -1,5 +1,5 @@
-import Atoms from "./atoms"
 import styled from "@emotion/styled"
+import Atoms from "./atoms"
 
 const AlignedContainer = styled("div")`
   width: 100%;

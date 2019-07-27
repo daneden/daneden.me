@@ -52,15 +52,13 @@ keyframe declaration. Here's a handy example:
     -webkit-transform: translateY(0);
   }
 }
+```
 
-/_
-  That
-  animation
-  won"t work. But, if we put each property into it"s
-  own
-  keyframe
-  declaration,
-it will work. _/ @-webkit-keyframes a-opacity {
+That animation won't work. But, if we put each property into it's own keyframe
+declaration, it will work.
+
+```css
+@-webkit-keyframes a-opacity {
   from {
     opacity: 0;
   }

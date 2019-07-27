@@ -1,6 +1,5 @@
-import React from "react"
 import { css } from "@emotion/core"
-
+import React from "react"
 import Atoms from "./atoms"
 
 /* VALUES FOR EACH AXES */

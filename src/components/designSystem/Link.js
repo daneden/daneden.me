@@ -1,7 +1,6 @@
-import React from "react"
-import { Link as GatsbyLink } from "gatsby"
 import { css } from "@emotion/core"
-
+import { Link as GatsbyLink } from "gatsby"
+import React from "react"
 import { Atoms } from "./designSystem"
 
 const styles = underline => css`

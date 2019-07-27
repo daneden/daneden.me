@@ -1,8 +1,7 @@
-import React from "react"
 import styled from "@emotion/styled"
-
-import { Atoms } from "designSystem/designSystem"
 import Image from "components/Image"
+import { Atoms } from "designSystem/designSystem"
+import React from "react"
 
 const StyledShowcase = styled("div")`
   display: grid;

@@ -1,7 +1,6 @@
-import React from "react"
-
-import PlainLink from "designSystem/PlainLink"
 import styled from "@emotion/styled"
+import PlainLink from "designSystem/PlainLink"
+import React from "react"
 
 const Timestamp = styled("span")`
   font-style: italic;
