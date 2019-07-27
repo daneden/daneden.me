@@ -31,5 +31,9 @@ jobs:
           command: yarn build
 
       - run:
+          name: Setting Up Lighthouse
+          command: sudo npm install -g wait-for-netlify-preview
+
+      - run:
           name: Run Lighthouse Performance Tests
           command: yarn run lh --perf 80 --pwa 80 --a11y 80 --bp 80 --seo 80 "$(wait-for-netlify-preview)"
