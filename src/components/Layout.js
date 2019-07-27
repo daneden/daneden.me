@@ -1,16 +1,14 @@
-import React from "react"
-import Helmet from "react-helmet"
 import { Global } from "@emotion/core"
-
-import favicon from "../../static/images/favicon.png"
-
 import { Atoms } from "designSystem/designSystem"
 import DesignSystemProvider from "designSystem/DesignSystemProvider"
+import useLayoutQuery from "hooks/useLayoutQuery"
+import React from "react"
+import Helmet from "react-helmet"
+import favicon from "../../static/images/favicon.png"
 import Footer from "./Footer"
 import Header from "./Header"
-import useLayoutQuery from "hooks/useLayoutQuery"
-import Wrapper from "./Wrapper"
 import Metatags from "./Metatags"
+import Wrapper from "./Wrapper"
 
 export default function Layout({ children, location, ...props }) {
   const { site } = useLayoutQuery()
