@@ -7,6 +7,7 @@ import H2 from "./H2"
 import H3 from "./H3"
 import Hr from "./Hr"
 import Link from "./Link"
+import Mark from "./Mark"
 import P from "./P"
 import PlainLink from "./PlainLink"
 import PlainList from "./PlainList"
@@ -23,6 +24,7 @@ export {
   H3,
   Hr,
   Link,
+  Mark,
   P,
   PlainLink,
   PlainList,

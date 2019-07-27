@@ -1,7 +1,6 @@
-import React from "react"
 import { MDXProvider } from "@mdx-js/react"
+import React from "react"
 import Image from "../Image"
-
 import * as designSystem from "./designSystem"
 
 const components = {
@@ -12,6 +11,7 @@ const components = {
   h2: designSystem.H2,
   h3: designSystem.H3,
   hr: designSystem.Hr,
+  mark: designSystem.Mark,
   p: designSystem.P,
   pre: designSystem.Pre,
   table: designSystem.Table,
