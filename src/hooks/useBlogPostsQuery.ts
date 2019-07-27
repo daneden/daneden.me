@@ -1,7 +1,8 @@
 import { graphql, useStaticQuery } from "gatsby"
+import { PostsQueryData } from "../interfaces/PostsQuery.interface"
 
 const useBlogPostsQuery = () => {
-  const { allMdx } = useStaticQuery(graphql`
+  const { allMdx }: PostsQueryData = useStaticQuery(graphql`
     query {
       allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
         edges {
