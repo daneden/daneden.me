@@ -1,4 +1,11 @@
 {
+  "root": true,
+  "settings": {
+    "import/core-modules": ["gatsby"]
+  },
+  "globals": {
+    "graphql": true
+  },
   "parserOptions": {
     "ecmaVersion": 9,
     "sourceType": "module",
