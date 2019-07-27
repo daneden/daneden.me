@@ -25,7 +25,7 @@ module.exports = {
       options: {
         components: path.join(__dirname, "src/components"),
         designSystem: path.join(__dirname, "src/components/designSystem"),
-        queries: path.join(__dirname, "src/queries"),
+        hooks: path.join(__dirname, "src/hooks"),
         utils: path.join(__dirname, "src/utils"),
       },
     },
