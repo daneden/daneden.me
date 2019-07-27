@@ -14,6 +14,20 @@
       "git add"
     ]
   },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "lh": "lighthousebot",
+    "lint:js": "eslint \"**/*.{js,jsx}\"",
+    "lint": "npm-run-all lint:*",
+    "precommit": "lint-staged",
+    "test": "npm-run-all test:* -cn",
+    "test:lint": "npm run lint"
+  },
   "dependencies": {
     "@emotion/core": "10.0.14",
     "@emotion/styled": "10.0.14",
@@ -48,17 +62,6 @@
     "remark-react": "6.0.0",
     "slug": "1.1.0"
   },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write 'src/**/*.js'",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lh": "lighthousebot"
-  },
   "devDependencies": {
     "eslint": "6.1.0",
     "eslint-config-prettier": "6.0.0",
@@ -72,6 +75,7 @@
     "lighthousebot": "git+https://github.com/GoogleChromeLabs/lighthousebot.git",
     "lint-staged": "9.2.0",
     "loader-utils": "1.2.3",
+    "npm-run-all": "^4.1.5",
     "prettier": "1.18.2",
     "wait-for-netlify-preview": "^1.2.1"
   },
