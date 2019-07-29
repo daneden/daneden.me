@@ -1,9 +1,11 @@
 import styled from "@emotion/styled"
+import * as React from "react"
 import { BookData } from "../interfaces/Book.interface"
 import Book from "./Book"
 import Atoms from "./designSystem/atoms"
 
-const strippedTitle = str => str.replace(/^(the|a) /i, "").toLowerCase()
+const strippedTitle = (str: string): string =>
+  str.replace(/^(the|a) /i, "").toLowerCase()
 
 const books: Array<BookData> = [
   {
@@ -101,6 +103,12 @@ const books: Array<BookData> = [
     author: "BJ Novak",
     cover: "books/one-more-thing.jpg",
     url: "https://amzn.to/2zQrZxm",
+  },
+  {
+    title: "Debt: The First 5,000 Years",
+    author: "David Graeber",
+    cover: "books/debt.jpg",
+    url: "https://amzn.to/2LM6bYN",
   },
 ]
   .map(book => {
