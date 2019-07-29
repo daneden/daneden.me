@@ -3,6 +3,7 @@ import { Atoms } from "./designSystem"
 
 export default styled("table")`
   hyphens: initial;
+  margin-bottom: ${Atoms.spacing.medium};
 
   th {
     font-weight: normal;

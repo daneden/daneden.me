@@ -16,7 +16,10 @@ const components = {
   pre: designSystem.Pre,
   table: designSystem.Table,
   // Custom Components
+  Code: designSystem.Code,
   Image,
+  Link: designSystem.Link,
+  Note: designSystem.Note,
 }
 
 const DesignSystemProvider = ({ children }) => (
