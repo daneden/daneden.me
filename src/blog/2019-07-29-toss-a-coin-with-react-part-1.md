@@ -298,7 +298,7 @@ Let's walk through the changes we just made.
 const { useState } = React
 ```
 
-This might be unfamiliar syntax again. This is called _object desctructuring_[^1],
+This might be unfamiliar syntax again. This is called _object destructuring_[^1],
 and it's the same as writing:
 
 ```js
@@ -313,7 +313,7 @@ const [side, setSide] = useState(1)
 const [tossed, setTossed] = useState(0)
 ```
 
-This might be new as well! This is another form of desctructuring. The
+This might be new as well! This is another form of destructuring. The
 `useState` function returns an array of two values: the state variable, and the
 function to update the state variable. The first line above can be re-written
 as:

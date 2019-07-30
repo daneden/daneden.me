@@ -11,12 +11,11 @@ If you want to run this site locally:
 
 - Make sure you have [Yarn](https://yarnpkg.com/en/) installed
 - `git clone https://github.com/daneden/daneden.me`
-- Install [Gatsby](https://www.gatsbyjs.org/): `npm i -g gatsby-cli`
 - Run `yarn` to install dependencies
-- Run `gatsby develop`
+- Run `yarn develop`
 - Party.
 
-To build for production, run `gatsby build`.
+To build for production, run `yarn build`.
 
 ## Who This Repo is For
 
