@@ -5719,7 +5719,7 @@ gatsby-plugin-manifest@2.2.5:
     semver "^5.6.0"
     sharp "^0.22.1"
 
-gatsby-plugin-mdx@^1.0.23:
+gatsby-plugin-mdx@1.0.23:
   version "1.0.23"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-mdx/-/gatsby-plugin-mdx-1.0.23.tgz#5d90a26a5867ef8fcf4a542e51ff4f7b12407041"
   integrity sha512-bkYmCjHcl/5LIVwZ60mvGzYQ4iPq70XA2ZTrOTEcn4vZL9NOjmpkok/6Dufysipuni9XjJh9yJCC83DJTnAaow==
@@ -5792,7 +5792,7 @@ gatsby-plugin-react-helmet@3.1.3:
   dependencies:
     "@babel/runtime" "^7.0.0"
 
-gatsby-plugin-typescript@^2.1.2:
+gatsby-plugin-typescript@2.1.2:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-typescript/-/gatsby-plugin-typescript-2.1.2.tgz#a9694c3dd4dc1a4c81b1578dbb242e43d9ace0f3"
   integrity sha512-N+BS/CUqSTpnFzOf7B4H0z120AY3Uf/LcIqYrjIN7p4GgU9IOnbCJWtqJVLYaZU6tSg84Q4xk6Pq0t7e2G2OEA==
@@ -5809,7 +5809,7 @@ gatsby-plugin-web-font-loader@1.0.4:
     babel-runtime "^6.26.0"
     webfontloader "^1.6.28"
 
-gatsby-plugin-webpack-size@^1.0.0:
+gatsby-plugin-webpack-size@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-webpack-size/-/gatsby-plugin-webpack-size-1.0.0.tgz#26e3b733b82b70715e6598c7b95cefc96b9986b2"
   integrity sha512-gq7iQtFa3G2oCZcmGUSOg4WehYWrGVG7VhkkEFLNmipnYynk4038jGrlYQQjMayMwrCFcwoPAzUg5oICj6wpaQ==
@@ -5825,7 +5825,7 @@ gatsby-react-router-scroll@^2.1.3:
     scroll-behavior "^0.9.9"
     warning "^3.0.0"
 
-gatsby-remark-prismjs@^3.3.5:
+gatsby-remark-prismjs@3.3.5:
   version "3.3.5"
   resolved "https://registry.yarnpkg.com/gatsby-remark-prismjs/-/gatsby-remark-prismjs-3.3.5.tgz#0009a6677543706461516f8ab3e5cdedb9f09bd4"
   integrity sha512-e0HhhpyHJ+PqDt6VcqXJ5Dzf63rK9VcvbXJvTCi9Tqn6k62C5cnNMUR7J43aVdQRH9dDkDCF6rgVfl6XID6TEA==
@@ -5834,7 +5834,7 @@ gatsby-remark-prismjs@^3.3.5:
     parse-numeric-range "^0.0.2"
     unist-util-visit "^1.3.0"
 
-gatsby-remark-smartypants@^2.1.2:
+gatsby-remark-smartypants@2.1.2:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/gatsby-remark-smartypants/-/gatsby-remark-smartypants-2.1.2.tgz#19786139811eb77c42b78e6acd3f8b9a017d6b7a"
   integrity sha512-F3fyvuCA42nGRA2/cMeRxO48C4y8cEhorQCFHOBnNahVxoyunc4YWFhuc1WE2wEaj8DxVI0cFwjXNeNxD6g1YA==
@@ -8926,7 +8926,7 @@ npm-packlist@^1.1.6:
     ignore-walk "^3.0.1"
     npm-bundled "^1.0.1"
 
-npm-run-all@^4.1.5:
+npm-run-all@4.1.5:
   version "4.1.5"
   resolved "https://registry.yarnpkg.com/npm-run-all/-/npm-run-all-4.1.5.tgz#04476202a15ee0e2e214080861bff12a51d98fba"
   integrity sha512-Oo82gJDAVcaMdi3nuoKFavkIHBRVqQ1qvMb+9LHk/cF4P6B2m8aP04hGf7oL6wZ9BuGwX1onlLhpuoofSyoQDQ==
@@ -10147,7 +10147,7 @@ pretty-error@^2.1.1:
     renderkid "^2.0.1"
     utila "~0.4"
 
-prismjs@^1.17.1:
+prismjs@1.17.1:
   version "1.17.1"
   resolved "https://registry.yarnpkg.com/prismjs/-/prismjs-1.17.1.tgz#e669fcbd4cdd873c35102881c33b14d0d68519be"
   integrity sha512-PrEDJAFdUGbOP6xK/UsfkC5ghJsPJviKgnQOoxaDbBjwc8op68Quupwt1DeAFoG8GImPhiKXAvvsH7wDSLsu1Q==
@@ -13010,7 +13010,7 @@ vm-browserify@0.0.4:
   dependencies:
     indexof "0.0.1"
 
-wait-for-netlify-preview@^1.2.1:
+wait-for-netlify-preview@1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/wait-for-netlify-preview/-/wait-for-netlify-preview-1.2.1.tgz#e17b233091b4a67d4f616b3b99f217e521d4fdc5"
   integrity sha512-K0V0U4gyaD8JuyqPy7uPDqFU3/s+atbScf+EoiHRRNCC+2IJT7cRrxvb25pwUsWYR5NAjDUXd1mG026AYM0W5A==
