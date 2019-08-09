@@ -1,7 +1,7 @@
 const path = require("path")
 const md5File = require("md5-file")
 
-const slugFromPath = require("./src/utils/slugFromPath.module")
+const slugFromPath = require("./src/utils/slugFromPath")
 
 const fontFileHash = md5File.sync("./static/fonts/fonts.css")
 

@@ -6,7 +6,7 @@
 const fs = require("fs-extra")
 const path = require("path")
 const resolvePath = path.resolve
-const slugFromPath = require("./src/utils/slugFromPath.module")
+const slugFromPath = require("./src/utils/slugFromPath")
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
 const componentWithMDXScope = require("gatsby-plugin-mdx/component-with-mdx-scope")
