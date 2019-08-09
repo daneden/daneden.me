@@ -5,25 +5,26 @@ import { FigureProps, ImageProps } from "../interfaces/Image.interface"
 import mdToHTML from "../utils/mdToHTML"
 import { Align, Atoms } from "./designSystem/designSystem"
 
-const Figure = styled("figure")`
+const Figure = styled("figure")<FigureProps>`
   display: flex;
   flex-direction: ${(props: FigureProps) =>
     props.captionPosition === "left" ? "row" : "column"};
   justify-content: center;
-  align-items: ${props =>
+  align-items: ${(props: FigureProps) =>
     props.captionPosition === "left" ? "start" : "initial"};
   
-  margin-bottom: ${props => (props.margin ? Atoms.spacing.medium : 0)};
+  margin-bottom: ${(props: FigureProps) =>
+    props.margin ? Atoms.spacing.medium : 0};
 
   img {
     display: block;
-    width: ${props => (props.responsive ? "100%" : "auto")};
+    width: ${(props: FigureProps) => (props.responsive ? "100%" : "auto")};
     flex: 0 0 auto;
     order: 2;
   }
 
   span {
-    ${props =>
+    ${(props: FigureProps) =>
       props.captionPosition === "left"
         ? `
           writing-mode: vertical-rl;
