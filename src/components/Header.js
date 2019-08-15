@@ -3,6 +3,9 @@ import React from "react"
 import Atoms from "./designSystem/atoms"
 import PlainLink from "./designSystem/PlainLink"
 import PlainList from "./designSystem/PlainList"
+import LocationContext from "./LocationContext"
+
+const { useContext } = React
 
 const StyledHeader = styled("header")`
   border-bottom: 1px solid;
@@ -34,23 +37,30 @@ const links = [
   },
 ]
 
-const Header = ({ path, siteTitle }) => (
-  <StyledHeader>
-    <PlainLink to="/">{siteTitle}</PlainLink>
+const Header = ({ siteTitle }) => {
+  const location = useContext(LocationContext)
+  const blogPostRegex = /[0-9]{4}\/[0-9]{2}\/[0-9]{2}\//
+  return (
+    <StyledHeader>
+      <PlainLink to="/">{siteTitle}</PlainLink>
 
-    <nav>
-      <PlainList>
-        {links.map(({ to, label }) => (
-          <li key={to}>
-            <PlainLink to={to}>
-              {label}
-              {path.includes(to) ? " ☚" : ""}
-            </PlainLink>
-          </li>
-        ))}
-      </PlainList>
-    </nav>
-  </StyledHeader>
-)
+      <nav>
+        <PlainList>
+          {links.map(({ to, label }) => (
+            <li key={to}>
+              <PlainLink to={to}>
+                {label}
+                {location.includes(to) ||
+                (location.match(blogPostRegex) && to.includes("blog"))
+                  ? " ☚"
+                  : ""}
+              </PlainLink>
+            </li>
+          ))}
+        </PlainList>
+      </nav>
+    </StyledHeader>
+  )
+}
 
 export default Header

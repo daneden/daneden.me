@@ -7,6 +7,7 @@ import { Atoms } from "./designSystem/designSystem"
 import DesignSystemProvider from "./designSystem/DesignSystemProvider"
 import Footer from "./Footer"
 import Header from "./Header"
+import LocationContext from "./LocationContext"
 import Metatags from "./Metatags"
 import Wrapper from "./Wrapper"
 
@@ -68,7 +69,7 @@ export default function Layout({ children, location, ...props }) {
           },
         }}
       />
-      <React.Fragment>
+      <LocationContext.Provider value={location.pathname}>
         <Helmet>
           <link rel="icon" href={favicon} />
         </Helmet>
@@ -78,10 +79,10 @@ export default function Layout({ children, location, ...props }) {
           description={site.siteMetadata.description}
           thumbnail={`${site.siteMetadata.siteUrl}/images/og.png`}
         />
-        <Header siteTitle={site.siteMetadata.title} path={location.pathname} />
+        <Header siteTitle={site.siteMetadata.title} />
         <Wrapper>{children}</Wrapper>
         <Footer author={site.siteMetadata.authorName} />
-      </React.Fragment>
+      </LocationContext.Provider>
     </DesignSystemProvider>
   )
 }
