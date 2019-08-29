@@ -197,19 +197,19 @@ I think this image or something like this has been shown in at least half the pr
 
 What else changes when the design system itself becomes the tool? I think we can begin to address other problems that systems set out to solve, but tooling—and implementation details—prevent us from being able to. One of those problems is consistency, and to demonstrate what might be possible, I want to talk about a game.
 
-<Video cloudName="daneden" publicId="bbiy-01_srxggw" controls />
+<Video cloudName="daneden" publicId="bbiy-01_srxggw" controls secure={true} />
 
 This is a game called Baba is You, and it’s based on rules. In this level, the rules are: Baba is you, flag is win, wall is stop, and rock is push; so to win the game, I just need to push the rock and touch the flag.
 
-<Video cloudName="daneden" publicId="bbiy-02_rwvelo" controls />
+<Video cloudName="daneden" publicId="bbiy-02_rwvelo" controls secure={true} />
 
 You soon find that in order to win the game, you have to change the rules. In this case, wall is stop, and I’m surrounded by wall so… I break that rule, and I have to find a way to win.
 
-<Video cloudName="daneden" publicId="bbiy-03_pvtylk" controls />
+<Video cloudName="daneden" publicId="bbiy-03_pvtylk" controls secure={true} />
 
 The game gets progressively more... creative. This is the same level as the last, except this time, “wall is you” and “flag is stop”. Baba is nowhere to be seen, so I just need to make something on the screen win.
 
-<Video cloudName="daneden" publicId="bbiy-04_morp6g" controls />
+<Video cloudName="daneden" publicId="bbiy-04_morp6g" controls secure={true} />
 
 What you soon learn about this game is that it’s highly dependent on logical consistency. I can’t change a rule like “Baba is you” without making _something_ “you”—if there’s no “you,” then… nothing is you. You can’t win the game if you don’t exist.
 

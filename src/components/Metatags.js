@@ -37,8 +37,8 @@ function Metatags(props) {
 
       <link rel="preconnect" href="https://daneden.imgix.net" />
       <link rel="dns-prefetch" href="https://daneden.imgix.net" />
-      <link rel="preconnect" href="http://res.cloudinary.com" />
-      <link rel="dns-prefetch" href="http://res.cloudinary.com" />
+      <link rel="preconnect" href="https://res.cloudinary.com" />
+      <link rel="dns-prefetch" href="https://res.cloudinary.com" />
     </Helmet>
   )
 }
