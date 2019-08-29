@@ -1,4 +1,5 @@
 import H1 from "../components/designSystem/H1"
+import { Video } from "cloudinary-react"
 
 export const frontmatter = {
   layout: "post",
@@ -45,7 +46,7 @@ I took particular interest in what happens when you have the same set of rules w
 
 <Image
   alt="A generative art piece with two rows of four frames. Both rows feature a series of 1,000 points arranged around a circle. In each frame, the points move to a new location. In the top row, the points move linearly. In the bottom row, the points move in a random direction."
-  src="2019/08/gen-2.png"
+  src="2019/08/gen-2.jpg"
 />
 
 And here again, the same algorithm, with only a minor adjustment in the rules, can have drastically different effects. In the top row, a thousand points along the circumference of a circle are told to move in a linear path. In the bottom row, the same thousand points are told to go on a random walk—pick a direction from left, right, up, or down on each frame, and draw again at that point.
@@ -61,6 +62,12 @@ Like so many others in the field of Design Systems, I owe my excitement and unde
 [Mina Markham](https://twitter.com/MinaMarkham), through her work on Pantsuit, the first Design System for a political campaign, showed us all what it means to apply design systems that evolve with brand, in a space where tech investments were still uncommon, and could have an outsized effect on the wider world.
 
 And of course, [Jina](https://twitter.com/jina) is responsible not only for helping establish patterns like design tokens, but also for fostering a bustling and amazing community across the globe. It's thanks to her efforts that we have the design system Slack community, Clarity conference, and numerous Design System Coalitions around the world.
+
+<Image
+  alt="Portrait photographs of three women influential in design systems and web development: Nicole Sullivan, Mina Markham, and Jina Anne."
+  caption="Nicole Sullivan, Mina Markham, and Jina Anne have been instrumental in shaping the design systems field."
+  src="2019/08/ds-women.png"
+/>
 
 Along with these lessons and inspiring leaders, I owe my being here today to three things. It’s taken equal parts of luck, skill, and privilege for me to be here.
 
@@ -118,37 +125,65 @@ This is where I want us to start. This is what we’ll take with us to discover 
 
 I think the first place we can go—taking only tools and people with us—is a repositioning of design systems in relation to the product development cycle.
 
-<Image alt="" src="2019/08/ds-01.svg" invertInDarkMode={true} />
+<Image
+  alt="A diagram depicting typical design system structure. A design system has outputs in design tools as well as web and mobile code."
+  src="2019/08/ds-01.svg"
+  invertInDarkMode={true}
+/>
 
 Today, this is a common illustration of how design systems might be connected to different outputs. You might have a system that’s supported in Sketch and/or Figma, as well as mobile and web code.
 
 This picture is a bit idealistic though.
 
-<Image alt="" src="2019/08/ds-02.svg" invertInDarkMode={true} />
+<Image
+  alt="An elaborated diagram of a design system's ecosystem, showing that a design system inherits from a wider brand system, and bifurcates into separate design systems for web and for mobile."
+  src="2019/08/ds-02.svg"
+  invertInDarkMode={true}
+/>
 
 More commonly, you might actually have slightly varied systems for mobile and web, and those systems themselves are governed by a broader brand system.
 
 Plus, the systems don’t exactly directly output to these platforms or file types: we gesture at the design system in tools. In design tools, we gesture at the system in rectangles and text that aren’t representative of the nature of where they’ll (hopefully) end up.
 
-<Image alt="" src="2019/08/ds-03.svg" invertInDarkMode={true} />
+<Image
+  alt="A further elaborated diagram of design system ecosystems, showing that tools intercept the design systems and their outputs."
+  src="2019/08/ds-03.svg"
+  invertInDarkMode={true}
+/>
 
 And in code, we struggle to strike the balance between rigidity and flexibility: how do you develop a component library that's flexible enough to suit people's varying needs, while being safely and strictly typed?
 
-<Image alt="" src="2019/08/ds-04.svg" invertInDarkMode={true} />
+<Image
+  alt="A further elaborated diagram of design systems and tools, illustrating how partner teams mediate between tools, systems, and outputs/products."
+  src="2019/08/ds-04.svg"
+  invertInDarkMode={true}
+/>
 
 Ultimately, the burden falls to partners and product teams to interpret the system in these tools and through various abstractions, passing fragments of their product back and forth between functions, and often shipping something neither fully close to what they wanted, nor fully close to the intended system.
 
 And then they have to do it all again on another platform.
 
-<Image alt="" src="2019/08/ds-01.svg" invertInDarkMode={true} />
+<Image
+  alt="A diagram depicting typical design system structure. A design system has outputs in design tools as well as web and mobile code."
+  src="2019/08/ds-01.svg"
+  invertInDarkMode={true}
+/>
 
 Let’s go back to this diagram. Let’s try to think about how this flow would look if the design system became the tool, rather than an abstract entity that people gestured at using an array of tools.
 
-<Image alt="" src="2019/08/ds-05.svg" invertInDarkMode={true} />
+<Image
+  alt="A diagram showing a product team interacting directly with a design system, with outputs such as design artifacts and code being deemphasised."
+  src="2019/08/ds-05.svg"
+  invertInDarkMode={true}
+/>
 
 If the design system itself is the tool, then partners and product teams would directly manipulate the comprising parts of the system, and the outputs and platforms become what they ought to be—implementation details.
 
-<Image alt="" src="2019/08/ds-06.svg" invertInDarkMode={true} />
+<Image
+  alt="A diagram showing how product teams can interact directly with a design system, which in turn outputs a desired product. The outputs of design artifacts and code are deemphasised."
+  src="2019/08/ds-06.svg"
+  invertInDarkMode={true}
+/>
 
 In this way, the design system becomes a tool to directly create the product that the team has in mind, and the artifacts—the Sketch and Figma files, the mobile and web code—become side effects.
 
@@ -162,11 +197,19 @@ I think this image or something like this has been shown in at least half the pr
 
 What else changes when the design system itself becomes the tool? I think we can begin to address other problems that systems set out to solve, but tooling—and implementation details—prevent us from being able to. One of those problems is consistency, and to demonstrate what might be possible, I want to talk about a game.
 
+<Video cloudName="daneden" publicId="bbiy-01_srxggw" controls />
+
 This is a game called Baba is You, and it’s based on rules. In this level, the rules are: Baba is you, flag is win, wall is stop, and rock is push; so to win the game, I just need to push the rock and touch the flag.
+
+<Video cloudName="daneden" publicId="bbiy-02_rwvelo" controls />
 
 You soon find that in order to win the game, you have to change the rules. In this case, wall is stop, and I’m surrounded by wall so… I break that rule, and I have to find a way to win.
 
+<Video cloudName="daneden" publicId="bbiy-03_pvtylk" controls />
+
 The game gets progressively more... creative. This is the same level as the last, except this time, “wall is you” and “flag is stop”. Baba is nowhere to be seen, so I just need to make something on the screen win.
+
+<Video cloudName="daneden" publicId="bbiy-04_morp6g" controls />
 
 What you soon learn about this game is that it’s highly dependent on logical consistency. I can’t change a rule like “Baba is you” without making _something_ “you”—if there’s no “you,” then… nothing is you. You can’t win the game if you don’t exist.
 

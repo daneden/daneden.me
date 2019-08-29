@@ -44,6 +44,12 @@ export default function Layout({ children, location, ...props }) {
             padding: 0,
           },
 
+          video: {
+            display: "block",
+            marginBottom: Atoms.spacing.medium,
+            maxWidth: "100%",
+          },
+
           html: {
             backgroundColor: "var(--wash-color)",
             color: "var(--text-color)",
