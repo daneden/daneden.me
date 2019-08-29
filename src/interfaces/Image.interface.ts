@@ -9,5 +9,6 @@ export interface ImageProps extends FigureProps {
   align?: "left" | "right"
   alt?: string
   caption?: string
+  invertInDarkMode?: boolean
   src: string
 }

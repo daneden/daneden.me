@@ -15,9 +15,10 @@ I’ve been working on design systems for around 5 years: almost as long as the 
 Even before “design systems” was a Thing, I’ve always found myself drawn to hobbies that exhibit some of the same qualities of systems.
 
 <Image
-  alt="A Lego Mindstorms computer module with Lego pieces attached to it, forming a robot."
-  src="2019/08/lego-mindstorms.png"
   align="right"
+  alt="A Lego Mindstorms computer module with Lego pieces attached to it, forming a robot."
+  caption="Lego Mindstorms"
+  src="2019/08/lego-mindstorms.png"
 />
 
 When I was a kid, I loved Lego Mindstorms. The model pictured is a lot more sophisticated than what I had as a child, but the concept is the same. The key piece here is the gray brick in the middle; it’s effectively a computer with a motor inside it, which you could plug into a PC and, using something similar to [Scratch](https://scratch.mit.edu), you could program it to do different things. By assembling these different blocks of instructions, you could have it run the motor, which in turn, you might have attached a set of wheels to, and before you know it, you’ve built a robot that can drive around on a tabletop.
@@ -26,7 +27,8 @@ My fascination in this didn’t stop at Lego. In Britain when I was growing up, 
 
 <Image
   align="left"
-  alt="A Lego Mindstorms computer module with Lego pieces attached to it, forming a robot."
+  alt="The cover of the first issue of “Real Robots” magazine, featuring a picture of “The Terminator”. The catchphrase for the magazine was “If you can’t beat them, build them!”. Also pictured in the top left corner of the magazine is the robot that you build using the pieces from the magazine issues."
+  caption="Issue 1 of “Real Robots”"
   src="2019/08/real-robots.jpg"
 />
 
@@ -54,13 +56,13 @@ Now, these stories will come back into play a little later on: right now, they h
 
 Like so many others in the field of Design Systems, I owe my excitement and understanding of design systems to the work of a handful of influential people.
 
-[Nicole Sullivan](https://twitter.com/stubbornella) opened my eyes to object-oriented CSS and design, popularizing the media object and opening the door to modular objects in front end development.
+[Nicole Sullivan](https://twitter.com/stubbornella) opened my eyes to object-oriented CSS and design, popularizing the media object and opening the door to modular objects in front end development. Her work and writing transformed the way I thought about designing and building websites.
 
-[Mina Markham](https://twitter.com/MinaMarkham) showed us all what it means to apply design systems that evolve with brand, in a space where tech investments were still uncommon, and could have an outsized effect on the wider world: political campaigns.
+[Mina Markham](https://twitter.com/MinaMarkham), through her work on Pantsuit, the first Design System for a political campaign, showed us all what it means to apply design systems that evolve with brand, in a space where tech investments were still uncommon, and could have an outsized effect on the wider world.
 
-And of course, [Jina](https://twitter.com/jina) is responsible not only for helping establish patterns like design tokens, but also for fostering a bustling and amazing community across the globe. Literally none of us would be here without her.
+And of course, [Jina](https://twitter.com/jina) is responsible not only for helping establish patterns like design tokens, but also for fostering a bustling and amazing community across the globe. It's thanks to her efforts that we have the design system Slack community, Clarity conference, and numerous Design System Coalitions around the world.
 
-Along with these lessons, I owe my being here today to three things. It’s taken equal parts of luck, skill, and privilege for me to be here.
+Along with these lessons and inspiring leaders, I owe my being here today to three things. It’s taken equal parts of luck, skill, and privilege for me to be here.
 
 Sometimes, it’s been an outsized amount of luck. I got lucky when a startup in San Francisco took a chance on me after I graduated in England, allowing me to build a life in the US.
 
@@ -92,9 +94,9 @@ Through this experience, and throughout my career since, I’ve realized that my
 
 Now, at [Facebook](https://facebook.com), things feel a little different. At Dropbox, the problems we aimed to solve with design systems were more about keeping 30-odd designers on the same page, and making sure our product felt like one consistent thing.
 
-At Facebook, in comparison, consistency is a hopeful outcome, rather than a goal. The objective is speed and efficiency, and the way we get there is entirely different.
+At Facebook, in comparison, consistency is a hopeful outcome, rather than an explicit goal. The objective is speed and efficiency, and the way we get there is entirely different.
 
-With so many different products, and thousands of engineers and designers, it’s impossible to be enforcers of the system. We can’t prevent people from breaking the system, especially with the many handoffs that happen. So our role as a systems team turns from that of _organizer_ and _enforcer_, to that of _anthropologist_ and _researcher_.
+With so many different products, and thousands of engineers and designers, it’s impossible to be enforcers of the system. We can’t prevent people from breaking the system, especially with the many handoffs that happen between different functions and teams. In turn, our role as a systems team turns from that of _organizer_ and _enforcer_, to that of _anthropologist_ and _researcher_.
 
 It’s futile for us to expect everyone to use the design system, so instead, we ask: why aren’t people using it? How can we make it more useful? How can we make a system that allows meaningful exploration and divergence from the system? And how can we make those divergences retain the spirit of the system?
 
@@ -108,31 +110,45 @@ It’s components and patterns; it’s integration with, or development of, tool
 
 But critically, a design system is about _people:_ how they interact, how they understand one another, and how they work together to achieve a common goal. It’s made by people, used by people, and experienced by people. It’s challenged and shaped and broken by people.
 
-And, when you think about it, all those other things—components, resources, guidance, and support—boil down to just two essential categories. People and tools.
+And, when you think about it, all those other things—components, resources, guidance, and support—boil down to just two essential categories: **People and tools.**
 
-This is where I want us to start. This is where we can begin to think about where we can go.
+This is where I want us to start. This is what we’ll take with us to discover where we can go.
 
 ## Systems As Tools
 
 I think the first place we can go—taking only tools and people with us—is a repositioning of design systems in relation to the product development cycle.
 
+<Image alt="" src="2019/08/ds-01.svg" invertInDarkMode={true} />
+
 Today, this is a common illustration of how design systems might be connected to different outputs. You might have a system that’s supported in Sketch and/or Figma, as well as mobile and web code.
 
-This picture is a bit idealistic though;
+This picture is a bit idealistic though.
+
+<Image alt="" src="2019/08/ds-02.svg" invertInDarkMode={true} />
 
 More commonly, you might actually have slightly varied systems for mobile and web, and those systems themselves are governed by a broader brand system.
 
 Plus, the systems don’t exactly directly output to these platforms or file types: we gesture at the design system in tools. In design tools, we gesture at the system in rectangles and text that aren’t representative of the nature of where they’ll (hopefully) end up.
 
+<Image alt="" src="2019/08/ds-03.svg" invertInDarkMode={true} />
+
 And in code, we struggle to strike the balance between rigidity and flexibility: how do you develop a component library that's flexible enough to suit people's varying needs, while being safely and strictly typed?
+
+<Image alt="" src="2019/08/ds-04.svg" invertInDarkMode={true} />
 
 Ultimately, the burden falls to partners and product teams to interpret the system in these tools and through various abstractions, passing fragments of their product back and forth between functions, and often shipping something neither fully close to what they wanted, nor fully close to the intended system.
 
 And then they have to do it all again on another platform.
 
+<Image alt="" src="2019/08/ds-01.svg" invertInDarkMode={true} />
+
 Let’s go back to this diagram. Let’s try to think about how this flow would look if the design system became the tool, rather than an abstract entity that people gestured at using an array of tools.
 
+<Image alt="" src="2019/08/ds-05.svg" invertInDarkMode={true} />
+
 If the design system itself is the tool, then partners and product teams would directly manipulate the comprising parts of the system, and the outputs and platforms become what they ought to be—implementation details.
+
+<Image alt="" src="2019/08/ds-06.svg" invertInDarkMode={true} />
 
 In this way, the design system becomes a tool to directly create the product that the team has in mind, and the artifacts—the Sketch and Figma files, the mobile and web code—become side effects.
 

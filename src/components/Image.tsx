@@ -50,6 +50,7 @@ const Image: FunctionComponent<ImageProps> = ({
   className,
   caption,
   captionPosition,
+  invertInDarkMode = false,
   responsive = true,
   margin = true,
   src,
@@ -93,6 +94,13 @@ const Image: FunctionComponent<ImageProps> = ({
         loading: "lazy",
       }}
       sizes={sizes}
+      css={
+        invertInDarkMode && {
+          "@media (prefers-color-scheme: dark)": {
+            filter: "invert(100%) hue-rotate(180deg)",
+          },
+        }
+      }
     />
   ) : (
     <img src={url} />
