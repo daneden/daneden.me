@@ -34,6 +34,11 @@ function Metatags(props) {
       <meta name="twitter:card" content="summary_large_image" />
 
       {thumbnail && <meta name="twitter:image" content={thumbnail} />}
+
+      <link rel="preconnect" href="https://daneden.imgix.net" />
+      <link rel="dns-prefetch" href="https://daneden.imgix.net" />
+      <link rel="preconnect" href="https://res.cloudinary.com" />
+      <link rel="dns-prefetch" href="https://res.cloudinary.com" />
     </Helmet>
   )
 }

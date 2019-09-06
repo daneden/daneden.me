@@ -60,6 +60,7 @@
     "react-imgix": "8.6.4",
     "react-katex": "2.0.2",
     "react-prop-matrix": "1.0.0",
+    "react-script-tag": "1.1.2",
     "remark": "11.0.1",
     "remark-react": "6.0.0",
     "slug": "1.1.0"
