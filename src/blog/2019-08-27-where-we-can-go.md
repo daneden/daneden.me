@@ -1,5 +1,5 @@
 import H1 from "../components/designSystem/H1"
-import { Video } from "cloudinary-react"
+import CFVideo from "../components/CFVideo"
 
 export const frontmatter = {
   layout: "post",
@@ -22,14 +22,14 @@ Even before “design systems” was a Thing, I’ve always found myself drawn t
   src="2019/08/lego-mindstorms.png"
 />
 
-When I was a kid, I loved Lego Mindstorms. The model pictured is a lot more sophisticated than what I had as a child, but the concept is the same. The key piece here is the gray brick in the middle; it’s effectively a computer with a motor inside it, which you could plug into a PC and, using something similar to [Scratch](https://scratch.mit.edu), you could program it to do different things. By assembling these different blocks of instructions, you could have it run the motor, which in turn, you might have attached a set of wheels to, and before you know it, you’ve built a robot that can drive around on a tabletop.
+When I was a kid, I loved Lego Mindstorms. The model pictured is a lot more sophisticated than what I had as a child, but the concept is the same. The key piece here is the gray brick in the middle; it’s effectively a computer with a motor inside it, which you could plug into a PC and, using something similar to [Scratch](https://scratch.mit.edu), you could program it to do different things. By assembling blocks of instructions, you could have it run the motor, which in turn, you might have attached a set of wheels to, and before you know it, you’ve built a robot that can drive around on a tabletop.
 
 My fascination in this didn’t stop at Lego. In Britain when I was growing up, we had this magazine that came out every two weeks called “Real Robots”, and in each issue, you’d get pieces of a robot—the little blue one pictured in the top left corner of the cover.
 
 <Image
   align="left"
   alt="The cover of the first issue of “Real Robots” magazine, featuring a picture of “The Terminator”. The catchphrase for the magazine was “If you can’t beat them, build them!”. Also pictured in the top left corner of the magazine is the robot that you build using the pieces from the magazine issues."
-  caption="Issue 1 of “Real Robots”"
+  caption="Issue № 1 of “Real Robots”"
   src="2019/08/real-robots.jpg"
 />
 
@@ -105,7 +105,23 @@ At Facebook, in comparison, consistency is a hopeful outcome, rather than an exp
 
 With so many different products, and thousands of engineers and designers, it’s impossible to be enforcers of the system. We can’t prevent people from breaking the system, especially with the many handoffs that happen between different functions and teams. In turn, our role as a systems team turns from that of _organizer_ and _enforcer_, to that of _anthropologist_ and _researcher_.
 
+<Image
+  alt="An illustration contrasting two shapes: a hexagon with rigid sides, and an amoeba-like organic shape."
+  caption="Illustration by [Fanny Luor](https://twitter.com/fannyluor)."
+  captionPosition="left"
+  invertInDarkMode={true}
+  src="2019/08/wwcg-02.png"
+/>
+
 It’s futile for us to expect everyone to use the design system, so instead, we ask: why aren’t people using it? How can we make it more useful? How can we make a system that allows meaningful exploration and divergence from the system? And how can we make those divergences retain the spirit of the system?
+
+<Image
+  alt="An illustration depicting two scenarios: on the left, a person is arranging shapes in a specific order; on the right, the person is observing the shapes form an arrangement by themselves."
+  caption="Illustration by [Fanny Luor](https://twitter.com/fannyluor)."
+  captionPosition="left"
+  invertInDarkMode={true}
+  src="2019/08/wwcg-03.png"
+/>
 
 And rather than trying to keep things in a specific order, constantly fighting against the tide, we have to step back and see what form the system takes in the hands of the people we build it for.
 
@@ -187,29 +203,65 @@ If the design system itself is the tool, then partners and product teams would d
 
 In this way, the design system becomes a tool to directly create the product that the team has in mind, and the artifacts—the Sketch and Figma files, the mobile and web code—become side effects.
 
+<Image
+  alt="A graph showing two distinct phases of product development on two axes: time and fidelity. Design and engineering are separated by a 'handoff' event. Design reaches a peak in fidelity, but after handoff, engineering has a slow crawl increasing in fidelity, and never reaches the same peak as design."
+  src="2019/08/ds-07.svg"
+  invertInDarkMode={true}
+/>
+
 At Facebook when we talk about this problem, we turn to this graph. This is a known problem in traditional product development cycles: there’s a moment in the development cycle where design is somewhat complete, and at a high fidelity, and then a “handoff” happens to actually build the product. What results is often a massive initial drop in fidelity, and a slow crawl back to that level, sometimes not even reaching the same level of quality as originally planned.
+
+<Image
+  alt="The same graph of fidelity over time, this time combining design and engineering so that they happen simultaneously and reach a high level of fidelity."
+  src="2019/08/ds-08.svg"
+  invertInDarkMode={true}
+/>
 
 If we’re able to create tools that put the design system first and foremost, and potentially even create tools that designers and developers alike can use simultaneously, what happens is that those processes happen together, and the result is of a higher standard of quality.
 
-I think this image or something like this has been shown in at least half the presentations yesterday. [ad-lib through making sure customers are captured too]
+I have one more note on this idea before we explore its implications. Something we commonly talk about in this industry is how designers “throw their work over the fence” to engineering.
+
+<Image
+  alt="A diagram showing how design throws their work over the fence to engineering."
+  src="2019/08/ds-09.svg"
+  invertInDarkMode={true}
+/>
+
+But something we always forget is that this isn't where the product development cycle ends: where it ends is in the hands of the customer.
+
+<Image
+  alt="A diagram showing design throw their work over the fence to engineering, then engineering throwing their work over the fence to customers."
+  src="2019/08/ds-10.svg"
+  invertInDarkMode={true}
+/>
+
+This means that designers are even further removed from customers than we tend to acknowledge. We spend so much time “othering” engineers, but ultimately it is engineers that are responsible for what the customer experiences. The work that we do in tools like Figma and Sketch is meaningless to customers: they're static facades of what they will actually experience on their computers and phones.
+
+<Image
+  alt="A diagram showing product teams throwing their work over the fence to customers."
+  src="2019/08/ds-11.svg"
+  invertInDarkMode={true}
+/>
+
+If our tools let designers, engineers, and entire product teams work together in tandem, it helps reduce the points of handoff—the number of opportunities for misinterpretation or unintended compromises—resulting in a higher quality in the final product, and an improved experience for the customer.
 
 ## Reactive Systems
 
 What else changes when the design system itself becomes the tool? I think we can begin to address other problems that systems set out to solve, but tooling—and implementation details—prevent us from being able to. One of those problems is consistency, and to demonstrate what might be possible, I want to talk about a game.
 
-<Video cloudName="daneden" publicId="bbiy-01_srxggw" controls secure={true} />
+<CFVideo id="deb33d0e52da5d570db1d65bfea7c51f" />
 
 This is a game called Baba is You, and it’s based on rules. In this level, the rules are: Baba is you, flag is win, wall is stop, and rock is push; so to win the game, I just need to push the rock and touch the flag.
 
-<Video cloudName="daneden" publicId="bbiy-02_rwvelo" controls secure={true} />
+<CFVideo id="7a83662c2f129af6e8631f7066fd9025" />
 
 You soon find that in order to win the game, you have to change the rules. In this case, wall is stop, and I’m surrounded by wall so… I break that rule, and I have to find a way to win.
 
-<Video cloudName="daneden" publicId="bbiy-03_pvtylk" controls secure={true} />
+<CFVideo id="f0f37c0f8e57057b1fe3a69367ac70bd" />
 
 The game gets progressively more... creative. This is the same level as the last, except this time, “wall is you” and “flag is stop”. Baba is nowhere to be seen, so I just need to make something on the screen win.
 
-<Video cloudName="daneden" publicId="bbiy-04_morp6g" controls secure={true} />
+<CFVideo id="f06847cd14827ba12d678310a5982636" />
 
 What you soon learn about this game is that it’s highly dependent on logical consistency. I can’t change a rule like “Baba is you” without making _something_ “you”—if there’s no “you,” then… nothing is you. You can’t win the game if you don’t exist.
 
@@ -217,9 +269,7 @@ What I find interesting about Baba is You is how straightforward its system of r
 
 From experience, I know that designers often make changes to system components—deliberately or not—without realizing their implications. But what if this hypothetical tool could show designers the impact that their decisions had on a system?
 
-What if, when they change the color of a button from blue to purple, they can observe the outsized effect that has on the system: because they’re no longer changing the color of a rectangle…
-
-…but changing the semantic meaning of a color across a wider system.
+What if, when they change the color of a button from blue to purple, they can observe the outsized effect that has on the system: because they’re no longer changing the color of a rectangle, but changing the semantic meaning of a color across a wider system.
 
 ## Process Over Output
 
@@ -247,21 +297,21 @@ With sophisticated systems and tooling, we shouldn’t be “handing things off�
 
 All this is to say that we have a long and growing list of features that design systems and tools should enable for us, but that we’re barely seeing in development today.
 
-Features like automated internationalization, so we can see how our components react to different locales…
-
-…built-in colorblindness simulation, contrast checking, and consideration for input methods that aren’t touch- or pointer-based…
-
-content strategy tooling, allowing writers to easily test different strings in usability studies and at scale…
-
-…embedded research findings, colocated with components and patterns, so that designers can make informed decisions about how to enumerate a list of objects, or when they should diverge from a standard…
-
-…and privacy linting, so that product teams know when they’re asking users for sensitive information, how to do so with care, and how to protect the rights and data of their customers.
+Features like automated internationalization, so we can see how our components react to different locales; built-in colorblindness simulation, contrast checking, and consideration for input methods that aren’t touch- or pointer-based; content strategy tooling, allowing writers to easily test different strings in usability studies and at scale; embedded research findings, colocated with components and patterns, so that designers can make informed decisions about how to enumerate a list of objects, or when they should diverge from a standard; and privacy linting, so that product teams know when they’re asking users for sensitive information, how to do so with care, and how to protect the rights and data of their customers.
 
 And you’ll note that none of these features are about rectangles or text, or React or Vue, or a platform or aesthetic. They’re about people.
 
 ## People
 
 Which brings me to the end of this exploration. I’ve tried to paint a picture—albeit a fuzzy one—of where I think we can find more effective design processes; but ultimately, no matter what path we take over the next few years, as design and development tools continue to change, I think we’ll end up in the same place: making better bridges between the people involved in building something.
+
+<Image
+  alt="An illustration showing a network of people, all different shapes and all connected to each other."
+  caption="Illustration by [Fanny Luor](https://twitter.com/fannyluor)."
+  captionPosition="left"
+  invertInDarkMode={true}
+  src="2019/08/wwcg-05.png"
+/>
 
 If there’s one thing I’ve learned in years of working on design systems at scale, it’s this: design systems are about people. In our journey, we took tools with us; but any tool today seems to just get in the way. At the core of their essence, design systems are just a proxy for getting people to understand one another, work towards a common goal, in service of people.
 
@@ -278,7 +328,7 @@ I want our tools to be highly collaborative, and open to entire teams and commun
 <Image
   alt="A group of people building structures out of Lego in Olafur Eliasson's art piece, “The Collectivity Project”."
   src="2019/08/olafur-eliasson.jpg"
-  caption="Olafur Eliasson, The Collectivity Project. Image Copyright Olafur Eliasson."
+  caption="Olafur Eliasson, The Collectivity Project. Image Copyright [Olafur Eliasson](https://www.olafureliasson.net)."
 />
 
 And to put people at the center of all of this, allowing everyone to offer their expertise; that sounds like a sure-fire way for us to build truly amazing things.
