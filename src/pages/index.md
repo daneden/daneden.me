@@ -3,9 +3,10 @@ import Showcase from "../components/Showcase"
 <Showcase />
 
 Daniel Eden is writing, thinking, and talking about Design Systems: how they
-break, how they scale, and the people that maintain them.
+break, how they scale, and the people that maintain them. He also prefers to
+talk about himself in the first person.
 
-I’m currently living in Oakland, California and working as a Design Lead for
+I’m currently living in London, U.K. and working as a Design Lead for
 [Facebook](https://facebook.com). I help to create and maintain the Design
 System for Facebook’s Ads and Business products. Our team produces components,
 patterns, guidance, and tools to help hundreds of product teams build
