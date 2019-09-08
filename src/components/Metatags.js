@@ -1,6 +1,14 @@
 import React from "react"
 import Helmet from "react-helmet"
 
+const dnsPrefetchURLs = [
+  "https://daneden.imgix.net",
+  "https://videodelivery.net",
+  "https://www.google-analytics.com",
+  "https://embed.videodelivery.net",
+  "https://www.googletagmanager.com",
+]
+
 function Metatags(props) {
   const { title, defaultTitle, description, url, pathname, thumbnail } = props
 
@@ -35,10 +43,10 @@ function Metatags(props) {
 
       {thumbnail && <meta name="twitter:image" content={thumbnail} />}
 
-      <link rel="preconnect" href="https://daneden.imgix.net" />
-      <link rel="dns-prefetch" href="https://daneden.imgix.net" />
-      <link rel="preconnect" href="https://res.cloudinary.com" />
-      <link rel="dns-prefetch" href="https://res.cloudinary.com" />
+      {dnsPrefetchURLs.map(url => [
+        <link rel="preconnect" href={url} />,
+        <link rel="dns-prefetch" href={url} />,
+      ])}
     </Helmet>
   )
 }
