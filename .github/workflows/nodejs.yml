@@ -12,6 +12,8 @@ jobs:
         node-version: [11.x]
 
     steps:
+    - name: image-actions
+      uses: calibreapp/image-actions@1.0.0
     - uses: actions/checkout@v1
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
