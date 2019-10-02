@@ -17,9 +17,12 @@ module.exports = {
   },
   polyfill: false,
   plugins: [
+    {
+      resolve: "@bundle-analyzer/gatsby-plugin",
+      options: { token: "6b65f3dd607754ad7bf8b1ff985957acc9cb11a9" },
+    },
     "gatsby-plugin-emotion",
     "gatsby-plugin-react-helmet",
-    "gatsby-plugin-webpack-size",
     "gatsby-plugin-typescript",
     {
       resolve: "gatsby-plugin-mdx",
