@@ -5782,14 +5782,6 @@ gatsby-plugin-feed@2.3.15:
     lodash.merge "^4.6.2"
     rss "^1.2.2"
 
-gatsby-plugin-google-gtag@1.1.11:
-  version "1.1.11"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-gtag/-/gatsby-plugin-google-gtag-1.1.11.tgz#ee1ca19e880b844083214e42e720ba41da969c0d"
-  integrity sha512-JGGoCsD7RydCUH7SAScrrDjeEvrEWxzTTZE41/9M4et5Kq6mF7z7AQLNeSv9Iz2jHvDrYX6+UeX+6tASy8ce0g==
-  dependencies:
-    "@babel/runtime" "^7.6.2"
-    minimatch "^3.0.4"
-
 gatsby-plugin-manifest@2.2.20:
   version "2.2.20"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-2.2.20.tgz#67fa1d6335846097364c2eceece5a4bdc326706e"
