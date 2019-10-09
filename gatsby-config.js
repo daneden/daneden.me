@@ -129,24 +129,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-gtag`,
-      options: {
-        trackingIds: ["UA-122108242-1"],
-
-        gtagConfig: {
-          optimize_id: "GTM-MNBLGN7",
-          anonymize_ip: true,
-          cookie_expires: 0,
-        },
-
-        pluginConfig: {
-          head: false,
-          respectDNT: true,
-          exclude: ["/preview/**", "/do-not-track/me/too/"],
-        },
-      },
-    },
-    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: SITE_NAME,
