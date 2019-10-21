@@ -1191,10 +1191,10 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@bundle-analyzer/core@^0.5.0":
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/@bundle-analyzer/core/-/core-0.5.0.tgz#4661616c0767c48d9c7382bd11fdae46b4139084"
-  integrity sha512-XrxjJ/yUAkL3a52N19CtPmFAYJir1necD1/zoga97M3Vq4GO394TR6RBCMcQnt/F2t8Wj7IM6IKF1ZYdYSxHYw==
+"@bundle-analyzer/core@^0.5.1":
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/@bundle-analyzer/core/-/core-0.5.1.tgz#f993cb89e26602d0d75af73e51b06a4967191b24"
+  integrity sha512-E75rX40U6aEW+T/LgWeM2iUGeqzPcxho918KFKvK97PzKh7uRpsHWTm+3S7chQcHAGxGOH3EKdAStPV5TCK7Gg==
   dependencies:
     axios "^0.19.0"
     brotli-size "^1.0.0"
@@ -1202,19 +1202,19 @@
     gzip-size "^5.1.1"
     omit-deep "^0.3.0"
 
-"@bundle-analyzer/gatsby-plugin@0.5.0":
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/@bundle-analyzer/gatsby-plugin/-/gatsby-plugin-0.5.0.tgz#7b9c4f9e59c37a1dc0f7e342da5e21ee5e157234"
-  integrity sha512-SGY6vQcG9Q3b8l0CIPlT52I5IF0nb0Bte1Z8LKDVe4VE63VKfzwzK6u7gD46VeMSmzvjGhpGeD/F2JAqzWnPQg==
+"@bundle-analyzer/gatsby-plugin@0.5.1":
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/@bundle-analyzer/gatsby-plugin/-/gatsby-plugin-0.5.1.tgz#9f029116b2d86adecc95819cd5cdaa4fa9a13ee5"
+  integrity sha512-3pdNtlKCesaz9h3gYAUecYa8dpL7NhIq2orLAPa6fWMcHBc5fmvS5vV4d57CVojhlkWphazFj4w/AUET0fWhBw==
   dependencies:
-    "@bundle-analyzer/webpack-plugin" "^0.5.0"
+    "@bundle-analyzer/webpack-plugin" "^0.5.1"
 
-"@bundle-analyzer/webpack-plugin@^0.5.0":
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/@bundle-analyzer/webpack-plugin/-/webpack-plugin-0.5.0.tgz#14d6f88086f28c28834c93a62503dcda39695bcf"
-  integrity sha512-z8rfjy7LssV6uPsG0m2atE6IucQaBklV6RPvGvhC8FFRCB0c51fqIqqqC18GyzGN921MECxMdrhN3cZoHsobMA==
+"@bundle-analyzer/webpack-plugin@^0.5.1":
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/@bundle-analyzer/webpack-plugin/-/webpack-plugin-0.5.1.tgz#cf8c67a2b9456f4f15a3f5af903fd3226d951008"
+  integrity sha512-eedcDsnRmjI5ECFnKsLaamxSuPKF1B31DpMNcAkY4laUH0/okFqYIbZTx/H73CcDmt4PNOtqtLUnrnojZRXamQ==
   dependencies:
-    "@bundle-analyzer/core" "^0.5.0"
+    "@bundle-analyzer/core" "^0.5.1"
 
 "@emotion/babel-plugin-jsx-pragmatic@^0.1.3":
   version "0.1.3"
