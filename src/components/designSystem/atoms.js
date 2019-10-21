@@ -7,6 +7,7 @@ const scales = {
   medium: 1,
   large: 1.5,
   xlarge: 3,
+  xxlarge: 4.5,
 }
 
 const widths = {

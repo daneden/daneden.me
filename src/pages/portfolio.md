@@ -1,9 +1,10 @@
 import Helmet from "react-helmet"
 import H1 from "../components/designSystem/H1"
+import random from "../utils/random"
 
 <Helmet title="Portfolio" />
 
-<H1 width={100}>Portfolio</H1>
+<H1 width={random(80)} slant={random(13)} weight={random(700)}>Portfolio</H1>
 
 ## Facebook
 
