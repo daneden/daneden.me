@@ -2,6 +2,7 @@ import { Global } from "@emotion/core"
 import React from "react"
 import Helmet from "react-helmet"
 import favicon from "../../static/images/favicon.png"
+import "../fonts/fonts.css"
 import useLayoutQuery from "../hooks/useLayoutQuery"
 import { Atoms } from "./designSystem/designSystem"
 import DesignSystemProvider from "./designSystem/DesignSystemProvider"
@@ -72,6 +73,10 @@ export default function Layout({ children, location, ...props }) {
 
           ".footnotes ol": {
             paddingLeft: 0,
+          },
+
+          "#gatsby-noscript": {
+            display: "none",
           },
         }}
       />

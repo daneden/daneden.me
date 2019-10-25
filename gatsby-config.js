@@ -1,9 +1,6 @@
 const path = require("path")
-const md5File = require("md5-file")
 
 const slugFromPath = require("./src/utils/slugFromPath")
-
-const fontFileHash = md5File.sync("./static/fonts/fonts.css")
 
 const SITE_NAME = "Daniel Eden, Designer"
 
@@ -50,6 +47,13 @@ module.exports = {
       options: {
         path: `${__dirname}/src/blog/`,
         name: "blog",
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "fonts",
+        path: `${__dirname}/src/fonts/`,
       },
     },
     {
@@ -113,19 +117,6 @@ module.exports = {
             title: "daneden.me RSS Feed",
           },
         ],
-      },
-    },
-    {
-      resolve: "gatsby-plugin-web-font-loader",
-      options: {
-        custom: {
-          families: [
-            "Orelo Variable",
-            "Unititled Sans Web",
-            "Founders Grotesk Mono Web",
-          ],
-          urls: [`/fonts/fonts.css?v=${fontFileHash}`],
-        },
       },
     },
     {
