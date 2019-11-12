@@ -5,6 +5,6 @@ import random from "../utils/random"
 
 <Helmet title="Blog" />
 
-<H1 width={random(130)} weight={random(900)}>Blog</H1>
+<H1>Blog</H1>
 
 <BlogPosts />

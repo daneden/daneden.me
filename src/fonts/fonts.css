@@ -50,6 +50,9 @@
 
 @font-face {
   font-display: swap;
-  font-family: "Orelo Variable";
-  src: url("OreloVariable.ttf") format("truetype-variations");
+  font-family: "Ayer Poster Angular Web";
+  font-style: italic;
+  font-weight: bold;
+  src: url("AyerPosterAngular-SemiBoldItalic-Web.woff2") format("woff2"),
+    url("AyerPosterAngular-SemiBoldItalic-Web.woff") format("woff");
 }
