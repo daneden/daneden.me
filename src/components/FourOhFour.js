@@ -1,69 +1,46 @@
-import { Global } from "@emotion/core"
+import { Global, keyframes } from "@emotion/core"
 import styled from "@emotion/styled"
 import React from "react"
-import map from "../utils/map"
-import times from "../utils/times"
 import Atoms from "./designSystem/atoms"
 import H1 from "./designSystem/H1"
 
-const { useLayoutEffect, useState } = React
+const { pnf, fof } = {
+  pnf: 8.45,
+  fof: 1.3562091503,
+}
+
+const bgMarquee = keyframes`
+  from {
+    background-position: ${pnf * -10}vh 0, ${fof * 50}vh 10vh, ${pnf *
+  -5}vh 60vh;
+  }
+
+  to {
+    background-position: ${pnf * 10}vh 0, ${fof * -50}vh 10vh, ${pnf *
+  5}vh 60vh;
+  }
+`
+
+console.log(bgMarquee)
 
 const StyledH1 = styled(H1)`
-  font-size: 8vw;
+  height: 70vh;
   margin: 0;
   margin-left: -50vw;
   padding: 0;
   width: 100vw;
+  background-image: url("/images/pnf.svg"), url("/images/404.svg"),
+    url("/images/pnf.svg");
+  background-repeat: repeat-x;
+  background-size: auto 10vh, auto 50vh, auto 10vh;
+  background-position: 0 0, 0 10vh, 0 60vh;
+  animation: ${bgMarquee} 10s infinite linear;
+  span {
+    visibility: hidden;
+  }
 `
 
 export default function FourOhFour() {
-  const [position, setPosition] = useState({
-    x: 1,
-    y: 0.5,
-  })
-
-  // A function to track the current mouse position as a percentage of the viewport size
-  const mouseMoveListener = e => {
-    const { clientX, clientY } = e
-    const { innerWidth, innerHeight } = window
-
-    // Limit the value accuracy to speed up this effect
-    const xPercent = (clientX / innerWidth).toFixed(3)
-    const yPercent = (clientY / innerHeight).toFixed(3)
-
-    setPosition({
-      x: xPercent,
-      y: yPercent,
-    })
-  }
-
-  // The min and max values for these properties
-  const ranges = {
-    width: [30, 110],
-    weight: [100, 900],
-  }
-
-  // Create an array of ranges that results in a mirror image of
-  // decreasing-and-increasing margins
-  const headings = times(5).map((n, i, arr) => {
-    const multiplier = map(i, 0, arr.length - 1, -1, 1)
-    const weight = ranges.weight.map(n => Math.abs(n * multiplier))
-    const width = ranges.width.map(n => Math.abs(n * multiplier))
-
-    return {
-      weight,
-      width,
-    }
-  })
-
-  useLayoutEffect(() => {
-    window.addEventListener("mousemove", mouseMoveListener)
-
-    return () => {
-      window.removeEventListener("mousemove", mouseMoveListener)
-    }
-  }, [])
-
   return (
     <div
       style={{
@@ -78,7 +55,6 @@ export default function FourOhFour() {
         styles={{
           html: {
             backgroundColor: Atoms.colors.site,
-            color: Atoms.colors.wash,
           },
 
           a: {
@@ -88,17 +64,9 @@ export default function FourOhFour() {
           },
         }}
       />
-      {headings.map(n => (
-        <StyledH1
-          as="span"
-          role="presentation"
-          slant={3}
-          weight={map(position.y, 0, 1, n.weight[0], n.weight[1])}
-          width={map(position.x, 0, 1, n.width[0], n.width[1])}
-        >
-          404 Page Not Found
-        </StyledH1>
-      ))}
+      <StyledH1>
+        <span>404 Page Not Found</span>
+      </StyledH1>
     </div>
   )
 }

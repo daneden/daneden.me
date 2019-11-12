@@ -32,7 +32,7 @@ export default {
     blackAlpha: "rgba(0, 0, 0, 0.75)",
     whiteAlpha: "rgba(255, 255, 255, 0.75)",
     wash: "#fefefe",
-    site: "#e33d26",
+    site: "#FC6A00",
     text: "#111",
     meta: "#44464B",
     mark: "rgba(255, 200, 0, 0.15)",
