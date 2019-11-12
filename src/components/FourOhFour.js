@@ -1,4 +1,4 @@
-import { Global, keyframes } from "@emotion/core"
+import { keyframes } from "@emotion/core"
 import styled from "@emotion/styled"
 import React from "react"
 import Atoms from "./designSystem/atoms"
@@ -51,19 +51,6 @@ export default function FourOhFour() {
         width: "0",
       }}
     >
-      <Global
-        styles={{
-          html: {
-            backgroundColor: Atoms.colors.site,
-          },
-
-          a: {
-            ":hover": {
-              color: `${Atoms.colors.text} !important`,
-            },
-          },
-        }}
-      />
       <StyledH1>
         <span>404 Page Not Found</span>
       </StyledH1>
