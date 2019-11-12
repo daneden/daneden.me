@@ -1,12 +1,12 @@
 import H1 from "../components/designSystem/H1"
 
 export const frontmatter = {
-  layout: "post",
-  title: "Building a Coin-Tossing Simulator with React, Hooks, and Now: Part 1",
-  date: "2019-07-29",
+layout: "post",
+title: "Building a Coin-Tossing Simulator with React, Hooks, and Now: Part 1",
+date: "2019-07-29",
 }
 
-<H1 weight={600} width={0} slant={13}>
+<H1>
   {frontmatter.title}
 </H1>
 

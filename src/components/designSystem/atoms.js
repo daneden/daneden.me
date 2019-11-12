@@ -7,7 +7,7 @@ const scales = {
   medium: 1,
   large: 1.5,
   xlarge: 3,
-  xxlarge: 4.5,
+  xxlarge: 4,
 }
 
 const widths = {
@@ -32,7 +32,7 @@ export default {
     blackAlpha: "rgba(0, 0, 0, 0.75)",
     whiteAlpha: "rgba(255, 255, 255, 0.75)",
     wash: "#fefefe",
-    site: "#e33d26",
+    site: "#FC6A00",
     text: "#111",
     meta: "#44464B",
     mark: "rgba(255, 200, 0, 0.15)",
@@ -42,14 +42,14 @@ export default {
   },
   font: {
     family: {
-      display: `"Orelo Variable", "Times New Roman", serif`,
+      display: `"Ayer Poster Angular Web", "Times New Roman", serif`,
       sans: `"National 2 Web", -apple-system, system-ui, BlinkMacSystemFont, sans-serif`,
       mono: `"Founders Grotesk Mono Web", "Input Mono", "Source Code Pro", "Monaco", monospace`,
     },
     size: {
       small: `${scales.small}rem`,
       regular: `${scales.medium}rem`,
-      h1: `${scales.xlarge}rem`,
+      h1: `${scales.xxlarge}rem`,
       h2: `${scales.large}rem`,
     },
   },

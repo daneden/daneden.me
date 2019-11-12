@@ -4,7 +4,7 @@ import random from "../utils/random"
 
 <Helmet title="Portfolio" />
 
-<H1 width={random(80)} slant={random(13)} weight={random(700)}>Portfolio</H1>
+<H1>Portfolio</H1>
 
 ## Facebook
 

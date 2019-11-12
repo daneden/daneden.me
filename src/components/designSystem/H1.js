@@ -2,16 +2,11 @@ import { css } from "@emotion/core"
 import React from "react"
 import Atoms from "./atoms"
 
-/* VALUES FOR EACH AXES */
-/* Weight : Min 100 / Max 900 */
-/* Width : Min 30 / Max 130 */
-/* Italic : Min 0 / Max 13 */
-const H1 = ({ weight = 500, width = 30, slant = 0, ...props }) => {
+const H1 = ({ children, ...props }) => {
   const style = css`
     font-family: ${Atoms.font.family.display};
     font-size: ${Atoms.font.size.h1};
-    font-weight: 400;
-    font-variation-settings: "wght" ${weight}, "wdth" ${width}, "ital" ${slant};
+    font-weight: 500;
     hyphens: initial;
     line-height: 1;
     margin-bottom: ${Atoms.spacing.medium};
@@ -21,7 +16,7 @@ const H1 = ({ weight = 500, width = 30, slant = 0, ...props }) => {
 
   return (
     <h1 css={style} {...props}>
-      {props.children}
+      {children}
     </h1>
   )
 }

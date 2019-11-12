@@ -2,12 +2,12 @@ import H1 from "../components/designSystem/H1"
 import CFVideo from "../components/CFVideo"
 
 export const frontmatter = {
-  layout: "post",
-  title: "Where We Can Go",
-  date: "2019-08-27",
+layout: "post",
+title: "Where We Can Go",
+date: "2019-08-27",
 }
 
-<H1 weight={700} width={40} slant={7}>
+<H1>
   {frontmatter.title}
 </H1>
 

@@ -1,17 +1,14 @@
 import Image from "../components/Image"
-import H1 from "../components/designSystem/H1"
 
 import { Button } from "./2019-07-09-typed-systems-components"
 
 export const frontmatter = {
-  layout: "post",
-  title: "Square Peg, Round Hole: Typed Programming For Designers",
-  date: "2019-07-09",
+layout: "post",
+title: "Square Peg, Round Hole: Typed Programming For Designers",
+date: "2019-07-09",
 }
 
-<H1 weight={400} width={80}>
-  Square Peg, Round Hole: Typed Programming For Designers
-</H1>
+# Square Peg, Round Hole: Typed Programming For Designers
 
 Think back to the last time that you cooked a meal. The recipe you followed
 might have called for a particular ingredient, like yellow onions, but upon
