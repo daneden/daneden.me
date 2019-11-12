@@ -11,20 +11,20 @@ const { pnf, fof } = {
 
 const bgMarquee = keyframes`
   from {
-    background-position: ${pnf * -10}vh 0, ${fof * 50}vh 10vh, ${pnf *
-  -5}vh 60vh;
+    background-position: ${pnf * -10}vmin 0, ${fof * 50}vmin 10vmin, ${pnf *
+  -5}vmin 60vmin;
   }
 
   to {
-    background-position: ${pnf * 10}vh 0, ${fof * -50}vh 10vh, ${pnf *
-  5}vh 60vh;
+    background-position: ${pnf * 10}vmin 0, ${fof * -50}vmin 10vmin, ${pnf *
+  5}vmin 60vmin;
   }
 `
 
 console.log(bgMarquee)
 
 const StyledH1 = styled(H1)`
-  height: 70vh;
+  height: 70vmin;
   margin: 0;
   margin-left: -50vw;
   padding: 0;
@@ -32,8 +32,8 @@ const StyledH1 = styled(H1)`
   background-image: url("/images/pnf.svg"), url("/images/404.svg"),
     url("/images/pnf.svg");
   background-repeat: repeat-x;
-  background-size: auto 10vh, auto 50vh, auto 10vh;
-  background-position: 0 0, 0 10vh, 0 60vh;
+  background-size: auto 10vmin, auto 50vmin, auto 10vmin;
+  background-position: 0 0, 0 10vmin, 0 60vmin;
   animation: ${bgMarquee} 10s infinite linear;
   span {
     visibility: hidden;
