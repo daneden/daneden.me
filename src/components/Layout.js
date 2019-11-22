@@ -75,6 +75,17 @@ export default function Layout({ children, location, ...props }) {
             paddingLeft: 0,
           },
 
+          ".footnotes li": {
+            marginBottom: Atoms.spacing.xsmall,
+            fontSize: Atoms.font.size.small,
+            color: `var(--meta-color, ${Atoms.colors.meta})`,
+            letterSpacing: "0.025em",
+          },
+
+          ".footnote-backref": {
+            marginLeft: "0.25em",
+          },
+
           "#gatsby-noscript": {
             display: "none",
           },
