@@ -6,7 +6,8 @@ const H1 = ({ children, ...props }) => {
   const style = css`
     font-family: ${Atoms.font.family.display};
     font-size: ${Atoms.font.size.h1};
-    font-weight: 500;
+    font-style: italic;
+    font-weight: bold;
     hyphens: initial;
     line-height: 1;
     margin-bottom: ${Atoms.spacing.medium};

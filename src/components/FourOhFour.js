@@ -21,8 +21,6 @@ const bgMarquee = keyframes`
   }
 `
 
-console.log(bgMarquee)
-
 const StyledH1 = styled(H1)`
   height: 70vmin;
   margin: 0;

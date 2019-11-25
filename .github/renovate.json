@@ -7,5 +7,6 @@
       "schedule": ["every weekend"]
     }
   ],
+  "schedule": ["after 5pm and before 6am on every weekday", "every weekend"],
   "rebaseStalePrs": true
 }
