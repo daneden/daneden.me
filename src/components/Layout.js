@@ -82,6 +82,10 @@ export default function Layout({ children, location, ...props }) {
             letterSpacing: "0.025em",
           },
 
+          ".footnote-ref": {
+            fontVariantNumeric: "tabular-nums",
+          },
+
           ".footnote-backref": {
             marginLeft: "0.25em",
           },
