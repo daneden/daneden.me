@@ -110,6 +110,12 @@ const books: Array<BookData> = [
     cover: "books/debt.jpg",
     url: "https://amzn.to/2LM6bYN",
   },
+  {
+    title: "Word By Word",
+    author: "Kory Stamper",
+    cover: "books/word-by-word.jpg",
+    url: "https://amzn.to/33k4zK8",
+  },
 ]
   .map(book => {
     return {
