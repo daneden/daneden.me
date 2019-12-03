@@ -45,7 +45,10 @@ const GridFillArea = styled.div<FillAreaProps>(
 )
 
 export default function HomeGrid() {
-  if (!CSS.supports("background-image", "paint(line)")) {
+  if (
+    typeof CSS !== "undefined" &&
+    !CSS.supports("background-image", "paint(line)")
+  ) {
     return null
   }
 
