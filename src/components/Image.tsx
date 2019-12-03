@@ -5,40 +5,44 @@ import { FigureProps, ImageProps } from "../interfaces/Image.interface"
 import mdToHTML from "../utils/mdToHTML"
 import { Align, Atoms } from "./designSystem/designSystem"
 
-const Figure = styled("figure")<FigureProps>`
+const Figure = styled("figure")<FigureProps>(
+  props => `
   display: flex;
-  flex-direction: ${(props: FigureProps) =>
-    props.captionPosition === "left" ? "row" : "column"};
+  flex-direction: ${props.captionPosition === "left" ? "row" : "column"};
   justify-content: center;
-  align-items: ${(props: FigureProps) =>
-    props.captionPosition === "left" ? "start" : "initial"};
-  
-  margin-bottom: ${(props: FigureProps) =>
-    props.margin ? Atoms.spacing.medium : 0};
+  align-items: ${props.captionPosition === "left" ? "start" : "initial"};
+  writing-mode: horizontal-tb;
+  margin-bottom: ${
+    props.margin && props.captionPosition !== "left" ? Atoms.spacing.medium : 0
+  };
 
   img {
     display: block;
-    width: ${(props: FigureProps) => (props.responsive ? "100%" : "auto")};
-    flex: 0 0 auto;
+    width: ${props.responsive ? "100%" : "auto"};
+    flex: 1 1 auto;
     order: 2;
   }
 
-  span {
-    ${(props: FigureProps) =>
+  figcaption {
+    ${
       props.captionPosition === "left"
         ? `
           writing-mode: vertical-rl;
-          transform: rotate(180deg);
+          text-orientation: mixed;
+          align-self: stretch;
+          flex: 0 1 auto;
           order: 1;
         `
         : `
           order: 3;
-        `}
+        `
+    }
     margin-top: ${Atoms.spacing.xxsmall};
   }
 `
+)
 
-const Caption = styled("span")`
+const Caption = styled("figcaption")`
   font-size: ${Atoms.font.size.small};
   color: var(--meta-color, ${Atoms.colors.meta});
   letter-spacing: 0.025em;
