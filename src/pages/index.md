@@ -1,10 +1,13 @@
 import Showcase from "../components/Showcase"
+import HomeGrid from "../components/HomeGrid"
 
-<Showcase />
+<HomeGrid />
 
 Daniel Eden is writing, thinking, and talking about Design Systems: how they
 break, how they scale, and the people that maintain them. He also prefers to
 talk about himself in the first person.
+
+<Showcase />
 
 I’m currently living in London, U.K. and working as a Design Lead for
 [Facebook](https://facebook.com). I help to create and maintain the Design
