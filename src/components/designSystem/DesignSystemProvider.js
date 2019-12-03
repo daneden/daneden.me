@@ -23,7 +23,7 @@ const components = {
 }
 
 const DesignSystemProvider = ({ children }) => (
-  <MDXProvider components={components}>{children}</MDXProvider>
+  <MDXProvider components={{ ...components }}>{children}</MDXProvider>
 )
 
 export default DesignSystemProvider
