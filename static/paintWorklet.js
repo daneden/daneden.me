@@ -7,7 +7,6 @@ class Line {
     const { width, height } = geom
     const direction = properties.get("--line-direction").value
     const color = properties.get("--line-color")
-    console.log(color)
     const strokeWidth = 1
 
     const orig = {
