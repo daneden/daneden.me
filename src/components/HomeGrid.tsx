@@ -9,13 +9,9 @@ type FillAreaProps = {
 }
 
 const GridContainer = styled.div`
-  display: none;
-
-  @supports (background-image: paint(line)) {
-    display: grid;
-    grid-gap: ${Atoms.spacing.xxsmall};
-    grid-template-columns: repeat(6, 1fr);
-  }
+  display: grid;
+  grid-gap: ${Atoms.spacing.xxsmall};
+  grid-template-columns: repeat(6, 1fr);
   margin-bottom: ${Atoms.spacing.large};
 
   @media (max-width: 545px) {
@@ -24,35 +20,35 @@ const GridContainer = styled.div`
 `
 
 const GridTextArea = styled.div`
-  @supports (background-image: paint(line)) {
-    font-size: 2em;
-    text-align: center;
-    white-space: nowrap;
-    z-index: 1;
+  font-size: 2em;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 1;
 
-    span {
-      padding: ${Atoms.spacing.xxsmall};
-    }
+  span {
+    padding: ${Atoms.spacing.xxsmall};
+  }
 
-    @media (max-width: 800px) {
-      font-size: 0.875em;
-    }
+  @media (max-width: 800px) {
+    font-size: 0.875em;
   }
 `
 
 const GridFillArea = styled.div<FillAreaProps>(
   ({ direction = "tl-br" }) => `
-  @supports (background-image: paint(line)) {
     --line-direction: ${direction};
     --line-color: var(--text-color);
     background-image: paint(line);
     min-height: 27.5vh;
     min-width: ${Atoms.spacing.medium};
-  }
 `
 )
 
 export default function HomeGrid() {
+  if (!CSS.supports("background-image", "paint(line)")) {
+    return null
+  }
+
   return (
     <Breakout>
       <GridContainer>
