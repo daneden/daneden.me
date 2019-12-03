@@ -9,6 +9,8 @@ type FillAreaProps = {
 }
 
 const GridContainer = styled.div`
+  display: none;
+
   @supports (background-image: paint(line)) {
     display: grid;
     grid-gap: ${Atoms.spacing.xxsmall};
