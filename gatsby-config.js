@@ -1,32 +1,33 @@
-const path = require("path")
+const path = require('path')
 
-const slugFromPath = require("./src/utils/slugFromPath")
+const slugFromPath = require('./src/utils/slugFromPath')
 
-const SITE_NAME = "Daniel Eden, Designer"
+const SITE_NAME = 'Daniel Eden, Designer'
 
 module.exports = {
   siteMetadata: {
-    authorName: "Daniel Eden",
+    authorName: 'Daniel Eden',
     title: SITE_NAME,
     description:
-      "The personal site, blog, and portfolio of Daniel Eden, a designer who cares about the web and design systems",
-    siteUrl: "https://daneden.me",
+      'The personal site, blog, and portfolio of Daniel Eden, a designer who cares about the web and design systems',
+    siteUrl: 'https://daneden.me',
   },
   polyfill: false,
   plugins: [
+    'gatsby-plugin-eslint',
     {
-      resolve: "@bundle-analyzer/gatsby-plugin",
-      options: { token: "6b65f3dd607754ad7bf8b1ff985957acc9cb11a9" },
+      resolve: '@bundle-analyzer/gatsby-plugin',
+      options: { token: '6b65f3dd607754ad7bf8b1ff985957acc9cb11a9' },
     },
-    "gatsby-plugin-emotion",
-    "gatsby-plugin-react-helmet",
-    "gatsby-plugin-typescript",
+    'gatsby-plugin-emotion',
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-typescript',
     {
-      resolve: "gatsby-plugin-mdx",
+      resolve: 'gatsby-plugin-mdx',
       options: {
-        extensions: [".mdx", ".md"],
+        extensions: ['.mdx', '.md'],
         defaultLayouts: {
-          default: require.resolve("./src/components/Layout.js"),
+          default: require.resolve('./src/components/Layout.js'),
         },
         gatsbyRemarkPlugins: [
           { resolve: `gatsby-remark-widows` },
@@ -34,7 +35,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
-              classPrefix: "language-",
+              classPrefix: 'language-',
               inlineCodeMarker: null,
               aliases: {},
             },
@@ -46,13 +47,13 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/blog/`,
-        name: "blog",
+        name: 'blog',
       },
     },
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: "fonts",
+        name: 'fonts',
         path: `${__dirname}/src/fonts/`,
       },
     },
@@ -85,7 +86,7 @@ module.exports = {
                   date: edge.node.frontmatter.date,
                   url: site.siteMetadata.siteUrl + slug,
                   guid: site.siteMetadata.siteUrl + slug,
-                  custom_elements: [{ "content:encoded": edge.node.html }],
+                  custom_elements: [{ 'content:encoded': edge.node.html }],
                 })
               })
             },
@@ -113,8 +114,8 @@ module.exports = {
               }
             }
           `,
-            output: "/rss.xml",
-            title: "daneden.me RSS Feed",
+            output: '/rss.xml',
+            title: 'daneden.me RSS Feed',
           },
         ],
       },
@@ -122,10 +123,10 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingIds: ["UA-122108242-1"],
+        trackingIds: ['UA-122108242-1'],
 
         gtagConfig: {
-          optimize_id: "GTM-MNBLGN7",
+          optimize_id: 'GTM-MNBLGN7',
           anonymize_ip: true,
           cookie_expires: 0,
         },
@@ -133,7 +134,7 @@ module.exports = {
         pluginConfig: {
           head: false,
           respectDNT: true,
-          exclude: ["/preview/**", "/do-not-track/me/too/"],
+          exclude: ['/preview/**', '/do-not-track/me/too/'],
         },
       },
     },
@@ -149,13 +150,13 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-offline",
+      resolve: 'gatsby-plugin-offline',
       options: {
         dontCacheBustUrlsMatching: /(\.js$\/)/,
       },
     },
     {
-      resolve: "gatsby-plugin-netlify-cache",
+      resolve: 'gatsby-plugin-netlify-cache',
       options: {
         cachePublic: true,
       },

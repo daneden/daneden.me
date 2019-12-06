@@ -1,7 +1,7 @@
-import styled from "@emotion/styled"
-import React, { FunctionComponent } from "react"
-import ScriptTag from "react-script-tag"
-import { Atoms } from "./designSystem/designSystem"
+import styled from '@emotion/styled'
+import React, { FunctionComponent } from 'react'
+import ScriptTag from 'react-script-tag'
+import { Atoms } from './designSystem/designSystem'
 
 interface CFVideoProps {
   id: string

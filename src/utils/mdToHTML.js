@@ -1,6 +1,7 @@
-import remark from "remark"
-import reactRenderer from "remark-react"
-import { Link } from "../components/designSystem/designSystem"
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
+import remark from 'remark'
+import reactRenderer from 'remark-react'
+import { Link } from '../components/designSystem/designSystem'
 
 export default function mdToHTML(markdown) {
   return remark()

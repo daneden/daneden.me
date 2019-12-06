@@ -1,6 +1,6 @@
-import styled from "@emotion/styled"
-import React from "react"
-import PlainLink from "./designSystem/PlainLink"
+import styled from '@emotion/styled'
+import React, { ReactElement } from 'react'
+import PlainLink from './designSystem/PlainLink'
 
 interface PlainLinkProps {
   post: {
@@ -12,11 +12,11 @@ interface PlainLinkProps {
   }
 }
 
-const Timestamp = styled("span")`
+const Timestamp = styled('span')`
   font-style: italic;
 `
 
-const PostLink = ({ post }: PlainLinkProps) => (
+const PostLink = ({ post }: PlainLinkProps): ReactElement<HTMLDivElement> => (
   <div>
     <PlainLink to={post.slug}>
       <div>{post.frontmatter.title}</div>

@@ -1,7 +1,7 @@
-import { graphql, useStaticQuery } from "gatsby"
-import { EdgeNode } from "../interfaces/EdgeNode.interface"
+import { graphql, useStaticQuery } from 'gatsby'
+import { EdgeNode } from '../interfaces/EdgeNode.interface'
 
-type Layout = "post"
+type Layout = 'post'
 
 interface Post {
   date: string
@@ -15,7 +15,7 @@ interface PostsQueryData {
   }
 }
 
-const useBlogPostsQuery = () => {
+const useBlogPostsQuery = (): PostsQueryData => {
   const { allMdx }: PostsQueryData = useStaticQuery(graphql`
     query {
       allMdx(sort: { fields: [frontmatter___date], order: DESC }) {

@@ -1,6 +1,6 @@
-import styled from "@emotion/styled"
-import React, { ReactNode } from "react"
-import { Atoms } from "./designSystem/designSystem"
+import styled from '@emotion/styled'
+import React, { ReactElement, ReactNode } from 'react'
+import { Atoms } from './designSystem/designSystem'
 
 interface Props {
   children: ReactNode
@@ -17,7 +17,9 @@ const Container = styled.div`
   padding: ${Atoms.spacing.small};
 `
 
-export default function Breakout({ children }: Props) {
+export default function Breakout({
+  children,
+}: Props): ReactElement<typeof ContainerHack> {
   return (
     <ContainerHack>
       <Container>{children}</Container>

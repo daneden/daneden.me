@@ -1,45 +1,45 @@
-import styled from "@emotion/styled"
-import React, { FunctionComponent } from "react"
-import Imgix from "react-imgix"
-import mdToHTML from "../utils/mdToHTML"
-import { Align, Atoms } from "./designSystem/designSystem"
+import styled from '@emotion/styled'
+import React, { FunctionComponent } from 'react'
+import Imgix from 'react-imgix'
+import mdToHTML from '../utils/mdToHTML'
+import { Align, Atoms } from './designSystem/designSystem'
 
 interface FigureProps {
   className?: string
-  captionPosition?: "bottom" | "left"
+  captionPosition?: 'bottom' | 'left'
   responsive?: boolean
   margin?: boolean
 }
 
 interface ImageProps extends FigureProps {
-  align?: "left" | "right"
+  align?: 'left' | 'right'
   alt?: string
   caption?: string
   invertInDarkMode?: boolean
   src: string
 }
 
-const Figure = styled("figure")<FigureProps>(
+const Figure = styled('figure')<FigureProps>(
   props => `
   display: flex;
-  flex-direction: ${props.captionPosition === "left" ? "row" : "column"};
+  flex-direction: ${props.captionPosition === 'left' ? 'row' : 'column'};
   justify-content: center;
-  align-items: ${props.captionPosition === "left" ? "start" : "initial"};
+  align-items: ${props.captionPosition === 'left' ? 'start' : 'initial'};
   writing-mode: horizontal-tb;
   margin-bottom: ${
-    props.margin && props.captionPosition !== "left" ? Atoms.spacing.medium : 0
+    props.margin && props.captionPosition !== 'left' ? Atoms.spacing.medium : 0
   };
 
   img {
     display: block;
-    width: ${props.responsive ? "100%" : "auto"};
+    width: ${props.responsive ? '100%' : 'auto'};
     flex: 1 1 auto;
     order: 2;
   }
 
   figcaption {
     ${
-      props.captionPosition === "left"
+      props.captionPosition === 'left'
         ? `
           writing-mode: vertical-rl;
           text-orientation: mixed;
@@ -56,7 +56,7 @@ const Figure = styled("figure")<FigureProps>(
 `
 )
 
-const Caption = styled("figcaption")`
+const Caption = styled('figcaption')`
   font-size: ${Atoms.font.size.small};
   color: var(--meta-color, ${Atoms.colors.meta});
   letter-spacing: 0.025em;
@@ -77,10 +77,10 @@ const Image: FunctionComponent<ImageProps> = ({
   let sizes
 
   switch (align) {
-    case "left":
+    case 'left':
       Wrapper = Align.Left
       break
-    case "right":
+    case 'right':
       Wrapper = Align.Right
       break
     default:
@@ -88,8 +88,8 @@ const Image: FunctionComponent<ImageProps> = ({
   }
 
   switch (align) {
-    case "left":
-    case "right":
+    case 'left':
+    case 'right':
       sizes = `
         (min-width: ${Atoms.breakpoints.medium}) calc(${Atoms.widths.container} * .5),
         (min-width: ${Atoms.breakpoints.narrow}) calc(${Atoms.widths.container} * .4),
@@ -100,8 +100,8 @@ const Image: FunctionComponent<ImageProps> = ({
   }
 
   const url =
-    process.env.NODE_ENV && process.env.NODE_ENV.toUpperCase() === "DEVELOPMENT"
-      ? `${process.env.PUBLIC_URL || ""}/uploads/${src}`
+    process.env.NODE_ENV && process.env.NODE_ENV.toUpperCase() === 'DEVELOPMENT'
+      ? `${process.env.PUBLIC_URL || ''}/uploads/${src}`
       : `https://daneden.imgix.net/${src}`
 
   const img = responsive ? (
@@ -109,13 +109,13 @@ const Image: FunctionComponent<ImageProps> = ({
       src={url}
       htmlAttributes={{
         alt,
-        loading: "lazy",
+        loading: 'lazy',
       }}
       sizes={sizes}
       css={
         invertInDarkMode && {
-          "@media (prefers-color-scheme: dark)": {
-            filter: "invert(100%) hue-rotate(180deg)",
+          '@media (prefers-color-scheme: dark)': {
+            filter: 'invert(100%) hue-rotate(180deg)',
           },
         }
       }

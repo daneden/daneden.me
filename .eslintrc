@@ -2,7 +2,10 @@
   "parser": "@typescript-eslint/parser",
   "root": true,
   "settings": {
-    "import/core-modules": ["gatsby"]
+    "import/core-modules": ["gatsby"],
+    "react": {
+      "version": "detect"
+    }
   },
   "globals": {
     "graphql": true
@@ -16,7 +19,8 @@
   },
   "extends": [
     "plugin:prettier/recommended",
-    "plugin:@typescript-eslint/recommended"
+    "plugin:@typescript-eslint/recommended",
+    "plugin:mdx/recommended"
   ],
   "plugins": ["prettier", "import", "react", "react-hooks"],
   "rules": {
@@ -24,6 +28,9 @@
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "react/boolean-prop-naming": "error",
-    "@typescript-eslint/member-delimiter-style": "off"
+    "react/jsx-uses-react": 2,
+    "@typescript-eslint/member-delimiter-style": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    "react/jsx-uses-vars": 1
   }
 }

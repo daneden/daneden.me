@@ -1,5 +1,5 @@
-import React from "react"
-import Helmet from "react-helmet"
+import React, { ReactElement } from 'react'
+import Helmet from 'react-helmet'
 
 interface MetatagsProps {
   title?: string
@@ -11,14 +11,14 @@ interface MetatagsProps {
 }
 
 const dnsPrefetchURLs = [
-  "https://daneden.imgix.net",
-  "https://videodelivery.net",
-  "https://www.google-analytics.com",
-  "https://embed.videodelivery.net",
-  "https://www.googletagmanager.com",
+  'https://daneden.imgix.net',
+  'https://videodelivery.net',
+  'https://www.google-analytics.com',
+  'https://embed.videodelivery.net',
+  'https://www.googletagmanager.com',
 ]
 
-function Metatags(props: MetatagsProps) {
+function Metatags(props: MetatagsProps): ReactElement<typeof Helmet> {
   const { title, defaultTitle, description, url, pathname, thumbnail } = props
 
   return (

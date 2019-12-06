@@ -1,58 +1,58 @@
 @font-face {
   font-display: swap;
-  font-family: "Founders Grotesk Mono Web";
+  font-family: 'Founders Grotesk Mono Web';
   font-style: normal;
   font-weight: normal;
-  src: url("FoundersGroteskMonoWeb-Regular.woff2") format("woff2"),
-    url("FoundersGroteskMonoWeb-Regular.woff") format("woff"),
-    url("FoundersGroteskMonoWeb-Regular.eot") format("embedded-opentype");
+  src: url('FoundersGroteskMonoWeb-Regular.woff2') format('woff2'),
+    url('FoundersGroteskMonoWeb-Regular.woff') format('woff'),
+    url('FoundersGroteskMonoWeb-Regular.eot') format('embedded-opentype');
 }
 
 @font-face {
   font-display: swap;
-  font-family: "National 2 Web";
+  font-family: 'National 2 Web';
   font-style: italic;
   font-weight: normal;
-  src: url("National2Web-RegularItalic.woff2") format("woff2"),
-    url("National2Web-RegularItalic.woff") format("woff"),
-    url("National2Web-RegularItalic.eot") format("embedded-opentype");
+  src: url('National2Web-RegularItalic.woff2') format('woff2'),
+    url('National2Web-RegularItalic.woff') format('woff'),
+    url('National2Web-RegularItalic.eot') format('embedded-opentype');
 }
 
 @font-face {
   font-display: swap;
-  font-family: "National 2 Web";
+  font-family: 'National 2 Web';
   font-style: normal;
   font-weight: normal;
-  src: url("National2Web-Regular.woff2") format("woff2"),
-    url("National2Web-Regular.woff") format("woff"),
-    url("National2Web-Regular.eot") format("embedded-opentype");
+  src: url('National2Web-Regular.woff2') format('woff2'),
+    url('National2Web-Regular.woff') format('woff'),
+    url('National2Web-Regular.eot') format('embedded-opentype');
 }
 
 @font-face {
   font-display: swap;
-  font-family: "National 2 Web";
+  font-family: 'National 2 Web';
   font-style: normal;
   font-weight: bold;
-  src: url("National2Web-Bold.woff2") format("woff2"),
-    url("National2Web-Bold.woff") format("woff"),
-    url("National2Web-Bold.eot") format("embedded-opentype");
+  src: url('National2Web-Bold.woff2') format('woff2'),
+    url('National2Web-Bold.woff') format('woff'),
+    url('National2Web-Bold.eot') format('embedded-opentype');
 }
 
 @font-face {
   font-display: swap;
-  font-family: "National 2 Web";
+  font-family: 'National 2 Web';
   font-style: italic;
   font-weight: bold;
-  src: url("National2Web-BoldItalic.woff2") format("woff2"),
-    url("National2Web-BoldItalic.woff") format("woff"),
-    url("National2Web-BoldItalic.eot") format("embedded-opentype");
+  src: url('National2Web-BoldItalic.woff2') format('woff2'),
+    url('National2Web-BoldItalic.woff') format('woff'),
+    url('National2Web-BoldItalic.eot') format('embedded-opentype');
 }
 
 @font-face {
   font-display: swap;
-  font-family: "Ayer Poster Angular Web";
+  font-family: 'Ayer Poster Angular Web';
   font-style: italic;
   font-weight: bold;
-  src: url("AyerPosterAngular-SemiboldItalic-Web.woff2") format("woff2"),
-    url("AyerPosterAngular-SemiboldItalic-Web.woff") format("woff");
+  src: url('AyerPosterAngular-SemiboldItalic-Web.woff2') format('woff2'),
+    url('AyerPosterAngular-SemiboldItalic-Web.woff') format('woff');
 }

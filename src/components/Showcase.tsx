@@ -1,9 +1,9 @@
-import styled from "@emotion/styled"
-import React from "react"
-import { Atoms } from "./designSystem/designSystem"
-import Image from "./Image"
+import styled from '@emotion/styled'
+import React, { ReactElement } from 'react'
+import { Atoms } from './designSystem/designSystem'
+import Image from './Image'
 
-const StyledShowcase = styled("div")`
+const StyledShowcase = styled('div')`
   display: grid;
   grid-template-columns: repeat(4, auto);
   grid-template-rows: repeat(5, auto);
@@ -42,7 +42,7 @@ const StyledShowcase = styled("div")`
   }
 `
 
-export default function Showcase() {
+export default function Showcase(): ReactElement<typeof StyledShowcase> {
   return (
     <StyledShowcase>
       <Image alt="A portrait photo of Daniel Eden" src="2018/10/portrait.jpg" />

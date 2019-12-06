@@ -1,7 +1,7 @@
-import { css } from "@emotion/core"
-import { Link as GatsbyLink } from "gatsby"
-import React, { ReactNode } from "react"
-import { Atoms } from "./designSystem"
+import { css, SerializedStyles } from '@emotion/core'
+import { Link as GatsbyLink } from 'gatsby'
+import React, { ReactElement, ReactNode } from 'react'
+import { Atoms } from './designSystem'
 
 interface InternalLinkProps {
   to: string
@@ -20,9 +20,9 @@ interface CommonLinkProps {
 export type LinkProps = CommonLinkProps &
   (ExternalLinkProps | InternalLinkProps)
 
-const styles = (underline: boolean) => css`
+const styles = (underline: boolean): SerializedStyles => css`
   color: inherit;
-  text-decoration: ${underline ? "underline" : "none"};
+  text-decoration: ${underline ? 'underline' : 'none'};
 
   &:hover,
   &:focus {
@@ -36,7 +36,7 @@ const Link = ({
   to,
   underline = true,
   ...other
-}: LinkProps) => {
+}: LinkProps): ReactElement<typeof GatsbyLink | HTMLAnchorElement> => {
   if (to !== undefined) {
     return (
       <GatsbyLink

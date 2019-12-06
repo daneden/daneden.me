@@ -1,7 +1,7 @@
-import styled from "@emotion/styled"
-import React, { ReactChildren, ReactNode } from "react"
-import Code from "./Code"
-import { Atoms } from "./designSystem"
+import styled from '@emotion/styled'
+import React, { ReactChildren, ReactElement, ReactNode } from 'react'
+import Code from './Code'
+import { Atoms } from './designSystem'
 
 type PreProps = React.HTMLAttributes<HTMLPreElement> & {
   children: ReactChildren
@@ -21,6 +21,8 @@ const StyledCode = styled(Code)`
   }
 `
 
-const Pre = (props: PreProps) => <StyledCode as="pre" {...props} />
+const Pre = (props: PreProps): ReactElement<typeof StyledCode> => (
+  <StyledCode as="pre" {...props} />
+)
 
 export default Pre

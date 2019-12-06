@@ -1,7 +1,7 @@
-import { MDXProvider } from "@mdx-js/react"
-import React, { ReactChildren } from "react"
-import Image from "../Image"
-import * as designSystem from "./designSystem"
+import { MDXProvider } from '@mdx-js/react'
+import React, { ReactChildren, ReactElement } from 'react'
+import Image from '../Image'
+import * as designSystem from './designSystem'
 
 interface DesignSystemProviderProps {
   children: ReactChildren
@@ -26,7 +26,9 @@ const components = {
   Note: designSystem.Note,
 }
 
-const DesignSystemProvider = ({ children }: DesignSystemProviderProps) => (
+const DesignSystemProvider = ({
+  children,
+}: DesignSystemProviderProps): ReactElement<typeof MDXProvider> => (
   <MDXProvider components={{ ...components }}>{children}</MDXProvider>
 )
 

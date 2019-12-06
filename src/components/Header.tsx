@@ -1,9 +1,10 @@
-import styled from "@emotion/styled"
-import React from "react"
-import Atoms from "./designSystem/atoms"
-import PlainLink from "./designSystem/PlainLink"
-import PlainList from "./designSystem/PlainList"
-import LocationContext from "./LocationContext"
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
+import styled from '@emotion/styled'
+import React, { ReactElement } from 'react'
+import Atoms from './designSystem/atoms'
+import PlainLink from './designSystem/PlainLink'
+import PlainList from './designSystem/PlainList'
+import LocationContext from './LocationContext'
 
 const { useContext } = React
 
@@ -11,7 +12,7 @@ interface HeaderProps {
   siteTitle: string
 }
 
-const StyledHeader = styled("header")`
+const StyledHeader = styled('header')`
   border-bottom: 1px solid;
   display: grid;
   grid-template-columns: calc(${Atoms.widths.content} - ${Atoms.spacing.medium}) 1fr;
@@ -28,20 +29,22 @@ const StyledHeader = styled("header")`
 
 const links = [
   {
-    to: "/blog",
-    label: "Blog",
+    to: '/blog',
+    label: 'Blog',
   },
   {
-    to: "/portfolio",
-    label: "Portfolio",
+    to: '/portfolio',
+    label: 'Portfolio',
   },
   {
-    to: "/books",
-    label: "Library",
+    to: '/books',
+    label: 'Library',
   },
 ]
 
-const Header = ({ siteTitle }: HeaderProps) => {
+const Header = ({
+  siteTitle,
+}: HeaderProps): ReactElement<typeof StyledHeader> => {
   const location = useContext(LocationContext)
   const blogPostRegex = /[0-9]{4}\/[0-9]{2}\/[0-9]{2}\//
   return (
@@ -55,9 +58,9 @@ const Header = ({ siteTitle }: HeaderProps) => {
               <PlainLink to={to}>
                 {label}
                 {location!.includes(to) ||
-                (location!.match(blogPostRegex) && to.includes("blog"))
-                  ? " ☚"
-                  : ""}
+                (location!.match(blogPostRegex) && to.includes('blog'))
+                  ? ' ☚'
+                  : ''}
               </PlainLink>
             </li>
           ))}

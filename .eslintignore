@@ -1,2 +1,9 @@
 node_modules
 public
+*.woff2
+*.woff
+*.ttf
+*.md
+*.eot
+*.mdx
+fonts.css

@@ -1,12 +1,12 @@
-import { css } from "@emotion/core"
-import React, { ReactNode } from "react"
-import Atoms from "./atoms"
+import { css } from '@emotion/core'
+import React, { ReactElement, ReactNode } from 'react'
+import Atoms from './atoms'
 
 interface H1Props {
   children?: ReactNode
 }
 
-const H1 = ({ children }: H1Props) => {
+const H1 = ({ children }: H1Props): ReactElement<HTMLElement> => {
   const style = css`
     font-family: ${Atoms.font.family.display};
     font-size: ${Atoms.font.size.h1};

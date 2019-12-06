@@ -1,17 +1,18 @@
-import { Global } from "@emotion/core"
-import React from "react"
-import Helmet from "react-helmet"
-import favicon from "../../static/images/favicon.png"
-import "../fonts/fonts.css"
-import useLayoutQuery from "../hooks/useLayoutQuery"
-import { Atoms } from "./designSystem/designSystem"
-import DesignSystemProvider from "./designSystem/DesignSystemProvider"
-import Footer from "./Footer"
-import Header from "./Header"
-import LocationContext from "./LocationContext"
-import Metatags from "./Metatags"
-import Wrapper from "./Wrapper"
+import { Global } from '@emotion/core'
+import React from 'react'
+import Helmet from 'react-helmet'
+import favicon from '../../static/images/favicon.png'
+import '../fonts/fonts.css'
+import useLayoutQuery from '../hooks/useLayoutQuery'
+import { Atoms } from './designSystem/designSystem'
+import DesignSystemProvider from './designSystem/DesignSystemProvider'
+import Footer from './Footer'
+import Header from './Header'
+import LocationContext from './LocationContext'
+import Metatags from './Metatags'
+import Wrapper from './Wrapper'
 
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 export default function Layout({ children, location, ...props }) {
   const { site } = useLayoutQuery()
   const title =
@@ -23,75 +24,75 @@ export default function Layout({ children, location, ...props }) {
     <DesignSystemProvider>
       <Global
         styles={{
-          ":root": {
-            colorScheme: "light dark",
-            "--text-color": Atoms.colors.text,
-            "--meta-color": Atoms.colors.blackAlpha,
-            "--wash-color": Atoms.colors.wash,
-            "--mark-color": Atoms.colors.mark,
-            "--highlight-color": Atoms.colors.highlight,
-            "--font-mono": Atoms.font.family.mono,
+          ':root': {
+            colorScheme: 'light dark',
+            '--text-color': Atoms.colors.text,
+            '--meta-color': Atoms.colors.blackAlpha,
+            '--wash-color': Atoms.colors.wash,
+            '--mark-color': Atoms.colors.mark,
+            '--highlight-color': Atoms.colors.highlight,
+            '--font-mono': Atoms.font.family.mono,
 
-            "@media (prefers-color-scheme: dark)": {
-              "--text-color": Atoms.colors.wash,
-              "--meta-color": Atoms.colors.whiteAlpha,
-              "--wash-color": Atoms.colors.text,
+            '@media (prefers-color-scheme: dark)': {
+              '--text-color': Atoms.colors.wash,
+              '--meta-color': Atoms.colors.whiteAlpha,
+              '--wash-color': Atoms.colors.text,
             },
           },
 
-          "*": {
-            boxSizing: "border-box",
+          '*': {
+            boxSizing: 'border-box',
             margin: 0,
             padding: 0,
           },
 
           video: {
-            display: "block",
+            display: 'block',
             marginBottom: Atoms.spacing.medium,
-            maxWidth: "100%",
+            maxWidth: '100%',
           },
 
           html: {
-            backgroundColor: "var(--wash-color)",
-            color: "var(--text-color)",
+            backgroundColor: 'var(--wash-color)',
+            color: 'var(--text-color)',
             flex: 1,
             fontFamily: Atoms.font.family.sans,
-            fontSize: "125%",
+            fontSize: '125%',
             lineHeight: Atoms.baseline,
             paddingLeft: Atoms.spacing.medium,
             paddingRight: Atoms.spacing.medium,
 
             [`@media (max-width: ${Atoms.breakpoints.medium})`]: {
-              fontSize: "100%",
+              fontSize: '100%',
             },
           },
 
-          "ul, ol": {
+          'ul, ol': {
             marginBottom: Atoms.spacing.medium,
             paddingLeft: Atoms.spacing.medium,
           },
 
-          ".footnotes ol": {
+          '.footnotes ol': {
             paddingLeft: 0,
           },
 
-          ".footnotes li": {
+          '.footnotes li': {
             marginBottom: Atoms.spacing.xsmall,
             fontSize: Atoms.font.size.small,
             color: `var(--meta-color, ${Atoms.colors.meta})`,
-            letterSpacing: "0.025em",
+            letterSpacing: '0.025em',
           },
 
-          ".footnote-ref": {
-            fontVariantNumeric: "tabular-nums",
+          '.footnote-ref': {
+            fontVariantNumeric: 'tabular-nums',
           },
 
-          ".footnote-backref": {
-            marginLeft: "0.25em",
+          '.footnote-backref': {
+            marginLeft: '0.25em',
           },
 
-          "#gatsby-noscript": {
-            display: "none",
+          '#gatsby-noscript': {
+            display: 'none',
           },
         }}
       />

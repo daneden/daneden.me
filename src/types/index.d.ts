@@ -1,13 +1,13 @@
-declare module "react-imgix"
-declare module "react-script-tag"
+declare module 'react-imgix'
+declare module 'react-script-tag'
 
-declare module JSX {
+declare namespace JSX {
   interface IntrinsicElements {
     stream: StreamElement
   }
 }
 
-declare module "@mdx-js/react" {
+declare module '@mdx-js/react' {
   type MDXProps = {
     children: React.ReactNode
     components: { [string]: React.ReactNode }

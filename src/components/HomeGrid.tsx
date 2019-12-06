@@ -1,11 +1,11 @@
-import { css } from "@emotion/core"
-import styled from "@emotion/styled"
-import React from "react"
-import Breakout from "./Breakout"
-import { Atoms, Link } from "./designSystem/designSystem"
+import { css } from '@emotion/core'
+import styled from '@emotion/styled'
+import React, { ReactElement } from 'react'
+import Breakout from './Breakout'
+import { Atoms, Link } from './designSystem/designSystem'
 
 type FillAreaProps = {
-  direction?: "tl-br" | "tr-bl" | "center"
+  direction?: 'tl-br' | 'tr-bl' | 'center'
 }
 
 const GridContainer = styled.div`
@@ -35,7 +35,7 @@ const GridTextArea = styled.div`
 `
 
 const GridFillArea = styled.div<FillAreaProps>(
-  ({ direction = "tl-br" }) => `
+  ({ direction = 'tl-br' }) => `
     --line-direction: ${direction};
     --line-color: var(--text-color);
     background-image: paint(line);
@@ -44,10 +44,10 @@ const GridFillArea = styled.div<FillAreaProps>(
 `
 )
 
-export default function HomeGrid() {
+export default function HomeGrid(): ReactElement<typeof Breakout> | null {
   if (
-    typeof CSS !== "undefined" &&
-    !CSS.supports("background-image", "paint(line)")
+    typeof CSS !== 'undefined' &&
+    !CSS.supports('background-image', 'paint(line)')
   ) {
     return null
   }

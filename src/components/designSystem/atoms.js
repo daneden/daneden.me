@@ -11,9 +11,9 @@ const scales = {
 }
 
 const widths = {
-  auto: "auto",
-  fill: "100%",
-  container: "34rem",
+  auto: 'auto',
+  fill: '100%',
+  container: '34rem',
   // These values are changed momentarily; they’re set to 0 here to suppress TS errors.
   content: 0,
   page: 0,
@@ -32,16 +32,16 @@ export default {
     narrow: `50em`,
   },
   colors: {
-    blackAlpha: "rgba(0, 0, 0, 0.75)",
-    whiteAlpha: "rgba(255, 255, 255, 0.75)",
-    wash: "#fefefe",
-    site: "#FC6A00",
-    text: "#111",
-    meta: "#44464B",
-    mark: "rgba(255, 200, 0, 0.15)",
-    highlight: "#ffc800",
-    complementary: "#058cff",
-    additive: "rgba(0,0,0,.05)",
+    blackAlpha: 'rgba(0, 0, 0, 0.75)',
+    whiteAlpha: 'rgba(255, 255, 255, 0.75)',
+    wash: '#fefefe',
+    site: '#FC6A00',
+    text: '#111',
+    meta: '#44464B',
+    mark: 'rgba(255, 200, 0, 0.15)',
+    highlight: '#ffc800',
+    complementary: '#058cff',
+    additive: 'rgba(0,0,0,.05)',
   },
   font: {
     family: {
