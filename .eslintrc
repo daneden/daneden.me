@@ -1,4 +1,5 @@
 {
+  "parser": "@typescript-eslint/parser",
   "root": true,
   "settings": {
     "import/core-modules": ["gatsby"]
@@ -13,10 +14,16 @@
       "jsx": true
     }
   },
-  "extends": "prettier",
-  "plugins": ["import", "react", "react-hooks"],
+  "extends": [
+    "plugin:prettier/recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "plugins": ["prettier", "import", "react", "react-hooks"],
   "rules": {
+    "prettier/prettier": "error",
     "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn"
+    "react-hooks/exhaustive-deps": "warn",
+    "react/boolean-prop-naming": "error",
+    "@typescript-eslint/member-delimiter-style": "off"
   }
 }
