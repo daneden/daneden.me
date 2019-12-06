@@ -1,8 +1,12 @@
 import { css } from "@emotion/core"
-import React from "react"
+import React, { ReactNode } from "react"
 import Atoms from "./atoms"
 
-const H1 = ({ children, ...props }) => {
+interface H1Props {
+  children?: ReactNode
+}
+
+const H1 = ({ children }: H1Props) => {
   const style = css`
     font-family: ${Atoms.font.family.display};
     font-size: ${Atoms.font.size.h1};
@@ -15,11 +19,7 @@ const H1 = ({ children, ...props }) => {
     padding-top: ${Atoms.spacing.xlarge};
   `
 
-  return (
-    <h1 css={style} {...props}>
-      {children}
-    </h1>
-  )
+  return <h1 css={style}>{children}</h1>
 }
 
 export default H1

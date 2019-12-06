@@ -1,8 +1,11 @@
 import styled from "@emotion/styled"
 import React, { FunctionComponent } from "react"
 import ScriptTag from "react-script-tag"
-import { CFVideoProps } from "../interfaces/CFVideo.interface"
 import { Atoms } from "./designSystem/designSystem"
+
+interface CFVideoProps {
+  id: string
+}
 
 const Container = styled.div`
   margin-bottom: ${Atoms.spacing.medium};

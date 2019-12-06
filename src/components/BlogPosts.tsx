@@ -1,4 +1,5 @@
 import { css } from "@emotion/core"
+import React from "react"
 import useBlogPostsQuery from "../hooks/useBlogPostsQuery"
 import slug from "../utils/slugFromPath"
 import { Atoms, PlainList } from "./designSystem/designSystem"
@@ -15,7 +16,7 @@ export default function BlogPosts() {
 
   return (
     <PlainList>
-      {posts.map(post => {
+      {posts!.map(post => {
         const path = slug(post.node.parent.name)
         return (
           <li css={liStyle} key={path}>

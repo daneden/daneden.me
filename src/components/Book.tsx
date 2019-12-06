@@ -1,9 +1,15 @@
 import styled from "@emotion/styled"
-import { FunctionComponent } from "react"
-import { BookData } from "../interfaces/Book.interface"
+import React, { FunctionComponent } from "react"
 import Atoms from "./designSystem/atoms"
 import PlainLink from "./designSystem/PlainLink"
 import Image from "./Image"
+
+export interface BookData {
+  author: string
+  cover: string
+  title: string
+  url: string
+}
 
 const BookLink = styled(PlainLink)`
   font-size: ${Atoms.font.size.small};

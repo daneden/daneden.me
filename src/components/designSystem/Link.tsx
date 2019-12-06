@@ -17,7 +17,8 @@ interface CommonLinkProps {
   [x: string]: any
 }
 
-type LinkProps = CommonLinkProps & (ExternalLinkProps | InternalLinkProps)
+export type LinkProps = CommonLinkProps &
+  (ExternalLinkProps | InternalLinkProps)
 
 const styles = (underline: boolean) => css`
   color: inherit;

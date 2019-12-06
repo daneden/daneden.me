@@ -7,6 +7,10 @@ import LocationContext from "./LocationContext"
 
 const { useContext } = React
 
+interface HeaderProps {
+  siteTitle: string
+}
+
 const StyledHeader = styled("header")`
   border-bottom: 1px solid;
   display: grid;
@@ -37,7 +41,7 @@ const links = [
   },
 ]
 
-const Header = ({ siteTitle }) => {
+const Header = ({ siteTitle }: HeaderProps) => {
   const location = useContext(LocationContext)
   const blogPostRegex = /[0-9]{4}\/[0-9]{2}\/[0-9]{2}\//
   return (
@@ -50,8 +54,8 @@ const Header = ({ siteTitle }) => {
             <li key={to}>
               <PlainLink to={to}>
                 {label}
-                {location.includes(to) ||
-                (location.match(blogPostRegex) && to.includes("blog"))
+                {location!.includes(to) ||
+                (location!.match(blogPostRegex) && to.includes("blog"))
                   ? " ☚"
                   : ""}
               </PlainLink>

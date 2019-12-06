@@ -1,9 +1,23 @@
 import styled from "@emotion/styled"
 import React, { FunctionComponent } from "react"
 import Imgix from "react-imgix"
-import { FigureProps, ImageProps } from "../interfaces/Image.interface"
 import mdToHTML from "../utils/mdToHTML"
 import { Align, Atoms } from "./designSystem/designSystem"
+
+interface FigureProps {
+  className?: string
+  captionPosition?: "bottom" | "left"
+  responsive?: boolean
+  margin?: boolean
+}
+
+interface ImageProps extends FigureProps {
+  align?: "left" | "right"
+  alt?: string
+  caption?: string
+  invertInDarkMode?: boolean
+  src: string
+}
 
 const Figure = styled("figure")<FigureProps>(
   props => `

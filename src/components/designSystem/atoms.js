@@ -14,6 +14,9 @@ const widths = {
   auto: "auto",
   fill: "100%",
   container: "34rem",
+  // These values are changed momentarily; they’re set to 0 here to suppress TS errors.
+  content: 0,
+  page: 0,
 }
 
 widths.page = `calc(${widths.container} + ${BASELINE * scales.medium * 2}rem)`

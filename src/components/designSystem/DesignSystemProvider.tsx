@@ -1,7 +1,11 @@
 import { MDXProvider } from "@mdx-js/react"
-import React from "react"
+import React, { ReactChildren } from "react"
 import Image from "../Image"
 import * as designSystem from "./designSystem"
+
+interface DesignSystemProviderProps {
+  children: ReactChildren
+}
 
 const components = {
   a: designSystem.Link,
@@ -22,7 +26,7 @@ const components = {
   Note: designSystem.Note,
 }
 
-const DesignSystemProvider = ({ children }) => (
+const DesignSystemProvider = ({ children }: DesignSystemProviderProps) => (
   <MDXProvider components={{ ...components }}>{children}</MDXProvider>
 )
 

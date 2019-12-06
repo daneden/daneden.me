@@ -1431,6 +1431,13 @@
     "@types/history" "*"
     "@types/react" "*"
 
+"@types/react-helmet@5.0.14":
+  version "5.0.14"
+  resolved "https://registry.yarnpkg.com/@types/react-helmet/-/react-helmet-5.0.14.tgz#a07979ccb2cee088e74e735c84058fc8607d32e4"
+  integrity sha512-Q73FFg7+LjblfSQUNbnjrwy2T1avBP8yevEgNrkDjyz1rBbnXkuOQcEV7I5wvmAic9FLUk0CnkLieEDej84Zkw==
+  dependencies:
+    "@types/react" "*"
+
 "@types/react@*", "@types/react@^16.8.12", "@types/react@^16.8.6":
   version "16.9.11"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-16.9.11.tgz#70e0b7ad79058a7842f25ccf2999807076ada120"

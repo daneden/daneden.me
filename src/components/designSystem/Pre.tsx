@@ -1,7 +1,12 @@
 import styled from "@emotion/styled"
-import React from "react"
+import React, { ReactChildren, ReactNode } from "react"
 import Code from "./Code"
 import { Atoms } from "./designSystem"
+
+type PreProps = React.HTMLAttributes<HTMLPreElement> & {
+  children: ReactChildren
+  as?: ReactNode
+}
 
 const StyledCode = styled(Code)`
   line-height: 1.5;
@@ -16,6 +21,6 @@ const StyledCode = styled(Code)`
   }
 `
 
-const Pre = props => <StyledCode as="pre" {...props} />
+const Pre = (props: PreProps) => <StyledCode as="pre" {...props} />
 
 export default Pre

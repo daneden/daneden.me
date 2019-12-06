@@ -1,5 +1,19 @@
 import { graphql, useStaticQuery } from "gatsby"
-import { PostsQueryData } from "../interfaces/PostsQuery.interface"
+import { EdgeNode } from "../interfaces/EdgeNode.interface"
+
+type Layout = "post"
+
+interface Post {
+  date: string
+  layout: Layout
+  title: string
+}
+
+interface PostsQueryData {
+  allMdx: {
+    edges?: [EdgeNode<Post>]
+  }
+}
 
 const useBlogPostsQuery = () => {
   const { allMdx }: PostsQueryData = useStaticQuery(graphql`

@@ -6,3 +6,11 @@ declare module JSX {
     stream: StreamElement
   }
 }
+
+declare module "@mdx-js/react" {
+  type MDXProps = {
+    children: React.ReactNode
+    components: { [string]: React.ReactNode }
+  }
+  export class MDXProvider extends React.Component<MDXProps> {}
+}

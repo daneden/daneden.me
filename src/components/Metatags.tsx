@@ -1,6 +1,15 @@
 import React from "react"
 import Helmet from "react-helmet"
 
+interface MetatagsProps {
+  title?: string
+  defaultTitle: string
+  description: string
+  url: string
+  pathname: string
+  thumbnail: string
+}
+
 const dnsPrefetchURLs = [
   "https://daneden.imgix.net",
   "https://videodelivery.net",
@@ -9,7 +18,7 @@ const dnsPrefetchURLs = [
   "https://www.googletagmanager.com",
 ]
 
-function Metatags(props) {
+function Metatags(props: MetatagsProps) {
   const { title, defaultTitle, description, url, pathname, thumbnail } = props
 
   return (

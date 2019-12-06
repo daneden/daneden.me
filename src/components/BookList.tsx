@@ -1,7 +1,6 @@
 import styled from "@emotion/styled"
-import * as React from "react"
-import { BookData } from "../interfaces/Book.interface"
-import Book from "./Book"
+import React from "react"
+import Book, { BookData } from "./Book"
 import Atoms from "./designSystem/atoms"
 
 const strippedTitle = (str: string): string =>

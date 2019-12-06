@@ -2,6 +2,10 @@ import styled from "@emotion/styled"
 import React from "react"
 import Atoms from "./designSystem/atoms"
 
+interface FooterProps {
+  author: string
+}
+
 const StyledFooter = styled("footer")`
   border-top: 1px solid;
   color: var(--meta-color, ${Atoms.colors.meta});
@@ -12,7 +16,7 @@ const StyledFooter = styled("footer")`
   padding-top: ${Atoms.spacing.small};
 `
 
-export default function Footer({ author }) {
+export default function Footer({ author }: FooterProps) {
   return (
     <StyledFooter>
       Content &copy; {new Date().getUTCFullYear()} {author}, unless otherwise
