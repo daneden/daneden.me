@@ -17,7 +17,7 @@ interface LayoutProps {
   location: {
     pathname: string
   }
-  /* TODO: Remove eslint-disable (issue #136) */
+  /* TODO: Remove eslint-disable (issue #137) */
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   [x: string]: any
 }

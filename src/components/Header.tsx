@@ -1,4 +1,4 @@
-/* TODO: Remove eslint-disable (issue #136) */
+/* TODO: Remove eslint-disable (issue #137) */
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import styled from '@emotion/styled'
 import React, { ReactElement } from 'react'
