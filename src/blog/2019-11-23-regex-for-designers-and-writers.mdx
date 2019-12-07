@@ -1,12 +1,8 @@
-import H1 from "../components/designSystem/H1"
-
 export const frontmatter = {
-  layout: "post",
-  title: "Regex for Designers and UX Writers",
-  date: "2019-11-23",
+  layout: 'post',
+  title: 'Regex for Designers and UX Writers',
+  date: '2019-11-23',
 }
-
-<H1>{frontmatter.title}</H1>
 
 Across all our digital devices, one of the things we probably do most commonly is _search for something_. Whether it’s using Spotlight on our iPhone or Mac, searching using the Windows menu, using Ctrl+F or ⌘+F to search for something in a document, or looking something up on Google, we’re constantly finding our stuff by searching with text.
 
@@ -153,7 +149,7 @@ If you’re building a prototype in JavaScript or Typescript (for instance, usin
 
 ```js
 // Replace “Hello world” with “Goodbye world”, using a capture group
-"Hello world".replace(/Hello (world)/, "Goodbye $1")
+'Hello world'.replace(/Hello (world)/, 'Goodbye $1')
 
 // Validate whether an input value matches a pattern
 const emailRegex = /[a-zA-Z0-9_+-.]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-]/

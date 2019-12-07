@@ -7,7 +7,7 @@ export const frontmatter = {
   date: "2017-03-29",
 }
 
-# Designing Product UI Systems
+
 
 <Image
   alt="A stick figure looking at shapes falling out of a box"

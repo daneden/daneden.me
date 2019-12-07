@@ -5564,12 +5564,12 @@ gatsby-plugin-eslint@^2.0.8:
   resolved "https://registry.yarnpkg.com/gatsby-plugin-eslint/-/gatsby-plugin-eslint-2.0.8.tgz#1ff7f546a427d274dc2de3932ba29822aae330c3"
   integrity sha512-vAMy37povmQJNg6ZxY78fkWR3pKwG8MNMhO3u+4vXj2MYT5avhFvHPJTAb126ZCuygf30gAWlpwbV50zP894Jw==
 
-gatsby-plugin-feed@2.3.22:
-  version "2.3.22"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-feed/-/gatsby-plugin-feed-2.3.22.tgz#840ac388f80adb5b60e835d22a5eb1ac9e7b2129"
-  integrity sha512-oDu0/ybRRCQQyb5K29lRXrsPvHncZuT7MOLa0QgX+sxiflNolUmZQnSO103hMS8CKyAxz1O0emfwxvBxBl1MXw==
+gatsby-plugin-feed-mdx@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-feed-mdx/-/gatsby-plugin-feed-mdx-1.0.0.tgz#924fbca4ca90c55706cd06f2661944f5c5223ab8"
+  integrity sha512-EsXCnopmGRQDrMwNm+597nepHKAVox0ZqClk3YAZEmK+bOe8PUgn8TDigJOYijTmmKewE3UNwvVcFinIhzacUQ==
   dependencies:
-    "@babel/runtime" "^7.7.4"
+    "@babel/runtime" "^7.7.2"
     "@hapi/joi" "^15.1.1"
     fs-extra "^8.1.0"
     lodash.merge "^4.6.2"

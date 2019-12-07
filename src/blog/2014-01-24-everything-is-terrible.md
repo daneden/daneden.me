@@ -4,7 +4,7 @@ title: "It’s 2014 And Everything is Terrible",
 date: "2014-01-24"
 }
 
-# It’s 2014 and Everything is Terrible
+
 
 6:30am. Wake up, thanks to the alarm on my iPhone. Check various inboxes, spread
 across Gmail and iCloud. Read Twitter. Say hello to the people I love half way

@@ -4,7 +4,7 @@ title: "Whim & Aim",
 date: "2013-07-10"
 }
 
-# Whim & Aim
+
 
 Great design is, more often than not, a delicate balancing act. On one side of
 the scale, we must strive to fulfil the needs of the task at hand; design

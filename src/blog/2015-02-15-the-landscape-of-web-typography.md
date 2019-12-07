@@ -5,7 +5,7 @@ hero: "2015/02/herb-lubalin.jpg",
 date: "2015-02-15"
 }
 
-# The Landscape of Web Typography
+
 
 ## Preface
 

@@ -4,7 +4,7 @@ title: "See, Think, Design, Produce",
 date: "2014-05-06"
 }
 
-# See, Think, Design, Produce
+
 
 I recently had the pleasure of attending Edward Tufte’s “See, Think, Design,
 Produce” one-day lecture series (along with some other Dropbox Design comrades),

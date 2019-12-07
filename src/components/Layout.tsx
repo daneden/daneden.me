@@ -4,7 +4,7 @@ import Helmet from 'react-helmet'
 import favicon from '../../static/images/favicon.png'
 import '../fonts/fonts.css'
 import useLayoutQuery from '../hooks/useLayoutQuery'
-import { Atoms } from './designSystem/designSystem'
+import { Atoms, H1 } from './designSystem/designSystem'
 import DesignSystemProvider from './designSystem/DesignSystemProvider'
 import Footer from './Footer'
 import Header from './Header'
@@ -120,7 +120,10 @@ export default function Layout({
           thumbnail={`${site.siteMetadata.siteUrl}/images/og.png`}
         />
         <Header siteTitle={site.siteMetadata.title} />
-        <Wrapper>{children}</Wrapper>
+        <Wrapper>
+          {title && <H1>{title}</H1>}
+          {children}
+        </Wrapper>
         <Footer author={site.siteMetadata.authorName} />
       </LocationContext.Provider>
     </DesignSystemProvider>

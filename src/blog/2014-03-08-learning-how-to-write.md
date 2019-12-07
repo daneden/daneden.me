@@ -4,7 +4,7 @@ title: "Learning How To Write",
 date: "2014-03-08"
 }
 
-# Learning How To Write
+
 
 It feels like it’s been quite some time since I wrote anything. That’s not the
 case at all, in reality. Far from it, in fact. I write thousands of words every

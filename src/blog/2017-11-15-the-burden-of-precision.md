@@ -4,7 +4,7 @@ export const frontmatter = {
   date: "2017-11-15",
 }
 
-# The Burden of Precision
+
 
 > “If the idea is there, the brush can spare itself the work”
 > _—Chinese painter's proverb_

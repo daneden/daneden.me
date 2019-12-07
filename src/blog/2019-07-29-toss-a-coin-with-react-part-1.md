@@ -1,14 +1,8 @@
-import H1 from "../components/designSystem/H1"
-
 export const frontmatter = {
 layout: "post",
 title: "Building a Coin-Tossing Simulator with React, Hooks, and Now: Part 1",
 date: "2019-07-29",
 }
-
-<H1>
-  {frontmatter.title}
-</H1>
 
 <Note>
   This is the first in what will be a short series of posts explaining how to
@@ -127,7 +121,7 @@ We'll delete some of the import statements at the top and most of the
 code in the `App` function. Here's what your `App.js` should look like:
 
 ```jsx
-import React from "react"
+import React from 'react'
 
 function App() {
   return <div>The coin toss app will go here!</div>
@@ -176,7 +170,7 @@ Let's go back to `App.js` for a moment. If you haven't seen React code before,
 seeing HTML-like bracketed-code might be a surprise to you:
 
 ```jsx{4}
-import React from "react"
+import React from 'react'
 
 function App() {
   return <div>The coin toss app will go here!</div>
@@ -189,7 +183,7 @@ This is called JSX syntax, and it's just a convenient way of writing React
 code. The line highlighted above could also be written like this:
 
 ```js
-return React.createElement("div", null, "The coin toss app will go here!")
+return React.createElement('div', null, 'The coin toss app will go here!')
 ```
 
 When we write `<div>` in JSX, it's telling React to create a `div` element,
@@ -230,7 +224,7 @@ it doesn't do anything yet. Let's change that:
 ```jsx
 function App() {
   const tossCoin = () => {
-    alert("The coin was tossed")
+    alert('The coin was tossed')
   }
 
   return (
@@ -259,7 +253,7 @@ variable later on. We'll need one for the coin's side, and one for the number
 of times the coin has been tossed.
 
 ```jsx{numberLines: true}
-import React from "react"
+import React from 'react'
 
 // highlight-next-line
 const { useState } = React
@@ -282,7 +276,7 @@ function App() {
     <div>
       // highlight-start
       <p>The coin has been tossed {tossed} times.</p>
-      <p>It landed on {side === 1 ? "heads" : "tails"}</p>
+      <p>It landed on {side === 1 ? 'heads' : 'tails'}</p>
       // highlight-end
       <button onClick={tossCoin}>Toss coin</button>
     </div>
@@ -403,9 +397,9 @@ an element or a variable a certain way, you just describe the element straight
 away. Let's look at an example in classic JavaScript:
 
 ```js
-const button = document.createElement("button")
-button.innerHTML = "Toss coin"
-button.addEventListener("click", tossCoin)
+const button = document.createElement('button')
+button.innerHTML = 'Toss coin'
+button.addEventListener('click', tossCoin)
 ```
 
 And compare it to the JSX/React code:
@@ -427,7 +421,7 @@ change any inner HTML of the paragraph elements of our app. In classic JS, we'd
 likely have to update a lot of things ourselves:
 
 ```js
-const firstParagraph = document.createElement("p")
+const firstParagraph = document.createElement('p')
 firstParagraph.innerHTML = `The coin has been tossed ${tossed} times.`
 
 // ...much later or elsewhere in our code

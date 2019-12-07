@@ -6,7 +6,7 @@ export const frontmatter = {
   date: "2014-06-28",
 }
 
-# Design Elitism
+
 
 About 3 years ago, I was standing on a stage, delivering a presentation about
 animation, design, and delight on the web. It was wretchedly terrifying, but

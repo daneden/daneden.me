@@ -4,7 +4,7 @@ title: "A Design System Grammar",
 date: "2017-07-12"
 }
 
-# A Design System Grammar
+
 
 In my posts about Design Systems so far, I’ve theorized about the structural
 approach that causes existing design systems to fail, and an [alternative

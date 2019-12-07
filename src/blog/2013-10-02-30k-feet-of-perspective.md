@@ -4,7 +4,7 @@ title: "Thirty Thousand Feet of Perspective",
 date: "2013-10-02"
 }
 
-# Thirty Thousand Feet of Perspective
+
 
 It was no more than a couple of years ago when I was sitting on a flight on my
 own for the first time. I think I’ll always remember that trip as the one that

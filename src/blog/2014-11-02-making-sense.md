@@ -6,7 +6,7 @@ export const frontmatter = {
   date: "2014-11-02",
 }
 
-# Making Sense
+
 
 <Image
   alt="Muji’s aliminium ballpoint pen"

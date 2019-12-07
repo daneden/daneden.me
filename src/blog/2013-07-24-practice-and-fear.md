@@ -4,7 +4,7 @@ title: "Practice & Fear",
 date: "2013-07-24"
 }
 
-# Practice & Fear
+
 
 There’s a fundamental flaw in the phrase “Practice makes Perfect”, particularly
 when it comes to the web. “Perfect” implies too much subjectivity. It also

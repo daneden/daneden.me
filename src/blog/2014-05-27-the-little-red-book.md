@@ -6,7 +6,7 @@ export const frontmatter = {
   date: "2014-05-27",
 }
 
-# The Little Red Book
+
 
 Around three years ago, I paid Amazon the grand sum of £13.00 for a little red
 book titled “The Vignelli Canon.”

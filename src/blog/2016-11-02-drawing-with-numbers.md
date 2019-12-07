@@ -8,7 +8,7 @@ export const frontmatter = {
   date: "2016-11-02",
 }
 
-# Drawing With Numbers
+
 
 <Image
   alt="A generative art piece produced by myself, reminiscient of ocean coral"

@@ -7,7 +7,7 @@ export const frontmatter = {
   date: "2016-08-04",
 }
 
-# The Weird Wide Web
+
 
 <Image
   alt="A distorted image of the Internet Explorer logo"

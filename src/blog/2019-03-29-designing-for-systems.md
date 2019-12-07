@@ -6,7 +6,7 @@ export const frontmatter = {
   date: "2019-03-29",
 }
 
-# Designing And Building For Systems
+
 
 I’ve spent around 5 years working on design systems at different scales: in
 my own work, I’ve worked on design systems for a product team of one—myself;

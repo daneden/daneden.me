@@ -7,7 +7,7 @@ title: "Subatomic Design Systems",
 date: "2018-01-05",
 }
 
-# Subatomic Design Systems
+
 
 The following theory of “Subatomic Design Systems’ is loosely based on an
 amalgam of existing design system theories and programming architecture

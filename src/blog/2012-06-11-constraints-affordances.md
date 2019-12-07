@@ -4,7 +4,7 @@ title: "Constraints & Affordances",
 date: "2012-06-11"
 }
 
-# Constraints & Affordances
+
 
 I spend a disturbing amount of time thinking about the way our world has come to
 be. This morning, like most mornings, I took the tram to work. There was a

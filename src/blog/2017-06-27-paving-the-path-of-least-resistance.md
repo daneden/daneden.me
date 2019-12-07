@@ -4,7 +4,7 @@ export const frontmatter = {
   date: "2017-06-27",
 }
 
-# Paving the Path of Least Resistance
+
 
 Design systems can sometimes feel like a shackle on the product development
 process. Where they are rigid, as is often required of design systems in order

@@ -4,7 +4,7 @@ title: "Heart and The Future of Design",
 date: "2013-09-11"
 }
 
-# Heart and The Future of Design
+
 
 In the [most recent
 episode](http://www.happymondaypodcast.com/episodes/sarah-josh2) of Happy Monday

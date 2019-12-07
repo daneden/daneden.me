@@ -1,11 +1,9 @@
 export const frontmatter = {
-  layout: "post",
-  title: "Dispelling the Android CSS animation myths",
-  date: "2011-12-14",
-  hidden: true,
+layout: "post",
+title: "Dispelling the Android CSS Animation Myths",
+date: "2011-12-14",
+hidden: true,
 }
-
-# Dispelling the Android CSS animation myths
 
 **Update:** it turns out Android 4.0 [actually addresses](http://yfrog.com/h346935364p)
 this issue. Still, we need to urge the authors of these resources to explicitly

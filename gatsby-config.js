@@ -27,7 +27,7 @@ module.exports = {
       options: {
         extensions: ['.mdx', '.md'],
         defaultLayouts: {
-          default: require.resolve('./src/components/Layout.js'),
+          default: require.resolve('./src/components/Layout.tsx'),
         },
         gatsbyRemarkPlugins: [
           { resolve: `gatsby-remark-widows` },
@@ -58,7 +58,7 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-feed`,
+      resolve: `gatsby-plugin-feed-mdx`,
       options: {
         query: `
         {
@@ -115,7 +115,7 @@ module.exports = {
             }
           `,
             output: '/rss.xml',
-            title: 'daneden.me RSS Feed',
+            title: 'Daniel Eden’s Blog RSS Feed',
           },
         ],
       },

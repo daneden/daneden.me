@@ -1,4 +1,3 @@
-import H1 from "../components/designSystem/H1"
 import CFVideo from "../components/CFVideo"
 
 export const frontmatter = {
@@ -6,10 +5,6 @@ layout: "post",
 title: "Where We Can Go",
 date: "2019-08-27",
 }
-
-<H1>
-  {frontmatter.title}
-</H1>
 
 I’ve been working on design systems for around 5 years: almost as long as the term has existed. At least, in the way we employ it today.
 

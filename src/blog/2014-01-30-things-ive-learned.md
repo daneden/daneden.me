@@ -4,7 +4,7 @@ title: "Things I’ve Learned On Planet Earth",
 date: "2014-01-30"
 }
 
-# Things I’ve Learned On Planet Earth
+
 
 - Everyone is kind of messed up. It’s best we talk more about it.
 - People are, generally speaking, well-meaning and kind. That’s a difficult and important thing to remember.

@@ -8,7 +8,7 @@ title: "Square Peg, Round Hole: Typed Programming For Designers",
 date: "2019-07-09",
 }
 
-# Square Peg, Round Hole: Typed Programming For Designers
+
 
 Think back to the last time that you cooked a meal. The recipe you followed
 might have called for a particular ingredient, like yellow onions, but upon

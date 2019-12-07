@@ -4,7 +4,7 @@ export const frontmatter = {
   date: "2017-07-17",
 }
 
-# Design System Structure
+
 
 > "If you wish to make apple pie from scratch, you must first invent the
 > universe."

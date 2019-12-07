@@ -5,7 +5,7 @@ export const frontmatter = {
   date: "2017-06-02",
 }
 
-# Casting Graphite in Gold
+
 
 <Image src="2017/06/graphite.png" />
 

@@ -1,14 +1,8 @@
-import H1 from "../components/designSystem/H1"
-
 export const frontmatter = {
 layout: "post",
 title: "Building a Coin-Tossing Simulator with React, Hooks, and Now: Part 2",
 date: "2019-08-10",
 }
-
-<H1>
-  {frontmatter.title}
-</H1>
 
 <Note>
   This is the second part in a short series of posts explaining how to build a
@@ -66,7 +60,7 @@ function App() {
   return (
     <div>
       <p>The coin has been tossed {tossed} times.</p>
-      <p>It landed on {side === 1 ? "heads" : "tails"}</p>
+      <p>It landed on {side === 1 ? 'heads' : 'tails'}</p>
       // highlight-start
       <ul>
         <li>Heads: {heads}</li>
@@ -204,7 +198,7 @@ function App() {
   return (
     <div>
       <p>The coin has been tossed {tossed} times.</p>
-      <p>It landed on {side === 1 ? "heads" : "tails"}</p>
+      <p>It landed on {side === 1 ? 'heads' : 'tails'}</p>
       <ul>
         <li>
           <label htmlFor="heads">Heads: {heads}</label>
@@ -217,7 +211,7 @@ function App() {
       </ul>
       // highlight-start
       <button onClick={() => setIsPaused(!isPaused)}>
-        {!isPaused ? "Pause" : "Continue"}
+        {!isPaused ? 'Pause' : 'Continue'}
       </button>
       {isPaused && <button onClick={tossCoin}>Toss coin</button>}
       // highlight-end

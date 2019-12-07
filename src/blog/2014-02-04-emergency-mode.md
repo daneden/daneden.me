@@ -4,7 +4,7 @@ export const frontmatter = {
   date: "2014-02-04",
 }
 
-# Emergency Mode
+
 
 “What would happen if I were struck down by a car right now?”
 

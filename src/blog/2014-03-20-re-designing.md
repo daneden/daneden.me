@@ -6,7 +6,7 @@ export const frontmatter = {
   date: "2014-03-20",
 }
 
-# Re; Designing
+
 
 I’m having a bit of an existential crisis.
 

@@ -10,20 +10,19 @@ interface DesignSystemProviderProps {
 const components = {
   a: designSystem.Link,
   blockquote: designSystem.Blockquote,
-  inlineCode: designSystem.Code,
+  Code: designSystem.Code,
   h1: designSystem.H1,
   h2: designSystem.H2,
   h3: designSystem.H3,
   hr: designSystem.Hr,
+  Image,
+  inlineCode: designSystem.Code,
+  Link: designSystem.Link,
   mark: designSystem.Mark,
+  Note: designSystem.Note,
   p: designSystem.P,
   pre: designSystem.Pre,
   table: designSystem.Table,
-  // Custom Components
-  Code: designSystem.Code,
-  Image,
-  Link: designSystem.Link,
-  Note: designSystem.Note,
 }
 
 const DesignSystemProvider = ({
