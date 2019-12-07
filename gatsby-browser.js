@@ -1,7 +1,3 @@
-/* eslint-disable @typescript-eslint/explicit-function-return-type */
-// eslint-disable-next-line @typescript-eslint/no-empty-function
-exports.onClientEntry = () => {}
-
 require('./static/css/syntax.css')
 
 if ('registerProperty' in CSS) {

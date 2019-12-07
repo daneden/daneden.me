@@ -8,7 +8,6 @@ const StyledWrapper = styled('div')`
   max-width: ${Atoms.widths.container};
 `
 
-// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 export default function Wrapper(props) {
   return <StyledWrapper {...props} />
 }
