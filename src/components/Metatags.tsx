@@ -5,8 +5,8 @@ interface MetatagsProps {
   title?: string
   defaultTitle: string
   description: string
-  url: string
-  pathname: string
+  url?: string
+  pathname?: string
   thumbnail: string
 }
 

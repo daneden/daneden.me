@@ -1,5 +1,5 @@
 import { Global } from '@emotion/core'
-import React from 'react'
+import React, { ReactElement, ReactNode } from 'react'
 import Helmet from 'react-helmet'
 import favicon from '../../static/images/favicon.png'
 import '../fonts/fonts.css'
@@ -12,8 +12,21 @@ import LocationContext from './LocationContext'
 import Metatags from './Metatags'
 import Wrapper from './Wrapper'
 
-// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-export default function Layout({ children, location, ...props }) {
+interface LayoutProps {
+  children: ReactNode
+  location: {
+    pathname: string
+  }
+  /* TODO: Remove eslint-disable (issue #136) */
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  [x: string]: any
+}
+
+export default function Layout({
+  children,
+  location,
+  ...props
+}: LayoutProps): ReactElement<typeof DesignSystemProvider> {
   const { site } = useLayoutQuery()
   const title =
     props.pageContext.frontmatter !== undefined
