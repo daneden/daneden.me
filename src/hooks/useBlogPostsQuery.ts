@@ -7,6 +7,7 @@ interface Post {
   date: string
   layout: Layout
   title: string
+  hidden: boolean
 }
 
 interface PostsQueryData {
@@ -29,6 +30,7 @@ const useBlogPostsQuery = (): PostsQueryData => {
             frontmatter {
               title
               date(formatString: "dddd, MMMM Do YYYY")
+              hidden
             }
           }
         }

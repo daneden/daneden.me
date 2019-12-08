@@ -18,14 +18,16 @@ export default function BlogPosts(): ReactElement<typeof PlainList> {
 
   return (
     <PlainList>
-      {posts!.map(post => {
-        const path = slug(post.node.parent.name)
-        return (
-          <li css={liStyle} key={path}>
-            <PostLink post={{ ...post.node, slug: path }} />
-          </li>
-        )
-      })}
+      {posts!
+        .filter(post => !post.node.frontmatter.hidden)
+        .map(post => {
+          const path = slug(post.node.parent.name)
+          return (
+            <li css={liStyle} key={path}>
+              <PostLink post={{ ...post.node, slug: path }} />
+            </li>
+          )
+        })}
     </PlainList>
   )
 }
