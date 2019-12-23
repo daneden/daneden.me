@@ -32,7 +32,7 @@
     "@bundle-analyzer/gatsby-plugin": "0.5.1",
     "@emotion/core": "10.0.22",
     "@emotion/styled": "10.0.23",
-    "@mdx-js/mdx": "1.5.1",
+    "@mdx-js/mdx": "1.5.3",
     "@mdx-js/react": "1.5.1",
     "@types/react-helmet": "5.0.14",
     "emotion": "10.0.23",
