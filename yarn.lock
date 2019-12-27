@@ -1032,11 +1032,6 @@
   resolved "https://registry.yarnpkg.com/@emotion/unitless/-/unitless-0.7.5.tgz#77211291c1900a700b8a78cfafda3160d76949ed"
   integrity sha512-OWORNpfjMsSSUBVrRBVGECkhWcULOAJz9ZW8uK9qgxD+87M7jHRcvh/A96XXNhXTLmKcoYSQtBEX7lHMO7YRwg==
 
-"@emotion/utils@0.11.2":
-  version "0.11.2"
-  resolved "https://registry.yarnpkg.com/@emotion/utils/-/utils-0.11.2.tgz#713056bfdffb396b0a14f1c8f18e7b4d0d200183"
-  integrity sha512-UHX2XklLl3sIaP6oiMmlVzT0J+2ATTVpf0dHQVyPJHTkOITvXfaSqnRk6mdDhV9pR8T/tHc3cex78IKXssmzrA==
-
 "@emotion/utils@0.11.3":
   version "0.11.3"
   resolved "https://registry.yarnpkg.com/@emotion/utils/-/utils-0.11.3.tgz#a759863867befa7e583400d322652a3f44820924"
@@ -3443,12 +3438,12 @@ create-ecdh@^4.0.0:
     bn.js "^4.1.0"
     elliptic "^6.0.0"
 
-create-emotion-server@10.0.14:
-  version "10.0.14"
-  resolved "https://registry.yarnpkg.com/create-emotion-server/-/create-emotion-server-10.0.14.tgz#51378f2f5a38d55b6da403a7f975d51b7cf221b5"
-  integrity sha512-wYPojM+irHtmIZuRmYeKYaJSttC3/3Cj4DI8B1JmYq8P9IQ5FZCyfahdHhI3OSrNHIkWAX1Kjt4kbbqxVbUjPw==
+create-emotion-server@10.0.27:
+  version "10.0.27"
+  resolved "https://registry.yarnpkg.com/create-emotion-server/-/create-emotion-server-10.0.27.tgz#24b135d9ef3bca32b6812c0b670feb675edd17e3"
+  integrity sha512-1EbZgdjiho9ue1BSTpAez8SIdfbTXomtz0bg+LPOEvf/5OV7xqCGJaoSCDCB+y7kZ73hwoEhLsoPmqKSGIQMXg==
   dependencies:
-    "@emotion/utils" "0.11.2"
+    "@emotion/utils" "0.11.3"
     html-tokenize "^2.0.0"
     multipipe "^1.0.2"
     through "^2.3.8"
@@ -4254,12 +4249,12 @@ emojis-list@^2.0.0:
   resolved "https://registry.yarnpkg.com/emojis-list/-/emojis-list-2.1.0.tgz#4daa4d9db00f9819880c79fa457ae5b09a1fd389"
   integrity sha1-TapNnbAPmBmIDHn6RXrlsJof04k=
 
-emotion-server@10.0.17:
-  version "10.0.17"
-  resolved "https://registry.yarnpkg.com/emotion-server/-/emotion-server-10.0.17.tgz#314343afd0533f6151542408924ef19b364e8d44"
-  integrity sha512-f2KIJChSyuj5o4SR45C8B0mj5D9Bxc8kBy7ya9p7w4wkCQpcLXrnpGjpDXN82sJfbj/KV51UyOwTstYjd/QCmA==
+emotion-server@10.0.27:
+  version "10.0.27"
+  resolved "https://registry.yarnpkg.com/emotion-server/-/emotion-server-10.0.27.tgz#ea654342fdf9f5d8cd1793f5a6594159485a3806"
+  integrity sha512-ypISBMkgZD7dgP6Y0QhZlqazxffpowcEWlZHKLADVazdxY5iXjZbd1UvovdpfDRjbj4EBxwKkltog3NzuSBavA==
   dependencies:
-    create-emotion-server "10.0.14"
+    create-emotion-server "10.0.27"
 
 emotion@10.0.27:
   version "10.0.27"
