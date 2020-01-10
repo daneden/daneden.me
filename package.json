@@ -47,7 +47,7 @@
     "gatsby-plugin-netlify-cache": "^1.2.0",
     "gatsby-plugin-offline": "3.0.30",
     "gatsby-plugin-react-helmet": "3.1.18",
-    "gatsby-plugin-typescript": "2.1.23",
+    "gatsby-plugin-typescript": "2.1.26",
     "gatsby-remark-prismjs": "3.3.30",
     "gatsby-remark-smartypants": "2.1.20",
     "gatsby-remark-widows": "1.0.0",
