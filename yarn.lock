@@ -5419,10 +5419,10 @@ gatsby-plugin-eslint@^2.0.8:
   resolved "https://registry.yarnpkg.com/gatsby-plugin-eslint/-/gatsby-plugin-eslint-2.0.8.tgz#1ff7f546a427d274dc2de3932ba29822aae330c3"
   integrity sha512-vAMy37povmQJNg6ZxY78fkWR3pKwG8MNMhO3u+4vXj2MYT5avhFvHPJTAb126ZCuygf30gAWlpwbV50zP894Jw==
 
-gatsby-plugin-feed-mdx@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-feed-mdx/-/gatsby-plugin-feed-mdx-1.0.0.tgz#924fbca4ca90c55706cd06f2661944f5c5223ab8"
-  integrity sha512-EsXCnopmGRQDrMwNm+597nepHKAVox0ZqClk3YAZEmK+bOe8PUgn8TDigJOYijTmmKewE3UNwvVcFinIhzacUQ==
+gatsby-plugin-feed-mdx@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-feed-mdx/-/gatsby-plugin-feed-mdx-1.0.1.tgz#5305b9a8c787a221d180c88542df0506db3ad7b2"
+  integrity sha512-8a9J2korubej5OAr3MQJl3u9Js0x9ShCXTuceHpGfsBjAsHq/ykyN7xknDobKVd6HNGOORRM/GmhVM64oMx3Jw==
   dependencies:
     "@babel/runtime" "^7.7.2"
     "@hapi/joi" "^15.1.1"
