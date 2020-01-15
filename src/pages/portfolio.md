@@ -19,6 +19,9 @@ was the first result of a coordinated effort to create a more cohesive advertisi
 and marketing experience across all of Facebook’s business tools. More about this
 work can be found on the [Facebook Business website](https://www.facebook.com/business/m/one-sheeters/DesigningBetterAdvertiserExperiences).
 
+In late 2019, I relocated from Menlo Park, California to London, England to
+help support the Ads organisation and scale our design system team's portfolio.
+
 Before working on the Ads and Business Design System I worked as a Product Designer
 on Facebook's Brand Measurement team, devoting my time to creating new ways to
 measure and report ad effectiveness as it pertains to brand advertising.
@@ -66,6 +69,14 @@ and design system adopted by several product teams to speed up their work.
 If the work I do for money is my bread and butter, my side projects are the jam
 on top. I routinely embark on new side projects to explore coding opportunities
 and design styles outside of my employment.
+
+### Lucid Underground
+
+Lucid Underground is a web app and companion iOS and watchOS app that shows the
+current status of the London Underground, London Overground, TfL Rail, and DLR
+transit systems. You can [visit the website](https://underground.lucid.toys/)
+or [buy the app](https://apps.apple.com/gb/app/lucid-underground/id1491993114)
+on the iOS App Store.
 
 ### Who Would Win Bot
 
