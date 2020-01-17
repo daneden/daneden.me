@@ -3,13 +3,7 @@
  *
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
-const fs = require("fs-extra")
-const path = require("path")
-const resolvePath = path.resolve
-const slugFromPath = require("./src/utils/slugFromPath")
-const { createFilePath } = require(`gatsby-source-filesystem`)
-
-const componentWithMDXScope = require("gatsby-plugin-mdx/component-with-mdx-scope")
+const slugFromPath = require('./src/utils/slugFromPath')
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions

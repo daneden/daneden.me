@@ -1,5 +1,3 @@
-const path = require('path')
-
 const slugFromPath = require('./src/utils/slugFromPath')
 
 const SITE_NAME = 'Daniel Eden, Designer'
@@ -15,10 +13,6 @@ module.exports = {
   polyfill: false,
   plugins: [
     'gatsby-plugin-eslint',
-    {
-      resolve: '@bundle-analyzer/gatsby-plugin',
-      options: { token: '6b65f3dd607754ad7bf8b1ff985957acc9cb11a9' },
-    },
     'gatsby-plugin-emotion',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-typescript',
