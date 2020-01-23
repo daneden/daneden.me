@@ -41,7 +41,7 @@
     "gatsby-plugin-emotion": "4.1.21",
     "gatsby-plugin-feed-mdx": "^1.0.1",
     "gatsby-plugin-google-gtag": "1.1.21",
-    "gatsby-plugin-manifest": "2.2.37",
+    "gatsby-plugin-manifest": "2.2.38",
     "gatsby-plugin-mdx": "1.0.67",
     "gatsby-plugin-netlify-cache": "^1.2.0",
     "gatsby-plugin-offline": "3.0.32",
