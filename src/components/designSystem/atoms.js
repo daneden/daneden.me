@@ -34,7 +34,7 @@ export default {
   colors: {
     blackAlpha: 'rgba(0, 0, 0, 0.75)',
     whiteAlpha: 'rgba(255, 255, 255, 0.75)',
-    wash: '#fefefe',
+    wash: '#f7f4ed',
     site: '#FC6A00',
     text: '#111',
     meta: '#44464B',

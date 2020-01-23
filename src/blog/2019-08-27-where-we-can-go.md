@@ -103,7 +103,6 @@ With so many different products, and thousands of engineers and designers, it’
 <Image
   alt="An illustration contrasting two shapes: a hexagon with rigid sides, and an amoeba-like organic shape."
   caption="Illustration by [Fanny Luor](https://twitter.com/fannyluor)."
-  captionPosition="left"
   invertInDarkMode={true}
   src="2019/08/wwcg-02.png"
 />
@@ -113,7 +112,6 @@ It’s futile for us to expect everyone to use the design system, so instead, we
 <Image
   alt="An illustration depicting two scenarios: on the left, a person is arranging shapes in a specific order; on the right, the person is observing the shapes form an arrangement by themselves."
   caption="Illustration by [Fanny Luor](https://twitter.com/fannyluor)."
-  captionPosition="left"
   invertInDarkMode={true}
   src="2019/08/wwcg-03.png"
 />
@@ -303,7 +301,6 @@ Which brings me to the end of this exploration. I’ve tried to paint a picture�
 <Image
   alt="An illustration showing a network of people, all different shapes and all connected to each other."
   caption="Illustration by [Fanny Luor](https://twitter.com/fannyluor)."
-  captionPosition="left"
   invertInDarkMode={true}
   src="2019/08/wwcg-05.png"
 />
