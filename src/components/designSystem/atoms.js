@@ -1,4 +1,4 @@
-const BASELINE = 1.5
+const BASELINE = 1.425
 
 const scales = {
   xxsmall: 0.125,
