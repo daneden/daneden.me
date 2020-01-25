@@ -17,5 +17,5 @@ if ('registerProperty' in CSS) {
 }
 
 if ('paintWorklet' in CSS) {
-  CSS.paintWorklet.addModule('./paintWorklet.js')
+  CSS.paintWorklet.addModule('/paintWorklet.js')
 }
