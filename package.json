@@ -43,6 +43,7 @@
     "gatsby-plugin-google-gtag": "1.1.21",
     "gatsby-plugin-manifest": "2.2.38",
     "gatsby-plugin-mdx": "1.0.67",
+    "gatsby-plugin-netlify": "^2.1.31",
     "gatsby-plugin-netlify-cache": "^1.2.0",
     "gatsby-plugin-offline": "3.0.32",
     "gatsby-plugin-react-helmet": "3.1.21",

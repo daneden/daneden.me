@@ -155,5 +155,6 @@ module.exports = {
         cachePublic: true,
       },
     },
+    `gatsby-plugin-netlify`,
   ],
 }
