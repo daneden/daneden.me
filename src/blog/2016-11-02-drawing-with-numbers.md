@@ -2,13 +2,11 @@ import Image from "../components/Image"
 import Codepen from "react-codepen-embed"
 
 export const frontmatter = {
-  layout: "post",
-  title: "Drawing With Numbers",
-  hero: "2017/01/diff-growth.png",
-  date: "2016-11-02",
+layout: "post",
+title: "Drawing With Numbers",
+hero: "2017/01/diff-growth.png",
+date: "2016-11-02",
 }
-
-
 
 <Image
   alt="A generative art piece produced by myself, reminiscient of ocean coral"
@@ -26,7 +24,6 @@ is.
   alt="Richard Serra’s installation at the Dia:Beacon"
   src="2016/11/dwn-serra.jpg"
   caption="An installation from Richard Serra in Dia:Beacon."
-  captionPosition="left"
 />
 
 I have, however, become deeply interested in generative art. How numbers can be

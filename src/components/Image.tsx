@@ -6,7 +6,6 @@ import { Align, Atoms } from './designSystem/designSystem'
 
 interface FigureProps {
   className?: string
-  captionPosition?: 'bottom' | 'left'
   responsive?: boolean
   margin?: boolean
 }
@@ -20,37 +19,22 @@ interface ImageProps extends FigureProps {
 }
 
 const Figure = styled('figure')<FigureProps>(
-  props => `
+  ({ margin, responsive }) => `
   display: flex;
-  flex-direction: ${props.captionPosition === 'left' ? 'row' : 'column'};
+  flex-direction: column;
   justify-content: center;
-  align-items: ${props.captionPosition === 'left' ? 'start' : 'initial'};
   writing-mode: horizontal-tb;
-  margin-bottom: ${
-    props.margin && props.captionPosition !== 'left' ? Atoms.spacing.medium : 0
-  };
+  margin-bottom: ${margin ? Atoms.spacing.medium : 0};
 
   img {
     display: block;
-    width: ${props.responsive ? '100%' : 'auto'};
+    width: ${responsive ? '100%' : 'auto'};
     flex: 1 1 auto;
     order: 2;
   }
 
   figcaption {
-    ${
-      props.captionPosition === 'left'
-        ? `
-          writing-mode: vertical-rl;
-          text-orientation: mixed;
-          align-self: stretch;
-          flex: 0 1 auto;
-          order: 1;
-        `
-        : `
-          order: 3;
-        `
-    }
+    order: 3;
     margin-top: ${Atoms.spacing.xxsmall};
   }
 `
@@ -67,7 +51,6 @@ const Image: FunctionComponent<ImageProps> = ({
   alt,
   className,
   caption,
-  captionPosition,
   invertInDarkMode = false,
   responsive = true,
   margin = true,
@@ -126,12 +109,7 @@ const Image: FunctionComponent<ImageProps> = ({
 
   return (
     <Wrapper>
-      <Figure
-        captionPosition={captionPosition}
-        className={className}
-        margin={margin}
-        responsive={responsive}
-      >
+      <Figure className={className} margin={margin} responsive={responsive}>
         {img}
         {caption && <Caption>{mdToHTML(caption)}</Caption>}
       </Figure>
