@@ -9,6 +9,7 @@ import {
   National2WebRegularWoff2,
 } from '../fonts/fontManifest'
 import '../fonts/fonts.css'
+import { Post } from '../hooks/useBlogPostsQuery'
 import useLayoutQuery from '../hooks/useLayoutQuery'
 import { Atoms, H1 } from './designSystem/designSystem'
 import DesignSystemProvider from './designSystem/DesignSystemProvider'
@@ -23,9 +24,10 @@ interface LayoutProps {
   location: {
     pathname: string
   }
-  /* TODO: Remove eslint-disable (issue #137) */
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  [x: string]: any
+
+  pageContext: {
+    frontmatter?: Post
+  }
 }
 
 export default function Layout({

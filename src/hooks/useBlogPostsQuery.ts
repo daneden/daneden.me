@@ -3,7 +3,7 @@ import { EdgeNode } from '../interfaces/EdgeNode.interface'
 
 type Layout = 'post'
 
-interface Post {
+export interface Post {
   date: string
   layout: Layout
   title: string
