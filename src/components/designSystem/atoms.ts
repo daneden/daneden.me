@@ -15,8 +15,8 @@ const widths = {
   fill: '100%',
   container: '34rem',
   // These values are changed momentarily; they’re set to 0 here to suppress TS errors.
-  content: 0,
-  page: 0,
+  content: '',
+  page: '',
 }
 
 widths.page = `calc(${widths.container} + ${BASELINE * scales.medium * 2}rem)`
@@ -61,7 +61,7 @@ export default {
   // rem-based values for each size
   spacing: Object.assign(
     {},
-    ...Object.keys(scales).map(n => ({
+    ...(Object.keys(scales) as Array<keyof typeof scales>).map(n => ({
       // e.g. small: '(BASELINE * 0.875)rem'
       [n]: `${BASELINE * scales[n]}rem`,
     }))
