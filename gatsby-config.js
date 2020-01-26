@@ -149,12 +149,5 @@ module.exports = {
         dontCacheBustUrlsMatching: /(\.js$\/)/,
       },
     },
-    {
-      resolve: 'gatsby-plugin-netlify-cache',
-      options: {
-        cachePublic: true,
-      },
-    },
-    `gatsby-plugin-netlify`,
   ],
 }
