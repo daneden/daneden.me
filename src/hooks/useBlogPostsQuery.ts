@@ -12,7 +12,7 @@ interface Post {
 
 interface PostsQueryData {
   allMdx: {
-    edges?: [EdgeNode<Post>]
+    edges: [EdgeNode<Post>]
   }
 }
 
