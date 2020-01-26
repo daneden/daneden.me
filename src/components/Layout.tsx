@@ -2,6 +2,12 @@ import { Global } from '@emotion/core'
 import React, { ReactElement, ReactNode } from 'react'
 import Helmet from 'react-helmet'
 import favicon from '../../static/images/favicon.png'
+import {
+  AyerWoff,
+  AyerWoff2,
+  National2WebRegularWoff,
+  National2WebRegularWoff2,
+} from '../fonts/fontManifest'
 import '../fonts/fonts.css'
 import useLayoutQuery from '../hooks/useLayoutQuery'
 import { Atoms, H1 } from './designSystem/designSystem'
@@ -112,6 +118,31 @@ export default function Layout({
       <LocationContext.Provider value={location.pathname}>
         <Helmet>
           <link rel="icon" href={favicon} />
+          {Object.values({
+            AyerWoff,
+            AyerWoff2,
+            National2WebRegularWoff,
+            National2WebRegularWoff2,
+          }).map(fontUri => (
+            <link
+              as="font"
+              crossOrigin="anonymous"
+              href={fontUri}
+              key={fontUri}
+              rel="prefetch"
+              type={`font/${String(fontUri).split('.')[1]}`}
+            />
+          ))}
+          {Object.values({ AyerWoff, AyerWoff2 }).map(fontUri => (
+            <link
+              as="font"
+              crossOrigin="anonymous"
+              href={fontUri}
+              key={fontUri}
+              rel="preload"
+              type={`font/${String(fontUri).split('.')[1]}`}
+            />
+          ))}
         </Helmet>
         <Metatags
           defaultTitle={site.siteMetadata.title}
