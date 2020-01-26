@@ -17,6 +17,10 @@ const GridContainer = styled.div`
   @media (max-width: 545px) {
     display: none;
   }
+
+  @supports not (background-image: paint(line)) {
+    display: none;
+  }
 `
 
 const GridTextArea = styled.div`
