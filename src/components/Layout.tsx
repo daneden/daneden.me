@@ -121,8 +121,6 @@ export default function Layout({
           {Object.values({
             AyerWoff,
             AyerWoff2,
-            National2WebRegularWoff,
-            National2WebRegularWoff2,
           }).map(fontUri => (
             <link
               as="font"
@@ -133,7 +131,10 @@ export default function Layout({
               type={`font/${String(fontUri).split('.')[1]}`}
             />
           ))}
-          {Object.values({ AyerWoff, AyerWoff2 }).map(fontUri => (
+          {Object.values({
+            National2WebRegularWoff,
+            National2WebRegularWoff2,
+          }).map(fontUri => (
             <link
               as="font"
               crossOrigin="anonymous"
