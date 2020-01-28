@@ -128,7 +128,6 @@ module.exports = {
         pluginConfig: {
           head: false,
           respectDNT: true,
-          exclude: ['/preview/**', '/do-not-track/me/too/'],
         },
       },
     },
@@ -141,12 +140,14 @@ module.exports = {
         background_color: `#f7f4ed`,
         theme_color: `#f7f4ed`,
         icon: `static/images/icon.png`,
+        legacy: false,
       },
     },
     {
       resolve: 'gatsby-plugin-offline',
       options: {
         dontCacheBustUrlsMatching: /(\.js$\/)/,
+        precachePages: [`/about/`, `/portfolio/`],
       },
     },
   ],
