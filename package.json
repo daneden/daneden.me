@@ -60,7 +60,7 @@
     "react-script-tag": "1.1.2",
     "remark": "11.0.2",
     "remark-react": "6.0.0",
-    "slug": "2.1.0",
+    "slug": "2.1.1",
     "typescript": "^3.7.5"
   },
   "devDependencies": {
