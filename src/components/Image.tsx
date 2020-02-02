@@ -14,6 +14,7 @@ interface ImageProps extends FigureProps {
   align?: 'left' | 'right'
   alt?: string
   caption?: string
+  defaultSize?: string
   invertInDarkMode?: boolean
   src: string
 }
@@ -51,6 +52,7 @@ const Image: FunctionComponent<ImageProps> = ({
   alt,
   className,
   caption,
+  defaultSize = Atoms.widths.container,
   invertInDarkMode = false,
   responsive = true,
   margin = true,
@@ -76,10 +78,10 @@ const Image: FunctionComponent<ImageProps> = ({
       sizes = `
         (min-width: ${Atoms.breakpoints.medium}) calc(${Atoms.widths.container} * .5),
         (min-width: ${Atoms.breakpoints.narrow}) calc(${Atoms.widths.container} * .4),
-        100vw`
+        ${defaultSize}`
       break
     default:
-      sizes = `(min-width: ${Atoms.breakpoints.narrow}) ${Atoms.widths.container}, 100vw`
+      sizes = `(min-width: ${Atoms.breakpoints.narrow}) ${Atoms.widths.container}, ${defaultSize}`
   }
 
   const url =

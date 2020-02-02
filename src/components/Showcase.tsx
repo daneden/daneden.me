@@ -45,12 +45,21 @@ const StyledShowcase = styled('div')`
 export default function Showcase(): ReactElement<typeof StyledShowcase> {
   return (
     <StyledShowcase>
-      <Image alt="A portrait photo of Daniel Eden" src="2018/10/portrait.jpg" />
+      <Image
+        alt="A portrait photo of Daniel Eden"
+        defaultSize="calc(34rem / 3)"
+        src="2018/10/portrait.jpg"
+      />
       <Image
         alt="A piece of Daniel’s generative art"
+        defaultSize="calc(34rem / 3)"
         src="2018/10/GenArt.png"
       />
-      <Image alt="Daniel’s home" src="2019/10/home.jpg" />
+      <Image
+        alt="Daniel’s home"
+        defaultSize="calc(34rem / 3)"
+        src="2019/10/home.jpg"
+      />
       <Image alt="An illustration of Daniel’s name" src="2019/01/wavy.svg" />
     </StyledShowcase>
   )
