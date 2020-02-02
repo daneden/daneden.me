@@ -5,15 +5,15 @@ import { Atoms, Link } from './designSystem/designSystem'
 const StyledNav = styled('nav')`
   background-color: var(--text-color);
   color: var(--wash-color);
+  height: 0;
   margin: 0 -${Atoms.spacing.medium};
   padding: ${Atoms.spacing.xsmall} ${Atoms.spacing.medium};
   position: absolute;
   top: -100%;
-  height: 0;
 
   :focus-within {
-    position: initial;
     height: auto;
+    position: initial;
   }
 `
 
