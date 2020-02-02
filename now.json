@@ -9,7 +9,7 @@
       "dest": "/static/$1"
     },
     {
-      "src": "/fonts/(.*\\.woff2?|.*\\.eot)",
+      "src": "/fonts/(.*(woff2?|eot))",
       "headers": { "cache-control": "public, max-age=31536000" },
       "dest": "/fonts/$1"
     }
