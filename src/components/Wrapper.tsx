@@ -11,6 +11,10 @@ const StyledWrapper = styled('div')`
   box-sizing: initial;
   margin: 0 auto;
   max-width: ${Atoms.widths.container};
+
+  :focus {
+    outline: none;
+  }
 `
 
 export default function Wrapper({
