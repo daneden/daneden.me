@@ -11,6 +11,7 @@ import Footer from './Footer'
 import Header from './Header'
 import LocationContext from './LocationContext'
 import Metatags from './Metatags'
+import SkipLink from './SkipLink'
 import Wrapper from './Wrapper'
 
 interface LayoutProps {
@@ -121,6 +122,7 @@ export default function Layout({
           description={site.siteMetadata.description}
           thumbnail={`${site.siteMetadata.siteUrl}/images/og.png`}
         />
+        <SkipLink />
         <Header siteTitle={site.siteMetadata.title} />
         <Wrapper>
           {title && <H1>{title}</H1>}

@@ -20,9 +20,10 @@
   "extends": [
     "plugin:prettier/recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:mdx/recommended"
+    "plugin:mdx/recommended",
+    "plugin:jsx-a11y/recommended"
   ],
-  "plugins": ["prettier", "import", "react", "react-hooks"],
+  "plugins": ["prettier", "import", "react", "react-hooks", "jsx-a11y"],
   "rules": {
     "prettier/prettier": "error",
     "react-hooks/rules-of-hooks": "error",

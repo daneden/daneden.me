@@ -106,7 +106,7 @@ const Image: FunctionComponent<ImageProps> = ({
       }
     />
   ) : (
-    <img src={url} />
+    <img alt={alt} src={url} />
   )
 
   return (
