@@ -168,10 +168,9 @@ const tossCoin = () => {
 }
 ```
 
-We've made two main changes above. Let's walk through the first. Note that the
-whole block is inside an `if` statement. We only run this code if the most
-recent coin toss has a different result than the previous one: basically if a
-streak of either heads or tails ends.
+Note that the whole block is inside an `if` statement. We only run this code if
+the most recent coin toss has a different result than the previous one:
+basically if a streak of either heads or tails ends.
 
 I’m introducing a new syntax you may not be familiar with called a _switch
 statement_. A switch statement lets us check the value of a variable, and
