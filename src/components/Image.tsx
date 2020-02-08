@@ -1,14 +1,8 @@
-import styled from '@emotion/styled'
 import React, { FunctionComponent } from 'react'
 import Imgix from 'react-imgix'
 import mdToHTML from '../utils/mdToHTML'
-import { Align, Atoms } from './designSystem/designSystem'
-
-interface FigureProps {
-  className?: string
-  responsive?: boolean
-  margin?: boolean
-}
+import { Align, Atoms, Caption, Figure } from './designSystem/designSystem'
+import { FigureProps } from './designSystem/Figure'
 
 interface ImageProps extends FigureProps {
   align?: 'left' | 'right'
@@ -18,34 +12,6 @@ interface ImageProps extends FigureProps {
   invertInDarkMode?: boolean
   src: string
 }
-
-const Figure = styled('figure')<FigureProps>(
-  ({ margin, responsive }) => `
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  writing-mode: horizontal-tb;
-  margin-bottom: ${margin ? Atoms.spacing.medium : 0};
-
-  img {
-    display: block;
-    width: ${responsive ? '100%' : 'auto'};
-    flex: 1 1 auto;
-    order: 2;
-  }
-
-  figcaption {
-    order: 3;
-    margin-top: ${Atoms.spacing.xxsmall};
-  }
-`
-)
-
-const Caption = styled('figcaption')`
-  font-size: ${Atoms.font.size.small};
-  color: var(--meta-color, ${Atoms.colors.meta});
-  letter-spacing: 0.025em;
-`
 
 const Image: FunctionComponent<ImageProps> = ({
   align,

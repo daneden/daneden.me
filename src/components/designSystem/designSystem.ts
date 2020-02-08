@@ -1,7 +1,9 @@
 import Align from './Align'
 import Atoms from './atoms'
 import Blockquote from './Blockquote'
+import Caption from './Caption'
 import Code from './Code'
+import Figure from './Figure'
 import H1 from './H1'
 import H2 from './H2'
 import H3 from './H3'
@@ -19,7 +21,9 @@ export {
   Align,
   Atoms,
   Blockquote,
+  Caption,
   Code,
+  Figure,
   H1,
   H2,
   H3,
