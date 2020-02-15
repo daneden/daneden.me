@@ -1,8 +1,5 @@
 # Hello, Good Evening, and Welcome
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/b4335d50-7da9-483f-9fed-1fc37194dd34/deploy-status)](https://app.netlify.com/sites/de-home/deploys)
-[![Travis Status](https://travis-ci.com/daneden/daneden.me.svg?branch=master)](https://travis-ci.com/daneden/daneden.me)
-
 Welcome to the innards of [my website](http://daneden.me).
 
 ## Installation
