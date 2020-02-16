@@ -1,5 +1,5 @@
 import { Global } from '@emotion/core'
-import React, { ReactElement, ReactNode } from 'react'
+import React, { ReactElement, ReactFragment, ReactNode } from 'react'
 import Helmet from 'react-helmet'
 import favicon from '../../static/images/favicon.png'
 import '../fonts/fonts.css'
@@ -25,17 +25,43 @@ interface LayoutProps {
   }
 }
 
+const Content = React.memo(
+  ({
+    children,
+    pageContext: { frontmatter },
+  }: Pick<LayoutProps, 'children' | 'pageContext'>): ReactElement<
+    ReactFragment
+  > => {
+    const title = frontmatter?.title || null
+    const { site } = useLayoutQuery()
+    return (
+      <React.Fragment>
+        <Helmet>
+          <link rel="icon" href={favicon} />
+        </Helmet>
+        <Metatags
+          defaultTitle={site.siteMetadata.title}
+          title={title || site.siteMetadata.title}
+          description={site.siteMetadata.description}
+          thumbnail={`${site.siteMetadata.siteUrl}/images/og.png`}
+        />
+        <SkipLink />
+        <Header siteTitle={site.siteMetadata.title} />
+        <Wrapper>
+          {title && <H1>{title}</H1>}
+          {children}
+        </Wrapper>
+        <Footer author={site.siteMetadata.authorName} />
+      </React.Fragment>
+    )
+  }
+)
+
 export default function Layout({
   children,
   location,
-  ...props
+  pageContext,
 }: LayoutProps): ReactElement<typeof DesignSystemProvider> {
-  const { site } = useLayoutQuery()
-  const title =
-    props.pageContext.frontmatter !== undefined
-      ? props.pageContext.frontmatter.title
-      : null
-
   return (
     <DesignSystemProvider>
       <Global
@@ -113,22 +139,7 @@ export default function Layout({
         }}
       />
       <LocationContext.Provider value={location.pathname}>
-        <Helmet>
-          <link rel="icon" href={favicon} />
-        </Helmet>
-        <Metatags
-          defaultTitle={site.siteMetadata.title}
-          title={title !== null ? title : site.siteMetadata.title}
-          description={site.siteMetadata.description}
-          thumbnail={`${site.siteMetadata.siteUrl}/images/og.png`}
-        />
-        <SkipLink />
-        <Header siteTitle={site.siteMetadata.title} />
-        <Wrapper>
-          {title && <H1>{title}</H1>}
-          {children}
-        </Wrapper>
-        <Footer author={site.siteMetadata.authorName} />
+        <Content pageContext={pageContext}>{children}</Content>
       </LocationContext.Provider>
     </DesignSystemProvider>
   )
