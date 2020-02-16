@@ -1,5 +1,5 @@
 import { createContext } from 'react'
 
-const LocationContext = createContext<string | null>(null)
+const LocationContext = createContext<string>('')
 
 export default LocationContext

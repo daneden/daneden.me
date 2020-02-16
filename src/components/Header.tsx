@@ -1,5 +1,3 @@
-/* TODO: Remove eslint-disable (issue #137) */
-/* eslint-disable @typescript-eslint/no-non-null-assertion */
 import styled from '@emotion/styled'
 import React, { ReactElement } from 'react'
 import Atoms from './designSystem/atoms'
@@ -58,8 +56,8 @@ const Header = ({
             <li key={to}>
               <PlainLink to={to}>
                 {label}
-                {location!.includes(to) ||
-                (location!.match(blogPostRegex) && to.includes('blog'))
+                {location.includes(to) ||
+                (location.match(blogPostRegex) && to.includes('blog'))
                   ? ' ☚'
                   : ''}
               </PlainLink>
