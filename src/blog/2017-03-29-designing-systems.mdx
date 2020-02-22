@@ -1,22 +1,20 @@
-import Image from "../components/Image"
+import Image from '../components/Image'
 
 export const frontmatter = {
-  layout: "post",
-  title: "Designing Product UI Systems",
-  hero: "2017/03/design-systems.png",
-  date: "2017-03-29",
+  layout: 'post',
+  title: 'Designing Product UI Systems',
+  hero: '2017/03/design-systems.png',
+  date: '2017-03-29',
 }
-
-
 
 <Image
   alt="A stick figure looking at shapes falling out of a box"
   src="2017/03/design-systems.png"
 />
 
-_(Short preface/definition: “UI systems”—collections of functional UI
-components and their stylistic appearances—are referred to as “design systems”
-in this article. Where necessary, functionality and appearance are discussed
+_(Short preface/definition: “UI systems”—collections of functional UI components
+and their stylistic appearances—are referred to as “design systems” in this
+article. Where necessary, functionality and appearance are discussed
 individually, but know that “design system” here encompasses both appearance and
 function.)_
 
@@ -83,9 +81,9 @@ surprised how little we need to build a complex system.
 
 ## Separating Form and Function
 
-_Note: the code henceforth is simply for demonstrative purposes. Also, you
-might be thinking “Code? I thought this was a Design Systems post,” and rightly
-so. It's become a natural tendency for me to anchor my ideas in engineering
+_Note: the code henceforth is simply for demonstrative purposes. Also, you might
+be thinking “Code? I thought this was a Design Systems post,” and rightly so.
+It's become a natural tendency for me to anchor my ideas in engineering
 principles. Bear with me—hopefully you'll make it through with some
 understanding of what I'm getting at._
 
@@ -175,7 +173,8 @@ Unlike CSS, expressing styles through objects like this means that you’re
 decomposing and recomposing/replacing styles rather than overriding them with
 crude CSS selectors or specificity hacks.
 
-And of course, we can ensure deviation from standards is prohibited through "types":
+And of course, we can ensure deviation from standards is prohibited through
+"types":
 
 ```js
 type Style = {
@@ -205,5 +204,6 @@ an industry standard.
 _This post and design system methodology takes inspiration from Apple’s Cocoa
 APIs, Brent Jackson’s [CXS](https://github.com/jxnblk/cxs) and
 [Rebass](https://github.com/jxnblk/rebass), Adam Morse’s
-[Tachyons](https://github.com/tachyons-css/tachyons), and my own work on [design
-systems](http://dropbox.github.io/scooter/) and UI frameworks for Dropbox._
+[Tachyons](https://github.com/tachyons-css/tachyons), and my own work on
+[design systems](http://dropbox.github.io/scooter/) and UI frameworks for
+Dropbox._

@@ -1,13 +1,11 @@
-import "katex/dist/katex.min.css"
-import { InlineMath, BlockMath } from "react-katex"
+import 'katex/dist/katex.min.css'
+import { InlineMath, BlockMath } from 'react-katex'
 
 export const frontmatter = {
-layout: "post",
-title: "Subatomic Design Systems",
-date: "2018-01-05",
+  layout: 'post',
+  title: 'Subatomic Design Systems',
+  date: '2018-01-05',
 }
-
-
 
 The following theory of “Subatomic Design Systems’ is loosely based on an
 amalgam of existing design system theories and programming architecture
@@ -106,10 +104,10 @@ expressed as a function of state:
 <BlockMath math="f(x) = A" />
 <BlockMath math="f(\Delta x) = B" />
 
-Where <InlineMath math="f" /> is a function that takes state and
-returns UI (composed particles), <InlineMath math="x" /> is a state
-and <InlineMath math="\Delta x" /> is a changed state, and <InlineMath math="A" /> and <InlineMath math="B" /> are
-the resulting compositions.
+Where <InlineMath math="f" /> is a function that takes state and returns UI
+(composed particles), <InlineMath math="x" /> is a state and
+<InlineMath math="\Delta x" /> is a changed state, and <InlineMath math="A" />
+and <InlineMath math="B" /> are the resulting compositions.
 
 This is the basis through which data can been seen to augment and flow through a
 user interface powered by SDS.
@@ -121,16 +119,16 @@ an act of addition. We can use some abstract symbols to represent the kinds of
 things we’d compose:
 
 <BlockMath math="a = b + c" />
-
 <BlockMath math="d = e + b + c" />
 
-Above are two simple compositions. We can further simplify our composition <InlineMath math="d" /> so it becomes:
+Above are two simple compositions. We can further simplify our composition
+<InlineMath math="d" /> so it becomes:
 
 <BlockMath math="d = e + a" />
 
-If we were to change the composition <InlineMath math="a" /> to
-something else, say, <InlineMath math="a = f + g" />, then our
-composition <InlineMath math="d" /> would also change.
+If we were to change the composition <InlineMath math="a" /> to something else,
+say, <InlineMath math="a = f + g" />, then our composition
+<InlineMath math="d" /> would also change.
 
 <BlockMath math="d = e + a = e + f + g" />
 
@@ -141,8 +139,8 @@ composed particles <InlineMath math="b" /> or <InlineMath math="c" />, but
 changing the arrangements of the compositions to create new compositions.
 
 As a more applicable example, a composition in a design system might be the
-following (where <InlineMath math="p" /> is the set of particles
-that comprise the system):
+following (where <InlineMath math="p" /> is the set of particles that comprise
+the system):
 
 <BlockMath math="Button = Label + View" />
 <BlockMath math="Label = p_{type} + p_{color}" />
@@ -208,14 +206,14 @@ The ideas exhibited above are inspired and reinforced by notions set out by a
 number of folks before me. Some pieces of particular interest for continued
 research in this area include:
 
-- Jon Gold's '[Declarative Design
-  Tools](http://jon.gold/2016/06/declarative-design-tools/)'
-- Brad Frost's '[Atomic
-  Design](http://bradfrost.com/blog/post/atomic-web-design/)'
-- Adam Morse's '[CSS and
-  Scalability](http://mrmrs.github.io/writing/2016/03/24/scalable-css/)'
-- All of Nicole Sullivan's [writing on Object-Oriented CSS
-  (OOCSS)](http://www.stubbornella.org/content/category/general/geek/css/oocss-css-geek-general/)
+- Jon Gold's
+  '[Declarative Design Tools](http://jon.gold/2016/06/declarative-design-tools/)'
+- Brad Frost's
+  '[Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/)'
+- Adam Morse's
+  '[CSS and Scalability](http://mrmrs.github.io/writing/2016/03/24/scalable-css/)'
+- All of Nicole Sullivan's
+  [writing on Object-Oriented CSS (OOCSS)](http://www.stubbornella.org/content/category/general/geek/css/oocss-css-geek-general/)
 - '[Structure and Interpretation of Computer Programs](http://amzn.to/2CZq9YZ)'
   from Harold Abelson, Gerald Jay Sussman, Julie Sussman, and Alan J. Perlis
 
@@ -224,8 +222,7 @@ other posts on my blog, namely:
 
 - [Designing Product UI Systems](/2017/03/29/designing-systems/)
 - [Casting Graphite in Gold](/2017/06/02/casting-graphite-in-gold/)
-- [Paving The Path of Least
-  Resistance](/2017/06/27/paving-the-path-of-least-resistance/)
+- [Paving The Path of Least Resistance](/2017/06/27/paving-the-path-of-least-resistance/)
 - [A Design System Grammar](/2017/07/12/a-design-system-grammar/)
 - [Design System Structure](/2017/07/17/design-system-structure/)
 
@@ -243,8 +240,8 @@ voices to be drowned out, especially in the midst of posts like this written by
 people like me. I would be very glad to hear from you about your thoughts on
 this subject, or if you want to share the work of someone else you think is
 important, interesting, or unheard. For public discussion, find me on
-[Twitter](https://twitter.com/_dte), or for 1-to-1 correspondence, [email
-me](mailto:dan.eden@me.com).
+[Twitter](https://twitter.com/_dte), or for 1-to-1 correspondence,
+[email me](mailto:dan.eden@me.com).
 
 [^1]:
 

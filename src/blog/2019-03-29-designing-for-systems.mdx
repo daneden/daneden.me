@@ -1,24 +1,22 @@
-import { H1 } from "../components/designSystem/designSystem"
+import { H1 } from '../components/designSystem/designSystem'
 
 export const frontmatter = {
-  layout: "post",
-  title: "Designing And Building For Systems",
-  date: "2019-03-29",
+  layout: 'post',
+  title: 'Designing And Building For Systems',
+  date: '2019-03-29',
 }
 
+I’ve spent around 5 years working on design systems at different scales: in my
+own work, I’ve worked on design systems for a product team of one—myself; at
+Dropbox, I helped create and distribute a nascent design system in Sketch and
+CSS to a team of 30 product designers and hundreds of engineers; and at
+Facebook, I’ve been working with my team to create and distribute a system in a
+variety of design tools and React components to hundreds of product designers
+and thousands of engineers.
 
-
-I’ve spent around 5 years working on design systems at different scales: in
-my own work, I’ve worked on design systems for a product team of one—myself;
-at Dropbox, I helped create and distribute a nascent design system in Sketch
-and CSS to a team of 30 product designers and hundreds of engineers; and at
-Facebook, I’ve been working with my team to create and distribute a system
-in a variety of design tools and React components to hundreds of product
-designers and thousands of engineers.
-
-Between each of these different scales, I’ve found some common ground in how
-to approach building design systems. We tend to hear—and talk—a lot about why
-a design system is important, and what it looks like, but spend little time
+Between each of these different scales, I’ve found some common ground in how to
+approach building design systems. We tend to hear—and talk—a lot about why a
+design system is important, and what it looks like, but spend little time
 discussing _how_ to build them, and how to overcome the various existential
 crises every systems team eventually endures.
 
@@ -52,11 +50,11 @@ before deciding to change it.
 
 ## Where do I stop?
 
-Once you’ve started, this actually becomes the more difficult question. Designing
-for systems can be a bit like pulling a rope out of water: you’re not sure how
-long the rope is, or what’s at the end of it. Before you know it, you may end
-up scoping a problem for so long that the original constraints or requirements
-have shifted in your absence.
+Once you’ve started, this actually becomes the more difficult question.
+Designing for systems can be a bit like pulling a rope out of water: you’re not
+sure how long the rope is, or what’s at the end of it. Before you know it, you
+may end up scoping a problem for so long that the original constraints or
+requirements have shifted in your absence.
 
 Try to remain in the habit of tackling the smallest problem you can. Apply a
 hypothesis to the problem at hand; if it works, change the parameters of the
@@ -86,9 +84,9 @@ those rules, or limit the changes to those rules?
 
 ## How do I know when the system, or a component, is finished?
 
-Design systems, and the pieces it is comprised of, are never finished. They
-are living, breathing tools that will have to change as the needs of the
-teams it supports change.
+Design systems, and the pieces it is comprised of, are never finished. They are
+living, breathing tools that will have to change as the needs of the teams it
+supports change.
 
 ---
 
@@ -101,19 +99,20 @@ be exceptions to rules in the system: components or patterns that only make
 sense in a particular context. One way to avoid this is to disallow a components
 _context_ to dictate its behaviour or appearance.
 
-What this means, in practical terms, is saying “Component _X_ has a state/variant
-_A_,” rather than “In this context _f_, Component _X_ behaves/appears as _A_.”
-Context should not be the sole determiner of a component’s behaviour or
-appearance: the component should be able to render in that way in _any_ context.
+What this means, in practical terms, is saying “Component _X_ has a
+state/variant _A_,” rather than “In this context _f_, Component _X_
+behaves/appears as _A_.” Context should not be the sole determiner of a
+component’s behaviour or appearance: the component should be able to render in
+that way in _any_ context.
 
 This rule helps you to remain steadfast in your opinion about the component’s
 overall behaviour or appearance.
 
 ### Designing For Reality
 
-In addition to designing only for real needs, as outlined in “What does a
-system need?”, you must strive to design only for the material reality in which
-the system will be built.
+In addition to designing only for real needs, as outlined in “What does a system
+need?”, you must strive to design only for the material reality in which the
+system will be built.
 
 Practically, this means working closely with the engineers responsible for
 building the components and patterns that other engineers will use. If you are
@@ -121,6 +120,6 @@ building a system for the web, try to understand HTML, CSS, and JavaScript. If
 you are building a system for mobile, try to understand the relevant framework
 or language and its constraints.
 
-No matter what we create in design tools, the thing that customers and
-end-users ultimately experience is in the hands of the engineers that build it.
-Thus it is crucial to make those engineers an equal part of the design process.
+No matter what we create in design tools, the thing that customers and end-users
+ultimately experience is in the hands of the engineers that build it. Thus it is
+crucial to make those engineers an equal part of the design process.

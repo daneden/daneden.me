@@ -1,7 +1,7 @@
 export const frontmatter = {
-layout: "post",
-title: "Wordplay: Language Structure in Design Systems",
-date: "2018-06-27",
+  layout: 'post',
+  title: 'Wordplay: Language Structure in Design Systems',
+  date: '2018-06-27',
 }
 
 “A cat is black.”
@@ -10,9 +10,9 @@ Native English speakers will read that sentence and infer an alternative meaning
 for it. We recognise that this particular arrangement of those particular words
 is unusual: the writer probably meant to say “the cat is black.” We know that
 when we say or write “_a_ cat is,” there’s a strong chance we will finish the
-sentence by referring to the universal properties of the animal “cat,” and
-when we say “_the_ cat is,” we’re probably going to talk about characteristics
-of an individual cat.
+sentence by referring to the universal properties of the animal “cat,” and when
+we say “_the_ cat is,” we’re probably going to talk about characteristics of an
+individual cat.
 
 Our brains react at astounding speed to resolve the unusual sentence “a cat is
 black” and make mental corrections to store and refer back to later. The English
@@ -24,14 +24,14 @@ and with varying accuracy.
 
 These sorts of nuances make the English language particularly difficult to learn
 for non-native speakers, and leads to misunderstandings even amongst those
-well-versed in the language. As a language, the structure and grammar of
-English is flexible to a fault. We might be able to make some generalisations
-about certain words: “has,” for example, might be crudely defined as being
-possessive, such as “the cat has ears.” But the same word can also be used in
-non-possessive ways, like “the cat has jumped,” where we can no longer say the
-cat possesses a jump. This looseness makes it hard to make accurate
-predictions or rules about how a sentence is structured. However, this liberal
-flexibility may have some practical applications for design systems.
+well-versed in the language. As a language, the structure and grammar of English
+is flexible to a fault. We might be able to make some generalisations about
+certain words: “has,” for example, might be crudely defined as being possessive,
+such as “the cat has ears.” But the same word can also be used in non-possessive
+ways, like “the cat has jumped,” where we can no longer say the cat possesses a
+jump. This looseness makes it hard to make accurate predictions or rules about
+how a sentence is structured. However, this liberal flexibility may have some
+practical applications for design systems.
 
 <Image
   alt="A diagram of how simple text prediction works"
@@ -51,9 +51,9 @@ to design systems?
 ---
 
 The design system could have some kind of learning function that is trained on
-existing UI and component compositions, creating a [Markov
-chain](http://setosa.io/ev/markov-chains/) of components and the likelihood that
-component A will be followed by a different kind of component.
+existing UI and component compositions, creating a
+[Markov chain](http://setosa.io/ev/markov-chains/) of components and the
+likelihood that component A will be followed by a different kind of component.
 
 We could imagine making use of this data in the design process. When using a
 component, we can take what we know about how that component is typically
@@ -91,10 +91,10 @@ on common uses, and to adapt to emerging uses as they arise.
 
 ---
 
-The next obvious conclusion I can draw about this idea is that, like how in
-the English language, a single word or short phrase at the end of a chain of
-words can change the meaning of the preceding words entirely, so the same is
-true of components: until the composition is complete, we may have a hard time
+The next obvious conclusion I can draw about this idea is that, like how in the
+English language, a single word or short phrase at the end of a chain of words
+can change the meaning of the preceding words entirely, so the same is true of
+components: until the composition is complete, we may have a hard time
 determining exactly how the initial components should be arranged.
 
 This conclusion starts to peel away at one of the difficult things about
@@ -102,8 +102,8 @@ This conclusion starts to peel away at one of the difficult things about
 called [_emergence_](https://en.wikipedia.org/wiki/Emergence), where within
 systems composed of small parts, properties emerge that don't exist on the
 individual parts. The whole becomes greater—or at least different—than the sum
-of its parts. The _interactions between_ small pieces of composed systems
-have properties of their own. This is something I'm still trying to wrap my head
+of its parts. The _interactions between_ small pieces of composed systems have
+properties of their own. This is something I'm still trying to wrap my head
 around, but am excited to dive into.
 
 [^1]:
@@ -114,12 +114,12 @@ around, but am excited to dive into.
   and try to predict how the sentence may end, resulting in suggestions like
   “long” or “excited.” Additionally, because many predictive text engines only
   look at the immediately preceding word, you can end up with never-ending and
-  nonsensical sentences just by repeatedly tapping the suggestions on your phone.
-  Try it: open up an app that allows you to type, enter “I am” and then keep
-  pressing the suggestions that appear in your keyboard.
+  nonsensical sentences just by repeatedly tapping the suggestions on your
+  phone. Try it: open up an app that allows you to type, enter “I am” and then
+  keep pressing the suggestions that appear in your keyboard.
 
 [^2]:
 
   This idea is far from new, and Jon Gold deserves credit for my familiarity
-  with it through his writing on [Declarative Design
-  Tools](https://jon.gold/2016/06/declarative-design-tools/)
+  with it through his writing on
+  [Declarative Design Tools](https://jon.gold/2016/06/declarative-design-tools/)
