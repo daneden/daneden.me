@@ -115,6 +115,12 @@ const books: Array<BookData> = [
     cover: 'books/word-by-word.jpg',
     url: 'https://amzn.to/33k4zK8',
   },
+  {
+    title: 'The Sixth Extinction',
+    author: 'Elizabeth Kolbert',
+    cover: 'books/tse.jpg',
+    url: 'https://amzn.to/2w0E5lO',
+  },
 ]
   .map(book => {
     return {
