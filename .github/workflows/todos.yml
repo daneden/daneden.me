@@ -7,7 +7,7 @@ on:
 
 jobs:
   todos:
-    runs-on: ubuntu-latest
+    runs-on: macos
 
     steps:
     - name: todo-actions
