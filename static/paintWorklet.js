@@ -1,19 +1,19 @@
 class Line {
   static get inputProperties() {
-    return ["--line-direction", "--line-color"]
+    return ['--line-direction', '--line-color']
   }
 
   paint(ctx, geom, properties) {
     const { width, height } = geom
-    const direction = properties.get("--line-direction").value
-    const color = properties.get("--line-color")
+    const direction = properties.get('--line-direction').value
+    const color = properties.get('--line-color')
     const strokeWidth = 1
 
     const orig = {
       x:
-        direction === "tl-br"
+        direction === 'tl-br'
           ? strokeWidth
-          : direction === "tr-bl"
+          : direction === 'tr-bl'
           ? width - strokeWidth
           : width / 2,
       y: strokeWidth,
@@ -21,9 +21,9 @@ class Line {
 
     const dest = {
       x:
-        direction === "tl-br"
+        direction === 'tl-br'
           ? width - strokeWidth
-          : direction === "tr-bl"
+          : direction === 'tr-bl'
           ? strokeWidth
           : width / 2,
       y: height - strokeWidth,
@@ -38,4 +38,4 @@ class Line {
   }
 }
 
-registerPaint("line", Line)
+registerPaint('line', Line)
