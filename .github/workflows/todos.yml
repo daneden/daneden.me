@@ -1,4 +1,4 @@
-name: Create Issues from Todos
+name: Create issues from todos
 
 on: 
   push:
@@ -7,7 +7,7 @@ on:
 
 jobs:
   todos:
-    runs-on: macos
+    runs-on: ubuntu-latest
 
     steps:
     - name: todo-actions
