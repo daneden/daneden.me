@@ -1,8 +1,8 @@
 name: Create issues from todos
 
-on: 
+on:
   push:
-    branches: 
+    branches:
       - master
 
 jobs:
@@ -10,5 +10,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: todo-actions
-      uses: dtinth/todo-actions@v0.2.0
+      - uses: actions/checkout@v1
+      - name: todo-actions
+        uses: dtinth/todo-actions@v0.2.0
