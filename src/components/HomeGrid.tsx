@@ -56,13 +56,13 @@ export default function HomeGrid(): ReactElement<typeof Breakout> | null {
   ) {
     return null
   } else {
-    // TODO: Add type definition for home page setup function on `window`
+    // TODO [$5e56b17d0b66a500070e7d44]: Add type definition for home page setup function on `window`
     // In order to prevent unnecessary module loading on non-root pages,
     // I moved the home page CSS paint register to its own function and
     // added it to the window object. Typescript is complaining about it,
     // so I should add a type definition to make it ok.
 
-    // TODO: Fix 'no-unused-expressions' eslint warning
+    // TODO [$5e56b17d0b66a500070e7d45]: Fix 'no-unused-expressions' eslint warning
 
     // eslint-disable-next-line mdx/no-unused-expressions
     window?.__DE__homePageSetup()
