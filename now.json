@@ -3,6 +3,8 @@
     "silent": true
   },
   "routes": [
+    { "src": "/(.*)", "dest": "/$1" },
+    { "handle": "filesystem" },
     {
       "src": "/static/(.*)",
       "headers": { "cache-control": "public, max-age=31536000" },
@@ -12,6 +14,22 @@
       "src": "/fonts/(.*(woff2?|eot))",
       "headers": { "cache-control": "public, max-age=31536000" },
       "dest": "/fonts/$1"
-    }
+    },
+    {
+      "src": "/animate(.*)",
+      "status": 308,
+      "headers": { "Location": "https://daneden.github.io/animate.css/" }
+    },
+    {
+      "src": "/toast(.*)",
+      "status": 308,
+      "headers": { "Location": "https://daneden.github.io/Toast/" }
+    },
+    {
+      "src": "/static/images/favicon(.*)",
+      "dest": "/images/favicon.png"
+    },
+    { "src": "/feed.xml", "dest": "/rss.xml" },
+    { "src": "/.*", "status": 404, "dest": "/404" }
   ]
 }
