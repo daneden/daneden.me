@@ -1,9 +1,15 @@
 import { css } from '@emotion/core'
 import styled from '@emotion/styled'
-import React, { ReactElement } from 'react'
+import React, { ReactElement, useEffect } from 'react'
 import Breakout from './Breakout'
 import { Atoms, Link } from './designSystem/designSystem'
 
+// Let Typescript know to expect this function to exist on `window`
+declare global {
+  interface Window {
+    __DE__homePageSetup: () => void
+  }
+}
 type FillAreaProps = {
   direction?: 'tl-br' | 'tr-bl' | 'center'
 }
@@ -49,26 +55,16 @@ const GridFillArea = styled.div<FillAreaProps>(
 )
 
 export default function HomeGrid(): ReactElement<typeof Breakout> | null {
-  if (
+  const noHoudini =
     (typeof CSS !== 'undefined' &&
       !CSS.supports('background-image', 'paint(line)')) ||
     typeof CSS === 'undefined'
-  ) {
-    return null
-  } else {
-    // TODO: Add type definition for home page setup function on `window`
-    // In order to prevent unnecessary module loading on non-root pages,
-    // I moved the home page CSS paint register to its own function and
-    // added it to the window object. Typescript is complaining about it,
-    // so I should add a type definition to make it ok.
 
-    // TODO: Fix 'no-unused-expressions' eslint warning
+  useEffect(() => {
+    window.__DE__homePageSetup()
+  }, [])
 
-    // eslint-disable-next-line mdx/no-unused-expressions
-    window?.__DE__homePageSetup()
-  }
-
-  return (
+  return !noHoudini ? (
     <Breakout>
       <GridContainer>
         <GridTextArea
@@ -149,5 +145,5 @@ export default function HomeGrid(): ReactElement<typeof Breakout> | null {
         </GridTextArea>
       </GridContainer>
     </Breakout>
-  )
+  ) : null
 }
