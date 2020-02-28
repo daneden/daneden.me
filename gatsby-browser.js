@@ -1,7 +1,11 @@
 require('./static/css/syntax.css')
 
 window.__DE__homePageSetup = () => {
-  if ('registerProperty' in CSS) {
+  if (
+    'registerProperty' in CSS &&
+    'paintWorklet' in CSS &&
+    !window.__DE__homePageSetupComplete
+  ) {
     CSS.registerProperty({
       name: '--line-direction',
       syntax: 'tl-br | tr-bl | center',
@@ -15,9 +19,8 @@ window.__DE__homePageSetup = () => {
       initialValue: 'currentcolor',
       inherits: true,
     })
-  }
 
-  if ('paintWorklet' in CSS) {
     CSS.paintWorklet.addModule('/paintWorklet.js')
+    window.__DE__homePageSetupComplete = true
   }
 }
