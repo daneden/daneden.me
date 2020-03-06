@@ -44,7 +44,7 @@
     "gatsby-plugin-mdx": "1.0.75",
     "gatsby-plugin-offline": "3.0.35",
     "gatsby-plugin-react-helmet": "3.1.22",
-    "gatsby-plugin-typescript": "2.2.0",
+    "gatsby-plugin-typescript": "2.2.1",
     "gatsby-remark-prismjs": "3.3.32",
     "gatsby-remark-smartypants": "2.1.22",
     "gatsby-remark-widows": "1.0.0",

@@ -2067,10 +2067,10 @@ babel-plugin-macros@^2.0.0, babel-plugin-macros@^2.8.0:
     cosmiconfig "^6.0.0"
     resolve "^1.12.0"
 
-babel-plugin-remove-graphql-queries@^2.7.23:
-  version "2.7.23"
-  resolved "https://registry.yarnpkg.com/babel-plugin-remove-graphql-queries/-/babel-plugin-remove-graphql-queries-2.7.23.tgz#7cecb19b6057eb4de92d147dfd4d51c885cc356a"
-  integrity sha512-SvWLivXtbeExS0eUPrRpg8EYiDPcOlzaO/vePcdmW2X8GBC1miezXS+RYPYyt4r9Z0Cg0ZQe58ggssF/8ym3rg==
+babel-plugin-remove-graphql-queries@^2.7.23, babel-plugin-remove-graphql-queries@^2.7.24:
+  version "2.7.24"
+  resolved "https://registry.yarnpkg.com/babel-plugin-remove-graphql-queries/-/babel-plugin-remove-graphql-queries-2.7.24.tgz#8a4303cbc116d2f27cb32e2bffda29f8beb63572"
+  integrity sha512-uyYSTt2ikv4QhPC1HSt5WnP9sJFCOytrN119NpXQtGL9AiXNGghrELnY4BxhDuJtw/Wjrw20eED1+BJLzfMs7Q==
 
 babel-plugin-syntax-jsx@^6.18.0:
   version "6.18.0"
@@ -5293,10 +5293,10 @@ gatsby-plugin-react-helmet@3.1.22:
   dependencies:
     "@babel/runtime" "^7.7.6"
 
-gatsby-plugin-typescript@2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-typescript/-/gatsby-plugin-typescript-2.2.0.tgz#1495f834dd1d72633fff31e7d8505775e255c43e"
-  integrity sha512-eQ6/4PnnQnKui4SbeT20vA7gEzDHII2OKKr4Os6fZRLJ8T3Vpw9m8HWeynu0fkX8PaAtEQrCTPw4CbBzRJar0g==
+gatsby-plugin-typescript@2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-typescript/-/gatsby-plugin-typescript-2.2.1.tgz#0dd4bf6aebbf7139be8439d60de48e9cb42f9a72"
+  integrity sha512-OktyBqC59BX600YJcvMMlaaFMY+7Axp6Ng5FmjMnwsed1RN/kfuqRzRZfbAQeSP3s/pSQC1Lc4qFKnvZT3BsPA==
   dependencies:
     "@babel/core" "^7.7.5"
     "@babel/plugin-proposal-nullish-coalescing-operator" "^7.7.4"
@@ -5304,7 +5304,7 @@ gatsby-plugin-typescript@2.2.0:
     "@babel/plugin-proposal-optional-chaining" "^7.7.5"
     "@babel/preset-typescript" "^7.7.4"
     "@babel/runtime" "^7.7.6"
-    babel-plugin-remove-graphql-queries "^2.7.23"
+    babel-plugin-remove-graphql-queries "^2.7.24"
 
 gatsby-react-router-scroll@^2.1.22:
   version "2.1.22"
