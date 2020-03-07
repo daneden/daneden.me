@@ -11,7 +11,7 @@ declare global {
   }
 }
 type FillAreaProps = {
-  direction?: 'tl-br' | 'tr-bl' | 'center'
+  direction?: 'tlbr' | 'trbl' | 'center'
 }
 
 const GridContainer = styled.div`
@@ -45,7 +45,7 @@ const GridTextArea = styled.div`
 `
 
 const GridFillArea = styled.div<FillAreaProps>(
-  ({ direction = 'tl-br' }) => `
+  ({ direction = 'tlbr' }: FillAreaProps) => `
     --line-direction: ${direction};
     --line-color: var(--text-color);
     background-image: paint(line);
@@ -134,7 +134,7 @@ export default function HomeGrid(): ReactElement<typeof Breakout> | null {
             grid-row-start: 4;
             margin-left: -${Atoms.spacing.xlarge};
           `}
-          direction="tr-bl"
+          direction="trbl"
         />
         <GridTextArea
           css={css`

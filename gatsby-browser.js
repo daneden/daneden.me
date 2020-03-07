@@ -4,12 +4,13 @@ window.__DE__homePageSetup = () => {
   if (
     'registerProperty' in CSS &&
     'paintWorklet' in CSS &&
+    CSS.supports('paint') &&
     !window.__DE__homePageSetupComplete
   ) {
     CSS.registerProperty({
       name: '--line-direction',
-      syntax: 'tl-br | tr-bl | center',
-      initialValue: 'tl-br',
+      syntax: 'tlbr | trbl | center',
+      initialValue: 'tlbr',
       inherits: true,
     })
 
