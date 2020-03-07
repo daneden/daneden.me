@@ -61,8 +61,10 @@ export default function HomeGrid(): ReactElement<typeof Breakout> | null {
     typeof CSS === 'undefined'
 
   useEffect(() => {
-    window.__DE__homePageSetup()
-  }, [])
+    if (!noHoudini) {
+      window.__DE__homePageSetup()
+    }
+  }, [noHoudini])
 
   return !noHoudini ? (
     <Breakout>
