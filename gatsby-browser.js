@@ -25,3 +25,7 @@ window.__DE__homePageSetup = () => {
     window.__DE__homePageSetupComplete = true
   }
 }
+
+export const onServiceWorkerUpdateReady = () => {
+  window.location.reload()
+}
