@@ -14,7 +14,7 @@ interface ExternalLinkProps {
 interface CommonLinkProps {
   children: ReactNode
   underline?: boolean
-  [x: string]: any
+  [x: string]: unknown
 }
 
 export type LinkProps = CommonLinkProps &

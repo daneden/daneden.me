@@ -1,6 +1,6 @@
 import { css } from '@emotion/core'
 import styled from '@emotion/styled'
-import React, { ReactElement, useEffect } from 'react'
+import React, { ReactElement, useEffect, useState } from 'react'
 import Breakout from './Breakout'
 import { Atoms, Link } from './designSystem/designSystem'
 
@@ -21,10 +21,6 @@ const GridContainer = styled.div`
   margin-bottom: ${Atoms.spacing.large};
 
   @media (max-width: 545px) {
-    display: none;
-  }
-
-  @supports not (background-image: paint(line)) {
     display: none;
   }
 `
@@ -55,18 +51,19 @@ const GridFillArea = styled.div<FillAreaProps>(
 )
 
 export default function HomeGrid(): ReactElement<typeof Breakout> | null {
-  const noHoudini =
-    (typeof CSS !== 'undefined' &&
-      !CSS.supports('background-image', 'paint(line)')) ||
-    typeof CSS === 'undefined'
+  const [houdini, setHoudini] = useState(false)
 
   useEffect(() => {
-    if (!noHoudini) {
+    setHoudini(
+      typeof CSS !== 'undefined' &&
+        CSS.supports('background-image', 'paint(line)')
+    )
+    if (houdini) {
       window.__DE__homePageSetup()
     }
-  }, [noHoudini])
+  }, [houdini, setHoudini])
 
-  return !noHoudini ? (
+  return houdini ? (
     <Breakout>
       <GridContainer>
         <GridTextArea
