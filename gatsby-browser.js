@@ -4,7 +4,7 @@ window.__DE__homePageSetup = () => {
   if (
     'registerProperty' in CSS &&
     'paintWorklet' in CSS &&
-    CSS.supports('paint') &&
+    CSS.supports('background', 'paint(id)') &&
     !window.__DE__homePageSetupComplete
   ) {
     CSS.registerProperty({
