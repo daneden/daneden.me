@@ -6,14 +6,9 @@
     { "src": "/(.*)", "dest": "/$1" },
     { "handle": "filesystem" },
     {
-      "src": "/static/(.*)",
-      "headers": { "cache-control": "public, max-age=31536000" },
-      "dest": "/static/$1"
-    },
-    {
-      "src": "/static/paintWorklet.js",
-      "headers": { "cache-control": "max-age=0, must-revalidate" },
-      "dest": "/static/paintWorklet.js"
+      "src": "/paintWorklet.js",
+      "headers": { "cache-control": "s-maxage=1, stale-while-revalidate" },
+      "dest": "/paintWorklet.js"
     },
     {
       "src": "/fonts/(.*(woff2?|eot))",
