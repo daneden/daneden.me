@@ -11,9 +11,9 @@ class Line {
 
     const orig = {
       x:
-        direction === 'tl-br'
+        direction === 'tlbr'
           ? strokeWidth
-          : direction === 'tr-bl'
+          : direction === 'trbl'
           ? width - strokeWidth
           : width / 2,
       y: strokeWidth,
@@ -21,9 +21,9 @@ class Line {
 
     const dest = {
       x:
-        direction === 'tl-br'
+        direction === 'tlbr'
           ? width - strokeWidth
-          : direction === 'tr-bl'
+          : direction === 'trbl'
           ? strokeWidth
           : width / 2,
       y: height - strokeWidth,
