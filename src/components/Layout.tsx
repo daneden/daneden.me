@@ -33,6 +33,7 @@ const Content = React.memo(
     ReactFragment
   > => {
     const title = frontmatter?.title || null
+    const isPost = title !== null
     const { site } = useLayoutQuery()
     return (
       <React.Fragment>
@@ -43,7 +44,13 @@ const Content = React.memo(
           defaultTitle={site.siteMetadata.title}
           title={title || site.siteMetadata.title}
           description={site.siteMetadata.description}
-          thumbnail={`${site.siteMetadata.siteUrl}/images/og.png`}
+          thumbnail={
+            isPost
+              ? `https://daneden-og-generator.daneden.now.sh/api?title=${encodeURIComponent(
+                  String(title)
+                )}`
+              : `${site.siteMetadata.siteUrl}/images/og.png`
+          }
         />
         <SkipLink />
         <Header siteTitle={site.siteMetadata.title} />
