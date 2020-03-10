@@ -42,7 +42,7 @@
     "gatsby-plugin-google-gtag": "1.1.23",
     "gatsby-plugin-manifest": "2.2.46",
     "gatsby-plugin-mdx": "1.0.79",
-    "gatsby-plugin-offline": "3.0.38",
+    "gatsby-plugin-offline": "3.0.39",
     "gatsby-plugin-react-helmet": "3.1.23",
     "gatsby-plugin-typescript": "2.2.2",
     "gatsby-remark-prismjs": "3.3.33",
