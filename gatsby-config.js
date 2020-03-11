@@ -108,6 +108,12 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-plugin-sitemap',
+      options: {
+        exclude: ['/404'],
+      },
+    },
+    {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
         trackingIds: ['UA-122108242-1'],
