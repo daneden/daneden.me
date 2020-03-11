@@ -42,7 +42,7 @@
     "gatsby-plugin-google-gtag": "1.1.23",
     "gatsby-plugin-manifest": "2.2.47",
     "gatsby-plugin-mdx": "1.0.80",
-    "gatsby-plugin-offline": "3.0.39",
+    "gatsby-plugin-offline": "3.0.40",
     "gatsby-plugin-react-helmet": "3.1.23",
     "gatsby-plugin-sitemap": "^2.2.28",
     "gatsby-plugin-typescript": "2.2.2",
