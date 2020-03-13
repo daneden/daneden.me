@@ -18,9 +18,8 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
+    "build": "gatsby build --log-pages",
     "develop": "gatsby develop",
-    "lh": "lighthousebot",
     "lint:js": "eslint \"**/*.{js,jsx}\"",
     "lint": "npm-run-all lint:*",
     "precommit": "lint-staged",
