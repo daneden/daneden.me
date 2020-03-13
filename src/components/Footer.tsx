@@ -13,13 +13,19 @@ const StyledFooter = styled('footer')`
   padding-top: ${Atoms.spacing.small};
 `
 
+const FooterWrapper = styled.div`
+  max-width: ${Atoms.widths.container};
+`
+
 export default function Footer(): ReactElement<typeof StyledFooter> {
   return (
     <StyledFooter>
-      Written, designed, and built by Daniel Eden, a designer who you can find
-      on <Link href="https://twitter.com/_dte">Twitter</Link>,{' '}
-      <Link href="https://github.com/daneden">GitHub</Link>, or good
-      old-fashioned <Link href="mailto:dan.eden@me.com">Email</Link>.
+      <FooterWrapper>
+        Written, designed, and built by Daniel Eden, a designer who you can find
+        on <Link href="https://twitter.com/_dte">Twitter</Link>,{' '}
+        <Link href="https://github.com/daneden">GitHub</Link>, or good
+        old-fashioned <Link href="mailto:dan.eden@me.com">Email</Link>.
+      </FooterWrapper>
     </StyledFooter>
   )
 }
