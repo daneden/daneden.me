@@ -13,7 +13,8 @@ interface MetatagsProps {
 const dnsPrefetchURLs = [
   'https://daneden.imgix.net',
   'https://videodelivery.net',
-  'https://www.google-analytics.com',
+  'https://stats.g.doubleclick.net',
+  'https://www.google.com',
   'https://embed.videodelivery.net',
   'https://www.googletagmanager.com',
 ]
