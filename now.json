@@ -14,11 +14,6 @@
       "dest": "/paintWorklet.js"
     },
     {
-      "src": "/fonts/(.*(woff2?|eot))",
-      "headers": { "cache-control": "s-maxage=31536000" },
-      "dest": "/fonts/$1"
-    },
-    {
       "src": "/animate(.*)",
       "status": 308,
       "headers": { "Location": "https://daneden.github.io/animate.css/" }
@@ -40,6 +35,11 @@
     { "src": "/feed.xml", "dest": "/rss.xml" },
     { "src": "/(.*)", "dest": "/$1" },
     { "handle": "filesystem" },
+    {
+      "src": "/fonts/(.*(woff2?|eot))",
+      "headers": { "cache-control": "s-maxage=31536000" },
+      "dest": "/fonts/$1"
+    },
     { "src": "/.*", "status": 404, "dest": "/404" }
   ]
 }
