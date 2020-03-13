@@ -17,7 +17,7 @@
     },
     {
       "src": "/fonts/(.*(woff2?|eot))",
-      "headers": { "cache-control": "public, max-age=31536000" },
+      "headers": { "cache-control": "public, s-maxage=31536000" },
       "dest": "/fonts/$1"
     },
     {
@@ -36,7 +36,7 @@
     },
     {
       "src": "/uploads/(.*)",
-      "headers": { "cache-control": "public, max-age=31536000" },
+      "headers": { "cache-control": "public, s-maxage=31536000" },
       "dest": "/uploads/$1"
     },
     { "src": "/feed.xml", "dest": "/rss.xml" },
