@@ -142,12 +142,6 @@ module.exports = {
         legacy: false,
       },
     },
-    {
-      resolve: 'gatsby-plugin-offline',
-      options: {
-        dontCacheBustUrlsMatching: /(\.js$\/)/,
-        precachePages: [`/about/`, `/portfolio/`],
-      },
-    },
+    'gatsby-plugin-remove-serviceworker',
   ],
 }
