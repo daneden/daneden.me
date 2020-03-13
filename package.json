@@ -46,7 +46,7 @@
     "gatsby-plugin-remove-serviceworker": "^1.0.0",
     "gatsby-plugin-sitemap": "^2.2.29",
     "gatsby-plugin-typescript": "2.2.3",
-    "gatsby-remark-prismjs": "3.3.34",
+    "gatsby-remark-prismjs": "3.3.35",
     "gatsby-remark-smartypants": "2.1.22",
     "gatsby-remark-widows": "1.0.0",
     "gatsby-source-filesystem": "2.1.54",
