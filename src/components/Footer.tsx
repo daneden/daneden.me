@@ -1,10 +1,6 @@
 import styled from '@emotion/styled'
 import React, { ReactElement } from 'react'
-import Atoms from './designSystem/atoms'
-
-interface FooterProps {
-  author: string
-}
+import { Atoms, Link } from './designSystem/designSystem'
 
 const StyledFooter = styled('footer')`
   border-top: 1px solid;
@@ -17,13 +13,19 @@ const StyledFooter = styled('footer')`
   padding-top: ${Atoms.spacing.small};
 `
 
-export default function Footer({
-  author,
-}: FooterProps): ReactElement<typeof StyledFooter> {
+const FooterWrapper = styled.div`
+  max-width: ${Atoms.widths.container};
+`
+
+export default function Footer(): ReactElement<typeof StyledFooter> {
   return (
     <StyledFooter>
-      Content &copy; {new Date().getUTCFullYear()} {author}, unless otherwise
-      specified
+      <FooterWrapper>
+        Written, designed, and built by Daniel Eden, a designer who you can find
+        on <Link href="https://twitter.com/_dte">Twitter</Link>,{' '}
+        <Link href="https://github.com/daneden">GitHub</Link>, or good
+        old-fashioned <Link href="mailto:dan.eden@me.com">Email</Link>.
+      </FooterWrapper>
     </StyledFooter>
   )
 }

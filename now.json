@@ -2,19 +2,12 @@
   "github": {
     "silent": true
   },
+  "build": {
+    "env": {
+      "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES": "@gatsby-build-on-data-changes"
+    }
+  },
   "routes": [
-    { "src": "/(.*)", "dest": "/$1" },
-    { "handle": "filesystem" },
-    {
-      "src": "/paintWorklet.js",
-      "headers": { "cache-control": "s-maxage=1, stale-while-revalidate" },
-      "dest": "/paintWorklet.js"
-    },
-    {
-      "src": "/fonts/(.*(woff2?|eot))",
-      "headers": { "cache-control": "public, max-age=31536000" },
-      "dest": "/fonts/$1"
-    },
     {
       "src": "/animate(.*)",
       "status": 308,
@@ -29,7 +22,24 @@
       "src": "/static/images/favicon(.*)",
       "dest": "/images/favicon.png"
     },
+    {
+      "src": "/uploads/(.*)",
+      "headers": { "cache-control": "s-maxage=31536000" },
+      "dest": "/uploads/$1"
+    },
     { "src": "/feed.xml", "dest": "/rss.xml" },
+    { "src": "/(.*)", "dest": "/$1" },
+    { "handle": "filesystem" },
+    {
+      "src": "/fonts/(.*(woff2?|eot))",
+      "headers": { "cache-control": "s-maxage=31536000" },
+      "dest": "/fonts/$1"
+    },
+    {
+      "src": "/paintWorklet.js",
+      "headers": { "cache-control": "s-maxage=1, stale-while-revalidate" },
+      "dest": "/paintWorklet.js"
+    },
     { "src": "/.*", "status": 404, "dest": "/404" }
   ]
 }

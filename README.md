@@ -1,6 +1,7 @@
 # Hello, Good Evening, and Welcome
 
-Welcome to the innards of [my website](http://daneden.me).
+Welcome to the innards of [my website](http://daneden.me). It’s built using
+[Gatsby](http://gatsbyjs.org/) and deployed on [ZEIT Now](https://zeit.co/home).
 
 ## Installation
 

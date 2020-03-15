@@ -58,7 +58,7 @@ const Content = React.memo(
           {title && <H1>{title}</H1>}
           {children}
         </Wrapper>
-        <Footer author={site.siteMetadata.authorName} />
+        <Footer />
       </React.Fragment>
     )
   }
