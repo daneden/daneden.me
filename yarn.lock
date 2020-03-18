@@ -8402,12 +8402,12 @@ minimist@0.0.8:
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-0.0.8.tgz#857fcabfc3397d2625b8228262e86aa7a011b05d"
   integrity sha1-hX/Kv8M5fSYluCKCYuhqp6ARsF0=
 
-minimist@1.2.2, minimist@^1.2.0:
+minimist@1.2.2:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.2.tgz#b00a00230a1108c48c169e69a291aafda3aacd63"
   integrity sha512-rIqbOrKb8GJmx/5bc2M0QchhUouMXSpd1RTclXsB41JdL+VtnojfaJR+h7F9k18/4kHUsBFgk80Uk+q569vjPA==
 
-minimist@^1.2.5:
+minimist@^1.2.0, minimist@^1.2.5:
   version "1.2.5"
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.5.tgz#67d66014b66a6a8aaa0c083c5fd58df4e4e97602"
   integrity sha512-FM9nNUYrRBAELZQT3xeZQ7fmMOBg6nWNmJKTcgsJeaLstP/UODVpGsr5OhXhhXg6f+qtJ8uiZ+PUxkDWcgIXLw==
@@ -9986,8 +9986,8 @@ prettier-linter-helpers@^1.0.0:
 
 "prettier@github:prettier/prettier":
   version "1.20.0-dev"
-  uid "94a487f19c0ca47d09c59da6d8b0191d245a5669"
-  resolved "https://codeload.github.com/prettier/prettier/tar.gz/94a487f19c0ca47d09c59da6d8b0191d245a5669"
+  uid "29b9f6b9e9e2885666cdb712c45e2347b679b477"
+  resolved "https://codeload.github.com/prettier/prettier/tar.gz/29b9f6b9e9e2885666cdb712c45e2347b679b477"
   dependencies:
     "@angular/compiler" "8.2.14"
     "@babel/code-frame" "7.5.5"
