@@ -5460,10 +5460,10 @@ gatsby-plugin-manifest@2.2.48:
     semver "^5.7.1"
     sharp "^0.23.4"
 
-gatsby-plugin-mdx@1.0.83:
-  version "1.0.83"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-mdx/-/gatsby-plugin-mdx-1.0.83.tgz#eadd5549caba26c7f372eff2e3e14b9d97b82738"
-  integrity sha512-jt4BuBkvs1TpYMFFc2Rac7e+4OmeD1wtY/DHse3vtJh695/tmhuybQ6lAKFE/mw8i/d63u6L5uXpgCo7Qt1iyw==
+gatsby-plugin-mdx@1.0.84:
+  version "1.0.84"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-mdx/-/gatsby-plugin-mdx-1.0.84.tgz#dbbb7f72a6a9fbc07ccbb2239c520404358794df"
+  integrity sha512-OfMzdSybwB6cFGiTPbW2SDbv37V7NOk3/OAhn27fixOLPGqJ//ontIRldZLQZKZfEa30U2gnnh9XTG3C5jvfVQ==
   dependencies:
     "@babel/core" "^7.8.7"
     "@babel/generator" "^7.8.8"
@@ -5482,7 +5482,7 @@ gatsby-plugin-mdx@1.0.83:
     fs-extra "^8.1.0"
     gatsby-core-utils "^1.0.34"
     gray-matter "^4.0.2"
-    json5 "^2.1.1"
+    json5 "^2.1.2"
     loader-utils "^1.4.0"
     lodash "^4.17.15"
     mdast-util-to-string "^1.1.0"
@@ -7500,7 +7500,7 @@ json5@^1.0.1:
   dependencies:
     minimist "^1.2.0"
 
-json5@^2.1.0, json5@^2.1.1, json5@^2.1.2:
+json5@^2.1.0, json5@^2.1.2:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/json5/-/json5-2.1.2.tgz#43ef1f0af9835dd624751a6b7fa48874fb2d608e"
   integrity sha512-MoUOQ4WdiN3yxhm7NEVJSJrieAo5hNSLQ5sj05OTRHPL9HOBy8u4Bu88jsC1jvqAdN+E1bJmsUcZH+1HQxliqQ==
