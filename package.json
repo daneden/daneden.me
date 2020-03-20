@@ -49,7 +49,7 @@
     "gatsby-remark-prismjs": "3.4.0",
     "gatsby-remark-smartypants": "2.2.0",
     "gatsby-remark-widows": "1.0.0",
-    "gatsby-source-filesystem": "2.1.57",
+    "gatsby-source-filesystem": "2.2.1",
     "prismjs": "1.19.0",
     "react": "16.13.1",
     "react-codepen-embed": "1.0.1",
