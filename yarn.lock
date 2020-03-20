@@ -5450,13 +5450,13 @@ gatsby-plugin-google-gtag@1.1.24:
     "@babel/runtime" "^7.8.7"
     minimatch "^3.0.4"
 
-gatsby-plugin-manifest@2.2.48:
-  version "2.2.48"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-2.2.48.tgz#a082addd697a9d7c27ce51f1c08690b8215c8283"
-  integrity sha512-RWD2HlKT7TFcXs3SIiZTWjq3Ud4z79cms8pBLXjlNNddatnSNi0ne2RknERCQgmTQvcJ9eNeIzfzVtR3WAcBYA==
+gatsby-plugin-manifest@2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-2.3.0.tgz#dbc4fa17ab3129623bf1fa3c5955a05f345fede0"
+  integrity sha512-2a+KjtVtqvTiAIvgdUv0nWcQZHQLK4YZ15gYDu8AdLhb7OznyPyfn0Lkzpc4VEdyBqMJVvIdFhFxlIJhlN2iPg==
   dependencies:
     "@babel/runtime" "^7.8.7"
-    gatsby-core-utils "^1.0.34"
+    gatsby-core-utils "^1.1.0"
     semver "^5.7.1"
     sharp "^0.23.4"
 
