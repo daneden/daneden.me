@@ -47,7 +47,7 @@
     "gatsby-plugin-sitemap": "^2.3.1",
     "gatsby-plugin-typescript": "2.3.0",
     "gatsby-remark-prismjs": "3.4.0",
-    "gatsby-remark-smartypants": "2.2.0",
+    "gatsby-remark-smartypants": "2.2.1",
     "gatsby-remark-widows": "1.0.0",
     "gatsby-source-filesystem": "2.2.1",
     "prismjs": "1.19.0",
