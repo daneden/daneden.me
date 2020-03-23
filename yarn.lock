@@ -5311,10 +5311,10 @@ gatsby-plugin-feed-mdx@^1.0.1:
     lodash.merge "^4.6.2"
     rss "^1.2.2"
 
-gatsby-plugin-google-gtag@1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-gtag/-/gatsby-plugin-google-gtag-1.2.0.tgz#d9b9fb1dc892192ca021eecafb2f8da0a77b9f97"
-  integrity sha512-FJR0WpronBL2Vr94Srr+mwbJGQvav+Ut7iFu2tM9EycDGCTdbTiWJNSEoxHme69wWeKzYopm60ZUFbp55JQ6oQ==
+gatsby-plugin-google-gtag@1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-gtag/-/gatsby-plugin-google-gtag-1.2.1.tgz#5d5903531abcff11193ee1977db9552d5133b1c6"
+  integrity sha512-cJHvDL6IVnj/XfgMhSa6DTOobO3XAZuatcDD1FrkKgj4pytUoHbIY8lFO4TztjMfLv98F302K23NPzYlSaN05A==
   dependencies:
     "@babel/runtime" "^7.8.7"
     minimatch "^3.0.4"
