@@ -13,7 +13,7 @@ const H1 = ({ children }: H1Props): ReactElement<HTMLElement> => {
     font-style: italic;
     font-weight: bold;
     hyphens: initial;
-    line-height: 1;
+    line-height: 1.1;
     margin-bottom: ${Atoms.spacing.medium};
     padding-bottom: ${Atoms.spacing.large};
     padding-top: ${Atoms.spacing.xlarge};
