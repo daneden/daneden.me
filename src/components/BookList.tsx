@@ -121,6 +121,12 @@ const books: Array<BookData> = [
     cover: 'books/tse.jpg',
     url: 'https://amzn.to/2w0E5lO',
   },
+  {
+    title: 'An Individual Note of Music, Sound, and Electronics',
+    author: 'Daphne Oram',
+    cover: 'books/individual-note.jpg',
+    url: '/books/individual-note-daphne-oram',
+  },
 ]
   .map(book => {
     return {
