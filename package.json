@@ -59,7 +59,7 @@
     "react-katex": "2.0.2",
     "react-prop-matrix": "1.0.0",
     "react-script-tag": "1.1.2",
-    "remark": "11.0.2",
+    "remark": "12.0.0",
     "remark-react": "6.0.0",
     "slug": "2.1.1",
     "typescript": "^3.8.3"
