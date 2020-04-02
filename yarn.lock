@@ -10120,10 +10120,10 @@ react-hot-loader@^4.12.20:
     shallowequal "^1.1.0"
     source-map "^0.7.3"
 
-react-imgix@9.0.1:
-  version "9.0.1"
-  resolved "https://registry.yarnpkg.com/react-imgix/-/react-imgix-9.0.1.tgz#cd98a88dbf63d74655587f1160c2e6c2a4e34d3e"
-  integrity sha512-XbuIRSE4lJa1UyEXChsPo/ta8C+Xn2uzwoC0cbiZNAYpHNit3ThFg0NtwpC6DYY9Iui1SAPku15dU6BoolADEg==
+react-imgix@9.0.2:
+  version "9.0.2"
+  resolved "https://registry.yarnpkg.com/react-imgix/-/react-imgix-9.0.2.tgz#85cf6eddc68c144e5b07111a9219df7bbd9b96c6"
+  integrity sha512-8LQYRbbzb4MGZdJkflq75bevJHtN9/xlzoa+QfeCiLu31Ko5ovxje7wxiQdHyhI0JxIR8Z2GVnZT1qrvK3K8ZA==
   dependencies:
     js-base64 "^2.3.2"
     react-measure "^2.3.0"
