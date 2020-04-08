@@ -25,12 +25,23 @@ const components = {
   table: designSystem.Table,
 }
 
+/**
+ * DesignSystemProvider is the wrapper that provides MDX shortcodes for blog
+ * posts and is used by Gatsby in both client and server renders.
+ */
 const DesignSystemProvider = ({
   children,
 }: DesignSystemProviderProps): ReactElement<typeof MDXProvider> => (
   <MDXProvider components={{ ...components }}>{children}</MDXProvider>
 )
 
+/**
+ * wrapRootElement is used only by SSR and is required to ensure that
+ * non-hydrated outputs (such as RSS) are able to render MDX shortcodes.
+ *
+ * For more information, see Gatsby's documentation on the wrapRootElement
+ * function: https://www.gatsbyjs.org/docs/browser-apis/#wrapRootElement
+ */
 export function wrapRootElement({
   element,
 }: {
