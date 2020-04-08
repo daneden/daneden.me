@@ -40,7 +40,7 @@ const DesignSystemProvider = ({
  * non-hydrated outputs (such as RSS) are able to render MDX shortcodes.
  *
  * For more information, see Gatsby's documentation on the wrapRootElement
- * function: https://www.gatsbyjs.org/docs/browser-apis/#wrapRootElement
+ * function: https://www.gatsbyjs.org/docs/ssr-apis/#wrapRootElement
  */
 export function wrapRootElement({
   element,
