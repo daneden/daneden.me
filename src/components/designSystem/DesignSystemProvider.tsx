@@ -31,4 +31,12 @@ const DesignSystemProvider = ({
   <MDXProvider components={{ ...components }}>{children}</MDXProvider>
 )
 
+export function wrapRootElement({
+  element,
+}: {
+  element: ReactNode
+}): ReactElement<typeof DesignSystemProvider> {
+  return <DesignSystemProvider>{element}</DesignSystemProvider>
+}
+
 export default DesignSystemProvider

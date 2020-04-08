@@ -31,3 +31,5 @@ export const onRenderBody = ({ setHeadComponents }) => {
     )),
   ])
 }
+
+export { wrapRootElement } from './src/components/designSystem/DesignSystemProvider'
