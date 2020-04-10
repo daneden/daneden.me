@@ -41,7 +41,7 @@
     "gatsby-plugin-feed-mdx": "^1.0.1",
     "gatsby-plugin-google-gtag": "2.0.0",
     "gatsby-plugin-manifest": "2.3.3",
-    "gatsby-plugin-mdx": "1.1.6",
+    "gatsby-plugin-mdx": "1.1.7",
     "gatsby-plugin-react-helmet": "3.2.2",
     "gatsby-plugin-remove-serviceworker": "^1.0.0",
     "gatsby-plugin-sitemap": "^2.3.1",
