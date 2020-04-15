@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react'
-import Helmet from 'react-helmet'
+import { Helmet } from 'react-helmet'
 
 interface MetatagsProps {
   title?: string
