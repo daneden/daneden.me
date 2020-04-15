@@ -1,6 +1,6 @@
 import { Global } from '@emotion/core'
 import React, { ReactElement, ReactFragment, ReactNode } from 'react'
-import Helmet from 'react-helmet'
+import { Helmet } from 'react-helmet'
 import favicon from '../../static/images/favicon.png'
 import '../fonts/fonts.css'
 import { Post } from '../hooks/useBlogPostsQuery'
