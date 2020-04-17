@@ -39,7 +39,7 @@
     "gatsby-link": "2.3.3",
     "gatsby-plugin-emotion": "4.1.22",
     "gatsby-plugin-feed-mdx": "^1.0.1",
-    "gatsby-plugin-google-gtag": "2.0.1",
+    "gatsby-plugin-google-gtag": "2.0.2",
     "gatsby-plugin-manifest": "2.3.4",
     "gatsby-plugin-mdx": "1.1.8",
     "gatsby-plugin-react-helmet": "3.2.3",
