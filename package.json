@@ -44,7 +44,7 @@
     "gatsby-plugin-mdx": "1.1.9",
     "gatsby-plugin-react-helmet": "3.2.4",
     "gatsby-plugin-remove-serviceworker": "^1.0.0",
-    "gatsby-plugin-sitemap": "^2.3.4",
+    "gatsby-plugin-sitemap": "^2.3.5",
     "gatsby-plugin-typescript": "2.3.3",
     "gatsby-remark-prismjs": "3.4.4",
     "gatsby-remark-smartypants": "2.2.3",
