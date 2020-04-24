@@ -42,7 +42,7 @@
     "gatsby-plugin-google-gtag": "2.0.3",
     "gatsby-plugin-manifest": "2.3.6",
     "gatsby-plugin-mdx": "1.1.10",
-    "gatsby-plugin-react-helmet": "3.2.4",
+    "gatsby-plugin-react-helmet": "3.2.5",
     "gatsby-plugin-remove-serviceworker": "^1.0.0",
     "gatsby-plugin-sitemap": "^2.3.6",
     "gatsby-plugin-typescript": "2.3.4",
