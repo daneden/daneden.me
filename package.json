@@ -40,7 +40,7 @@
     "gatsby-plugin-emotion": "4.1.22",
     "gatsby-plugin-feed-mdx": "^1.0.1",
     "gatsby-plugin-google-gtag": "2.0.3",
-    "gatsby-plugin-manifest": "2.3.6",
+    "gatsby-plugin-manifest": "2.3.7",
     "gatsby-plugin-mdx": "1.1.10",
     "gatsby-plugin-react-helmet": "3.2.5",
     "gatsby-plugin-remove-serviceworker": "^1.0.0",
