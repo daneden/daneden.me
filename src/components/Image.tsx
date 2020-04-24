@@ -1,11 +1,12 @@
+import { css } from '@emotion/core'
 import React, { FunctionComponent } from 'react'
 import Imgix from 'react-imgix'
 import mdToHTML from '../utils/mdToHTML'
-import { Align, Atoms, Caption, Figure } from './designSystem/designSystem'
+import { Align, Atoms, Caption } from './designSystem/designSystem'
 import { FigureProps } from './designSystem/Figure'
 
 interface ImageProps extends FigureProps {
-  align?: 'left' | 'right'
+  align?: 'left' | 'right' | 'pullRight' | 'pullLeft'
   alt?: string
   caption?: string
   defaultSize?: string
@@ -16,12 +17,9 @@ interface ImageProps extends FigureProps {
 const Image: FunctionComponent<ImageProps> = ({
   align,
   alt,
-  className,
   caption,
   defaultSize = Atoms.widths.container,
   invertInDarkMode = false,
-  responsive = true,
-  margin = true,
   src,
 }) => {
   let Wrapper
@@ -55,7 +53,38 @@ const Image: FunctionComponent<ImageProps> = ({
       ? `${process.env.PUBLIC_URL || ''}/uploads/${src}`
       : `https://daneden.imgix.net/${src}`
 
-  const img = responsive ? (
+  const imageBaseStyle = css`
+    display: block;
+    width: 100%;
+  `
+
+  const captionStyle =
+    align === 'pullLeft'
+      ? css`
+          grid-column: main-end / right-pull;
+          align-self: end;
+        `
+      : align === 'pullRight'
+      ? css`
+          grid-column: left-pull / main-start;
+          align-self: end;
+        `
+      : ''
+
+  const imageStyle =
+    align === 'pullLeft'
+      ? css`
+          ${imageBaseStyle};
+          grid-column: left-pull / main-end;
+        `
+      : align === 'pullRight'
+      ? css`
+          ${imageBaseStyle};
+          grid-column: main-start / right-pull;
+        `
+      : ''
+
+  const img = (
     <Imgix
       src={url}
       htmlAttributes={{
@@ -63,24 +92,22 @@ const Image: FunctionComponent<ImageProps> = ({
         loading: 'lazy',
       }}
       sizes={sizes}
-      css={
-        invertInDarkMode && {
+      css={{
+        ...imageBaseStyle,
+        ...imageStyle,
+        ...(invertInDarkMode && {
           '@media (prefers-color-scheme: dark)': {
             filter: 'invert(100%) hue-rotate(180deg)',
           },
-        }
-      }
+        }),
+      }}
     />
-  ) : (
-    <img alt={alt} src={url} />
   )
 
   return (
     <Wrapper>
-      <Figure className={className} margin={margin} responsive={responsive}>
-        {img}
-        {caption && <Caption>{mdToHTML(caption)}</Caption>}
-      </Figure>
+      {img}
+      {caption && <Caption css={captionStyle}>{mdToHTML(caption)}</Caption>}
     </Wrapper>
   )
 }

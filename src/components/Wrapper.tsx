@@ -5,12 +5,22 @@ import { Atoms } from './designSystem/designSystem'
 interface WrapperProps {
   id?: string
   children: ReactNode[]
+  className?: string
 }
 
 const StyledWrapper = styled('div')`
-  box-sizing: initial;
-  margin: 0 auto;
-  max-width: ${Atoms.widths.container};
+  display: grid;
+  grid-template-columns:
+    [start] minmax(5rem, 1fr) [left-pull] minmax(5rem, 1fr) [main-start] minmax(
+      20rem,
+      ${Atoms.widths.container}
+    )
+    [main-end] minmax(5rem, 1fr) [right-pull] minmax(5rem, 1fr) [end];
+  grid-gap: ${Atoms.baseline}rem;
+
+  > * {
+    grid-column: main-start / main-end;
+  }
 
   :focus {
     outline: none;
@@ -19,10 +29,11 @@ const StyledWrapper = styled('div')`
 
 export default function Wrapper({
   id = 'content',
+  className,
   children,
 }: WrapperProps): ReactElement<typeof StyledWrapper> {
   return (
-    <StyledWrapper id={id} role="region" tabIndex={-1}>
+    <StyledWrapper className={className} id={id} role="region" tabIndex={-1}>
       {children}
     </StyledWrapper>
   )
