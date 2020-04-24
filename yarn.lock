@@ -2260,10 +2260,10 @@ babel-plugin-macros@^2.0.0, babel-plugin-macros@^2.8.0:
     cosmiconfig "^6.0.0"
     resolve "^1.12.0"
 
-babel-plugin-remove-graphql-queries@^2.8.3:
-  version "2.8.3"
-  resolved "https://registry.yarnpkg.com/babel-plugin-remove-graphql-queries/-/babel-plugin-remove-graphql-queries-2.8.3.tgz#90bd811e5912348e9c158113e2c0774a8d5ac8fb"
-  integrity sha512-BVux5WSXstiZzZuff7hD7F3WjBPq4V/sDgsT7EosXUNAoShht3msg1pFhJx+Id4jq/VNGEy+lfUzmAvBklIYeA==
+babel-plugin-remove-graphql-queries@^2.8.3, babel-plugin-remove-graphql-queries@^2.8.4:
+  version "2.8.4"
+  resolved "https://registry.yarnpkg.com/babel-plugin-remove-graphql-queries/-/babel-plugin-remove-graphql-queries-2.8.4.tgz#bd92c99d9407a2893329b175ba963c155caefa9d"
+  integrity sha512-aWjPpcdp81F4F47vs48lbJjppU61dCUC676+FbqwRyY3GpK3yOXNPOyij/LOQyH3Q7tH+m6LCv4vVBs9adYFAQ==
 
 babel-plugin-syntax-jsx@^6.18.0:
   version "6.18.0"
@@ -5596,10 +5596,10 @@ gatsby-plugin-sitemap@^2.3.5:
     pify "^3.0.0"
     sitemap "^1.13.0"
 
-gatsby-plugin-typescript@2.3.3:
-  version "2.3.3"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-typescript/-/gatsby-plugin-typescript-2.3.3.tgz#ef860cc0c5678e9694eb28e304bb54801bf227bf"
-  integrity sha512-pVsct3C67aev3ynw4WCMJNJLCNldh5H+QuZAEuIICWBCu4kqfOQ+qxqIgbWnAQMaxgnz19vhVqENeP/RLhxB9g==
+gatsby-plugin-typescript@2.3.4:
+  version "2.3.4"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-typescript/-/gatsby-plugin-typescript-2.3.4.tgz#e11ba1623ff3075e916ff8fc89ea01ec66000a5a"
+  integrity sha512-GyM1kV6JSmDF+tZ+TSG5LOJill7/bNsB6o8mHwI8ZDsNPCe4789jEMzJbNPQ0ZVP/Np74/CUSqd4SQpVUe23xw==
   dependencies:
     "@babel/core" "^7.8.7"
     "@babel/plugin-proposal-nullish-coalescing-operator" "^7.8.3"
@@ -5607,7 +5607,7 @@ gatsby-plugin-typescript@2.3.3:
     "@babel/plugin-proposal-optional-chaining" "^7.8.3"
     "@babel/preset-typescript" "^7.8.3"
     "@babel/runtime" "^7.8.7"
-    babel-plugin-remove-graphql-queries "^2.8.3"
+    babel-plugin-remove-graphql-queries "^2.8.4"
 
 gatsby-react-router-scroll@^2.2.2:
   version "2.2.2"
