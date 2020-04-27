@@ -5835,12 +5835,12 @@ gatsby-plugin-remove-serviceworker@^1.0.0:
   resolved "https://registry.yarnpkg.com/gatsby-plugin-remove-serviceworker/-/gatsby-plugin-remove-serviceworker-1.0.0.tgz#9fb433bc8bd766e14e1d3711c4ac6f051e1dff7c"
   integrity sha1-n7QzvIvXZuFOHTcRxKxvBR4d/3w=
 
-gatsby-plugin-sitemap@^2.3.6:
-  version "2.3.6"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-sitemap/-/gatsby-plugin-sitemap-2.3.6.tgz#643d2e765cfc776d67f9f23fb804f76591c08fef"
-  integrity sha512-KRJfpqaI2iYTfA0lPSdbD2RtOBbAizyf/f9LJiDnZy2EtdhYpmE+Px/rk9NTSxqBb/OXU2F9+tdPl//e097p0g==
+gatsby-plugin-sitemap@^2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-sitemap/-/gatsby-plugin-sitemap-2.4.0.tgz#0d8368f9586edfbc3d964c8fccc3c751554a85c1"
+  integrity sha512-HGFDk6FuzCtcJlsG0ymJAdK9B3mMTntkjdDjKCkzvDNAlXjsIiDRiLak5O5bB1SWubXT6ualFU3ZKtaDBLTh+w==
   dependencies:
-    "@babel/runtime" "^7.8.7"
+    "@babel/runtime" "^7.9.2"
     minimatch "^3.0.4"
     pify "^3.0.0"
     sitemap "^1.13.0"
