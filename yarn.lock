@@ -927,7 +927,7 @@
     core-js-pure "^3.0.0"
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.1.2", "@babel/runtime@^7.2.0", "@babel/runtime@^7.4.5", "@babel/runtime@^7.5.5", "@babel/runtime@^7.6.3", "@babel/runtime@^7.7.2", "@babel/runtime@^7.7.4", "@babel/runtime@^7.7.6", "@babel/runtime@^7.8.4", "@babel/runtime@^7.8.7", "@babel/runtime@^7.9.2":
+"@babel/runtime@^7.1.2", "@babel/runtime@^7.2.0", "@babel/runtime@^7.4.5", "@babel/runtime@^7.5.5", "@babel/runtime@^7.6.3", "@babel/runtime@^7.7.2", "@babel/runtime@^7.7.4", "@babel/runtime@^7.7.6", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2":
   version "7.9.2"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.9.2.tgz#d90df0583a3a252f09aaa619665367bae518db06"
   integrity sha512-NE2DtOdufG7R5vnfQUTehdTfNycfUANEtCa9PssN9O/xmTzP4E08UI797ixaei6hBEVL9BI/PsdJS5x7mWoB9Q==
@@ -5543,12 +5543,12 @@ gatsby-plugin-feed-mdx@^1.0.1:
     lodash.merge "^4.6.2"
     rss "^1.2.2"
 
-gatsby-plugin-google-gtag@2.0.3:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-gtag/-/gatsby-plugin-google-gtag-2.0.3.tgz#69bdd310f4513aadb70d044e138122d2494bead1"
-  integrity sha512-opXNGNFTj8NnzJWwkiByg7QAhbi1q3S3oAyOV8cJH+xfhN9qGl/ib6wzNmW1zVmiVKQXRQH86IyL/bTdb/ZaMw==
+gatsby-plugin-google-gtag@2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-gtag/-/gatsby-plugin-google-gtag-2.1.0.tgz#d4679bf371a24f10e822e69fc202d9c91f5be749"
+  integrity sha512-qzOwu+KQgLXQdcoNS5Gl1yOdbEqKHK1al5Af5LxNeV9WsRG6EOgAtbzey0ylRhz/XUR5PveQ3shVYebc8fn1KQ==
   dependencies:
-    "@babel/runtime" "^7.8.7"
+    "@babel/runtime" "^7.9.2"
     minimatch "^3.0.4"
 
 gatsby-plugin-manifest@2.4.0:
