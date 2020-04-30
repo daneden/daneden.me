@@ -1,24 +1,27 @@
 export const frontmatter = {
-layout: "post",
-title: "Building a Coin-Tossing Simulator with React, Hooks, and Now: Part 1",
-date: "2019-07-29",
+  layout: 'post',
+  title: 'Building a Coin-Tossing Simulator with React, Hooks, and Now: Part 1',
+  date: '2019-07-29',
 }
 
 <Note>
-  This is the first in what will be a short series of posts explaining how to
-  build a React application that simulates tossing a coin over and over again.
+  This is the first in a short series of posts explaining how to build a React
+  application that simulates tossing a coin over and over again. Read{' '}
+  <Link to="/2019/08/10/toss-a-coin-with-react-part-2/">part two</Link> and{' '}
+  <Link to="/2020/02/03/toss-a-coin-with-react-part-3/">part three</Link> when
+  you’re done here!
 </Note>
 
 I've never written a React tutorial before—there are plenty of people more
-qualified than me to do so—but I was recently reading ["Why Does the World
-Exist?" by Jim Holt](https://amzn.to/318ym89), which contained a passage that
-moved me to tinker with an idea:
+qualified than me to do so—but I was recently reading
+["Why Does the World Exist?" by Jim Holt](https://amzn.to/318ym89), which
+contained a passage that moved me to tinker with an idea:
 
 > Think of an infinite sequence of random coin tosses: 1 for “heads,” 0 for
 > “tails.” Even though the sequence as a whole will be patternless, it is
 > guaranteed to contain—by pure chance—all conceivable local patterns. There
-> will be stretches of perfect fullness, consisting of a long run of 1’s.
-> There will be stretches of perfect emptiness, consisting of a long run of 0’s.
+> will be stretches of perfect fullness, consisting of a long run of 1’s. There
+> will be stretches of perfect emptiness, consisting of a long run of 0’s.
 
 Upon reading this, I thought it would be nice to visualise these coin tosses,
 seeing the longest streaks of heads-versus-tails, as well as how the average
@@ -35,10 +38,10 @@ This post will assume at least a little knowledge about how to use the command
 line. Nothing terribly complex; navigating between folders with `cd`, and
 installing things with `npm` or `yarn`.
 
-Which brings me to the other prerequisite: you should make sure you have [node
-and npm](https://nodejs.org/en/) installed on your computer. I'm going to be
-using [yarn](https://yarnpkg.com/en/), an alternative to npm, but for the most
-part, the two are interchangable:
+Which brings me to the other prerequisite: you should make sure you have
+[node and npm](https://nodejs.org/en/) installed on your computer. I'm going to
+be using [yarn](https://yarnpkg.com/en/), an alternative to npm, but for the
+most part, the two are interchangable:
 
 | yarn                 | npm                     |
 | :------------------- | :---------------------- |
@@ -75,12 +78,12 @@ Go ahead and do that. You should see that a development server starts running,
 and your browser should open and take you to a `localhost` web page, where you
 see the example React app running.
 
-If you need to stop or restart the development server at any time, you can
-press `Ctrl + C` and then run `yarn start` to begin it again.
+If you need to stop or restart the development server at any time, you can press
+`Ctrl + C` and then run `yarn start` to begin it again.
 
-Congratulations! Strictly speaking, you've just created your first React app!
-If running the example code has left you a little underwhelmed, don't fret:
-next, we'll start to write some custom code for our application.
+Congratulations! Strictly speaking, you've just created your first React app! If
+running the example code has left you a little underwhelmed, don't fret: next,
+we'll start to write some custom code for our application.
 
 The first thing we need to do in our app is have it simulate the basic exercise
 of tossing a coin. Let's change our app so that it has a button to toss an
@@ -88,25 +91,13 @@ imaginary coin and then tells us the result.
 
 ## Step 1: Removing The Example Code
 
-Open up the `coin-toss` folder in your code editor of choice (I'm using [Visual
-Studio Code](https://code.visualstudio.com/)) and you should see the following
-contents:
+Open up the `coin-toss` folder in your code editor of choice (I'm using
+[Visual Studio Code](https://code.visualstudio.com/)) and you should see the
+following contents:
 
 ```md{5}
-node_modules
-public
-src
-↳ App.css
-↳ App.js
-↳ App.test.js
-↳ index.css
-↳ index.js
-↳ logo.svg
-↳ serviceWorker.js
-.gitignore
-package.json
-README.md
-yarn.lock
+node_modules public src ↳ App.css ↳ App.js ↳ App.test.js ↳ index.css ↳ index.js
+↳ logo.svg ↳ serviceWorker.js .gitignore package.json README.md yarn.lock
 ```
 
 Open up `src/App.js`. We’re going to delete most of the code already inside it,
@@ -117,8 +108,8 @@ but feel free to copy-and-paste if it's easier.
   few new concepts, but we'll walk through it together.
 </Note>
 
-We'll delete some of the import statements at the top and most of the
-code in the `App` function. Here's what your `App.js` should look like:
+We'll delete some of the import statements at the top and most of the code in
+the `App` function. Here's what your `App.js` should look like:
 
 ```jsx
 import React from 'react'
@@ -154,9 +145,9 @@ also delete those files:
 ```
 
 <Note>
-  You can see the running version of the app at this stage{" "}
+  You can see the running version of the app at this stage{' '}
   <Link href="https://coin-toss-jkf64vttf.now.sh">here</Link>, and the source
-  code{" "}
+  code{' '}
   <Link href="https://github.com/daneden/react-coin-toss/tree/5ed4d9e972c4c73a9dcc6f79569c37590fcdb526">
     here
   </Link>
@@ -165,9 +156,9 @@ also delete those files:
 
 ---
 
-**Interlude: Understanding React's JSX Syntax**:
-Let's go back to `App.js` for a moment. If you haven't seen React code before,
-seeing HTML-like bracketed-code might be a surprise to you:
+**Interlude: Understanding React's JSX Syntax**: Let's go back to `App.js` for a
+moment. If you haven't seen React code before, seeing HTML-like bracketed-code
+might be a surprise to you:
 
 ```jsx{4}
 import React from 'react'
@@ -179,16 +170,16 @@ function App() {
 export default App
 ```
 
-This is called JSX syntax, and it's just a convenient way of writing React
-code. The line highlighted above could also be written like this:
+This is called JSX syntax, and it's just a convenient way of writing React code.
+The line highlighted above could also be written like this:
 
 ```js
 return React.createElement('div', null, 'The coin toss app will go here!')
 ```
 
 When we write `<div>` in JSX, it's telling React to create a `div` element,
-without any additional properties or attributes ("props" in React), with
-_"The coin toss app will go here!"_ as its contents (or "children").
+without any additional properties or attributes ("props" in React), with _"The
+coin toss app will go here!"_ as its contents (or "children").
 
 The `create-react-app` command, in addition to providing us with some starter
 code, also enabled us to write JSX syntax so that we didn't have to write
@@ -213,7 +204,7 @@ function App() {
 ```
 
 <Note>
-  Note that here I've excluded the <Code>import</Code> and <Code>export</Code>{" "}
+  Note that here I've excluded the <Code>import</Code> and <Code>export</Code>{' '}
   lines just to focus on the <Code>App</Code> function; be sure not to delete
   them from your code.
 </Note>
@@ -249,8 +240,8 @@ in React is just a function that takes advantage of React's "component
 lifecycle", which determines when a component or an app should update.
 
 `useState` lets us define a variable and provides a function for updating that
-variable later on. We'll need one for the coin's side, and one for the number
-of times the coin has been tossed.
+variable later on. We'll need one for the coin's side, and one for the number of
+times the coin has been tossed.
 
 ```jsx{numberLines: true}
 import React from 'react'
@@ -292,8 +283,8 @@ Let's walk through the changes we just made.
 const { useState } = React
 ```
 
-This might be unfamiliar syntax again. This is called _object destructuring_[^1],
-and it's the same as writing:
+This might be unfamiliar syntax again. This is called _object
+destructuring_[^1], and it's the same as writing:
 
 ```js
 const useState = React.useState
@@ -307,10 +298,9 @@ const [side, setSide] = useState(1)
 const [tossed, setTossed] = useState(0)
 ```
 
-This might be new as well! This is another form of destructuring. The
-`useState` function returns an array of two values: the state variable, and the
-function to update the state variable. The first line above can be re-written
-as:
+This might be new as well! This is another form of destructuring. The `useState`
+function returns an array of two values: the state variable, and the function to
+update the state variable. The first line above can be re-written as:
 
 ```js
 const result = useState(1)
@@ -355,14 +345,14 @@ Finally, the `return` value of `App` has been updated to show two paragraphs:
 ```
 
 Here, we're using the `tossed` variable to indicate how many times we've tossed
-our virtual coin. The curly braces are there to tell React/JSX that we'd like
-to use a JavaScript variable.
+our virtual coin. The curly braces are there to tell React/JSX that we'd like to
+use a JavaScript variable.
 
-In the next paragraph, we're checking if the `side` variable is equal to `1`.
-If it is, we'll output "heads", and if it isn't, we'll output "tails".
+In the next paragraph, we're checking if the `side` variable is equal to `1`. If
+it is, we'll output "heads", and if it isn't, we'll output "tails".
 
-Putting all of this together, we can now go back to the browser and click
-the "Toss coin" button, and it will update with the number of times it's been
+Putting all of this together, we can now go back to the browser and click the
+"Toss coin" button, and it will update with the number of times it's been
 tossed, along with which side of the coin is seen. If you keep pressing the
 button, you'll already start to see some of the patterns mentioned in the
 excerpt: long sequences of 0's, followed by long sequences of 1's, followed by
@@ -372,9 +362,9 @@ If you've made it this far, you should feel proud! We've made a React app that
 responds to user input and dynamically updates.
 
 <Note>
-  You can see the running version of the app at this stage{" "}
+  You can see the running version of the app at this stage{' '}
   <Link href="https://coin-toss-1fikjgmoj.now.sh/">here</Link>, and the source
-  code{" "}
+  code{' '}
   <Link href="https://github.com/daneden/react-coin-toss/tree/549b8db01a10ebaff0766364f3cf48735aa4da21">
     here
   </Link>
@@ -383,14 +373,14 @@ responds to user input and dynamically updates.
 
 ---
 
-**Part 1 Conclusion: The Power of React**:
-If you're like me, it's probably taking (or did take) a while to warm up to the
-idea of React. Why would I prefer it over regular JavaScript or jQuery? Why
-does it seem so different from everything else I've learned about JavaScript?
+**Part 1 Conclusion: The Power of React**: If you're like me, it's probably
+taking (or did take) a while to warm up to the idea of React. Why would I prefer
+it over regular JavaScript or jQuery? Why does it seem so different from
+everything else I've learned about JavaScript?
 
 Hopefully by following this tutorial you've started to feel a little of React's
-power come into play. What I've found really appealing about React is that it
-is highly <mark>declarative</mark> and it is <mark>reactive</mark>.
+power come into play. What I've found really appealing about React is that it is
+highly <mark>declarative</mark> and it is <mark>reactive</mark>.
 
 By _declarative_, I mean that rather than describing the steps you take to make
 an element or a variable a certain way, you just describe the element straight
@@ -414,9 +404,9 @@ managing the codebase much easier.
 Secondly, when I say _reactive_, I'm describing one of the side effects of
 declarative code, and a feature that React in particular makes available to us.
 
-Notice how in our application, because we're writing our code declaratively,
-and we're letting React handle many of our variables using `useState`, we don't
-have to manually update variables like `side` or `tosses`, and we don't have to
+Notice how in our application, because we're writing our code declaratively, and
+we're letting React handle many of our variables using `useState`, we don't have
+to manually update variables like `side` or `tosses`, and we don't have to
 change any inner HTML of the paragraph elements of our app. In classic JS, we'd
 likely have to update a lot of things ourselves:
 
@@ -429,23 +419,26 @@ tossed = tossed + 1
 firstParagraph.innerHTML = `The coin has been tossed ${tossed} times.`
 ```
 
-By writing our code declaratively with the help of React, we need only write
-our paragraph once, and everything updates automatically whenever `tossed` or
-other variables change or update.
+By writing our code declaratively with the help of React, we need only write our
+paragraph once, and everything updates automatically whenever `tossed` or other
+variables change or update.
 
 ---
 
 In the next part of this series, we'll start to count the total number of times
 that each side of the coin appears, and visualise them using HTML elements.
-We'll also have our coin flipped automatically for us, so that you don't have
-to press a button each time.
+We'll also have our coin flipped automatically for us, so that you don't have to
+press a button each time.
 
-While waiting for the next post, consider how you might achieve those next
-steps yourself, or what other creative ways you could use what you've learned
-in this first part.
+While waiting for the next post, consider how you might achieve those next steps
+yourself, or what other creative ways you could use what you've learned in this
+first part.
 
-Thanks for reading, and be sure to [follow me on Twitter](https://twitter.com/_dte)
-to find out when the next post is available, and to ask for anything specific
-you'd like to see in the future posts!
+Thanks for reading, and be sure to
+[follow me on Twitter](https://twitter.com/_dte) to find out when the next post
+is available, and to ask for anything specific you'd like to see in the future
+posts!
 
-[^1]: You can learn more about destructuring assignments from the [MDN JavaScript documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+[^1]:
+  You can learn more about destructuring assignments from the
+  [MDN JavaScript documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)

@@ -1,16 +1,16 @@
 export const frontmatter = {
-layout: "post",
-title: "Building a Coin-Tossing Simulator with React, Hooks, and Now: Part 2",
-date: "2019-08-10",
+  layout: 'post',
+  title: 'Building a Coin-Tossing Simulator with React, Hooks, and Now: Part 2',
+  date: '2019-08-10',
 }
 
 <Note>
   This is the second part in a short series of posts explaining how to build a
-  React application that simulates tossing a coin over and over again. You can{" "}
-  <Link to="/2019/07/29/toss-a-coin-with-react-part-1/">
-    read part one here
-  </Link>
-  .
+  React application that simulates tossing a coin over and over again. Read{' '}
+  <Link to="/2019/07/29/toss-a-coin-with-react-part-1/">part one</Link> if you
+  haven't already, and{' '}
+  <Link to="/2020/02/03/toss-a-coin-with-react-part-3/">part three</Link> when
+  you’re done here!
 </Note>
 
 In the [first part](/2019/07/29/toss-a-coin-with-react-part-1/) of this
@@ -21,9 +21,9 @@ which side it landed on.
 [here](https://github.com/daneden/react-coin-toss/tree/549b8db01a10ebaff0766364f3cf48735aa4da21)
 and run the app [here](https://coin-toss-1fikjgmoj.now.sh))
 
-In this second part, we're going to start tracking the number of times each
-side appears, have the coin tossed automatically for us (rather than having to
-press a button) and visualise the results over time.
+In this second part, we're going to start tracking the number of times each side
+appears, have the coin tossed automatically for us (rather than having to press
+a button) and visualise the results over time.
 
 ## Counting Each Side
 
@@ -73,16 +73,15 @@ function App() {
 }
 ```
 
-We've added four new variables, `heads`, `setHeads`, `tails`, and `setTails`,
-to get and set the number of times that heads and tails each appear.
+We've added four new variables, `heads`, `setHeads`, `tails`, and `setTails`, to
+get and set the number of times that heads and tails each appear.
 
 We've removed the `useState` function call that sets `tossed` and `setTossed`
 and instead we'll set `const tossed = heads + tails`, just to reduce the number
 of "sources of truth" for the total number of times the coin has been tossed.
 
 We've also added a `ul` element to the rendered output where we can see the
-values of `heads` and `tails`, but just showing a number isn't very
-interesting.
+values of `heads` and `tails`, but just showing a number isn't very interesting.
 
 ## Visualising The Coin Tosses
 
@@ -117,9 +116,9 @@ The final step in this part of the tutorial will be to have the coin tossed
 automatically. To do this, we'll use another React hook: `useEffect`.
 
 The `useEffect` hook is used to call a function whenever a component renders or
-is re-rendered (which happens if its properties—props—or state changes). This
-is a bit abstract, but it's useful to us: we want to call a function when our
-app renders so that we can toss the coin automatically.
+is re-rendered (which happens if its properties—props—or state changes). This is
+a bit abstract, but it's useful to us: we want to call a function when our app
+renders so that we can toss the coin automatically.
 
 In `App.js`, we'll get the `useEffect` hook the same way we get the `useState`
 hook:
@@ -152,15 +151,15 @@ clears the interval: this is basically to clean up after ourselves if the App
 stops rendering, since we don't then need to keep calling `tossCoin` every
 500ms, and doing so could actually lead to bugs or slowness.
 
-You can change the interval to a different value to have the coin tossed more
-or less frequently, but it's already very useful: now that the coin is being
-tossed automatically, you can see within just a few seconds that the frequency
-of each side landing averages out to be about even quite quickly!
+You can change the interval to a different value to have the coin tossed more or
+less frequently, but it's already very useful: now that the coin is being tossed
+automatically, you can see within just a few seconds that the frequency of each
+side landing averages out to be about even quite quickly!
 
-Let's make one more change. Now that the coin is tossed automatically, the
-"toss coin" button is a bit useless. Let's update our app so that there's a
-"pause" button that lets us momentarily stop the automatic tossing and manually
-toss the coin again.
+Let's make one more change. Now that the coin is tossed automatically, the "toss
+coin" button is a bit useless. Let's update our app so that there's a "pause"
+button that lets us momentarily stop the automatic tossing and manually toss the
+coin again.
 
 ```jsx
 function App() {
@@ -260,9 +259,9 @@ And that's it! Now our app will automatically toss the coin for us, and show us
 a nice visualisation of the number of times each side is shown.
 
 <Note>
-  You can see the running version of the app at this stage{" "}
+  You can see the running version of the app at this stage{' '}
   <Link href="https://react-coin-toss-42i9s0vkn.now.sh">here</Link>, and the
-  source code{" "}
+  source code{' '}
   <Link href="https://github.com/daneden/react-coin-toss/tree/9006016cd3fb3a56d5961140db92e14c5ae19d74">
     here
   </Link>
