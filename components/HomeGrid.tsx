@@ -26,23 +26,27 @@ const houdiniLineDirections = ["tlbr", "trbl", "center"]
 const homePageSetup = (): void => {
   if (window.__DE__homePageSetupComplete) return
 
-  CSS?.registerProperty({
-    name: "--line-direction",
-    syntax: houdiniLineDirections.join(" | "),
-    initialValue: "tlbr",
-    inherits: true,
-  })
+  try {
+    CSS?.registerProperty({
+      name: "--line-direction",
+      syntax: houdiniLineDirections.join(" | "),
+      initialValue: "tlbr",
+      inherits: true,
+    })
 
-  CSS?.registerProperty({
-    name: "--line-color",
-    syntax: "<color>",
-    initialValue: "currentcolor",
-    inherits: true,
-  })
+    CSS?.registerProperty({
+      name: "--line-color",
+      syntax: "<color>",
+      initialValue: "currentcolor",
+      inherits: true,
+    })
 
-  CSS?.paintWorklet?.addModule("/paintWorklet.js")
-  // eslint-disable-next-line @typescript-eslint/camelcase
-  window.__DE__homePageSetupComplete = true
+    CSS?.paintWorklet?.addModule("/paintWorklet.js")
+    // eslint-disable-next-line @typescript-eslint/camelcase
+    window.__DE__homePageSetupComplete = true
+  } catch (error) {
+    console.error("Unable to register Houdini paint worklet:", error)
+  }
 }
 
 type FillAreaProps = {
