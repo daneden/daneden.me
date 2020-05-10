@@ -1,7 +1,7 @@
-import styled from '@emotion/styled'
-import { Atoms } from './designSystem'
+import styled from "@emotion/styled"
+import { Atoms } from "./designSystem"
 
-export default styled('mark')`
+export default styled("mark")`
   background-color: ${Atoms.colors.mark};
   border-radius: ${Atoms.spacing.xxsmall};
   color: inherit;

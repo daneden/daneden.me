@@ -1,5 +1,7 @@
 /** @jsx jsx */
 import { css, jsx } from "@emotion/core"
+import { GetStaticProps } from "next"
+import { ReactElement } from "react"
 import { Helmet } from "react-helmet"
 import {
   Atoms,
@@ -8,12 +10,14 @@ import {
 } from "../../components/designSystem/designSystem"
 import Layout from "../../components/Layout"
 import PostLink from "../../components/PostLink"
-import getFrontMatterForFile from "../../utils/getFrontMatterForFile"
+import getFrontMatterForFile, {
+  FrontMatter,
+} from "../../utils/getFrontMatterForFile"
 
 const liStyle = css`
   margin-bottom: ${Atoms.spacing.medium};
 `
-export default function Index({ posts }) {
+export default function Index({ posts }): ReactElement<typeof Layout> {
   if (posts === "undefined") return null
 
   const postsToShow = posts
@@ -45,8 +49,8 @@ export default function Index({ posts }) {
   )
 }
 
-export async function getStaticProps() {
-  const posts = ((context) => {
+export const getStaticProps: GetStaticProps = async (context) => {
+  const posts = ((context): FrontMatter[] => {
     const keys = context.keys()
 
     return keys.map((key) => {

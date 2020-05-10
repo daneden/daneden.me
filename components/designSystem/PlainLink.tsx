@@ -1,5 +1,5 @@
-import React, { ReactElement } from 'react'
-import Link, { LinkProps } from './Link'
+import React, { ReactElement } from "react"
+import Link, { LinkProps } from "./Link"
 
 type PlainLinkProps = LinkProps & {
   underline?: never

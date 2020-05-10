@@ -1,3 +1,5 @@
+/* eslint-disable mdx/no-unused-expressions */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /** @jsx jsx */
 import { css, jsx } from "@emotion/core"
 import styled from "@emotion/styled"
@@ -21,7 +23,7 @@ declare global {
 
 const houdiniLineDirections = ["tlbr", "trbl", "center"]
 
-const homePageSetup = () => {
+const homePageSetup = (): void => {
   if (window.__DE__homePageSetupComplete) return
 
   CSS?.registerProperty({
@@ -39,6 +41,7 @@ const homePageSetup = () => {
   })
 
   CSS?.paintWorklet?.addModule("/paintWorklet.js")
+  // eslint-disable-next-line @typescript-eslint/camelcase
   window.__DE__homePageSetupComplete = true
 }
 

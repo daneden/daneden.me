@@ -1,5 +1,6 @@
 import { Global } from "@emotion/core"
 import dynamic from "next/dynamic"
+import { ReactElement } from "react"
 import siteConfig from "../siteconfig.json"
 import { Atoms, H1 } from "./designSystem/designSystem"
 import DesignSystemProvider from "./designSystem/DesignSystemProvider"
@@ -8,7 +9,7 @@ import Header from "./Header"
 import Metatags from "./Metatags"
 import Wrapper from "./Wrapper"
 
-const Content = ({ frontMatter, children }) => {
+const Content = ({ frontMatter, children }): ReactElement => {
   const title = frontMatter?.title || null
   const isPost = title !== null
   const site = siteConfig
@@ -40,7 +41,10 @@ const Content = ({ frontMatter, children }) => {
   )
 }
 
-export default function Layout({ children, frontMatter }) {
+export default function Layout({
+  children,
+  frontMatter,
+}): ReactElement<typeof DesignSystemProvider> {
   return (
     <DesignSystemProvider>
       <Global

@@ -1,21 +1,23 @@
 import { extractCritical } from "emotion-server"
 import Document, { Head, Main, NextScript } from "next/document"
+import { ReactElement } from "react"
 
 interface Props {
-  ids: any
-  css: any
+  ids: string[]
+  css: string
 }
 
 export default class MyDocument extends Document<Props> {
+  // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
   static getInitialProps({ renderPage }) {
     const page = renderPage()
     const styles = extractCritical(page.html)
     return { ...page, ...styles }
   }
 
-  render() {
+  render(): ReactElement<HTMLDocument> {
     return (
-      <html>
+      <html lang="en">
         <Head>
           <style
             data-emotion-css={this.props.ids.join(" ")}

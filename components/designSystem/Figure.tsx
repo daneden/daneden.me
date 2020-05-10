@@ -1,5 +1,5 @@
-import styled from '@emotion/styled'
-import Atoms from './atoms'
+import styled from "@emotion/styled"
+import Atoms from "./atoms"
 
 export interface FigureProps {
   className?: string
@@ -7,7 +7,7 @@ export interface FigureProps {
   margin?: boolean
 }
 
-const Figure = styled('figure')<FigureProps>(
+const Figure = styled("figure")<FigureProps>(
   ({ margin = true, responsive = true }) => `
   display: flex;
   flex-direction: column;
@@ -17,7 +17,7 @@ const Figure = styled('figure')<FigureProps>(
 
   img {
     display: block;
-    width: ${responsive ? '100%' : 'auto'};
+    width: ${responsive ? "100%" : "auto"};
     flex: 1 1 auto;
     order: 2;
   }

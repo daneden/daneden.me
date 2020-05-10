@@ -36,7 +36,7 @@ const Link = ({
     </a>
   ) : (
     <NextLink href={href} passHref>
-      <a className={className} css={styles(underline)}>
+      <a href={href} className={className} css={styles(underline)}>
         {children}
       </a>
     </NextLink>

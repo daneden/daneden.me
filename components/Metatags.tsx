@@ -1,5 +1,5 @@
-import React, { ReactElement } from 'react'
-import { Helmet } from 'react-helmet'
+import React, { ReactElement } from "react"
+import { Helmet } from "react-helmet"
 
 interface MetatagsProps {
   title?: string
@@ -11,12 +11,12 @@ interface MetatagsProps {
 }
 
 const dnsPrefetchURLs = [
-  'https://daneden.imgix.net',
-  'https://videodelivery.net',
-  'https://stats.g.doubleclick.net',
-  'https://www.google.com',
-  'https://embed.videodelivery.net',
-  'https://www.googletagmanager.com',
+  "https://daneden.imgix.net",
+  "https://videodelivery.net",
+  "https://stats.g.doubleclick.net",
+  "https://www.google.com",
+  "https://embed.videodelivery.net",
+  "https://www.googletagmanager.com",
 ]
 
 function Metatags(props: MetatagsProps): ReactElement<typeof Helmet> {
@@ -53,7 +53,7 @@ function Metatags(props: MetatagsProps): ReactElement<typeof Helmet> {
 
       {thumbnail && <meta name="twitter:image" content={thumbnail} />}
 
-      {dnsPrefetchURLs.map(url => [
+      {dnsPrefetchURLs.map((url) => [
         <link rel="preconnect" href={url} />,
         <link rel="dns-prefetch" href={url} />,
       ])}
