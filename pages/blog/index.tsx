@@ -54,7 +54,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
     const keys = context.keys()
 
     return keys.map((key) => {
-      // TODO: This shouldn't be hard-coded if we can aboid it
+      // TODO [$5eb82f231c966f0007ebe47e]: This shouldn't be hard-coded if we can aboid it
       const frontMatter = getFrontMatterForFile("pages/blog/" + key)
 
       return {
