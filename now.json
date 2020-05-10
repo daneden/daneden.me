@@ -20,7 +20,7 @@
     },
     {
       "src": "/static/images/favicon(.*)",
-      "dest": "/images/favicon.png"
+      "dest": "/static/images/favicon.png"
     },
     {
       "src": "/uploads/(.*)",
