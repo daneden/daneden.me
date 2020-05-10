@@ -40,6 +40,7 @@
       "headers": { "cache-control": "s-maxage=1, stale-while-revalidate" },
       "dest": "/paintWorklet.js"
     },
+    { "src": "/([0-9]{4}.*)", "dest": "/blog/$1" },
     { "src": "/.*", "status": 404, "dest": "/404" }
   ]
 }
