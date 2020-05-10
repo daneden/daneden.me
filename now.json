@@ -6,7 +6,7 @@
     {
       "src": "/animate(.*)",
       "status": 308,
-      "headers": { "Location": "https://daneden.github.io/animate.css/" }
+      "headers": { "Location": "https://animate.style/" }
     },
     {
       "src": "/toast(.*)",
