@@ -57,6 +57,12 @@ function Metatags(props: MetatagsProps): ReactElement<typeof Helmet> {
         <link rel="preconnect" href={url} />,
         <link rel="dns-prefetch" href={url} />,
       ])}
+
+      <link
+        rel="preload"
+        href="/fonts/AyerPosterAngular-SemiboldItalic-Web.woff2"
+        as="font"
+      />
     </Helmet>
   )
 }
