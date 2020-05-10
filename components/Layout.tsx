@@ -20,7 +20,7 @@ const Content = ({ frontMatter, children }): ReactElement => {
     <>
       <Metatags
         defaultTitle={site.title}
-        title={title || site.title}
+        title={title}
         description={site.description}
         thumbnail={
           isPost
