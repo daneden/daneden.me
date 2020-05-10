@@ -1,8 +1,8 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import MDX from "@mdx-js/runtime"
 import React, { FunctionComponent } from "react"
 import Imgix from "react-imgix"
+import Markdown from "../utils/Markdown"
 import { Align, Atoms, Caption, Figure } from "./designSystem/designSystem"
 import { FigureProps } from "./designSystem/Figure"
 
@@ -83,7 +83,7 @@ const Image: FunctionComponent<ImageProps> = ({
         {img}
         {caption && (
           <Caption>
-            <MDX>{caption}</MDX>
+            <Markdown>{caption}</Markdown>
           </Caption>
         )}
       </Figure>

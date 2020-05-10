@@ -3,6 +3,9 @@ const withMDXFm = require("next-mdx-frontmatter")
 const prism = require("@mapbox/rehype-prism")
 const smartypants = require("@ngsctt/remark-smartypants")
 const withPlugins = require("next-compose-plugins")
+const withBundleAnalyzer = require("@next/bundle-analyzer")({
+  enabled: process.env.ANALYZE === "true",
+})
 
 const mdxOptions = {
   layoutPath: "layouts",
@@ -13,7 +16,7 @@ const mdxOptions = {
 }
 
 module.exports = withPlugins(
-  [withMDXFm],
+  [withMDXFm, withBundleAnalyzer],
   withMDXEnhanced(mdxOptions)({
     webpack: (config, { isServer }) => {
       if (!isServer) {

@@ -1,6 +1,6 @@
-import MDX from "@mdx-js/runtime"
 import React, { FunctionComponent } from "react"
 import ScriptTag from "react-script-tag"
+import Markdown from "../utils/Markdown"
 import { Caption, Figure } from "./designSystem/designSystem"
 
 interface CFVideoProps {
@@ -37,7 +37,7 @@ const CFVideo: FunctionComponent<CFVideoProps> = ({
       />
       {caption && (
         <Caption>
-          <MDX>{caption}</MDX>
+          <Markdown>{caption}</Markdown>
         </Caption>
       )}
     </Figure>
