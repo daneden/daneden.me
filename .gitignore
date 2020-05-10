@@ -1,13 +1,26 @@
-# Ignore Gatsby generated files
-public/
-.cache/
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
 
-# Ignore junk files
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
 .DS_Store
-*.log
+.env*
 
-# Ignore npm stuff
-node_modules/
-npm-shrinkwrap.json
-package-lock.json
-.now
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+.vercel
+.mdx-data

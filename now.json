@@ -2,11 +2,6 @@
   "github": {
     "silent": true
   },
-  "build": {
-    "env": {
-      "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES": "@gatsby-build-on-data-changes"
-    }
-  },
   "routes": [
     {
       "src": "/animate(.*)",
@@ -20,7 +15,7 @@
     },
     {
       "src": "/static/images/favicon(.*)",
-      "dest": "/images/favicon.png"
+      "dest": "/static/images/favicon.png"
     },
     {
       "src": "/uploads/(.*)",
@@ -40,6 +35,7 @@
       "headers": { "cache-control": "s-maxage=1, stale-while-revalidate" },
       "dest": "/paintWorklet.js"
     },
+    { "src": "/([0-9]{4}.*)", "dest": "/blog/$1" },
     { "src": "/.*", "status": 404, "dest": "/404" }
   ]
 }

@@ -2,7 +2,6 @@
   "parser": "@typescript-eslint/parser",
   "root": true,
   "settings": {
-    "import/core-modules": ["gatsby"],
     "react": {
       "version": "detect"
     }
