@@ -1,3 +1,5 @@
+/** @jsx jsx */
+import { jsx } from "@emotion/core"
 import MDX from "@mdx-js/runtime"
 import React, { FunctionComponent } from "react"
 import Imgix from "react-imgix"
