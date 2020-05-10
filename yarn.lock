@@ -6623,11 +6623,6 @@ react-script-tag@^1.1.2:
   resolved "https://registry.yarnpkg.com/react-script-tag/-/react-script-tag-1.1.2.tgz#be0fa3a22dfae8165d083f6bc1ff6f9799b20d44"
   integrity sha512-4oR9ntvGfX4igiP77vK310ru5Oa77xO7CeYB3Xi9lu0qsikpGpK1Kq1WMFocvy8U4fQFq8ovtrZS/8adfCziFw==
 
-react-serialize@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/react-serialize/-/react-serialize-0.2.0.tgz#9f3c694ae6438c3b17b7e9e2cbc7337921888979"
-  integrity sha512-QWkALlrv9E8HOIk5XEznBmjhVsL/NE0mzccu+7AHAqbfmRDQg7vFXbZt6/I2w/WQ4re4H1AmnVedzHoYY4yb4g==
-
 react-side-effect@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/react-side-effect/-/react-side-effect-2.1.0.tgz#1ce4a8b4445168c487ed24dab886421f74d380d3"

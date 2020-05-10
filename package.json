@@ -43,8 +43,7 @@
     "react-helmet": "^6.0.0",
     "react-imgix": "^9.0.2",
     "react-katex": "^2.0.2",
-    "react-script-tag": "^1.1.2",
-    "react-serialize": "^0.2.0"
+    "react-script-tag": "^1.1.2"
   },
   "devDependencies": {
     "@types/node": "^13.13.5",
