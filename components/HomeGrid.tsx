@@ -10,7 +10,7 @@ import { Atoms, Link } from "./designSystem/designSystem"
 // Let Typescript know to expect this function to exist on `window`
 declare global {
   interface Window {
-    __DE__homePageSetupComplete: boolean
+    __houdiniSetupComplete: boolean
   }
 
   interface CSS {
@@ -24,7 +24,7 @@ declare global {
 const houdiniLineDirections = ["tlbr", "trbl", "center"]
 
 const homePageSetup = (): void => {
-  if (window.__DE__homePageSetupComplete) return
+  if (window.__houdiniSetupComplete) return
 
   try {
     CSS?.registerProperty({
@@ -42,8 +42,7 @@ const homePageSetup = (): void => {
     })
 
     CSS?.paintWorklet?.addModule("/paintWorklet.js")
-    // eslint-disable-next-line @typescript-eslint/camelcase
-    window.__DE__homePageSetupComplete = true
+    window.__houdiniSetupComplete = true
   } catch (error) {
     console.error("Unable to register Houdini paint worklet:", error)
   }
@@ -102,7 +101,7 @@ export default function HomeGrid(): ReactElement<typeof Breakout> | null {
     }
   }, [houdini, setHoudini])
 
-  return houdini ? (
+  return houdini && window.__houdiniSetupComplete ? (
     <Breakout>
       <GridContainer>
         <GridTextArea
