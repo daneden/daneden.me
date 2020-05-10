@@ -115,10 +115,6 @@ export default function Layout({
           ".footnote-backref": {
             marginLeft: "0.25em",
           },
-
-          "#gatsby-noscript": {
-            display: "none",
-          },
         }}
       />
 

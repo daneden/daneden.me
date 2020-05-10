@@ -27,7 +27,7 @@ const components = {
 
 /**
  * DesignSystemProvider is the wrapper that provides MDX shortcodes for blog
- * posts and is used by Gatsby in both client and server renders.
+ * posts and is used by Next.js in both client and server renders.
  */
 const DesignSystemProvider = ({
   children,
