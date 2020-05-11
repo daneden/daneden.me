@@ -46,7 +46,6 @@ const links = [
 const Header = ({
   siteTitle,
 }: HeaderProps): ReactElement<typeof StyledHeader> => {
-  const blogPostRegex = /[0-9]{4}\/[0-9]{2}\/[0-9]{2}\//
   const location = useRouter().pathname
   return (
     <StyledHeader>
@@ -58,10 +57,7 @@ const Header = ({
             <li key={to}>
               <PlainLink href={to}>
                 {label}
-                {location.includes(to) ||
-                (location.match(blogPostRegex) && to.includes("blog"))
-                  ? " ☚"
-                  : ""}
+                {location.includes(to) ? " ☚" : ""}
               </PlainLink>
             </li>
           ))}
