@@ -42,6 +42,10 @@ const StyledShowcase = styled("div")`
     margin: -10% 0;
     mix-blend-mode: exclusion;
   }
+
+  img {
+    object-fit: contain;
+  }
 `
 
 export default function Showcase(): ReactElement<typeof StyledShowcase> {
