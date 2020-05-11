@@ -1,7 +1,8 @@
 import { Global } from "@emotion/core"
 import dynamic from "next/dynamic"
-import { ReactElement } from "react"
+import { ReactElement, useEffect } from "react"
 import siteConfig from "../siteconfig.json"
+import { initGA, logPageView } from "../utils/analytics"
 import { Atoms, H1 } from "./designSystem/designSystem"
 import DesignSystemProvider from "./designSystem/DesignSystemProvider"
 import Footer from "./Footer"
@@ -15,6 +16,14 @@ const Content = ({ frontMatter, children }): ReactElement => {
   const site = siteConfig
 
   const SkipLink = dynamic(() => import("../components/SkipLink"))
+
+  useEffect(() => {
+    if (!window.GA_INITIALIZED) {
+      initGA()
+      window.GA_INITIALIZED = true
+    }
+    logPageView()
+  })
 
   return (
     <>
