@@ -36,9 +36,9 @@
       "dest": "/paintWorklet.js"
     },
     {
-      "src": "/((blog/)?([0-9]{4})([0-9]{1,2}/){0,2}/(.*))",
+      "src": "/((blog/)?([0-9]{4}/)([0-9]{1,2}/){0,2}(.*))",
       "status": 308,
-      "headers": { "Location": "/blog/$3/$5" }
+      "headers": { "Location": "/blog/$3$5" }
     },
     { "src": "/.*", "status": 404, "dest": "/404" }
   ]
