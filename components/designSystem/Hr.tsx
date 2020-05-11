@@ -1,5 +1,5 @@
 import styled from "@emotion/styled"
-import { Atoms } from "./designSystem"
+import { Atoms } from "."
 
 export default styled("hr")`
   border: 2px solid var(--meta-color, ${Atoms.colors.meta});

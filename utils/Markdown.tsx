@@ -1,6 +1,6 @@
+import { Link } from "@/designSystem"
 import { ReactElement } from "react"
 import ReactMarkdown from "react-markdown"
-import { Link } from "../components/designSystem/designSystem"
 
 export default function Markdown({
   children,

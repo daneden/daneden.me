@@ -1,11 +1,11 @@
+import { Link, P } from "@/designSystem"
+import Layout from "components/Layout"
+import Showcase from "components/Showcase"
 import dynamic from "next/dynamic"
 import { ReactElement } from "react"
-import { Link, P } from "../components/designSystem/designSystem"
-import Layout from "../components/Layout"
-import Showcase from "../components/Showcase"
 
 export default function HomePage(): ReactElement<typeof Layout> {
-  const HomeGrid = dynamic(() => import("../components/HomeGrid"), {
+  const HomeGrid = dynamic(() => import("components/HomeGrid"), {
     ssr: false,
   })
   return (

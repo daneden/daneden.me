@@ -2,7 +2,7 @@
 import { jsx } from "@emotion/core"
 import styled from "@emotion/styled"
 import { ReactElement } from "react"
-import { Atoms, Link } from "./designSystem/designSystem"
+import { Atoms, Link } from "./designSystem"
 
 const StyledFooter = styled("footer")`
   border-top: 1px solid;

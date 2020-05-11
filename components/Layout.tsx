@@ -3,7 +3,7 @@ import dynamic from "next/dynamic"
 import { ReactElement, useEffect } from "react"
 import siteConfig from "../siteconfig.json"
 import { initGA, logPageView } from "../utils/analytics"
-import { Atoms, H1 } from "./designSystem/designSystem"
+import { Atoms, H1 } from "./designSystem"
 import DesignSystemProvider from "./designSystem/DesignSystemProvider"
 import Footer from "./Footer"
 import Header from "./Header"
@@ -15,7 +15,7 @@ const Content = ({ frontMatter, children }): ReactElement => {
   const isPost = title !== null
   const site = siteConfig
 
-  const SkipLink = dynamic(() => import("../components/SkipLink"))
+  const SkipLink = dynamic(() => import("components/SkipLink"))
 
   useEffect(() => {
     if (!window.GA_INITIALIZED) {

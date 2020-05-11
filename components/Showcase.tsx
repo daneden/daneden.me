@@ -2,7 +2,7 @@
 import { jsx } from "@emotion/core"
 import styled from "@emotion/styled"
 import { ReactElement } from "react"
-import { Atoms } from "./designSystem/designSystem"
+import { Atoms } from "./designSystem"
 import Image from "./Image"
 
 const StyledShowcase = styled("div")`

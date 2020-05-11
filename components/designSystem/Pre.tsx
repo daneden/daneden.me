@@ -2,8 +2,8 @@
 import { jsx } from "@emotion/core"
 import styled from "@emotion/styled"
 import React, { ReactChildren, ReactElement, ReactNode } from "react"
+import { Atoms } from "."
 import Code from "./Code"
-import { Atoms } from "./designSystem"
 
 type PreProps = React.HTMLAttributes<HTMLPreElement> & {
   children: ReactChildren

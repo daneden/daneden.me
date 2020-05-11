@@ -3,7 +3,7 @@ import { jsx } from "@emotion/core"
 import React, { FunctionComponent } from "react"
 import Imgix from "react-imgix"
 import Markdown from "../utils/Markdown"
-import { Align, Atoms, Caption, Figure } from "./designSystem/designSystem"
+import { Align, Atoms, Caption, Figure } from "./designSystem"
 import { FigureProps } from "./designSystem/Figure"
 
 interface ImageProps extends FigureProps {
