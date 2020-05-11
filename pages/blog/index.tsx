@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { Atoms, H1, PlainList } from "@/designSystem/"
+import { Atoms, H1, PlainList } from "@/designSystem"
 import { css, jsx } from "@emotion/core"
 import Layout from "components/Layout"
 import PostLink from "components/PostLink"

@@ -15,10 +15,8 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "@/designSystem/*": [
-        "components/designSystem/index",
-        "components/designSystem/*"
-      ]
+      "@/designSystem": ["components/designSystem/index"],
+      "@/designSystem/*": ["components/designSystem/*"]
     }
   },
   "exclude": ["node_modules"],

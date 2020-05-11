@@ -1,4 +1,4 @@
-import { Link } from "@/designSystem/"
+import { Link } from "@/designSystem"
 import { ReactElement } from "react"
 import ReactMarkdown from "react-markdown"
 

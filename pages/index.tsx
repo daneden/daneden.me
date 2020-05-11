@@ -1,4 +1,4 @@
-import { Link, P } from "@/designSystem/"
+import { Link, P } from "@/designSystem"
 import Layout from "components/Layout"
 import Showcase from "components/Showcase"
 import dynamic from "next/dynamic"
