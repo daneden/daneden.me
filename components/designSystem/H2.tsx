@@ -1,5 +1,5 @@
 import styled from "@emotion/styled"
-import { Atoms } from "./designSystem"
+import { Atoms } from "."
 
 export default styled("h2")`
   font-size: ${Atoms.font.size.h2};

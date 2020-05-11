@@ -1,7 +1,7 @@
 import { MDXProvider } from "@mdx-js/react"
 import React, { ReactElement, ReactNode } from "react"
+import * as designSystem from "."
 import Image from "../Image"
-import * as designSystem from "./designSystem"
 
 interface DesignSystemProviderProps {
   children: ReactNode

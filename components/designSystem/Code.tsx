@@ -1,5 +1,5 @@
 import styled from "@emotion/styled"
-import { Atoms } from "./designSystem"
+import { Atoms } from "."
 
 export default styled("code")`
   padding: 0.1em 0.5em;

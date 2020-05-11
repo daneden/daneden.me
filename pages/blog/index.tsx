@@ -1,15 +1,11 @@
 /** @jsx jsx */
+import { Atoms, H1, PlainList } from "@/designSystem/"
 import { css, jsx } from "@emotion/core"
+import Layout from "components/Layout"
+import PostLink from "components/PostLink"
 import { GetStaticProps } from "next"
 import { ReactElement } from "react"
 import { Helmet } from "react-helmet"
-import {
-  Atoms,
-  H1,
-  PlainList,
-} from "../../components/designSystem/designSystem"
-import Layout from "../../components/Layout"
-import PostLink from "../../components/PostLink"
 import getFrontMatterForFile, {
   FrontMatter,
 } from "../../utils/getFrontMatterForFile"

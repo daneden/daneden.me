@@ -2,7 +2,7 @@
 import { jsx } from "@emotion/core"
 import styled from "@emotion/styled"
 import { ReactElement, ReactNode } from "react"
-import { Atoms } from "./designSystem/designSystem"
+import { Atoms } from "./designSystem"
 
 interface WrapperProps {
   id?: string

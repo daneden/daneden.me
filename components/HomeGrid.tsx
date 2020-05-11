@@ -5,7 +5,7 @@ import { css, jsx } from "@emotion/core"
 import styled from "@emotion/styled"
 import { ReactElement, useEffect, useState } from "react"
 import Breakout from "./Breakout"
-import { Atoms, Link } from "./designSystem/designSystem"
+import { Atoms, Link } from "./designSystem"
 
 // Let Typescript know to expect this function to exist on `window`
 declare global {

@@ -1,5 +1,5 @@
 import styled from "@emotion/styled"
-import { Atoms } from "./designSystem"
+import { Atoms } from "."
 
 export default styled("table")`
   hyphens: initial;
