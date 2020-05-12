@@ -52,7 +52,7 @@
     "@types/node": "^13.13.5",
     "@types/react": "^16.9.35",
     "@types/webpack-env": "^1.15.2",
-    "@typescript-eslint/eslint-plugin": "^2.32.0",
+    "@typescript-eslint/eslint-plugin": "^2.33.0",
     "@typescript-eslint/parser": "^2.33.0",
     "babel-runtime": "^6.26.0",
     "eslint": "^7.0.0",
