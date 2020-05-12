@@ -23,7 +23,7 @@ declare global {
 
 const houdiniLineDirections = ["tlbr", "trbl", "center"]
 
-const homePageSetup = (callback): void => {
+const homePageSetup = (): void => {
   if (window.__houdiniSetupComplete) return
 
   try {
@@ -43,10 +43,8 @@ const homePageSetup = (callback): void => {
 
     CSS?.paintWorklet?.addModule("/paintWorklet.js")
     window.__houdiniSetupComplete = true
-    callback(true)
   } catch (error) {
     console.error("Unable to register Houdini paint worklet:", error)
-    callback(false)
   }
 }
 
@@ -83,7 +81,7 @@ const GridTextArea = styled.div`
 const GridFillArea = styled.div<FillAreaProps>(
   ({ direction = "tlbr" }: FillAreaProps) => `
     --line-direction: ${direction};
-    --line-color: var(--text-color);
+    --line-color: inherit;
     background-image: paint(line);
     min-height: 27.5vh;
     min-width: ${Atoms.spacing.medium};
@@ -92,15 +90,19 @@ const GridFillArea = styled.div<FillAreaProps>(
 
 export default function HomeGrid(): ReactElement<typeof Breakout> | null {
   const [houdini, setHoudini] = useState(false)
-  const [setupComplete, setSetupComplete] = useState(false)
+  const [setupComplete, setSetupComplete] = useState(
+    window.__houdiniSetupComplete
+  )
 
   useEffect(() => {
     setHoudini(
       typeof CSS !== "undefined" &&
         CSS.supports("background-image", "paint(line)")
     )
+
     if (houdini && !setupComplete) {
-      homePageSetup(setSetupComplete)
+      homePageSetup()
+      setSetupComplete(houdini)
     }
   }, [houdini, setHoudini, setupComplete])
 
