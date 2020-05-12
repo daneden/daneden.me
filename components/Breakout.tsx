@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
 import styled from "@emotion/styled"
-import { ReactElement, ReactNode } from "react"
+import { ReactElement, ReactNode, useLayoutEffect } from "react"
 import { Atoms } from "./designSystem"
 
 interface Props {
@@ -14,7 +14,7 @@ const ContainerHack = styled.div`
 `
 
 const Container = styled.div`
-  width: 100vw;
+  width: calc(100vw - var(--scrollbar-width));
   margin-left: -50vw;
   padding: ${Atoms.spacing.small};
 `
@@ -22,6 +22,12 @@ const Container = styled.div`
 export default function Breakout({
   children,
 }: Props): ReactElement<typeof ContainerHack> {
+  useLayoutEffect(() => {
+    document.documentElement.style.setProperty(
+      "--scrollbar-width",
+      window.innerWidth - document.documentElement.clientWidth + "px"
+    )
+  })
   return (
     <ContainerHack>
       <Container>{children}</Container>
