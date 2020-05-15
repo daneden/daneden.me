@@ -14,7 +14,7 @@ declare global {
   }
 }
 
-// TODO: Remove custom redeclaration of CSS namespace after microsoft/TypeScript#38593 is closed
+// TODO [$5ebebd97f2199b00076fc331]: Remove custom redeclaration of CSS namespace after microsoft/TypeScript#38593 is closed
 // TS v3.9 redefined CSS as a namespace rather than an interface, which
 // appears to have broken support for newer CSS features.
 declare namespace CSS {
