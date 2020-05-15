@@ -35,7 +35,7 @@
     "gray-matter": "^4.0.2",
     "next": "9.4.0",
     "next-compose-plugins": "^2.2.0",
-    "next-mdx-enhanced": "^2.5.0",
+    "next-mdx-enhanced": "^3.0.0",
     "next-mdx-frontmatter": "^0.0.3",
     "prismjs": "^1.20.0",
     "react": "16.13.1",
