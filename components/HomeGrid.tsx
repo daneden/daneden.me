@@ -12,12 +12,27 @@ declare global {
   interface Window {
     __houdiniSetupComplete: boolean
   }
+}
 
-  interface CSS {
-    registerProperty: (any) => any
-    paintWorklet: {
-      addModule: (string) => any
-    }
+// TODO: Remove custom redeclaration of CSS namespace after microsoft/TypeScript#38593 is closed
+// TS v3.9 redefined CSS as a namespace rather than an interface, which
+// appears to have broken support for newer CSS features.
+declare namespace CSS {
+  function supports(property: string, value: string): boolean
+  function registerProperty({
+    name,
+    syntax,
+    inherits,
+    initialValue,
+  }: {
+    name: string
+    syntax: string
+    inherits: boolean
+    initialValue: string
+  }): void
+
+  namespace paintWorklet {
+    function addModule(module: string): any
   }
 }
 
@@ -27,21 +42,21 @@ const homePageSetup = (): void => {
   if (window.__houdiniSetupComplete) return
 
   try {
-    CSS?.registerProperty({
+    CSS.registerProperty({
       name: "--line-direction",
       syntax: houdiniLineDirections.join(" | "),
       initialValue: "tlbr",
       inherits: true,
     })
 
-    CSS?.registerProperty({
+    CSS.registerProperty({
       name: "--line-color",
       syntax: "<color>",
       initialValue: "currentcolor",
       inherits: true,
     })
 
-    CSS?.paintWorklet?.addModule("/paintWorklet.js")
+    CSS.paintWorklet.addModule("/paintWorklet.js")
     window.__houdiniSetupComplete = true
   } catch (error) {
     console.error("Unable to register Houdini paint worklet:", error)
