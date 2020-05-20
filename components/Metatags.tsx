@@ -17,6 +17,7 @@ const dnsPrefetchURLs = [
   "https://www.google.com",
   "https://embed.videodelivery.net",
   "https://www.googletagmanager.com",
+  "https://www.google-analytics.com",
 ]
 
 function Metatags(props: MetatagsProps): ReactElement<typeof Helmet> {
