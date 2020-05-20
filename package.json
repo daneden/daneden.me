@@ -26,7 +26,7 @@
     "@emotion/core": "^10.0.28",
     "@emotion/styled": "^10.0.27",
     "@mapbox/rehype-prism": "^0.4.0",
-    "@mdx-js/loader": "^1.6.3",
+    "@mdx-js/loader": "^1.6.4",
     "@next/bundle-analyzer": "^9.4.1",
     "@next/mdx": "^9.4.1",
     "@ngsctt/remark-smartypants": "^0.2.0",
