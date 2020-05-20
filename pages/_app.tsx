@@ -1,8 +1,6 @@
-import "katex/dist/katex.min.css"
 import { AppProps } from "next/app"
 import { ReactFragment, useEffect } from "react"
 import "../css/fonts.css"
-import "../css/syntax.css"
 import { initGA, logEvent } from "../utils/analytics"
 
 export function reportWebVitals({ id, name, label, value }): void {

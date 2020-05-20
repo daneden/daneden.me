@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
 import styled from "@emotion/styled"
+import SyntaxHiglight from "components/SyntaxHighlight"
 import React, { ReactChildren, ReactElement, ReactNode } from "react"
 import { Atoms } from "."
 import Code from "./Code"
@@ -23,8 +24,11 @@ const StyledCode = styled(Code)`
   }
 `
 
-const Pre = (props: PreProps): ReactElement<typeof StyledCode> => (
-  <StyledCode as="pre" {...props} />
+const Pre = (props: PreProps): ReactElement<typeof React.Fragment> => (
+  <>
+    <SyntaxHiglight />
+    <StyledCode as="pre" {...props} />
+  </>
 )
 
 export default Pre
