@@ -1,13 +1,28 @@
-name: CI
-on: [push]
+name: Lighthouse CI
+on: pull_request
 jobs:
-  lighthouseci:
+  build:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-      - run: npm install && npm install -g @lhci/cli@0.4.x
-      - run: npm run build
-      - run:
-          lhci autorun --upload.target=temporary-public-storage
-          --collect.startServerCommand="npm start"
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+      - name: Install & Build
+        run: |
+          yarn install
+          yarn build
+      - name: Wait for the Vercel Preview
+        uses: patrickedqvist/wait-for-vercel-preview@v1.0.3
+        id: vercel
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          max_timeout: 60
+      - name: Audit URLs using Lighthouse
+        uses: treosh/lighthouse-ci-action@v3
+        with:
+          urls: |
+            ${{ steps.vercel.outputs.url }}
+          uploadArtifacts: true
