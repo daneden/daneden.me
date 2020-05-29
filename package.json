@@ -20,7 +20,8 @@
     "start": "next start",
     "precommit": "lint-staged",
     "lint:js": "eslint \"**/*.{js,jsx,ts,tsx,md,mdx}\"",
-    "lint": "npm-run-all lint:*"
+    "lint": "npm-run-all lint:*",
+    "serve:lhci": "next start"
   },
   "dependencies": {
     "@emotion/core": "^10.0.28",
