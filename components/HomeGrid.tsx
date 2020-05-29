@@ -96,7 +96,7 @@ const GridTextArea = styled.div`
 const GridFillArea = styled.div<FillAreaProps>(
   ({ direction = "tlbr" }: FillAreaProps) => `
     --line-direction: ${direction};
-    --line-color: inherit;
+    --line-color: var(--text-color);
     background-image: paint(line);
     min-height: 27.5vh;
     min-width: ${Atoms.spacing.medium};
