@@ -1,4 +1,3 @@
-/* eslint-disable mdx/no-unused-expressions */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /** @jsx jsx */
 import { css, jsx } from "@emotion/core"
@@ -96,7 +95,7 @@ const GridTextArea = styled.div`
 const GridFillArea = styled.div<FillAreaProps>(
   ({ direction = "tlbr" }: FillAreaProps) => `
     --line-direction: ${direction};
-    --line-color: inherit;
+    --line-color: var(--text-color);
     background-image: paint(line);
     min-height: 27.5vh;
     min-width: ${Atoms.spacing.medium};
