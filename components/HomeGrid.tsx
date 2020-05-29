@@ -1,4 +1,3 @@
-/* eslint-disable mdx/no-unused-expressions */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /** @jsx jsx */
 import { css, jsx } from "@emotion/core"
