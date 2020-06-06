@@ -78,17 +78,13 @@ const GridContainer = styled.div`
 `
 
 const GridTextArea = styled.div`
-  font-size: 2em;
+  font-size: clamp(0.875em, 4vw, 2em);
   text-align: center;
   white-space: nowrap;
   z-index: 1;
 
   span {
     padding: ${Atoms.spacing.xxsmall};
-  }
-
-  @media (max-width: 800px) {
-    font-size: 0.875em;
   }
 `
 

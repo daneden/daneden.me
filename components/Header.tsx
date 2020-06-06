@@ -23,7 +23,7 @@ const StyledHeader = styled("header")`
   margin-bottom: ${Atoms.spacing.small};
   padding-top: ${Atoms.spacing.xsmall};
 
-  @media (max-width: ${Atoms.breakpoints.narrow}) {
+  @media (max-width: ${Atoms.breakpoints.medium}) {
     grid-template-columns: 1fr 1fr;
   }
 `

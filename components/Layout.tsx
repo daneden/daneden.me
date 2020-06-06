@@ -91,14 +91,10 @@ export default function Layout({
             color: "var(--text-color)",
             flex: 1,
             fontFamily: Atoms.font.family.sans,
-            fontSize: "125%",
+            fontSize: "clamp(100%, 2.5vw, 125%)",
             lineHeight: Atoms.baseline,
             paddingLeft: Atoms.spacing.medium,
             paddingRight: Atoms.spacing.medium,
-
-            [`@media (max-width: ${Atoms.breakpoints.medium})`]: {
-              fontSize: "100%",
-            },
           },
 
           "ul, ol": {
