@@ -4,7 +4,7 @@ import Atoms from "./atoms"
 
 export default styled.h1`
   font-family: ${Atoms.font.family.sohne};
-  font-size: ${Atoms.font.size.h1};
+  font-size: clamp(${Atoms.font.size.h2}, 4vw, ${Atoms.font.size.h1});
   font-weight: bold;
   hyphens: initial;
   line-height: 1.1;
