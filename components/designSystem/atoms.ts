@@ -53,7 +53,7 @@ export default {
     size: {
       small: `${scales.small}rem`,
       regular: `${scales.medium}rem`,
-      h1: `${scales.xxlarge}rem`,
+      h1: `${scales.xlarge}rem`,
       h2: `${scales.large}rem`,
     },
   },
