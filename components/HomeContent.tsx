@@ -5,7 +5,7 @@ import { Atoms } from "./designSystem"
 
 const Content = styled.div`
   -webkit-font-smoothing: antialiased;
-  font-family: ${Atoms.font.family.sohne} ${Atoms.font.family.sans};
+  font-family: ${Atoms.font.family.sohne}, ${Atoms.font.family.sans};
   font-size: clamp(1.75rem, 4.185vw, 100vw);
   font-weight: 700;
   line-height: 1.25;
