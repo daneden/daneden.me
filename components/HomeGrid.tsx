@@ -13,28 +13,6 @@ declare global {
   }
 }
 
-// TODO [#588]: Remove custom redeclaration of CSS namespace after microsoft/TypeScript#38593 is closed
-// TS v3.9 redefined CSS as a namespace rather than an interface, which
-// appears to have broken support for newer CSS features.
-declare namespace CSS {
-  function supports(property: string, value: string): boolean
-  function registerProperty({
-    name,
-    syntax,
-    inherits,
-    initialValue,
-  }: {
-    name: string
-    syntax: string
-    inherits: boolean
-    initialValue: string
-  }): void
-
-  namespace paintWorklet {
-    function addModule(module: string): any
-  }
-}
-
 const houdiniLineDirections = ["tlbr", "trbl", "center"]
 
 const homePageSetup = (): void => {
