@@ -57,12 +57,3 @@
     url("/fonts/National2Web-BoldItalic.woff") format("woff"),
     url("/fonts/National2Web-BoldItalic.eot") format("embedded-opentype");
 }
-
-@font-face {
-  font-display: swap;
-  font-family: "Ayer Poster Angular Web";
-  font-style: italic;
-  font-weight: bold;
-  src: url("/fonts/AyerPosterAngular-SemiboldItalic-Web.woff2") format("woff2"),
-    url("/fonts/AyerPosterAngular-SemiboldItalic-Web.woff") format("woff");
-}
