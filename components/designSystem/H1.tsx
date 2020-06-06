@@ -3,9 +3,8 @@ import styled from "@emotion/styled"
 import Atoms from "./atoms"
 
 export default styled.h1`
-  font-family: ${Atoms.font.family.display};
-  font-size: ${Atoms.font.size.h1};
-  font-style: italic;
+  font-family: ${Atoms.font.family.sohne};
+  font-size: clamp(${Atoms.font.size.h2}, 4vw, ${Atoms.font.size.h1});
   font-weight: bold;
   hyphens: initial;
   line-height: 1.1;

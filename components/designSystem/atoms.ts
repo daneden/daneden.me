@@ -47,12 +47,13 @@ export default {
     family: {
       display: `"Ayer Poster Angular Web", "Times New Roman", serif`,
       sans: `"National 2 Web", -apple-system, system-ui, BlinkMacSystemFont, sans-serif`,
+      sohne: `"Soehne Breit Web"`,
       mono: `"Founders Grotesk Mono Web", "Input Mono", "Source Code Pro", "Monaco", monospace`,
     },
     size: {
       small: `${scales.small}rem`,
       regular: `${scales.medium}rem`,
-      h1: `${scales.xxlarge}rem`,
+      h1: `${scales.xlarge}rem`,
       h2: `${scales.large}rem`,
     },
   },

@@ -13,12 +13,13 @@ export interface LinkProps {
 }
 
 const styles = (underline: boolean): SerializedStyles => css`
+  --hoverColor: var(--site-color, ${Atoms.colors.site});
   color: inherit;
   text-decoration: ${underline ? "underline" : "none"};
 
   &:hover,
   &:focus {
-    color: ${Atoms.colors.site};
+    color: var(--hoverColor);
   }
 `
 
