@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
 import styled from "@emotion/styled"
-import { ReactElement, ReactNode, useLayoutEffect } from "react"
+import { ReactElement, ReactNode, useEffect } from "react"
 import { Atoms } from "./designSystem"
 
 interface Props {
@@ -22,7 +22,7 @@ const Container = styled.div`
 export default function Breakout({
   children,
 }: Props): ReactElement<typeof ContainerHack> {
-  useLayoutEffect(() => {
+  useEffect(() => {
     document.documentElement.style.setProperty(
       "--scrollbar-width",
       window.innerWidth - document.documentElement.clientWidth + "px"
