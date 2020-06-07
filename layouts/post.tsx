@@ -1,6 +1,6 @@
 import Layout from "components/Layout"
+import Head from "next/head"
 import { ReactElement } from "react"
-import { Helmet } from "react-helmet"
 
 const katexPosts = ["Subatomic Design Systems"]
 export default function PostLayout(frontMatter) {
@@ -19,14 +19,14 @@ export default function PostLayout(frontMatter) {
     return (
       <>
         {shouldRequestKatex ? (
-          <Helmet>
+          <Head>
             <link
               rel="stylesheet"
               href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
               integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq"
               crossOrigin="anonymous"
             />
-          </Helmet>
+          </Head>
         ) : null}
         <Layout frontMatter={frontMatter}>{children}</Layout>
       </>

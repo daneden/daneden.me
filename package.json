@@ -46,7 +46,6 @@
     "react-codepen-embed": "^1.0.1",
     "react-dom": "16.13.1",
     "react-ga": "^2.7.0",
-    "react-helmet": "^6.0.0",
     "react-imgix": "^9.0.2",
     "react-katex": "^2.0.2",
     "react-markdown": "^4.3.1",

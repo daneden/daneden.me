@@ -2,8 +2,8 @@ import { Atoms } from "@/designSystem"
 import { css, Global } from "@emotion/core"
 import FontFaceObserver from "fontfaceobserver"
 import { GetServerSideProps } from "next"
+import Head from "next/head"
 import React, { ReactFragment } from "react"
-import { Helmet } from "react-helmet"
 import site from "../siteconfig.json"
 
 const { useEffect } = React
@@ -69,9 +69,9 @@ export default function OpenGraphImagePage({
         `}
       />
 
-      <Helmet>
+      <Head>
         <meta name="robots" content="noindex" />
-      </Helmet>
+      </Head>
 
       <div
         className="title"

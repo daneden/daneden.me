@@ -1,14 +1,13 @@
 /** @jsx jsx */
-import { Atoms, H1, PlainList } from "@/designSystem"
+import { Atoms, PlainList } from "@/designSystem"
+import getFrontMatterForFile, {
+  FrontMatter,
+} from "@/utils/getFrontMatterForFile"
 import { css, jsx } from "@emotion/core"
 import Layout from "components/Layout"
 import PostLink from "components/PostLink"
 import { GetStaticProps } from "next"
 import { ReactElement } from "react"
-import { Helmet } from "react-helmet"
-import getFrontMatterForFile, {
-  FrontMatter,
-} from "@/utils/getFrontMatterForFile"
 
 const liStyle = css`
   margin-bottom: ${Atoms.spacing.medium};
@@ -29,9 +28,7 @@ export default function Index({ posts }): ReactElement<typeof Layout> {
     })
 
   return (
-    <Layout frontMatter={{}}>
-      <Helmet title="Blog" />
-      <H1>Blog</H1>
+    <Layout frontMatter={{ title: "Blog" }}>
       <PlainList>
         {postsToShow.map((post) => {
           return (

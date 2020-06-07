@@ -28,7 +28,6 @@ const Content = ({ frontMatter, children }): ReactElement => {
   return (
     <>
       <Metatags
-        defaultTitle={site.title}
         title={title}
         description={site.description}
         thumbnail={`https://${
