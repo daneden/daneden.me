@@ -2,7 +2,7 @@ import styled from "@emotion/styled"
 import { Atoms } from "."
 
 export default styled("blockquote")`
-  border-left: 2px solid ${Atoms.colors.site};
+  border-left: 2px solid var(--site-color);
   font-style: italic;
   padding-left: ${Atoms.spacing.medium};
   margin-bottom: ${Atoms.spacing.medium};
