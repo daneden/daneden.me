@@ -5,13 +5,17 @@ import { ReactElement } from "react"
 import { Atoms, Link } from "./designSystem"
 
 const StyledNav = styled("nav")`
-  background-color: var(--text-color);
-  color: var(--wash-color);
+  background-color: ${Atoms.colors.highlight};
+  color: ${Atoms.colors.text};
   height: 0;
   margin: 0 -${Atoms.spacing.medium};
   padding: ${Atoms.spacing.xsmall} ${Atoms.spacing.medium};
   position: absolute;
   top: -100%;
+
+  a {
+    --hoverColor: inherit;
+  }
 
   :focus-within {
     height: auto;
