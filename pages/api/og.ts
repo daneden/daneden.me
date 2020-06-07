@@ -31,7 +31,7 @@ const generateHTML = (title = "Hello world") => {
 
       @font-face {
         font-family: 'National 2';
-        font-style: italic;
+        font-style: normal;
         src: url('/fonts/National2Web-Regular.woff2') format('woff2');
       }
 
