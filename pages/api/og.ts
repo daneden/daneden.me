@@ -86,16 +86,23 @@ const getScreenshot = async function ({ html, type = "png" }) {
   const waitForFontFaces = `Promise.all([ '${fontsToLoad.join(
     `', '`
   )}' ].map(fontName => new FontFaceObserver(fontName).load()))`
+
+  const fontFaceObserver = await (
+    await fetch(
+      `https://${process.env.VERCEL_URL}/static/fontfaceobserver.standalone.js`
+    )
+  )
+    .text()
+    .then((s) => s)
+
+  console.log(fontFaceObserver.substring(0, 20))
+
   const page = await browser.newPage()
   await page.setContent(html, {
-    waitUntil: "networkidle0",
+    waitUntil: "networkidle2",
   })
   await page.addScriptTag({
-    content: await (
-      await fetch(
-        `https://${process.env.VERCEL_URL}/static/fontfaceobserver.standalone.js`
-      )
-    ).text(),
+    content: fontFaceObserver,
   })
 
   const element = page.$("html")
