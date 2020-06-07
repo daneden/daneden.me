@@ -9,10 +9,6 @@ const Content = styled.div`
   font-size: clamp(1.75rem, 4.185vw, 100vw);
   font-weight: 700;
   line-height: 1.25;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 
   &:last-child {
     margin-bottom: 0;

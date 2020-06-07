@@ -15,6 +15,7 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
+      "@/utils/*": ["utils/*"],
       "@/designSystem": ["components/designSystem/index"],
       "@/designSystem/*": ["components/designSystem/*"]
     }

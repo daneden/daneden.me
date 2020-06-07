@@ -60,6 +60,7 @@ export default function Layout({
         styles={{
           ":root": {
             colorScheme: "light dark",
+            "--site-color": Atoms.colors.siteLight,
             "--text-color": Atoms.colors.text,
             "--meta-color": Atoms.colors.blackAlpha,
             "--wash-color": Atoms.colors.wash,
@@ -68,6 +69,7 @@ export default function Layout({
             "--font-mono": Atoms.font.family.mono,
 
             "@media (prefers-color-scheme: dark)": {
+              "--site-color": Atoms.colors.siteDark,
               "--text-color": Atoms.colors.wash,
               "--meta-color": Atoms.colors.whiteAlpha,
               "--wash-color": Atoms.colors.text,

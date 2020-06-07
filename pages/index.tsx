@@ -10,6 +10,7 @@ export default function HomePage(): ReactElement<typeof Layout> {
       <Global
         styles={{
           html: {
+            "--site-color": `${Atoms.colors.siteDark} !important`,
             "--text-color": `${Atoms.colors.wash} !important`,
             "--wash-color": `${Atoms.colors.text} !important`,
             "--meta-color": `${Atoms.colors.whiteAlpha} !important`,

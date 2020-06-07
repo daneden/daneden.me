@@ -8,7 +8,7 @@ import { ReactElement } from "react"
 import { Helmet } from "react-helmet"
 import getFrontMatterForFile, {
   FrontMatter,
-} from "../../utils/getFrontMatterForFile"
+} from "@/utils/getFrontMatterForFile"
 
 const liStyle = css`
   margin-bottom: ${Atoms.spacing.medium};
