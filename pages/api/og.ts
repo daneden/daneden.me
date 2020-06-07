@@ -7,6 +7,19 @@ import { Atoms } from "@/designSystem"
 import soehne from "../../public/fonts/soehne-breit-web-fett.woff2"
 import national from "../../public/fonts/National2Web-Regular.woff2"
 
+const injectFile = async (page, filePath) => {
+  let contents = await new Promise((resolve, reject) => {
+    fs.readFile(filePath, "utf8", (err, data) => {
+      if (err) return reject(err)
+      resolve(data)
+    })
+  })
+
+  contents += `//# sourceURL=${filePath.replace(/\n/g, "")}`
+
+  return page.mainFrame().evaluate(contents)
+}
+
 const generateHTML = (title = "Hello world") => {
   return `<html>
     <style>
@@ -29,17 +42,17 @@ const generateHTML = (title = "Hello world") => {
         font-family: 'Soenhe Breit Web';
         font-style: normal;
         font-weight: bold;
-        src: url('data:font/woff2;base64,${soehne.toString(
-          "base64"
-        )}') format('woff2');
+        src: url('https://${
+          process.env.VERCEL_URL
+        }/fonts/soehne-breit-web-fett.woff2') format('woff2');
       }
 
       @font-face {
         font-family: 'National 2';
         font-style: italic;
-        src: url('data:font/woff2;base64,${national.toString(
-          "base64"
-        )}') format('woff2');
+        src: url('https://${
+          process.env.VERCEL_URL
+        }/fonts/National2Web-Regular.woff2') format('woff2');
       }
 
       .title {
@@ -87,10 +100,23 @@ const getScreenshot = async function ({ html, type = "png" }) {
     headless: false,
   })
 
+  const fontsToLoad = ["Soehne Breit Web", "National 2 Web"]
+
+  const waitForFontFaces = `Promise.all([ '${fontsToLoad.join(
+    `', '`
+  )}' ].map(fontName => new FontFaceObserver(fontName).load()))`
+
   const page = await browser.newPage()
   await page.setContent(html, { waitUntil: "networkidle2" })
   const element = await page.$("html")
-  await page.evaluateHandle("document.fonts.ready")
+  await injectFile(
+    page,
+    path.join(
+      __dirname,
+      "../../node_modules/fontfaceobserver/fontfaceobserver.standalone.js"
+    )
+  )
+  await page.evaluate(waitForFontFaces)
   return await element.screenshot({ type }).then(async (data) => {
     await browser.close()
     return data
