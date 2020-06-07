@@ -23,7 +23,7 @@ const generateHTML = (title = "Hello world") => {
       }
 
       @font-face {
-        font-family: 'Soenhe Breit Web';
+        font-family: 'Soehne Breit Web';
         font-style: normal;
         font-weight: bold;
         src: url('/fonts/soehne-breit-web-fett.woff2') format('woff2');
