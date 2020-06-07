@@ -102,12 +102,14 @@ export default async (request: NowRequest, response: NowResponse) => {
 
   const html = generateHTML(String(title))
 
-  if (JSON.parse(String(image)) !== false) {
+  if (JSON.parse(String(image)) == false) {
     response.writeHead(200, { "Content-Type": "text/html" })
     response.end(html)
+    return
   }
 
   const result = await getScreenshot({ html })
   response.writeHead(200, { "Content-Type": "image/png" })
   response.end(result)
+  return
 }
