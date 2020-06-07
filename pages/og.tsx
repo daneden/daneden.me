@@ -4,6 +4,7 @@ import FontFaceObserver from "fontfaceobserver"
 import { GetServerSideProps } from "next"
 import React, { ReactFragment } from "react"
 import { Helmet } from "react-helmet"
+import site from "../siteconfig.json"
 
 const { useEffect } = React
 
@@ -41,7 +42,7 @@ export default function OpenGraphImagePage({
           }
 
           .title {
-            font: 96px/1 "Soehne Breit Web", sans-serif;
+            font: 80px/1 "Soehne Breit Web", sans-serif;
             color: ${Atoms.colors.wash};
             max-width: 1024px;
           }
@@ -76,7 +77,7 @@ export default function OpenGraphImagePage({
         <p>{title.replace(/ ([^ ]*)$/, "\u00A0$1")}</p>
       </div>
 
-      <p className="author">Daniel Eden, Designer</p>
+      <p className="author">{site.title}</p>
     </>
   )
 }

@@ -37,11 +37,10 @@ export default async (request: NowRequest, response: NowResponse) => {
     response.status(404).end()
   }
 
-  console.log(`https://${process.env.VERCEL_URL}/og?title=${title}`)
-
   const result = await getScreenshot({
     url: `https://${process.env.VERCEL_URL}/og?title=${title}`,
   })
+
   response.writeHead(200, { "Content-Type": "image/png" })
   response.end(result)
   return
