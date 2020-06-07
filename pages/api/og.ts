@@ -1,12 +1,25 @@
 import { NowRequest, NowResponse } from "@now/node"
 import chrome from "chrome-aws-lambda"
 import fs from "fs"
+import path from "path"
 import puppeteer from "puppeteer-core"
 import { Atoms } from "@/designSystem"
 
+const injectFile = async (page, filePath) => {
+  let contents = await new Promise((resolve, reject) => {
+    fs.readFile(filePath, "utf8", (err, data) => {
+      if (err) return reject(err)
+      resolve(data)
+    })
+  })
+
+  contents += `//# sourceURL=${filePath.replace(/\n/g, "")}`
+
+  return page.mainFrame().evaluate(contents)
+}
+
 const generateHTML = (title = "Hello world") => {
   return `<html>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fontfaceobserver/2.1.0/fontfaceobserver.standalone.js"></script>
     <style>
       * {
         margin: 0;
@@ -24,20 +37,16 @@ const generateHTML = (title = "Hello world") => {
       }
 
       @font-face {
-        font-display: block;
         font-family: 'Soehne Breit Web';
         font-style: normal;
         font-weight: bold;
-        src: url('/fonts/soehne-breit-web-fett.woff2') format('woff2'),
-          url('/fonts/soehne-breit-web-fett.woff') format('woff');
+        src: url('/fonts/soehne-breit-web-fett.woff2') format('woff2');
       }
 
       @font-face {
-        font-display: block;
-        font-family: 'National 2';
+        font-family: 'National 2 Web';
         font-style: normal;
-        src: url('/fonts/National2Web-Regular.woff2') format('woff2'),
-          url('/fonts/National2Web-Regular.woff') format('woff');
+        src: url('/fonts/National2Web-Regular.woff2') format('woff2');
       }
 
       .title {
@@ -89,16 +98,19 @@ const getScreenshot = async function ({ html, type = "png" }) {
 
   const waitForFontFaces = `Promise.all([ '${fontsToLoad.join(
     `', '`
-  )}' ].map(fontName => (new FontFaceObserver(fontName)).load()))`
-
+  )}' ].map(fontName => new FontFaceObserver(fontName).load()))`
   const page = await browser.newPage()
   await page.setContent(html, {
     waitUntil: "networkidle0",
   })
-  const element = await page.$("html")
 
+  const fontFaceObserver = require.resolve(
+    "../../node_modules/fontfaceobserver/fontfaceobserver.standalone.js"
+  )
+
+  await injectFile(page, fontFaceObserver)
+  const element = page.$("html")
   await page.evaluate(waitForFontFaces)
-  await page.evaluateHandle("document.fonts.ready")
 
   return await element.screenshot({ type }).then(async (data) => {
     await browser.close()
@@ -114,13 +126,6 @@ export default async (request: NowRequest, response: NowResponse) => {
   }
 
   const html = generateHTML(String(title))
-
-  if (JSON.parse(String(image)) == false) {
-    response.writeHead(200, { "Content-Type": "text/html" })
-    response.end(html)
-    return
-  }
-
   const result = await getScreenshot({ html })
   response.writeHead(200, { "Content-Type": "image/png" })
   response.end(result)
