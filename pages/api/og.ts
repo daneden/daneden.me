@@ -4,11 +4,8 @@ import fs from "fs"
 import path from "path"
 import puppeteer from "puppeteer-core"
 import { Atoms } from "@/designSystem"
-
-const loadFont = (file) => {
-  const font = fs.readFileSync(path.join(process.cwd(), `public/fonts/${file}`))
-  return font.toString("base64")
-}
+import soehne from "../../public/fonts/soehne-breit-web-fett.woff2"
+import national from "../../public/fonts/National2Web-Regular.woff2"
 
 const generateHTML = (title = "Hello world") => {
   return `<html>
@@ -32,16 +29,16 @@ const generateHTML = (title = "Hello world") => {
         font-family: 'Soenhe Breit Web';
         font-style: normal;
         font-weight: bold;
-        src: url('data:font/woff2;base64,${loadFont(
-          "soehne-breit-web-fett.woff2"
+        src: url('data:font/woff2;base64,${soehne.toString(
+          "base64"
         )}') format('woff2');
       }
 
       @font-face {
         font-family: 'National 2';
         font-style: italic;
-        src: url('data:font/woff2;base64,${loadFont(
-          "National2Web-RegularItalic.woff2"
+        src: url('data:font/woff2;base64,${national.toString(
+          "base64"
         )}') format('woff2');
       }
 
