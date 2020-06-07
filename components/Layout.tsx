@@ -13,6 +13,7 @@ import Wrapper from "./Wrapper"
 const Content = ({ frontMatter, children }): ReactElement => {
   const site = siteConfig
   const title = frontMatter?.title || site.title
+  const isRoot = title == site.title
 
   const SkipLink = dynamic(() => import("components/SkipLink"))
 
@@ -37,7 +38,7 @@ const Content = ({ frontMatter, children }): ReactElement => {
       <SkipLink />
       <Header siteTitle={site.title} />
       <Wrapper>
-        {title && <H1>{title}</H1>}
+        {!isRoot && <H1>{title}</H1>}
         {children}
       </Wrapper>
       <Footer />

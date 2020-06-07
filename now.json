@@ -24,8 +24,8 @@
       "headers": { "Location": "https://daneden.github.io/Toast/" }
     },
     {
-      "src": "/static/images/favicon(.*)",
-      "dest": "/static/images/favicon.png"
+      "src": "/images/favicon(.*)",
+      "dest": "/images/favicon.png"
     },
     {
       "src": "/uploads/(.*)",
