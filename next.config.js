@@ -18,6 +18,9 @@ const mdxOptions = {
 module.exports = withPlugins(
   [withMDXFm, withBundleAnalyzer],
   withMDXEnhanced(mdxOptions)({
+    env: {
+      VERCEL_URL: process.env.VERCEL_URL || "daneden.me",
+    },
     webpack: (config, { isServer }) => {
       if (!isServer) {
         config.node = {
