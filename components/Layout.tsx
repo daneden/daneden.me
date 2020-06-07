@@ -33,7 +33,7 @@ const Content = ({ frontMatter, children }): ReactElement => {
         description={site.description}
         thumbnail={
           isPost
-            ? `https://daneden-og-generator.daneden.now.sh/api?title=${encodeURIComponent(
+            ? `${process.env.VERCEL_URL}/api/og?title=${encodeURIComponent(
                 String(title)
               )}`
             : `${site.siteUrl}/images/og.png`

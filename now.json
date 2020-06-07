@@ -4,6 +4,16 @@
   },
   "routes": [
     {
+      "src": "/api(.*)",
+      "dest": "/api$1",
+      "headers": {
+        "Cache-Control": "max-age=31536000, public",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET",
+        "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+      }
+    },
+    {
       "src": "/animate(.*)",
       "status": 308,
       "headers": { "Location": "https://animate.style/" }
