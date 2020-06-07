@@ -14,7 +14,7 @@ const ContainerHack = styled.div`
 `
 
 const Container = styled.div`
-  width: calc(100vw - var(--scrollbar-width));
+  width: calc(100vw - var(--scrollbar-width, 0px));
   margin-left: -50vw;
   padding: ${Atoms.spacing.small};
 `
