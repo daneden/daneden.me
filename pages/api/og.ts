@@ -26,17 +26,13 @@ const generateHTML = (title = "Hello world") => {
         font-family: 'Soenhe Breit Web';
         font-style: normal;
         font-weight: bold;
-        src: url('https://${
-          process.env.VERCEL_URL
-        }/fonts/soehne-breit-web-fett.woff2') format('woff2');
+        src: url('/fonts/soehne-breit-web-fett.woff2') format('woff2');
       }
 
       @font-face {
         font-family: 'National 2';
         font-style: italic;
-        src: url('https://${
-          process.env.VERCEL_URL
-        }/fonts/National2Web-Regular.woff2') format('woff2');
+        src: url('/fonts/National2Web-Regular.woff2') format('woff2');
       }
 
       .title {
