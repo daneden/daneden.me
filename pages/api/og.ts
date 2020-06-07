@@ -94,13 +94,19 @@ const getScreenshot = async function ({ html, type = "png" }) {
 }
 
 export default async (request: NowRequest, response: NowResponse) => {
-  const { title } = request.query
+  const { title, image = true } = request.query
 
   if (!title) {
     response.status(404).end()
   }
 
   const html = generateHTML(String(title))
+
+  if (!image) {
+    response.writeHead(200, { "Content-Type": "text/html" })
+    response.end(html)
+  }
+
   const result = await getScreenshot({ html })
   response.writeHead(200, { "Content-Type": "image/png" })
   response.end(result)
