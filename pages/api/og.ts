@@ -6,6 +6,7 @@ import { Atoms } from "@/designSystem"
 
 const generateHTML = (title = "Hello world") => {
   return `<html>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fontfaceobserver/2.1.0/fontfaceobserver.standalone.js"></script>
     <style>
       * {
         margin: 0;
@@ -84,11 +85,19 @@ const getScreenshot = async function ({ html, type = "png" }) {
     headless: false,
   })
 
+  const fontsToLoad = ["Soehne Breit Web", "National 2 Web"]
+
+  const waitForFontFaces = `Promise.all([ '${fontsToLoad.join(
+    `', '`
+  )}' ].map(fontName => (new FontFaceObserver(fontName)).load()))`
+
   const page = await browser.newPage()
   await page.setContent(html, {
     waitUntil: "networkidle0",
   })
   const element = await page.$("html")
+
+  await page.evaluate(waitForFontFaces)
   await page.evaluateHandle("document.fonts.ready")
 
   return await element.screenshot({ type }).then(async (data) => {
