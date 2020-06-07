@@ -1,9 +1,9 @@
+import Head from "next/head"
 import React, { ReactElement } from "react"
-import { Helmet } from "react-helmet"
+import site from "../siteconfig.json"
 
 interface MetatagsProps {
   title?: string
-  defaultTitle: string
   description: string
   url?: string
   pathname?: string
@@ -20,14 +20,15 @@ const dnsPrefetchURLs = [
   "https://www.google-analytics.com",
 ]
 
-function Metatags(props: MetatagsProps): ReactElement<typeof Helmet> {
-  const { title, defaultTitle, description, url, pathname, thumbnail } = props
+function Metatags(props: MetatagsProps): ReactElement<typeof Head> {
+  const { title, description, url, pathname, thumbnail } = props
+  const pageTitle = title == site.title ? title : `${title} | ${site.title}`
 
   return (
-    <Helmet defaultTitle={defaultTitle} titleTemplate={`%s | ${defaultTitle}`}>
+    <Head>
       <html lang="en" />
-      <title>{title}</title>
-      <meta name="title" content={title} />
+      <title>{pageTitle}</title>
+      <meta name="title" content={pageTitle} />
 
       <meta name="description" content={description} />
 
@@ -47,7 +48,7 @@ function Metatags(props: MetatagsProps): ReactElement<typeof Helmet> {
 
       <meta property="og:locale" content="en" />
 
-      <meta name="twitter:title" content={title} />
+      <meta name="twitter:title" content={pageTitle} />
 
       <meta name="twitter:description" content={description} />
       <meta name="twitter:card" content="summary_large_image" />
@@ -58,7 +59,7 @@ function Metatags(props: MetatagsProps): ReactElement<typeof Helmet> {
         <link rel="preconnect" href={url} />,
         <link rel="dns-prefetch" href={url} />,
       ])}
-    </Helmet>
+    </Head>
   )
 }
 export default Metatags

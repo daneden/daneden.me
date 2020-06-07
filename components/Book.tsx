@@ -1,8 +1,8 @@
 /** @jsx jsx */
+import { Atoms, PlainLink } from "@/designSystem"
 import { jsx } from "@emotion/core"
 import styled from "@emotion/styled"
 import { FunctionComponent } from "react"
-import { Atoms, PlainLink } from "@/designSystem"
 import Image from "./Image"
 
 export interface BookData {
@@ -45,7 +45,7 @@ const Book: FunctionComponent<BookData> = ({
         <p>
           {title}&nbsp;
           {isExternalLink && (
-            <img alt="External link icon" src="/static/images/outbound.svg" />
+            <img alt="External link icon" src="/images/outbound.svg" />
           )}
         </p>
         <p>

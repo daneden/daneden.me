@@ -11,9 +11,9 @@ import Metatags from "./Metatags"
 import Wrapper from "./Wrapper"
 
 const Content = ({ frontMatter, children }): ReactElement => {
-  const title = frontMatter?.title || null
-  const isPost = title !== null
   const site = siteConfig
+  const title = frontMatter?.title || site.title
+  const isRoot = title == site.title
 
   const SkipLink = dynamic(() => import("components/SkipLink"))
 
@@ -28,21 +28,16 @@ const Content = ({ frontMatter, children }): ReactElement => {
   return (
     <>
       <Metatags
-        defaultTitle={site.title}
         title={title}
         description={site.description}
-        thumbnail={
-          isPost
-            ? `https://daneden-og-generator.daneden.now.sh/api?title=${encodeURIComponent(
-                String(title)
-              )}`
-            : `${site.siteUrl}/images/og.png`
-        }
+        thumbnail={`https://${
+          process.env.VERCEL_URL
+        }/api/og?title=${encodeURIComponent(String(title))}`}
       />
       <SkipLink />
       <Header siteTitle={site.title} />
       <Wrapper>
-        {title && <H1>{title}</H1>}
+        {!isRoot && <H1>{title}</H1>}
         {children}
       </Wrapper>
       <Footer />
