@@ -86,7 +86,7 @@ const getScreenshot = async function ({ html, type = "png" }) {
 
   const page = await browser.newPage()
   await page.goto(`data:text/html;charset=UTF-8,${html}`, {
-    waitUntil: "networkidle2",
+    waitUntil: "networkidle0",
   })
   const element = await page.$("html")
   await page.evaluateHandle("document.fonts.ready")
