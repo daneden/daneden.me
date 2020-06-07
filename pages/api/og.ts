@@ -100,23 +100,11 @@ const getScreenshot = async function ({ html, type = "png" }) {
     headless: false,
   })
 
-  const fontsToLoad = ["Soehne Breit Web", "National 2 Web"]
-
-  const waitForFontFaces = `Promise.all([ '${fontsToLoad.join(
-    `', '`
-  )}' ].map(fontName => new FontFaceObserver(fontName).load()))`
-
   const page = await browser.newPage()
   await page.setContent(html, { waitUntil: "networkidle2" })
   const element = await page.$("html")
-  await injectFile(
-    page,
-    path.join(
-      __dirname,
-      "../../node_modules/fontfaceobserver/fontfaceobserver.standalone.js"
-    )
-  )
-  await page.evaluate(waitForFontFaces)
+  await page.evaluateHandle("document.fonts.ready")
+
   return await element.screenshot({ type }).then(async (data) => {
     await browser.close()
     return data
