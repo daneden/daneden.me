@@ -33,22 +33,23 @@ since they don’t allow arbitrary file system access.
 
 So here's how the setup ended up:
 
-- The Ruby app ran on a VPN server of my own
-- Dropbox has a Linux runtime, so I was able to have the Dropbox folder sync to
-  the VPN server
-- The images folder was symlinked to a location inside the Ruby app
-- On every HTTP request, Ruby would check the symlinked folder, return the list
-  of files, and fulfil the request
+-   The Ruby app ran on a VPN server of my own
+-   Dropbox has a Linux runtime, so I was able to have the Dropbox folder sync
+    to the VPN server
+-   The images folder was symlinked to a location inside the Ruby app
+-   On every HTTP request, Ruby would check the symlinked folder, return the
+    list of files, and fulfil the request
 
 This setup worked reasonably well, but it also came with a lot of problems:
 
-- The Ruby app was eating my VPN's memory up, to the point where more than a few
-  concurrent requests would totally crash my server
-- It required a lot of manual labour to ensure the symlinked folder was set up
-  correctly, the Dropbox instance was running on my VPN
-- Putting these problems together meant that almost every time I added an image
-  to the Dropbox folder, I’d have to SSH into the VPN, make sure the Dropbox
-  instance was running, and almost certainly restart the service after crashes
+-   The Ruby app was eating my VPN's memory up, to the point where more than a
+    few concurrent requests would totally crash my server
+-   It required a lot of manual labour to ensure the symlinked folder was set up
+    correctly, the Dropbox instance was running on my VPN
+-   Putting these problems together meant that almost every time I added an
+    image to the Dropbox folder, I’d have to SSH into the VPN, make sure the
+    Dropbox instance was running, and almost certainly restart the service after
+    crashes
 
 All this to say, it was less than ideal. But the final nail in the coffin came
 when I decided I didn’t want to pay for a VPN that required a lot of manual

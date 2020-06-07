@@ -35,7 +35,7 @@ and returns the result.
 
 ```js
 function sum(a, b) {
-  return a + b
+    return a + b
 }
 
 sum(1, 2)
@@ -51,7 +51,7 @@ the function to limit what arguments people can pass to it.
 // of data the function can accept and return
 //              👇         👇       👇
 function sum(a: number, b: number): number {
-  return a + b
+    return a + b
 }
 
 sum("hello", 2)
@@ -83,7 +83,7 @@ Button("Confirm")
 But what would happen if we were to put another Button inside this one?
 
 <Button>
-  <Button>Confirm</Button>
+    <Button>Confirm</Button>
 </Button>
 
 ```js
@@ -110,9 +110,9 @@ Let’s take a look at a list component as an example.
 Our example list will be a list of cities, with each item in the list showing
 three pieces of information:
 
-- The city’s name
-- The city’s country
-- A photo representing the city
+-   The city’s name
+-   The city’s country
+-   A photo representing the city
 
 Before writing any code, or even designing what the list should look like, we
 have some information at hand about the types of data we’ll be dealing with: the
@@ -123,18 +123,18 @@ the image on a server, or it may be another component itself.
 Let’s look at those pieces of information again, but this time we’ll type it the
 same way that the engineer implementing the list might do:
 
-- The city’s name is a string
-- The city’s country is a string
-- The photo representing the city is either a string or an image component
+-   The city’s name is a string
+-   The city’s country is a string
+-   The photo representing the city is either a string or an image component
 
 In Flow or Typescript, type-checking systems for JavaScript, the type signature
 for our list item might look like this:
 
 ```typescript
 type CityListItemData = {
-  name: string
-  country: string
-  photo: string | Image
+    name: string
+    country: string
+    photo: string | Image
 }
 ```
 

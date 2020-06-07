@@ -5,11 +5,11 @@ date: "2019-07-29"
 ---
 
 <Note>
-  This is the first in a short series of posts explaining how to build a React
-  application that simulates tossing a coin over and over again. Read{" "}
-  <Link href="/blog/2019/toss-a-coin-with-react-part-2/">part two</Link> and{" "}
-  <Link href="/blog/2020/toss-a-coin-with-react-part-3/">part three</Link> when
-  you’re done here!
+    This is the first in a short series of posts explaining how to build a React
+    application that simulates tossing a coin over and over again. Read{" "}
+    <Link href="/blog/2019/toss-a-coin-with-react-part-2/">part two</Link> and{" "}
+    <Link href="/blog/2020/toss-a-coin-with-react-part-3/">part three</Link>{" "}
+    when you’re done here!
 </Note>
 
 I've never written a React tutorial before—there are plenty of people more
@@ -104,8 +104,8 @@ Open up `src/App.js`. We’re going to delete most of the code already inside it
 but feel free to copy-and-paste if it's easier.
 
 <Note>
-  If the code syntax in this file is new to you, don't worry: React introduces a
-  few new concepts, but we'll walk through it together.
+    If the code syntax in this file is new to you, don't worry: React introduces
+    a few new concepts, but we'll walk through it together.
 </Note>
 
 We'll delete some of the import statements at the top and most of the code in
@@ -115,7 +115,7 @@ the `App` function. Here's what your `App.js` should look like:
 import React from "react"
 
 function App() {
-  return <div>The coin toss app will go here!</div>
+    return <div>The coin toss app will go here!</div>
 }
 
 export default App
@@ -145,13 +145,13 @@ also delete those files:
 ```
 
 <Note>
-  You can see the running version of the app at this stage{" "}
-  <Link href="https://coin-toss-jkf64vttf.now.sh">here</Link>, and the source
-  code{" "}
-  <Link href="https://github.com/daneden/react-coin-toss/tree/5ed4d9e972c4c73a9dcc6f79569c37590fcdb526">
-    here
-  </Link>
-  .
+    You can see the running version of the app at this stage{" "}
+    <Link href="https://coin-toss-jkf64vttf.now.sh">here</Link>, and the source
+    code{" "}
+    <Link href="https://github.com/daneden/react-coin-toss/tree/5ed4d9e972c4c73a9dcc6f79569c37590fcdb526">
+        here
+    </Link>
+    .
 </Note>
 
 ---
@@ -164,7 +164,7 @@ might be a surprise to you:
 import React from "react"
 
 function App() {
-  return <div>The coin toss app will go here!</div>
+    return <div>The coin toss app will go here!</div>
 }
 
 export default App
@@ -194,19 +194,19 @@ Let's add the "toss coin" button to our app. We can place a button inside the
 
 ```jsx
 function App() {
-  return (
-    <div>
-      The coin toss app will go here!
-      <button>Toss coin</button>
-    </div>
-  )
+    return (
+        <div>
+            The coin toss app will go here!
+            <button>Toss coin</button>
+        </div>
+    )
 }
 ```
 
 <Note>
-  Note that here I've excluded the <Code>import</Code> and <Code>export</Code>{" "}
-  lines just to focus on the <Code>App</Code> function; be sure not to delete
-  them from your code.
+    Note that here I've excluded the <Code>import</Code> and <Code>export</Code>{" "}
+    lines just to focus on the <Code>App</Code> function; be sure not to delete
+    them from your code.
 </Note>
 
 Save your changes and check the web browser: we now have a button, but clicking
@@ -214,16 +214,16 @@ it doesn't do anything yet. Let's change that:
 
 ```jsx
 function App() {
-  const tossCoin = () => {
-    alert("The coin was tossed")
-  }
+    const tossCoin = () => {
+        alert("The coin was tossed")
+    }
 
-  return (
-    <div>
-      The coin toss app will go here!
-      <button onClick={tossCoin}>Toss coin</button>
-    </div>
-  )
+    return (
+        <div>
+            The coin toss app will go here!
+            <button onClick={tossCoin}>Toss coin</button>
+        </div>
+    )
 }
 ```
 
@@ -249,22 +249,22 @@ import React from "react"
 const { useState } = React
 
 function App() {
-  const [side, setSide] = useState(1)
-  const [tossed, setTossed] = useState(0)
+    const [side, setSide] = useState(1)
+    const [tossed, setTossed] = useState(0)
 
-  const tossCoin = () => {
-    const landedOn = Math.round(Math.random())
-    setSide(landedOn)
-    setTossed(tossed + 1)
-  }
+    const tossCoin = () => {
+        const landedOn = Math.round(Math.random())
+        setSide(landedOn)
+        setTossed(tossed + 1)
+    }
 
-  return (
-    <div>
-      <p>The coin has been tossed {tossed} times.</p>
-      <p>It landed on {side === 1 ? "heads" : "tails"}</p>
-      <button onClick={tossCoin}>Toss coin</button>
-    </div>
-  )
+    return (
+        <div>
+            <p>The coin has been tossed {tossed} times.</p>
+            <p>It landed on {side === 1 ? "heads" : "tails"}</p>
+            <button onClick={tossCoin}>Toss coin</button>
+        </div>
+    )
 }
 
 export default App
@@ -303,10 +303,10 @@ const setSide = result[1]
 
 Looking back to the previous code sample, we're setting four new variables:
 
-- `side`, which will initially be `1`
-- `setSide`
-- `tossed`, which will initially be `0`
-- and `setTossed`
+-   `side`, which will initially be `1`
+-   `setSide`
+-   `tossed`, which will initially be `0`
+-   and `setTossed`
 
 We'll use the `side` and `tossed` variables to keep track of which side of the
 coin we see and how many times it's been tossed, and `setSide` and `setTossed`
@@ -316,9 +316,9 @@ Our `tossCoin` function has been updated too:
 
 ```js
 const tossCoin = () => {
-  const landedOn = Math.round(Math.random())
-  setSide(landedOn)
-  setTossed(tossed + 1)
+    const landedOn = Math.round(Math.random())
+    setSide(landedOn)
+    setTossed(tossed + 1)
 }
 ```
 
@@ -355,13 +355,13 @@ If you've made it this far, you should feel proud! We've made a React app that
 responds to user input and dynamically updates.
 
 <Note>
-  You can see the running version of the app at this stage{" "}
-  <Link href="https://coin-toss-1fikjgmoj.now.sh/">here</Link>, and the source
-  code{" "}
-  <Link href="https://github.com/daneden/react-coin-toss/tree/549b8db01a10ebaff0766364f3cf48735aa4da21">
-    here
-  </Link>
-  .
+    You can see the running version of the app at this stage{" "}
+    <Link href="https://coin-toss-1fikjgmoj.now.sh/">here</Link>, and the source
+    code{" "}
+    <Link href="https://github.com/daneden/react-coin-toss/tree/549b8db01a10ebaff0766364f3cf48735aa4da21">
+        here
+    </Link>
+    .
 </Note>
 
 ---
@@ -433,5 +433,5 @@ is available, and to ask for anything specific you'd like to see in the future
 posts!
 
 [^1]:
-  You can learn more about destructuring assignments from the
-  [MDN JavaScript documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+    You can learn more about destructuring assignments from the
+    [MDN JavaScript documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)

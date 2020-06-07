@@ -167,12 +167,12 @@ telephone numbers.
 We’ll make our regex support three common ways of indicating a UK telephone
 number. UK numbers can start one of three ways:
 
-- With a leading `0`, followed by 10 digits. This is the common format for
-  calling UK numbers within the UK.
-- With a leading `+44`, the international dialling code for UK numbers, followed
-  by 10 digits.
-- With a leading `0044`, which is the international dialling code for devices
-  that don’t support dialling with a `+` or other non-numeric characters.
+-   With a leading `0`, followed by 10 digits. This is the common format for
+    calling UK numbers within the UK.
+-   With a leading `+44`, the international dialling code for UK numbers,
+    followed by 10 digits.
+-   With a leading `0044`, which is the international dialling code for devices
+    that don’t support dialling with a `+` or other non-numeric characters.
 
 So our regex needs to look for “0”, “+44”, or “0044”, followed by 10 digits:
 
@@ -226,9 +226,9 @@ The version of regex used in their productivity suite uses `$` instead of `\` to
 reference capture group values.
 
 <Image
-  src="/2019/11/sheets-regex.png"
-  caption="You can use regex in Google Docs and Google Sheets’ “Find and Replace” dialog"
-  alt="The “Find and Replace” dialog in Google Sheets, with the “Search using regular expressions” option turned on"
+    src="/2019/11/sheets-regex.png"
+    caption="You can use regex in Google Docs and Google Sheets’ “Find and Replace” dialog"
+    alt="The “Find and Replace” dialog in Google Sheets, with the “Search using regular expressions” option turned on"
 />
 
 Next time you’re looking for something in a Google Doc or Sheet, consider
@@ -264,24 +264,25 @@ day-to-day work, you may never think about humble Google searches or
 find-and-replace the same way again.
 
 [^1]:
-  There are also _non-capturing groups_, which have a slightly different syntax:
-  they open with `(?:` instead of just `(`. Capture groups have a simpler
-  syntax, and allow us to reference the matching value later on.
+    There are also _non-capturing groups_, which have a slightly different
+    syntax: they open with `(?:` instead of just `(`. Capture groups have a
+    simpler syntax, and allow us to reference the matching value later on.
 
 [^2]:
-  Depending on the language or editor you’re using, the reference character
-  might be different. For example, in JavaScript or Go, you’d write `$1` to
-  reference the first capture group, whereas in PHP or Python, you’d write `\1`.
+    Depending on the language or editor you’re using, the reference character
+    might be different. For example, in JavaScript or Go, you’d write `$1` to
+    reference the first capture group, whereas in PHP or Python, you’d write
+    `\1`.
 
 [^3]:
-  You can see this in action on
-  [this regex101 example](https://regex101.com/r/iN2qOR/1). Try playing around
-  with the match criteria and the test string!
+    You can see this in action on
+    [this regex101 example](https://regex101.com/r/iN2qOR/1). Try playing around
+    with the match criteria and the test string!
 
 [^4]:
-  For example, Visa cards always start with a 4; MasterCard numbers always start
-  with a 5 followed by a number between 1–5; Amex always starts with 34 or 37.
-  [This post](https://www.regular-expressions.info/creditcard.html) goes into
-  regex patterns for credit card numbers in some depth, but be advised that the
-  patterns therein are quite complex (though they use only the features of regex
-  we’re covering here!).
+    For example, Visa cards always start with a 4; MasterCard numbers always
+    start with a 5 followed by a number between 1–5; Amex always starts with 34
+    or 37. [This post](https://www.regular-expressions.info/creditcard.html)
+    goes into regex patterns for credit card numbers in some depth, but be
+    advised that the patterns therein are quite complex (though they use only
+    the features of regex we’re covering here!).
