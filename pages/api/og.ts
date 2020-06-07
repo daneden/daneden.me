@@ -23,16 +23,20 @@ const generateHTML = (title = "Hello world") => {
       }
 
       @font-face {
+        font-display: block;
         font-family: 'Soehne Breit Web';
         font-style: normal;
         font-weight: bold;
-        src: url('/fonts/soehne-breit-web-fett.woff2') format('woff2');
+        src: url('/fonts/soehne-breit-web-fett.woff2') format('woff2'),
+          url('/fonts/soehne-breit-web-fett.woff') format('woff');
       }
 
       @font-face {
+        font-display: block;
         font-family: 'National 2';
         font-style: normal;
-        src: url('/fonts/National2Web-Regular.woff2') format('woff2');
+        src: url('/fonts/National2Web-Regular.woff2') format('woff2'),
+          url('/fonts/National2Web-Regular.woff') format('woff');
       }
 
       .title {
