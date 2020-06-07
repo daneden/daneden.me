@@ -5,21 +5,9 @@ import path from "path"
 import puppeteer from "puppeteer-core"
 import { Atoms } from "@/designSystem"
 
-const injectFile = async (page, filePath) => {
-  let contents = await new Promise((resolve, reject) => {
-    fs.readFile(filePath, "utf8", (err, data) => {
-      if (err) return reject(err)
-      resolve(data)
-    })
-  })
-
-  contents += `//# sourceURL=${filePath.replace(/\n/g, "")}`
-
-  return page.mainFrame().evaluate(contents)
-}
-
 const generateHTML = (title = "Hello world") => {
   return `<html>
+    <script src="/static/fontfaceobserver.standalone.js"></script>
     <style>
       * {
         margin: 0;
@@ -104,11 +92,6 @@ const getScreenshot = async function ({ html, type = "png" }) {
     waitUntil: "networkidle0",
   })
 
-  const fontFaceObserver = require.resolve(
-    "../../node_modules/fontfaceobserver/fontfaceobserver.standalone.js"
-  )
-
-  await injectFile(page, fontFaceObserver)
   const element = page.$("html")
   await page.evaluate(waitForFontFaces)
 
