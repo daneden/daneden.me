@@ -7,7 +7,6 @@ import { Atoms } from "@/designSystem"
 
 const generateHTML = (title = "Hello world") => {
   return `<html>
-    <script src="/static/fontfaceobserver.standalone.js"></script>
     <style>
       * {
         margin: 0;
@@ -91,6 +90,7 @@ const getScreenshot = async function ({ html, type = "png" }) {
   await page.setContent(html, {
     waitUntil: "networkidle0",
   })
+  await page.addScriptTag({ url: "/static/fontfaceobserver.standalone.js" })
 
   const element = page.$("html")
   await page.evaluate(waitForFontFaces)
