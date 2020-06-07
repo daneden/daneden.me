@@ -90,7 +90,9 @@ const getScreenshot = async function ({ html, type = "png" }) {
   await page.setContent(html, {
     waitUntil: "networkidle0",
   })
-  await page.addScriptTag({ url: "/static/fontfaceobserver.standalone.js" })
+  await page.addScriptTag({
+    url: `https://${process.env.VERCEL_URL}/static/fontfaceobserver.standalone.js`,
+  })
 
   const element = page.$("html")
   await page.evaluate(waitForFontFaces)
