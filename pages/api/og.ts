@@ -4,10 +4,6 @@ import chrome from "chrome-aws-lambda"
 import puppeteer from "puppeteer-core"
 
 const getScreenshot = async function ({ url, type = "png" }) {
-  if (!url) {
-    throw Error("You must provide a URL.")
-  }
-
   const browser = await puppeteer.launch({
     args: chrome.args,
     executablePath: await chrome.executablePath,
@@ -20,25 +16,12 @@ const getScreenshot = async function ({ url, type = "png" }) {
     `', '`
   )}' ].map(fontName => new FontFaceObserver(fontName).load()))`
 
-  const fontFaceObserver = await (
-    await fetch(
-      `https://${process.env.VERCEL_URL}/static/fontfaceobserver.standalone.js`
-    )
-  )
-    .text()
-    .then((s) => s)
-
-  console.log(fontFaceObserver.substring(0, 20))
-
   const page = await browser.newPage()
   await page.goto(url, {
     waitUntil: "networkidle2",
   })
-  await page.addScriptTag({
-    content: fontFaceObserver,
-  })
 
-  const element = page.$("html")
+  const element = await page.$("html")
   await page.evaluate(waitForFontFaces)
 
   return await element.screenshot({ type }).then(async (data) => {
@@ -48,11 +31,13 @@ const getScreenshot = async function ({ url, type = "png" }) {
 }
 
 export default async (request: NowRequest, response: NowResponse) => {
-  const { title, image = true } = request.query
+  const { title } = request.query
 
   if (!title) {
     response.status(404).end()
   }
+
+  console.log(`https://${process.env.VERCEL_URL}/og?title=${title}`)
 
   const result = await getScreenshot({
     url: `https://${process.env.VERCEL_URL}/og?title=${title}`,
