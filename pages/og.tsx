@@ -21,6 +21,9 @@ export default function OpenGraphImagePage({
     window.FontFaceObserver = FontFaceObserver
   })
 
+  const parsedTitle =
+    title !== site.title ? title.replace(/ ([^ ]*)$/, "\u00A0$1") : title
+
   return (
     <>
       <Global
@@ -74,10 +77,10 @@ export default function OpenGraphImagePage({
         className="title"
         style={{ position: "relative", height: "100%", width: "100%" }}
       >
-        <p>{title.replace(/ ([^ ]*)$/, "\u00A0$1")}</p>
+        <p>{parsedTitle}</p>
       </div>
 
-      <p className="author">{site.title}</p>
+      {site.title !== title && <p className="author">{site.title}</p>}
     </>
   )
 }
