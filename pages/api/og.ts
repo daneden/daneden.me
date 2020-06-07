@@ -92,7 +92,7 @@ const getScreenshot = async function ({ html, type = "png" }) {
   })
   await page.addScriptTag({
     content: fs.readFileSync(
-      require.resolve(`../static/fontfaceobserver.standalone.js`)
+      require.resolve(`../../public/static/fontfaceobserver.standalone.js`)
     ),
   })
 
