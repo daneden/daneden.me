@@ -13,7 +13,7 @@ const PostLink = ({ post }: PlainLinkProps): ReactElement<HTMLDivElement> => {
   const options = {
     year: "numeric",
     month: "long",
-    day: "2-digit",
+    day: "numeric",
   }
 
   const date = post.date.toLocaleString("en-US", options)

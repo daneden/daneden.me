@@ -1,10 +1,11 @@
+/** @jsx jsx */
 import { initGA, logPageView } from "@/utils/analytics"
 import widont from "@/utils/widont"
-import { Global } from "@emotion/core"
+import { css, Global, jsx } from "@emotion/core"
 import dynamic from "next/dynamic"
 import { ReactElement, useEffect } from "react"
 import siteConfig from "../siteconfig.json"
-import { Atoms, H1 } from "./designSystem"
+import { Atoms, H1, P } from "./designSystem"
 import DesignSystemProvider from "./designSystem/DesignSystemProvider"
 import Footer from "./Footer"
 import Header from "./Header"
@@ -15,6 +16,13 @@ const Content = ({ frontMatter, children }): ReactElement => {
   const site = siteConfig
   const title = frontMatter?.title || site.title
   const isRoot = title == site.title
+  const date = frontMatter?.date
+
+  const formattedDate = new Date(date).toLocaleString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  })
 
   const SkipLink = dynamic(() => import("components/SkipLink"))
 
@@ -38,7 +46,35 @@ const Content = ({ frontMatter, children }): ReactElement => {
       <SkipLink />
       <Header siteTitle={site.title} />
       <Wrapper>
-        {!isRoot && <H1>{widont(title)}</H1>}
+        {!isRoot && (
+          <header
+            css={css`
+              padding-bottom: ${Atoms.spacing.medium};
+              margin-bottom: ${Atoms.spacing.medium};
+            `}
+          >
+            <H1
+              css={css`
+                margin-bottom: 0;
+                padding-bottom: 0;
+              `}
+            >
+              {widont(title)}
+            </H1>
+            {date && (
+              <P>
+                <time
+                  css={css`
+                    color: var(--meta-color);
+                    font-size: ${Atoms.font.size.small};
+                  `}
+                >
+                  Published {formattedDate}
+                </time>
+              </P>
+            )}
+          </header>
+        )}
         {children}
       </Wrapper>
       <Footer />
