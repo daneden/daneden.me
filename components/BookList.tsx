@@ -1,4 +1,5 @@
 /** @jsx jsx */
+import widont from "@/utils/widont"
 import { jsx } from "@emotion/core"
 import styled from "@emotion/styled"
 import { ReactElement } from "react"
@@ -14,7 +15,7 @@ const books = BOOKS.map((book) => {
   return {
     ...book,
     // Replace the last space with a non-breaking space
-    title: book.title.replace(/ ([^ ]*)$/, "\u00A0$1"),
+    title: widont(book.title),
   }
 }).sort((a, b) => strippedTitle(a.title).localeCompare(strippedTitle(b.title)))
 

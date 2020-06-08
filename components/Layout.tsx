@@ -1,8 +1,9 @@
+import { initGA, logPageView } from "@/utils/analytics"
+import widont from "@/utils/widont"
 import { Global } from "@emotion/core"
 import dynamic from "next/dynamic"
 import { ReactElement, useEffect } from "react"
 import siteConfig from "../siteconfig.json"
-import { initGA, logPageView } from "../utils/analytics"
 import { Atoms, H1 } from "./designSystem"
 import DesignSystemProvider from "./designSystem/DesignSystemProvider"
 import Footer from "./Footer"
@@ -37,7 +38,7 @@ const Content = ({ frontMatter, children }): ReactElement => {
       <SkipLink />
       <Header siteTitle={site.title} />
       <Wrapper>
-        {!isRoot && <H1>{title}</H1>}
+        {!isRoot && <H1>{widont(title)}</H1>}
         {children}
       </Wrapper>
       <Footer />

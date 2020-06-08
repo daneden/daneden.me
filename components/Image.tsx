@@ -1,8 +1,8 @@
 /** @jsx jsx */
+import Markdown from "@/utils/Markdown"
 import { jsx } from "@emotion/core"
 import React, { FunctionComponent } from "react"
 import Imgix from "react-imgix"
-import Markdown from "../utils/Markdown"
 import { Align, Atoms, Caption, Figure } from "./designSystem"
 import { FigureProps } from "./designSystem/Figure"
 
