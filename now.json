@@ -43,6 +43,8 @@
       "status": 308,
       "headers": { "Location": "/blog/$3$5" }
     },
+    { "src": "/(.*)", "dest": "/$1" },
+    { "handle": "filesystem" },
     { "src": "/.*", "status": 404, "dest": "/404" }
   ]
 }
