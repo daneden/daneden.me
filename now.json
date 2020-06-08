@@ -29,13 +29,13 @@
     },
     {
       "src": "/uploads/(.*)",
-      "headers": { "Cache-Control": "s-maxage=31536000" },
+      "headers": { "Cache-Control": "s-maxage=29030400" },
       "dest": "/uploads/$1"
     },
     { "src": "/feed.xml", "dest": "/rss.xml" },
     {
       "src": "/fonts/(.*)",
-      "headers": { "Cache-Control": "s-maxage=604800" },
+      "headers": { "Cache-Control": "s-maxage=29030400" },
       "dest": "/fonts/$1"
     },
     {
