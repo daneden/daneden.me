@@ -38,8 +38,6 @@
       "headers": { "Cache-Control": "s-maxage=29030400" },
       "dest": "/fonts/$1"
     },
-    { "src": "/(.*)", "dest": "/$1" },
-    { "handle": "filesystem" },
     {
       "src": "/((blog/)?([0-9]{4}/)([0-9]{1,2}/){0,2}(.*))",
       "status": 308,
