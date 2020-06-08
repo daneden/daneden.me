@@ -111,5 +111,12 @@
     "author": "Daphne Oram",
     "cover": "books/individual-note.jpg",
     "url": "/books/individual-note-daphne-oram"
+  },
+  {
+    "title": "The End of Policing",
+    "author": "Alex S. Vitale",
+    "cover": "books/end-of-policing.jpg",
+    "url": "https://www.versobooks.com/books/2426-the-end-of-policing",
+    "quote": "A kinder, gentler, and more diverse war on the poor is still a war on the poor."
   }
 ]
