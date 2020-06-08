@@ -1,3 +1,4 @@
+import formatDate from "@/utils/formatDate"
 import React, { ReactElement } from "react"
 import PlainLink from "./designSystem/PlainLink"
 
@@ -10,13 +11,7 @@ interface PlainLinkProps {
 }
 
 const PostLink = ({ post }: PlainLinkProps): ReactElement<HTMLDivElement> => {
-  const options = {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  }
-
-  const date = post.date.toLocaleString("en-US", options)
+  const date = formatDate(post.date)
 
   return (
     <div>

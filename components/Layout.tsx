@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { initGA, logPageView } from "@/utils/analytics"
+import formatDate from "@/utils/formatDate"
 import widont from "@/utils/widont"
 import { css, Global, jsx } from "@emotion/core"
 import dynamic from "next/dynamic"
@@ -17,12 +18,7 @@ const Content = ({ frontMatter, children }): ReactElement => {
   const title = frontMatter?.title || site.title
   const isRoot = title == site.title
   const date = frontMatter?.date
-
-  const formattedDate = new Date(date).toLocaleString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  })
+  const formattedDate = formatDate(date)
 
   const SkipLink = dynamic(() => import("components/SkipLink"))
 
