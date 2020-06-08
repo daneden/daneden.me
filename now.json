@@ -37,7 +37,7 @@
     { "handle": "filesystem" },
     {
       "src": "/fonts/(.*)",
-      "headers": { "Cache-Control": "max-age=31536000, public" },
+      "headers": { "Cache-Control": "s-maxage=604800" },
       "dest": "/fonts/$1"
     },
     {
