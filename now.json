@@ -29,7 +29,7 @@
     },
     {
       "src": "/uploads/(.*)",
-      "headers": { "cache-control": "s-maxage=31536000" },
+      "headers": { "Cache-Control": "s-maxage=31536000" },
       "dest": "/uploads/$1"
     },
     { "src": "/feed.xml", "dest": "/rss.xml" },
@@ -37,13 +37,8 @@
     { "handle": "filesystem" },
     {
       "src": "/fonts/(.*(woff2?|eot))",
-      "headers": { "cache-control": "s-maxage=31536000" },
+      "headers": { "Cache-Control": "s-maxage=31536000" },
       "dest": "/fonts/$1"
-    },
-    {
-      "src": "/paintWorklet.js",
-      "headers": { "cache-control": "s-maxage=1, stale-while-revalidate" },
-      "dest": "/paintWorklet.js"
     },
     {
       "src": "/((blog/)?([0-9]{4}/)([0-9]{1,2}/){0,2}(.*))",
