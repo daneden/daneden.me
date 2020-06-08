@@ -33,8 +33,6 @@
       "dest": "/uploads/$1"
     },
     { "src": "/feed.xml", "dest": "/rss.xml" },
-    { "src": "/(.*)", "dest": "/$1" },
-    { "handle": "filesystem" },
     {
       "src": "/fonts/(.*)",
       "headers": { "Cache-Control": "s-maxage=604800" },
@@ -45,6 +43,8 @@
       "status": 308,
       "headers": { "Location": "/blog/$3$5" }
     },
+    { "src": "/(.*)", "dest": "/$1" },
+    { "handle": "filesystem" },
     { "src": "/.*", "status": 404, "dest": "/404" }
   ]
 }
