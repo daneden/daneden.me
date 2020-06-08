@@ -36,7 +36,7 @@
     { "src": "/(.*)", "dest": "/$1" },
     { "handle": "filesystem" },
     {
-      "src": "/fonts/(.*(woff2?|eot))",
+      "src": "/fonts/(.*)",
       "headers": { "Cache-Control": "s-maxage=31536000" },
       "dest": "/fonts/$1"
     },
