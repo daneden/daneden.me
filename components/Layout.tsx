@@ -19,6 +19,7 @@ const Content = ({ frontMatter, children }): ReactElement => {
   const isRoot = title == site.title
   const date = frontMatter?.date
   const formattedDate = formatDate(date)
+  const excerpt = frontMatter?.excerpt
 
   const SkipLink = dynamic(() => import("components/SkipLink"))
 
@@ -34,7 +35,7 @@ const Content = ({ frontMatter, children }): ReactElement => {
     <>
       <Metatags
         title={title}
-        description={site.description}
+        description={excerpt || site.description}
         thumbnail={`https://${
           process.env.VERCEL_URL
         }/api/og?title=${encodeURIComponent(String(title))}`}
