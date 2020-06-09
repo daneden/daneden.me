@@ -34,17 +34,17 @@
     },
     { "src": "/feed.xml", "dest": "/rss.xml" },
     {
+      "src": "/fonts/(.*)",
+      "headers": { "Cache-Control": "s-maxage=29030400" },
+      "dest": "/fonts/$1"
+    },
+    {
       "src": "/((blog/)?([0-9]{4}/)([0-9]{1,2}/){1,2}(.*))",
       "status": 308,
       "headers": { "Location": "/blog/$3$5" }
     },
     { "src": "/(.*)", "dest": "/$1" },
     { "handle": "filesystem" },
-    {
-      "src": "/fonts/(.*)",
-      "headers": { "Cache-Control": "s-maxage=29030400" },
-      "dest": "/fonts/$1"
-    },
     { "src": "/.*", "status": 404, "dest": "/404" }
   ]
 }
