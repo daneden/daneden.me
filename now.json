@@ -38,7 +38,7 @@
     {
       "src": "/fonts/(.*)",
       "headers": {
-        "Cache-Control": "max-age=29030400, stale-while-revalidate"
+        "Cache-Control": "public, max-age=29030400, stale-while-revalidate"
       },
       "dest": "/fonts/$1"
     },
