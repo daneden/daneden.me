@@ -1,5 +1,5 @@
 @font-face {
-  font-display: swap;
+  font-display: optional;
   font-family: "Soehne Breit Web";
   font-style: normal;
   font-weight: 700;
@@ -9,7 +9,7 @@
 }
 
 @font-face {
-  font-display: swap;
+  font-display: optional;
   font-family: "Founders Grotesk Mono Web";
   font-style: normal;
   font-weight: normal;
@@ -19,7 +19,7 @@
 }
 
 @font-face {
-  font-display: swap;
+  font-display: optional;
   font-family: "National 2 Web";
   font-style: italic;
   font-weight: normal;
@@ -29,7 +29,7 @@
 }
 
 @font-face {
-  font-display: swap;
+  font-display: optional;
   font-family: "National 2 Web";
   font-style: normal;
   font-weight: normal;
@@ -39,7 +39,7 @@
 }
 
 @font-face {
-  font-display: swap;
+  font-display: optional;
   font-family: "National 2 Web";
   font-style: normal;
   font-weight: bold;
@@ -49,7 +49,7 @@
 }
 
 @font-face {
-  font-display: swap;
+  font-display: optional;
   font-family: "National 2 Web";
   font-style: italic;
   font-weight: bold;
