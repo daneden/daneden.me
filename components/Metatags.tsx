@@ -26,7 +26,6 @@ function Metatags(props: MetatagsProps): ReactElement<typeof Head> {
 
   return (
     <Head>
-      <html lang="en" />
       <title>{pageTitle}</title>
       <meta name="title" content={pageTitle} />
 
@@ -54,6 +53,10 @@ function Metatags(props: MetatagsProps): ReactElement<typeof Head> {
       <meta name="twitter:card" content="summary_large_image" />
 
       {thumbnail && <meta name="twitter:image" content={thumbnail} />}
+
+      <link rel="shortcut icon" href="/images/favicon.png" />
+      <link rel="preload" as="style" href="/fonts/fonts.css" />
+      <link rel="stylesheet" href="/fonts/fonts.css" />
 
       {dnsPrefetchURLs.map((url) => [
         <link rel="preconnect" href={url} />,

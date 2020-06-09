@@ -1,7 +1,6 @@
 import { initGA, logEvent } from "@/utils/analytics"
 import { AppProps } from "next/app"
 import { ReactFragment, useEffect } from "react"
-import "../css/fonts.css"
 
 export function reportWebVitals({ id, name, label, value }): void {
   logEvent({
