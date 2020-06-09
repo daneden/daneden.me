@@ -29,13 +29,17 @@
     },
     {
       "src": "/uploads/(.*)",
-      "headers": { "Cache-Control": "s-maxage=29030400" },
+      "headers": {
+        "Cache-Control": "max-age=29030400, stale-while-revalidate"
+      },
       "dest": "/uploads/$1"
     },
     { "src": "/feed.xml", "dest": "/rss.xml" },
     {
       "src": "/fonts/(.*)",
-      "headers": { "Cache-Control": "s-maxage=29030400" },
+      "headers": {
+        "Cache-Control": "max-age=29030400, stale-while-revalidate"
+      },
       "dest": "/fonts/$1"
     },
     {
