@@ -30,7 +30,7 @@
     "@next/bundle-analyzer": "^9.4.4",
     "@next/mdx": "^9.4.4",
     "@ngsctt/remark-smartypants": "^0.2.0",
-    "@now/node": "^1.6.1",
+    "@now/node": "^1.7.0",
     "chrome-aws-lambda": "^3.1.1",
     "emotion": "^10.0.27",
     "emotion-server": "^10.0.27",
@@ -52,8 +52,8 @@
     "react-script-tag": "^1.1.2"
   },
   "devDependencies": {
-    "@types/node": "^14.0.12",
-    "@types/react": "^16.9.35",
+    "@types/node": "^14.0.13",
+    "@types/react": "^16.9.36",
     "@types/webpack-env": "^1.15.2",
     "@typescript-eslint/eslint-plugin": "^2.34.0",
     "@typescript-eslint/parser": "^2.34.0",
@@ -61,7 +61,7 @@
     "eslint": "^7.2.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-loader": "^4.0.2",
-    "eslint-plugin-import": "^2.21.1",
+    "eslint-plugin-import": "^2.21.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-mdx": "^1.7.0",
     "eslint-plugin-prettier": "^3.1.3",
