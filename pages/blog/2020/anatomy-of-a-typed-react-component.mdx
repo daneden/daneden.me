@@ -4,6 +4,22 @@ title: "Anatomy of a Typed React Component"
 date: "2020-06-17"
 ---
 
+It's no secret that learning JavaScript (and React) in 2020 is confusing at best
+and downright intimidating at worst. Multiple technologies, tools, and
+approaches tend to get bundled together in React tutorials, and if you haven't
+written JavaScript for a few years, it can feel like a totally new landscape.
+
+In this post, I wanted to take a look at a very simple React component and walk
+step-by-step through the parts of the code that are unique to either:
+
+-   React
+-   Typed programming (using type checkers such as Flow or TypeScript)
+-   "Modern" JavaScript (what's often referred to as "ES6", but essentially
+    covers any JavaScript language features that have changed since I first
+    learned JavaScript around 2013)
+
+Here's what we'll be looking at, with some markers/annotations in place:
+
 ```tsx
 // |--- 1 ---|    |--------- 2 ---------||-- 3 --|| 4 |
 const Component = ({ children, hasPadding }: Props) => {
@@ -13,3 +29,59 @@ const Component = ({ children, hasPadding }: Props) => {
     )
 }
 ```
+
+## 1: Constants
+
+The first marker in our code highlights a keyword that may be new to you:
+`const`.
+
+Constants in JavaScript are essentially variables which, once assigned, cannot
+be changed. In the past you may have written or seen code that looks like this:
+
+```js
+var number = 1
+number = 2
+
+console.log(number) // => 2
+```
+
+There are sometimes cases where you need to change a variable after it's been
+assigned; but most of the time, once its been set, you don't need to change it.
+In fact, leaving it open to change can result in unexpected results. This is
+where constants can come in handy.
+
+```js
+const number = 1
+number = 2 // Uncaught TypeError: Assignment to constant variable
+```
+
+Nowadays, many people follow a rule of "always prefer `const`". If you do need
+to assign a variable that may need to change later, `let` is another keyword
+that is preferred over `var`:
+
+```js
+let number = 1
+number = 2
+
+console.log(number) // => 2
+```
+
+There are some more differences worth learning about between `var`, `let`, and
+`const`, and plenty of [material already written](https://ui.dev/var-let-const/)
+on the subject.
+
+## 2, 3, and 4: Arrow Functions
+
+The markers indicating parts 2, 3, and 4 are all part of an expression pattern
+called _arrow functions_. You may be used to seeing or writing functions like
+this:
+
+```js
+function add(x, y) {
+    return x + y
+}
+
+add(2, 2) // => 4
+```
+
+Arrow functions are "syntactical sugar"

@@ -36,7 +36,7 @@ export default function SyntaxHiglight(): ReactElement<unknown> {
 
         :not(pre) > code[class*="language-"],
         pre[class*="language-"] {
-          background: rgba(0, 0, 0, 0.05);
+          background: rgba(0, 0, 0, 0.025);
         }
 
         @media (prefers-color-scheme: dark) {
