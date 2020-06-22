@@ -1,6 +1,6 @@
 const withMDXEnhanced = require("next-mdx-enhanced")
 const withMDXFm = require("next-mdx-frontmatter")
-const prism = require("@mapbox/rehype-prism")
+const prism = require("mdx-prism")
 const smartypants = require("@ngsctt/remark-smartypants")
 const withPlugins = require("next-compose-plugins")
 const withBundleAnalyzer = require("@next/bundle-analyzer")({
