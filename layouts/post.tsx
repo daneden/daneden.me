@@ -4,17 +4,15 @@ import { ReactElement } from "react"
 
 const katexPosts = ["Subatomic Design Systems"]
 export default function PostLayout(frontMatter) {
-  return ({ children }): ReactElement<typeof Layout> => {
+  return ({ children }): ReactElement => {
     /**
      * KaTeX comes with a lot of CSS, which we don't want to use on every post.
      * We'll keep a record of the posts using KaTeX in `katexPosts` and check
      * here whether or not to request the CSS in the current page.
      */
-    const shouldRequestKatex = katexPosts.reduce((prev, curr) => {
-      if (prev) return prev
-
-      return frontMatter.title.includes(curr)
-    })
+    const shouldRequestKatex = katexPosts.reduce(
+      (prev, curr) => prev || frontMatter.title.includes(curr)
+    )
 
     return (
       <>

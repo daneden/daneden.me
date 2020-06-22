@@ -4,13 +4,13 @@ import { css, jsx } from "@emotion/core"
 import Layout from "components/Layout"
 import PostLink from "components/PostLink"
 import { ReactElement } from "react"
-import { frontMatter as blogPosts } from "./**/*.mdx"
+import { frontMatter as blogPosts, MDXPost } from "./blog/**/*.mdx"
 
 const liStyle = css`
   margin-bottom: ${Atoms.spacing.medium};
 `
 export default function Blog(): ReactElement<typeof Layout> {
-  const posts = blogPosts
+  const posts = (blogPosts as MDXPost[])
     .map((frontmatter) => {
       return {
         ...frontmatter,
@@ -27,7 +27,7 @@ export default function Blog(): ReactElement<typeof Layout> {
       }
     })
     .sort((a, b) => {
-      return b.date - a.date
+      return Number(b.date) - Number(a.date)
     })
 
   return (
