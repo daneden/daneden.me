@@ -16,7 +16,7 @@
   "scripts": {
     "analyze": "ANALYZE=true next build",
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build || next build",
     "start": "next start",
     "precommit": "lint-staged",
     "lint:js": "eslint \"**/*.{js,jsx,ts,tsx,md,mdx}\"",
