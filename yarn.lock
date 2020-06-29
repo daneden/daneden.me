@@ -7106,10 +7106,10 @@ punycode@^2.1.0:
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-2.1.1.tgz#b58b010ac40c22c5657616c8d2c2c02c7bf479ec"
   integrity sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A==
 
-puppeteer-core@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/puppeteer-core/-/puppeteer-core-4.0.0.tgz#32cb3c97efd280301a8084caf5566b5c2d83896f"
-  integrity sha512-Tb5FVp9h9wkd2gXpc/qfBFFI7zjLxxe3pw34U5ntpSnIoUV2m9IKIjAf7ou+5N3fU9VPV3MNJ3HQiDVasN/MPQ==
+puppeteer-core@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/puppeteer-core/-/puppeteer-core-4.0.1.tgz#d6026add5fe058de22cd80879967eaa5e9be4cfb"
+  integrity sha512-8OfHmUkEXU/k7Bmcdm6KRWhIIfmayv/ce1AUDkP0nTLK2IpjulFggxq1dZhWgWHXebeLILbieMvAor7tSf3EqQ==
   dependencies:
     debug "^4.1.0"
     extract-zip "^2.0.0"
