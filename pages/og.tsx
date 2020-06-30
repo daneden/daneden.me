@@ -71,6 +71,7 @@ export default function OpenGraphImagePage({
 
       <Head>
         <meta name="robots" content="noindex" />
+        <link rel="stylesheet" href="/fonts/fonts.css" />
       </Head>
 
       <div

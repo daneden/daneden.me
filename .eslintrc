@@ -23,6 +23,7 @@
     "plugin:jsx-a11y/recommended"
   ],
   "plugins": ["prettier", "import", "react", "react-hooks", "jsx-a11y"],
+  "ignorePatterns": ["node_modules", "public/**/*.js", "*.woff2?", "*.ttf"],
   "rules": {
     "prettier/prettier": "error",
     "react-hooks/rules-of-hooks": "error",
