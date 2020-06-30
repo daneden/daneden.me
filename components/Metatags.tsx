@@ -55,8 +55,6 @@ function Metatags(props: MetatagsProps): ReactElement<typeof Head> {
       {thumbnail && <meta name="twitter:image" content={thumbnail} />}
 
       <link rel="shortcut icon" href="/images/favicon.png" />
-      <link rel="preload" as="style" href="/fonts/fonts.css" />
-      <link rel="stylesheet" href="/fonts/fonts.css" />
 
       {dnsPrefetchURLs.map((url) => [
         <link rel="preconnect" href={url} />,
