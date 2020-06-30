@@ -3,19 +3,9 @@
   font-family: "Soehne Breit Web";
   font-style: normal;
   font-weight: 700;
-  src: url("/fonts/soehne-breit-web-fett.woff2") format("woff2"),
-    url("/fonts/soehne-breit-web-fett.woff") format("woff"),
-    url("/fonts/soehne-breit-web-fett.eot") format("embedded-opentype");
-}
-
-@font-face {
-  font-display: fallback;
-  font-family: "Founders Grotesk Mono Web";
-  font-style: normal;
-  font-weight: normal;
-  src: url("/fonts/FoundersGroteskMonoWeb-Regular.woff2") format("woff2"),
-    url("/fonts/FoundersGroteskMonoWeb-Regular.woff") format("woff"),
-    url("/fonts/FoundersGroteskMonoWeb-Regular.eot") format("embedded-opentype");
+  src: url("/fonts/soehne/soehne-breit-web-fett.woff2") format("woff2"),
+    url("/fonts/soehne/soehne-breit-web-fett.woff") format("woff"),
+    url("/fonts/soehne/soehne-breit-web-fett.eot") format("embedded-opentype");
 }
 
 @font-face {
@@ -23,9 +13,10 @@
   font-family: "National 2 Web";
   font-style: italic;
   font-weight: normal;
-  src: url("/fonts/National2Web-RegularItalic.woff2") format("woff2"),
-    url("/fonts/National2Web-RegularItalic.woff") format("woff"),
-    url("/fonts/National2Web-RegularItalic.eot") format("embedded-opentype");
+  src: url("/fonts/national/National2Web-RegularItalic.woff2") format("woff2"),
+    url("/fonts/national/National2Web-RegularItalic.woff") format("woff"),
+    url("/fonts/national/National2Web-RegularItalic.eot")
+      format("embedded-opentype");
 }
 
 @font-face {
@@ -33,9 +24,9 @@
   font-family: "National 2 Web";
   font-style: normal;
   font-weight: normal;
-  src: url("/fonts/National2Web-Regular.woff2") format("woff2"),
-    url("/fonts/National2Web-Regular.woff") format("woff"),
-    url("/fonts/National2Web-Regular.eot") format("embedded-opentype");
+  src: url("/fonts/national/National2Web-Regular.woff2") format("woff2"),
+    url("/fonts/national/National2Web-Regular.woff") format("woff"),
+    url("/fonts/national/National2Web-Regular.eot") format("embedded-opentype");
 }
 
 @font-face {
@@ -43,9 +34,9 @@
   font-family: "National 2 Web";
   font-style: normal;
   font-weight: bold;
-  src: url("/fonts/National2Web-Bold.woff2") format("woff2"),
-    url("/fonts/National2Web-Bold.woff") format("woff"),
-    url("/fonts/National2Web-Bold.eot") format("embedded-opentype");
+  src: url("/fonts/national/National2Web-Bold.woff2") format("woff2"),
+    url("/fonts/national/National2Web-Bold.woff") format("woff"),
+    url("/fonts/national/National2Web-Bold.eot") format("embedded-opentype");
 }
 
 @font-face {
@@ -53,7 +44,39 @@
   font-family: "National 2 Web";
   font-style: italic;
   font-weight: bold;
-  src: url("/fonts/National2Web-BoldItalic.woff2") format("woff2"),
-    url("/fonts/National2Web-BoldItalic.woff") format("woff"),
-    url("/fonts/National2Web-BoldItalic.eot") format("embedded-opentype");
+  src: url("/fonts/national/National2Web-BoldItalic.woff2") format("woff2"),
+    url("/fonts/national/National2Web-BoldItalic.woff") format("woff"),
+    url("/fonts/national/National2Web-BoldItalic.eot")
+      format("embedded-opentype");
+}
+
+@font-face {
+  font-display: fallback;
+  font-family: "JetBrains Mono Web";
+  font-style: normal;
+  font-weight: normal;
+  src: url("/fonts/jetbrains/JetBrainsMono-Regular.woff2") format("woff2"),
+    url("/fonts/jetbrains/JetBrainsMono-Regular.woff") format("woff"),
+    url("/fonts/jetbrains/JetBrainsMono-Regular.eot")
+      format("embedded-opentype");
+}
+
+@font-face {
+  font-display: fallback;
+  font-family: "JetBrains Mono Web";
+  font-style: italic;
+  font-weight: normal;
+  src: url("/fonts/jetbrains/JetBrainsMono-Italic.woff2") format("woff2"),
+    url("/fonts/jetbrains/JetBrainsMono-Italic.woff") format("woff"),
+    url("/fonts/jetbrains/JetBrainsMono-Italic.eot") format("embedded-opentype");
+}
+
+@font-face {
+  font-display: fallback;
+  font-family: "JetBrains Mono Web";
+  font-style: normal;
+  font-weight: bold;
+  src: url("/fonts/jetbrains/JetBrainsMono-Bold.woff2") format("woff2"),
+    url("/fonts/jetbrains/JetBrainsMono-Bold.woff") format("woff"),
+    url("/fonts/jetbrains/JetBrainsMono-Bold.eot") format("embedded-opentype");
 }

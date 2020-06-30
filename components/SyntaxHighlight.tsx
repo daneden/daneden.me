@@ -10,9 +10,24 @@ export default function SyntaxHiglight(): ReactElement<unknown> {
        * @author Rose Pritchard
        */
 
+        :root {
+          --c-color: #333;
+          --c-strings: #00772d;
+          --c-fns: #da2a00;
+          --c-keyword: #a70da7;
+          --c-classname: #f37d00;
+          --c-operator: #0099b3;
+        }
+
+        @media (prefers-color-scheme: dark) {
+          :root {
+            --c-color: #eee;
+          }
+        }
+
         code[class*="language-"],
         pre[class*="language-"] {
-          color: var(--text-color, inherit);
+          color: var(--c-color, --text-color, inherit);
           background: none;
           font-family: var(--font-mono), Consolas, Monaco, "Andale Mono",
             "Ubuntu Mono", monospace;
@@ -24,12 +39,13 @@ export default function SyntaxHiglight(): ReactElement<unknown> {
           line-height: 1.5;
           tab-size: 2;
           hyphens: none;
+          font-feature-settings: "dlig", "calt", "clig";
         }
 
         /* Code blocks */
         pre[class*="language-"] {
           padding: 1em;
-          margin: 0.5em 0;
+          margin: 0.5em -1em;
           overflow: auto;
           margin-bottom: 1.5rem;
         }
@@ -58,7 +74,7 @@ export default function SyntaxHiglight(): ReactElement<unknown> {
         .token.prolog,
         .token.doctype,
         .token.cdata {
-          color: #999;
+          color: #888;
         }
 
         .token.punctuation {
@@ -81,7 +97,7 @@ export default function SyntaxHiglight(): ReactElement<unknown> {
         .token.number,
         .token.function,
         .token.charset {
-          color: #ff7600;
+          color: var(--c-fns);
         }
 
         .token.property,
@@ -90,7 +106,7 @@ export default function SyntaxHiglight(): ReactElement<unknown> {
         .token.symbol,
         .token.group,
         .token.alternation {
-          color: #f90;
+          color: var(--c-classname);
         }
 
         .token.selector,
@@ -99,7 +115,7 @@ export default function SyntaxHiglight(): ReactElement<unknown> {
         .token.keyword,
         .token.builtin,
         .token.quantifier {
-          color: #ac53ac;
+          color: var(--c-keyword);
         }
 
         .token.string,
@@ -107,13 +123,13 @@ export default function SyntaxHiglight(): ReactElement<unknown> {
         .token.attr-value,
         .token.regex,
         .token.variable {
-          color: #58a575;
+          color: var(--c-strings);
         }
 
         .token.operator,
         .token.entity,
         .token.url {
-          color: #67cdcc;
+          color: var(--c-operator);
         }
 
         .token.important,
