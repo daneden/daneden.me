@@ -48,7 +48,7 @@ export default {
     family: {
       sans: `"National 2 Web", -apple-system, system-ui, BlinkMacSystemFont, sans-serif`,
       sohne: `"Soehne Breit Web"`,
-      mono: `"Founders Grotesk Mono Web", "Input Mono", "Source Code Pro", "Monaco", monospace`,
+      mono: `"JetBrains Mono Web", "Input Mono", "Source Code Pro", "Monaco", monospace`,
     },
     size: {
       small: `${scales.small}rem`,
