@@ -28,7 +28,7 @@ const getScreenshot = async function ({ url, type = "png" }) {
     }
     // Add a new header for navigation request.
     const headers = request.headers()
-    headers["X-Internal"] = 1
+    headers["X-Internal"] = "true"
     request.continue({ headers })
   })
 
