@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { Atoms, PlainLink } from "@/designSystem"
+import { Atoms, PlainLink, Small } from "@/designSystem"
 import { jsx } from "@emotion/core"
 import styled from "@emotion/styled"
 import { FunctionComponent } from "react"
@@ -12,11 +12,6 @@ export interface BookData {
   title: string
   url: string
 }
-
-const Meta = styled("span")`
-  color: var(--meta-color, ${Atoms.colors.meta});
-  font-size: ${Atoms.font.size.small};
-`
 
 const BookContainer = styled.div`
   align-items: start;
@@ -49,16 +44,17 @@ const Book: FunctionComponent<BookData> = ({
           )}
         </p>
         <p>
-          <Meta>{author}</Meta>
+          <Small display="block">{author}</Small>
         </p>
         {quote && (
           <p
             style={{
-              fontSize: Atoms.font.size.small,
               paddingTop: Atoms.spacing.xsmall,
             }}
           >
-            <em>‘{quote}’</em>
+            <Small receded={false} display="block">
+              <em>‘{quote}’</em>
+            </Small>
           </p>
         )}
       </div>

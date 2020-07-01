@@ -15,6 +15,7 @@ import P from "./P"
 import PlainLink from "./PlainLink"
 import PlainList from "./PlainList"
 import Pre from "./Pre"
+import Small from "./Small"
 import Table from "./Table"
 
 export {
@@ -35,5 +36,6 @@ export {
   PlainLink,
   PlainList,
   Pre,
+  Small,
   Table,
 }

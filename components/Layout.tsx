@@ -6,7 +6,7 @@ import { css, Global, jsx } from "@emotion/core"
 import dynamic from "next/dynamic"
 import { ReactElement, useEffect } from "react"
 import siteConfig from "../siteconfig.json"
-import { Atoms, H1, P } from "./designSystem"
+import { Atoms, H1, P, Small } from "./designSystem"
 import DesignSystemProvider from "./designSystem/DesignSystemProvider"
 import Footer from "./Footer"
 import Header from "./Header"
@@ -60,13 +60,8 @@ const Content = ({ frontMatter, children }): ReactElement => {
             </H1>
             {date && (
               <P>
-                <time
-                  css={css`
-                    color: var(--meta-color);
-                    font-size: ${Atoms.font.size.small};
-                  `}
-                >
-                  Published {formattedDate}
+                <time>
+                  <Small>Published {formattedDate}</Small>
                 </time>
               </P>
             )}

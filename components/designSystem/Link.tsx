@@ -2,7 +2,6 @@
 import { css, jsx, SerializedStyles } from "@emotion/core"
 import { default as NextLink } from "next/link"
 import { ReactElement, ReactNode } from "react"
-import { Atoms } from "."
 
 export interface LinkProps {
   children: ReactNode
