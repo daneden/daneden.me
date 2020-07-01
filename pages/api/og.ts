@@ -17,6 +17,20 @@ const getScreenshot = async function ({ url, type = "png" }) {
   )}' ].map(fontName => new FontFaceObserver(fontName).load()))`
 
   const page = await browser.newPage()
+
+  // add header for the navigation requests
+  page.on("request", (request) => {
+    // Do nothing in case of non-navigation requests.
+    if (!request.isNavigationRequest()) {
+      request.continue()
+      return
+    }
+    // Add a new header for navigation request.
+    const headers = request.headers()
+    headers["X-Internal"] = 1
+    request.continue({ headers })
+  })
+
   await page.goto(url, {
     waitUntil: "networkidle2",
   })
