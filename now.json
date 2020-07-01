@@ -35,13 +35,7 @@
       "dest": "/uploads/$1"
     },
     { "src": "/feed.xml", "dest": "/rss.xml" },
-    {
-      "src": "/fonts/fonts.css",
-      "headers": {
-        "Cache-Control": "s-maxage=1, stale-while-revalidate"
-      },
-      "dest": "/fonts/fonts.css"
-    },
+
     {
       "src": "/fonts/(.*)",
       "headers": {
