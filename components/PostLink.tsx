@@ -3,7 +3,7 @@ import { MDXPost } from "*.mdx"
 import formatDate from "@/utils/formatDate"
 import { css, jsx } from "@emotion/core"
 import { ReactElement } from "react"
-import { Atoms } from "./designSystem"
+import { Atoms, Small } from "./designSystem"
 import PlainLink from "./designSystem/PlainLink"
 
 interface PlainLinkProps {
@@ -22,7 +22,7 @@ const PostLink = ({ post }: PlainLinkProps): ReactElement<HTMLDivElement> => {
     <PlainLink css={liStyle} href={post.slug}>
       <div>{post.title}</div>
       <time>
-        <em>{date}</em>
+        <Small display="block">{date}</Small>
       </time>
     </PlainLink>
   )
