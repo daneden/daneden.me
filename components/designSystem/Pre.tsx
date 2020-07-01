@@ -1,9 +1,8 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
 import styled from "@emotion/styled"
-import SyntaxHiglight from "components/SyntaxHighlight"
+import SyntaxHighlight from "components/SyntaxHighlight"
 import React, { ReactChildren, ReactElement, ReactNode } from "react"
-import { Atoms } from "."
 import Code from "./Code"
 
 type PreProps = React.HTMLAttributes<HTMLPreElement> & {
@@ -14,9 +13,7 @@ type PreProps = React.HTMLAttributes<HTMLPreElement> & {
 const StyledCode = styled(Code)`
   line-height: 1.5;
   display: block;
-  margin-bottom: ${Atoms.spacing.medium};
   white-space: pre;
-  max-width: 100%;
   overflow: auto;
 
   & code {
@@ -26,7 +23,7 @@ const StyledCode = styled(Code)`
 
 const Pre = (props: PreProps): ReactElement<typeof React.Fragment> => (
   <>
-    <SyntaxHiglight />
+    <SyntaxHighlight />
     <StyledCode as="pre" {...props} />
   </>
 )

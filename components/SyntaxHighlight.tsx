@@ -44,10 +44,11 @@ export default function SyntaxHiglight(): ReactElement<unknown> {
 
         /* Code blocks */
         pre[class*="language-"] {
-          padding: 1em;
+          box-sizing: content-box;
           margin: 0.5em -1em;
-          overflow: auto;
           margin-bottom: 1.5rem;
+          overflow: auto;
+          padding: 1em;
         }
 
         :not(pre) > code[class*="language-"],
