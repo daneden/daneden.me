@@ -88,19 +88,12 @@ export default function OpenGraphImagePage({
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const {
-    req: {
-      headers: { "X-Internal": isInternal = undefined },
-    },
+    req: { headers },
     res,
     query: { title = "Hello World" },
   } = context
 
-  if (isInternal !== "true") {
-    res.setHeader("location", "/")
-    res.statusCode = 302
-    res.end()
-    return
-  }
+  console.log(headers)
 
   return {
     props: {
