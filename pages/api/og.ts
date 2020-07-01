@@ -17,6 +17,7 @@ const getScreenshot = async function ({ url, type = "png" }) {
   )}' ].map(fontName => new FontFaceObserver(fontName).load()))`
 
   const page = await browser.newPage()
+  await page.setRequestInterception(true)
 
   // add header for the navigation requests
   page.on("request", (request) => {
