@@ -2,7 +2,6 @@
 import formatDate from "@/utils/formatDate"
 import widont from "@/utils/widont"
 import { css, Global, jsx } from "@emotion/core"
-import dynamic from "next/dynamic"
 import { ReactElement } from "react"
 import siteConfig from "../siteconfig.json"
 import { Atoms, H1, P, Small } from "./designSystem"
@@ -10,6 +9,7 @@ import DesignSystemProvider from "./designSystem/DesignSystemProvider"
 import Footer from "./Footer"
 import Header from "./Header"
 import Metatags from "./Metatags"
+import SkipLink from "./SkipLink"
 import Wrapper from "./Wrapper"
 
 const Content = ({ frontMatter, children }): ReactElement => {
@@ -19,8 +19,6 @@ const Content = ({ frontMatter, children }): ReactElement => {
   const date = frontMatter?.date
   const formattedDate = formatDate(date)
   const excerpt = frontMatter?.excerpt
-
-  const SkipLink = dynamic(() => import("components/SkipLink"))
 
   return (
     <>
