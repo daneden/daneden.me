@@ -88,12 +88,18 @@ export default function OpenGraphImagePage({
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const {
-    req: { headers },
+    req: {
+      headers: { "user-agent": userAgent },
+    },
     res,
     query: { title = "Hello World" },
   } = context
 
-  console.log(headers)
+  if (userAgent.indexOf("HeadlessChrome") === -1) {
+    res.setHeader("location", "/")
+    res.statusCode = 302
+    res.end()
+  }
 
   return {
     props: {
