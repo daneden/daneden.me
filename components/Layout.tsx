@@ -1,10 +1,9 @@
 /** @jsx jsx */
-import { initGA, logPageView } from "@/utils/analytics"
 import formatDate from "@/utils/formatDate"
 import widont from "@/utils/widont"
 import { css, Global, jsx } from "@emotion/core"
 import dynamic from "next/dynamic"
-import { ReactElement, useEffect } from "react"
+import { ReactElement } from "react"
 import siteConfig from "../siteconfig.json"
 import { Atoms, H1, P, Small } from "./designSystem"
 import DesignSystemProvider from "./designSystem/DesignSystemProvider"
@@ -22,14 +21,6 @@ const Content = ({ frontMatter, children }): ReactElement => {
   const excerpt = frontMatter?.excerpt
 
   const SkipLink = dynamic(() => import("components/SkipLink"))
-
-  useEffect(() => {
-    if (!window.GA_INITIALIZED) {
-      initGA()
-      window.GA_INITIALIZED = true
-    }
-    logPageView()
-  })
 
   return (
     <>
