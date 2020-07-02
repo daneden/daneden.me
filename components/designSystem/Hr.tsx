@@ -1,10 +1,10 @@
-import styled from "@emotion/styled"
+import cxs from "cxs/component"
 import { Atoms } from "."
 
-export default styled("hr")`
-  border: 2px solid var(--meta-color, ${Atoms.colors.meta});
-  content: "";
-  display: block;
-  height: 1px;
-  margin: ${Atoms.spacing.large} 0;
-`
+export default cxs("hr")({
+  border: `2px solid var(--meta-color, ${Atoms.colors.meta})`,
+  content: "",
+  display: "block",
+  height: 1,
+  margin: `${Atoms.spacing.large} 0`,
+})

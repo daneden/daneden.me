@@ -1,48 +1,48 @@
-import styled from "@emotion/styled"
+import cxs from "cxs/component"
 import Atoms from "./atoms"
 
-const AlignedContainer = styled("div")`
-  width: 100%;
-  z-index: 1;
+const AlignedContainer = cxs("div")({
+  width: "100%",
+  zIndex: 1,
 
-  @media (min-width: ${Atoms.breakpoints.narrow}) {
-    width: 40%;
-  }
+  [`@media (min-width: ${Atoms.breakpoints.narrow})`]: {
+    width: "40%",
+  },
 
-  @media (min-width: ${Atoms.breakpoints.medium}) {
-    width: 50%;
-  }
-`
+  [`@media (min-width: ${Atoms.breakpoints.medium})`]: {
+    width: "50%",
+  },
+})
 
-const Left = styled(AlignedContainer)`
-  float: left;
-  margin-left: -25%;
-  margin-right: ${Atoms.spacing.medium};
+const Left = cxs(AlignedContainer)({
+  float: "left",
+  marginLeft: "-25%",
+  marginRight: Atoms.spacing.medium,
 
-  @media (max-width: ${Atoms.breakpoints.medium}) {
-    margin-left: 0;
-  }
+  [`@media (max-width: ${Atoms.breakpoints.medium})`]: {
+    marginLeft: 0,
+  },
 
-  @media (max-width: ${Atoms.breakpoints.narrow}) {
-    float: none;
-    margin-right: 0;
-  }
-`
+  [`@media (max-width: ${Atoms.breakpoints.narrow})`]: {
+    float: "none",
+    marginRight: 0,
+  },
+})
 
-const Right = styled(AlignedContainer)`
-  float: right;
-  margin-left: ${Atoms.spacing.medium};
-  margin-right: -25%;
+const Right = cxs(AlignedContainer)({
+  float: "right",
+  marginLeft: Atoms.spacing.medium,
+  marginRight: "-25%",
 
-  @media (max-width: ${Atoms.breakpoints.medium}) {
-    margin-right: 0;
-  }
+  [`@media (max-width: ${Atoms.breakpoints.medium})`]: {
+    marginRight: 0,
+  },
 
-  @media (max-width: ${Atoms.breakpoints.narrow}) {
-    float: none;
-    margin-left: 0;
-  }
-`
+  [`@media (max-width: ${Atoms.breakpoints.narrow})`]: {
+    float: "none",
+    marginLeft: 0,
+  },
+})
 
 const Align = { Left, Right }
 

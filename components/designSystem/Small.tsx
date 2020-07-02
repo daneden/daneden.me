@@ -1,4 +1,4 @@
-import styled from "@emotion/styled"
+import cxs from "cxs/component"
 import { Atoms } from "."
 
 type DisplayType = "block" | "inline-block"
@@ -8,11 +8,10 @@ interface Props {
   display?: DisplayType
   as?: React.ElementType
 }
-export default styled.small<Props>`
-  font-size: ${Atoms.font.size.small};
-  letter-spacing: 0.025em;
-  line-height: ${Atoms.baseline};
-  display: ${({ display = "inline-block" }): DisplayType => display};
-  color: ${({ receded = true }): string =>
-    receded ? "var(--meta-color)" : "inherit"};
-`
+export default cxs("small")<Props>(({ display = "inline-block", receded }) => ({
+  fontSize: Atoms.font.size.small,
+  letterSpacing: "0.025em",
+  lineHeight: Atoms.baseline,
+  display,
+  color: receded ? "var(--meta-color)" : "inherit",
+}))

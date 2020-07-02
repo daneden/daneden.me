@@ -1,4 +1,4 @@
-import styled from "@emotion/styled"
+import cxs from "cxs/component"
 import Atoms from "./atoms"
 
 export interface FigureProps {
@@ -7,26 +7,26 @@ export interface FigureProps {
   margin?: boolean
 }
 
-const Figure = styled("figure")<FigureProps>(
-  ({ margin = true, responsive = true }) => `
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  writing-mode: horizontal-tb;
-  margin-bottom: ${margin ? Atoms.spacing.medium : 0};
+const Figure = cxs("figure")<FigureProps>(
+  ({ margin = true, responsive = true }) => ({
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    writingMode: "horizontal-tb",
+    marginBottom: margin ? Atoms.spacing.medium : 0,
 
-  img {
-    display: block;
-    width: ${responsive ? "100%" : "auto"};
-    flex: 1 1 auto;
-    order: 2;
-  }
+    " img": {
+      display: "block",
+      width: responsive ? "100%" : "auto",
+      flex: "1 1 auto",
+      order: 2,
+    },
 
-  figcaption {
-    order: 3;
-    margin-top: ${Atoms.spacing.xxsmall};
-  }
-`
+    " figcaption": {
+      order: 3,
+      marginTop: Atoms.spacing.xxsmall,
+    },
+  })
 )
 
 export default Figure

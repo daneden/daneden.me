@@ -1,6 +1,4 @@
-/** @jsx jsx */
-import { jsx } from "@emotion/core"
-import styled from "@emotion/styled"
+import cxs from "cxs/component"
 import { ReactElement, ReactNode } from "react"
 import { Atoms } from "./designSystem"
 
@@ -9,15 +7,15 @@ interface WrapperProps {
   children: ReactNode[]
 }
 
-const StyledWrapper = styled("div")`
-  box-sizing: initial;
-  margin: 0 auto;
-  max-width: ${Atoms.widths.container};
+const StyledWrapper = cxs("div")({
+  boxSizing: "initial",
+  margin: "0 auto",
+  maxWidth: Atoms.widths.container,
 
-  :focus {
-    outline: none;
-  }
-`
+  ":focus": {
+    outline: "none",
+  },
+})
 
 export default function Wrapper({
   id = "content",

@@ -1,7 +1,5 @@
-/** @jsx jsx */
 import widont from "@/utils/widont"
-import { jsx } from "@emotion/core"
-import styled from "@emotion/styled"
+import cxs from "cxs/component"
 import { ReactElement } from "react"
 import BOOKS from "../data/books.json"
 import Book from "./Book"
@@ -19,13 +17,13 @@ const books = BOOKS.map((book) => {
   }
 }).sort((a, b) => strippedTitle(a.title).localeCompare(strippedTitle(b.title)))
 
-const Library = styled("div")`
-  align-content: start;
-  place-items: start;
-  display: grid;
-  grid-gap: ${Atoms.spacing.medium};
-  grid-template-columns: 1fr;
-`
+const Library = cxs("div")({
+  alignContent: "start",
+  placeItems: "start",
+  display: "grid",
+  gridGap: Atoms.spacing.medium,
+  gridTemplateColumns: "1fr",
+})
 
 const BookList = (): ReactElement<typeof Library> => (
   <Library>

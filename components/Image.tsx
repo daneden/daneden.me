@@ -1,10 +1,17 @@
-/** @jsx jsx */
 import Markdown from "@/utils/Markdown"
-import { jsx } from "@emotion/core"
+import cxs from "cxs/component"
 import React, { FunctionComponent } from "react"
 import Imgix from "react-imgix"
 import { Align, Atoms, Caption, Figure } from "./designSystem"
 import { FigureProps } from "./designSystem/Figure"
+
+const ImgxWrapper = cxs("div")((props) => ({
+  "@media (prefers-color-scheme: dark)": {
+    filter: props.invertInDarkMode
+      ? "invert(100%) hue-rotate(180deg)"
+      : "initial",
+  },
+}))
 
 interface ImageProps extends FigureProps {
   align?: "left" | "right"
@@ -58,21 +65,16 @@ const Image: FunctionComponent<ImageProps> = ({
       : `https://daneden.imgix.net/${src}`
 
   const img = responsive ? (
-    <Imgix
-      src={url}
-      htmlAttributes={{
-        alt,
-        loading: "lazy",
-      }}
-      sizes={sizes}
-      css={
-        invertInDarkMode && {
-          "@media (prefers-color-scheme: dark)": {
-            filter: "invert(100%) hue-rotate(180deg)",
-          },
-        }
-      }
-    />
+    <ImgxWrapper invertInDarkMode={invertInDarkMode}>
+      <Imgix
+        src={url}
+        htmlAttributes={{
+          alt,
+          loading: "lazy",
+        }}
+        sizes={sizes}
+      />
+    </ImgxWrapper>
   ) : (
     <img alt={alt} src={url} />
   )

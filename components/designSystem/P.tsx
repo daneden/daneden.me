@@ -1,7 +1,7 @@
-import styled from "@emotion/styled"
+import csx from "cxs/component"
 import { Atoms } from "."
 
-export default styled("p")`
-  margin-bottom: ${Atoms.spacing.medium};
-  font-variant-numeric: oldstyle-nums;
-`
+export default csx("p")({
+  marginBottom: Atoms.spacing.medium,
+  fontVariantNumeric: "oldstyle-nums",
+})

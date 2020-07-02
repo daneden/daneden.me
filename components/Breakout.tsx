@@ -1,6 +1,4 @@
-/** @jsx jsx */
-import { jsx } from "@emotion/core"
-import styled from "@emotion/styled"
+import cxs from "cxs/component"
 import { ReactElement, ReactNode, useEffect } from "react"
 import { Atoms } from "./designSystem"
 
@@ -8,16 +6,16 @@ interface Props {
   children: ReactNode
 }
 
-const ContainerHack = styled.div`
-  margin: 0 auto;
-  width: 0;
-`
+const ContainerHack = cxs("div")({
+  margin: "0 auto",
+  width: 0,
+})
 
-const Container = styled.div`
-  width: calc(100vw - var(--scrollbar-width, 0px));
-  margin-left: -50vw;
-  padding: ${Atoms.spacing.small};
-`
+const Container = cxs("div")({
+  width: "calc(100vw - var(--scrollbar-width, 0px))",
+  marginLeft: "-50vw",
+  padding: Atoms.spacing.small,
+})
 
 export default function Breakout({
   children,

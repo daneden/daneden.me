@@ -1,19 +1,17 @@
-import styled from "@emotion/styled"
+import cxs from "cxs/component"
 
 interface PlainListProps {
   inline?: boolean
 }
 
-const PlainList = styled.ul<PlainListProps>(
-  (props) => `
-  list-style: none;
-  padding: 0;
-  margin: 0;
+const PlainList = cxs("ul")<PlainListProps>(({ inline }) => ({
+  listStyle: "none",
+  padding: 0,
+  margin: 0,
 
-  li {
-    display: ${props.inline ? "inline-block" : "block"};
-  }
-`
-)
+  " li": {
+    display: inline ? "inline-block" : "block",
+  },
+}))
 
 export default PlainList

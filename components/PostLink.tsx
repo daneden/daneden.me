@@ -1,30 +1,29 @@
-/** @jsx jsx */
 import { MDXPost } from "*.mdx"
 import formatDate from "@/utils/formatDate"
-import { css, jsx } from "@emotion/core"
+import cxs from "cxs/component"
 import { ReactElement } from "react"
 import { Atoms, Small } from "./designSystem"
 import PlainLink from "./designSystem/PlainLink"
 
-interface PlainLinkProps {
+interface Props {
   post: MDXPost
 }
 
-const liStyle = css`
-  display: block;
-  margin-bottom: ${Atoms.spacing.medium};
-`
+const Post = cxs(PlainLink)({
+  display: "block",
+  marginBottom: Atoms.spacing.medium,
+})
 
-const PostLink = ({ post }: PlainLinkProps): ReactElement<HTMLDivElement> => {
+const PostLink = ({ post }: Props): ReactElement<HTMLDivElement> => {
   const date = formatDate(post.date)
 
   return (
-    <PlainLink css={liStyle} href={post.slug}>
+    <Post href={post.slug}>
       <div>{post.title}</div>
       <time>
         <Small display="block">{date}</Small>
       </time>
-    </PlainLink>
+    </Post>
   )
 }
 

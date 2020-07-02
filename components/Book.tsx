@@ -1,7 +1,5 @@
-/** @jsx jsx */
 import { Atoms, PlainLink, Small } from "@/designSystem"
-import { jsx } from "@emotion/core"
-import styled from "@emotion/styled"
+import cxs from "cxs/component"
 import { FunctionComponent } from "react"
 import Image from "./Image"
 
@@ -13,12 +11,12 @@ export interface BookData {
   url: string
 }
 
-const BookContainer = styled.div`
-  align-items: start;
-  display: grid;
-  grid-gap: ${Atoms.spacing.medium};
-  grid-template-columns: ${Atoms.spacing.xxlarge} 1fr;
-`
+const BookContainer = cxs("div")({
+  alignItems: "start",
+  display: "grid",
+  gridGap: Atoms.spacing.medium,
+  gridTemplateColumns: `${Atoms.spacing.xxlarge} 1fr`,
+})
 
 const Book: FunctionComponent<BookData> = ({
   author,

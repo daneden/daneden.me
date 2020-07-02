@@ -1,4 +1,4 @@
-import { extractCritical } from "emotion-server"
+import cxs from "cxs"
 import Document, { Head, Html, Main, NextScript } from "next/document"
 import { ReactElement } from "react"
 
@@ -11,16 +11,14 @@ export default class MyDocument extends Document<Props> {
   // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
   static async getInitialProps(ctx) {
     const initialProps = await Document.getInitialProps(ctx)
-    const styles = extractCritical(initialProps.html)
+    const styles = cxs.css()
+    cxs.reset()
     return {
       ...initialProps,
       styles: (
         <>
           {initialProps.styles}
-          <style
-            data-emotion-css={styles.ids.join(" ")}
-            dangerouslySetInnerHTML={{ __html: styles.css }}
-          />
+          <style dangerouslySetInnerHTML={{ __html: styles }} />
         </>
       ),
     }
