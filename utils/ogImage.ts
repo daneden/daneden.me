@@ -1,7 +1,7 @@
 import { Atoms } from "@/designSystem"
+import widont from "@/utils/widont"
 import { createCanvas, registerFont } from "canvas"
 import siteConfig from "../siteconfig.json"
-import widont from "./widont"
 
 const fontNames = {
   soehne: "Soehne",
