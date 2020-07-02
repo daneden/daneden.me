@@ -21,6 +21,7 @@
     "dev": "next dev",
     "lint:js": "eslint \"**/*.{js,jsx,ts,tsx,md,mdx}\"",
     "lint": "npm-run-all lint:*",
+    "now-build": "yum install libuuid-devel libmount-devel && cp /lib64/{libuuid,libmount,libblkid}.so.1 node_modules/canvas/build/Release/ && npm run build",
     "precommit": "lint-staged",
     "start": "next start"
   },
