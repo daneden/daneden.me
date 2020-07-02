@@ -17,8 +17,8 @@ const PageHeader = cxs("header")({
 })
 
 const PageHeading = cxs(H1)({
-  marginBottom: 0,
-  paddingBottom: 0,
+  marginBottom: "0 !important",
+  paddingBottom: "0 !important",
 })
 
 const Content = ({ frontMatter, children }): ReactElement => {
