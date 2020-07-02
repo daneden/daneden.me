@@ -1,5 +1,4 @@
 import { Atoms } from "@/designSystem"
-import widont from "@/utils/widont"
 import { createCanvas, registerFont } from "canvas"
 import siteConfig from "../siteconfig.json"
 
@@ -66,7 +65,7 @@ export default function ogImage(title: string): Buffer | null {
   ctx.textBaseline = "middle"
   ctx.fillStyle = Atoms.colors.wash
 
-  const lines = getLines(ctx, widont(String(title)), textWidth)
+  const lines = getLines(ctx, title.replace(/ ([^ ]*)$/, "\u00A0$1"), textWidth)
   const textHeight = lines.length * lineHeight
 
   lines.map((line, i) => {
