@@ -3,8 +3,8 @@
 describe("Bar Chart Tests", function () {
   it("Should match image snapshot", function () {
     cy.visit(
-      "http://localhost:3000/api/og?title=This%20Blog%20%20Post%20Does%20Not%20Exist"
+      "http://localhost:3000/api/og?title=This%20Blog%20Post%20Does%20Not%20Exist&as=html"
     )
-    cy.get("body").matchImageSnapshot("openGraphImage")
+    cy.get("img").matchImageSnapshot("openGraphImage")
   })
 })
