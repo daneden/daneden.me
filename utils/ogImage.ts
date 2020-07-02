@@ -1,4 +1,5 @@
 import { Atoms } from "@/designSystem"
+import widont from "@/utils/widont"
 import { createCanvas, registerFont } from "canvas"
 import siteConfig from "../siteconfig.json"
 
@@ -7,11 +8,11 @@ const fontNames = {
   national: "National 2",
 }
 
-registerFont("./utils/ogFonts/National2App-Regular.ttf", {
+registerFont("./public/fonts/ogFonts/National2App-Regular.ttf", {
   family: fontNames.national,
 })
 
-registerFont("./utils/ogFonts/SoehneBreitApp-Fett.ttf", {
+registerFont("./public/fonts/ogFonts/SoehneBreitApp-Fett.ttf", {
   family: fontNames.soehne,
   weight: "bold",
 })
@@ -65,7 +66,7 @@ export default function ogImage(title: string): Buffer | null {
   ctx.textBaseline = "middle"
   ctx.fillStyle = Atoms.colors.wash
 
-  const lines = getLines(ctx, title.replace(/ ([^ ]*)$/, "\u00A0$1"), textWidth)
+  const lines = getLines(ctx, widont(title), textWidth)
   const textHeight = lines.length * lineHeight
 
   lines.map((line, i) => {
