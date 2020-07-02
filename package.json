@@ -43,8 +43,6 @@
     "next-mdx-enhanced": "^3.0.0",
     "next-mdx-frontmatter": "^0.0.3",
     "prismjs": "^1.20.0",
-    "puppeteer": "^4.0.1",
-    "puppeteer-core": "^4.0.1",
     "react": "16.13.1",
     "react-codepen-embed": "^1.0.1",
     "react-dom": "16.13.1",
