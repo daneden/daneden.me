@@ -1,8 +1,12 @@
 FROM gitpod/workspace-full-vnc
 
+USER gitpod
+
+ARG DEBIAN_FRONTEND=noninteractive
+
 # Install Cypress dependencies.
 RUN sudo apt-get update \
- && sudo DEBIAN_FRONTEND=noninteractive apt-get install -y \
+ && sudo apt-get install -yq \
    libgtk2.0-0 \
    libgtk-3-0 \
    libnotify-dev \
@@ -13,4 +17,10 @@ RUN sudo apt-get update \
    libxtst6 \
    xauth \
    xvfb \
+ && sudo rm -rf /var/lib/apt/lists/*
+
+# Install Chromium
+RUN sudo apt-get update -q \
+ && sudo apt-get install -yq \
+   chromium-browser \
  && sudo rm -rf /var/lib/apt/lists/*
