@@ -6,7 +6,7 @@ const soehne = process.cwd() + "/public/fonts/ogFonts/SoehneBreitApp-Fett.ttf"
 const national =
   process.cwd() + "/public/fonts/ogFonts/National2App-Regular.ttf"
 
-function asHTML(buffer: Buffer) {
+function asHTML(buffer: Buffer): string {
   return `
   <!DOCTYPE html>
   <html>
