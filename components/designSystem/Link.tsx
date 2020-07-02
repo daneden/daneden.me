@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { css, jsx, SerializedStyles } from "@emotion/core"
+import cxs from "cxs/component"
 import { default as NextLink } from "next/link"
 import { ReactElement, ReactNode } from "react"
 
@@ -11,16 +10,9 @@ export interface LinkProps {
   [x: string]: unknown
 }
 
-const styles = (underline: boolean): SerializedStyles => css`
-  --hoverColor: var(--site-color);
-  color: inherit;
-  text-decoration: ${underline ? "underline" : "none"};
-
-  &:hover,
-  &:focus {
-    color: var(--hoverColor);
-  }
-`
+const StyledLink = cxs("a")(({ underline }: LinkProps) => ({
+  textDecoration: underline ? "underline" : "none",
+}))
 
 const Link = ({
   children,
@@ -31,14 +23,14 @@ const Link = ({
   const external =
     href.startsWith("http") || href.startsWith("mailto") || href.startsWith("#")
   return external ? (
-    <a href={href} className={className} css={styles(underline)}>
+    <StyledLink href={href} className={className} underline={underline}>
       {children}
-    </a>
+    </StyledLink>
   ) : (
     <NextLink href={href} passHref>
-      <a href={href} className={className} css={styles(underline)}>
+      <StyledLink href={href} className={className} underline={underline}>
         {children}
-      </a>
+      </StyledLink>
     </NextLink>
   )
 }

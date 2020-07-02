@@ -1,32 +1,26 @@
-/** @jsx jsx */
-import { jsx } from "@emotion/core"
-import styled from "@emotion/styled"
+import cxs from "cxs/component"
 import { useRouter } from "next/router"
 import React, { ReactElement } from "react"
 import Atoms from "./designSystem/atoms"
 import PlainLink from "./designSystem/PlainLink"
 import PlainList from "./designSystem/PlainList"
 
-const { useContext } = React
-
 interface HeaderProps {
   siteTitle: string
 }
 
-const StyledHeader = styled("header")`
-  border-bottom: 1px solid;
-  display: grid;
-  grid-template-columns: calc(${Atoms.widths.content} - ${Atoms.spacing.medium}) 1fr;
-  grid-gap: ${Atoms.spacing.medium};
-  flex-wrap: wrap;
-
-  margin-bottom: ${Atoms.spacing.small};
-  padding-top: ${Atoms.spacing.xsmall};
-
-  @media (max-width: ${Atoms.breakpoints.medium}) {
-    grid-template-columns: 1fr 1fr;
-  }
-`
+const StyledHeader = cxs("header")({
+  borderBottom: "1px solid",
+  display: "grid",
+  gridTemplateColumns: `calc(${Atoms.widths.content} - ${Atoms.spacing.medium}) 1fr`,
+  gridGap: Atoms.spacing.medium,
+  flexWrap: "wrap",
+  marginBottom: Atoms.spacing.small,
+  paddingTop: Atoms.spacing.small,
+  [`@media (max-width: ${Atoms.breakpoints.medium})`]: {
+    gridTemplateColumns: "1fr 1fr",
+  },
+})
 
 const links = [
   {

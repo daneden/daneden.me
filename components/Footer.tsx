@@ -1,21 +1,19 @@
-/** @jsx jsx */
-import { jsx } from "@emotion/core"
-import styled from "@emotion/styled"
+import cxs from "cxs/component"
 import { ReactElement } from "react"
 import { Atoms, Link, Small } from "./designSystem"
 
-const StyledFooter = styled("footer")`
-  border-top: 1px solid;
-  font-family: ${Atoms.font.family.sans};
-  margin-top: ${Atoms.spacing.xlarge};
-  padding-bottom: ${Atoms.spacing.large};
-  padding-left: ${Atoms.widths.content};
-  padding-top: ${Atoms.spacing.small};
-`
+const StyledFooter = cxs("footer")({
+  borderTop: "1px solid",
+  fontFamily: Atoms.font.family.sans,
+  marginTop: Atoms.spacing.xlarge,
+  paddingBottom: Atoms.spacing.large,
+  paddingLeft: Atoms.widths.content,
+  paddingTop: Atoms.spacing.small,
+})
 
-const FooterWrapper = styled.div`
-  max-width: ${Atoms.widths.container};
-`
+const FooterWrapper = cxs("div")({
+  maxWidth: Atoms.widths.container,
+})
 
 export default function Footer(): ReactElement<typeof StyledFooter> {
   return (

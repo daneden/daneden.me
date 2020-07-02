@@ -1,7 +1,6 @@
-/** @jsx jsx */
 import formatDate from "@/utils/formatDate"
 import widont from "@/utils/widont"
-import { css, Global, jsx } from "@emotion/core"
+import cxs from "cxs/component"
 import { ReactElement } from "react"
 import siteConfig from "../siteconfig.json"
 import { Atoms, H1, P, Small } from "./designSystem"
@@ -11,6 +10,16 @@ import Header from "./Header"
 import Metatags from "./Metatags"
 import SkipLink from "./SkipLink"
 import Wrapper from "./Wrapper"
+
+const PageHeader = cxs("header")({
+  marginBottom: Atoms.spacing.medium,
+  paddingBottom: Atoms.spacing.medium,
+})
+
+const PageHeading = cxs(H1)({
+  marginBottom: 0,
+  paddingBottom: 0,
+})
 
 const Content = ({ frontMatter, children }): ReactElement => {
   const site = siteConfig
@@ -33,20 +42,8 @@ const Content = ({ frontMatter, children }): ReactElement => {
       <Header siteTitle={site.title} />
       <Wrapper>
         {!isRoot && (
-          <header
-            css={css`
-              padding-bottom: ${Atoms.spacing.medium};
-              margin-bottom: ${Atoms.spacing.medium};
-            `}
-          >
-            <H1
-              css={css`
-                margin-bottom: 0;
-                padding-bottom: 0;
-              `}
-            >
-              {widont(title)}
-            </H1>
+          <PageHeader>
+            <PageHeading>{widont(title)}</PageHeading>
             {date && (
               <P>
                 <time>
@@ -54,7 +51,7 @@ const Content = ({ frontMatter, children }): ReactElement => {
                 </time>
               </P>
             )}
-          </header>
+          </PageHeader>
         )}
         {children}
       </Wrapper>
@@ -69,76 +66,90 @@ export default function Layout({
 }): ReactElement<typeof DesignSystemProvider> {
   return (
     <DesignSystemProvider>
-      <Global
-        styles={{
-          ":root": {
-            colorScheme: "light dark",
-            "--site-color": Atoms.colors.siteLight,
-            "--text-color": Atoms.colors.text,
-            "--meta-color": Atoms.colors.blackAlpha,
-            "--wash-color": Atoms.colors.wash,
-            "--mark-color": Atoms.colors.mark,
-            "--highlight-color": Atoms.colors.highlight,
-            "--font-mono": Atoms.font.family.mono,
-
-            "@media (prefers-color-scheme: dark)": {
-              "--site-color": Atoms.colors.siteDark,
-              "--text-color": Atoms.colors.wash,
-              "--meta-color": Atoms.colors.whiteAlpha,
-              "--wash-color": Atoms.colors.text,
-            },
-          },
-
-          "*": {
-            boxSizing: "border-box",
-            margin: 0,
-            padding: 0,
-          },
-
-          video: {
-            display: "block",
-            marginBottom: Atoms.spacing.medium,
-            maxWidth: "100%",
-          },
-
-          html: {
-            backgroundColor: "var(--wash-color)",
-            color: "var(--text-color)",
-            flex: 1,
-            fontFamily: Atoms.font.family.sans,
-            fontSize: "clamp(100%, 2.5vw, 125%)",
-            lineHeight: Atoms.baseline,
-            paddingLeft: Atoms.spacing.medium,
-            paddingRight: Atoms.spacing.medium,
-          },
-
-          "ul, ol": {
-            marginBottom: Atoms.spacing.medium,
-            paddingLeft: Atoms.spacing.medium,
-          },
-
-          ".footnotes ol": {
-            paddingLeft: 0,
-          },
-
-          ".footnotes li": {
-            marginBottom: Atoms.spacing.xsmall,
-            fontSize: Atoms.font.size.small,
-            color: `var(--meta-color, ${Atoms.colors.meta})`,
-            letterSpacing: "0.025em",
-          },
-
-          ".footnote-ref": {
-            fontVariantNumeric: "tabular-nums",
-          },
-
-          ".footnote-backref": {
-            marginLeft: "0.25em",
-          },
-        }}
-      />
-
       <Content frontMatter={frontMatter}>{children}</Content>
+      <style jsx global>
+        {`
+          :root {
+            color-scheme: light dark;
+            --site-color: ${Atoms.colors.siteLight};
+            --text-color: ${Atoms.colors.text};
+            --meta-color: ${Atoms.colors.blackAlpha};
+            --wash-color: ${Atoms.colors.wash};
+            --mark-color: ${Atoms.colors.mark};
+            --highlight-color: ${Atoms.colors.highlight};
+            --font-mono: ${Atoms.font.family.mono};
+            --hover-color: var(--site-color);
+          }
+
+          @media (prefers-color-scheme: dark) {
+            :root {
+              --site-color: ${Atoms.colors.siteDark};
+              --text-color: ${Atoms.colors.wash};
+              --meta-color: ${Atoms.colors.whiteAlpha};
+              --wash-color: ${Atoms.colors.text};
+            }
+          }
+
+          * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+          }
+
+          video {
+            display: block;
+            margin-bottom: ${Atoms.spacing.medium};
+            max-width: 100%;
+          }
+
+          html {
+            background-color: var(--wash-color);
+            color: var(--text-color);
+            flex: 1;
+            font-family: ${Atoms.font.family.sans};
+            font-size: clamp(100%, 2.5vw, 125%);
+            line-height: ${Atoms.baseline};
+            padding-left: ${Atoms.spacing.medium};
+            padding-right: ${Atoms.spacing.medium};
+          }
+
+          ul,
+          ol {
+            margin-bottom: ${Atoms.spacing.medium};
+            padding-left: ${Atoms.spacing.medium};
+          }
+
+          a {
+            color: inherit;
+            text-decoration-line: underline;
+            text-decoration-color: var(--hover-color) !important;
+          }
+
+          a:hover,
+          a:focus {
+            color: var(--hover-color);
+          }
+
+          .footnotes ol {
+            padding-left: 0;
+          }
+
+          .footnotes li {
+            marginbottom: ${Atoms.spacing.xsmall};
+            font-size: ${Atoms.font.size.small};
+            color: var(--meta-color, ${Atoms.colors.meta});
+            letter-spacing: "0.025em";
+          }
+
+          .footnote-ref {
+            font-variant-numeric: tabular-nums;
+          }
+
+          .footnote-backref {
+            margin-left: 0.25em;
+          }
+        `}
+      </style>
     </DesignSystemProvider>
   )
 }

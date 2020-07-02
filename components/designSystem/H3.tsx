@@ -1,9 +1,9 @@
-import styled from "@emotion/styled"
+import cxs from "cxs/component"
 import { Atoms } from "."
 
-export default styled("h3")`
-  font-size: ${Atoms.font.size.regular};
-  font-weight: 400;
-  font-style: italic;
-  hyphens: initial;
-`
+export default cxs("h3")({
+  fontSize: Atoms.font.size.regular,
+  fontWeight: 400,
+  fontStyle: "italic",
+  hyphens: "initial",
+})

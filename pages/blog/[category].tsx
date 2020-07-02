@@ -1,7 +1,5 @@
-/** @jsx jsx */
 import { Link, P, PlainList } from "@/designSystem"
 import { allCategories, postsForCategory } from "@/utils/mdxUtils"
-import { jsx } from "@emotion/core"
 import Layout from "components/Layout"
 import PostLink from "components/PostLink"
 import { GetStaticPaths, GetStaticProps } from "next"

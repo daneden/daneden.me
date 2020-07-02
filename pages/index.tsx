@@ -1,5 +1,4 @@
 import { Atoms, Link, P } from "@/designSystem"
-import { Global } from "@emotion/core"
 import HomeContent from "components/HomeContent"
 import Layout from "components/Layout"
 import { ReactElement } from "react"
@@ -7,16 +6,16 @@ import { ReactElement } from "react"
 export default function HomePage(): ReactElement<typeof Layout> {
   return (
     <Layout frontMatter={{}}>
-      <Global
-        styles={{
-          html: {
-            "--site-color": `${Atoms.colors.siteDark} !important`,
-            "--text-color": `${Atoms.colors.wash} !important`,
-            "--wash-color": `${Atoms.colors.text} !important`,
-            "--meta-color": `${Atoms.colors.whiteAlpha} !important`,
-          },
-        }}
-      />
+      <style jsx global>
+        {`
+          html {
+            --site-color: ${Atoms.colors.siteDark} !important;
+            --text-color: ${Atoms.colors.wash} !important;
+            --wash-color: ${Atoms.colors.text} !important;
+            --meta-color: ${Atoms.colors.whiteAlpha} !important;
+          }
+        `}
+      </style>
 
       <HomeContent>
         <P>

@@ -1,20 +1,22 @@
-import styled from "@emotion/styled"
+import cxs from "cxs/component"
 import { Atoms } from "."
 
-export default styled("table")`
-  hyphens: initial;
-  margin-bottom: ${Atoms.spacing.medium};
+const commonProps = {
+  verticalAlign: "top",
+  paddingBottom: Atoms.spacing.xsmall,
+  paddingLeft: Atoms.spacing.xsmall,
+  paddingRight: Atoms.spacing.xsmall,
+}
 
-  th {
-    font-weight: normal;
-    font-family: ${Atoms.font.family.mono};
-  }
+export default cxs("table")({
+  hyphens: "initial",
+  marginBottom: Atoms.spacing.medium,
 
-  th,
-  td {
-    vertical-align: top;
-    padding-bottom: ${Atoms.spacing.xsmall};
-    padding-left: ${Atoms.spacing.xsmall};
-    padding-right: ${Atoms.spacing.xsmall};
-  }
-`
+  " th": {
+    ...commonProps,
+    fontWeight: "normal",
+    fontFamily: Atoms.font.family.mono,
+  },
+
+  " td": commonProps,
+})
