@@ -1,9 +1,7 @@
 import { Atoms } from "@/designSystem"
-import Canvas from "canvas"
-import widont from "./widont"
+import { createCanvas, registerFont } from "canvas"
 import siteConfig from "../siteconfig.json"
-
-const { createCanvas, registerFont } = Canvas
+import widont from "./widont"
 
 const fontNames = {
   soehne: "Soehne",
@@ -17,7 +15,6 @@ registerFont("./utils/ogFonts/National2App-Regular.ttf", {
 registerFont("./utils/ogFonts/SoehneBreitApp-Fett.ttf", {
   family: fontNames.soehne,
   weight: "bold",
-  style: "italic",
 })
 
 function getLines(
