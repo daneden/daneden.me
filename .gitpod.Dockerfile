@@ -4,6 +4,8 @@ USER gitpod
 
 ARG DEBIAN_FRONTEND=noninteractive
 
+RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
+
 # Install Cypress dependencies.
 RUN sudo apt-get update \
  && sudo apt-get install -yq \
