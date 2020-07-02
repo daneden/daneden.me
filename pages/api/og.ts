@@ -1,48 +1,43 @@
-/* eslint-disable @typescript-eslint/explicit-function-return-type */
+import ogImage from "@/utils/ogImage"
 import { NowRequest, NowResponse } from "@now/node"
-import chrome from "chrome-aws-lambda"
-import puppeteer from "puppeteer-core"
 
-const getScreenshot = async function ({ url, type = "png" }) {
-  const browser = await puppeteer.launch({
-    args: chrome.args,
-    executablePath: await chrome.executablePath,
-    headless: false,
-  })
-
-  const fontsToLoad = ["Soehne Breit Web", "National 2 Web"]
-
-  const waitForFontFaces = `Promise.all([ '${fontsToLoad.join(
-    `', '`
-  )}' ].map(fontName => new FontFaceObserver(fontName).load()))`
-
-  const page = await browser.newPage()
-
-  await page.goto(url, {
-    waitUntil: "networkidle2",
-  })
-
-  const element = await page.$("html")
-  await page.evaluate(waitForFontFaces)
-
-  return await element.screenshot({ type }).then(async (data) => {
-    await browser.close()
-    return data
-  })
+function asHTML(buffer: Buffer) {
+  return `
+  <!DOCTYPE html>
+  <html>
+  <img
+    width=600
+    height=600
+    src="data:image/png;base64,${buffer.toString("base64")}"
+  />
+  </html>
+  `
 }
 
-export default async (request: NowRequest, response: NowResponse) => {
-  const { title } = request.query
+export default async (
+  request: NowRequest,
+  response: NowResponse
+): Promise<void> => {
+  const { title, as } = request.query
 
   if (!title) {
     response.status(404).end()
   }
 
-  const result = await getScreenshot({
-    url: `https://${process.env.VERCEL_URL}/og?title=${title}`,
-  })
+  const buffer = ogImage(String(title))
+
+  if (as === "html") {
+    const data = asHTML(buffer)
+    response.writeHead(200, {
+      "Content-Type": "text/html",
+      "Content-Length": data.length,
+    })
+    response.write(data)
+    response.end()
+    return
+  }
 
   response.writeHead(200, { "Content-Type": "image/png" })
-  response.end(result)
+  response.end(buffer)
   return
 }

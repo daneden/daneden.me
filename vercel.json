@@ -14,13 +14,6 @@
       }
     },
     {
-      "src": "/og",
-      "dest": "/og",
-      "headers": {
-        "X-Robots-Tag": "noindex"
-      }
-    },
-    {
       "src": "/animate(.*)",
       "status": 308,
       "headers": { "Location": "https://animate.style/" }
