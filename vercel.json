@@ -2,6 +2,11 @@
   "github": {
     "silent": true
   },
+  "functions": {
+    "api/og.ts": {
+      "includeFiles": "public/fonts/ogFonts/**"
+    }
+  },
   "routes": [
     {
       "src": "/api/og(.*)",
