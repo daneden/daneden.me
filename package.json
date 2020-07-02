@@ -38,6 +38,7 @@
     "chrome-aws-lambda": "^3.1.1",
     "emotion": "^10.0.27",
     "emotion-server": "^10.0.27",
+    "file-loader": "^6.0.0",
     "fontfaceobserver": "^2.1.0",
     "mdx-prism": "^0.3.1",
     "next": "9.4.4",

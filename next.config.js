@@ -30,6 +30,18 @@ module.exports = withPlugins(
         }
       }
 
+      config.module.rules = [
+        ...config.module.rules,
+        {
+          test: /\.(ttf)$/i,
+          use: [
+            {
+              loader: "file-loader",
+            },
+          ],
+        },
+      ]
+
       return config
     },
   })

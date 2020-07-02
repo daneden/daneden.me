@@ -3,16 +3,25 @@ import widont from "@/utils/widont"
 import { createCanvas, registerFont } from "canvas"
 import siteConfig from "../siteconfig.json"
 
+const soehne = require.resolve(
+  "../public/fonts/ogFonts/SoehneBreitApp-Fett.ttf"
+)
+const national = require.resolve(
+  "../public/fonts/ogFonts/National2App-Regular.ttf"
+)
+
+console.log(soehne, national)
+
 const fontNames = {
   soehne: "Soehne",
   national: "National 2",
 }
 
-registerFont(process.cwd() + "/public/fonts/ogFonts/National2App-Regular.ttf", {
+registerFont(national, {
   family: fontNames.national,
 })
 
-registerFont(process.cwd() + "/public/fonts/ogFonts/SoehneBreitApp-Fett.ttf", {
+registerFont(soehne, {
   family: fontNames.soehne,
   weight: "bold",
 })
