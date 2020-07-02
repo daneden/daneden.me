@@ -55,7 +55,10 @@ export default async (
     return
   }
 
-  response.writeHead(200, { "Content-Type": "image/png" })
+  response.writeHead(200, {
+    "Content-Type": "image/png",
+    "Content-Encoding": "deflate, gzip",
+  })
   response.end(buffer)
   return
 }
