@@ -1,12 +1,10 @@
 import ogImage from "@/utils/ogImage"
 import { NowRequest, NowResponse } from "@now/node"
 
-const soehne = require.resolve(
-  __dirname + "/../../public/fonts/ogFonts/SoehneBreitApp-Fett.ttf"
-)
-const national = require.resolve(
-  __dirname + "/../../public/fonts/ogFonts/National2App-Regular.ttf"
-)
+const soehne = process.cwd() + "/public/fonts/ogFonts/SoehneBreitApp-Fett.ttf"
+
+const national =
+  process.cwd() + "/public/fonts/ogFonts/National2App-Regular.ttf"
 
 function asHTML(buffer: Buffer) {
   return `
