@@ -8,11 +8,11 @@ const fontNames = {
   national: "National 2",
 }
 
-registerFont("./public/fonts/ogFonts/National2App-Regular.ttf", {
+registerFont(process.cwd() + "/public/fonts/ogFonts/National2App-Regular.ttf", {
   family: fontNames.national,
 })
 
-registerFont("./public/fonts/ogFonts/SoehneBreitApp-Fett.ttf", {
+registerFont(process.cwd() + "/public/fonts/ogFonts/SoehneBreitApp-Fett.ttf", {
   family: fontNames.soehne,
   weight: "bold",
 })
