@@ -3,11 +3,31 @@ import widont from "@/utils/widont"
 import { createCanvas, registerFont } from "canvas"
 import siteConfig from "../siteconfig.json"
 
+interface FontConfig {
+  path: string
+  config: {
+    family: string
+    weight?: string
+    style?: string
+  }
+}
+
+interface OGConfig {
+  display: FontConfig
+  author: FontConfig
+}
+
+// This function takes a canvas, string, and maxwidth to determine
+// how to split the subject string based on its rendered length,
+// allowing text to wrap in the canvas
 function getLines(
   ctx: CanvasRenderingContext2D,
   text: string,
   maxWidth: number
 ): string[] {
+  // TODO: Add non-space punctuation to getLines for splitting
+  // Currently splitting just happens on spaces, but should probably
+  // also apply to e.g. hyphens
   const words = text.split(" ")
   const lines = []
   let currentLine = words[0]
@@ -26,25 +46,14 @@ function getLines(
   return lines
 }
 
-interface FontConfig {
-  path: string
-  config: {
-    family: string
-    weight?: string
-    style?: string
-  }
-}
-
-interface OGConfig {
-  display: FontConfig
-  author: FontConfig
-}
-
 export default function ogImage(title: string, fonts: OGConfig): Buffer | null {
+  // If there's no title, exit early
   if (!title) {
     return null
   }
 
+  // Register fonts that are passed in. This needs to be done before the
+  // canvas is created.
   Object.values(fonts).map(({ path, config }) => {
     registerFont(path, config)
   })
@@ -73,12 +82,14 @@ export default function ogImage(title: string, fonts: OGConfig): Buffer | null {
   const lines = getLines(ctx, widont(title), textWidth)
   const textHeight = lines.length * lineHeight
 
+  // Mapping over the lines rather than .join("\n")-ing them allows us
+  // to use a custom "line height"
   lines.map((line, i) => {
     const y = halfHeight - textHeight / 2 + lineHeight * i + lineHeight / 3
     ctx.fillText(line, offset, y)
   })
 
-  // Render the site name
+  // Render the site title, assuming the main text isn't equal to it
   if (title !== siteConfig.title) {
     ctx.font = `${authorSize}px ${fonts.author.config.family}`
     ctx.fillStyle = Atoms.colors.meta
@@ -91,7 +102,5 @@ export default function ogImage(title: string, fonts: OGConfig): Buffer | null {
     ctx.restore()
   }
 
-  const buffer = canvas.toBuffer("image/png")
-
-  return buffer
+  return canvas.toBuffer("image/png")
 }

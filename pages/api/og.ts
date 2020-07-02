@@ -2,11 +2,14 @@ import ogImage from "@/utils/ogImage"
 import { NowRequest, NowResponse } from "@now/node"
 import zlib from "zlib"
 
+// Requiring fonts in serverless functions is tricky; this code is a bit
+// fragile and relies on config in vercel.json
 const soehne = process.cwd() + "/public/fonts/ogFonts/SoehneBreitApp-Fett.ttf"
-
 const national =
   process.cwd() + "/public/fonts/ogFonts/National2App-Regular.ttf"
 
+// For Cypress tests (and sanity-checking), sometimes we want to return the
+// result as a HTML page
 function asHTML(buffer: Buffer): string {
   return `
   <!DOCTYPE html>
@@ -26,10 +29,12 @@ export default async (
 ): Promise<void> => {
   const { title, as } = request.query
 
+  // Return 404 for requests without a title
   if (!title) {
     response.status(404).end()
   }
 
+  // Create the image, passing in the custom fonts
   const buffer = ogImage(String(title), {
     display: {
       path: soehne,
@@ -45,6 +50,7 @@ export default async (
     },
   })
 
+  // Return HTML pages when requested
   if (as === "html") {
     const data = asHTML(buffer)
     response.writeHead(200, {
@@ -61,6 +67,7 @@ export default async (
     "Content-Encoding": "deflate, gzip",
   })
 
+  // Facebook's Open Graph requires og:image to be gzip,deflate encoded
   const deflated = zlib.deflateSync(buffer)
   const compressed = zlib.gzipSync(deflated)
 
