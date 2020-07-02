@@ -1,5 +1,6 @@
 import ogImage from "@/utils/ogImage"
 import { NowRequest, NowResponse } from "@now/node"
+import zlib from "zlib"
 
 const soehne = process.cwd() + "/public/fonts/ogFonts/SoehneBreitApp-Fett.ttf"
 
@@ -59,6 +60,10 @@ export default async (
     "Content-Type": "image/png",
     "Content-Encoding": "deflate, gzip",
   })
-  response.end(buffer)
+
+  const deflated = zlib.deflateSync(buffer)
+  const compressed = zlib.gzipSync(deflated)
+
+  response.end(compressed)
   return
 }

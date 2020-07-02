@@ -56,7 +56,8 @@
     "react-script-tag": "^1.1.2",
     "rehype": "^11.0.0",
     "rehype-slug": "^3.0.0",
-    "remark-toc": "^7.0.0"
+    "remark-toc": "^7.0.0",
+    "zlib": "^1.0.5"
   },
   "devDependencies": {
     "@types/node": "^14.0.14",
