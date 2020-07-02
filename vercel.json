@@ -3,7 +3,7 @@
     "silent": true
   },
   "functions": {
-    "api/og.ts": {
+    "pages/api/og.ts": {
       "includeFiles": "public/fonts/ogFonts/**"
     }
   },
