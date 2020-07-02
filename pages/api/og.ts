@@ -1,6 +1,13 @@
 import ogImage from "@/utils/ogImage"
 import { NowRequest, NowResponse } from "@now/node"
 
+const soehne = require.resolve(
+  __dirname + "/../../public/fonts/ogFonts/SoehneBreitApp-Fett.ttf"
+)
+const national = require.resolve(
+  __dirname + "/../../public/fonts/ogFonts/National2App-Regular.ttf"
+)
+
 function asHTML(buffer: Buffer) {
   return `
   <!DOCTYPE html>
@@ -24,7 +31,20 @@ export default async (
     response.status(404).end()
   }
 
-  const buffer = ogImage(String(title))
+  const buffer = ogImage(String(title), {
+    display: {
+      path: soehne,
+      config: {
+        family: "Soehne",
+      },
+    },
+    author: {
+      path: national,
+      config: {
+        family: "National 2",
+      },
+    },
+  })
 
   if (as === "html") {
     const data = asHTML(buffer)

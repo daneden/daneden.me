@@ -3,29 +3,6 @@ import widont from "@/utils/widont"
 import { createCanvas, registerFont } from "canvas"
 import siteConfig from "../siteconfig.json"
 
-const soehne = require.resolve(
-  "../public/fonts/ogFonts/SoehneBreitApp-Fett.ttf"
-)
-const national = require.resolve(
-  "../public/fonts/ogFonts/National2App-Regular.ttf"
-)
-
-console.log(soehne, national)
-
-const fontNames = {
-  soehne: "Soehne",
-  national: "National 2",
-}
-
-registerFont(national, {
-  family: fontNames.national,
-})
-
-registerFont(soehne, {
-  family: fontNames.soehne,
-  weight: "bold",
-})
-
 function getLines(
   ctx: CanvasRenderingContext2D,
   text: string,
@@ -49,10 +26,28 @@ function getLines(
   return lines
 }
 
-export default function ogImage(title: string): Buffer | null {
+interface FontConfig {
+  path: string
+  config: {
+    family: string
+    weight?: string
+    style?: string
+  }
+}
+
+interface OGConfig {
+  display: FontConfig
+  author: FontConfig
+}
+
+export default function ogImage(title: string, fonts: OGConfig): Buffer | null {
   if (!title) {
     return null
   }
+
+  Object.values(fonts).map(({ path, config }) => {
+    registerFont(path, config)
+  })
 
   const displaySize = 80
   const lineHeight = displaySize * 1
@@ -70,7 +65,7 @@ export default function ogImage(title: string): Buffer | null {
   ctx.fillRect(0, 0, width, height)
 
   // Render the blog post title
-  ctx.font = `bold ${displaySize}px ${fontNames.soehne}`
+  ctx.font = `bold ${displaySize}px ${fonts.display.config.family}`
   ctx.textAlign = "left"
   ctx.textBaseline = "middle"
   ctx.fillStyle = Atoms.colors.wash
@@ -85,7 +80,7 @@ export default function ogImage(title: string): Buffer | null {
 
   // Render the site name
   if (title !== siteConfig.title) {
-    ctx.font = `${authorSize}px ${fontNames.national}`
+    ctx.font = `${authorSize}px ${fonts.author.config.family}`
     ctx.fillStyle = Atoms.colors.meta
 
     ctx.translate(width - offset, halfHeight)
