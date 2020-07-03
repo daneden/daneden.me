@@ -1,7 +1,8 @@
+import { MDXPost } from "*.mdx"
 import formatDate from "@/utils/formatDate"
 import widont from "@/utils/widont"
 import cxs from "cxs/component"
-import { ReactElement } from "react"
+import { ReactNode } from "react"
 import siteConfig from "../siteconfig.json"
 import { Atoms, H1, P, Small } from "./designSystem"
 import DesignSystemProvider from "./designSystem/DesignSystemProvider"
@@ -10,6 +11,11 @@ import Header from "./Header"
 import Metatags from "./Metatags"
 import SkipLink from "./SkipLink"
 import Wrapper from "./Wrapper"
+
+type LayoutProps = {
+  frontMatter?: MDXPost
+  children: ReactNode
+}
 
 const PageHeader = cxs("header")({
   marginBottom: Atoms.spacing.medium,
@@ -21,12 +27,12 @@ const PageHeading = cxs(H1)({
   paddingBottom: "0 !important",
 })
 
-const Content = ({ frontMatter, children }): ReactElement => {
+const Content = ({ frontMatter, children }: LayoutProps) => {
   const site = siteConfig
   const title = frontMatter?.title || site.title
   const isRoot = title == site.title
   const date = frontMatter?.date
-  const formattedDate = formatDate(date)
+  const formattedDate = formatDate(date || "")
   const excerpt = frontMatter?.excerpt
 
   return (
@@ -60,10 +66,7 @@ const Content = ({ frontMatter, children }): ReactElement => {
   )
 }
 
-export default function Layout({
-  children,
-  frontMatter,
-}): ReactElement<typeof DesignSystemProvider> {
+export default function Layout({ children, frontMatter }: LayoutProps) {
   return (
     <DesignSystemProvider>
       <Content frontMatter={frontMatter}>{children}</Content>

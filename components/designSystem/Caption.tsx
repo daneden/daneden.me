@@ -1,6 +1,6 @@
-import { ReactElement } from "react"
+import { ReactNode } from "react"
 import Small from "./Small"
-export default function Caption({ children }): ReactElement {
+export default function Caption({ children }: { children: ReactNode }) {
   return (
     <figcaption>
       <Small display="block">{children}</Small>

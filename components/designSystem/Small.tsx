@@ -8,10 +8,12 @@ interface Props {
   display?: DisplayType
   as?: React.ElementType
 }
-export default cxs("small")<Props>(({ display = "inline-block", receded }) => ({
-  fontSize: Atoms.font.size.small,
-  letterSpacing: "0.025em",
-  lineHeight: Atoms.baseline,
-  display,
-  color: receded ? "var(--meta-color)" : "inherit",
-}))
+export default cxs<"small", Props>("small")(
+  ({ display = "inline-block", receded }: Props) => ({
+    fontSize: Atoms.font.size.small,
+    letterSpacing: "0.025em",
+    lineHeight: Atoms.baseline,
+    display,
+    color: receded ? "var(--meta-color)" : "inherit",
+  })
+)

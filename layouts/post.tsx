@@ -1,11 +1,11 @@
 import { MDXPost } from "*.mdx"
-import Layout from "components/Layout"
+import Layout from "@/components/Layout"
 import Head from "next/head"
-import { ReactElement } from "react"
+import { ReactNode } from "react"
 
 const katexPosts = ["Subatomic Design Systems"]
 export default function PostLayout(frontMatter: MDXPost) {
-  return ({ children }): ReactElement => {
+  return ({ children }: { children: ReactNode }) => {
     /**
      * KaTeX comes with a lot of CSS, which we don't want to use on every post.
      * We'll keep a record of the posts using KaTeX in `katexPosts` and check

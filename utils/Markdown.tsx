@@ -1,10 +1,7 @@
 import { Link } from "@/designSystem"
-import { ReactElement } from "react"
 import ReactMarkdown from "react-markdown"
 
-export default function Markdown({
-  children,
-}): ReactElement<typeof ReactMarkdown> {
+export default function Markdown({ children }: { children?: string }) {
   const renderers = {
     link: Link,
   }

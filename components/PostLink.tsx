@@ -18,7 +18,7 @@ const PostLink = ({ post }: Props): ReactElement<HTMLDivElement> => {
   const date = formatDate(post.date)
 
   return (
-    <Post href={post.slug}>
+    <Post href={post.slug as string}>
       <div>{post.title}</div>
       <time>
         <Small display="block">{date}</Small>

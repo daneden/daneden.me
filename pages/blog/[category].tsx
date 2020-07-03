@@ -1,7 +1,7 @@
+import Layout from "@/components/Layout"
+import PostLink from "@/components/PostLink"
 import { Link, P, PlainList } from "@/designSystem"
 import { allCategories, postsForCategory } from "@/utils/mdxUtils"
-import Layout from "components/Layout"
-import PostLink from "components/PostLink"
 import { GetStaticPaths, GetStaticProps } from "next"
 import { ReactElement } from "react"
 
@@ -46,6 +46,10 @@ export default function TagPage({
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
+  if (!params) {
+    throw new Error("No parameters passed for getStaticProps in category page")
+  }
+
   const { category } = params
   return {
     props: {

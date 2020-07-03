@@ -63,6 +63,7 @@
     "@typescript-eslint/eslint-plugin": "^2.34.0",
     "@typescript-eslint/parser": "^2.34.0",
     "babel-runtime": "^6.26.0",
+    "csstype": "^2.6.11",
     "cypress": "^4.9.0",
     "cypress-image-snapshot": "^3.1.1",
     "eslint": "^7.3.1",

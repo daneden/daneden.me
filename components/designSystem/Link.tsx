@@ -7,10 +7,9 @@ export interface LinkProps {
   underline?: boolean
   href: string
   className?: string
-  [x: string]: unknown
 }
 
-const StyledLink = cxs("a")(({ underline }: LinkProps) => ({
+const StyledLink = cxs<"a", LinkProps>("a")(({ underline }) => ({
   textDecoration: underline ? "underline" : "none",
 }))
 

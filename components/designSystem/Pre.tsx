@@ -1,4 +1,4 @@
-import SyntaxHighlight from "components/SyntaxHighlight"
+import SyntaxHighlight from "@/components/SyntaxHighlight"
 import cxs from "cxs/component"
 import React, { ReactChildren, ReactElement, ReactNode } from "react"
 import { codeStyle } from "./Code"

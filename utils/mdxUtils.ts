@@ -4,7 +4,7 @@ const allPosts = (allBlogPosts as MDXPost[])
   .map((frontmatter) => {
     return {
       ...frontmatter,
-      slug: frontmatter.__resourcePath
+      slug: (frontmatter.__resourcePath || "")
         .replace(/^blog\//, "/blog/")
         .replace(".mdx", ""),
     }
@@ -13,7 +13,7 @@ const allPosts = (allBlogPosts as MDXPost[])
   .map((post) => {
     return {
       ...post,
-      date: new Date(post.date),
+      date: new Date(post.date || ""),
     }
   })
   .sort((a, b) => {
@@ -25,7 +25,7 @@ export function postsForCategory(category: string): MDXPost[] {
 }
 
 export const allCategories: string[] = allPosts
-  .reduce((categories, post) => {
+  .reduce<string[]>((categories, post) => {
     return post.categories ? [...categories, ...post.categories] : categories
   }, [])
   .filter((v, i, a) => a.indexOf(v) === i)

@@ -1,10 +1,6 @@
-import React, { ReactElement } from "react"
+import React from "react"
 import Link, { LinkProps } from "./Link"
 
-type PlainLinkProps = LinkProps & {
-  underline?: never
-}
+type PlainLinkProps = Omit<LinkProps, "underline">
 
-export default (props: PlainLinkProps): ReactElement<typeof Link> => (
-  <Link {...props} underline={false} />
-)
+export default (props: PlainLinkProps) => <Link underline={false} {...props} />

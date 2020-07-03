@@ -5,13 +5,13 @@ import Imgix from "react-imgix"
 import { Align, Atoms, Caption, Figure } from "./designSystem"
 import { FigureProps } from "./designSystem/Figure"
 
-const ImgxWrapper = cxs("div")((props) => ({
-  "@media (prefers-color-scheme: dark)": {
-    filter: props.invertInDarkMode
-      ? "invert(100%) hue-rotate(180deg)"
-      : "initial",
-  },
-}))
+const ImgxWrapper = cxs<"div", { invertInDarkMode: boolean }>("div")(
+  ({ invertInDarkMode }) => ({
+    "@media (prefers-color-scheme: dark)": {
+      filter: invertInDarkMode ? "invert(100%) hue-rotate(180deg)" : "initial",
+    },
+  })
+)
 
 interface ImageProps extends FigureProps {
   align?: "left" | "right"

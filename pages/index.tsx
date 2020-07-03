@@ -1,11 +1,11 @@
+import HomeContent from "@/components/HomeContent"
+import Layout from "@/components/Layout"
 import { Atoms, Link, P } from "@/designSystem"
-import HomeContent from "components/HomeContent"
-import Layout from "components/Layout"
 import { ReactElement } from "react"
 
 export default function HomePage(): ReactElement<typeof Layout> {
   return (
-    <Layout frontMatter={{}}>
+    <Layout>
       <style jsx global>
         {`
           html {

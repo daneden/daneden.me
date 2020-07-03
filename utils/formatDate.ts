@@ -1,4 +1,4 @@
-export default function formatDate(date: Date | string): string {
+export default function formatDate(date: Date | string = ""): string {
   const options = {
     year: "numeric",
     month: "long",

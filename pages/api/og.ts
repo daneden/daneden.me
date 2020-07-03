@@ -51,6 +51,10 @@ export default async (
   })
 
   // Return HTML pages when requested
+  if (!buffer) {
+    return
+  }
+
   if (as === "html") {
     const data = asHTML(buffer)
     response.writeHead(200, {

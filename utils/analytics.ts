@@ -18,7 +18,7 @@ export const logEvent = ({
   label,
   value,
   nonInteraction,
-}): void => {
+}: ReactGA.EventArgs): void => {
   if (category && action) {
     ReactGA.event({ category, action, label, value, nonInteraction })
   }

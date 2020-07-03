@@ -4,7 +4,7 @@ interface PlainListProps {
   inline?: boolean
 }
 
-const PlainList = cxs("ul")<PlainListProps>(({ inline }) => ({
+const PlainList = cxs<"ul", PlainListProps>("ul")(({ inline }) => ({
   listStyle: "none",
   padding: 0,
   margin: 0,

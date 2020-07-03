@@ -7,7 +7,7 @@ export interface FigureProps {
   margin?: boolean
 }
 
-const Figure = cxs("figure")<FigureProps>(
+const Figure = cxs<"figure", FigureProps>("figure")(
   ({ margin = true, responsive = true }) => ({
     display: "flex",
     flexDirection: "column",

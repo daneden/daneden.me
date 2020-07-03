@@ -3,7 +3,17 @@ import { AppProps } from "next/app"
 import { ReactFragment, useEffect } from "react"
 import "../public/fonts/fonts.css"
 
-export function reportWebVitals({ id, name, label, value }): void {
+export function reportWebVitals({
+  id,
+  name,
+  label,
+  value,
+}: {
+  id: string
+  name: string
+  label: string
+  value: number
+}): void {
   if (window?.GA_INITIALIZED) {
     logEvent({
       category: `Next.js ${label} metric`,

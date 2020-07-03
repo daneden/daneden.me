@@ -4,7 +4,7 @@
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": false,
+    "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
@@ -15,11 +15,19 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
+      "*": ["./typings/*"],
       "@/utils/*": ["utils/*"],
+      "@/components/*": ["components/*"],
       "@/designSystem": ["components/designSystem/index"],
       "@/designSystem/*": ["components/designSystem/*"]
     }
   },
   "exclude": ["node_modules"],
-  "include": ["**/*.ts", "**/*.tsx", "mdx.d.ts", "**/*.mdx", "next-env.d.ts"]
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "typings/mdx.d.ts",
+    "**/*.mdx",
+    "next-env.d.ts"
+  ]
 }

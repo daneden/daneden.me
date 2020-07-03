@@ -1,8 +1,6 @@
 import { Atoms, PlainLink, Small } from "@/designSystem"
 import cxs from "cxs/component"
-import { FunctionComponent } from "react"
 import Image from "./Image"
-
 export interface BookData {
   author: string
   cover: string
@@ -18,13 +16,7 @@ const BookContainer = cxs("div")({
   gridTemplateColumns: `${Atoms.spacing.xxlarge} 1fr`,
 })
 
-const Book: FunctionComponent<BookData> = ({
-  author,
-  cover,
-  quote,
-  title,
-  url,
-}) => {
+const Book = ({ author, cover, quote, title, url }: BookData) => {
   const isExternalLink = url.startsWith("http")
   const contents = (
     <BookContainer>
