@@ -5,7 +5,6 @@ import { codeStyle } from "./Code"
 
 type PreProps = React.HTMLAttributes<HTMLPreElement> & {
   children: ReactChildren
-  as?: ReactNode
 }
 
 const StyledCode = cxs("pre")({
@@ -23,7 +22,7 @@ const StyledCode = cxs("pre")({
 const Pre = (props: PreProps): ReactElement<typeof React.Fragment> => (
   <>
     <SyntaxHighlight />
-    <StyledCode as="pre" {...props} />
+    <StyledCode {...props} />
   </>
 )
 

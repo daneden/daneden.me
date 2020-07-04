@@ -5,15 +5,16 @@ import Imgix from "react-imgix"
 import { Align, Atoms, Caption, Figure } from "./designSystem"
 import { FigureProps } from "./designSystem/Figure"
 
-const ImgxWrapper = cxs<"div", { invertInDarkMode: boolean }>("div")(
-  ({ invertInDarkMode }) => ({
-    "@media (prefers-color-scheme: dark)": {
-      filter: invertInDarkMode ? "invert(100%) hue-rotate(180deg)" : "initial",
-    },
-  })
-)
+const ImgxWrapper = cxs<
+  "div",
+  { invertInDarkMode: boolean; children: React.ReactNode }
+>("div")(({ invertInDarkMode }) => ({
+  "@media (prefers-color-scheme: dark)": {
+    filter: invertInDarkMode ? "invert(100%) hue-rotate(180deg)" : "initial",
+  },
+}))
 
-interface ImageProps extends FigureProps {
+interface ImageProps extends Omit<FigureProps, "children"> {
   align?: "left" | "right"
   alt?: string
   caption?: string

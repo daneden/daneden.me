@@ -5,6 +5,7 @@ export interface FigureProps {
   className?: string
   responsive?: boolean
   margin?: boolean
+  children: React.ReactNode
 }
 
 const Figure = cxs<"figure", FigureProps>("figure")(

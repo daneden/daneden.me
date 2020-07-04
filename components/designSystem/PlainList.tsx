@@ -2,6 +2,7 @@ import cxs from "cxs/component"
 
 interface PlainListProps {
   inline?: boolean
+  children: React.ReactNode
 }
 
 const PlainList = cxs<"ul", PlainListProps>("ul")(({ inline }) => ({

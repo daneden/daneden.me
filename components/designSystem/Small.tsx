@@ -1,13 +1,15 @@
 import cxs from "cxs/component"
 import { Atoms } from "."
+import * as React from "react"
 
 type DisplayType = "block" | "inline-block"
 
 interface Props {
   receded?: boolean
   display?: DisplayType
-  as?: React.ElementType
+  children: React.ReactNode
 }
+
 export default cxs<"small", Props>("small")(
   ({ display = "inline-block", receded }: Props) => ({
     fontSize: Atoms.font.size.small,
