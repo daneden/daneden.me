@@ -3900,6 +3900,11 @@ eslint-module-utils@^2.6.0:
     debug "^2.6.9"
     pkg-dir "^2.0.0"
 
+eslint-plugin-daneden@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-daneden/-/eslint-plugin-daneden-1.0.0.tgz#780682e561347f8eb22056c9be72bce1f1a55e92"
+  integrity sha512-iffDCi0QRwX1F3rXx9pp5f4cNeZs5n5S0rYECaO9fQb6UcPNnKhASCBSYwsBhO8uLEEnJgtwqAt2lPRdMXdViA==
+
 eslint-plugin-import@^2.22.0:
   version "2.22.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-import/-/eslint-plugin-import-2.22.0.tgz#92f7736fe1fde3e2de77623c838dd992ff5ffb7e"

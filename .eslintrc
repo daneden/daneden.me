@@ -22,9 +22,18 @@
     "plugin:mdx/recommended",
     "plugin:jsx-a11y/recommended"
   ],
-  "plugins": ["prettier", "import", "react", "react-hooks", "jsx-a11y"],
+  "plugins": [
+    "prettier",
+    "import",
+    "react",
+    "react-hooks",
+    "jsx-a11y",
+    "daneden",
+    "mdx"
+  ],
   "ignorePatterns": ["node_modules", "public/**/*.js", "*.woff2?", "*.ttf"],
   "rules": {
+    "daneden/explicit-let-type": "warn",
     "prettier/prettier": "error",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",

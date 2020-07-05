@@ -34,8 +34,8 @@ const Image: FunctionComponent<ImageProps> = ({
   margin = true,
   src,
 }) => {
-  let Wrapper
-  let sizes
+  let Wrapper: typeof Align.Left | typeof Align.Right | typeof React.Fragment
+  let sizes: string
 
   switch (align) {
     case "left":
