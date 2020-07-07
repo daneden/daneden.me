@@ -39,7 +39,10 @@ const Image: FunctionComponent<ImageProps> = ({
   let Wrapper: typeof Align.Left | typeof Align.Right | typeof React.Fragment
   const usesSrcSet = !src.endsWith("svg")
   const imageWidths = [114, 272, 340, 544, 680, 1360]
-  const [webpSupport, setWebpSupport] = useState(false)
+
+  // Assume webp support since it's on the majority of browsers and we want to
+  // reduce request counts
+  const [webpSupport, setWebpSupport] = useState(true)
 
   useEffect(() => {
     supportsWebp(setWebpSupport)
