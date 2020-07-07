@@ -21,7 +21,7 @@
     "dev": "next dev",
     "lint:js": "eslint \"**/*.{js,jsx,ts,tsx,md,mdx}\"",
     "lint": "npm-run-all lint:*",
-    "now-build": "yum install libuuid-devel libmount-devel && cp /lib64/{libuuid,libmount,libblkid}.so.1 node_modules/canvas/build/Release/ && npm run build",
+    "now-build": "yum install libglu1 libuuid-devel libmount-devel && cp /lib64/{libuuid,libmount,libblkid}.so.1 node_modules/canvas/build/Release/ && cp /libGL.so node_modules/cwebp-bin/vendor/cwebp && npm run build",
     "precommit": "lint-staged",
     "start": "next start"
   },
