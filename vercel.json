@@ -67,9 +67,9 @@
       "destination": "/images/favicon.png"
     },
     {
-      "source": "/((blog/)?([0-9]{4}/)([0-9]{1,2}/){1,2}(.*))",
+      "source": "/:year([0-9]{4})/:month([0-9]{1,2})?/:day([0-9]{1,2})?/:title(.*))",
       "permanent": true,
-      "destination": "/blog/$3$5"
+      "destination": "/blog/:year/:title"
     }
   ]
 }
