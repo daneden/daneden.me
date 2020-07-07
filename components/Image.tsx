@@ -1,9 +1,9 @@
 import Markdown from "@/utils/Markdown"
 import cxs from "cxs"
 import React, { FunctionComponent, useContext } from "react"
-import BrowserSupportContext from "./BrowserSupportContext"
 import { Align, Caption, Figure } from "./designSystem"
 import { FigureProps } from "./designSystem/Figure"
+import WebPSupportContext from "./WebPSupportContext"
 
 interface ImageProps extends Omit<FigureProps, "children"> {
   align?: "left" | "right"
@@ -28,13 +28,15 @@ const Image: FunctionComponent<ImageProps> = ({
   const usesSrcSet = !src.endsWith("svg")
   const extension = src.split(".").slice(-1)
   const imageWidths = [114, 272, 340, 544, 680, 1360]
-  const { webp: webpSupport } = useContext(BrowserSupportContext)
+
+  // Assume webp support by default to limit requests on modern browsers
+  const webPSupport = useContext(WebPSupportContext)
 
   const srcSet = imageWidths
     .map(
       (size) =>
         `/api/image?name=/uploads/${src}&w=${size}&fm=${
-          webpSupport ? "webp" : extension
+          webPSupport ? "webp" : extension
         }
          ${size}w`
     )
