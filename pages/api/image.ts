@@ -8,7 +8,7 @@ export default async (request: NowRequest, response: NowResponse) => {
     headers: { host, accept },
   } = request
 
-  const webp = accept?.includes("image/webp")
+  const supportsWebP = accept?.includes("image/webp")
 
   const image = await fetch(`http://${host}${name}`).then((d) => d.blob())
 
@@ -19,10 +19,13 @@ export default async (request: NowRequest, response: NowResponse) => {
     .resize(Number(width))
     .toBuffer()
     .then(async (buffer) => {
-      const optimised = webp
+      const optimised = supportsWebP
         ? await imageminWebp()(buffer)
         : await imagemin.buffer(buffer)
-      response.setHeader("Content-Type", webp ? "image/webp" : image.type)
+      response.setHeader(
+        "Content-Type",
+        supportsWebP ? "image/webp" : image.type
+      )
       response.status(200).send(optimised)
     })
     .catch((error) => {

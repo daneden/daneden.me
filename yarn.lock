@@ -1477,7 +1477,14 @@
     "@types/minimatch" "*"
     "@types/node" "*"
 
-"@types/imagemin@^7.0.0":
+"@types/imagemin-webp@^5.1.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@types/imagemin-webp/-/imagemin-webp-5.1.0.tgz#9f1919e8d56377c1910fc4c2f4d6710041cace3a"
+  integrity sha512-G+YGEJDj0gxzOPwoEU4DtXQTr3kapBBXUnfqyRzMxSmql4RJIl8buIvgkzaoQ2Yz6AHp5T4l+4djozmeWjo5XA==
+  dependencies:
+    "@types/imagemin" "*"
+
+"@types/imagemin@*", "@types/imagemin@^7.0.0":
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/@types/imagemin/-/imagemin-7.0.0.tgz#cb99d719190ebe421015213733d656fac1f8af2e"
   integrity sha512-BiNd5FazD5ZmJUYD9txsbrttL0P0welrb9yAPn6ykKK3kWufwFsxYqw5KdggfZQDjiNYwsBrX+Fwei0Xsw4oAw==
