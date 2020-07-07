@@ -30,6 +30,7 @@
     "cxs": "^6.2.0",
     "fontfaceobserver": "^2.1.0",
     "imagemin": "^7.0.1",
+    "imagemin-webp": "^6.0.0",
     "mdx-prism": "^0.3.1",
     "next": "9.4.4",
     "prismjs": "^1.20.0",
