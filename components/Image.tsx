@@ -1,6 +1,6 @@
 import Markdown from "@/utils/Markdown"
 import cxs from "cxs"
-import React, { FunctionComponent, useMemo, useState } from "react"
+import React, { FunctionComponent, useEffect, useState } from "react"
 import { Align, Caption, Figure } from "./designSystem"
 import { FigureProps } from "./designSystem/Figure"
 
@@ -39,13 +39,17 @@ const Image: FunctionComponent<ImageProps> = ({
   let Wrapper: typeof Align.Left | typeof Align.Right | typeof React.Fragment
   const usesSrcSet = !src.endsWith("svg")
   const imageWidths = [114, 272, 340, 544, 680, 1360]
-  const [, setWebpSupport] = useState(false)
-  const useWebp = useMemo(() => supportsWebp(setWebpSupport), [])
+  const [webpSupport, setWebpSupport] = useState(false)
+
+  useEffect(() => {
+    supportsWebp(setWebpSupport)
+  }, [])
+
   const srcSet = imageWidths
     .map(
       (size) =>
         `/api/image?name=/uploads/${src}&w=${size}${
-          useWebp ? "&fm=webp" : ""
+          webpSupport ? "&fm=webp" : ""
         } ${size}w`
     )
     .join(", ")
