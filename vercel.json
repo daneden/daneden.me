@@ -18,6 +18,12 @@
       }
     },
     {
+      "source": "/api/image(.*)",
+      "headers": {
+        "Cache-Control": "max-age=31536000, public, stale-while-revalidate"
+      }
+    },
+    {
       "source": "/uploads/(.*)",
       "headers": {
         "Cache-Control": "max-age=29030400, stale-while-revalidate"
