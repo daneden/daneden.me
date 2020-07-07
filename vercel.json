@@ -63,7 +63,7 @@
       "destination": "https://daneden.github.io/Toast/"
     },
     {
-      "source": "/images/favicon(.*)",
+      "source": "/images/favicon.ico",
       "destination": "/images/favicon.png"
     },
     {
