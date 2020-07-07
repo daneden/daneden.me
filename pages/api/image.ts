@@ -7,6 +7,7 @@ export default async (request: NowRequest, response: NowResponse) => {
   } = request
 
   const supportsWebP = accept?.includes("image/webp")
+  console.log(request.headers["user-agent"], accept)
 
   const image = await fetch(`http://${host}${name}`).then((d) => d.blob())
 
@@ -16,10 +17,10 @@ export default async (request: NowRequest, response: NowResponse) => {
   const sharped = sharp(imageBuffer).resize(Number(width))
   let result: Buffer
 
-  if (supportsWebP) {
-    result = await sharped.webp().toBuffer()
-  } else {
+  if (!supportsWebP) {
     result = await sharped.toBuffer()
+  } else {
+    result = await sharped.webp().toBuffer()
   }
   response.setHeader("Content-Type", supportsWebP ? "image/webp" : image.type)
   response.status(200).send(result)
