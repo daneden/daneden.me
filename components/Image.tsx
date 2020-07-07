@@ -24,10 +24,17 @@ const Image: FunctionComponent<ImageProps> = ({
   src,
 }) => {
   let Wrapper: typeof Align.Left | typeof Align.Right | typeof React.Fragment
-  const sizes = [272, 340, 544, 680, 1360]
-  const srcSet = sizes
+  const usesSrcSet = !src.endsWith("svg")
+  const imageWidths = [114, 272, 340, 544, 680, 1360]
+  const srcSet = imageWidths
     .map((size) => `/api/image?name=/uploads/${src}&w=${size} ${size}w`)
     .join(", ")
+
+  const defaultSizes =
+    "(min-width: 860px) 680px, (min-width: 621px) calc(57.14vw + 189px), calc(90.63vw - 18px)"
+  const alignedSizes =
+    "(min-width: 1024px) 340px, (min-width: 800px) 272px, (min-width: 621px) calc(75.84vw + 73px), calc(90.63vw - 18px)"
+  let sizes = defaultSizes
 
   const wrapperClass = cxs({
     "@media (prefers-color-scheme: dark)": {
@@ -38,9 +45,11 @@ const Image: FunctionComponent<ImageProps> = ({
   switch (align) {
     case "left":
       Wrapper = Align.Left
+      sizes = alignedSizes
       break
     case "right":
       Wrapper = Align.Right
+      sizes = alignedSizes
       break
     default:
       Wrapper = React.Fragment
@@ -52,6 +61,7 @@ const Image: FunctionComponent<ImageProps> = ({
       alt={alt}
       loading="lazy"
       srcSet={src.endsWith("svg") ? "" : srcSet}
+      sizes={sizes}
     />
   )
 
