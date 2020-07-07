@@ -1,6 +1,4 @@
 import { NowRequest, NowResponse } from "@now/node"
-import imagemin from "imagemin"
-import imageminWebp from "imagemin-webp"
 import sharp from "sharp"
 export default async (request: NowRequest, response: NowResponse) => {
   const {
@@ -15,21 +13,14 @@ export default async (request: NowRequest, response: NowResponse) => {
   const imageAsArrayBuffer = await image.arrayBuffer()
   const imageBuffer = Buffer.from(imageAsArrayBuffer)
 
-  sharp(imageBuffer)
-    .resize(Number(width))
-    .toBuffer()
-    .then(async (buffer) => {
-      const optimised = supportsWebP
-        ? await imageminWebp()(buffer)
-        : await imagemin.buffer(buffer)
-      response.setHeader(
-        "Content-Type",
-        supportsWebP ? "image/webp" : image.type
-      )
-      response.status(200).send(optimised)
-    })
-    .catch((error) => {
-      console.error(error)
-      response.status(500).send("There was an error processing this request")
-    })
+  const sharped = sharp(imageBuffer).resize(Number(width))
+  let result: Buffer
+
+  if (supportsWebP) {
+    result = await sharped.webp().toBuffer()
+  } else {
+    result = await sharped.toBuffer()
+  }
+  response.setHeader("Content-Type", supportsWebP ? "image/webp" : image.type)
+  response.status(200).send(result)
 }
