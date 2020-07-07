@@ -5,7 +5,7 @@ import { Align, Caption, Figure } from "./designSystem"
 import { FigureProps } from "./designSystem/Figure"
 
 function supportsWebp() {
-  if (!window) return false
+  if (typeof window === "undefined") return false
 
   const webpImage = new window.Image()
 
