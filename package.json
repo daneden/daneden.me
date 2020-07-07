@@ -27,6 +27,8 @@
   },
   "dependencies": {
     "canvas": "^2.6.1",
+    "cwebp": "^2.0.5",
+    "cwebp-bin": "^6.1.1",
     "cxs": "^6.2.0",
     "fontfaceobserver": "^2.1.0",
     "imagemin": "^7.0.1",
