@@ -5,7 +5,7 @@ export default async (request: NowRequest, response: NowResponse) => {
     query: {
       name,
       w: width,
-      fm: format = String(name).split(".")[1],
+      fm: format = name.toString().split(".")[1],
       h: height,
     },
     headers: { host, accept },
@@ -20,7 +20,7 @@ export default async (request: NowRequest, response: NowResponse) => {
   const imageBuffer = Buffer.from(imageAsArrayBuffer)
 
   const sharped = sharp(imageBuffer).resize(Number(width))
-  const result = await sharped.toFormat(format).toBuffer()
+  const result = await sharped.toFormat(format.toString()).toBuffer()
 
   response.setHeader("Content-Type", supportsWebP ? "image/webp" : image.type)
   response.status(200).send(result)
