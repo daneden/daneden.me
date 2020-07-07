@@ -10,7 +10,7 @@ export default async (request: NowRequest, response: NowResponse) => {
   const image = await fetch(`http://${host}${name}`).then((d) => d.blob())
 
   const imageAsArrayBuffer = await image.arrayBuffer()
-  const imageBuffer = new Buffer(imageAsArrayBuffer)
+  const imageBuffer = Buffer.from(imageAsArrayBuffer)
 
   sharp(imageBuffer)
     .resize(Number(width))
