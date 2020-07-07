@@ -1,16 +1,16 @@
 import Markdown from "@/utils/Markdown"
 import cxs from "cxs"
-import React, { FunctionComponent, useMemo } from "react"
+import React, { FunctionComponent, useMemo, useState } from "react"
 import { Align, Caption, Figure } from "./designSystem"
 import { FigureProps } from "./designSystem/Figure"
 
-function supportsWebp() {
+function supportsWebp(setter: (val: boolean) => void) {
   if (typeof window === "undefined") return false
 
   const webpImage = new window.Image()
 
   webpImage.onload = webpImage.onerror = function () {
-    return webpImage.height === 2
+    setter(webpImage.height === 2)
   }
 
   webpImage.src =
@@ -39,7 +39,8 @@ const Image: FunctionComponent<ImageProps> = ({
   let Wrapper: typeof Align.Left | typeof Align.Right | typeof React.Fragment
   const usesSrcSet = !src.endsWith("svg")
   const imageWidths = [114, 272, 340, 544, 680, 1360]
-  const useWebp = useMemo(() => supportsWebp(), [])
+  const [, setWebpSupport] = useState(false)
+  const useWebp = useMemo(() => supportsWebp(setWebpSupport), [])
   const srcSet = imageWidths
     .map(
       (size) =>
