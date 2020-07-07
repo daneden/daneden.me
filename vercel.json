@@ -7,10 +7,9 @@
       "includeFiles": "public/fonts/ogFonts/**"
     }
   },
-  "routes": [
+  "headers": [
     {
-      "src": "/api/og(.*)",
-      "dest": "/api/og$1",
+      "source": "/api/og(.*)",
       "headers": {
         "Cache-Control": "max-age=31536000, public, stale-while-revalidate",
         "Access-Control-Allow-Origin": "*",
@@ -19,42 +18,37 @@
       }
     },
     {
-      "src": "/animate(.*)",
-      "status": 308,
-      "headers": { "Location": "https://animate.style/" }
-    },
-    {
-      "src": "/toast(.*)",
-      "status": 308,
-      "headers": { "Location": "https://daneden.github.io/Toast/" }
-    },
-    {
-      "src": "/images/favicon(.*)",
-      "dest": "/images/favicon.png"
-    },
-    {
-      "src": "/uploads/(.*)",
-      "dest": "/uploads/$1",
+      "source": "/uploads/(.*)",
       "headers": {
         "Cache-Control": "max-age=29030400, stale-while-revalidate"
       }
     },
-    { "src": "/feed.xml", "dest": "/rss.xml" },
-
     {
-      "src": "/fonts/(.*)",
-      "dest": "/fonts/$1",
+      "source": "/fonts/(.*)",
       "headers": {
         "Cache-Control": "public, max-age=29030400, stale-while-revalidate"
       }
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/animate(.*)",
+      "permanent": true,
+      "destination": "https://animate.style/"
     },
     {
-      "src": "/((blog/)?([0-9]{4}/)([0-9]{1,2}/){1,2}(.*))",
-      "status": 308,
-      "headers": { "Location": "/blog/$3$5" }
+      "source": "/toast(.*)",
+      "permanent": true,
+      "destination": "https://daneden.github.io/Toast/"
     },
-    { "src": "/(.*)", "dest": "/$1" },
-    { "handle": "filesystem" },
-    { "src": "/.*", "status": 404, "dest": "/404" }
+    {
+      "source": "/images/favicon(.*)",
+      "destination": "/images/favicon.png"
+    },
+    {
+      "source": "/((blog/)?([0-9]{4}/)([0-9]{1,2}/){1,2}(.*))",
+      "permanent": true,
+      "destination": "/blog/$3$5"
+    }
   ]
 }
