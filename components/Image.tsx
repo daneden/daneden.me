@@ -38,6 +38,7 @@ const Image: FunctionComponent<ImageProps> = ({
 }) => {
   let Wrapper: typeof Align.Left | typeof Align.Right | typeof React.Fragment
   const usesSrcSet = !src.endsWith("svg")
+  const extension = src.split(".").slice(-1)
   const imageWidths = [114, 272, 340, 544, 680, 1360]
 
   // Assume webp support since it's on the majority of browsers and we want to
@@ -51,9 +52,10 @@ const Image: FunctionComponent<ImageProps> = ({
   const srcSet = imageWidths
     .map(
       (size) =>
-        `/api/image?name=/uploads/${src}&w=${size}${
-          webpSupport ? "&fm=webp" : ""
-        } ${size}w`
+        `/api/image?name=/uploads/${src}&w=${size}&fm=${
+          webpSupport ? "webp" : extension
+        }
+         ${size}w`
     )
     .join(", ")
 
