@@ -7,9 +7,6 @@ export default async (request: NowRequest, response: NowResponse) => {
     headers: { host },
   } = request
 
-  console.log("connection.encrypted:", (request as any).connection.encrypted)
-  console.log("protocol:", (request as any).protocol)
-
   const image = await fetch(`http://${host}${name}`).then((d) => d.blob())
 
   const imageAsArrayBuffer = await image.arrayBuffer()
