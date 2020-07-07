@@ -67,7 +67,7 @@
       "destination": "/images/favicon.png"
     },
     {
-      "source": "/:year([0-9]{4})/:month([0-9]{1,2})?/:day([0-9]{1,2})?/:title(.*))",
+      "source": "/:year(\\d+)/:month(\\d+)?/:day(\\d+})?/:title(.*))",
       "permanent": true,
       "destination": "/blog/:year/:title"
     }
