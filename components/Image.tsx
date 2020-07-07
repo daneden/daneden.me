@@ -1,19 +1,20 @@
 import Markdown from "@/utils/Markdown"
 import cxs from "cxs"
-import React, { FunctionComponent } from "react"
+import React, { FunctionComponent, useMemo } from "react"
 import { Align, Caption, Figure } from "./designSystem"
 import { FigureProps } from "./designSystem/Figure"
 
-async function supportsWebp() {
-  if (!self.createImageBitmap) return false
+function supportsWebp() {
+  if (!window) return false
 
-  const webpData =
-    "data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA="
-  const blob = await fetch(webpData).then((r) => r.blob())
-  return createImageBitmap(blob).then(
-    () => true,
-    () => false
-  )
+  const webpImage = new window.Image()
+
+  webpImage.onload = webpImage.onerror = function () {
+    return webpImage.height === 2
+  }
+
+  webpImage.src =
+    "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA"
 }
 
 interface ImageProps extends Omit<FigureProps, "children"> {
@@ -38,7 +39,7 @@ const Image: FunctionComponent<ImageProps> = ({
   let Wrapper: typeof Align.Left | typeof Align.Right | typeof React.Fragment
   const usesSrcSet = !src.endsWith("svg")
   const imageWidths = [114, 272, 340, 544, 680, 1360]
-  const useWebp = supportsWebp()
+  const useWebp = useMemo(() => supportsWebp(), [])
   const srcSet = imageWidths
     .map(
       (size) =>
@@ -78,7 +79,7 @@ const Image: FunctionComponent<ImageProps> = ({
       src={"/uploads/" + src}
       alt={alt}
       loading="lazy"
-      srcSet={src.endsWith("svg") ? "" : srcSet}
+      srcSet={usesSrcSet ? srcSet : ""}
       sizes={sizes}
     />
   )
