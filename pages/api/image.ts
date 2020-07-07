@@ -2,7 +2,12 @@ import { NowRequest, NowResponse } from "@now/node"
 import sharp from "sharp"
 export default async (request: NowRequest, response: NowResponse) => {
   const {
-    query: { name, w: width, fm: format, h: height },
+    query: {
+      name,
+      w: width,
+      fm: format = String(name).split(".")[1],
+      h: height,
+    },
     headers: { host, accept },
   } = request
 
@@ -15,13 +20,8 @@ export default async (request: NowRequest, response: NowResponse) => {
   const imageBuffer = Buffer.from(imageAsArrayBuffer)
 
   const sharped = sharp(imageBuffer).resize(Number(width))
-  let result: Buffer
+  const result = await sharped.toFormat(format).toBuffer()
 
-  if (!supportsWebP) {
-    result = await sharped.toBuffer()
-  } else {
-    result = await sharped.webp().toBuffer()
-  }
   response.setHeader("Content-Type", supportsWebP ? "image/webp" : image.type)
   response.status(200).send(result)
 }

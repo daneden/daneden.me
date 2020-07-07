@@ -4,6 +4,18 @@ import React, { FunctionComponent } from "react"
 import { Align, Caption, Figure } from "./designSystem"
 import { FigureProps } from "./designSystem/Figure"
 
+async function supportsWebp() {
+  if (!self.createImageBitmap) return false
+
+  const webpData =
+    "data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA="
+  const blob = await fetch(webpData).then((r) => r.blob())
+  return createImageBitmap(blob).then(
+    () => true,
+    () => false
+  )
+}
+
 interface ImageProps extends Omit<FigureProps, "children"> {
   align?: "left" | "right"
   alt?: string
@@ -26,8 +38,14 @@ const Image: FunctionComponent<ImageProps> = ({
   let Wrapper: typeof Align.Left | typeof Align.Right | typeof React.Fragment
   const usesSrcSet = !src.endsWith("svg")
   const imageWidths = [114, 272, 340, 544, 680, 1360]
+  const useWebp = supportsWebp()
   const srcSet = imageWidths
-    .map((size) => `/api/image?name=/uploads/${src}&w=${size} ${size}w`)
+    .map(
+      (size) =>
+        `/api/image?name=/uploads/${src}&w=${size}${
+          useWebp ? "&fm=webp" : ""
+        } ${size}w`
+    )
     .join(", ")
 
   const defaultSizes =
