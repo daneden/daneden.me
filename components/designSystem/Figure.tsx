@@ -1,4 +1,4 @@
-import cxs from "cxs/component"
+import cxs from "cxs"
 import Atoms from "./atoms"
 
 export interface FigureProps {
@@ -8,8 +8,13 @@ export interface FigureProps {
   children: React.ReactNode
 }
 
-const Figure = cxs<"figure", FigureProps>("figure")(
-  ({ margin = true, responsive = true }) => ({
+export default function Figure({
+  margin = true,
+  responsive = true,
+  children,
+  className,
+}: FigureProps) {
+  const styles = cxs({
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
@@ -28,6 +33,6 @@ const Figure = cxs<"figure", FigureProps>("figure")(
       marginTop: Atoms.spacing.xxsmall,
     },
   })
-)
 
-export default Figure
+  return <figure className={[styles, className].join(" ")}>{children}</figure>
+}

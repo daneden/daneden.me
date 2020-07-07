@@ -1,4 +1,4 @@
-import cxs from "cxs/component"
+import cxs from "cxs"
 import { default as NextLink } from "next/link"
 import { ReactElement, ReactNode } from "react"
 
@@ -9,27 +9,30 @@ export interface LinkProps {
   className?: string
 }
 
-const StyledLink = cxs<"a", LinkProps>("a")(({ underline }) => ({
-  textDecoration: underline ? "underline" : "none",
-}))
-
 const Link = ({
   children,
   href,
   underline = true,
-  className,
+  className: passedClassName,
 }: LinkProps): ReactElement<typeof NextLink> => {
+  const className = [
+    cxs({
+      textDecoration: underline ? "underline" : "none",
+    }),
+    passedClassName,
+  ].join(" ")
+
   const external =
     href.startsWith("http") || href.startsWith("mailto") || href.startsWith("#")
   return external ? (
-    <StyledLink href={href} className={className} underline={underline}>
+    <a href={href} className={className}>
       {children}
-    </StyledLink>
+    </a>
   ) : (
     <NextLink href={href} passHref>
-      <StyledLink href={href} className={className} underline={underline}>
+      <a href={href} className={className}>
         {children}
-      </StyledLink>
+      </a>
     </NextLink>
   )
 }

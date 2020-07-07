@@ -1,21 +1,9 @@
 import Markdown from "@/utils/Markdown"
 import cxs from "cxs"
-import React, { FunctionComponent, useEffect, useState } from "react"
+import React, { FunctionComponent, useContext } from "react"
+import BrowserSupportContext from "./BrowserSupportContext"
 import { Align, Caption, Figure } from "./designSystem"
 import { FigureProps } from "./designSystem/Figure"
-
-function supportsWebp(setter: (val: boolean) => void) {
-  if (typeof window === "undefined") return false
-
-  const webpImage = new window.Image()
-
-  webpImage.onload = webpImage.onerror = function () {
-    setter(webpImage.height === 2)
-  }
-
-  webpImage.src =
-    "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA"
-}
 
 interface ImageProps extends Omit<FigureProps, "children"> {
   align?: "left" | "right"
@@ -40,14 +28,7 @@ const Image: FunctionComponent<ImageProps> = ({
   const usesSrcSet = !src.endsWith("svg")
   const extension = src.split(".").slice(-1)
   const imageWidths = [114, 272, 340, 544, 680, 1360]
-
-  // Assume webp support since it's on the majority of browsers and we want to
-  // reduce request counts
-  const [webpSupport, setWebpSupport] = useState(true)
-
-  useEffect(() => {
-    supportsWebp(setWebpSupport)
-  }, [])
+  const { webp: webpSupport } = useContext(BrowserSupportContext)
 
   const srcSet = imageWidths
     .map(
@@ -65,7 +46,7 @@ const Image: FunctionComponent<ImageProps> = ({
     "(min-width: 1024px) 340px, (min-width: 800px) 272px, (min-width: 621px) calc(75.84vw + 73px), calc(90.63vw - 18px)"
   let sizes = defaultSizes
 
-  const wrapperClass = cxs({
+  const imageClassName = cxs({
     "@media (prefers-color-scheme: dark)": {
       filter: invertInDarkMode ? "invert(100%) hue-rotate(180deg)" : "initial",
     },
@@ -86,18 +67,19 @@ const Image: FunctionComponent<ImageProps> = ({
 
   const img = (
     <img
-      src={"/uploads/" + src}
       alt={alt}
+      className={imageClassName}
       loading="lazy"
-      srcSet={usesSrcSet ? srcSet : ""}
       sizes={sizes}
+      src={"/uploads/" + src}
+      srcSet={usesSrcSet ? srcSet : ""}
     />
   )
 
   return (
     <Wrapper>
       <Figure className={className} margin={margin} responsive={responsive}>
-        <div className={wrapperClass}>{img}</div>
+        {img}
         {caption && (
           <Caption>
             <Markdown>{caption}</Markdown>
