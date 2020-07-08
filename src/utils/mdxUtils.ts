@@ -13,6 +13,7 @@ const allPosts = (allBlogPosts as MDXPost[])
   .map((post) => {
     return {
       ...post,
+      ogSlug: post.slug?.replace(/^\//, "").replace(/\//g, "-") + ".png",
       date: new Date(post.date || ""),
     }
   })

@@ -1,21 +1,32 @@
+import { MDXPost } from "*.mdx"
 import { Atoms } from "@/designSystem"
 import widont from "@/utils/widont"
 import { createCanvas, registerFont } from "canvas"
+import { existsSync, mkdirSync, writeFileSync } from "fs"
+import path from "path"
 import siteConfig from "../data/siteconfig.json"
 
-interface FontConfig {
-  path: string
-  config: {
-    family: string
-    weight?: string
-    style?: string
-  }
-}
+const soehne = path.resolve(
+  process.cwd(),
+  "public",
+  "fonts",
+  "ogFonts",
+  "SoehneBreitApp-Fett.ttf"
+)
+const national = path.resolve(
+  process.cwd(),
+  "public",
+  "fonts",
+  "ogFonts",
+  "National2App-Regular.ttf"
+)
 
-interface OGConfig {
-  display: FontConfig
-  author: FontConfig
-}
+registerFont(soehne, {
+  family: "Soehne",
+})
+registerFont(national, {
+  family: "National 2",
+})
 
 // This function takes a canvas, string, and maxwidth to determine
 // how to split the subject string based on its rendered length,
@@ -46,18 +57,7 @@ function getLines(
   return lines
 }
 
-export default function ogImage(title: string, fonts: OGConfig): Buffer | null {
-  // If there's no title, exit early
-  if (!title) {
-    return null
-  }
-
-  // Register fonts that are passed in. This needs to be done before the
-  // canvas is created.
-  Object.values(fonts).map(({ path, config }) => {
-    registerFont(path, config)
-  })
-
+export default function ogImage(title: string): Buffer {
   const displaySize = 80
   const lineHeight = displaySize * 1
   const authorSize = 36
@@ -74,7 +74,7 @@ export default function ogImage(title: string, fonts: OGConfig): Buffer | null {
   ctx.fillRect(0, 0, width, height)
 
   // Render the blog post title
-  ctx.font = `bold ${displaySize}px ${fonts.display.config.family}`
+  ctx.font = `bold ${displaySize}px Soehne`
   ctx.textAlign = "left"
   ctx.textBaseline = "middle"
   ctx.fillStyle = Atoms.colors.wash
@@ -91,7 +91,7 @@ export default function ogImage(title: string, fonts: OGConfig): Buffer | null {
 
   // Render the site title, assuming the main text isn't equal to it
   if (title !== siteConfig.title) {
-    ctx.font = `${authorSize}px ${fonts.author.config.family}`
+    ctx.font = `${authorSize}px National 2`
     ctx.fillStyle = Atoms.colors.meta
 
     ctx.translate(width - offset, halfHeight)
@@ -103,4 +103,23 @@ export default function ogImage(title: string, fonts: OGConfig): Buffer | null {
   }
 
   return canvas.toBuffer("image/png")
+}
+
+export const generateOgImages = async (posts: MDXPost[]) => {
+  const dir = path.resolve("public", "og")
+
+  if (!existsSync(dir)) {
+    mkdirSync(dir)
+  }
+
+  posts.map(({ title, ogSlug }) => {
+    const filepath = path.resolve(dir, `${ogSlug}.png`)
+
+    if (!existsSync(filepath)) {
+      console.log("Creating image for post:", ogSlug)
+      const imgBuffer = ogImage(title)
+
+      writeFileSync(filepath, imgBuffer)
+    }
+  })
 }

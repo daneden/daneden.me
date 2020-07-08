@@ -1,10 +1,17 @@
 import { MDXPost } from "*.mdx"
 import Layout from "@/components/Layout"
+import allPosts from "@/utils/mdxUtils"
 import Head from "next/head"
 import { ReactNode } from "react"
 
 const katexPosts = ["Subatomic Design Systems"]
 export default function PostLayout(frontMatter: MDXPost) {
+  const extendedFrontMatter = allPosts.find(
+    (post) => post.__resourcePath === frontMatter.__resourcePath
+  )
+
+  console.log(extendedFrontMatter)
+
   return ({ children }: { children: ReactNode }) => {
     /**
      * KaTeX comes with a lot of CSS, which we don't want to use on every post.
@@ -28,7 +35,7 @@ export default function PostLayout(frontMatter: MDXPost) {
             />
           </Head>
         ) : null}
-        <Layout frontMatter={frontMatter}>{children}</Layout>
+        <Layout frontMatter={extendedFrontMatter}>{children}</Layout>
       </>
     )
   }
