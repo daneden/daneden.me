@@ -1,0 +1,480 @@
+---
+layout: "post"
+title: "Anatomy of a Typed React Component"
+date: "2020-06-30"
+categories:
+    - code
+---
+
+It's no secret that learning JavaScript (and React) in 2020 is confusing at best
+and downright intimidating at worst. Multiple technologies, tools, and
+approaches tend to get bundled together in React tutorials, and if you haven't
+written JavaScript for a few years, it can feel like a totally new landscape.
+
+In this post, I wanted to take a look at a very simple React component and walk
+step-by-step through the parts of the code that are unique to either:
+
+-   React
+-   Typed programming (using type checkers such as [Flow](https://flow.org) or
+    [TypeScript](https://www.typescriptlang.org/))
+-   "Modern" JavaScript (what's often referred to as "ES6", but essentially
+    covers any JavaScript language features that have changed since around 2013,
+    which is when I first started learning JavaScript in jQuery’s heyday)
+
+Here's what we'll be looking at, with some markers/annotations in place:
+
+```tsx
+// |--- 1 ---|    |--------- 2 ---------||-- 3 --|| 4 |
+const Component = ({ children, hasPadding }: Props) => {
+    return (
+        // |--- 5 ---| |---------- 6 ----------|
+        <div className={hasPadding && "padding"}>{children}</div>
+    )
+}
+```
+
+This post assumes some level of competancy with JavaScript, and some of you may
+be familiar with the concepts ahead. If you notice anything erroneous in my
+explanations, feel free to
+[suggest changes](https://github.com/daneden/daneden.me/edit/main/pages/blog/2020/anatomy-of-a-typed-react-component.mdx).
+
+## Table of Contents
+
+## Constants
+
+```tsx
+const Component
+```
+
+The first marker in our code highlights a keyword that may be new to you:
+`const`.
+
+Constants in JavaScript are essentially variables which, once assigned, cannot
+be changed. In the past you may have written or seen code that looks like this:
+
+```js
+var number = 1
+number = 2
+
+console.log(number) // => 2
+```
+
+There are sometimes cases where you need to change a variable after it's been
+assigned; but most of the time, once its been set, you don't need to change it.
+In fact, leaving it open to change can result in unexpected results. This is
+where constants can come in handy.
+
+```js
+const number = 1
+number = 2 // Uncaught TypeError: Assignment to constant variable
+```
+
+Nowadays, many people follow a rule of "always prefer `const`". If you do need
+to assign a variable that may need to change later, `let` is another keyword
+that is preferred over `var`:
+
+```js
+let number = 1
+number = 2
+
+console.log(number) // => 2
+```
+
+There are some more differences worth learning about between `var`, `let`, and
+`const`, and plenty of [material already written](https://ui.dev/var-let-const/)
+on the subject.
+
+## Arrow Functions
+
+Let’s keep on going through that first line, but omitting the `Props` part for
+now.
+
+```tsx
+({ children, hasPadding }) => { ... }
+```
+
+This is a relatively new expression pattern called _arrow functions_. You may be
+used to seeing or writing functions like this:
+
+```js
+function add(x, y) {
+    return x + y
+}
+
+add(2, 2) // => 4
+```
+
+Arrow functions are "syntactical sugar" that lets you create functions without
+the need to use the `function` keyword. We can rewrite the above `add` function
+using arrow functions like this:
+
+```js
+const add = (x, y) => x + y
+```
+
+For simple functions, like `add`, arrow functions can be a little easier to read
+since it lets you see the arguments and returned value in just one line. (Notice
+also that we can omit the `{}` curly braces and `return` keyword for simple
+expressions.)
+
+One important thing to note about arrow functions is that they come without
+bindings to the `this` value. The `this` value is essentially a value
+representing the context from which a function or expression is called, and
+arrow functions somewhat skip a level:
+
+```js
+const myObject = {
+    foo: 1,
+    // A regular function
+    withThis: function () {
+        console.log(this)
+    },
+    // An arrow function
+    withoutThis: () => {
+        console.log(this)
+    },
+}
+
+myObject.withThis() // logs myObject
+myObject.withoutThis() // logs Window
+```
+
+For the most part, this shouldn't have much of an impact on your day-to-day
+JavaScript, but it's worth calling out as the cause of some occasional bugs when
+dealing with functions.
+
+## Destructuring Assignment
+
+Something new is going on in the arguments for that arrow function:
+
+```js
+// |------ here -------|
+({ children, hasPadding }) => { ... }
+```
+
+This expression is called a "destructuring assignment", and it makes a bit more
+sense in a slightly different form:
+
+```js
+(props) => {
+    const { children, hasPadding } = props
+    ...
+}
+```
+
+You likely already know that curly braces in JavaScript can be used to
+initialize an `Object`. What you're seeing above isn't altogether different;
+what this expression is doing is assigning the _properties_ `children` and
+`hasPadding` of the object `props` to new variables with the same name. It's the
+same as writing this:
+
+```js
+const props = {
+    children: "A string value",
+    hasPadding: true,
+}
+
+const children = props.children
+const hasPadding = props.hasPadding
+```
+
+The syntax also works for arrays:
+
+```js
+const myArray = [1, 2, 3]
+
+const [first, second, third] = myArray
+
+// The above line could also be written as:
+const first = myArray[0]
+const second = myArray[1]
+const third = myArray[2]
+```
+
+Like with arrow functions, destructuring assignment is a convenient syntactical
+sugar that helps us write less, and often (though not always) more readable,
+code.
+
+One more thing to know about destructuring assignment is that you can assign any
+remaining values in an object or an array using what's called a _spread
+operator_. It looks like this:
+
+```js
+const myProfile = {
+    name: "Daniel Eden",
+    age: 29,
+    bio: "Designer, writing and thinking about design systems",
+    favouriteDessert: "Sticky toffee pudding",
+    tags: ["design", "london", "bread"],
+}
+
+const { name, age, ...rest } = myProfile
+console.log(rest) // { bio, favouriteDessert, tags }
+
+const [firstTag, ...tags] = rest.tags
+console.log(tags) // ["london", "bread"]
+```
+
+## Type Signatures
+
+Let's look at one last part of the first line of our React component, indicated
+at marker 3 in our code snippet at the top:
+
+```tsx
+//                                        |-- 3 --|
+const Component = ({ children, hasPadding }: Props) => {
+```
+
+This is the first non-native-JavaScript part of our code so far! Everything
+you've seen up to this point is totally valid, modern JavaScript. What you're
+seeing here is called a _type expression_, and for JavaScript to understand it,
+the code would first need to be run through a type checker, such as
+[Flow](https://flow.org) or [TypeScript](https://www.typescriptlang.org/).
+
+I've [written a little](/blog/2019/typed-systems) about typed programming
+before, but here's a brief primer for those unfamiliar. When code is “typed”, it
+doesn't mean “typed with a keyboard”, but that the values that are created and
+passed around a program have _expected types_ that describe the _kind_ of values
+they represent.
+
+Here are some example _type expressions_:
+
+```tsx
+const myNumber: number = 42
+const myString: string = "Hello"
+```
+
+What this tells the type checker (and the people reading or editing this code)
+is that the variable `myNumber` should be a `number` type, and `myString` should
+be a `string` type. We can intentionally introduce an error into this code:
+
+```tsx
+const myNumber: string = 42
+// TypeError: Type '42' is not assignable to type 'string'.
+```
+
+The type checker would helpfully let us know that the value `42` is incompatible
+with the requested type `string`.
+
+Looking back at our `add` function from the [arrow functions](#arrow-functions)
+section, we can take a look at how types can help us write safer code. For
+example, it doesn't make sense for the `add` function to add together a string
+and a number:
+
+```js
+add(2, 2) // => 4
+add(3, "4") // => "34"
+```
+
+Introducing type signatures to our code can help us avoid this error:
+
+```tsx
+const add = (x: number, y: number): number => x + y
+
+add(2, 2) // 4
+add(3, "4") // TypeError: Argument of type '"4"' is not assignable to parameter of type 'number'.
+```
+
+Let's take a look back at our React component.
+
+```tsx
+const Component = ({ children, hasPadding }: Props) => { ... }
+```
+
+From the type signature, we can see that the object containing the properties
+`children` and `hasPadding` should be an object matching the `Props` type. If we
+rewrite the code so it doesn't use a destructuring assignment, that may be a bit
+easier to see:
+
+```tsx
+const Component = (props: Props) => { ... }
+```
+
+I haven't included the type definition for `Props` yet, but let's imagine it
+looks something like this:
+
+```tsx
+interface Props {
+    children?: React.ReactNode
+    hasPadding: Boolean
+    onClick?: () => void
+}
+```
+
+The `Props` definition tells me that the argument passed to `Component` should
+be an object with the following properties:
+
+-   `children`, which is an optional property (as indicated by the question mark
+    in `children?:`) and should have a value of the `React.ReactNode` type
+-   `hasPadding`, which is a `Boolean` (`true` or `false`)
+-   `onClick`, which is an optional property and should be a _function_ that has
+    no return value (`void`)
+
+As you can see, the Props definition has more information about the properties
+passed to the component. Not only does this help me understand the component a
+little more, but TypeScript will also warn me if I use the component
+incorrectly:
+
+```tsx
+;<Component onClick={false} />
+/**
+ * TypeError: type '{ onClick }' is missing the following properties: children, hasPadding
+ * TypeError: type 'false' is not assignable to type '(() => void) | undefined' in 'onClick'
+ **/
+```
+
+We're skipping ahead here, but trying to use `Component` in React without giving
+values for `children` or `hasPadding` shows an error, and we have another error
+for the value of `onClick`.
+
+## React and JSX
+
+Whew, 1,500 words into this post and we've only covered a single line of code!
+Hopefully the explanations so far have helped you develop a better sense for how
+to understand more modern JavaScript code and typed JavaScript. Now, we're going
+to get into the meat of React and a syntactical sugar introduced by React called
+_JSX_.
+
+Let's look again at our original `Component` definition:
+
+```tsx
+const Component = ({ children, hasPadding }: Props) => {
+    return (
+        // |--- 5 ---| |---------- 6 ----------|
+        <div className={hasPadding && "padding"}>{children}</div>
+    )
+}
+```
+
+The first two lines should now be familiar to you.
+
+1. In the first line we'll instantiate a constant `Component` with a value that
+   is a function. The function accepts a single argument with the type of
+   `Props`. We'll destructure that argument into two values, `children` and
+   `hasPadding`.
+2. We'll begin the `return` statement, which continues onto the next line(s)
+
+And this is where things get interesting. Right away, we see `<div>` in the
+return value, which is odd. The `<` symbol is a _logical operator_ in
+JavaScript, used to compare values—in this case, it checks that the left-hand
+value is less than the right-hand value. But in this case, there is no left-hand
+value, and `div` isn't something we've defined—what's going on?
+
+---
+
+You may recognise `<div>` as HTML code, which is a good hunch! What you're
+seeing is another syntactical sugar, introduced by React, called _JSX_. JSX lets
+you write HTML-like code inside JavaScript.
+
+When a code compiler encounters JSX, it gets transformed into a format that
+native JavaScript can understand, similar to how typed code needs to be run
+through a type checker first. In the case of JSX and React, the transformed code
+is a series of React functions. Let's look at a rudimentary example.
+
+```jsx
+const myJsxCode = <h1 className="greeting">Hello, world</h1>
+
+const myTransformedCode = React.createElement(
+    "h1", // 1
+    { className: "greeting" }, // 2
+    "Hello, world" // 3
+)
+```
+
+These two variable assignments are identical. Let's step through the arguments
+passed to `React.createElement` to understand how a code compiler transforms
+JSX.
+
+1. The first argument to `React.createElement` is the _element name_ or
+   reference. In this case, we're using one of React’s built-in HTML elements,
+   `h1`, which is passed as a string literal.
+2. The second argument is the _properties_ or `props` argument. In the case of
+   HTML elements, these are usually the attributes that are added, but props can
+   be any value, as seen in our custom `Props` type definition earlier in the
+   post.
+3. The third argument represents the _children_ of the element. In this case,
+   it's just a string that says `"Hello, world"`, but it could be more calls
+   to`React.createElement` to create nested elements.
+
+Let's rewrite that function call and arguments as JSX with annotations once
+more:
+
+```jsx
+//                (1) (2)                   (3)
+const myJsxCode = <h1 className="greeting">Hello, world</h1>
+```
+
+The `children` property is special insofar as it can either be passed in between
+the opening and closing tags for a React element, or it can be passed just like
+other properties. In other words, the code above can be rewritten as:
+
+```jsx
+const myJsxCode = <h1 className="greeting" children="Hello, world" />
+
+const myTransformedCode = React.createElement("h1", {
+    className: "greeting",
+    children: "Hello, world",
+})
+```
+
+---
+
+Now that we understand a bit about JSX, let's look at our component again:
+
+```tsx
+const Component = ({ children, hasPadding }: Props) => {
+    return (
+        // |--- 5 ---| |---------- 6 ----------|
+        <div className={hasPadding && "padding"}>{children}</div>
+    )
+}
+```
+
+The part of the code indicated by marker 6 is a _JSX embedded expression_. It's
+just a JavaScript expression written inside a JSX call by surrounding it in
+curly braces. In this case, `hasPadding && "padding"` is a boolean expression
+that checks if `hasPadding` is true and returns "padding". If `hasPadding` is
+false, the whole expression will return `false`.
+
+There's another embedded expression surrounding `children`. This just tells
+JavaScript/JSX to output the contents of `children`.
+
+Note that JSX embedded expressions can only be _expressions_—statements that
+produce a value. For example, you can't put an `if...else` statement inside a
+JSX embedded expression since `if...else` statements don't have to return a
+value. You can, however, use _ternary operators_ to check a condition:
+
+```tsx
+const Switch = ({ isOn }: { isOn: Boolean }) => (
+    <div>The switch is {isOn ? "on!" : "off."}</div>
+)
+```
+
+If you're unfamiliar with ternary operators, they work like this:
+
+```
+condition ? {true value} : {false value}
+```
+
+You can expect to see them with some regularity in React code, since they're
+useful for conditionally rendering different results based on a component's
+properties.
+
+## Wrapping Up
+
+What a journey! I hope you learned something new and that you're feeling proud
+to have made it through this post. It's amazing how many ideas and tools are
+wrapped up in just 5 lines of code. There's a lot of additional material around
+to learn about each of these ideas in more detail—here's just a sampling:
+
+-   [Here's a website](http://es6-features.org/) covering all the new JavaScript
+    features added in ES6
+-   For a more comprehensive look at JavaScript's native features, I refer to
+    the
+    [MDN JavaScript Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
+    almost daily.
+-   React's own [documentation](https://reactjs.org/docs/getting-started.html)
+    is beautifully-written and has helpful guided tutorials
+-   TypeScript has a
+    [5-minute guide](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)
+    to set up and begin to explore its capabilities

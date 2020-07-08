@@ -1,0 +1,93 @@
+{
+  "name": "daneden.me",
+  "description": "The website and blog of Daniel Eden, a designer writing and thinking about design systems",
+  "version": "3.0.0",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json,css,mdx,md,ts,tsx,jsx}": [
+      "prettier --write"
+    ]
+  },
+  "license": "MIT",
+  "scripts": {
+    "analyze": "ANALYZE=true next build",
+    "build": "next build || next build",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "dev": "next dev",
+    "lint:js": "eslint \"**/*.{js,jsx,ts,tsx,md,mdx}\"",
+    "lint": "npm-run-all lint:*",
+    "now-build": "yum install libuuid-devel libmount-devel && cp /lib64/{libuuid,libmount,libblkid}.so.1 node_modules/canvas/build/Release/ && npm run build",
+    "precommit": "lint-staged",
+    "start": "next start"
+  },
+  "dependencies": {
+    "canvas": "^2.6.1",
+    "cwebp": "^2.0.5",
+    "cwebp-bin": "^6.1.1",
+    "cxs": "^6.2.0",
+    "fontfaceobserver": "^2.1.0",
+    "imagemin": "^7.0.1",
+    "imagemin-webp": "^6.0.0",
+    "mdx-prism": "^0.3.1",
+    "next": "9.4.4",
+    "prismjs": "^1.20.0",
+    "react": "16.13.1",
+    "react-codepen-embed": "^1.0.1",
+    "react-dom": "16.13.1",
+    "react-ga": "^3.0.0",
+    "react-imgix": "^9.0.2",
+    "react-katex": "^2.0.2",
+    "react-markdown": "^4.3.1",
+    "react-script-tag": "^1.1.2",
+    "sharp": "^0.25.4",
+    "zlib": "^1.0.5"
+  },
+  "devDependencies": {
+    "@mapbox/rehype-prism": "^0.5.0",
+    "@mdx-js/loader": "^1.6.6",
+    "@mdx-js/mdx": "^1.6.6",
+    "@next/bundle-analyzer": "^9.4.4",
+    "@ngsctt/remark-smartypants": "^0.2.0",
+    "@now/node": "^1.7.1",
+    "@types/cxs": "^6.2.0",
+    "@types/node": "^14.0.14",
+    "@types/react": "^16.9.41",
+    "@types/sharp": "^0.25.0",
+    "@types/webpack-env": "^1.15.2",
+    "@typescript-eslint/eslint-plugin": "^2.34.0",
+    "@typescript-eslint/parser": "^2.34.0",
+    "babel-plugin-import-glob-array": "^0.2.0",
+    "babel-runtime": "^6.26.0",
+    "csstype": "^2.6.11",
+    "cypress": "^4.9.0",
+    "cypress-image-snapshot": "^3.1.1",
+    "eslint": "^7.3.1",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-daneden": "^1.0.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-mdx": "^1.7.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.1",
+    "eslint-plugin-react-hooks": "^4.0.4",
+    "file-loader": "^6.0.0",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
+    "next-compose-plugins": "^2.2.0",
+    "next-mdx-enhanced": "^3.0.0",
+    "next-mdx-frontmatter": "^0.0.3",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.0.5",
+    "rehype": "^11.0.0",
+    "rehype-slug": "^3.0.0",
+    "remark-toc": "^7.0.0",
+    "typescript": "^3.9.5",
+    "webpack": "^4.43.0"
+  }
+}

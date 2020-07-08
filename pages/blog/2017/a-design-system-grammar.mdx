@@ -1,0 +1,147 @@
+---
+layout: "post"
+title: "A Design System Grammar"
+date: "2017-07-12"
+excerpt: "How do we wittle down a large number of possible Design System components
+into a sensible list of appropriate patterns for a given problem? In this post, we
+explore a “Design System Grammar”; rules for composing arrangements of components."
+categories:
+    - design
+    - process
+---
+
+In my posts about Design Systems so far, I’ve theorized about the structural
+approach that causes existing design systems to fail, and an
+[alternative solution](/2017/03/29/designing-systems/) that encourages the
+composition of properties instead of cataloguing complete components. However, a
+suite of style properties and simple, functional components gives an
+overwhelming array of options for composing them.
+
+I’ve used the word “vocabulary” to describe a design system before—a collection
+of metaphorical nouns and verbs that allow designers, engineers and beyond to
+express their intent in building a product—but what good is an expansive
+vocabulary without rules to govern how words may be used together? “Colossal
+dredging qualm reverence” contains some relatively advanced vocabulary, but the
+phrase as a whole has no meaning. Put another way, what use is a pantry full of
+ingredients if you don’t know how to combine them in a way that makes an
+appetising meal?
+
+## Defining a Pattern Language
+
+I’ve recently been thumbing through a book that had been on my wish list for
+some time: [A Pattern Language](http://amzn.to/2t5tX9d), a comprehensive title
+cataloguing some 250 patterns for construction and city planning. Each pattern
+is defined with the following structure:
+
+1. The design problem
+2. Discussion of the problem
+3. Illustration of the problem
+4. The proposed solution
+
+There are two additional pieces that make this book particularly relevant to
+design systems in the fashion I’ve prescribed to them in writing thus far:
+
+-   Each pattern’s documentation is preceded with a list of other patterns that
+    employ the upcoming pattern
+-   Each pattern’s documentation is followed by a list of other patterns that
+    are required for this pattern
+
+What this leads to is a choose-your-own adventure book that allows you to select
+a particular pattern and get all the information you need about what work must
+be done to put the pattern to use, as well as what other features you unlock by
+employing the pattern.
+
+For the purposes of demonstration, we can consider a similar approach for
+documenting UI components:
+
+> ### Form
+>
+> _Composes: Login Page, Entity Creation Page, Search Form_
+>
+> At a minimum, a form is composed of a label, input, and button. They are
+> required to capture user input. {Further problem definition and discussion…}
+>
+> _Composed of: Button, Input, Label_
+
+We can imagine coming to the definition of this Form pattern after deciding we
+need to have some way for the user to create some kind of data entity. If so
+inclined, we can dig further to find the definition of the Button pattern:
+
+> ### Button
+>
+> _Composes: Form, Banner, Navigation_
+>
+> A Button is a low-level component that represents a familiar user concept.
+> {Further problem definition and discussion…}
+>
+> _Composed of: Background, Border, Text, Spacing, Cursor_
+
+_Aha!_ From our definition of the Button pattern, we start to see the primitive,
+atomic components surface. With further investigation, we might find the very
+bottom of our system hierarchy, with an illustrative example of all permutations
+of text size, background color, or spacing units.
+
+One final detail I find particularly pleasing about _A Pattern Language_ is the
+notable addition of asterisks (<mark>\*</mark>) in some pattern titles. Two
+asterisks after the pattern title (<mark>\*\*</mark>) indicates almost complete
+certainty in the pattern’s validity to solve the given problem. One asterisk
+(<mark>\*</mark>) indicates that the pattern is appropriate for most instances
+of the stated problem. Finally, the absence of an asterisk indicates to the
+reader that the problem is more difficult to solve with a single solution, and
+that the presented solution is open for interpretation or change.
+
+## What Bends Doesn't Break
+
+One of the most appealing things about defining a pattern language or design
+system in this way is the flexibility that it affords. For novice builders who
+just need a high-level component or concept of their project, they can find it
+at the top of the heirarchy and use the component as it comes. For those
+pioneering new experiences or experimenting beyond the confines of existing
+produce surface, they can take those high-level components and concepts and
+deconstruct them into their composite parts; they can keep doing this until they
+have the primitive, atomic components they need to construct a bespoke pattern
+that still fits with harmony in the wider system.
+
+What's more, this approach is aligned with our expectation that product teams
+have
+[deep knowledge of a particular problem set](/2017/06/27/paving-the-path-of-least-resistance/),
+and the system simply generalises that which is generalisable. In fact, as an
+exercise, you could write pattern definitions for existing design systems—like
+those of [Salesforce](https://www.lightningdesignsystem.com/),
+[BuzzFeed](http://solid.buzzfeed.com/), [GitHub](http://primercss.io/), and
+[Google](https://material.io/)—and likely find that 99% of the patterns are
+shared. Nuances of visual appearance (and some very specific use cases) set
+aside, design systems are almost identical across platforms, products, and
+locales, and all but the atomic components can be accounted for without
+knowledge of this context.
+
+---
+
+This approach to building a grammar for our design vocabulary seems sound, and
+certainly makes a strong case for writing easy-to-understand documentation, but
+a question that remains for myself and for others building design systems is
+_how this works in practice_. How do these definitions of patterns manifest in
+design tools and engineering workflows? What are the technical limits and debts
+associated with composing and deconstructing patterns in this way? Certainly
+composition, even across platforms, is viable, as can be seen through AirBnB's
+efforts to
+[bridge design and engineering](https://airbnb.design/painting-with-code/)
+through concepts of UI primitives. But decomposition and re-assembly of patterns
+seems unrealistic, especially at the scale and complexity of platforms like
+Facebook or Google.
+
+All I can say with confidence is that with the legacy of fields like
+architecture and traditional graphic design, the infancy of digital design
+systems presents us with a rich variety of avenues for experimentation—and
+that's a very exciting invitation indeed.
+
+---
+
+_This post is one in a loosely-connected series of posts about design systems
+and the teams that maintain them. Other installments include a conceptual view
+of how a
+[design system ecosystem is maintained](/2017/06/27/paving-the-path-of-least-resistance/),
+a [theoretical exploration](/2017/03/29/designing-systems/) of compositional
+design systems, and a
+[collection of thoughts](/2017/06/02/casting-graphite-in-gold/) on how the
+relationship between designers and engineers should be approached._

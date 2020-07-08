@@ -1,0 +1,75 @@
+{
+  "github": {
+    "silent": true
+  },
+  "functions": {
+    "pages/api/og.ts": {
+      "includeFiles": "public/fonts/ogFonts/**"
+    }
+  },
+  "headers": [
+    {
+      "source": "/api/og(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "max-age=31536000, public, stale-while-revalidate"
+        },
+        { "key": "Access-Control-Allow-Origin", "value": "*" },
+        { "key": "Access-Control-Allow-Methods", "value": "GET" },
+        {
+          "key": "Access-Control-Allow-Headers",
+          "value": "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+        }
+      ]
+    },
+    {
+      "source": "/api/image(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "max-age=31536000, public, stale-while-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/uploads/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "max-age=29030400, stale-while-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/fonts/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=29030400, stale-while-revalidate"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/animate(.*)",
+      "permanent": true,
+      "destination": "https://animate.style/"
+    },
+    {
+      "source": "/toast(.*)",
+      "permanent": true,
+      "destination": "https://daneden.github.io/Toast/"
+    },
+    {
+      "source": "/images/favicon.ico",
+      "destination": "/images/favicon.png"
+    },
+    {
+      "source": "/:year(\\d+)/:month(\\d+)?/:day(\\d+)?/:title(.*)",
+      "permanent": true,
+      "destination": "/blog/:year/:title"
+    }
+  ]
+}

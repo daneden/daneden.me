@@ -1,0 +1,89 @@
+---
+layout: "post"
+title: "Dispelling the Android CSS Animation Myths"
+date: "2011-12-14"
+hidden: true
+---
+
+**Update:** it turns out Android 4.0
+[actually addresses](http://yfrog.com/h346935364p) this issue. Still, we need to
+urge the authors of these resources to explicitly mention that full support
+isn't available in previous versions of Android.
+
+We live in good times as web developer/designers. There are more fantastic
+resources available today than there ever have been - we have websites like
+[QuirksMode](http://www.quirksmode.org/), [Can I Use?](http://caniuse.com/), and
+the recent [Mobile HTML5](http://mobilehtml5.org/) to tell us what features we
+can expect to use on a myriad of operating systems, browsers and mobile devices.
+Super! But there's a recurring theme across all of these websites. They all tell
+us that Android _fully supports CSS animations._
+
+**That's crazy talk, Dan!** I hear you say. Open up any Android 2.0+ device and
+check out this [feature detection page.](http://daneden.me/labs/featuretest/)
+Sitting, quite proudly, will be the words "css animation" -
+[Modernizr](http://modernizr.com) says it's fully supported.So over you go to
+your CSS file and pump in a bunch of amazing CSS animations to make your website
+fly. Back to the Droid we go, and what do we find?
+
+We find absolutely nothing.
+
+Here's the thing: CSS animations are supported by Android devices - but **only
+if a single property is changed.** As soon as you try to animate more than one
+property at once, the entire element disappears. In non-native Android browsers,
+the element will be visible for the duration of the animation, but will hide
+immediately after it's finished. This is true for (as far as I know) all Android
+devices below 4.0. Testing for 4.0 is yet to be done.
+
+So what can we do? Well, if you're only animating a single property, such as
+opacity or transform, that's fine. Nothing to worry about. However, for more
+than one property, you'll need to put each of the properties into their own
+keyframe declaration. Here's a handy example:
+
+```css
+@-webkit-keyframes myAnimation {
+    from {
+        opacity: 0;
+        -webkit-transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+    }
+}
+```
+
+That animation won't work. But, if we put each property into it's own keyframe
+declaration, it will work.
+
+```css
+@-webkit-keyframes a-opacity {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes a-transform {
+    from {
+        -webkit-transform: translateY(-20px);
+    }
+    to {
+        -webkit-transform: translateY(0);
+    }
+}
+```
+
+This, my friends, is a very real and serious issue. The Android browser will
+always claim to support CSS animation. The compatibility charts will also praise
+Android for it's support. Web authors will write WebKit specific CSS animations
+which will work great on WebKit browsers - except on Android, where any content
+within the animated element will never see the light of day. There's no way
+around it, other than UA sniffing, which is undesirable to say the least.
+
+What needs to happen, more than anything at this stage, is for people to raise
+awareness of this issue. I hope this gets as far as the authors of sites such as
+Can I Use?, Modernizr et al so that we can make sure people are aware of the
+issue. Tread with caution, animation authors - and help spread the word!

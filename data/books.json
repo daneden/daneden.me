@@ -1,0 +1,122 @@
+[
+  {
+    "title": "Bird By Bird",
+    "author": "Anne Lamott",
+    "cover": "books/bird.jpg",
+    "url": "https://www.penguinrandomhouse.com/books/97395/bird-by-bird-by-anne-lamott/"
+  },
+  {
+    "title": "Dataclysm",
+    "author": "Christian Rudder",
+    "cover": "books/dataclysm.jpg",
+    "url": "https://www.penguinrandomhouse.com/books/223045/dataclysm-by-christian-rudder/"
+  },
+  {
+    "title": "Design as Art",
+    "author": "Bruno Munari",
+    "cover": "books/design-art.jpg",
+    "url": "https://www.penguin.co.uk/books/193/19371/design-as-art/9780141035819.html"
+  },
+  {
+    "title": "Designing News",
+    "author": "Francesco Franchi",
+    "cover": "books/designing-news.jpg",
+    "url": "https://gestalten.com/products/designing-news"
+  },
+  {
+    "title": "Drunk Tank Pink",
+    "author": "Adam Alter",
+    "cover": "books/drunk-tank-pink.jpg",
+    "url": "https://oneworld-publications.com/drunk-tank-pink-pb-517.html"
+  },
+  {
+    "title": "The Signal and The Noise",
+    "author": "Nate Silver",
+    "quote": "One economist sees a $100 bill sitting on the street and reaches to grab it. “Don’t bother,” the other economist says. “If it were a real $100 bill, someone would already have picked it up.”",
+    "cover": "books/signal-noise.jpg",
+    "url": "https://www.penguinrandomhouse.com/books/305826/the-signal-and-the-noise-by-nate-silver/"
+  },
+  {
+    "title": "The Code Book",
+    "author": "Simon Singh",
+    "quote": "For example, consider this short sentence. It contains just 35 letters, and yet there are more than 5 quintillion (that's 5 followed by 31 zeroes) distinct arrangements of them. If one person could check one arrangement per second, and if all the people in the world worked night and day, it would still take more than a thousand times the lifetime of the universe to check all the arrangements.",
+    "cover": "books/the-code-book.jpg",
+    "url": "https://www.penguinrandomhouse.com/books/168002/the-code-book-by-simon-singh/"
+  },
+  {
+    "title": "A Short History of Nearly Everything",
+    "author": "Bill Bryson",
+    "quote": "…for 3.8 billion years, a period of time older than the Earth’s mountains and rivers and oceans, every one of your forebears on both sides has been attractive enough to find a mate, healthy enough to reproduce, and sufficiently blessed by fate and circumstances to live long enough to do so.",
+    "cover": "books/short-history.jpg",
+    "url": "https://www.penguin.co.uk/books/100/1004856/a-short-history-of-nearly-everything/9781784161859.html"
+  },
+  {
+    "title": "Your Brain Is a Time Machine",
+    "author": "Dean Buonomano",
+    "quote": "Whether of color, sound, or the passage of time, our conscious experiences are in essence illusions, convenient running narratives of what the unconscious brain determines are the most relevant events happening in the extracranial world.",
+    "cover": "books/time-machine.jpg",
+    "url": "https://wwnorton.com/books/9780393355604"
+  },
+  {
+    "title": "Typographie",
+    "author": "Emil Ruder",
+    "cover": "books/typographie.jpg",
+    "url": "http://www.niggli.ch/en/typography.html"
+  },
+  {
+    "title": "Thinking, Fast and Slow",
+    "author": "Daniel Kahneman",
+    "cover": "books/tfas.jpg",
+    "url": "https://us.macmillan.com/books/9780374533557"
+  },
+  {
+    "title": "Designing Design",
+    "author": "Kenya Hara",
+    "cover": "books/designing-design.jpg",
+    "url": "https://www.lars-mueller-publishers.com/designing-design"
+  },
+  {
+    "title": "Object-Oriented Ontology",
+    "author": "Graham Harman",
+    "cover": "books/ooo.jpg",
+    "url": "https://www.penguin.co.uk/books/295/295720/object-oriented-ontology/9780241269152.html"
+  },
+  {
+    "title": "The Order of Time",
+    "author": "Carlo Rovelli",
+    "cover": "books/order-of-time.jpg",
+    "url": "https://www.penguinrandomhouse.com/books/551483/the-order-of-time-by-carlo-rovelli/"
+  },
+  {
+    "title": "Debt: The First 5,000 Years",
+    "author": "David Graeber",
+    "quote": "“IMF Warns Second Bailout Would ‘Threaten Democracy,’ ” reads one headline. (Of course by “democracy” they mean “capitalism.”)",
+    "cover": "books/debt.jpg",
+    "url": "https://www.mhpbooks.com/books/debt/"
+  },
+  {
+    "title": "Word By Word",
+    "author": "Kory Stamper",
+    "cover": "books/word-by-word.jpg",
+    "url": "https://www.penguinrandomhouse.com/books/530504/word-by-word-by-kory-stamper/"
+  },
+  {
+    "title": "The Sixth Extinction",
+    "author": "Elizabeth Kolbert",
+    "cover": "books/tse.jpg",
+    "url": "https://us.macmillan.com/books/9781250062185"
+  },
+  {
+    "title": "An Individual Note of Music, Sound, and Electronics",
+    "author": "Daphne Oram",
+    "cover": "books/individual-note.jpg",
+    "url": "/books/individual-note-daphne-oram"
+  },
+  {
+    "title": "The End of Policing",
+    "author": "Alex S. Vitale",
+    "cover": "books/end-of-policing.jpg",
+    "url": "https://www.versobooks.com/books/2426-the-end-of-policing",
+    "quote": "A kinder, gentler, and more diverse war on the poor is still a war on the poor."
+  }
+]

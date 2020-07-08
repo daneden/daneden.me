@@ -1,0 +1,126 @@
+---
+layout: "post"
+title: "Designing And Building For Systems"
+date: "2019-03-29"
+categories:
+    - process
+    - design
+---
+
+I’ve spent around 5 years working on design systems at different scales: in my
+own work, I’ve worked on design systems for a product team of one—myself; at
+Dropbox, I helped create and distribute a nascent design system in Sketch and
+CSS to a team of 30 product designers and hundreds of engineers; and at
+Facebook, I’ve been working with my team to create and distribute a system in a
+variety of design tools and React components to hundreds of product designers
+and thousands of engineers.
+
+Between each of these different scales, I’ve found some common ground in how to
+approach building design systems. We tend to hear—and talk—a lot about why a
+design system is important, and what it looks like, but spend little time
+discussing _how_ to build them, and how to overcome the various existential
+crises every systems team eventually endures.
+
+Below, you’ll find the high-level questions I’ve asked myself, and the answers
+I’ve stumbled into, imbued with the collective wisdom and experience of some of
+the smartest people I’ve worked with.
+
+## What does a system need?
+
+A system only needs to provide the parts that the product requires. It can be
+tempting to anticipate all requirements, but most of the time, this equates to
+inventing problems that don’t (yet) exist.
+
+The job of a systems team is similar to that of a map-maker: the places you’re
+mapping already exist. You aren’t discovering new places: you’re just providing
+them with an outline, a designation, and coordinates.
+
+## Where do I start?
+
+Start anywhere that the product most demands the coherence offered by a system.
+Typically, this means addressing an overabundance of a certain kind of
+component.
+
+Begin by identifying the culprit component, and look at it in only a handful of
+places. You need to form an opinion on what is “correct,” and this is harder to
+do when you’re trying to boil the ocean. Once you’ve formed an opinion, try to
+apply it to another place.
+
+Hold your opinion strongly: look for multiple pieces of corroborating evidence
+before deciding to change it.
+
+## Where do I stop?
+
+Once you’ve started, this actually becomes the more difficult question.
+Designing for systems can be a bit like pulling a rope out of water: you’re not
+sure how long the rope is, or what’s at the end of it. Before you know it, you
+may end up scoping a problem for so long that the original constraints or
+requirements have shifted in your absence.
+
+Try to remain in the habit of tackling the smallest problem you can. Apply a
+hypothesis to the problem at hand; if it works, change the parameters of the
+problem. Continue this process until the solution breaks, expand the scope of
+the solution accordingly, and—if you’re comfortable with the current solution’s
+ability to adapt—make the solution available for use, with the promise of it
+becoming even more suitable in the future.
+
+## When should the system change?
+
+If there is a problem that the system is not equipped to solve, you should find
+out how many times this problem occurs. If it only occurs once, it’s highly
+likely that it is specific to a particular view or product. If it occurs more
+than once, this is a good sign that the system should change to address the
+problem.
+
+## How should I change the system?
+
+You should always favor reuse of existing patterns and components, even—and
+especially—when updating or changing the system. The design system is your
+constraint as much as it is the constraint of the teams you serve.
+
+When creating something brand new to solve a problem, ask yourself: What
+implications does this have on the rest of the system? What rules have changed
+or been broken to get to this solution? How can I change the solution to fit
+those rules, or limit the changes to those rules?
+
+## How do I know when the system, or a component, is finished?
+
+Design systems, and the pieces it is comprised of, are never finished. They are
+living, breathing tools that will have to change as the needs of the teams it
+supports change.
+
+---
+
+## General Advice
+
+### Avoiding Exceptions
+
+As outlined above, under “When should the system change?”, there will sometimes
+be exceptions to rules in the system: components or patterns that only make
+sense in a particular context. One way to avoid this is to disallow a components
+_context_ to dictate its behaviour or appearance.
+
+What this means, in practical terms, is saying “Component _X_ has a
+state/variant _A_,” rather than “In this context _f_, Component _X_
+behaves/appears as _A_.” Context should not be the sole determiner of a
+component’s behaviour or appearance: the component should be able to render in
+that way in _any_ context.
+
+This rule helps you to remain steadfast in your opinion about the component’s
+overall behaviour or appearance.
+
+### Designing For Reality
+
+In addition to designing only for real needs, as outlined in “What does a system
+need?”, you must strive to design only for the material reality in which the
+system will be built.
+
+Practically, this means working closely with the engineers responsible for
+building the components and patterns that other engineers will use. If you are
+building a system for the web, try to understand HTML, CSS, and JavaScript. If
+you are building a system for mobile, try to understand the relevant framework
+or language and its constraints.
+
+No matter what we create in design tools, the thing that customers and end-users
+ultimately experience is in the hands of the engineers that build it. Thus it is
+crucial to make those engineers an equal part of the design process.

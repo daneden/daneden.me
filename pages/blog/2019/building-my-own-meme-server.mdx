@@ -1,0 +1,115 @@
+---
+layout: "post"
+title: "Building My Own Meme Server With Dropbox, Netlify, and Zeit Now/Next"
+date: "2019-12-08"
+hidden: true
+categories:
+    - code
+---
+
+In my personal Dropbox, I have a folder with almost 1,000 files inside—gifs,
+pngs, and jpeg images. It’s far from a comprehensive collection, but it’s
+_mine_; my preferred reaction images, inside jokes, and dumb memes.
+
+Having this Dropbox folder in my Mac’s Dock makes them easy to grab and upload
+somewhere, but I’ve also always wanted an easy way for _other_ people to browse
+the collection and share the ones they like. I basically wanted something like
+[Giphy](https://giphy.com), but with the curation of Ethan Marcotte’s
+[bukk.it](https://bukk.it).
+
+I’ve had two major milestones in making this meme server real, and this post is
+the story of both of them.
+
+## Attempt #1: Ruby
+
+The [first version](https://github.com/daneden/gifme) of the server took the
+shape of a Ruby app, based on Sinatra. The actual Ruby code was pretty simple:
+its only job was to route requests for specific files, and to return a list of
+available files.
+
+Because I didn't want to check over 1GB of images into a Git repository, I stuck
+with Dropbox for storing my images. This presented the first hurdle: I needed to
+sync the Dropbox folder to a directory where the Ruby app could reach it.
+Because of this, I couldn’t host my Ruby app on Heroku or other managed servers,
+since they don’t allow arbitrary file system access.
+
+So here's how the setup ended up:
+
+-   The Ruby app ran on a VPN server of my own
+-   Dropbox has a Linux runtime, so I was able to have the Dropbox folder sync
+    to the VPN server
+-   The images folder was symlinked to a location inside the Ruby app
+-   On every HTTP request, Ruby would check the symlinked folder, return the
+    list of files, and fulfil the request
+
+This setup worked reasonably well, but it also came with a lot of problems:
+
+-   The Ruby app was eating my VPN's memory up, to the point where more than a
+    few concurrent requests would totally crash my server
+-   It required a lot of manual labour to ensure the symlinked folder was set up
+    correctly, the Dropbox instance was running on my VPN
+-   Putting these problems together meant that almost every time I added an
+    image to the Dropbox folder, I’d have to SSH into the VPN, make sure the
+    Dropbox instance was running, and almost certainly restart the service after
+    crashes
+
+All this to say, it was less than ideal. But the final nail in the coffin came
+when I decided I didn’t want to pay for a VPN that required a lot of manual
+maintenance, when so many newer services (like Netlify, which hosts my current
+site, or Heroku, which hosts [Brills](https://brills.me) and some other projects
+of mine) took the pain out of running websites.
+
+With the retirement of the VPN in 2017 came the initial retirement of
+[gif.daneden.me](https://gif.daneden.me). I always planned to try another
+approach, but didn’t find any clear avenue until December 2019.
+
+## Attempt #2: Netlify and Zeit
+
+Two years after shutting down the first attempt, I saw a
+[blog post from Jim Nielsen](https://blog.jim-nielsen.com/2019/netlify-public-folder-part-i-what/)
+that outlined an approach to recreating the Dropbox Public folder. If you don’t
+know about this old Dropbox feature, Jim Nielsen’s description of the Public
+folder should suffice:
+
+> It was a beautiful idea: you put files in a folder, they sync to Dropbox, then
+> instantly become available on the web (via a URL that matches the structure of
+> your folder). It was like a modern take on a FTP server, with Dropbox solving
+> a lot of the ailments of FTP (security, credentials, file syncing, etc.) Just
+> move, copy, or rename some files on your local computer and boom, they’re on
+> the web (plus automatically backed up in Dropbox!)
+
+This immediately piqued my interest, since it was pretty much the ideal workflow
+for making my memes publically accessible. Jim’s post goes into a lot of depth
+about motivation and his
+[eventual solution](https://blog.jim-nielsen.com/2019/netlify-public-folder-part-iii-how/).
+To summarise, Jim ends up using an app called [BitBar](https://getbitbar.com),
+which lets you display the output of any script in macOS’s status bar. Jim
+kindly shares
+[the source code](https://github.com/jimniels/bitbar/blob/master/src/bitbar-scripts/netlify-sync.1m.js)
+for his BitBar script, which served as a great starting point.
+
+After some minor changes, I was able to get my Dropbox folder syncing to
+Netlify—the first step was complete! Adding an image to my Dropbox triggered a
+new upload, and moments later, I could access it on the web via Netlify’s CDN.
+
+Now that the files were up on the web, I was faced by a new challenge. While I
+wanted to have a friendly interface for searching for and displaying previews of
+the images, I didn’t want to clutter my images folder with source files for HTML
+and JavaScript. I didn’t want to change the folder structure at all, so even
+adding a `package.json` to run some script once the images were on Netlify’s
+network irked me.
+
+Thankfully, I discovered that Netlify’s API makes it possible to
+[get a list of files for a given site](https://open-api.netlify.com/#operation/listSiteFiles).
+With the images uploaded, and a list of files generated, I could easily create a
+separate application to connect everything together.
+
+I chose to use Zeit’s [Next.js](https://github.com/zeit/next.js/) and
+[Now](https://github.com/zeit/now), since they offered the easiest way to fetch
+data from a server, render React on the server, and deploy a React app with a
+simple command.
+
+Altogether, I’m really pleased with [the end result](https://gif.daneden.me),
+and will probably have fun making incremental improvements over time. The source
+code for the JS client can be found on
+[GitHub](https://github.com/daneden/de-gifs-client).

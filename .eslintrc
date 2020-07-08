@@ -1,0 +1,56 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "root": true,
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "globals": {
+    "graphql": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 9,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "extends": [
+    "plugin:prettier/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:mdx/recommended",
+    "plugin:jsx-a11y/recommended"
+  ],
+  "plugins": [
+    "prettier",
+    "import",
+    "react",
+    "react-hooks",
+    "jsx-a11y",
+    "daneden",
+    "mdx"
+  ],
+  "ignorePatterns": ["node_modules", "public/**/*.js", "*.woff2?", "*.ttf"],
+  "rules": {
+    "daneden/explicit-let-type": "warn",
+    "prettier/prettier": "error",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/boolean-prop-naming": "error",
+    "react/jsx-uses-react": 2,
+    "@typescript-eslint/member-delimiter-style": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "react/jsx-uses-vars": 1
+  },
+  "overrides": [
+    {
+      "files": ["*.js"],
+      "rules": {
+        "@typescript-eslint/no-var-requires": "off",
+        "@typescript-eslint/camelcase": "off"
+      }
+    }
+  ]
+}
