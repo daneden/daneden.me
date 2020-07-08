@@ -1,6 +1,7 @@
 # daneden.me
 
 ![End-to-end tests](https://github.com/daneden/daneden.me/workflows/End-to-end%20tests/badge.svg)
+[![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/daneden/daneden.me)
 
 Welcome to the innards of [my website](http://daneden.me). It’s built using
 [Next.js](http://nextjs.org/) and deployed on [Vercel](https://vercel.com/home).

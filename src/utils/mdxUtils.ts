@@ -1,4 +1,4 @@
-import { frontMatter as allBlogPosts, MDXPost } from "../pages/blog/**/*.mdx"
+import { frontMatter as allBlogPosts, MDXPost } from "../../pages/blog/**/*.mdx"
 
 const allPosts = (allBlogPosts as MDXPost[])
   .map((frontmatter) => {

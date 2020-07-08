@@ -10,7 +10,7 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
 })
 
 const mdxOptions = {
-  layoutPath: "layouts",
+  layoutPath: "src/layouts",
   defaultLayout: true,
   fileExtensions: ["mdx"],
   remarkPlugins: [smartypants, toc],

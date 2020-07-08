@@ -15,11 +15,11 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "*": ["./typings/*"],
-      "@/utils/*": ["utils/*"],
-      "@/components/*": ["components/*"],
-      "@/designSystem": ["components/designSystem/index"],
-      "@/designSystem/*": ["components/designSystem/*"]
+      "*": ["./src/typings/*"],
+      "@/utils/*": ["src/utils/*"],
+      "@/components/*": ["src/components/*"],
+      "@/designSystem": ["src/components/designSystem/index"],
+      "@/designSystem/*": ["src/components/designSystem/*"]
     }
   },
   "exclude": ["node_modules"],
