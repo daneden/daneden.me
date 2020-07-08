@@ -10,8 +10,6 @@ export default function PostLayout(frontMatter: MDXPost) {
     (post) => post.__resourcePath === frontMatter.__resourcePath
   )
 
-  console.log(extendedFrontMatter)
-
   return ({ children }: { children: ReactNode }) => {
     /**
      * KaTeX comes with a lot of CSS, which we don't want to use on every post.
