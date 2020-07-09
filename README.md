@@ -1,6 +1,5 @@
 # daneden.me
 
-![End-to-end tests](https://github.com/daneden/daneden.me/workflows/End-to-end%20tests/badge.svg)
 [![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/daneden/daneden.me)
 
 Welcome to the innards of [my website](http://daneden.me). It’s built using
@@ -22,13 +21,13 @@ To build for production, run `yarn build`.
 
 ### `atoms.ts`
 
-[`atoms.ts`](https://github.com/daneden/daneden.me/blob/main/components/designSystem/atoms.ts)
+[`atoms.ts`](https://github.com/daneden/daneden.me/blob/main/src/components/designSystem/atoms.ts)
 defines the atomic style values for the site's design system. This approach to
 defining design system styles is documented in my blog post,
 [Subatomic Design Systems](https://daneden.me/blog/2018/subatomic-design-systems).
 
 Many of the atoms are mirrored in CSS variables declared in
-[`Layout.tsx`](https://github.com/daneden/daneden.me/blob/main/components/Layout.tsx),
+[`Layout.tsx`](https://github.com/daneden/daneden.me/blob/main/src/components/Layout.tsx),
 but occasionally (such as in the
 [open graph image generator](#open-graph-image-generation)) need direct
 reference in JavaScript.
@@ -36,13 +35,9 @@ reference in JavaScript.
 ### Open Graph Image Generation
 
 I wanted to be able to generate images for blog posts based on their titles. To
-achieve this, I have a serverless function which uses node-canvas to generate an
-image using the same fonts and colors that are used on the site itself.
-
-The OG Image function is one of the few things that ought to be protected
-against regressions, so I have a
-[Cypress end-to-end test](https://github.com/daneden/daneden.me/blob/main/cypress/integration/openGraphImage.spec.js)
-set up to prevent regressions.
+achieve this, I have a
+[function](https://github.com/daneden/daneden.me/blob/main/src/utils/ogImage.ts)
+that runs at build time to generate OG images using `node-canvas`.
 
 ### Category Pages
 
@@ -53,7 +48,7 @@ to generate pages for blog post categories.
 
 ### `mdxUtils.ts`
 
-[`mdxUtils.ts`](https://github.com/daneden/daneden.me/blob/main/utils/mdxUtils.ts)
+[`mdxUtils.ts`](https://github.com/daneden/daneden.me/blob/main/src/utils/mdxUtils.ts)
 has some handy functions to co-locate things I want to do with my blog posts,
 including:
 
@@ -65,6 +60,6 @@ including:
 ### `widont.ts`
 
 A personal favourite,
-[`widont.ts`](https://github.com/daneden/daneden.me/blob/main/utils/widont.ts)
+[`widont.ts`](https://github.com/daneden/daneden.me/blob/main/src/utils/widont.ts)
 is a tiny function that replaces the last space in a string with a non-breaking
 space. Great for preventing widows on post titles.

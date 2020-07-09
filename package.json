@@ -16,12 +16,10 @@
   "scripts": {
     "analyze": "ANALYZE=true next build",
     "build": "next build || next build",
-    "cypress:open": "cypress open",
-    "cypress:run": "cypress run",
     "dev": "next dev",
     "lint:js": "eslint \"**/*.{js,jsx,ts,tsx,md,mdx}\"",
     "lint": "npm-run-all lint:*",
-    "now-build": "yum install libuuid-devel libmount-devel && cp /lib64/{libuuid,libmount,libblkid}.so.1 node_modules/canvas/build/Release/ && npm run build",
+    "now-build": "npm run build",
     "precommit": "lint-staged",
     "start": "next start"
   },
@@ -64,8 +62,6 @@
     "babel-plugin-import-glob-array": "^0.2.0",
     "babel-runtime": "^6.26.0",
     "csstype": "^2.6.11",
-    "cypress": "^4.9.0",
-    "cypress-image-snapshot": "^3.1.1",
     "eslint": "^7.3.1",
     "eslint-config-prettier": "^6.11.0",
     "eslint-loader": "^4.0.2",

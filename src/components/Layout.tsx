@@ -38,15 +38,18 @@ const Content = ({ frontMatter, children }: LayoutProps) => {
   const formattedDate = formatDate(date || "")
   const excerpt = frontMatter?.excerpt
   const webPSupport = useWebP(true)
+  const ogSlug = frontMatter?.ogSlug
 
   return (
     <WebPSupportContext.Provider value={webPSupport}>
       <Metatags
         title={title}
         description={excerpt || site.description}
-        thumbnail={`https://${
-          process.env.VERCEL_URL
-        }/api/og?title=${encodeURIComponent(String(title))}`}
+        thumbnail={
+          ogSlug
+            ? `https://${process.env.VERCEL_URL}/og/${ogSlug}`
+            : `https://${process.env.VERCEL_URL}/images/og.png`
+        }
       />
       <SkipLink />
       <Header siteTitle={site.title} />

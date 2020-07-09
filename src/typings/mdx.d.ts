@@ -8,6 +8,7 @@ declare module "*.mdx" {
     excerpt?: string
     categories?: [string]
     slug?: string
+    ogSlug?: string
   }
 
   let MDXComponent: (props: { [key: string]: unknown }) => JSX.Element
