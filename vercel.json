@@ -60,5 +60,6 @@
       "permanent": true,
       "destination": "/blog/:year/:title"
     }
-  ]
+  ],
+  "routes": [{ "handle": "filesystem" }]
 }
