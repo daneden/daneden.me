@@ -13,29 +13,11 @@
       ]
     },
     {
-      "source": "/uploads/(.*)",
+      "source": "/(og|fonts|uploads)/(.*)",
       "headers": [
         {
           "key": "Cache-Control",
-          "value": "max-age=29030400, stale-while-revalidate"
-        }
-      ]
-    },
-    {
-      "source": "/fonts/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=29030400, stale-while-revalidate"
-        }
-      ]
-    },
-    {
-      "source": "/og/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=29030400, public"
+          "value": "public, max-age=31536000, public"
         }
       ]
     }
@@ -60,6 +42,5 @@
       "permanent": true,
       "destination": "/blog/:year/:title"
     }
-  ],
-  "rewrites": [{ "source": "/og/(.*)", "destination": "/og/$1" }]
+  ]
 }
