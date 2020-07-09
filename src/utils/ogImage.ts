@@ -11,7 +11,7 @@ const soehne = path.resolve(
   "public",
   "fonts",
   "ogFonts",
-  "SoehneBreitApp-Fett.ttf"
+  "Soehne.ttf"
 )
 const national = path.resolve(
   process.cwd(),
