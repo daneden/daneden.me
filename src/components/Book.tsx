@@ -42,7 +42,7 @@ const Book = ({ author, cover, quote, title, url }: BookData) => {
               paddingTop: Atoms.spacing.xsmall,
             }}
           >
-            <Small receded={false} display="block">
+            <Small display="block" receded={false}>
               <em>‘{quote}’</em>
             </Small>
           </p>

@@ -27,38 +27,38 @@ function Metatags(props: MetatagsProps): ReactElement<typeof Head> {
   return (
     <Head>
       <title>{pageTitle}</title>
-      <meta name="title" content={pageTitle} />
+      <meta content={pageTitle} name="title" />
 
-      <meta name="description" content={description} />
+      <meta content={description} name="description" />
 
-      {pathname && <meta property="og:url" content={url + pathname} />}
+      {pathname && <meta content={url + pathname} property="og:url" />}
 
-      {thumbnail && <meta property="og:image" content={thumbnail} />}
+      {thumbnail && <meta content={thumbnail} property="og:image" />}
 
       {thumbnail && (
-        <meta property=" og:image:secure_url" content={thumbnail} />
+        <meta content={thumbnail} property=" og:image:secure_url" />
       )}
 
-      <meta property="og:description" content={description} />
+      <meta content={description} property="og:description" />
 
-      <meta property="og:image:width" content="1200" />
+      <meta content="1200" property="og:image:width" />
 
-      <meta property="og:image:height" content="630" />
+      <meta content="630" property="og:image:height" />
 
-      <meta property="og:locale" content="en" />
+      <meta content="en" property="og:locale" />
 
-      <meta name="twitter:title" content={pageTitle} />
+      <meta content={pageTitle} name="twitter:title" />
 
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:card" content="summary_large_image" />
+      <meta content={description} name="twitter:description" />
+      <meta content="summary_large_image" name="twitter:card" />
 
-      {thumbnail && <meta name="twitter:image" content={thumbnail} />}
+      {thumbnail && <meta content={thumbnail} name="twitter:image" />}
 
-      <link rel="shortcut icon" href="/images/favicon.png" />
+      <link href="/images/favicon.png" rel="shortcut icon" />
 
-      {dnsPrefetchURLs.map((url) => [
-        <link rel="preconnect" href={url} />,
-        <link rel="dns-prefetch" href={url} />,
+      {dnsPrefetchURLs.map((url, index) => [
+        <link href={url} key={`preconnect-${index}`} rel="preconnect" />,
+        <link href={url} key={`prefetch-${index}`} rel="dns-prefetch" />,
       ])}
     </Head>
   )

@@ -43,13 +43,13 @@ const Content = ({ frontMatter, children }: LayoutProps) => {
   return (
     <WebPSupportContext.Provider value={webPSupport}>
       <Metatags
-        title={title}
         description={excerpt || site.description}
         thumbnail={
           ogSlug
             ? `https://${process.env.VERCEL_URL}/og/${ogSlug}`
             : `https://${process.env.VERCEL_URL}/images/og.png`
         }
+        title={title}
       />
       <SkipLink />
       <Header siteTitle={site.title} />

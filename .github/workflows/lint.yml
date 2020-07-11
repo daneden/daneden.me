@@ -1,0 +1,14 @@
+name: Check lint results
+
+on: [push]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: yarn install
+        run: yarn install
+      - name: yarn lint
+        run: yarnl lint

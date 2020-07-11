@@ -1,8 +1,13 @@
 import { MDXPost } from "*.mdx"
 import Layout from "@/components/Layout"
 import { ReactNode } from "react"
-export default function DefaultLayout(frontMatter: MDXPost) {
-  return ({ children }: { children: ReactNode }) => {
+
+const DefaultLayout = (frontMatter: MDXPost) => {
+  const PageLayout = ({ children }: { children: ReactNode }) => {
     return <Layout frontMatter={frontMatter}>{children}</Layout>
   }
+
+  return PageLayout
 }
+
+export default DefaultLayout

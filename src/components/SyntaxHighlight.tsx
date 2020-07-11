@@ -2,7 +2,7 @@ import React, { ReactElement } from "react"
 
 export default function SyntaxHiglight(): ReactElement<unknown> {
   return (
-    <style jsx global>
+    <style global jsx>
       {`
         /**
        * Modified version of the prism.js tomorrow night theme by Rose Pritchard

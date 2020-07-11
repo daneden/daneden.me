@@ -14,7 +14,7 @@ const Link = ({
   href,
   underline = true,
   className: passedClassName,
-}: LinkProps): ReactElement<typeof NextLink> => {
+}: LinkProps) => {
   const className = [
     cxs({
       textDecoration: underline ? "underline" : "none",
@@ -25,12 +25,12 @@ const Link = ({
   const external =
     href.startsWith("http") || href.startsWith("mailto") || href.startsWith("#")
   return external ? (
-    <a href={href} className={className}>
+    <a className={className} href={href}>
       {children}
     </a>
   ) : (
     <NextLink href={href} passHref>
-      <a href={href} className={className}>
+      <a className={className} href={href}>
         {children}
       </a>
     </NextLink>

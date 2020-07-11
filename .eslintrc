@@ -1,13 +1,9 @@
 {
-  "parser": "@typescript-eslint/parser",
   "root": true,
   "settings": {
     "react": {
       "version": "detect"
     }
-  },
-  "globals": {
-    "graphql": true
   },
   "parserOptions": {
     "ecmaVersion": 9,
@@ -17,32 +13,38 @@
     }
   },
   "extends": [
-    "plugin:prettier/recommended",
     "plugin:@typescript-eslint/recommended",
+    "plugin:jsx-a11y/recommended",
     "plugin:mdx/recommended",
-    "plugin:jsx-a11y/recommended"
+    "plugin:prettier/recommended",
+    "plugin:react/recommended"
   ],
   "plugins": [
-    "prettier",
-    "import",
-    "react",
-    "react-hooks",
-    "jsx-a11y",
     "daneden",
-    "mdx"
+    "import",
+    "jsx-a11y",
+    "mdx",
+    "prettier",
+    "react-hooks",
+    "react"
   ],
   "ignorePatterns": ["node_modules", "public/**/*.js", "*.woff2?", "*.ttf"],
   "rules": {
-    "daneden/explicit-let-type": "warn",
-    "prettier/prettier": "error",
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn",
-    "react/boolean-prop-naming": "error",
-    "react/jsx-uses-react": 2,
+    "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/member-delimiter-style": "off",
     "@typescript-eslint/no-unused-vars": "off",
-    "@typescript-eslint/explicit-function-return-type": "off",
-    "react/jsx-uses-vars": 1
+    "daneden/explicit-let-type": "warn",
+    "prettier/prettier": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "react-hooks/rules-of-hooks": "error",
+    "react/boolean-prop-naming": "error",
+    "react/jsx-sort-props": "warn",
+    "react/jsx-uses-react": "warn",
+    "react/jsx-uses-vars": "error",
+    "react/jsx-filename-extension": [1, { "extensions": [".jsx", ".tsx", ".mdx"] }],
+    "react/prop-types": "off",
+    "react/no-unescaped-entities": "off",
+    "react/react-in-jsx-scope": "off"
   },
   "overrides": [
     {
@@ -51,6 +53,6 @@
         "@typescript-eslint/no-var-requires": "off",
         "@typescript-eslint/camelcase": "off"
       }
-    }
+    },
   ]
 }

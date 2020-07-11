@@ -1,7 +1,7 @@
 import { Atoms } from "./designSystem"
 
-export default () => (
-  <style jsx global>
+const GlobalStyles = () => (
+  <style global jsx>
     {`
       :root {
         color-scheme: light dark;
@@ -85,3 +85,5 @@ export default () => (
     `}
   </style>
 )
+
+export default GlobalStyles

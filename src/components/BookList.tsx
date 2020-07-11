@@ -31,10 +31,10 @@ const BookList = (): ReactElement<typeof Library> => (
       <Book
         author={author}
         cover={cover}
+        key={title}
         quote={quote}
         title={title}
         url={url}
-        key={title}
       />
     ))}
   </Library>

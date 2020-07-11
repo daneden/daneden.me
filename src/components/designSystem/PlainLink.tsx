@@ -3,4 +3,8 @@ import Link, { LinkProps } from "./Link"
 
 type PlainLinkProps = Omit<LinkProps, "underline">
 
-export default (props: PlainLinkProps) => <Link underline={false} {...props} />
+const PlainLink = (props: PlainLinkProps) => (
+  <Link underline={false} {...props} />
+)
+
+export default PlainLink

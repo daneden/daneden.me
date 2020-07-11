@@ -6,7 +6,7 @@ import { ReactElement } from "react"
 export default function HomePage(): ReactElement<typeof Layout> {
   return (
     <Layout>
-      <style jsx global>
+      <style global jsx>
         {`
           html {
             --site-color: ${Atoms.colors.siteDark} !important;

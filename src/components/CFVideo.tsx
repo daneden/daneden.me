@@ -12,28 +12,28 @@ interface CFVideoProps {
   preload: boolean
 }
 
-const CFVideo: FunctionComponent<CFVideoProps> = ({
+const CFVideo = ({
   autoPlay = false,
   caption,
   controls = true,
   id,
   loop = false,
   preload = true,
-}) => {
+}: CFVideoProps) => {
   return (
     <Figure>
       <stream
         autoPlay={autoPlay}
-        preload={String(preload)}
         controls={controls}
         loop={loop}
+        preload={String(preload)}
         src={id}
       ></stream>
       <ScriptTag
         data-cfasync="false"
         defer
-        type="text/javascript"
         src={`https://embed.videodelivery.net/embed/r4xu.fla9.latest.js?video=${id}`}
+        type="text/javascript"
       />
       {caption && (
         <Caption>

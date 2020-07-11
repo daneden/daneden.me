@@ -24,7 +24,7 @@ export default function HomeContent({
       <Content>
         <Breakout>{children}</Breakout>
       </Content>
-      <style jsx global>{`
+      <style global jsx>{`
         a[href^='https://twitter']
         {
           --hover-color: rgb(29, 161, 242);

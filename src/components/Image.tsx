@@ -14,7 +14,7 @@ interface ImageProps extends Omit<FigureProps, "children"> {
   src: string
 }
 
-const Image: FunctionComponent<ImageProps> = ({
+const Image = ({
   align,
   alt,
   className,
@@ -23,7 +23,7 @@ const Image: FunctionComponent<ImageProps> = ({
   responsive = true,
   margin = true,
   src,
-}) => {
+}: ImageProps) => {
   let Wrapper: typeof Align.Left | typeof Align.Right | typeof React.Fragment
   const usesSrcSet = !src.endsWith("svg")
   const extension = src.split(".").slice(-1)
