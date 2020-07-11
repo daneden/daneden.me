@@ -3,11 +3,7 @@ const slug = require("rehype-slug")
 const smartypants = require("@ngsctt/remark-smartypants")
 const toc = require("remark-toc")
 const withMDXEnhanced = require("next-mdx-enhanced")
-const withMDXFm = require("next-mdx-frontmatter")
 const withPlugins = require("next-compose-plugins")
-const withBundleAnalyzer = require("@next/bundle-analyzer")({
-  enabled: process.env.ANALYZE === "true",
-})
 
 const mdxOptions = {
   layoutPath: "src/layouts",
@@ -18,7 +14,7 @@ const mdxOptions = {
 }
 
 module.exports = withPlugins(
-  [withMDXFm, withBundleAnalyzer],
+  [],
   withMDXEnhanced(mdxOptions)({
     env: {
       VERCEL_URL: process.env.VERCEL_URL || "daneden.me",

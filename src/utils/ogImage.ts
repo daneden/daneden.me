@@ -116,7 +116,6 @@ export const generateOgImages = async (posts: MDXPost[]) => {
     const filepath = path.resolve(dir, `${ogSlug?.split(".png")[0]}.png`)
 
     if (!existsSync(filepath)) {
-      console.log("Creating image for post:", ogSlug)
       const imgBuffer = ogImage(title)
 
       writeFileSync(filepath, imgBuffer)
