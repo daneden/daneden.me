@@ -13,6 +13,7 @@ interface MetatagsProps {
 const dnsPrefetchURLs = [
   "https://videodelivery.net",
   "https://embed.videodelivery.net",
+  "https://cdn.usefathom.com",
 ]
 
 function Metatags(props: MetatagsProps): ReactElement<typeof Head> {
