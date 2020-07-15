@@ -1,37 +1,29 @@
-import { initGA, logEvent, logPageView } from "@/utils/analytics"
+import * as Fathom from "fathom-client"
 import { AppProps } from "next/app"
+import { useRouter } from "next/router"
 import { ReactFragment, useEffect } from "react"
 import "../public/fonts/fonts.css"
 
-export function reportWebVitals({
-  id,
-  name,
-  label,
-  value,
-}: {
-  id: string
-  name: string
-  label: string
-  value: number
-}): void {
-  if (window?.GA_INITIALIZED) {
-    logEvent({
-      category: `Next.js ${label} metric`,
-      action: name,
-      value: Math.round(name === "CLS" ? value * 1000 : value), // values must be integers
-      label: id, // id unique to current page load
-      nonInteraction: true, // avoids affecting bounce rate.
-    })
-  }
-}
-
 function App({ Component, pageProps }: AppProps): ReactFragment {
+  const router = useRouter()
+
   useEffect(() => {
-    if (!window.GA_INITIALIZED) {
-      initGA()
-      window.GA_INITIALIZED = true
+    // Initialize Fathom when the app loads
+    Fathom.load("WXBIFABH", {
+      honorDNT: true,
+      includedDomains: ["daneden.me"],
+    })
+
+    function onRouteChangeComplete() {
+      Fathom.trackPageview()
     }
-    logPageView()
+    // Record a pageview when route changes
+    router.events.on("routeChangeComplete", onRouteChangeComplete)
+
+    // Unassign event listener
+    return () => {
+      router.events.off("routeChangeComplete", onRouteChangeComplete)
+    }
   })
 
   return (
