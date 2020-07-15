@@ -11,13 +11,8 @@ interface MetatagsProps {
 }
 
 const dnsPrefetchURLs = [
-  "https://daneden.imgix.net",
   "https://videodelivery.net",
-  "https://stats.g.doubleclick.net",
-  "https://www.google.com",
   "https://embed.videodelivery.net",
-  "https://www.googletagmanager.com",
-  "https://www.google-analytics.com",
 ]
 
 function Metatags(props: MetatagsProps): ReactElement<typeof Head> {
