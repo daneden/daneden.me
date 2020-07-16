@@ -19,13 +19,10 @@ export default function HomePage(): ReactElement<typeof Layout> {
 
       <HomeContent>
         <P>
-          Daniel Eden is a Design Lead at{" "}
+          Daniel Eden is a Product Design Manager at{" "}
           <Link href="https://facebook.com/business">Facebook</Link> in London,
-          working on design systems for{" "}
-          <Link href="https://medium.com/facebook-design-business-tools">
-            Ads and Business products
-          </Link>
-          . He spends his time <Link href="/blog">writing</Link>, thinking,{" "}
+          working on Facebook’s Commerce Products. He spends his time{" "}
+          <Link href="/blog">writing</Link>, thinking,{" "}
           <Link href="https://twitter.com/_dte">tweeting</Link>, and talking
           about Design Systems: how they scale, how they break, and the people
           that maintain them.

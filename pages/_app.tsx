@@ -14,6 +14,14 @@ function App({ Component, pageProps }: AppProps): ReactFragment {
       includedDomains: ["daneden.me"],
     })
 
+    function logPageEndReached(e: Event) {
+      if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+        Fathom.trackGoal("YD669UL2", 0)
+      }
+    }
+
+    window.addEventListener("scroll", logPageEndReached)
+
     function onRouteChangeComplete() {
       Fathom.trackPageview()
     }
@@ -23,6 +31,7 @@ function App({ Component, pageProps }: AppProps): ReactFragment {
     // Unassign event listener
     return () => {
       router.events.off("routeChangeComplete", onRouteChangeComplete)
+      window.removeEventListener("scroll", logPageEndReached)
     }
   })
 

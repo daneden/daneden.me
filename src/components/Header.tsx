@@ -1,4 +1,5 @@
 import cxs from "cxs/component"
+import * as Fathom from "fathom-client"
 import { useRouter } from "next/router"
 import React, { ReactElement } from "react"
 import Atoms from "./designSystem/atoms"
@@ -49,7 +50,12 @@ const Header = ({
         <PlainList>
           {links.map(({ to, label }) => (
             <li key={to}>
-              <PlainLink href={to}>
+              <PlainLink
+                href={to}
+                onClick={() => {
+                  Fathom.trackGoal("QSDYWCAL", 0)
+                }}
+              >
                 {label}
                 {location.includes(to) ? " ☚" : ""}
               </PlainLink>
