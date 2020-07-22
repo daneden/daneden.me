@@ -4,11 +4,16 @@ export const Canvas = () => {
   const ref = useRef<HTMLElement>()
   const [mounted, setMounted] = useState(false)
   const [tapePosition, setTapePosition] = useState(0)
+  const [transformMatrix, setTransformMatrix] = useState({ h: 0, v: 0 })
 
   useEffect(() => {
     ref.current = document.body
     setTapePosition(Math.random() * 10)
     setMounted(true)
+    setTransformMatrix({
+      h: Math.round(Math.random()),
+      v: Math.round(Math.random()),
+    })
   }, [])
 
   return mounted
@@ -23,6 +28,9 @@ export const Canvas = () => {
               right: 0;
               bottom: 0;
               z-index: -1;
+              transform: rotateX(-${transformMatrix.h * 180}deg)
+                rotateY(-${transformMatrix.v * 180}deg);
+              transform-origin: center;
               animation: canvasEnter 3s ease, canvasHues 20s linear infinite;
               animation-fill-mode: both;
               animation-delay: 0s, -${tapePosition}s;
