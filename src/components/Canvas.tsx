@@ -3,9 +3,11 @@ import { createPortal } from "react-dom"
 export const Canvas = () => {
   const ref = useRef<HTMLElement>()
   const [mounted, setMounted] = useState(false)
+  const [tapePosition, setTapePosition] = useState(0)
 
   useEffect(() => {
     ref.current = document.body
+    setTapePosition(Math.random() * 10)
     setMounted(true)
   }, [])
 
@@ -23,6 +25,7 @@ export const Canvas = () => {
               z-index: -1;
               animation: canvasEnter 3s ease, canvasHues 20s linear infinite;
               animation-fill-mode: both;
+              animation-delay: 0s, -${tapePosition}s;
               backgroundcolor: orange;
               background-image: radial-gradient(
                   circle at top left,
