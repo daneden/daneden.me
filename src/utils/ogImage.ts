@@ -2,9 +2,12 @@ import { MDXPost } from "*.mdx"
 import { Atoms } from "@/designSystem"
 import widont from "@/utils/widont"
 import { createCanvas, registerFont } from "canvas"
-import { existsSync, mkdirSync, writeFileSync } from "fs"
+import { existsSync, promises as fs } from "fs"
 import path from "path"
 import siteConfig from "../data/siteconfig.json"
+import { rejects } from "assert"
+
+const { mkdir, writeFile } = fs
 
 const soehne = path.resolve(
   process.cwd(),
@@ -57,7 +60,10 @@ function getLines(
   return lines
 }
 
-export default function ogImage(title: string): Buffer {
+export default function ogImage(
+  title: string,
+  callback?: (e: any, b: Buffer) => void
+): Buffer | void {
   const displaySize = 80
   const lineHeight = displaySize * 1
   const authorSize = 36
@@ -102,6 +108,10 @@ export default function ogImage(title: string): Buffer {
     ctx.restore()
   }
 
+  if (callback) {
+    return canvas.toBuffer(callback)
+  }
+
   return canvas.toBuffer("image/png")
 }
 
@@ -109,16 +119,25 @@ export const generateOgImages = async (posts: MDXPost[]) => {
   const dir = path.resolve("public", "og")
 
   if (!existsSync(dir)) {
-    mkdirSync(dir)
+    await mkdir(dir)
   }
 
-  posts.map(({ title, ogSlug }) => {
-    const filepath = path.resolve(dir, `${ogSlug?.split(".png")[0]}.png`)
+  const promises = posts.map(({ title, ogSlug }, index) => {
+    return new Promise((resolve, reject) => {
+      const filepath = path.resolve(dir, `${ogSlug?.split(".png")[0]}.png`)
 
-    if (!existsSync(filepath)) {
-      const imgBuffer = ogImage(title)
+      ogImage(title, (error, buffer) => {
+        if (error) {
+          console.error(error)
+          reject()
+        }
 
-      writeFileSync(filepath, imgBuffer)
-    }
+        writeFile(filepath, buffer)
+      })
+
+      resolve()
+    })
   })
+
+  await Promise.all(promises).catch((error) => console.error(error))
 }
