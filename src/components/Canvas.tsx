@@ -7,7 +7,7 @@ export const Canvas = () => {
   useEffect(() => {
     ref.current = document.body
     setMounted(true)
-  })
+  }, [])
 
   return mounted
     ? createPortal(
