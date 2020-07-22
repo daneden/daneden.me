@@ -33,12 +33,12 @@ export const Canvas = () => {
                 radial-gradient(circle at bottom right, #4b0082ff, #4b008200),
                 radial-gradient(circle at bottom left, #ffd700ff, #ffd70000),
                 radial-gradient(circle at bottom, #ff1493ff, #ff149300);
+              will-change: opacity filter;
             }
 
             @keyframes canvasEnter {
               from {
                 opacity: 0;
-                transform: scale(2);
               }
             }
 
