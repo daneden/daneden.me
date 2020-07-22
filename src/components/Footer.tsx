@@ -5,7 +5,7 @@ import { Atoms, Link, Small } from "./designSystem"
 const StyledFooter = cxs("footer")({
   borderTop: "1px solid",
   fontFamily: Atoms.font.family.sans,
-  marginTop: Atoms.spacing.xlarge,
+  marginTop: Atoms.spacing.large,
   paddingBottom: Atoms.spacing.large,
   paddingLeft: Atoms.widths.content,
   paddingTop: Atoms.spacing.small,

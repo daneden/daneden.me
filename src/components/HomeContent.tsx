@@ -6,7 +6,7 @@ import { Atoms } from "./designSystem"
 const Content = cxs("div")({
   WebkitFontSmoothing: "antialiased",
   fontFamily: `${Atoms.font.family.sohne}, ${Atoms.font.family.sans}`,
-  fontSize: "clamp(1.75rem, 4vw, 100vw)",
+  fontSize: "clamp(1.5rem, 4vw, 100vw)",
   fontWeight: 700,
   lineHeight: 1.25,
   ":last-child": {
@@ -24,17 +24,6 @@ export default function HomeContent({
       <Content>
         <Breakout>{children}</Breakout>
       </Content>
-      <style global jsx>{`
-        a[href^='https://twitter']
-        {
-          --hover-color: rgb(29, 161, 242);
-        }
-
-        a[href^='https://facebook']
-        {
-          --hover-color: rgb(24, 119, 242);
-        }
-      `}</style>
     </>
   )
 }
