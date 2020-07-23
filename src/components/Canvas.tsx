@@ -28,20 +28,20 @@ export const Canvas = () => {
               right: 0;
               bottom: 0;
               z-index: -1;
-              transform: rotateX(-${transformMatrix.h * 180}deg)
+              /*transform: rotateX(-${transformMatrix.h * 180}deg)
                 rotateY(-${transformMatrix.v * 180}deg);
-              transform-origin: center;
+              transform-origin: center;*/
               animation: canvasEnter 3s ease, canvasHues 20s linear infinite;
               animation-fill-mode: both;
               animation-delay: 0s, -${tapePosition}s;
-              backgroundcolor: orange;
+              background-color: orange;
               background-image: radial-gradient(
                   circle at top left,
-                  #008000ff,
-                  #00800000
+                  #32cd32ff,
+                  #32cd3200
                 ),
                 radial-gradient(circle at center, #1e90ffff, #1e90ff00),
-                radial-gradient(circle at bottom right, #4b0082ff, #4b008200),
+                radial-gradient(circle at bottom right, #DA70D6ff, #DA70D600),
                 radial-gradient(circle at bottom left, #ffd700ff, #ffd70000),
                 radial-gradient(circle at bottom, #ff1493ff, #ff149300);
               will-change: opacity filter;
