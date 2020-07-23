@@ -14,7 +14,7 @@ export default function HomePage(): ReactElement<typeof Layout> {
             --text-color: ${Atoms.colors.wash} !important;
             --wash-color: ${Atoms.colors.text} !important;
             --meta-color: ${Atoms.colors.whiteAlpha} !important;
-            text-shadow: 0 2px 1.5rem rgba(0, 0, 0, 0.1) !important;
+            text-shadow: 0 2px 1.5rem rgba(0, 0, 0, 0.05) !important;
           }
         `}
       </style>
