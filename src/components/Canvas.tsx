@@ -6,6 +6,8 @@ import * as THREE from "three"
 import { Mesh, ShaderMaterial } from "three"
 import shaders from "../webGL/shader.frag"
 
+const seed = Math.random() * 200
+
 const styles = cxs({
   animation: "canvasEnter 3s ease",
   animationFillMode: "both",
@@ -37,7 +39,7 @@ const GradientRenderer = () => {
             iResolution: {
               value: new THREE.Vector3(size.width, size.height, 1),
             },
-            iTime: { value: 0 },
+            iTime: { value: seed },
           },
         })
       }
