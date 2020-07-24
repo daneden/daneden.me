@@ -26,7 +26,7 @@ void main() {
   for (int i = 0; i < POINTS; i++) {
     float f = float(i) / float(POINTS) * TAU;
     vec2 pos = 0.5 + 0.35 * vec2(
-      cos(-iTime * 0.15 + f) - sin (-iTime * 0.5 - f),
+      cos(-iTime * 0.15 + f) - sin(-iTime * 0.5 - f),
       sin(iTime * 0.8 + f * 2.0) - cos(-iTime * 0.5 + f * 1.2)
     );
     pos = uv - pos;
