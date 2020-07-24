@@ -1,4 +1,4 @@
-import Canvas from "@/components/Canvas"
+import { Canvas } from "@/components/Canvas"
 import HomeContent from "@/components/HomeContent"
 import Layout from "@/components/Layout"
 import { Atoms, Link, P } from "@/designSystem"
