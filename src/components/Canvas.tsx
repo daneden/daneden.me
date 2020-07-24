@@ -65,7 +65,7 @@ export default function Gradienty() {
   return mounted
     ? createPortal(
         <>
-          <Canvas className={`${styles} canvas`}>
+          <Canvas className={`${styles} canvas`} pixelRatio={1}>
             <orthographicCamera
               bottom={-1}
               far={1}
