@@ -27,6 +27,8 @@
     "cwebp-bin": "^6.1.1",
     "cxs": "^6.2.0",
     "fathom-client": "^3.0.0",
+    "glsl-shader-loader": "^0.1.6",
+    "glslCanvas": "^0.1.7",
     "imagemin": "^7.0.1",
     "imagemin-webp": "^6.0.0",
     "mdx-prism": "^0.3.1",
@@ -38,7 +40,9 @@
     "react-katex": "^2.0.2",
     "react-markdown": "^4.3.1",
     "react-script-tag": "^1.1.2",
-    "sharp": "^0.25.4"
+    "react-three-fiber": "^4.2.17",
+    "sharp": "^0.25.4",
+    "three": "^0.118.3"
   },
   "devDependencies": {
     "@mdx-js/mdx": "^1.6.6",
