@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react"
 import { createPortal } from "react-dom"
 import { Canvas, useFrame, useThree } from "react-three-fiber"
 import * as THREE from "three"
+import { Mesh, ShaderMaterial } from "three"
 import shaders from "../webGL/shader.frag"
 
 const styles = cxs({
@@ -10,7 +11,6 @@ const styles = cxs({
   animationFillMode: "both",
   bottom: 0,
   left: 0,
-  position: "fixed !important",
   right: 0,
   top: 0,
   willChange: "opacity",
@@ -18,13 +18,13 @@ const styles = cxs({
 })
 
 const GradientRenderer = () => {
-  const elapsed = useRef()
+  const meshRef = useRef<Mesh>()
   const { size } = useThree()
 
   useFrame(() => {
-    console.log("updating", elapsed)
-    if (elapsed.current !== undefined) {
-      elapsed.current.material.uniforms.iTime.value += 0.01
+    console.log("updating", meshRef)
+    if (meshRef.current !== undefined) {
+      ;(meshRef.current.material as ShaderMaterial).uniforms.iTime.value += 0.01
     }
   })
 
@@ -41,7 +41,7 @@ const GradientRenderer = () => {
           },
         })
       }
-      ref={elapsed}
+      ref={meshRef}
     >
       <planeBufferGeometry args={[50, 50]} attach="geometry" />
     </mesh>
@@ -63,7 +63,7 @@ export default function Gradienty() {
   return mounted
     ? createPortal(
         <>
-          <Canvas className={styles}>
+          <Canvas className={`${styles} canvas`}>
             <orthographicCamera
               bottom={-1}
               far={1}
@@ -76,19 +76,7 @@ export default function Gradienty() {
           </Canvas>
           <style global jsx>{`
             .canvas {
-              position: fixed;
-              top: 0;
-              left: 0;
-              z-index: -1;
-              animation: canvasEnter 3s ease;
-              animation-fill-mode: both;
-              will-change: opacity;
-            }
-
-            body > span {
-              position: absolute !important;
-              top: 0;
-              left: 0;
+              position: fixed !important;
             }
 
             @keyframes canvasEnter {
