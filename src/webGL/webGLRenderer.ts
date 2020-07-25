@@ -3,20 +3,27 @@ import fragShaderSource from "./shader.frag"
 import vertShaderSource from "./shader.vert"
 
 function init(canvas: HTMLCanvasElement) {
-  const glCanvas = document.createElement("canvas")
+  let glCanvas: HTMLCanvasElement | OffscreenCanvas
 
-  glCanvas.width = canvas.width = canvas.clientWidth * 0.75
-  glCanvas.height = canvas.height = canvas.clientHeight * 0.75
-  const ctx = canvas.getContext("2d")!
+  let ctx: CanvasRenderingContext2D | ImageBitmapRenderingContext
 
-  let gl: WebGLRenderingContext
+  let offscreen = false
   const seed = Math.round(Math.random() * 20000)
+  canvas.width = canvas.clientWidth * 0.75
+  canvas.height = canvas.clientHeight * 0.75
+
   if ("OffscreenCanvas" in window) {
-    gl = new OffscreenCanvas(canvas.width, canvas.height).getContext("webgl")!
+    glCanvas = new OffscreenCanvas(canvas.width, canvas.height)
+    offscreen = true
+    ctx = canvas.getContext("bitmaprenderer")!
   } else {
-    gl = glCanvas.getContext("webgl")!
+    glCanvas = document.createElement("canvas")
+    glCanvas.width = canvas.width
+    glCanvas.height = canvas.height
+    ctx = canvas.getContext("2d")!
   }
 
+  const gl = glCanvas.getContext("webgl")!
   gl.viewport(0, 0, canvas.width, canvas.height)
 
   const buffer = gl.createBuffer()!
@@ -73,8 +80,12 @@ function init(canvas: HTMLCanvasElement) {
     gl.uniform1f(timePosition, now / 2000.0 + seed)
 
     gl.drawArrays(gl.TRIANGLES, 0, 6)
-
-    ctx.drawImage(gl.canvas, 0, 0)
+    if (offscreen) {
+      const frame = (glCanvas as OffscreenCanvas).transferToImageBitmap()
+      ;(ctx as ImageBitmapRenderingContext).transferFromImageBitmap(frame)
+    } else {
+      ;(ctx as CanvasRenderingContext2D).drawImage(gl.canvas, 0, 0)
+    }
 
     window.requestAnimationFrame(render)
   }
