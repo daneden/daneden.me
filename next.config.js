@@ -27,11 +27,11 @@ module.exports = withMDXEnhanced(mdxOptions)({
       ...config.module.rules,
       {
         test: /\.(ttf)$/i,
-        use: [
-          {
-            loader: "file-loader",
-          },
-        ],
+        loader: "file-loader",
+      },
+      {
+        test: /\.(frag|vert|glsl)$/i,
+        loader: "glsl-shader-loader",
       },
     ]
 

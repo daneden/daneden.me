@@ -27,6 +27,7 @@
     "cwebp-bin": "^6.1.1",
     "cxs": "^6.2.0",
     "fathom-client": "^3.0.0",
+    "glsl-shader-loader": "^0.1.6",
     "imagemin": "^7.0.1",
     "imagemin-webp": "^6.0.0",
     "mdx-prism": "^0.3.1",

@@ -1955,6 +1955,11 @@ async-each@^1.0.1:
   resolved "https://registry.yarnpkg.com/async-each/-/async-each-1.0.3.tgz#b727dbf87d7651602f06f4d4ac387f47d91b0cbf"
   integrity sha512-z/WhQ5FPySLdvREByI2vZiTWwCnF0moMJ1hK9YQwDTHKh6I7/uSckMetoRGb5UBZPC1z0jlw+n/XCgjeH7y1AQ==
 
+async@^1.4.2:
+  version "1.5.2"
+  resolved "https://registry.yarnpkg.com/async/-/async-1.5.2.tgz#ec6a61ae56480c0c3cb241c95618e20892f9672a"
+  integrity sha1-7GphrlZIDAw8skHJVhjiCJL5Zyo=
+
 at-least-node@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/at-least-node/-/at-least-node-1.0.0.tgz#602cd4b46e844ad4effc92a8011a3c46e0238dc2"
@@ -3126,6 +3131,13 @@ css@^2.0.0:
     source-map "^0.6.1"
     source-map-resolve "^0.5.2"
     urix "^0.1.0"
+
+cssauron@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/cssauron/-/cssauron-1.4.0.tgz#a6602dff7e04a8306dc0db9a551e92e8b5662ad8"
+  integrity sha1-pmAt/34EqDBtwNuaVR6S6LVmKtg=
+  dependencies:
+    through X.X.X
 
 cssesc@^3.0.0:
   version "3.0.0"
@@ -4630,6 +4642,22 @@ globby@^10.0.0:
     ignore "^5.1.1"
     merge2 "^1.2.3"
     slash "^3.0.0"
+
+glsl-man@^1.1.14:
+  version "1.1.14"
+  resolved "https://registry.yarnpkg.com/glsl-man/-/glsl-man-1.1.14.tgz#14acf7969d3cd9113cbff291ea1991a469022630"
+  integrity sha512-yM/+5DCpHGIDO+qtMTDp2PLgl+g+4WbqmJlA4baCRkNwuOZbpNDyBaS1gfGaJIV/BrMKDuFBr6niOeRHV1iAeg==
+  dependencies:
+    cssauron "^1.4.0"
+    tree-traversal "^1.1.1"
+
+glsl-shader-loader@^0.1.6:
+  version "0.1.6"
+  resolved "https://registry.yarnpkg.com/glsl-shader-loader/-/glsl-shader-loader-0.1.6.tgz#82240cddfc0c09b71019bc813d8b14929823a8e8"
+  integrity sha512-RInPlABhbFcVZ7d69Zs9ckJ9TPr7lEgZouuGRqUpRVouOiH2ZyikAIkSKEzkJWOyJa25Lc6VeAVk4F2ef5OXBg==
+  dependencies:
+    glsl-man "^1.1.14"
+    loader-utils "^1.1.0"
 
 good-listener@^1.2.2:
   version "1.2.2"
@@ -9374,7 +9402,7 @@ through2@^2.0.0:
     readable-stream "~2.3.6"
     xtend "~4.0.1"
 
-through@^2.3.8, through@~2.3:
+through@X.X.X, through@^2.3.8, through@~2.3:
   version "2.3.8"
   resolved "https://registry.yarnpkg.com/through/-/through-2.3.8.tgz#0dd4c9ffaabc357960b1b724115d7e0e86a2e1f5"
   integrity sha1-DdTJ/6q8NXlgsbckEV1+Doai4fU=
@@ -9464,6 +9492,13 @@ traverse@0.6.6:
   version "0.6.6"
   resolved "https://registry.yarnpkg.com/traverse/-/traverse-0.6.6.tgz#cbdf560fd7b9af632502fed40f918c157ea97137"
   integrity sha1-y99WD9e5r2MlAv7UD5GMFX6pcTc=
+
+tree-traversal@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/tree-traversal/-/tree-traversal-1.1.1.tgz#71483b3cbe01c5c3214f5a58383baaa0cf1dccbe"
+  integrity sha1-cUg7PL4BxcMhT1pYODuqoM8dzL4=
+  dependencies:
+    async "^1.4.2"
 
 trim-lines@^1.0.0:
   version "1.1.3"
