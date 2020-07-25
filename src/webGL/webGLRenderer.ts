@@ -3,12 +3,11 @@ import fragShaderSource from "./shader.frag"
 import vertShaderSource from "./shader.vert"
 
 let gl: WebGLRenderingContext
-let canvas: HTMLCanvasElement
 let buffer: WebGLBuffer
 let program: WebGLProgram
 
 function init(canvas: HTMLCanvasElement) {
-  const seed = Math.round(Math.random() * 200)
+  const seed = Math.round(Math.random() * 20000)
   gl = canvas.getContext("webgl")!
   canvas.width = canvas.clientWidth * 0.75
   canvas.height = canvas.clientHeight * 0.75
