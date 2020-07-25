@@ -1,6 +1,4 @@
-#ifdef GL_ES
-precision lowp float;
-#endif
+precision highp float;
 
 #define POINTS 3 // try between 2 and 256, gets slow fast
 #define PI 3.1415926536
