@@ -56,5 +56,7 @@ void main() {
     col += contribution[i] * cN * pcol * mix(pink, blue, uv.x);
   }
 
-  gl_FragColor = vec4(col, 1.0);
+  vec3 limited = min(max(col, 0.2), 0.9);
+
+  gl_FragColor = vec4(limited, 1.0);
 }
