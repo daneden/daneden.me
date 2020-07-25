@@ -49,6 +49,9 @@ function init(canvas: HTMLCanvasElement) {
   gl.linkProgram(program)
   gl.useProgram(program)
 
+  gl.deleteShader(vertexShader)
+  gl.deleteShader(fragmentShader)
+
   function render(now: number) {
     gl.clear(gl.COLOR_BUFFER_BIT)
     const positionLocation = gl.getAttribLocation(program, "a_position")
