@@ -1,3 +1,8 @@
+// Credit for a lot of this code: https://www.shadertoy.com/view/XlSczc
+// And credit to Lynn Hu (@Lynn__Hu on Twitter) for the inspiring shader work
+// she posted to Instagram (https://www.instagram.com/p/CC-WPxsA0Ot/)
+
+// Turns out highp actually has the best performance on iOS
 precision highp float;
 
 #define POINTS 3 // try between 2 and 256, gets slow fast
@@ -12,6 +17,8 @@ vec3 rgb(float r, float g, float b) {
 }
 
 void main() {
+  // These colors will come in to use at the end to help constrain the final
+  // output colors
   vec3 pink = rgb(230.0, 90.0, 50.0);
   vec3 blue = rgb(30.0, 80.0, 160.0);
     

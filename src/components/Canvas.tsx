@@ -5,10 +5,12 @@ export const Canvas = () => {
   const docRef = useRef<HTMLElement>()
   const [mounted, setMounted] = useState(false)
   const [transformMatrix, setTransformMatrix] = useState({ h: 0, v: 0 })
+  const teardown = useRef<() => void>()
 
   const canvasRef = useCallback((node) => {
     if (node !== null) {
-      renderWebGLLayer(node)
+      const { canceller } = renderWebGLLayer(node)
+      teardown.current = canceller
     }
   }, [])
 
@@ -20,6 +22,12 @@ export const Canvas = () => {
 
     docRef.current = document.body
     setMounted(true)
+
+    return () => {
+      if (teardown.current) {
+        teardown.current()
+      }
+    }
   }, [])
 
   return mounted
