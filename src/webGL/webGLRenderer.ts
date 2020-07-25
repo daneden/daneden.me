@@ -2,17 +2,24 @@
 import fragShaderSource from "./shader.frag"
 import vertShaderSource from "./shader.vert"
 
-let gl: WebGLRenderingContext
-let buffer: WebGLBuffer
-let program: WebGLProgram
-
 function init(canvas: HTMLCanvasElement) {
+  const glCanvas = document.createElement("canvas")
+
+  glCanvas.width = canvas.width = canvas.clientWidth * 0.75
+  glCanvas.height = canvas.height = canvas.clientHeight * 0.75
+  const ctx = canvas.getContext("2d")!
+
+  let gl: WebGLRenderingContext
   const seed = Math.round(Math.random() * 20000)
-  gl = canvas.getContext("webgl")!
-  canvas.width = canvas.clientWidth * 0.75
-  canvas.height = canvas.clientHeight * 0.75
+  if ("OffscreenCanvas" in window) {
+    gl = new OffscreenCanvas(canvas.width, canvas.height).getContext("webgl")!
+  } else {
+    gl = glCanvas.getContext("webgl")!
+  }
+
   gl.viewport(0, 0, canvas.width, canvas.height)
-  buffer = gl.createBuffer()!
+
+  const buffer = gl.createBuffer()!
   gl.bindBuffer(gl.ARRAY_BUFFER, buffer)
   gl.bufferData(
     gl.ARRAY_BUFFER,
@@ -41,11 +48,15 @@ function init(canvas: HTMLCanvasElement) {
   gl.shaderSource(fragmentShader, fragShaderSource)
   gl.compileShader(fragmentShader)
 
-  program = gl.createProgram()!
+  const program = gl.createProgram()!
   gl.attachShader(program, vertexShader)
   gl.attachShader(program, fragmentShader)
   gl.linkProgram(program)
   gl.useProgram(program)
+
+  gl.deleteShader(vertexShader)
+  gl.deleteShader(fragmentShader)
+  gl.deleteProgram(program)
 
   const positionLocation = gl.getAttribLocation(program, "a_position")
   gl.enableVertexAttribArray(positionLocation)
@@ -62,6 +73,8 @@ function init(canvas: HTMLCanvasElement) {
     gl.uniform1f(timePosition, now / 2000.0 + seed)
 
     gl.drawArrays(gl.TRIANGLES, 0, 6)
+
+    ctx.drawImage(gl.canvas, 0, 0)
 
     window.requestAnimationFrame(render)
   }
