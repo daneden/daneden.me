@@ -1,11 +1,12 @@
 import * as Fathom from "fathom-client"
 import { AppProps } from "next/app"
 import { useRouter } from "next/router"
-import { ReactFragment, useEffect } from "react"
+import { useEffect, useState } from "react"
 import "../public/fonts/fonts.css"
 
-function App({ Component, pageProps }: AppProps): ReactFragment {
+function App({ Component, pageProps }: AppProps) {
   const router = useRouter()
+  const [loggedPageScroll, setLoggedPageScroll] = useState(false)
 
   useEffect(() => {
     // Initialize Fathom when the app loads
@@ -15,8 +16,12 @@ function App({ Component, pageProps }: AppProps): ReactFragment {
     })
 
     function logPageEndReached(e: Event) {
-      if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+      if (
+        window.innerHeight + window.scrollY >= document.body.offsetHeight &&
+        !loggedPageScroll
+      ) {
         Fathom.trackGoal("YD669UL2", 0)
+        setLoggedPageScroll(true)
       }
     }
 
