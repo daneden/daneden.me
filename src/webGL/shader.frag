@@ -16,6 +16,10 @@ vec3 rgb(float r, float g, float b) {
   return vec3(r / 256.0, g / 256.0, b / 256.0);
 }
 
+float map(float value, float min1, float max1, float min2, float max2) {
+  return min2 + (value - min1) * (max2 - min2) / (max1 - min1);
+}
+
 void main() {
   // These colors will come in to use at the end to help constrain the final
   // output colors
@@ -26,7 +30,7 @@ void main() {
 
   float bias = 1.1;
   float power = -5.0;
-  float offset = (sin(u_time / 10.0)) / 2.0;
+  float offset = map(cos(u_time / 3.0), 0.0, 1.0, 0.6, 1.0);
 
   vec2 mouse = vec2(0.1, 0.1 + offset);
   bias = pow(10.0, (-0.5 + mouse.x) * 10.0);
@@ -39,8 +43,8 @@ void main() {
   for (int i = 0; i < POINTS; i++) {
     float f = float(i) / float(POINTS) * TAU;
     vec2 pos = 0.5 + 0.35 * vec2(
-      cos(-u_time * 0.15 + f),
-      sin(u_time * 0.8 + f * 2.0)
+      cos(-u_time * 0.15 + f) + float(i) * 0.1,
+      sin(u_time * 0.8 + f * 2.0) - float(i) * 0.1
     );
     pos = uv - pos;
     float dist = length(pos);
@@ -57,7 +61,7 @@ void main() {
   cN = 1.0 / cN;
   for (int i = 0; i < POINTS; i++) {
     float f = float(i) / float(POINTS) * TAU + u_time * 0.5;
-    vec3 pcol = 0.5 + 0.5 * cos(mix(pink, blue, f * 3.0));
+    vec3 pcol = 0.5 + 0.5 * sin(mix(pink, blue, f * 3.0));
     col += contribution[i] * cN * pcol * mix(pink, blue, uv.x);
   }
 

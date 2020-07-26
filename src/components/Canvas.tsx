@@ -4,7 +4,6 @@ import renderWebGLLayer from "../webGL/webGLRenderer"
 export const Canvas = () => {
   const docRef = useRef<HTMLElement>()
   const [mounted, setMounted] = useState(false)
-  const [transformMatrix, setTransformMatrix] = useState({ h: 0, v: 0 })
   const teardown = useRef<() => void>()
 
   const canvasRef = useCallback((node) => {
@@ -15,11 +14,6 @@ export const Canvas = () => {
   }, [])
 
   useEffect(() => {
-    setTransformMatrix({
-      h: Math.round(Math.random()),
-      v: Math.round(Math.random()),
-    })
-
     docRef.current = document.body
     setMounted(true)
 
@@ -42,9 +36,6 @@ export const Canvas = () => {
               width: 100%;
               height: 100%;
               z-index: -1;
-              transform: rotateX(-${transformMatrix.h * 180}deg)
-                rotateY(-${transformMatrix.v * 180}deg);
-              transform-origin: center;
               animation: canvasEnter 3s ease;
               animation-fill-mode: both;
               will-change: opacity;
