@@ -16,25 +16,23 @@ vec3 rgb(float r, float g, float b) {
   return vec3(r / 256.0, g / 256.0, b / 256.0);
 }
 
-float map(float value, float min1, float max1, float min2, float max2) {
-  return min2 + (value - min1) * (max2 - min2) / (max1 - min1);
+vec3 hsv2rgb(vec3 c) {
+    vec4 K = vec4(1.0, 2.0 / 3.0, 1.0 / 3.0, 3.0);
+    vec3 p = abs(fract(c.xxx + K.xyz) * 6.0 - K.www);
+    return c.z * mix(K.xxx, clamp(p - K.xxx, 0.0, 1.0), c.y);
 }
 
 void main() {
   // These colors will come in to use at the end to help constrain the final
   // output colors
-  vec3 pink = rgb(230.0, 90.0, 50.0);
-  vec3 blue = rgb(30.0, 80.0, 160.0);
+  vec3 col1 = hsv2rgb(vec3(0.7922, 0.5255, 0.9451));
+  vec3 col2 = hsv2rgb(vec3(0.2039, 0.2314, 0.2118));
     
   vec2 uv = gl_FragCoord.xy/u_resolution;
 
-  float bias = 1.1;
-  float power = -5.0;
-  float offset = map(cos(u_time / 3.0), 0.0, 1.0, 0.6, 1.0);
-
-  vec2 mouse = vec2(0.1, 0.1 + offset);
-  bias = pow(10.0, (-0.5 + mouse.x) * 10.0);
-  power = 0.5 + mouse.y * 95.0;
+  vec2 mouse = vec2(0.1, 1.0);
+  float bias = pow(10.0, (-0.5) * 20.0);
+  float power = 8.0;
 
   float cN = 0.0;
   // array used to store contributions in first loop
@@ -43,7 +41,7 @@ void main() {
   for (int i = 0; i < POINTS; i++) {
     float f = float(i) / float(POINTS) * TAU;
     vec2 pos = 0.5 + 0.35 * vec2(
-      cos(-u_time * 0.15 + f) + float(i) * 0.1,
+      cos(-u_time * 0.15 + f+ float(i) * 0.1),
       sin(u_time * 0.8 + f * 2.0) - float(i) * 0.1
     );
     pos = uv - pos;
@@ -61,11 +59,9 @@ void main() {
   cN = 1.0 / cN;
   for (int i = 0; i < POINTS; i++) {
     float f = float(i) / float(POINTS) * TAU + u_time * 0.5;
-    vec3 pcol = 0.5 + 0.5 * sin(mix(pink, blue, f * 3.0));
-    col += contribution[i] * cN * pcol * mix(pink, blue, uv.x);
+    vec3 pcol = 0.5 + 0.5 * sin(mix(col1, col2, f * 3.0));
+    col += contribution[i] * cN * pcol * mix(col1, col2, uv.y);
   }
 
-  vec3 limited = min(max(col, 0.05), 0.95);
-
-  gl_FragColor = vec4(limited, 1.0);
+  gl_FragColor = vec4(col, 1.0);
 }
