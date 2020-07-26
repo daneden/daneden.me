@@ -14,12 +14,19 @@ const StyledHeader = cxs("header")({
   borderBottom: "1px solid",
   display: "grid",
   gridTemplateColumns: `calc(${Atoms.widths.content} - ${Atoms.spacing.medium}) 1fr`,
-  gridGap: Atoms.spacing.medium,
+  gridGap: Atoms.spacing.xsmall,
   flexWrap: "wrap",
   marginBottom: Atoms.spacing.small,
   paddingTop: Atoms.spacing.small,
   [`@media (max-width: ${Atoms.breakpoints.medium})`]: {
-    gridTemplateColumns: "1fr 1fr",
+    gridTemplateColumns: "1fr",
+  },
+})
+
+const StyledLi = cxs("li")({
+  [`@media (max-width: ${Atoms.breakpoints.medium})`]: {
+    display: "inline-block",
+    marginRight: "1em",
   },
 })
 
@@ -49,7 +56,7 @@ const Header = ({
       <nav>
         <PlainList>
           {links.map(({ to, label }) => (
-            <li key={to}>
+            <StyledLi key={to}>
               <PlainLink
                 href={to}
                 onClick={() => {
@@ -59,7 +66,7 @@ const Header = ({
                 {label}
                 {location.includes(to) ? " ☚" : ""}
               </PlainLink>
-            </li>
+            </StyledLi>
           ))}
         </PlainList>
       </nav>
