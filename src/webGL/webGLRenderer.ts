@@ -85,6 +85,17 @@ function init(canvas: HTMLCanvasElement) {
   const resolution = [canvas.clientWidth, canvas.clientHeight]
   const resolutionPosition = gl.getUniformLocation(program, "u_resolution")
   const timePosition = gl.getUniformLocation(program, "u_time")
+  const shouldInvertPosition = gl.getUniformLocation(program, "u_shouldInvert")
+  const mql = window.matchMedia("(prefers-color-scheme: dark)")
+  let shouldInvert = !mql.matches
+
+  mql.addListener((e) => {
+    if (e.matches) {
+      shouldInvert = false
+    } else {
+      shouldInvert = true
+    }
+  })
 
   // The main render loop
   // First, we'll start a random seed to create a different starting scene on
@@ -94,9 +105,6 @@ function init(canvas: HTMLCanvasElement) {
   let running = true
 
   function render(now: number) {
-    // Reset canvas image
-    canvas.width = canvas.width
-
     // Clear GLSL canvas
     gl.clear(gl.COLOR_BUFFER_BIT)
 
@@ -104,6 +112,7 @@ function init(canvas: HTMLCanvasElement) {
     gl.vertexAttribPointer(positionLocation, 2, gl.FLOAT, false, 0, 0)
     gl.uniform2fv(resolutionPosition, resolution)
     gl.uniform1f(timePosition, now / 2000.0 + seed)
+    gl.uniform1i(shouldInvertPosition, Number(shouldInvert))
 
     // Draw arrays
     gl.drawArrays(gl.TRIANGLES, 0, 6)

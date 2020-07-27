@@ -11,6 +11,7 @@ precision highp float;
 
 uniform vec2 u_resolution;
 uniform float u_time;
+uniform int u_shouldInvert;
 
 vec3 rgb(float r, float g, float b) {
   return vec3(r / 256.0, g / 256.0, b / 256.0);
@@ -63,5 +64,7 @@ void main() {
     col += contribution[i] * cN * pcol * mix(col1, col2, uv.y);
   }
 
-  gl_FragColor = vec4(col, 1.0);
+  vec3 finalCol = u_shouldInvert == 0 ? col : 1.0 - col;
+
+  gl_FragColor = vec4(finalCol, 1.0);
 }

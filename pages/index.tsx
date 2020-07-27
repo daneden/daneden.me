@@ -1,23 +1,12 @@
 import { Canvas } from "@/components/Canvas"
 import HomeContent from "@/components/HomeContent"
 import Layout from "@/components/Layout"
-import { Atoms, Link, P } from "@/designSystem"
+import { Link, P } from "@/designSystem"
 import { ReactElement } from "react"
 
 export default function HomePage(): ReactElement<typeof Layout> {
   return (
     <Layout>
-      <style global jsx>
-        {`
-          html {
-            --site-color: ${Atoms.colors.siteDark} !important;
-            --text-color: ${Atoms.colors.wash} !important;
-            --wash-color: ${Atoms.colors.text} !important;
-            --meta-color: ${Atoms.colors.whiteAlpha} !important;
-            text-shadow: 0 2px 1.5rem rgba(0, 0, 0, 0.05) !important;
-          }
-        `}
-      </style>
       <Canvas />
       <HomeContent>
         <P>
