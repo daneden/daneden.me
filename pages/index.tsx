@@ -10,7 +10,7 @@ export default function HomePage(): ReactElement<typeof Layout> {
       <Canvas />
       <HomeContent>
         <P>
-          Daniel Eden is a Product Design Manager at{" "}
+          Daniel Eden is a Design Manager at{" "}
           <Link href="https://facebook.com/business">Facebook</Link> in London,
           working on Facebook’s Commerce Products. He spends his time{" "}
           <Link href="/blog">writing</Link>, thinking,{" "}
