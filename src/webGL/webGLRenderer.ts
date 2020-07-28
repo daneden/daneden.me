@@ -2,7 +2,19 @@
 import fragShaderSource from "./shader.frag"
 import vertShaderSource from "./shader.vert"
 
+// We're going to use `then` to track the delta between rendered frames
+let then = 0
+// And we're going to use `strikes` to track how many times the
+// frame delta exceeds the tolerance.
+let strikes = -1
+const tolerance = 100
+
+// Tracking the URL changes to reset performance checkers on page changes
+let url: string
+let initialUrl: string
+
 function init(canvas: HTMLCanvasElement) {
+  initialUrl = url = window.location.toString()
   // These values will be mutated according to whether or not we can use
   // OffscreenCanvas
   let glCanvas: HTMLCanvasElement | OffscreenCanvas
@@ -97,6 +109,14 @@ function init(canvas: HTMLCanvasElement) {
     }
   })
 
+  // Reset the spike counter when focusing away since requestAnimationFrame
+  // doesn't tick on inactive windows anyway
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) {
+      strikes = -1
+    }
+  })
+
   // The main render loop
   // First, we'll start a random seed to create a different starting scene on
   // each canvas mount
@@ -105,6 +125,31 @@ function init(canvas: HTMLCanvasElement) {
   let running = true
 
   function render(now: number) {
+    // Early in the loop, we'll do some performance monitoring.
+    const diff = now - then
+    then = now
+
+    // If the loop is lagging and the document is in focus, keep lags below
+    // three strikes
+    if (diff > tolerance && document.hasFocus()) {
+      url = window.location.toString()
+
+      // Only if the page URL has changed do we really need to worry about
+      // FPS spikes
+      if (url === initialUrl) {
+        strikes++
+      } else {
+        // Otherwise, reset the spike counter ready for the next mount
+        strikes = -1
+      }
+    }
+
+    // Three strikes and we're out
+    if (strikes >= 3) {
+      cancelLoop()
+      return
+    }
+
     // Clear GLSL canvas
     gl.clear(gl.COLOR_BUFFER_BIT)
 
@@ -143,6 +188,8 @@ function init(canvas: HTMLCanvasElement) {
   return { canceller: cancelLoop }
 }
 
-export default function renderWebGLLayer(canvas: HTMLCanvasElement) {
+export default function renderWebGLLayer(
+  canvas: HTMLCanvasElement
+): { canceller: () => void } {
   return init(canvas)
 }
