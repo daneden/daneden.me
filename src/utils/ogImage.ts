@@ -5,7 +5,6 @@ import { createCanvas, registerFont } from "canvas"
 import { existsSync, promises as fs } from "fs"
 import path from "path"
 import siteConfig from "../data/siteconfig.json"
-import { rejects } from "assert"
 
 const { mkdir, writeFile } = fs
 
@@ -62,7 +61,7 @@ function getLines(
 
 export default function ogImage(
   title: string,
-  callback?: (e: any, b: Buffer) => void
+  callback?: (e: unknown, b: Buffer) => void
 ): Buffer | void {
   const displaySize = 80
   const lineHeight = displaySize * 1

@@ -120,9 +120,11 @@ function init(canvas: HTMLCanvasElement) {
     // Output image to canvas
     if (offscreen) {
       const frame = (glCanvas as OffscreenCanvas).transferToImageBitmap()
-      ;(ctx as ImageBitmapRenderingContext).transferFromImageBitmap(frame)
+      const castContext = ctx as ImageBitmapRenderingContext
+      castContext.transferFromImageBitmap(frame)
     } else {
-      ;(ctx as CanvasRenderingContext2D).drawImage(gl.canvas, 0, 0)
+      const castContext = ctx as CanvasRenderingContext2D
+      castContext.drawImage(gl.canvas, 0, 0)
     }
 
     // Call the render loop again before the next pain cycle
