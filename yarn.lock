@@ -1392,13 +1392,13 @@
   resolved "https://registry.yarnpkg.com/@types/color-name/-/color-name-1.1.1.tgz#1c1261bbeaa10a8055bbc5d8ab84b7b2afc846a0"
   integrity sha512-rr+OQyAjxze7GgWrSaJwydHStIhHq2lvY3BOC2Mj7KnzI7XK0Uw1TOOdI9lDoajEbSWLiYgoo4f1R51erQfhPQ==
 
-"@types/cxs@^6.2.0":
-  version "6.2.0"
-  resolved "https://registry.yarnpkg.com/@types/cxs/-/cxs-6.2.0.tgz#4559a57ded7ac8c6e0fc28309f63841bd82ba0d9"
-  integrity sha512-7YCPrTX+RppZEBfOUrQH8KNLs+NAXJvH+GpTGJDYVzOcIbpZdDIb14s11CzVx1ovrmNgM+7fUisF/+UOwMXiEA==
+"@types/cxs@^6.2.1":
+  version "6.2.1"
+  resolved "https://registry.yarnpkg.com/@types/cxs/-/cxs-6.2.1.tgz#a83cd987251ab6d2580846386f76f4d76bc91a3f"
+  integrity sha512-4JFg252UgP1dyqcyFURdme16zhts8V06J7aTm2yHlN+Q/6wYw4YxQpQgyzZeR0D1veh1BQFbXeeYKxbnLpTzIg==
   dependencies:
     "@types/react" "*"
-    csstype "^2.2.0"
+    csstype "^3.0.2"
 
 "@types/eslint-visitor-keys@^1.0.0":
   version "1.0.0"
@@ -3286,7 +3286,7 @@ csso@^4.0.2:
   dependencies:
     css-tree "1.0.0-alpha.39"
 
-csstype@^2.2.0, csstype@^2.5.7:
+csstype@^2.5.7:
   version "2.6.11"
   resolved "https://registry.yarnpkg.com/csstype/-/csstype-2.6.11.tgz#452f4d024149ecf260a852b025e36562a253ffc5"
   integrity sha512-l8YyEC9NBkSm783PFTvh0FmJy7s5pFKrDp49ZL7zBGX3fWkO+N4EEyan1qqp8cwPLDcD0OSdyY6hAMoxp34JFw==
