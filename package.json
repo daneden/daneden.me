@@ -32,7 +32,7 @@
     "imagemin-webp": "^6.0.0",
     "mdx-prism": "^0.3.1",
     "next": "^9.5.1",
-    "prismjs": "^1.20.0",
+    "prismjs": "^1.21.0",
     "react": "16.13.1",
     "react-codepen-embed": "^1.0.1",
     "react-dom": "16.13.1",
