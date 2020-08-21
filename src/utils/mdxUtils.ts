@@ -4,7 +4,7 @@ const allPosts = (allBlogPosts as MDXPost[])
   .map((frontmatter) => {
     return {
       ...frontmatter,
-      slug: (frontmatter.__resourcePath || "")
+      slug: frontmatter.__resourcePath
         .replace(/^blog\//, "/blog/")
         .replace(".mdx", ""),
     }
@@ -13,6 +13,7 @@ const allPosts = (allBlogPosts as MDXPost[])
   .map((post) => {
     return {
       ...post,
+      // Adds a URL for the OG image
       ogSlug: post.slug?.replace(/^\//, "").replace(/\//g, "-") + ".png",
       date: new Date(post.date || ""),
     }
