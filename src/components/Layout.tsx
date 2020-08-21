@@ -16,7 +16,7 @@ import WebPSupportContext from "./WebPSupportContext"
 import Wrapper from "./Wrapper"
 
 type LayoutProps = {
-  frontMatter?: MDXPost
+  frontMatter?: Omit<MDXPost, "__resourcePath">
   children: ReactNode
 }
 
