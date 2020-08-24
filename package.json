@@ -50,7 +50,7 @@
     "@types/react": "^16.9.46",
     "@types/sharp": "^0.25.1",
     "@typescript-eslint/eslint-plugin": "^3.9.0",
-    "@typescript-eslint/parser": "^3.9.0",
+    "@typescript-eslint/parser": "^3.9.1",
     "babel-plugin-import-glob-array": "^0.2.0",
     "babel-runtime": "^6.26.0",
     "eslint": "^7.7.0",
