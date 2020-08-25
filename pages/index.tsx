@@ -2,9 +2,8 @@ import { Canvas } from "@/components/Canvas"
 import HomeContent from "@/components/HomeContent"
 import Layout from "@/components/Layout"
 import { Link, P } from "@/designSystem"
-import { ReactElement } from "react"
 
-export default function HomePage(): ReactElement<typeof Layout> {
+export default function HomePage() {
   return (
     <Layout>
       <Canvas />

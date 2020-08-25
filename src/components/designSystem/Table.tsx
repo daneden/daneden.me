@@ -1,22 +1,27 @@
-import cxs from "cxs/component"
 import { Atoms } from "."
 
-const commonProps = {
-  verticalAlign: "top",
-  paddingBottom: Atoms.spacing.xsmall,
-  paddingLeft: Atoms.spacing.xsmall,
-  paddingRight: Atoms.spacing.xsmall,
+export default function Table({ children }: { children: React.ReactNode }) {
+  return (
+    <>
+      <table>{children}</table>
+      <style jsx>{`
+        table {
+          hyphens: initial;
+          margin-bottom: ${Atoms.spacing.medium};
+        }
+
+        table :global(th),
+        table :global(td) {
+          vertical-align: top;
+          padding: ${Atoms.spacing.xsmall};
+          padding-top: 0;
+        }
+
+        table :global(th) {
+          font-weight: normal;
+          font-family: ${Atoms.font.family.mono};
+        }
+      `}</style>
+    </>
+  )
 }
-
-export default cxs("table")({
-  hyphens: "initial",
-  marginBottom: Atoms.spacing.medium,
-
-  " th": {
-    ...commonProps,
-    fontWeight: "normal",
-    fontFamily: Atoms.font.family.mono,
-  },
-
-  " td": commonProps,
-})

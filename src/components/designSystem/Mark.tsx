@@ -1,12 +1,20 @@
-import cxs from "cxs/component"
 import { Atoms } from "."
 
-export default cxs("mark")({
-  backgroundColor: Atoms.colors.mark,
-  borderRadius: Atoms.spacing.xxsmall,
-  color: "inherit",
-  marginLeft: `-${Atoms.spacing.xxsmall}`,
-  marginRight: `-${Atoms.spacing.xxsmall}`,
-  paddingLeft: Atoms.spacing.xxsmall,
-  paddingRight: Atoms.spacing.xxsmall,
-})
+export default function Mark({ children }: { children: React.ReactNode }) {
+  return (
+    <>
+      <mark>{children}</mark>
+      <style jsx>{`
+        mark {
+          background-color: ${Atoms.colors.mark};
+          border-radius: ${Atoms.spacing.xxsmall};
+          color: inherit;
+          margin-left: -${Atoms.spacing.xxsmall};
+          margin-right: -${Atoms.spacing.xxsmall};
+          padding-left: ${Atoms.spacing.xxsmall};
+          padding-right: ${Atoms.spacing.xxsmall};
+        }
+      `}</style>
+    </>
+  )
+}

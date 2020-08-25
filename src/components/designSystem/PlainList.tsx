@@ -1,13 +1,14 @@
-import cxs from "cxs/component"
-
-interface PlainListProps {
-  children: React.ReactNode
+export default function PlainList({ children }: { children: React.ReactNode }) {
+  return (
+    <>
+      <ul>{children}</ul>
+      <style jsx>{`
+        ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+        }
+      `}</style>
+    </>
+  )
 }
-
-const PlainList = cxs("ul")({
-  listStyle: "none",
-  padding: 0,
-  margin: 0,
-})
-
-export default PlainList

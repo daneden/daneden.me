@@ -2,7 +2,6 @@ import { MDXPost } from "*.mdx"
 import formatDate from "@/utils/formatDate"
 import { useWebP } from "@/utils/useWebP"
 import widont from "@/utils/widont"
-import cxs from "cxs/component"
 import { ReactNode } from "react"
 import siteConfig from "../data/siteconfig.json"
 import { Atoms, H1, P, Small } from "./designSystem"
@@ -20,16 +19,6 @@ type LayoutProps = {
   children: ReactNode
 }
 
-const PageHeader = cxs("header")({
-  marginBottom: Atoms.spacing.medium,
-  paddingBottom: Atoms.spacing.medium,
-})
-
-const PageHeading = cxs(H1)({
-  marginBottom: "0 !important",
-  paddingBottom: "0 !important",
-})
-
 const Content = ({ frontMatter, children }: LayoutProps) => {
   const site = siteConfig
   const title = frontMatter?.title || site.title
@@ -41,35 +30,48 @@ const Content = ({ frontMatter, children }: LayoutProps) => {
   const ogSlug = frontMatter?.ogSlug
 
   return (
-    <WebPSupportContext.Provider value={webPSupport}>
-      <Metatags
-        description={excerpt || site.description}
-        thumbnail={
-          ogSlug
-            ? `https://${process.env.VERCEL_URL}/og/${ogSlug}`
-            : `https://${process.env.VERCEL_URL}/images/og.png`
+    <>
+      <WebPSupportContext.Provider value={webPSupport}>
+        <Metatags
+          description={excerpt || site.description}
+          thumbnail={
+            ogSlug
+              ? `https://${process.env.VERCEL_URL}/og/${ogSlug}`
+              : `https://${process.env.VERCEL_URL}/images/og.png`
+          }
+          title={title}
+        />
+        <SkipLink />
+        <Header siteTitle={site.title} />
+        <Wrapper>
+          {!isRoot && (
+            <header>
+              <H1>{widont(title)}</H1>
+              {date && (
+                <P>
+                  <time>
+                    <Small>Published {formattedDate}</Small>
+                  </time>
+                </P>
+              )}
+            </header>
+          )}
+          {children}
+        </Wrapper>
+        <Footer />
+      </WebPSupportContext.Provider>
+      <style jsx>{`
+        header {
+          margin-bottom: ${Atoms.spacing.medium};
+          padding-bottom: ${Atoms.spacing.medium};
         }
-        title={title}
-      />
-      <SkipLink />
-      <Header siteTitle={site.title} />
-      <Wrapper>
-        {!isRoot && (
-          <PageHeader>
-            <PageHeading>{widont(title)}</PageHeading>
-            {date && (
-              <P>
-                <time>
-                  <Small>Published {formattedDate}</Small>
-                </time>
-              </P>
-            )}
-          </PageHeader>
-        )}
-        {children}
-      </Wrapper>
-      <Footer />
-    </WebPSupportContext.Provider>
+
+        header :global(h1) {
+          margin-bottom: 0 !important;
+          padding-bottom: 0 !important;
+        }
+      `}</style>
+    </>
   )
 }
 

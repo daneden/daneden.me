@@ -1,6 +1,4 @@
 import widont from "@/utils/widont"
-import cxs from "cxs/component"
-import { ReactElement } from "react"
 import BOOKS from "../data/books.json"
 import Book from "./Book"
 import Atoms from "./designSystem/atoms"
@@ -17,27 +15,30 @@ const books = BOOKS.map((book) => {
   }
 }).sort((a, b) => strippedTitle(a.title).localeCompare(strippedTitle(b.title)))
 
-const Library = cxs("div")({
-  alignContent: "start",
-  placeItems: "start",
-  display: "grid",
-  gridGap: Atoms.spacing.medium,
-  gridTemplateColumns: "1fr",
-})
-
-const BookList = (): ReactElement<typeof Library> => (
-  <Library>
-    {books.map(({ title, author, quote, cover, url }) => (
-      <Book
-        author={author}
-        cover={cover}
-        key={title}
-        quote={quote}
-        title={title}
-        url={url}
-      />
-    ))}
-  </Library>
+const BookList = () => (
+  <>
+    <div className="library">
+      {books.map(({ title, author, quote, cover, url }) => (
+        <Book
+          author={author}
+          cover={cover}
+          key={title}
+          quote={quote}
+          title={title}
+          url={url}
+        />
+      ))}
+    </div>
+    <style jsx>{`
+      .library {
+        align-content: start;
+        place-items: start;
+        display: grid;
+        grid-gap: ${Atoms.spacing.medium};
+        grid-template-columns: 1fr;
+      }
+    `}</style>
+  </>
 )
 
 export default BookList

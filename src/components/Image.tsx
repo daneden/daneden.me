@@ -1,6 +1,5 @@
 import Markdown from "@/utils/Markdown"
-import cxs from "cxs"
-import React, { FunctionComponent, useContext } from "react"
+import React, { useContext } from "react"
 import { Align, Caption, Figure } from "./designSystem"
 import { FigureProps } from "./designSystem/Figure"
 import WebPSupportContext from "./WebPSupportContext"
@@ -48,12 +47,6 @@ const Image = ({
     "(min-width: 1024px) 340px, (min-width: 800px) 272px, (min-width: 621px) calc(75.84vw + 73px), calc(90.63vw - 18px)"
   let sizes = defaultSizes
 
-  const imageClassName = cxs({
-    "@media (prefers-color-scheme: dark)": {
-      filter: invertInDarkMode ? "invert(100%) hue-rotate(180deg)" : "initial",
-    },
-  })
-
   switch (align) {
     case "left":
       Wrapper = Align.Left
@@ -68,14 +61,23 @@ const Image = ({
   }
 
   const img = (
-    <img
-      alt={alt}
-      className={imageClassName}
-      loading="lazy"
-      sizes={sizes}
-      src={"/uploads/" + src}
-      srcSet={usesSrcSet ? srcSet : ""}
-    />
+    <>
+      <img
+        alt={alt}
+        className={invertInDarkMode ? "invertInDarkMode" : ""}
+        loading="lazy"
+        sizes={sizes}
+        src={"/uploads/" + src}
+        srcSet={usesSrcSet ? srcSet : ""}
+      />
+      <style jsx>{`
+        @media (prefers-color-scheme: dark) {
+          .invertInDarkMode {
+            filter: invert(100%) hue-rotate(180deg);
+          }
+        }
+      `}</style>
+    </>
   )
 
   return (

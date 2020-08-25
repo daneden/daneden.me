@@ -1,29 +1,30 @@
-import cxs from "cxs/component"
 import { ReactElement } from "react"
 import Breakout from "./Breakout"
 import { Atoms } from "./designSystem"
-
-const Content = cxs("div")({
-  WebkitFontSmoothing: "antialiased",
-  fontFamily: `${Atoms.font.family.sohne}, ${Atoms.font.family.sans}`,
-  fontSize: "clamp(1.55rem, 4vw, 100vw)",
-  fontWeight: 700,
-  lineHeight: 1.25,
-  ":last-child": {
-    marginBottom: 0,
-  },
-})
 
 export default function HomeContent({
   children,
 }: {
   children: ReactElement<unknown>
-}): ReactElement<HTMLDivElement> {
+}) {
   return (
     <>
-      <Content>
+      <div>
         <Breakout>{children}</Breakout>
-      </Content>
+      </div>
+      <style jsx>{`
+        div {
+          -webkit-font-smoothing: antialiased;
+          font-family: ${Atoms.font.family.sohne}, ${Atoms.font.family.sans};
+          font-size: clamp(1.55rem, 4vw, 100vw);
+          font-weight: 700;
+          line-height: 1.25;
+        }
+
+        div :last-child {
+          margin-bottom: 0;
+        }
+      `}</style>
     </>
   )
 }
