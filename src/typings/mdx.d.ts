@@ -2,7 +2,7 @@ declare module "*.mdx" {
   export interface MDXPost {
     __resourcePath: string
     title: string
-    date?: string | Date
+    date?: string
     hidden?: boolean
     layout?: "post" | "default"
     excerpt?: string

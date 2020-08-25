@@ -1,12 +1,35 @@
-import { frontMatter as allBlogPosts, MDXPost } from "../../pages/blog/**/*.mdx"
+import { MDXPost } from "*.mdx"
+import fs from "fs"
+import read from "fs-readdir-recursive"
+import matter from "gray-matter"
+import path from "path"
 
-const allPosts = (allBlogPosts as MDXPost[])
-  .map((frontmatter) => {
+interface MDXFile {
+  data: MDXPost
+  content: string
+  path: string
+}
+
+const POSTS_PATH = path.join(process.cwd(), "blog")
+
+const allPostsPaths: string[] = read(POSTS_PATH)
+const allBlogPosts = allPostsPaths.map((filePath) => {
+  const fullPath = path.join(POSTS_PATH, filePath)
+  const source = fs.readFileSync(fullPath)
+
+  const { content, data } = matter(source)
+  return {
+    content,
+    data,
+    path: fullPath,
+  }
+})
+
+const allPosts = (allBlogPosts as MDXFile[])
+  .map(({ data: frontmatter, path }) => {
     return {
       ...frontmatter,
-      slug: frontmatter.__resourcePath
-        .replace(/^blog\//, "/blog/")
-        .replace(".mdx", ""),
+      slug: path.replace(/^.*\/blog\//, "/blog/").replace(".mdx", ""),
     }
   })
   .filter((post) => !post.hidden)
@@ -15,11 +38,10 @@ const allPosts = (allBlogPosts as MDXPost[])
       ...post,
       // Adds a URL for the OG image
       ogSlug: post.slug?.replace(/^\//, "").replace(/\//g, "-") + ".png",
-      date: new Date(post.date || ""),
     }
   })
   .sort((a, b) => {
-    return Number(b.date) - Number(a.date)
+    return Number(new Date(b.date || "")) - Number(new Date(a.date || ""))
   })
 
 export function postsForCategory(category: string): MDXPost[] {
