@@ -1,7 +1,5 @@
 import { MDXPost } from "*.mdx"
-import CFVideo from "@/components/CFVideo"
 import Layout from "@/components/Layout"
-import { Button } from "@/components/typed-systems-components"
 import { components as defaultComponents } from "@/designSystem/DesignSystemProvider"
 import allBlogPosts from "@/utils/mdxUtils"
 import smartypants from "@ngsctt/remark-smartypants"
@@ -11,42 +9,91 @@ import prism from "mdx-prism"
 import { GetStaticPaths, GetStaticProps } from "next"
 import hydrate from "next-mdx-remote/hydrate"
 import renderToString from "next-mdx-remote/render-to-string"
+import dynamic from "next/dynamic"
 import Head from "next/head"
-import { useRouter } from "next/router"
 import path from "path"
-import Codepen from "react-codepen-embed"
-import { BlockMath, InlineMath } from "react-katex"
+import { ComponentType } from "react"
 import slug from "rehype-slug"
 import toc from "remark-toc"
 
-const components = {
-  ...defaultComponents,
-  BlockMath,
-  Button,
-  CFVideo,
-  Codepen,
-  InlineMath,
+const katexPosts = ["Subatomic Design Systems"]
+
+interface ComponentMapItem {
+  regex: RegExp
+  component: ComponentType<any>
 }
 
-const katexPosts = ["Subatomic Design Systems"]
+function buildComponentMap(source: string) {
+  const BlockMath = dynamic(
+    () => import("react-katex").then((mod) => mod.BlockMath),
+    { ssr: true }
+  )
+  const InlineMath = dynamic(
+    () => import("react-katex").then((mod) => mod.InlineMath),
+    { ssr: true }
+  )
+  const TypedSystemsButton = dynamic(
+    () => import("@/components/typed-systems-components"),
+    { ssr: true }
+  )
+  const Codepen = dynamic(() => import("react-codepen-embed"))
+  const CFVideo = dynamic(() => import("@/components/CFVideo"))
+
+  const componentsMap: {
+    [key: string]: ComponentMapItem
+  } = {
+    BlockMath: {
+      regex: /<BlockMath/,
+      component: BlockMath,
+    },
+    InlineMath: {
+      regex: /<InlineMath/,
+      component: InlineMath,
+    },
+    CFVideo: {
+      regex: /<CFVideo/,
+      component: CFVideo,
+    },
+    Codepen: {
+      regex: /<Codepen/,
+      component: Codepen,
+    },
+    TypedSystemsButton: {
+      regex: /<TypedSystemsButton/,
+      component: TypedSystemsButton,
+    },
+  }
+
+  const map: { [key: string]: ComponentType<any> } = {}
+  for (const prop in componentsMap) {
+    const currentComponent = componentsMap[prop]
+    const matches = currentComponent.regex.test(source)
+    if (matches) {
+      map[prop] = currentComponent.component
+    }
+  }
+
+  return map
+}
 
 export default function PostPage({
   source,
   frontMatter,
+  extraComponents,
 }: {
   source: string
   frontMatter: MDXPost
+  extraComponents: string[]
 }) {
-  const router = useRouter()
-
-  if (router.isFallback) {
-    return <div>Loading...</div>
-  }
-
   const shouldRequestKatex = katexPosts.reduce(
     (prev, curr) => prev || frontMatter.title.includes(curr),
     false
   )
+
+  const components = {
+    ...defaultComponents,
+    ...buildComponentMap(`<${extraComponents.join("<")}`),
+  }
 
   const content = hydrate(source, { components })
   return (
@@ -79,13 +126,30 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   )
   const source = fs.readFileSync(sourcePath)
   const { content, data } = matter(source)
+  const frontMatter = data as MDXPost
+  const extraComponents = buildComponentMap(content)
+
+  const components = {
+    ...defaultComponents,
+    ...extraComponents,
+  }
+
+  console.log(frontMatter, buildComponentMap(content))
+
   const mdxSource = await renderToString(content, {
     components,
     mdPlugins: [smartypants, toc],
     remarkPlugins: [prism, slug],
     scope: data,
   })
-  return { props: { source: mdxSource, frontMatter: data } }
+
+  return {
+    props: {
+      source: mdxSource,
+      frontMatter: data,
+      extraComponents: Object.keys(extraComponents),
+    },
+  }
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
@@ -95,6 +159,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   return {
     paths,
-    fallback: true,
+    fallback: false,
   }
 }

@@ -5,7 +5,7 @@ export default function Note({ children }: { children: React.ReactNode }) {
     <>
       <aside>{children}</aside>
       <style jsx>{`
-        mark {
+        aside {
           background-color: ${Atoms.colors.mark};
           border-left: 2px solid ${Atoms.colors.highlight};
           color: inherit;
