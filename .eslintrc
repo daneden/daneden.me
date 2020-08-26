@@ -57,6 +57,12 @@
         "@typescript-eslint/no-var-requires": "off",
         "@typescript-eslint/camelcase": "off"
       }
+    },
+    {
+      "files": ["*.mdx"],
+      "rules": {
+        "react/jsx-no-undef": "off"
+      }
     }
   ]
 }
