@@ -6,6 +6,13 @@ categories:
     - design
 ---
 
+<link
+    crossOrigin="anonymous"
+    href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
+    integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq"
+    rel="stylesheet"
+/>
+
 The following theory of “Subatomic Design Systems” is loosely based on an
 amalgam of existing design system theories and programming architecture
 approaches, including Brad Frost’s Atomic Design, Yandex’s
@@ -100,14 +107,17 @@ It's through states—changes, presence or absence of data—that we derive
 compositions of particles that make our UI. As such, a given composition may be
 expressed as a function of state:
 
-<BlockMath math="f(x) = A" />
-<BlockMath math="f(\Delta x) = B" />
+$$
+f(x) = A
+$$
 
-Where <InlineMath math="f" /> is a function that takes state and returns UI
-(composed particles), <InlineMath math="x" /> is a state and
+$$
+f(\Delta x) = B
+$$
 
-<InlineMath math="\Delta x" /> is a changed state, and <InlineMath math="A" />
-and <InlineMath math="B" /> are the resulting compositions.
+Where $f$ is a function that takes state and returns UI (composed particles),
+$x$ is a state and $\Delta x$ is a changed state, and $A$ and $B$ are the
+resulting compositions.
 
 This is the basis through which data can been seen to augment and flow through a
 user interface powered by SDS.
@@ -118,35 +128,51 @@ Let’s clarify the term ‘composition’ by simply defining it (for our purpos
 an act of addition. We can use some abstract symbols to represent the kinds of
 things we’d compose:
 
-<BlockMath math="a = b + c" />
-<BlockMath math="d = e + b + c" />
+$$
+a = b + c
+$$
+
+$$
+d = e + b + c
+$$
 
 Above are two simple compositions. We can further simplify our composition
 
-<InlineMath math="d" /> so it becomes:
+$d$ so it becomes:
 
-<BlockMath math="d = e + a" />
+$$
+d = e + a
+$$
 
-If we were to change the composition <InlineMath math="a" /> to something else,
-say, <InlineMath math="a = f + g" />, then our composition
+If we were to change the composition $a$ to something else, say, $a = f + g$,
+then our composition
 
-<InlineMath math="d" /> would also change.
+$d$ would also change.
 
-<BlockMath math="d = e + a = e + f + g" />
+$$
+d = e + a = e + f + g
+$$
 
 This chain of events makes it straightforward to propagate changes to the
 appearance of our entire system in a few simple motions. Note that this still
 isn’t quite what you’d consider mutability; we’re not changing the values of the
-composed particles <InlineMath math="b" /> or <InlineMath math="c" />, but
-changing the arrangements of the compositions to create new compositions.
+composed particles $b$ or $c$, but changing the arrangements of the compositions
+to create new compositions.
 
 As a more applicable example, a composition in a design system might be the
-following (where <InlineMath math="p" /> is the set of particles that comprise
-the system):
+following (where $p$ is the set of particles that comprise the system):
 
-<BlockMath math="Button = Label + View" />
-<BlockMath math="Label = p_{type} + p_{color}" />
-<BlockMath math="View = p_{color} + p_{line} + p_{spacing}" />
+$$
+Button = Label + View
+$$
+
+$$
+Label = p_{type} + p_{color}
+$$
+
+$$
+View = p_{color} + p_{line} + p_{spacing}
+$$
 
 ## Views comprise the majority of the system
 

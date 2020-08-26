@@ -10,60 +10,56 @@ import { GetStaticPaths, GetStaticProps } from "next"
 import hydrate from "next-mdx-remote/hydrate"
 import renderToString from "next-mdx-remote/render-to-string"
 import dynamic from "next/dynamic"
-import Head from "next/head"
 import path from "path"
 import { ComponentType } from "react"
+import katex from "rehype-katex"
 import slug from "rehype-slug"
+import math from "remark-math"
 import toc from "remark-toc"
 
-const katexPosts = ["Subatomic Design Systems"]
+// OpaqueComponentType is basically a generic that will be used for dynamically
+// importing components in MDX files.
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type OpaqueComponentType = ComponentType<any>
 
 interface ComponentMapItem {
   regex: RegExp
-  component: ComponentType<any>
+  component: OpaqueComponentType
 }
 
-function buildComponentMap(source: string) {
-  const BlockMath = dynamic(() =>
-    import("react-katex").then((mod) => mod.BlockMath)
-  )
-  const InlineMath = dynamic(() =>
-    import("react-katex").then((mod) => mod.InlineMath)
-  )
-  const TypedSystemsButton = dynamic(() =>
-    import("@/components/typed-systems-components")
-  )
-  const Codepen = dynamic(() => import("react-codepen-embed"))
-  const CFVideo = dynamic(() => import("@/components/CFVideo"))
+interface ComponentMap {
+  [key: string]: ComponentMapItem
+}
 
-  const componentsMap: {
-    [key: string]: ComponentMapItem
-  } = {
-    BlockMath: {
-      regex: /<BlockMath/,
-      component: BlockMath,
-    },
-    InlineMath: {
-      regex: /<InlineMath/,
-      component: InlineMath,
-    },
+/**
+ * Takes a Markdown/MDX string and returns an object of custom/imported
+ * components found.
+ *
+ * When adding new components to a post/MDX page, `componentsMap` needs to be
+ * updated.
+ */
+function buildComponentMap(source: string) {
+  // Define the components that should be made optionally available in MDX
+  const availableComponents: ComponentMap = {
     CFVideo: {
       regex: /<CFVideo/,
-      component: CFVideo,
+      component: dynamic(() => import("@/components/CFVideo")),
     },
     Codepen: {
       regex: /<Codepen/,
-      component: Codepen,
+      component: dynamic(() => import("react-codepen-embed")),
     },
     TypedSystemsButton: {
       regex: /<TypedSystemsButton/,
-      component: TypedSystemsButton,
+      component: dynamic(() => import("@/components/typed-systems-components")),
     },
   }
 
-  const map: { [key: string]: ComponentType<any> } = {}
-  for (const prop in componentsMap) {
-    const currentComponent = componentsMap[prop]
+  // Search the passed string for component instances and include them if
+  // necessary
+  const map: { [key: string]: OpaqueComponentType } = {}
+  for (const prop in availableComponents) {
+    const currentComponent = availableComponents[prop]
     const matches = currentComponent.regex.test(source)
     if (matches) {
       map[prop] = currentComponent.component
@@ -73,41 +69,26 @@ function buildComponentMap(source: string) {
   return map
 }
 
+interface PostPageProps {
+  source: string
+  frontMatter: MDXPost
+  extraComponents: string[]
+}
+
 export default function PostPage({
   source,
   frontMatter,
   extraComponents,
-}: {
-  source: string
-  frontMatter: MDXPost
-  extraComponents: string[]
-}) {
-  const shouldRequestKatex = katexPosts.reduce(
-    (prev, curr) => prev || frontMatter.title.includes(curr),
-    false
-  )
-
+}: PostPageProps) {
   const components = {
     ...defaultComponents,
+    // Slightly hack the component map function by pretending to instantiate a
+    // JSX symbol for each extra component
     ...buildComponentMap(`<${extraComponents.join("<")}`),
   }
 
   const content = hydrate(source, { components })
-  return (
-    <>
-      {shouldRequestKatex ? (
-        <Head>
-          <link
-            crossOrigin="anonymous"
-            href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
-            integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq"
-            rel="stylesheet"
-          />
-        </Head>
-      ) : null}
-      <Layout frontMatter={frontMatter}>{content}</Layout>
-    </>
-  )
+  return <Layout frontMatter={frontMatter}>{content}</Layout>
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
@@ -122,8 +103,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     `${(params.slug as string[]).join("/")}.mdx`
   )
   const source = fs.readFileSync(sourcePath)
-  const { content, data } = matter(source)
-  const frontMatter = data as MDXPost
+  const { content, data: frontMatter } = matter(source)
   const extraComponents = buildComponentMap(content)
 
   const components = {
@@ -133,15 +113,19 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   const mdxSource = await renderToString(content, {
     components,
-    mdPlugins: [smartypants, toc],
-    remarkPlugins: [prism, slug],
-    scope: data,
+    mdxOptions: {
+      remarkPlugins: [smartypants, math, toc],
+      rehypePlugins: [katex, prism, slug],
+    },
+    scope: frontMatter,
   })
 
   return {
     props: {
       source: mdxSource,
-      frontMatter: data,
+      frontMatter,
+      // Next.js requires that static props are JSON serializable, so we have to
+      // just pass the extra components as strings.
       extraComponents: Object.keys(extraComponents),
     },
   }

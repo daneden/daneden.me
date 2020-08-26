@@ -82,6 +82,11 @@ const GlobalStyles = () => (
       .footnote-backref {
         margin-left: 0.25em;
       }
+
+      sup[id^="fn"] a {
+        color: var(--meta-color);
+        text-decoration: none;
+      }
     `}
   </style>
 )
