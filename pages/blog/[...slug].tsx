@@ -2,7 +2,7 @@ import { MDXFile, MDXFrontMatter } from "*.mdx"
 import Layout from "@/components/Layout"
 import { components as defaultComponents } from "@/designSystem/DesignSystemProvider"
 import allBlogPosts from "@/utils/mdxUtils"
-import { generateOgImage } from "@/utils/ogImage"
+import { generateOgImages } from "@/utils/ogImage"
 import smartypants from "@ngsctt/remark-smartypants"
 import prism from "mdx-prism"
 import { GetStaticPaths, GetStaticProps } from "next"
@@ -12,6 +12,7 @@ import dynamic from "next/dynamic"
 import { ComponentType } from "react"
 import katex from "rehype-katex"
 import slug from "rehype-slug"
+import abbr from "remark-abbr"
 import math from "remark-math"
 import toc from "remark-toc"
 
@@ -101,12 +102,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   const { content, frontMatter } = source
 
-  try {
-    await generateOgImage(frontMatter)
-  } catch {
-    throw new Error(`Unable to generate image for post "${postKey}"`)
-  }
-
   const extraComponents = buildComponentMap(content)
 
   const components = {
@@ -117,7 +112,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const mdxSource = await renderToString(content, {
     components,
     mdxOptions: {
-      remarkPlugins: [smartypants, math, toc],
+      remarkPlugins: [abbr, smartypants, math, toc],
       rehypePlugins: [katex, prism, slug],
     },
     scope: frontMatter,
@@ -135,6 +130,14 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
+  try {
+    await generateOgImages(
+      Array.from(allBlogPosts.values()).map((post) => post.frontMatter)
+    )
+  } catch {
+    throw new Error(`Unable to generate image for posts`)
+  }
+
   const paths = Array.from(allBlogPosts.keys()).map((slug) => ({
     params: { slug: slug.split("/") },
   }))

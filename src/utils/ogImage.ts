@@ -114,22 +114,29 @@ export default function ogImage(
   return canvas.toBuffer("image/png")
 }
 
-export const generateOgImage = async (post: MDXFrontMatter) => {
+export const generateOgImages = async (posts: MDXFrontMatter[]) => {
   const dir = path.resolve("public", "og")
 
   if (!existsSync(dir)) {
     await mkdir(dir)
   }
 
-  const { title, ogSlug } = post
+  const promises = posts.map(({ title, ogSlug }, index) => {
+    return new Promise((resolve, reject) => {
+      const filepath = path.resolve(dir, `${ogSlug?.split(".png")[0]}.png`)
 
-  const filepath = path.resolve(dir, `${ogSlug}`)
+      ogImage(title, (error, buffer) => {
+        if (error) {
+          console.error(error)
+          reject()
+        }
 
-  return await ogImage(title, (error, buffer) => {
-    if (error) {
-      console.error(error)
-    }
+        writeFile(filepath, buffer)
+      })
 
-    writeFile(filepath, buffer)
+      resolve()
+    })
   })
+
+  await Promise.all(promises).catch((error) => console.error(error))
 }
