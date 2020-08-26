@@ -1,14 +1,13 @@
-import { MDXPost } from "*.mdx"
+import { MDXFrontMatter } from "*.mdx"
 import Layout from "@/components/Layout"
 import PostLink from "@/components/PostLink"
 import { PlainList } from "@/designSystem"
 import blogPosts from "@/utils/mdxUtils"
-import { generateOgImages } from "@/utils/ogImage"
 import { ReactElement } from "react"
 export default function Blog({
   posts,
 }: {
-  posts: MDXPost[]
+  posts: MDXFrontMatter[]
 }): ReactElement<typeof Layout> {
   return (
     <Layout frontMatter={{ title: "Blog" }}>
@@ -26,9 +25,14 @@ export default function Blog({
 }
 
 export async function getStaticProps() {
-  await generateOgImages(blogPosts)
+  const posts = Array.from(blogPosts.values())
+    .map((post) => post.frontMatter)
+    .sort((a, b) => {
+      return Number(new Date(b.date || "")) - Number(new Date(a.date || ""))
+    })
+    .filter((post) => !post.hidden)
 
   return {
-    props: { posts: blogPosts },
+    props: { posts },
   }
 }

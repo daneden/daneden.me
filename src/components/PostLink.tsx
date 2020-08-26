@@ -1,10 +1,10 @@
-import { MDXPost } from "*.mdx"
+import { MDXFrontMatter } from "*.mdx"
 import formatDate from "@/utils/formatDate"
 import { ReactElement } from "react"
 import { Atoms, PlainLink, Small } from "./designSystem"
 
 interface Props {
-  post: MDXPost
+  post: MDXFrontMatter
 }
 
 const PostLink = ({ post }: Props): ReactElement<HTMLDivElement> => {
@@ -13,7 +13,7 @@ const PostLink = ({ post }: Props): ReactElement<HTMLDivElement> => {
   return (
     <>
       <div className="post-link">
-        <PlainLink href={post.slug as string}>
+        <PlainLink href={`blog/${post.slug}`}>
           <div>{post.title}</div>
           <time>
             <Small display="block">{date}</Small>

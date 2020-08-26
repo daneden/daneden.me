@@ -1,16 +1,14 @@
-import { MDXPost } from "*.mdx"
+import { MDXFile, MDXFrontMatter } from "*.mdx"
 import Layout from "@/components/Layout"
 import { components as defaultComponents } from "@/designSystem/DesignSystemProvider"
 import allBlogPosts from "@/utils/mdxUtils"
+import { generateOgImage } from "@/utils/ogImage"
 import smartypants from "@ngsctt/remark-smartypants"
-import fs from "fs"
-import matter from "gray-matter"
 import prism from "mdx-prism"
 import { GetStaticPaths, GetStaticProps } from "next"
 import hydrate from "next-mdx-remote/hydrate"
 import renderToString from "next-mdx-remote/render-to-string"
 import dynamic from "next/dynamic"
-import path from "path"
 import { ComponentType } from "react"
 import katex from "rehype-katex"
 import slug from "rehype-slug"
@@ -71,7 +69,7 @@ function buildComponentMap(source: string) {
 
 interface PostPageProps {
   source: string
-  frontMatter: MDXPost
+  frontMatter: MDXFrontMatter
   extraComponents: string[]
 }
 
@@ -97,13 +95,18 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     return { props: {} }
   }
 
-  const postsDirectory = path.join(process.cwd(), "blog")
-  const sourcePath = path.join(
-    postsDirectory,
-    `${(params.slug as string[]).join("/")}.mdx`
-  )
-  const source = fs.readFileSync(sourcePath)
-  const { content, data: frontMatter } = matter(source)
+  const postKey = (params.slug as string[]).join("/")
+
+  const source = allBlogPosts.get(postKey) as MDXFile
+
+  const { content, frontMatter } = source
+
+  try {
+    await generateOgImage(frontMatter)
+  } catch {
+    throw new Error(`Unable to generate image for post "${postKey}"`)
+  }
+
   const extraComponents = buildComponentMap(content)
 
   const components = {
@@ -132,10 +135,11 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = allBlogPosts
-    .map((post) => post.slug.replace(/^\/blog\//, "").split("/"))
-    .map((path) => ({ params: { slug: path } }))
+  const paths = Array.from(allBlogPosts.keys()).map((slug) => ({
+    params: { slug: slug.split("/") },
+  }))
 
+  console.log(paths)
   return {
     paths,
     fallback: false,

@@ -12,7 +12,9 @@ const Pre = (props: PreProps): ReactElement<typeof React.Fragment> => (
     <pre {...props} />
     <style jsx>{`
       pre {
-        background-color: rgba(128, 128, 128, 0.1);
+        background-color: var(--code-wash);
+        box-shadow: inset 0 0 0 1px var(--code-wash),
+          inset 0 0 0 1px var(--code-wash);
         border-radius: 0.35em;
         display: block;
         font-family: ${Atoms.font.family.mono};
@@ -21,8 +23,8 @@ const Pre = (props: PreProps): ReactElement<typeof React.Fragment> => (
         line-height: 1;
         line-height: 1.5;
         overflow: auto;
-        padding: ${Atoms.spacing.small};
-        margin: 0 -${Atoms.spacing.small};
+        padding: ${Atoms.spacing.xsmall};
+        margin: 0 -${Atoms.spacing.xsmall};
         vertical-align: baseline;
         white-space: pre;
         margin-bottom: ${Atoms.spacing.medium};

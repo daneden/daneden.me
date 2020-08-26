@@ -1,4 +1,4 @@
-import { MDXPost } from "*.mdx"
+import { MDXFrontMatter } from "*.mdx"
 import { Atoms } from "@/designSystem"
 import widont from "@/utils/widont"
 import { createCanvas, registerFont } from "canvas"
@@ -114,29 +114,22 @@ export default function ogImage(
   return canvas.toBuffer("image/png")
 }
 
-export const generateOgImages = async (posts: MDXPost[]) => {
+export const generateOgImage = async (post: MDXFrontMatter) => {
   const dir = path.resolve("public", "og")
 
   if (!existsSync(dir)) {
     await mkdir(dir)
   }
 
-  const promises = posts.map(({ title, ogSlug }, index) => {
-    return new Promise((resolve, reject) => {
-      const filepath = path.resolve(dir, `${ogSlug?.split(".png")[0]}.png`)
+  const { title, ogSlug } = post
 
-      ogImage(title, (error, buffer) => {
-        if (error) {
-          console.error(error)
-          reject()
-        }
+  const filepath = path.resolve(dir, `${ogSlug}`)
 
-        writeFile(filepath, buffer)
-      })
+  return await ogImage(title, (error, buffer) => {
+    if (error) {
+      console.error(error)
+    }
 
-      resolve()
-    })
+    writeFile(filepath, buffer)
   })
-
-  await Promise.all(promises).catch((error) => console.error(error))
 }

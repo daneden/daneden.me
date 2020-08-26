@@ -10,7 +10,7 @@ export default function Hr() {
 
           display: block;
           height: 1;
-          margin: ${Atoms.spacing.xlarge} 0;
+          margin: ${Atoms.spacing.large} 0;
         }
       `}</style>
     </>

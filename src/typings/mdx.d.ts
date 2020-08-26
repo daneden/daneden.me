@@ -1,5 +1,5 @@
 declare module "*.mdx" {
-  export interface MDXPost {
+  export interface MDXFrontMatter {
     __resourcePath: string
     title: string
     date?: string
@@ -11,7 +11,13 @@ declare module "*.mdx" {
     ogSlug?: string
   }
 
+  export interface MDXFile {
+    frontMatter: MDXFrontMatter
+    content: string
+    path: string
+  }
+
   let MDXComponent: (props: { [key: string]: unknown }) => JSX.Element
-  export const frontMatter: MDXPost | MDXPost[]
+  export const frontMatter: MDXFrontMatter | MDXFrontMatter[]
   export default MDXComponent
 }

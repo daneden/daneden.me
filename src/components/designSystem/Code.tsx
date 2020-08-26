@@ -7,7 +7,9 @@ export default function Code({ children }: { children: React.ReactNode }) {
       <style jsx>{`
         padding: 0.1em 0.25em;
         vertical-align: baseline;
-        background-color: rgba(128, 128, 128, 0.2);
+        background-color: var(--code-wash);
+        box-shadow: inset 0 0 0 1px var(--code-wash),
+          inset 0 0 0 1px var(--code-wash);
         border-radius: 0.35em;
         font-family: ${Atoms.font.family.mono};
         font-size: 0.875em;

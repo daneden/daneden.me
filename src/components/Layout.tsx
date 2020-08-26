@@ -1,4 +1,4 @@
-import { MDXPost } from "*.mdx"
+import { MDXFrontMatter } from "*.mdx"
 import formatDate from "@/utils/formatDate"
 import { useWebP } from "@/utils/useWebP"
 import widont from "@/utils/widont"
@@ -15,7 +15,7 @@ import WebPSupportContext from "./WebPSupportContext"
 import Wrapper from "./Wrapper"
 
 type LayoutProps = {
-  frontMatter?: Omit<MDXPost, "__resourcePath">
+  frontMatter?: Omit<MDXFrontMatter, "__resourcePath">
   children: ReactNode
 }
 
