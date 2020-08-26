@@ -24,17 +24,14 @@ interface ComponentMapItem {
 }
 
 function buildComponentMap(source: string) {
-  const BlockMath = dynamic(
-    () => import("react-katex").then((mod) => mod.BlockMath),
-    { ssr: true }
+  const BlockMath = dynamic(() =>
+    import("react-katex").then((mod) => mod.BlockMath)
   )
-  const InlineMath = dynamic(
-    () => import("react-katex").then((mod) => mod.InlineMath),
-    { ssr: true }
+  const InlineMath = dynamic(() =>
+    import("react-katex").then((mod) => mod.InlineMath)
   )
-  const TypedSystemsButton = dynamic(
-    () => import("@/components/typed-systems-components"),
-    { ssr: true }
+  const TypedSystemsButton = dynamic(() =>
+    import("@/components/typed-systems-components")
   )
   const Codepen = dynamic(() => import("react-codepen-embed"))
   const CFVideo = dynamic(() => import("@/components/CFVideo"))
