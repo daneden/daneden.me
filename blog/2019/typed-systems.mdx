@@ -7,8 +7,6 @@ categories:
     - design
 ---
 
-import { Button } from "@/components/typed-systems-components"
-
 Think back to the last time that you cooked a meal. The recipe you followed
 might have called for a particular ingredient, like yellow onions, but upon
 raiding your kitchen, you found you only had white onions.
@@ -77,7 +75,7 @@ components we’re creating.
 Let’s start with a simple button component. Our Button component is essentially
 just a rectangle with some text inside it.
 
-<Button>Confirm</Button>
+<TypedSystemsButton>Confirm</TypedSystemsButton>
 
 ```js
 Button("Confirm")
@@ -85,9 +83,9 @@ Button("Confirm")
 
 But what would happen if we were to put another Button inside this one?
 
-<Button>
-    <Button>Confirm</Button>
-</Button>
+<TypedSystemsButton>
+    <TypedSystemsButton>Confirm</TypedSystemsButton>
+</TypedSystemsButton>
 
 ```js
 Button(Button("Confirm"))

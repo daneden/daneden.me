@@ -1,49 +1,73 @@
-import cxs from "cxs/component"
 import Atoms from "./atoms"
 
-const AlignedContainer = cxs("div")({
-  width: "100%",
-  zIndex: 1,
+const Subject = ({
+  children,
+  className,
+}: {
+  children: React.ReactNode
+  className?: string
+}) => (
+  <>
+    <div className={className}>{children}</div>
+    <style jsx>{`
+      div {
+        width: 100%;
+        z-index: 1;
+      }
 
-  [`@media (min-width: ${Atoms.breakpoints.narrow})`]: {
-    width: "40%",
+      @media (min-width: ${Atoms.breakpoints.narrow}) {
+        div {
+          width: 40%;
+        }
+      }
+
+      @media (min-width: ${Atoms.breakpoints.medium}) {
+        div {
+          width: 50%;
+        }
+      }
+
+      .left {
+        float: left;
+        margin-left: -25%;
+        margin-right: ${Atoms.spacing.medium};
+      }
+
+      .right {
+        float: right;
+        margin-right: -25%;
+        margin-left: ${Atoms.spacing.medium};
+      }
+
+      @media (max-width: ${Atoms.breakpoints.medium}) {
+        .left {
+          margin-left: 0;
+        }
+
+        .right {
+          margin-right: 0;
+        }
+      }
+
+      @media (max-width: ${Atoms.breakpoints.narrow}) {
+        .left,
+        .right {
+          float: none;
+          margin-left: 0;
+          margin-right: none;
+        }
+      }
+    `}</style>
+  </>
+)
+
+const Align = {
+  Left({ children }: { children: React.ReactNode }) {
+    return <Subject className="left">{children}</Subject>
   },
-
-  [`@media (min-width: ${Atoms.breakpoints.medium})`]: {
-    width: "50%",
+  Right({ children }: { children: React.ReactNode }) {
+    return <Subject className="right">{children}</Subject>
   },
-})
-
-const Left = cxs(AlignedContainer)({
-  float: "left",
-  marginLeft: "-25%",
-  marginRight: Atoms.spacing.medium,
-
-  [`@media (max-width: ${Atoms.breakpoints.medium})`]: {
-    marginLeft: 0,
-  },
-
-  [`@media (max-width: ${Atoms.breakpoints.narrow})`]: {
-    float: "none",
-    marginRight: 0,
-  },
-})
-
-const Right = cxs(AlignedContainer)({
-  float: "right",
-  marginLeft: Atoms.spacing.medium,
-  marginRight: "-25%",
-
-  [`@media (max-width: ${Atoms.breakpoints.medium})`]: {
-    marginRight: 0,
-  },
-
-  [`@media (max-width: ${Atoms.breakpoints.narrow})`]: {
-    float: "none",
-    marginLeft: 0,
-  },
-})
-
-const Align = { Left, Right }
+}
 
 export default Align

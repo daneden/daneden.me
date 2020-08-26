@@ -1,9 +1,17 @@
-import cxs from "cxs/component"
 import { Atoms } from "."
 
-export default cxs("h3")({
-  fontSize: Atoms.font.size.regular,
-  fontWeight: 400,
-  fontStyle: "italic",
-  hyphens: "initial",
-})
+export default function H3({ children }: { children: React.ReactNode }) {
+  return (
+    <>
+      <h3>{children}</h3>
+      <style jsx>{`
+        h3 {
+          font-size: ${Atoms.font.size.regular};
+          font-weight: 400;
+          hyphens: initial;
+          font-style: italic;
+        }
+      `}</style>
+    </>
+  )
+}

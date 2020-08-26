@@ -1,5 +1,4 @@
-import cxs from "cxs/component"
-import { ReactElement, ReactNode } from "react"
+import { ReactNode } from "react"
 import { Atoms } from "./designSystem"
 
 interface WrapperProps {
@@ -7,23 +6,23 @@ interface WrapperProps {
   children: ReactNode[]
 }
 
-const StyledWrapper = cxs("div")({
-  boxSizing: "initial",
-  margin: "0 auto",
-  maxWidth: Atoms.widths.container,
-
-  ":focus": {
-    outline: "none",
-  },
-})
-
-export default function Wrapper({
-  id = "content",
-  children,
-}: WrapperProps): ReactElement<typeof StyledWrapper> {
+export default function Wrapper({ id = "content", children }: WrapperProps) {
   return (
-    <StyledWrapper id={id} role="region" tabIndex={-1}>
-      {children}
-    </StyledWrapper>
+    <>
+      <div id={id} role="region" tabIndex={-1}>
+        {children}
+      </div>
+      <style jsx>{`
+        div {
+          box-sizing: initial;
+          margin: 0 auto;
+          max-width: ${Atoms.widths.container};
+        }
+
+        div:focus {
+          outline: none;
+        }
+      `}</style>
+    </>
   )
 }

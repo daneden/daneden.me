@@ -1,4 +1,3 @@
-import cxs from "cxs"
 import * as React from "react"
 import { Atoms } from "."
 
@@ -15,13 +14,22 @@ export default function Small({
   display = "inline-block",
   children,
 }: Props) {
-  const className = cxs({
-    fontSize: Atoms.font.size.small,
-    letterSpacing: "0.025em",
-    lineHeight: Atoms.baseline,
-    display,
-    color: receded ? "var(--meta-color)" : "inherit",
-  })
-
-  return <small className={className}>{children}</small>
+  return (
+    <>
+      <small>{children}</small>
+      <style jsx>{`
+        small {
+          font-size: ${Atoms.font.size.small};
+          letter-spacing: 0.025em;
+          line-height: ${Atoms.baseline};
+          display: ${display};
+        }
+      `}</style>
+      <style jsx>{`
+        small {
+          color: ${receded ? "var(--meta-color)" : "inherit"};
+        }
+      `}</style>
+    </>
+  )
 }

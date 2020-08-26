@@ -6,8 +6,6 @@ categories:
     - code
 ---
 
-import Note from "@/designSystem/Note"
-
 <Note>
     This is the third and final part in a short series of posts explaining how
     to build a React application that simulates tossing a coin over and over
@@ -61,11 +59,10 @@ function: `useRef`. In React, a "ref" is a variable that:
 2. Persists throughout a component's lifecycle (meaning it sticks around for as
    long as the component is rendered)
 
-Usually, refs are used to allow developers to interact with
-
-<abbr title="Document Object Model">DOM</abbr> elements directly (as opposed to managing
-them through React's component lifecycle), but in this case, we're going to use it
-to store the previous result of the coin toss.
+Usually, refs are used to allow developers to interact with DOM elements
+directly (as opposed to managing them through React's component lifecycle), but
+in this case, we're going to use it to store the previous result of the coin
+toss.
 
 We'll initialise `prevSide` to equal `side`, and we'll refer to it later in the
 `tossCoin` function:
@@ -320,3 +317,6 @@ changes and a slider to let people control how often our virtual coin is tossed.
 You can always find the latest version of the application
 [here](https://react-coin-toss.daneden.now.sh/) and see its code
 [here](https://github.com/daneden/react-coin-toss).
+
+<!-- prettier-ignore -->
+*[DOM]: Document Object Model

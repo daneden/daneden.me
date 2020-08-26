@@ -1,7 +1,6 @@
-import cxs from "cxs/component"
 import * as Fathom from "fathom-client"
 import { useRouter } from "next/router"
-import React, { ReactElement } from "react"
+import React from "react"
 import Atoms from "./designSystem/atoms"
 import PlainLink from "./designSystem/PlainLink"
 import PlainList from "./designSystem/PlainList"
@@ -9,26 +8,6 @@ import PlainList from "./designSystem/PlainList"
 interface HeaderProps {
   siteTitle: string
 }
-
-const StyledHeader = cxs("header")({
-  borderBottom: "1px solid",
-  display: "grid",
-  gridTemplateColumns: `calc(${Atoms.widths.content} - ${Atoms.spacing.medium}) 1fr`,
-  gridGap: Atoms.spacing.xsmall,
-  flexWrap: "wrap",
-  marginBottom: Atoms.spacing.small,
-  paddingTop: Atoms.spacing.small,
-  [`@media (max-width: ${Atoms.breakpoints.medium})`]: {
-    gridTemplateColumns: "1fr",
-  },
-})
-
-const StyledLi = cxs("li")({
-  [`@media (max-width: ${Atoms.breakpoints.medium})`]: {
-    display: "inline-block",
-    marginRight: "1em",
-  },
-})
 
 const links = [
   {
@@ -45,32 +24,57 @@ const links = [
   },
 ]
 
-const Header = ({
-  siteTitle,
-}: HeaderProps): ReactElement<typeof StyledHeader> => {
+const Header = ({ siteTitle }: HeaderProps) => {
   const location = useRouter().pathname
-  return (
-    <StyledHeader>
-      <PlainLink href="/">{siteTitle}</PlainLink>
 
-      <nav>
-        <PlainList>
-          {links.map(({ to, label }) => (
-            <StyledLi key={to}>
-              <PlainLink
-                href={to}
-                onClick={() => {
-                  Fathom.trackGoal("QSDYWCAL", 0)
-                }}
-              >
-                {label}
-                {location.includes(to) ? " ☚" : ""}
-              </PlainLink>
-            </StyledLi>
-          ))}
-        </PlainList>
-      </nav>
-    </StyledHeader>
+  return (
+    <>
+      <header>
+        <PlainLink href="/">{siteTitle}</PlainLink>
+
+        <nav>
+          <PlainList>
+            {links.map(({ to, label }) => (
+              <li key={to}>
+                <PlainLink
+                  href={to}
+                  onClick={() => {
+                    Fathom.trackGoal("QSDYWCAL", 0)
+                  }}
+                >
+                  {label}
+                  {location.includes(to) ? " ☚" : ""}
+                </PlainLink>
+              </li>
+            ))}
+          </PlainList>
+        </nav>
+      </header>
+      <style jsx>{`
+        header {
+          border-bottom: 1px solid;
+          display: grid;
+          grid-template-columns:
+            calc(${Atoms.widths.content} - ${Atoms.spacing.medium})
+            1fr;
+          grid-gap: ${Atoms.spacing.xsmall};
+          flex-wrap: wrap;
+          margin-bottom: ${Atoms.spacing.small};
+          padding-top: ${Atoms.spacing.small};
+        }
+
+        @media (max-width: ${Atoms.breakpoints.medium}) {
+          header {
+            grid-template-columns: 1fr;
+          }
+
+          li {
+            display: inline-block;
+            margin-right: 1em;
+          }
+        }
+      `}</style>
+    </>
   )
 }
 

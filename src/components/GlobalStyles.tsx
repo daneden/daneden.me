@@ -13,6 +13,7 @@ const GlobalStyles = () => (
         --highlight-color: ${Atoms.colors.highlight};
         --font-mono: ${Atoms.font.family.mono};
         --hover-color: var(--site-color);
+        --code-wash: rgba(128, 128, 128, 0.075);
       }
 
       @media (prefers-color-scheme: dark) {
@@ -69,10 +70,14 @@ const GlobalStyles = () => (
       }
 
       .footnotes li {
-        marginbottom: ${Atoms.spacing.xsmall};
+        margin-bottom: ${Atoms.spacing.xsmall};
         font-size: ${Atoms.font.size.small};
         color: var(--meta-color, ${Atoms.colors.meta});
         letter-spacing: "0.025em";
+      }
+
+      .footnotes li:target {
+        background-color: var(--mark-color);
       }
 
       .footnote-ref {
@@ -81,6 +86,17 @@ const GlobalStyles = () => (
 
       .footnote-backref {
         margin-left: 0.25em;
+      }
+
+      sup {
+        font-feature-settings: "sups" 1;
+        font-size: inherit;
+        vertical-align: inherit;
+      }
+
+      sup[id^="fn"] a {
+        color: var(--meta-color);
+        text-decoration: none;
       }
     `}
   </style>

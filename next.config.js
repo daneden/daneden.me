@@ -1,18 +1,4 @@
-const prism = require("mdx-prism")
-const slug = require("rehype-slug")
-const smartypants = require("@ngsctt/remark-smartypants")
-const toc = require("remark-toc")
-const withMDXEnhanced = require("next-mdx-enhanced")
-
-const mdxOptions = {
-  layoutPath: "src/layouts",
-  defaultLayout: true,
-  fileExtensions: ["mdx"],
-  remarkPlugins: [smartypants, toc],
-  rehypePlugins: [prism, slug],
-}
-
-module.exports = withMDXEnhanced(mdxOptions)({
+module.exports = {
   env: {
     VERCEL_URL: process.env.VERCEL_URL || "daneden.me",
   },
@@ -33,8 +19,12 @@ module.exports = withMDXEnhanced(mdxOptions)({
         test: /\.(frag|vert|glsl)$/i,
         loader: "glsl-shader-loader",
       },
+      {
+        test: /\.mdx?$/,
+        use: ["babel-loader", "@mdx-js/loader"],
+      },
     ]
 
     return config
   },
-})
+}

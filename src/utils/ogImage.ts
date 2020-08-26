@@ -1,4 +1,4 @@
-import { MDXPost } from "*.mdx"
+import { MDXFrontMatter } from "*.mdx"
 import { Atoms } from "@/designSystem"
 import widont from "@/utils/widont"
 import { createCanvas, registerFont } from "canvas"
@@ -114,7 +114,7 @@ export default function ogImage(
   return canvas.toBuffer("image/png")
 }
 
-export const generateOgImages = async (posts: MDXPost[]) => {
+export const generateOgImages = async (posts: MDXFrontMatter[]) => {
   const dir = path.resolve("public", "og")
 
   if (!existsSync(dir)) {

@@ -4,7 +4,7 @@ interface DemoButtonProps {
   children: ReactNode
 }
 
-const Button = ({
+const TypedSystemsButton = ({
   children,
 }: DemoButtonProps): ReactElement<HTMLDivElement> => {
   return (
@@ -31,4 +31,4 @@ const Button = ({
   )
 }
 
-export { Button }
+export default TypedSystemsButton

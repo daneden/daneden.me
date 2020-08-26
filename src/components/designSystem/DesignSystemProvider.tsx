@@ -7,7 +7,7 @@ interface DesignSystemProviderProps {
   children: ReactNode
 }
 
-const components = {
+export const components = {
   a: designSystem.Link,
   blockquote: designSystem.Blockquote,
   Code: designSystem.Code,
