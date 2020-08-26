@@ -112,7 +112,7 @@ export default function PostPage({
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   if (!params) {
-    console.log("no params!")
+    console.error("No parameters passed for static generation")
     return { props: {} }
   }
 
@@ -130,8 +130,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     ...defaultComponents,
     ...extraComponents,
   }
-
-  console.log(frontMatter, buildComponentMap(content))
 
   const mdxSource = await renderToString(content, {
     components,
