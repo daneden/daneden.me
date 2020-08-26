@@ -66,7 +66,7 @@ const Align = {
     return <Subject className="left">{children}</Subject>
   },
   Right({ children }: { children: React.ReactNode }) {
-    return <Subject className="left">{children}</Subject>
+    return <Subject className="right">{children}</Subject>
   },
 }
 
