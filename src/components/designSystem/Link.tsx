@@ -5,6 +5,7 @@ export interface LinkProps {
   children: ReactNode
   underline?: boolean
   href: string
+  as?: string
   className?: string
   onClick?: () => void
 }
@@ -15,6 +16,7 @@ const Link = ({
   underline = true,
   className,
   onClick,
+  as,
 }: LinkProps) => {
   const external =
     href.startsWith("http") || href.startsWith("mailto") || href.startsWith("#")
@@ -25,7 +27,7 @@ const Link = ({
           {children}
         </a>
       ) : (
-        <NextLink href={href} passHref>
+        <NextLink as={as} href={href} passHref>
           <a className={className} href={href} onClick={onClick}>
             {children}
           </a>
