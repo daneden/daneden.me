@@ -15,6 +15,7 @@
   "license": "MIT",
   "scripts": {
     "build": "next build",
+    "postbuild": "next-sitemap",
     "dev": "next dev",
     "lint": "eslint \"**/*.{js,jsx,ts,tsx,md,mdx}\"",
     "precommit": "lint-staged",
@@ -36,6 +37,7 @@
     "mdx-prism": "^0.3.1",
     "next": "^9.5.2",
     "next-mdx-remote": "^1.0.0",
+    "next-sitemap": "^1.1.6",
     "prismjs": "^1.21.0",
     "react": "16.13.1",
     "react-codepen-embed": "^1.0.1",

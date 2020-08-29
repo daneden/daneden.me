@@ -1406,6 +1406,11 @@
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
 
+"@corex/deepmerge@^2.3.6":
+  version "2.3.6"
+  resolved "https://registry.yarnpkg.com/@corex/deepmerge/-/deepmerge-2.3.6.tgz#1301b0e43cc692e26ccf5d41fc6642446a9b212b"
+  integrity sha512-YziRFUyFj+fKWPkfs6iPFnjf++KYvO+XAQ6yKIzswW5fiudrhMo0mE9eVWYiVDRM95bmVnX3JQbRA8HwqDosPA==
+
 "@emotion/cache@^10.0.27":
   version "10.0.29"
   resolved "https://registry.yarnpkg.com/@emotion/cache/-/cache-10.0.29.tgz#87e7e64f412c060102d589fe7c6dc042e6f9d1e0"
@@ -6546,6 +6551,13 @@ next-mdx-remote@^1.0.0:
     "@babel/preset-react" "^7.10.4"
     "@mdx-js/mdx" "^1.6.16"
     "@mdx-js/react" "^1.6.16"
+
+next-sitemap@^1.1.6:
+  version "1.1.6"
+  resolved "https://registry.yarnpkg.com/next-sitemap/-/next-sitemap-1.1.6.tgz#f7d90654800762a40683ad42029a33d2b0b0974a"
+  integrity sha512-te151xgGlXZGSnvuA5jr8yUjDM5hLvyz4lPdJf1DpncdH4SzqokmhYtmuCmAmh2No3wvRiAo/yOOm/o65Ous5A==
+  dependencies:
+    "@corex/deepmerge" "^2.3.6"
 
 next-tick@~1.0.0:
   version "1.0.0"
