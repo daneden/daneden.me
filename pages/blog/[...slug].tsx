@@ -21,13 +21,11 @@ import toc from "remark-toc"
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 type OpaqueComponentType = ComponentType<any>
 
-interface ComponentMapItem {
-  regex: RegExp
-  component: OpaqueComponentType
-}
-
 interface ComponentMap {
-  [key: string]: ComponentMapItem
+  [key: string]: {
+    regex: RegExp
+    component: OpaqueComponentType
+  }
 }
 
 /**
