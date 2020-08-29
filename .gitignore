@@ -25,3 +25,7 @@ yarn-error.log*
 
 .vercel
 .mdx-data
+
+# generated files
+public/robots.txt
+public/sitemap.xml
