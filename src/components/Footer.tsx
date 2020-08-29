@@ -19,13 +19,14 @@ export default function Footer() {
           font-family: ${Atoms.font.family.sans};
           margin-top: ${Atoms.spacing.large};
           padding-bottom: ${Atoms.spacing.large};
-          padding-left: ${Atoms.widths.content};
           padding-top: ${Atoms.spacing.small};
           color: var(--meta-color);
+          display: grid;
+          grid-template-columns: var(--grid-spec);
         }
 
         .wrapper {
-          max-width: ${Atoms.widths.container};
+          grid-column: 2 / 3;
         }
       `}</style>
     </>

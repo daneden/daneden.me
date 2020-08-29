@@ -20,6 +20,10 @@ const Book = ({ author, cover, quote, title, url }: BookData) => {
           grid-gap: ${Atoms.spacing.medium};
           grid-template-columns: ${Atoms.spacing.xxlarge} 1fr;
         }
+
+        .external-link-icon {
+          width: 0.5em;
+        }
       `}</style>
       <PlainLink href={url}>
         {" "}
@@ -34,7 +38,11 @@ const Book = ({ author, cover, quote, title, url }: BookData) => {
             <p>
               {title}&nbsp;
               {isExternalLink && (
-                <img alt="External link icon" src="/images/outbound.svg" />
+                <img
+                  alt="External link icon"
+                  className="external-link-icon"
+                  src="/images/outbound.svg"
+                />
               )}
             </p>
             <p>

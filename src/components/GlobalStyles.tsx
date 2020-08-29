@@ -14,6 +14,8 @@ const GlobalStyles = () => (
         --font-mono: ${Atoms.font.family.mono};
         --hover-color: var(--site-color);
         --code-wash: rgba(128, 128, 128, 0.075);
+        --grid-spec: minmax(0, 1fr) minmax(auto, ${Atoms.widths.container})
+          minmax(0, 1fr);
       }
 
       @media (prefers-color-scheme: dark) {

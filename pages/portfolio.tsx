@@ -17,7 +17,7 @@ export default function PortfolioPage() {
         revenue-impacting product, Ads Manager, to help them{" "}
         <Link href="https://www.facebook.com/business/news/improving-ads-manager-and-business-manager">
           redesign the product
-        </Link>
+        </Link>{" "}
         in the pursuit of increased advertiser efficiency and customer value.
         This work was the first result of a coordinated effort to create a more
         cohesive advertising and marketing experience across all of Facebook’s

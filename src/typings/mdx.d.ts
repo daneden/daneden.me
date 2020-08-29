@@ -1,10 +1,8 @@
 declare module "*.mdx" {
   export interface MDXFrontMatter {
-    __resourcePath: string
     title: string
     date?: string
     hidden?: boolean
-    layout?: "post" | "default"
     excerpt?: string
     categories?: [string]
     slug?: string

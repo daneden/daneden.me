@@ -10,17 +10,27 @@ export default function Wrapper({ id = "content", children }: WrapperProps) {
   return (
     <>
       <div id={id} role="region" tabIndex={-1}>
-        {children}
+        <main>{children}</main>
       </div>
       <style jsx>{`
         div {
-          box-sizing: initial;
-          margin: 0 auto;
-          max-width: ${Atoms.widths.container};
+          display: grid;
+          grid-gap: ${Atoms.spacing.medium};
+          grid-template-columns: var(--grid-spec);
+        }
+
+        @media (max-width: ${Atoms.breakpoints.medium}) {
+          div {
+            display: block;
+          }
         }
 
         div:focus {
           outline: none;
+        }
+
+        main {
+          grid-column: 2 / 3;
         }
       `}</style>
     </>

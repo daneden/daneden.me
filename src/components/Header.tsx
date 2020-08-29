@@ -54,9 +54,7 @@ const Header = ({ siteTitle }: HeaderProps) => {
         header {
           border-bottom: 1px solid;
           display: grid;
-          grid-template-columns:
-            calc(${Atoms.widths.content} - ${Atoms.spacing.xsmall})
-            1fr;
+          grid-template-columns: var(--grid-spec);
           grid-gap: ${Atoms.spacing.xsmall};
           flex-wrap: wrap;
           margin-bottom: ${Atoms.spacing.small};
