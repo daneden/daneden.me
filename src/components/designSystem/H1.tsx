@@ -1,9 +1,15 @@
 import Atoms from "./atoms"
 
-export default function H1({ children }: { children: React.ReactNode }) {
+export default function H1({
+  children,
+  id,
+}: {
+  children: React.ReactNode
+  id?: string
+}) {
   return (
     <>
-      <h1>{children}</h1>
+      <h1 id={id}>{children}</h1>
       <style jsx>{`
         h1 {
           font-family: ${Atoms.font.family.sohne};

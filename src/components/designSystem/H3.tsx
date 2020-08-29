@@ -1,9 +1,15 @@
 import { Atoms } from "."
 
-export default function H3({ children }: { children: React.ReactNode }) {
+export default function H3({
+  children,
+  id,
+}: {
+  children: React.ReactNode
+  id?: string
+}) {
   return (
     <>
-      <h3>{children}</h3>
+      <h3 id={id}>{children}</h3>
       <style jsx>{`
         h3 {
           font-size: ${Atoms.font.size.regular};
