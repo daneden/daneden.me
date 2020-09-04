@@ -6,14 +6,23 @@ export default function PortfolioPage() {
     <Layout frontMatter={{ title: "Portfolio" }}>
       <H2>Facebook</H2>
       <P>
-        I’m currently working as a Design Lead for Facebook’s Ads and Business
-        Design System. My team and I create and maintain the visual language and
-        web React components that power Facebook’s Ads and Business products,
-        serving millions of Facebook Ads customers and thousands of Facebook
-        engineers and designers.
+        I’m currently working as a Design Manager supporting Facebook’s Commerce
+        Opportunities organisation, more specifically focused on{" "}
+        <Link href="https://en.wikipedia.org/wiki/Omnichannel">
+          omnichannel
+        </Link>{" "}
+        commerce. Our team focuses on the ways people buy products online and
+        offline, and the businesses using Facebook to conduct their commerce.
       </P>
       <P>
-        In late 2018–early 2019, our team worked closely with Facebook’s primary
+        From 2017–2020, I worked as a Design Lead for Facebook’s Ads and
+        Business Design System. My team and I created and maintained the visual
+        language and web React components that power Facebook’s Ads and Business
+        products, serving millions of Facebook Ads customers and thousands of
+        Facebook engineers and designers.
+      </P>
+      <P>
+        In late 2018–early 2019, the team worked closely with Facebook’s primary
         revenue-impacting product, Ads Manager, to help them{" "}
         <Link href="https://www.facebook.com/business/news/improving-ads-manager-and-business-manager">
           redesign the product
