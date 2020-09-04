@@ -20,5 +20,6 @@ export default async (request: NowRequest, response: NowResponse) => {
   const result = await sharped.toFormat(format.toString()).toBuffer()
 
   response.setHeader("Content-Type", `image/${format}`)
+  response.setHeader("Cache-Control", `s-maxage=10,stale-while-revalidate`)
   response.status(200).send(result)
 }
