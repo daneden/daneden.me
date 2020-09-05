@@ -4,15 +4,6 @@
   },
   "headers": [
     {
-      "source": "/api/image(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "max-age=31536000, public, stale-while-revalidate"
-        }
-      ]
-    },
-    {
       "source": "/(og|fonts|uploads)/(.*)",
       "headers": [
         {
