@@ -19,7 +19,7 @@ export default function Wrapper({ id = "content", children }: WrapperProps) {
           grid-template-columns: var(--grid-spec);
         }
 
-        @media (max-width: ${Atoms.breakpoints.medium}) {
+        @media (max-width: ${Atoms.breakpoints.narrow}) {
           div {
             display: block;
           }

@@ -1,6 +1,5 @@
 import { MDXFrontMatter } from "*.mdx"
 import formatDate from "@/utils/formatDate"
-import { useWebP } from "@/utils/useWebP"
 import widont from "@/utils/widont"
 import { ReactNode } from "react"
 import siteConfig from "../data/siteconfig.json"
@@ -11,7 +10,6 @@ import GlobalStyles from "./GlobalStyles"
 import Header from "./Header"
 import Metatags from "./Metatags"
 import SkipLink from "./SkipLink"
-import WebPSupportContext from "./WebPSupportContext"
 import Wrapper from "./Wrapper"
 
 type LayoutProps = {
@@ -26,40 +24,38 @@ const Content = ({ frontMatter, children }: LayoutProps) => {
   const date = frontMatter?.date
   const formattedDate = formatDate(date || "")
   const excerpt = frontMatter?.excerpt
-  const webPSupport = useWebP(true)
   const ogSlug = frontMatter?.ogSlug
 
   return (
     <>
-      <WebPSupportContext.Provider value={webPSupport}>
-        <Metatags
-          description={excerpt || site.description}
-          thumbnail={
-            ogSlug
-              ? `https://${process.env.VERCEL_URL}/og/${ogSlug}`
-              : `https://${process.env.VERCEL_URL}/images/og.png`
-          }
-          title={title}
-        />
-        <SkipLink />
-        <Header siteTitle={site.title} />
-        <Wrapper>
-          {!isRoot && (
-            <header>
-              <H1>{widont(title)}</H1>
-              {date && (
-                <P>
-                  <time>
-                    <Small>Published {formattedDate}</Small>
-                  </time>
-                </P>
-              )}
-            </header>
-          )}
-          {children}
-        </Wrapper>
-        <Footer />
-      </WebPSupportContext.Provider>
+      <Metatags
+        description={excerpt || site.description}
+        thumbnail={
+          ogSlug
+            ? `https://${process.env.VERCEL_URL}/og/${ogSlug}`
+            : `https://${process.env.VERCEL_URL}/images/og.png`
+        }
+        title={title}
+      />
+      <SkipLink />
+      <Header siteTitle={site.title} />
+      <Wrapper>
+        {!isRoot && (
+          <header>
+            <H1>{widont(title)}</H1>
+            {date && (
+              <P>
+                <time>
+                  <Small>Published {formattedDate}</Small>
+                </time>
+              </P>
+            )}
+          </header>
+        )}
+        {children}
+      </Wrapper>
+      <Footer />
+
       <style jsx>{`
         header {
           margin-bottom: ${Atoms.spacing.medium};
