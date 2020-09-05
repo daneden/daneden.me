@@ -1,5 +1,5 @@
 import Markdown from "@/utils/Markdown"
-import React, { FunctionComponent } from "react"
+import React from "react"
 import ScriptTag from "react-script-tag"
 import { Caption, Figure } from "./designSystem"
 
