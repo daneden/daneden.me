@@ -6,9 +6,17 @@ export interface BookData {
   quote?: string
   title: string
   url: string
+  type: "book" | "podcast" | "music"
 }
 
-const Book = ({ author, cover, quote, title, url }: BookData) => {
+const Book = ({
+  author,
+  cover,
+  quote,
+  title,
+  url,
+  type = "book",
+}: BookData) => {
   const isExternalLink = url.startsWith("http")
 
   return (
@@ -17,12 +25,27 @@ const Book = ({ author, cover, quote, title, url }: BookData) => {
         .book-container {
           align-items: start;
           display: grid;
-          grid-gap: ${Atoms.spacing.medium};
-          grid-template-columns: ${Atoms.spacing.xxlarge} 1fr;
+          grid-gap: ${Atoms.spacing.xsmall};
+          grid-template-columns: ${Atoms.spacing.xlarge} 1fr;
+          border-top: 1px solid;
         }
 
         .external-link-icon {
           width: 0.5em;
+        }
+
+        .badge {
+          font-size: 0.5rem;
+          color: var(--wash-color);
+          background-color: var(--meta-color);
+          padding: 0.25em 0.5em;
+          border-radius: 0.25em;
+          display: inline-block;
+          text-transform: uppercase;
+          font-weight: 700;
+          line-height: 1.1;
+          font-family: ${Atoms.font.family.sohne};
+          letter-spacing: 0.0125em;
         }
       `}</style>
       <PlainLink href={url}>
@@ -35,6 +58,7 @@ const Book = ({ author, cover, quote, title, url }: BookData) => {
             src={cover}
           />
           <div>
+            <small className="badge">{type}</small>
             <p>
               {title}&nbsp;
               {isExternalLink && (
@@ -51,7 +75,7 @@ const Book = ({ author, cover, quote, title, url }: BookData) => {
             {quote && (
               <p
                 style={{
-                  paddingTop: Atoms.spacing.xsmall,
+                  paddingTop: Atoms.spacing.xxsmall,
                 }}
               >
                 <Small display="block" receded={false}>
