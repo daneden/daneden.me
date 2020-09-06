@@ -3,7 +3,7 @@ import Layout from "@/components/Layout"
 
 export default function LibraryPage() {
   return (
-    <Layout frontMatter={{ title: "Library" }}>
+    <Layout frontMatter={{ title: "Playlist" }}>
       <BookList />
     </Layout>
   )

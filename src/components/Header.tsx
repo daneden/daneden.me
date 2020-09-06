@@ -19,8 +19,8 @@ const links = [
     label: "Portfolio",
   },
   {
-    to: "/books",
-    label: "Library",
+    to: "/playlist",
+    label: "Playlist",
   },
 ]
 

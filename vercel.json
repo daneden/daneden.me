@@ -20,6 +20,11 @@
       "destination": "https://animate.style/"
     },
     {
+      "source": "/books(.*)",
+      "permanent": true,
+      "destination": "/playlist$1"
+    },
+    {
       "source": "/toast(.*)",
       "permanent": true,
       "destination": "https://daneden.github.io/Toast/"
