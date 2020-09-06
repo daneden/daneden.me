@@ -4,6 +4,15 @@
   },
   "headers": [
     {
+      "source": "/api/image(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "s-maxage=10,stale-while-revalidate"
+        }
+      ]
+    },
+    {
       "source": "/(og|fonts|uploads)/(.*)",
       "headers": [
         {
