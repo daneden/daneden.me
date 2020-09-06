@@ -25,7 +25,7 @@ const Image = ({
   let Wrapper: typeof Align.Left | typeof Align.Right | typeof React.Fragment
   const isSVG = src.endsWith("svg")
   const extension = src.split(".").slice(-1)
-  const imageWidths = [114, 272, 340, 544, 680, 1360]
+  const imageWidths = [86, 114, 272, 340, 544, 680, 1360]
 
   const webpSrcSet = imageWidths
     .map((size) => `/api/image?name=/uploads/${src}&w=${size}&fm=webp ${size}w`)
