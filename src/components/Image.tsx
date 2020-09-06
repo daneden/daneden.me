@@ -21,6 +21,7 @@ const Image = ({
   responsive = true,
   margin = true,
   src,
+  defaultSize,
 }: ImageProps) => {
   let Wrapper: typeof Align.Left | typeof Align.Right | typeof React.Fragment
   const isSVG = src.endsWith("svg")
@@ -39,6 +40,7 @@ const Image = ({
     .join(", ")
 
   const defaultSizes =
+    defaultSize ||
     "(min-width: 860px) 680px, (min-width: 621px) calc(57.14vw + 189px), calc(90.63vw - 18px)"
   const alignedSizes =
     "(min-width: 1024px) 340px, (min-width: 800px) 272px, (min-width: 621px) calc(75.84vw + 73px), calc(90.63vw - 18px)"
