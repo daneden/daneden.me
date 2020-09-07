@@ -1406,10 +1406,10 @@
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
 
-"@corex/deepmerge@^2.3.6":
-  version "2.3.6"
-  resolved "https://registry.yarnpkg.com/@corex/deepmerge/-/deepmerge-2.3.6.tgz#1301b0e43cc692e26ccf5d41fc6642446a9b212b"
-  integrity sha512-YziRFUyFj+fKWPkfs6iPFnjf++KYvO+XAQ6yKIzswW5fiudrhMo0mE9eVWYiVDRM95bmVnX3JQbRA8HwqDosPA==
+"@corex/deepmerge@^2.4.6":
+  version "2.4.9"
+  resolved "https://registry.yarnpkg.com/@corex/deepmerge/-/deepmerge-2.4.9.tgz#01ef7aafabb28f09eb7335de3ca0b2b8357850f6"
+  integrity sha512-8AvpyLGK5EsX3PgxPUmVLm8YIIIBnRSImMisWIJF9JLAFgswhFsMqaI+BO4rKNJPU75eBx+Tyuh/ds7GpB+xZQ==
 
 "@emotion/cache@^10.0.27":
   version "10.0.29"
@@ -6534,12 +6534,12 @@ next-mdx-remote@^1.0.0:
     "@mdx-js/mdx" "^1.6.16"
     "@mdx-js/react" "^1.6.16"
 
-next-sitemap@^1.1.6:
-  version "1.1.6"
-  resolved "https://registry.yarnpkg.com/next-sitemap/-/next-sitemap-1.1.6.tgz#f7d90654800762a40683ad42029a33d2b0b0974a"
-  integrity sha512-te151xgGlXZGSnvuA5jr8yUjDM5hLvyz4lPdJf1DpncdH4SzqokmhYtmuCmAmh2No3wvRiAo/yOOm/o65Ous5A==
+next-sitemap@^1.2.4:
+  version "1.2.4"
+  resolved "https://registry.yarnpkg.com/next-sitemap/-/next-sitemap-1.2.4.tgz#6f4b94563da26133f265920ab9779c15e49639eb"
+  integrity sha512-Dpitr8mdRpdpEj7iE/3llrAw/uHK0UB6zf68FX3Zxlt5DvdxzwtXzbQc8s6V6DPtOvwfctj5LXvQr+C4NEpImw==
   dependencies:
-    "@corex/deepmerge" "^2.3.6"
+    "@corex/deepmerge" "^2.4.6"
 
 next-tick@~1.0.0:
   version "1.0.0"
