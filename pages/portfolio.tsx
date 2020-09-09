@@ -159,12 +159,11 @@ export default function PortfolioPage() {
         <Link href="https://gif.daneden.me">Gifme</Link> is a personal
         clone/rip-off/emulation of Giphy, the popular gif search engine. Tired
         of Giphy&#39;s suboptimal Slack integration, I built Gifme as a web app
-        to search my own massive gif collection. View the
+        to search my own massive gif collection. View the{" "}
         <Link href="https://github.com/daneden/de-gifs-client">
           source on GitHub
         </Link>{" "}
-        or
-        <Link href="https://gif.daneden.me">visit the site</Link>.
+        or <Link href="https://gif.daneden.me">visit the site</Link>.
       </P>
       <H3>Toast</H3>
       <P>
