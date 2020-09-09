@@ -1,5 +1,26 @@
 [
   {
+    "type": "podcast",
+    "title": "Nice Try!",
+    "author": "Avery Trufelman/Curbed",
+    "cover": "books/nice-try.png",
+    "url": "https://www.curbed.com/2019/5/7/18514684/nice-try-podcast-utopian-avery-trufelman"
+  },
+  {
+    "type": "podcast",
+    "title": "My Favorite Murder",
+    "author": "Karen Kilgariff, Georgia Hardstark",
+    "cover": "books/mfm.jpg",
+    "url": "https://myfavoritemurder.com/"
+  },
+  {
+    "type": "book",
+    "title": "The End of Everything",
+    "author": "Katie Mack",
+    "cover": "books/end-of-everything.jpg",
+    "url": "http://www.astrokatie.com/book"
+  },
+  {
     "type": "book",
     "title": "The Signal and The Noise",
     "author": "Nate Silver",
