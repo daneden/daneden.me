@@ -13,14 +13,13 @@ export default async (request: NowRequest, response: NowResponse) => {
   const now = Date.now() / 1000
   const exp = now + ms("3m") / 1000
   try {
-    console.log(APPLE_MUSIC_KEY)
     const token = jwt.sign(
       {
         iss: APPLE_MUSIC_TEAM_ID,
         exp,
         iat: now,
       },
-      { key: APPLE_MUSIC_KEY as string, passphrase: "" },
+      { key: (APPLE_MUSIC_KEY as string).replace("\\n", "\n"), passphrase: "" },
       {
         algorithm: "ES256",
         header: {
