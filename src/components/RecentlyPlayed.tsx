@@ -24,6 +24,7 @@ export default function RecentlyPlayed() {
   return (
     <>
       <div className="container">
+        <img alt="" className="cover" src={imageUrl} />
         <figure>
           <img
             alt={`Artwork for ${name}`}
@@ -56,30 +57,44 @@ export default function RecentlyPlayed() {
           display: grid;
         }
 
+        .cover {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+          filter: blur(${Atoms.spacing.large});
+        }
+
+        .info {
+          position: relative;
+          z-index: 1;
+        }
+
         .container {
+          overflow: hidden;
+          position: relative;
           align-items: center;
           grid-gap: ${Atoms.spacing.xsmall};
           grid-template-columns: ${Atoms.spacing.xlarge} 1fr;
           padding: ${Atoms.spacing.xsmall};
           border-radius: 0.5em;
-          background-color: var(--player-text-tertiary);
-          color: var(--player-bg);
+          background-color: var(--player-bg);
+          color: var(--player-text-primary);
           transition: 0.3s ease;
           transition-property: background-color, color;
-          background-image: linear-gradient(
-            to left,
-            transparent,
-            var(--player-text-primary)
-          );
           margin-bottom: ${Atoms.spacing.medium};
         }
 
         .media-author {
-          opacity: 0.75;
+          color: var(--player-text-secondary);
         }
 
         .badge {
-          opacity: 0.75;
+          color: var(--player-text-tertiary);
           text-transform: uppercase;
           font-size: 0.65rem;
           letter-spacing: 0.05em;
@@ -92,25 +107,12 @@ export default function RecentlyPlayed() {
         }
 
         figure {
-          --inset-color: ${Atoms.colors.siteLight};
           display: inline-block;
           overflow: hidden;
           border-radius: 0.25em;
           position: relative;
           box-shadow: 0 ${Atoms.spacing.xsmall} ${Atoms.spacing.small}
             ${Atoms.spacing.xxsmall} rgba(0, 0, 0, 0.1);
-        }
-
-        figure::after {
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          box-shadow: inset 0 0 0 1px ${Atoms.colors.siteDark};
-          border-radius: 0.25em;
-          content: "";
-          opacity: 0.15;
         }
       `}</style>
     </>

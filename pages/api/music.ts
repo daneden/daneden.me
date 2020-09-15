@@ -14,7 +14,6 @@ export default async (request: NowRequest, response: NowResponse) => {
   const exp = now + ms("3m") / 1000
   const key = APPLE_MUSIC_KEY as string
 
-  console.log(key)
   try {
     const token = jwt.sign(
       {
