@@ -64,9 +64,11 @@ export default function RecentlyPlayed() {
           left: 0;
           object-fit: cover;
           opacity: 0.75;
+          pointer-events: none;
           position: absolute;
           right: 0;
           top: 0;
+          transform: scale(1.5);
           width: 100%;
         }
 
