@@ -1,5 +1,12 @@
 [
   {
+    "type": "book",
+    "title": "Good Services",
+    "author": "Lou Downe",
+    "cover": "books/good-services.jpg",
+    "url": "https://good.services"
+  },
+  {
     "type": "podcast",
     "title": "Nice Try!",
     "author": "Avery Trufelman/Curbed",
