@@ -58,15 +58,16 @@ export default function RecentlyPlayed() {
         }
 
         .cover {
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
           bottom: 0;
-          object-fit: cover;
-          width: 100%;
-          height: 100%;
           filter: blur(${Atoms.spacing.large});
+          height: 100%;
+          left: 0;
+          object-fit: cover;
+          opacity: 0.75;
+          position: absolute;
+          right: 0;
+          top: 0;
+          width: 100%;
         }
 
         .info {
