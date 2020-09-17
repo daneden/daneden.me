@@ -6,7 +6,7 @@ const fetcher = async (url: string, options?: RequestInit) => {
 }
 
 export default function RecentlyPlayed() {
-  const { data, error } = useSwr("/api/music", fetcher, {
+  const { data, error } = useSwr<MusicResponse>("/api/music", fetcher, {
     refreshInterval: 2000,
   })
 
@@ -19,7 +19,7 @@ export default function RecentlyPlayed() {
 
   const { attributes } = data
   const { artwork, name, url } = attributes
-  const imageUrl = artwork.url.replace("{w}", "172").replace("{h}", "172")
+  const imageUrl = artwork.url.replaceAll(/{(w|h)}/g, "172")
 
   return (
     <>
