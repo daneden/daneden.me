@@ -49,7 +49,7 @@
     "rehype-katex": "^4.0.0",
     "remark-abbr": "^1.4.0",
     "remark-math": "^3.0.1",
-    "sharp": "^0.26.0",
+    "sharp": "^0.26.1",
     "swr": "^0.3.2"
   },
   "devDependencies": {
