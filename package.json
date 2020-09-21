@@ -53,7 +53,7 @@
     "swr": "^0.3.2"
   },
   "devDependencies": {
-    "@mdx-js/mdx": "^1.6.16",
+    "@mdx-js/mdx": "^1.6.18",
     "@ngsctt/remark-smartypants": "^0.2.0",
     "@now/node": "^1.8.2",
     "@types/jsonwebtoken": "^8.5.0",
