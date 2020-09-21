@@ -1,6 +1,13 @@
 [
   {
     "type": "book",
+    "title": "The Politics of Design",
+    "author": "Ruben Pater",
+    "cover": "books/politics.jpg",
+    "url": "http://thepoliticsofdesign.com/"
+  },
+  {
+    "type": "book",
     "title": "Good Services",
     "author": "Lou Downe",
     "cover": "books/good-services.jpg",
