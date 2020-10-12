@@ -6781,10 +6781,10 @@ next-remote-watch@^0.2.0:
     commander "^5.0.0"
     express "^4.17.1"
 
-next-sitemap@^1.2.4:
-  version "1.2.4"
-  resolved "https://registry.yarnpkg.com/next-sitemap/-/next-sitemap-1.2.4.tgz#6f4b94563da26133f265920ab9779c15e49639eb"
-  integrity sha512-Dpitr8mdRpdpEj7iE/3llrAw/uHK0UB6zf68FX3Zxlt5DvdxzwtXzbQc8s6V6DPtOvwfctj5LXvQr+C4NEpImw==
+next-sitemap@^1.2.6:
+  version "1.2.6"
+  resolved "https://registry.yarnpkg.com/next-sitemap/-/next-sitemap-1.2.6.tgz#27698b50042152c7cbf12f1806aceede2a862b43"
+  integrity sha512-u3BU1VTfkjXBWhX5iXoil/9M3Nbo4GZ7U8P9LgNm1z0fnIsAEH6pTCpk2C4XXZG3Ajrw1lamIXtT18jPlWEeiw==
   dependencies:
     "@corex/deepmerge" "^2.4.6"
 
