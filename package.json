@@ -48,7 +48,7 @@
     "react-script-tag": "^1.1.2",
     "rehype-katex": "^4.0.0",
     "remark-abbr": "^1.4.0",
-    "remark-math": "^3.0.1",
+    "remark-math": "^4.0.0",
     "sharp": "^0.26.1",
     "swr": "^0.3.5"
   },
