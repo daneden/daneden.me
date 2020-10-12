@@ -40,7 +40,7 @@
     "next": "^9.5.5",
     "next-mdx-remote": "^1.0.0",
     "next-sitemap": "^1.2.6",
-    "prismjs": "^1.21.0",
+    "prismjs": "^1.22.0",
     "react": "16.13.1",
     "react-codepen-embed": "^1.0.1",
     "react-dom": "16.13.1",
