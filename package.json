@@ -73,7 +73,7 @@
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.21.4",
     "eslint-plugin-react-hooks": "^4.1.2",
-    "file-loader": "^6.1.0",
+    "file-loader": "^6.1.1",
     "husky": "^4.3.0",
     "lint-staged": "^10.4.0",
     "next-remote-watch": "^0.2.0",
