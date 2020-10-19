@@ -75,7 +75,7 @@
     "eslint-plugin-react-hooks": "^4.1.2",
     "file-loader": "^6.1.1",
     "husky": "^4.3.0",
-    "lint-staged": "^10.4.0",
+    "lint-staged": "^10.4.2",
     "next-remote-watch": "^0.2.0",
     "prettier": "^2.1.2",
     "rehype": "^11.0.0",
