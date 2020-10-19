@@ -1197,10 +1197,10 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@corex/deepmerge@^2.4.6":
-  version "2.4.9"
-  resolved "https://registry.yarnpkg.com/@corex/deepmerge/-/deepmerge-2.4.9.tgz#01ef7aafabb28f09eb7335de3ca0b2b8357850f6"
-  integrity sha512-8AvpyLGK5EsX3PgxPUmVLm8YIIIBnRSImMisWIJF9JLAFgswhFsMqaI+BO4rKNJPU75eBx+Tyuh/ds7GpB+xZQ==
+"@corex/deepmerge@^2.4.17":
+  version "2.4.17"
+  resolved "https://registry.yarnpkg.com/@corex/deepmerge/-/deepmerge-2.4.17.tgz#f5e49f256e7f50b9002ceec8fb652b5cfc06c019"
+  integrity sha512-7HfPMbiva8ppj4PyfLySLbd8H9LvzdcGIMOwjv9TwGmLT/40JuCXIr3n/4g+7GZnJdf2E2pQZIdIt117jPKziA==
 
 "@emotion/cache@^10.0.27":
   version "10.0.29"
@@ -6871,12 +6871,12 @@ next-remote-watch@^0.2.0:
     commander "^5.0.0"
     express "^4.17.1"
 
-next-sitemap@^1.2.6:
-  version "1.2.6"
-  resolved "https://registry.yarnpkg.com/next-sitemap/-/next-sitemap-1.2.6.tgz#27698b50042152c7cbf12f1806aceede2a862b43"
-  integrity sha512-u3BU1VTfkjXBWhX5iXoil/9M3Nbo4GZ7U8P9LgNm1z0fnIsAEH6pTCpk2C4XXZG3Ajrw1lamIXtT18jPlWEeiw==
+next-sitemap@^1.2.10:
+  version "1.2.10"
+  resolved "https://registry.yarnpkg.com/next-sitemap/-/next-sitemap-1.2.10.tgz#1655f6087818b12ff0bbe6f6fe5aa64d94c3a549"
+  integrity sha512-aVY1qvTwRgxl4Il8jsZ6jyocFTKCXP8MtFepyymmTu6maSsQzAwmbeISzXHk5oAC+iR2XXJ1kYkGO417w7s5eQ==
   dependencies:
-    "@corex/deepmerge" "^2.4.6"
+    "@corex/deepmerge" "^2.4.17"
 
 next-tick@~1.0.0:
   version "1.0.0"
