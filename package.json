@@ -22,7 +22,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "@mdx-js/loader": "^1.6.18",
+    "@mdx-js/loader": "^1.6.19",
     "@types/react-dom": "^16.9.8",
     "babel-loader": "^8.1.0",
     "canvas": "^2.6.1",
