@@ -50,7 +50,7 @@
     "remark-abbr": "^1.4.0",
     "remark-math": "^4.0.0",
     "sharp": "^0.26.2",
-    "swr": "^0.3.5"
+    "swr": "^0.3.6"
   },
   "devDependencies": {
     "@mdx-js/mdx": "^1.6.16",
