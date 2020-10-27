@@ -53,7 +53,6 @@ const Book = ({
         <div className="book-container">
           <Image
             alt={`The book cover for “${title}” by ${author}`}
-            defaultSize={Atoms.spacing.xxlarge}
             margin={false}
             src={cover}
           />

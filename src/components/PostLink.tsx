@@ -13,7 +13,7 @@ const PostLink = ({ post }: Props): ReactElement<HTMLDivElement> => {
   return (
     <>
       <div className="post-link">
-        <PlainLink as={`blog/${post.slug}`} href={`blog/[...slug]`}>
+        <PlainLink href={`blog/${post.slug}`}>
           <div>{post.title}</div>
           <time>
             <Small display="block">{date}</Small>
