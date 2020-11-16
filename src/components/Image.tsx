@@ -11,8 +11,8 @@ interface ImageProps extends Omit<FigureProps, "children"> {
   defaultSize?: string
   invertInDarkMode?: boolean
   src: string
-  width?: string | number
-  height?: string | number
+  width: string | number
+  height: string | number
   sizes?: string
 }
 
@@ -22,8 +22,6 @@ const Image = ({
   className,
   caption,
   invertInDarkMode = false,
-  responsive = true,
-  margin = true,
   src,
   sizes,
   width,
@@ -45,26 +43,16 @@ const Image = ({
       Wrapper = React.Fragment
   }
 
-  const isUnsized = width === undefined || height === undefined
-  const commonProps = {
-    alt,
-    className: invertInDarkMode ? "invertInDarkMode" : "",
-    src: `/uploads/${src}`,
-  }
-  const image = isUnsized ? (
-    <NextImage {...commonProps} layout="fill" sizes={sizes ?? imgSizes} />
-  ) : (
-    <NextImage
-      {...commonProps}
-      height={height as number}
-      sizes={sizes ?? imgSizes}
-      width={width as number}
-    />
-  )
-
   const img = (
     <>
-      {image}
+      <NextImage
+        alt={alt}
+        className={invertInDarkMode ? "invertInDarkMode" : ""}
+        height={height}
+        sizes={sizes ?? imgSizes}
+        src={`/uploads/${src}`}
+        width={width}
+      />
       <style jsx>{`
         @media (prefers-color-scheme: dark) {
           .invertInDarkMode {
@@ -77,7 +65,7 @@ const Image = ({
 
   return (
     <Wrapper>
-      <Figure className={className} margin={margin} responsive={responsive}>
+      <Figure className={className}>
         {img}
         {caption && (
           <Caption>

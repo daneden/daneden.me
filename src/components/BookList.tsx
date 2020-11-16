@@ -45,20 +45,6 @@ const BookList = () => (
         justify-items: stretch;
       }
     `}</style>
-    <style global jsx>{`
-      :root {
-        --wash-color: #ffecf1;
-        --text-color: #1f1136;
-        --meta-color: #866a88;
-      }
-
-      @media (prefers-color-scheme: dark) {
-        :root {
-          --wash-color: #1f1136;
-          --text-color: #ffecf1;
-        }
-      }
-    `}</style>
   </>
 )
 

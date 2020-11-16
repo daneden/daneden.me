@@ -36,6 +36,11 @@ const Book = ({
           border-top: 1px solid;
         }
 
+        /* Override Figure's margin-bottom */
+        .book-container :global(figure) {
+          margin-bottom: 0;
+        }
+
         .external-link-icon {
           width: 0.5em;
         }
@@ -60,7 +65,6 @@ const Book = ({
           <Image
             alt={`The book cover for “${title}” by ${author}`}
             height={cover.height}
-            margin={false}
             sizes={Atoms.spacing.xlarge}
             src={cover.src}
             width={cover.width}

@@ -7,12 +7,7 @@ export interface FigureProps {
   children: React.ReactNode
 }
 
-export default function Figure({
-  margin = true,
-  responsive = true,
-  children,
-  className,
-}: FigureProps) {
+export default function Figure({ children, className }: FigureProps) {
   return (
     <>
       <figure className={className}>{children}</figure>
@@ -22,12 +17,12 @@ export default function Figure({
           flex-direction: column;
           justify-content: center;
           writing-mode: horizontal-tb;
-          margin-bottom: ${margin ? Atoms.spacing.medium : 0};
+          margin-bottom: ${Atoms.spacing.medium};
         }
 
         figure :global(img) {
           display: block;
-          width: ${responsive ? "100%" : "auto"};
+          width: 100%;
           flex: 1 1 auto;
           order: 2;
         }

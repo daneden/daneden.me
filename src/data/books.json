@@ -223,5 +223,16 @@
       "width": 484
     },
     "url": "https://bookshop.org/books/w-e-b-du-bois-s-data-portraits-visualizing-black-america/9781616897062?aid=1584"
+  },
+  {
+    "type": "podcast",
+    "title": "You’re Wrong About",
+    "author": "Michael Hobbs, Sarah Marshall",
+    "cover": {
+      "height": 600,
+      "src": "books/ywa.jpg",
+      "width": 600
+    },
+    "url": "https://podcasts.apple.com/gb/podcast/youre-wrong-about/id1380008439"
   }
 ]
