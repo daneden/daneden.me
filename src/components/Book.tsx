@@ -1,8 +1,14 @@
 import { Atoms, PlainLink, Small } from "@/designSystem"
 import Image from "./Image"
+
+interface BookCover {
+  src: string
+  width: number
+  height: number
+}
 export interface BookData {
   author: string
-  cover: string
+  cover: BookCover
   quote?: string
   title: string
   url: string
@@ -53,8 +59,11 @@ const Book = ({
         <div className="book-container">
           <Image
             alt={`The book cover for “${title}” by ${author}`}
+            height={cover.height}
             margin={false}
-            src={cover}
+            sizes={Atoms.spacing.xlarge}
+            src={cover.src}
+            width={cover.width}
           />
           <div>
             <small className="badge">{type}</small>

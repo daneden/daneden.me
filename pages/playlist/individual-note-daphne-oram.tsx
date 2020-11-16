@@ -10,7 +10,12 @@ export default function IndividualNotePage() {
           "Daphne Oram — “An Individual Note of Music, Sound, and Electronics”",
       }}
     >
-      <Image align="right" src="books/individual-note.jpg" />
+      <Image
+        align="right"
+        height={1739}
+        src="books/individual-note.jpg"
+        width={1235}
+      />
       <P>
         Daphne Oram’s essay “An Individual Note of Music, Sound, and
         Electronics” has given me a lot to chew on. What starts as a seemingly

@@ -3,35 +3,55 @@
     "type": "book",
     "title": "The Politics of Design",
     "author": "Ruben Pater",
-    "cover": "books/politics.jpg",
+    "cover": {
+      "height": 2067,
+      "src": "books/politics.jpg",
+      "width": 1311
+    },
     "url": "http://thepoliticsofdesign.com/"
   },
   {
     "type": "book",
     "title": "Good Services",
     "author": "Lou Downe",
-    "cover": "books/good-services.jpg",
+    "cover": {
+      "height": 1350,
+      "src": "books/good-services.jpg",
+      "width": 900
+    },
     "url": "https://good.services"
   },
   {
     "type": "podcast",
     "title": "Nice Try!",
     "author": "Avery Trufelman/Curbed",
-    "cover": "books/nice-try.png",
+    "cover": {
+      "height": 400,
+      "src": "books/nice-try.png",
+      "width": 400
+    },
     "url": "https://www.curbed.com/2019/5/7/18514684/nice-try-podcast-utopian-avery-trufelman"
   },
   {
     "type": "podcast",
     "title": "My Favorite Murder",
     "author": "Karen Kilgariff, Georgia Hardstark",
-    "cover": "books/mfm.jpg",
+    "cover": {
+      "height": 800,
+      "src": "books/mfm.jpg",
+      "width": 800
+    },
     "url": "https://myfavoritemurder.com/"
   },
   {
     "type": "book",
     "title": "The End of Everything",
     "author": "Katie Mack",
-    "cover": "books/end-of-everything.jpg",
+    "cover": {
+      "height": 678,
+      "src": "books/end-of-everything.jpg",
+      "width": 440
+    },
     "url": "http://www.astrokatie.com/book"
   },
   {
@@ -39,28 +59,44 @@
     "title": "The Signal and The Noise",
     "author": "Nate Silver",
     "quote": "One economist sees a $100 bill sitting on the street and reaches to grab it. “Don’t bother,” the other economist says. “If it were a real $100 bill, someone would already have picked it up.”",
-    "cover": "books/signal-noise.jpg",
+    "cover": {
+      "height": 906,
+      "src": "books/signal-noise.jpg",
+      "width": 600
+    },
     "url": "https://www.penguinrandomhouse.com/books/305826/the-signal-and-the-noise-by-nate-silver/"
   },
   {
     "type": "book",
     "title": "The Code Book",
     "author": "Simon Singh",
-    "cover": "books/the-code-book.jpg",
+    "cover": {
+      "height": 1195,
+      "src": "books/the-code-book.jpg",
+      "width": 780
+    },
     "url": "https://www.penguinrandomhouse.com/books/168002/the-code-book-by-simon-singh/"
   },
   {
     "type": "book",
     "title": "What Can a Body Do?",
     "author": "Sara Hendren",
-    "cover": "books/body.jpg",
+    "cover": {
+      "height": 450,
+      "src": "books/body.jpg",
+      "width": 298
+    },
     "url": "https://www.penguinrandomhouse.com/books/561049/what-can-a-body-do-by-sara-hendren/"
   },
   {
     "type": "podcast",
     "title": "Nice White Parents",
     "author": "Chana Joffe-Walt/New York Times",
-    "cover": "books/nwp.jpg",
+    "cover": {
+      "height": 1200,
+      "src": "books/nwp.jpg",
+      "width": 1200
+    },
     "url": "https://podcasts.apple.com/us/podcast/nice-white-parents/id1524080195"
   },
   {
@@ -68,7 +104,11 @@
     "title": "A Short History of Nearly Everything",
     "author": "Bill Bryson",
     "quote": "…for 3.8 billion years, a period of time older than the Earth’s mountains and rivers and oceans, every one of your forebears on both sides has been attractive enough to find a mate, healthy enough to reproduce, and sufficiently blessed by fate and circumstances to live long enough to do so.",
-    "cover": "books/short-history.jpg",
+    "cover": {
+      "height": 2560,
+      "src": "books/short-history.jpg",
+      "width": 1694
+    },
     "url": "https://www.penguin.co.uk/books/100/1004856/a-short-history-of-nearly-everything/9781784161859.html"
   },
   {
@@ -76,28 +116,44 @@
     "title": "Your Brain Is a Time Machine",
     "author": "Dean Buonomano",
     "quote": "Whether of color, sound, or the passage of time, our conscious experiences are in essence illusions, convenient running narratives of what the unconscious brain determines are the most relevant events happening in the extracranial world.",
-    "cover": "books/time-machine.jpg",
+    "cover": {
+      "height": 1425,
+      "src": "books/time-machine.jpg",
+      "width": 938
+    },
     "url": "https://wwnorton.com/books/9780393355604"
   },
   {
     "type": "book",
     "title": "Designing Design",
     "author": "Kenya Hara",
-    "cover": "books/designing-design.jpg",
+    "cover": {
+      "height": 845,
+      "src": "books/designing-design.jpg",
+      "width": 588
+    },
     "url": "https://www.lars-mueller-publishers.com/designing-design"
   },
   {
     "type": "book",
     "title": "Object-Oriented Ontology",
     "author": "Graham Harman",
-    "cover": "books/ooo.jpg",
+    "cover": {
+      "height": 1000,
+      "src": "books/ooo.jpg",
+      "width": 613
+    },
     "url": "https://www.penguin.co.uk/books/295/295720/object-oriented-ontology/9780241269152.html"
   },
   {
     "type": "book",
     "title": "The Order of Time",
     "author": "Carlo Rovelli",
-    "cover": "books/order-of-time.jpg",
+    "cover": {
+      "height": 2269,
+      "src": "books/order-of-time.jpg",
+      "width": 1481
+    },
     "url": "https://www.penguinrandomhouse.com/books/551483/the-order-of-time-by-carlo-rovelli/"
   },
   {
@@ -105,35 +161,55 @@
     "title": "Debt: The First 5,000 Years",
     "author": "David Graeber",
     "quote": "“IMF Warns Second Bailout Would ‘Threaten Democracy,’ ” reads one headline. (Of course by “democracy” they mean “capitalism.”)",
-    "cover": "books/debt.jpg",
+    "cover": {
+      "height": 2512,
+      "src": "books/debt.jpg",
+      "width": 1687
+    },
     "url": "https://www.mhpbooks.com/books/debt/"
   },
   {
     "type": "book",
     "title": "Word By Word",
     "author": "Kory Stamper",
-    "cover": "books/word-by-word.jpg",
+    "cover": {
+      "height": 500,
+      "src": "books/word-by-word.jpg",
+      "width": 324
+    },
     "url": "https://www.penguinrandomhouse.com/books/530504/word-by-word-by-kory-stamper/"
   },
   {
     "type": "book",
     "title": "The Sixth Extinction",
     "author": "Elizabeth Kolbert",
-    "cover": "books/tse.jpg",
+    "cover": {
+      "height": 1600,
+      "src": "books/tse.jpg",
+      "width": 1060
+    },
     "url": "https://us.macmillan.com/books/9781250062185"
   },
   {
     "type": "book",
     "title": "An Individual Note of Music, Sound, and Electronics",
     "author": "Daphne Oram",
-    "cover": "books/individual-note.jpg",
+    "cover": {
+      "height": 1739,
+      "src": "books/individual-note.jpg",
+      "width": 1235
+    },
     "url": "/playlist/individual-note-daphne-oram"
   },
   {
     "type": "book",
     "title": "The End of Policing",
     "author": "Alex S. Vitale",
-    "cover": "books/end-of-policing.jpg",
+    "cover": {
+      "height": 1193,
+      "src": "books/end-of-policing.jpg",
+      "width": 800
+    },
     "url": "https://www.versobooks.com/books/2426-the-end-of-policing",
     "quote": "A kinder, gentler, and more diverse war on the poor is still a war on the poor."
   },
@@ -141,7 +217,11 @@
     "type": "book",
     "title": "W.E.B. Du Bois’s Data Portraits: Visualizing Black America",
     "author": "Whitney Battle-Baptiste (Editor), Britt Rusert (Editor)",
-    "cover": "books/black-america.jpg",
+    "cover": {
+      "height": 700,
+      "src": "books/black-america.jpg",
+      "width": 484
+    },
     "url": "https://bookshop.org/books/w-e-b-du-bois-s-data-portraits-visualizing-black-america/9781616897062?aid=1584"
   }
 ]

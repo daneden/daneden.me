@@ -13,6 +13,7 @@ interface ImageProps extends Omit<FigureProps, "children"> {
   src: string
   width?: string | number
   height?: string | number
+  sizes?: string
 }
 
 const Image = ({
@@ -24,17 +25,21 @@ const Image = ({
   responsive = true,
   margin = true,
   src,
+  sizes,
   width,
   height,
 }: ImageProps) => {
+  let imgSizes = "(max-width: 800px) 680px, 100vw"
   let Wrapper: typeof Align.Left | typeof Align.Right | typeof React.Fragment
 
   switch (align) {
     case "left":
       Wrapper = Align.Left
+      imgSizes = "(max-width: 1032px) 340px, (max-width: 800px) 272px, 100vw"
       break
     case "right":
       Wrapper = Align.Right
+      imgSizes = "(max-width: 1032px) 340px, (max-width: 800px) 272px, 100vw"
       break
     default:
       Wrapper = React.Fragment
@@ -47,11 +52,12 @@ const Image = ({
     src: `/uploads/${src}`,
   }
   const image = isUnsized ? (
-    <NextImage {...commonProps} unsized={true} />
+    <NextImage {...commonProps} layout="fill" sizes={sizes ?? imgSizes} />
   ) : (
     <NextImage
       {...commonProps}
       height={height as number}
+      sizes={sizes ?? imgSizes}
       width={width as number}
     />
   )

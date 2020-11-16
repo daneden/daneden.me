@@ -2,7 +2,9 @@ import useSwr from "swr"
 import { Atoms, Link } from "./designSystem"
 
 const fetcher = async (url: string, options?: RequestInit) => {
-  return await fetch(url, options).then((d) => d.json())
+  return await fetch(url, options)
+    .then((d) => d.json())
+    .catch((e) => console.error(e))
 }
 
 export default function RecentlyPlayed() {
@@ -15,7 +17,7 @@ export default function RecentlyPlayed() {
     return null
   }
 
-  if (!data) return null
+  if (!data || typeof data != "object") return null
 
   const { attributes } = data
   const { artwork, name, url } = attributes
