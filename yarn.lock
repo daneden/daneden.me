@@ -7058,10 +7058,10 @@ rc@^1.2.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-codepen-embed@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/react-codepen-embed/-/react-codepen-embed-1.0.1.tgz#d640843bf40b47b11e51d274a5f988dc6710450c"
-  integrity sha512-Lqi9uNimI4s8pGpCNU/NuP/UFscFSdgeYXfLLJym8NmzzyUt5Gbwwbkvzfp5UYj24S31eW1eClewhe5W+STULA==
+react-codepen-embed@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/react-codepen-embed/-/react-codepen-embed-1.0.2.tgz#3c112aeeb030c26ea42991195e353b50bbc9a789"
+  integrity sha512-yHIlU2yI/Pv+3Gx1zPn5ReuIRK9xa7uBQgwUNb6V/i26fOBtoIhgcU8iEJQ++s+T62DKHI+lKRtDg8GxGIfA4A==
   dependencies:
     prop-types "^15.5.0"
 
