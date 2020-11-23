@@ -71,7 +71,7 @@
     "husky": "^4.3.0",
     "lint-staged": "^10.5.1",
     "next-remote-watch": "^0.2.0",
-    "prettier": "^2.1.2",
+    "prettier": "^2.2.0",
     "rehype": "^11.0.0",
     "rehype-slug": "^4.0.1",
     "remark-toc": "^7.0.0",
