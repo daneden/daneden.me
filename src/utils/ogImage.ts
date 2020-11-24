@@ -134,7 +134,7 @@ export const generateOgImages = async (posts: MDXFrontMatter[]) => {
         writeFile(filepath, buffer)
       })
 
-      resolve()
+      resolve(filepath)
     })
   })
 
