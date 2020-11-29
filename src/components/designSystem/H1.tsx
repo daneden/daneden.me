@@ -13,7 +13,7 @@ export default function H1({
       <style jsx>{`
         h1 {
           font-family: ${Atoms.font.family.display};
-          font-size: 3rem;
+          font-size: 2.75rem;
           font-weight: 400;
           hyphens: initial;
           line-height: 1.1;
