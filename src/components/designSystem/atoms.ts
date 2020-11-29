@@ -1,4 +1,4 @@
-const BASELINE = 1.425
+const BASELINE = 1.6
 
 const scales = {
   xxsmall: 0.125,
@@ -46,9 +46,9 @@ export default {
   },
   font: {
     family: {
-      sans: `"National 2 Web", -apple-system, system-ui, BlinkMacSystemFont, sans-serif`,
-      sohne: `"Soehne Breit Web"`,
+      body: `"Roslindale Text", "Times New Roman", serif`,
       mono: `"JetBrains Mono Web", "Input Mono", "Source Code Pro", "Monaco", monospace`,
+      display: "Roslindale Display",
     },
     size: {
       small: `${scales.small}rem`,

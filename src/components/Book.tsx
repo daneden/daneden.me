@@ -46,16 +46,16 @@ const Book = ({
         }
 
         .badge {
-          font-size: 0.5rem;
+          font-size: 0.575rem;
           color: var(--wash-color);
           background-color: var(--meta-color);
-          padding: 0.25em 0.5em;
+          padding: 0.2em 0.35em;
           border-radius: 0.25em;
           display: inline-block;
           text-transform: uppercase;
           font-weight: 700;
           line-height: 1.1;
-          font-family: ${Atoms.font.family.sohne};
+          font-family: ${Atoms.font.family.mono};
           letter-spacing: 0.0125em;
         }
       `}</style>

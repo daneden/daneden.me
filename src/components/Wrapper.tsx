@@ -17,6 +17,7 @@ export default function Wrapper({ id = "content", children }: WrapperProps) {
           display: grid;
           grid-gap: ${Atoms.spacing.medium};
           grid-template-columns: var(--grid-spec);
+          flex-grow: 1;
         }
 
         @media (max-width: ${Atoms.breakpoints.narrow}) {

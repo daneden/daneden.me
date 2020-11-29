@@ -16,7 +16,7 @@ export default function Footer() {
       <style jsx>{`
         footer {
           border-top: 1px solid;
-          font-family: ${Atoms.font.family.sans};
+          font-family: ${Atoms.font.family.body};
           margin-top: ${Atoms.spacing.large};
           padding-bottom: ${Atoms.spacing.large};
           padding-top: ${Atoms.spacing.small};

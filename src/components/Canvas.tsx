@@ -39,6 +39,7 @@ export const Canvas = () => {
               animation: canvasEnter 3s ease;
               animation-fill-mode: both;
               will-change: opacity;
+              transform: rotate(8.5deg) scale(0.8);
             }
 
             @keyframes canvasEnter {

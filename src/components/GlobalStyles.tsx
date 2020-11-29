@@ -43,11 +43,17 @@ const GlobalStyles = () => (
         background-color: var(--wash-color);
         color: var(--text-color);
         flex: 1;
-        font-family: ${Atoms.font.family.sans};
+        font-family: ${Atoms.font.family.body};
         font-size: clamp(100%, 2.5vw, 125%);
         line-height: ${Atoms.baseline};
         padding-left: ${Atoms.spacing.medium};
         padding-right: ${Atoms.spacing.medium};
+      }
+
+      #__next {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
       }
 
       ul,
@@ -88,12 +94,6 @@ const GlobalStyles = () => (
 
       .footnote-backref {
         margin-left: 0.25em;
-      }
-
-      sup {
-        font-feature-settings: "sups" 1;
-        font-size: inherit;
-        vertical-align: inherit;
       }
 
       sup[id^="fn"] a {
