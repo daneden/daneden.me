@@ -50,6 +50,12 @@ const GlobalStyles = () => (
         padding-right: ${Atoms.spacing.medium};
       }
 
+      #__next {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
       ul,
       ol {
         margin-bottom: ${Atoms.spacing.medium};
