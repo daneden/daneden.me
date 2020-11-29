@@ -8,26 +8,26 @@ import siteConfig from "../data/siteconfig.json"
 
 const { mkdir, writeFile } = fs
 
-const display = path.resolve(
+const soehne = path.resolve(
   process.cwd(),
   "public",
   "fonts",
   "ogFonts",
-  "RoslindaleDisplay.ttf"
+  "Soehne.ttf"
 )
-const body = path.resolve(
+const national = path.resolve(
   process.cwd(),
   "public",
   "fonts",
   "ogFonts",
-  "RoslindaleText.ttf"
+  "National2App-Regular.ttf"
 )
 
-registerFont(display, {
-  family: "Roslindale Display Condensed",
+registerFont(soehne, {
+  family: "Soehne",
 })
-registerFont(body, {
-  family: "Roslindale",
+registerFont(national, {
+  family: "National 2",
 })
 
 // This function takes a canvas, string, and maxwidth to determine
