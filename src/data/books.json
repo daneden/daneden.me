@@ -234,5 +234,28 @@
       "width": 600
     },
     "url": "https://podcasts.apple.com/gb/podcast/youre-wrong-about/id1380008439"
+  },
+  {
+    "type": "book",
+    "title": "What Tech Calls Thinking",
+    "author": "Adrian Daub",
+    "cover": {
+      "height": 2555,
+      "src": "books/what-tech-calls-thinking.jpg",
+      "width": 1777
+    },
+    "url": "https://www.fsgoriginals.com/news/logic-series-covers",
+    "quote": "The aestheticization of labor is perhaps the central distinguishing feature of the tech job."
+  },
+  {
+    "type": "book",
+    "title": "Subprime Attention Crisis",
+    "author": "Tim Hwang",
+    "cover": {
+      "height": 2555,
+      "src": "books/subprime-attention-crisis.jpg",
+      "width": 1777
+    },
+    "url": "https://www.fsgoriginals.com/news/logic-series-covers"
   }
 ]
