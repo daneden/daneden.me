@@ -18,7 +18,7 @@ export default function HomeContent({
       </div>
       <style jsx>{`
         .container {
-          font-family: ${Atoms.font.family.display}, ${Atoms.font.family.sans};
+          font-family: ${Atoms.font.family.display}, ${Atoms.font.family.body};
           font-size: 2.75rem;
           font-weight: 400;
           line-height: 1.25;

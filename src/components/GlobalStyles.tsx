@@ -43,7 +43,7 @@ const GlobalStyles = () => (
         background-color: var(--wash-color);
         color: var(--text-color);
         flex: 1;
-        font-family: ${Atoms.font.family.sans};
+        font-family: ${Atoms.font.family.body};
         font-size: clamp(100%, 2.5vw, 125%);
         line-height: ${Atoms.baseline};
         padding-left: ${Atoms.spacing.medium};

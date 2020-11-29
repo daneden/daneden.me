@@ -46,8 +46,7 @@ export default {
   },
   font: {
     family: {
-      sans: `"Roslindale Text", -apple-system, system-ui, BlinkMacSystemFont, sans-serif`,
-      sohne: `"Soehne Breit Web"`,
+      body: `"Roslindale Text", "Times New Roman", serif`,
       mono: `"JetBrains Mono Web", "Input Mono", "Source Code Pro", "Monaco", monospace`,
       display: "Roslindale Display",
     },
