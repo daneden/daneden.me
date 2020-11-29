@@ -39,7 +39,7 @@ export default function HomeContent({
         }
 
         figure {
-          max-width: 25vmin;
+          max-width: 33vmin;
           position: absolute;
           bottom: -4rem;
           right: 0rem;
