@@ -10,43 +10,57 @@
 
 @font-face {
   font-display: fallback;
-  font-family: "National 2 Web";
-  font-style: italic;
+  font-family: "Roslindale Display";
+  font-style: normal;
   font-weight: normal;
-  src: url("/fonts/national/National2Web-RegularItalic.woff2") format("woff2"),
-    url("/fonts/national/National2Web-RegularItalic.woff") format("woff"),
-    url("/fonts/national/National2Web-RegularItalic.eot")
+  src: url("/fonts/roslindale/Roslindale-DisplayCondensedRegular.woff2")
+      format("woff2"),
+    url("/fonts/roslindale/Roslindale-DisplayCondensedRegular.woff")
+      format("woff"),
+    url("/fonts/roslindale/Roslindale-DisplayCondensedRegular.eot")
       format("embedded-opentype");
 }
 
 @font-face {
   font-display: fallback;
-  font-family: "National 2 Web";
+  font-family: "Roslindale Text";
+  font-style: italic;
+  font-weight: normal;
+  src: url("/fonts/roslindale/Roslindale-TextItalic.woff2") format("woff2"),
+    url("/fonts/roslindale/Roslindale-TextItalic.woff") format("woff"),
+    url("/fonts/roslindale/Roslindale-TextItalic.eot")
+      format("embedded-opentype");
+}
+
+@font-face {
+  font-display: fallback;
+  font-family: "Roslindale Text";
   font-style: normal;
   font-weight: normal;
-  src: url("/fonts/national/National2Web-Regular.woff2") format("woff2"),
-    url("/fonts/national/National2Web-Regular.woff") format("woff"),
-    url("/fonts/national/National2Web-Regular.eot") format("embedded-opentype");
+  src: url("/fonts/roslindale/Roslindale-TextRegular.woff2") format("woff2"),
+    url("/fonts/roslindale/Roslindale-TextRegular.woff") format("woff"),
+    url("/fonts/roslindale/Roslindale-TextRegular.eot")
+      format("embedded-opentype");
 }
 
 @font-face {
   font-display: fallback;
-  font-family: "National 2 Web";
+  font-family: "Roslindale Text";
   font-style: normal;
   font-weight: bold;
-  src: url("/fonts/national/National2Web-Bold.woff2") format("woff2"),
-    url("/fonts/national/National2Web-Bold.woff") format("woff"),
-    url("/fonts/national/National2Web-Bold.eot") format("embedded-opentype");
+  src: url("/fonts/roslindale/Roslindale-TextBold.woff2") format("woff2"),
+    url("/fonts/roslindale/Roslindale-TextBold.woff") format("woff"),
+    url("/fonts/roslindale/Roslindale-TextBold.eot") format("embedded-opentype");
 }
 
 @font-face {
   font-display: fallback;
-  font-family: "National 2 Web";
+  font-family: "Roslindale Text";
   font-style: italic;
   font-weight: bold;
-  src: url("/fonts/national/National2Web-BoldItalic.woff2") format("woff2"),
-    url("/fonts/national/National2Web-BoldItalic.woff") format("woff"),
-    url("/fonts/national/National2Web-BoldItalic.eot")
+  src: url("/fonts/roslindale/Roslindale-TextBoldItalic.woff2") format("woff2"),
+    url("/fonts/roslindale/Roslindale-TextBoldItalic.woff") format("woff"),
+    url("/fonts/roslindale/Roslindale-TextBoldItalic.eot")
       format("embedded-opentype");
 }
 
