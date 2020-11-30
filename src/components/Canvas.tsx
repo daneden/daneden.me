@@ -30,6 +30,7 @@ export const Canvas = () => {
           <canvas className="canvas" ref={canvasRef}></canvas>
           <style jsx>{`
             .canvas {
+              --offset: 25%;
               position: fixed;
               top: 0;
               left: 0;
@@ -39,7 +40,12 @@ export const Canvas = () => {
               animation: canvasEnter 3s ease;
               animation-fill-mode: both;
               will-change: opacity;
-              transform: rotate(8.5deg) scale(0.8);
+              clip-path: polygon(
+                var(--offset) 0%,
+                100% var(--offset),
+                calc(100% - var(--offset)) 100%,
+                0% calc(100% - var(--offset))
+              );
             }
 
             @keyframes canvasEnter {
