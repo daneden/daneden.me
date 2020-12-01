@@ -1,10 +1,18 @@
-import { useCallback, useEffect, useRef, useState } from "react"
+import {
+  useCallback,
+  useEffect,
+  useLayoutEffect,
+  useRef,
+  useState,
+} from "react"
 import { createPortal } from "react-dom"
 import renderWebGLLayer from "../webGL/webGLRenderer"
 export const Canvas = () => {
   const docRef = useRef<HTMLElement>()
   const [mounted, setMounted] = useState(false)
   const teardown = useRef<() => void>()
+  const [scaleAmount, setScaleAmount] = useState(1)
+  const rotateAmount = 12
 
   const canvasRef = useCallback((node) => {
     if (node !== null) {
@@ -13,7 +21,7 @@ export const Canvas = () => {
     }
   }, [])
 
-  useEffect(() => {
+  useEffect(function mountCanvas() {
     docRef.current = document.body
     setMounted(true)
 
@@ -24,13 +32,46 @@ export const Canvas = () => {
     }
   }, [])
 
+  useLayoutEffect(
+    function transformCanvas() {
+      const { abs, cos, sin, PI } = Math
+      if (typeof window === "undefined") {
+        return
+      }
+
+      function applyTransform() {
+        const radiansFactor = PI / 180
+        const { innerHeight: h, innerWidth: w } = window
+        const W =
+          w * abs(cos(rotateAmount * radiansFactor)) +
+          h * abs(sin(rotateAmount * radiansFactor))
+        const H =
+          w * abs(sin(rotateAmount * radiansFactor)) +
+          h * abs(cos(rotateAmount * radiansFactor))
+
+        const a = Math.min(w / W, h / H)
+        setScaleAmount(a)
+      }
+
+      if (scaleAmount === 1) {
+        applyTransform()
+      }
+
+      window.addEventListener("resize", applyTransform)
+
+      return () => {
+        window.removeEventListener("resize", applyTransform)
+      }
+    },
+    [scaleAmount]
+  )
+
   return mounted
     ? createPortal(
         <>
           <canvas className="canvas" ref={canvasRef}></canvas>
           <style jsx>{`
             .canvas {
-              --offset: 25%;
               position: fixed;
               top: 0;
               left: 0;
@@ -39,19 +80,18 @@ export const Canvas = () => {
               z-index: -1;
               animation: canvasEnter 3s ease;
               animation-fill-mode: both;
-              will-change: opacity;
-              clip-path: polygon(
-                var(--offset) 0%,
-                100% var(--offset),
-                calc(100% - var(--offset)) 100%,
-                0% calc(100% - var(--offset))
-              );
+              will-change: opacity, transform;
             }
 
             @keyframes canvasEnter {
               from {
                 opacity: 0;
               }
+            }
+          `}</style>
+          <style jsx>{`
+            .canvas {
+              transform: scale(${scaleAmount}) rotate(${rotateAmount}deg);
             }
           `}</style>
         </>,
