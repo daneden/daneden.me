@@ -73,15 +73,19 @@ export const Canvas = () => {
           <canvas className="canvas" ref={canvasRef}></canvas>
           <style jsx>{`
             .canvas {
+              --scale-amount: 1;
+              --x-offset: calc(var(--scale-amount) * 100vw);
+              --y-offset: calc(var(--scale-amount) * 100vh);
               position: fixed;
-              top: 0;
-              left: 0;
-              width: 100%;
-              height: 100%;
+              top: calc(50vh - (var(--y-offset) / 2));
+              left: calc(50vw - (var(--x-offset) / 2));
+              width: var(--x-offset);
+              height: var(--y-offset);
               z-index: -1;
               animation: canvasEnter 3s ease;
               animation-fill-mode: both;
-              will-change: opacity, transform;
+              will-change: opacity, transform, width, height;
+              transform: rotate(${rotateAmount}deg);
             }
 
             @keyframes canvasEnter {
@@ -92,7 +96,7 @@ export const Canvas = () => {
           `}</style>
           <style jsx>{`
             .canvas {
-              transform: scale(${scaleAmount}) rotate(${rotateAmount}deg);
+              --scale-amount: ${scaleAmount};
             }
           `}</style>
         </>,
