@@ -32,29 +32,34 @@ export const Canvas = () => {
     }
   }, [])
 
+  const applyTransform = useCallback(() => {
+    if (typeof window === "undefined") {
+      return
+    }
+
+    const { abs, cos, sin, PI } = Math
+    const radiansFactor = PI / 180
+    const { innerHeight: h, innerWidth: w } = window
+    const W =
+      w * abs(cos(rotateAmount * radiansFactor)) +
+      h * abs(sin(rotateAmount * radiansFactor))
+    const H =
+      w * abs(sin(rotateAmount * radiansFactor)) +
+      h * abs(cos(rotateAmount * radiansFactor))
+
+    const a = Math.min(w / W, h / H)
+    setScaleAmount(a)
+  }, [])
+
+  // If the scale amount hasn't yet been calculated, call applyTransform
+  if (scaleAmount === 1) {
+    applyTransform()
+  }
+
   useLayoutEffect(
     function transformCanvas() {
-      const { abs, cos, sin, PI } = Math
       if (typeof window === "undefined") {
         return
-      }
-
-      function applyTransform() {
-        const radiansFactor = PI / 180
-        const { innerHeight: h, innerWidth: w } = window
-        const W =
-          w * abs(cos(rotateAmount * radiansFactor)) +
-          h * abs(sin(rotateAmount * radiansFactor))
-        const H =
-          w * abs(sin(rotateAmount * radiansFactor)) +
-          h * abs(cos(rotateAmount * radiansFactor))
-
-        const a = Math.min(w / W, h / H)
-        setScaleAmount(a)
-      }
-
-      if (scaleAmount === 1) {
-        applyTransform()
       }
 
       window.addEventListener("resize", applyTransform)
@@ -63,7 +68,7 @@ export const Canvas = () => {
         window.removeEventListener("resize", applyTransform)
       }
     },
-    [scaleAmount]
+    [applyTransform]
   )
 
   return mounted
