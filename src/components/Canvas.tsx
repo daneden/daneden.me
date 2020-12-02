@@ -58,10 +58,6 @@ export const Canvas = () => {
 
   useLayoutEffect(
     function transformCanvas() {
-      if (typeof window === "undefined") {
-        return
-      }
-
       window.addEventListener("resize", applyTransform)
 
       return () => {
