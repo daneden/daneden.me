@@ -3554,6 +3554,11 @@ escape-string-regexp@^1.0.5:
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
   integrity sha1-G2HAViGQqN/2rjuyzwIAyhMLhtQ=
 
+escape-string-regexp@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-4.0.0.tgz#14ba83a5d373e3d311e5afca29cf5bfad965bf34"
+  integrity sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==
+
 eslint-config-prettier@^6.15.0:
   version "6.15.0"
   resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-6.15.0.tgz#7f93f6cb7d45a92f1537a70ecc06366e1ac6fed9"
@@ -5451,6 +5456,13 @@ markdown-table@^2.0.0:
   dependencies:
     repeat-string "^1.0.0"
 
+matcher@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/matcher/-/matcher-3.0.0.tgz#bd9060f4c5b70aa8041ccc6f80368760994f30ca"
+  integrity sha512-OkeDaAZ/bQCxeFAozM55PKcKU0yJMPGifLwV4Qgjitu+5MoAfSQN4lsLJeXZ1b8w0x+/Emda6MZgXS1jvsapng==
+  dependencies:
+    escape-string-regexp "^4.0.0"
+
 md5.js@^1.3.4:
   version "1.3.5"
   resolved "https://registry.yarnpkg.com/md5.js/-/md5.js-1.3.5.tgz#b5d07b8e3216e3e27cd728d72f70d1e6a342005f"
@@ -5896,12 +5908,13 @@ next-remote-watch@^0.3.0:
     commander "^5.0.0"
     express "^4.17.1"
 
-next-sitemap@^1.3.6:
-  version "1.3.6"
-  resolved "https://registry.yarnpkg.com/next-sitemap/-/next-sitemap-1.3.6.tgz#052a0289bee2c6e5bb0d6cf2c39c96d33c8364be"
-  integrity sha512-lkJdehb1/iBGYE1Cz8ZutSmIDGm7qDzJDq/vYK20TdhhHhA/2TM9otgB4iZDdAXehBJE5/nPCYCrtknb2jGV7w==
+next-sitemap@^1.3.14:
+  version "1.3.14"
+  resolved "https://registry.yarnpkg.com/next-sitemap/-/next-sitemap-1.3.14.tgz#4e3e136d067650592066648027114b3ea08195b5"
+  integrity sha512-eTXDm2LAtpo7w/eqqXqAWbbOn/tXOw4dIv8ug4USWDkqDRr2sZYbxUVhT/CIxYFOtwhzj8pE0wyi2OOSanqvYg==
   dependencies:
     "@corex/deepmerge" "^2.4.24"
+    matcher "^3.0.0"
     minimist "^1.2.5"
 
 next-tick@~1.0.0:
