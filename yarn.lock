@@ -5727,10 +5727,10 @@ next-mdx-remote@^1.0.0:
     "@mdx-js/mdx" "^1.6.16"
     "@mdx-js/react" "^1.6.16"
 
-next-remote-watch@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/next-remote-watch/-/next-remote-watch-0.2.0.tgz#172b7d35c2b6b610d223c81b78d5aa7ff2a30bd5"
-  integrity sha512-3qdpIIn0V8YkPR6pdFJ7LR8StvfV3BZ9/xCY+Qba+UkvMIyeTiUoegCGIb1tWVb2AtmNyHL1dLTFQz12HB7IfA==
+next-remote-watch@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/next-remote-watch/-/next-remote-watch-0.3.0.tgz#bb37c24a527e413756a870d6e5febf99cea0848d"
+  integrity sha512-NWrUv7B74KfkVX48bB/dbgkRfuT/n7eJhayWYAu4DoumxY8NKLkb4xLKYE141FhjMhKrS00iRKdrMvTwphh7HQ==
   dependencies:
     body-parser "^1.19.0"
     chalk "^4.0.0"
