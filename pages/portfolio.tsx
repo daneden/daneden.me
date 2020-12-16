@@ -7,12 +7,15 @@ export default function PortfolioPage() {
       <H2>Facebook</H2>
       <P>
         I’m currently working as a Design Manager supporting Facebook’s Commerce
-        Opportunities organisation, more specifically focused on{" "}
-        <Link href="https://en.wikipedia.org/wiki/Omnichannel">
-          omnichannel
-        </Link>{" "}
-        commerce. Our team focuses on the ways people buy products online and
-        offline, and the businesses using Facebook to conduct their commerce.
+        Opportunities organisation, specifically focused on buyer consideration
+        experiences for{" "}
+        <Link href="https://en-gb.facebook.com/business/shops">
+          Facebook Shops
+        </Link>
+        . Our team focuses on giving people the information they need to make an
+        informed purchase decision, providing Facebook employees with the
+        standards to build high-quality buyer experiences, and exploring the
+        future of commerce with Facebook Shops.
       </P>
       <P>
         From 2017–2020, I worked as a Design Lead for Facebook’s Ads and
