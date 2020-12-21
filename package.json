@@ -45,7 +45,7 @@
     "rehype-katex": "^4.0.0",
     "remark-abbr": "^1.4.0",
     "remark-math": "^4.0.0",
-    "swr": "^0.3.9"
+    "swr": "^0.3.11"
   },
   "devDependencies": {
     "@mdx-js/mdx": "^1.6.22",
