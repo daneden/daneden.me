@@ -113,7 +113,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       remarkPlugins: [abbr, smartypants, math, toc],
       rehypePlugins: [katex, prism, slug],
     },
-    scope: frontMatter,
   })
 
   return {
