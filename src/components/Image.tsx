@@ -55,7 +55,7 @@ const Image = ({
       />
       <style jsx>{`
         @media (prefers-color-scheme: dark) {
-          .invertInDarkMode {
+          :global(.invertInDarkMode) {
             filter: invert(100%) hue-rotate(180deg);
           }
         }
