@@ -1,9 +1,7 @@
 import Markdown from "@/utils/Markdown"
-import React from "react"
-import ScriptTag from "react-script-tag"
 import { Caption, Figure } from "./designSystem"
 
-interface CFVideoProps {
+interface Props {
   autoPlay: boolean
   caption?: string
   controls: boolean
@@ -12,29 +10,29 @@ interface CFVideoProps {
   preload: boolean
 }
 
-const CFVideo = ({
+const Video = ({
   autoPlay = false,
   caption,
   controls = true,
   id,
   loop = false,
   preload = true,
-}: CFVideoProps) => {
+}: Props) => {
   return (
     <Figure>
-      <stream
+      {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
+      <video
         autoPlay={autoPlay}
         controls={controls}
         loop={loop}
-        preload={String(preload)}
-        src={id}
-      ></stream>
-      <ScriptTag
-        data-cfasync="false"
-        defer
-        src={`https://embed.videodelivery.net/embed/r4xu.fla9.latest.js?video=${id}`}
-        type="text/javascript"
-      />
+        preload={preload ? "auto" : "none"}
+      >
+        <source
+          src={`https://stream.mux.com/${id}.m3u8`}
+          type="application/x-mpegURL"
+        />
+      </video>
+
       {caption && (
         <Caption>
           <Markdown>{caption}</Markdown>
@@ -44,4 +42,4 @@ const CFVideo = ({
   )
 }
 
-export default CFVideo
+export default Video

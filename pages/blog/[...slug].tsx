@@ -38,9 +38,9 @@ interface ComponentMap {
 function buildComponentMap(source: string) {
   // Define the components that should be made optionally available in MDX
   const availableComponents: ComponentMap = {
-    CFVideo: {
-      regex: /<CFVideo/,
-      component: dynamic(() => import("@/components/CFVideo")),
+    Video: {
+      regex: /<Video/,
+      component: dynamic(() => import("@/components/Video")),
     },
     Codepen: {
       regex: /<Codepen/,
