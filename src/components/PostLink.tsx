@@ -2,7 +2,8 @@ import { MDXFrontMatter } from "*.mdx"
 import formatDate from "@/utils/formatDate"
 import widont from "@/utils/widont"
 import { ReactElement } from "react"
-import { Atoms, PlainLink, Small } from "./designSystem"
+import Atoms from "@/components/designSystem/atoms"
+import PlainLink from "@/components/PlainLink"
 
 interface Props {
   post: MDXFrontMatter
@@ -16,9 +17,7 @@ const PostLink = ({ post }: Props): ReactElement<HTMLDivElement> => {
       <div className="post-link">
         <PlainLink href={`blog/${post.slug}`}>
           <div>{widont(post.title)}</div>
-          <time>
-            <Small display="block">{date}</Small>
-          </time>
+          <time className="small">{date}</time>
         </PlainLink>
       </div>
       <style jsx>{`

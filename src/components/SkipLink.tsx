@@ -1,4 +1,5 @@
-import { Atoms, Link } from "./designSystem"
+import Atoms from "@/components/designSystem/atoms"
+import Link from "@/components/Link"
 
 const SkipLink = () => (
   <>

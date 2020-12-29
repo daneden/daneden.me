@@ -1,5 +1,6 @@
 import Layout from "@/components/Layout"
-import { Atoms, Link, P } from "@/designSystem"
+import Atoms from "@/components/designSystem/atoms"
+import Link from "@/components/Link"
 
 export default function FourOhFourPage() {
   return (
@@ -13,11 +14,11 @@ export default function FourOhFourPage() {
         `}
       </style>
 
-      <P>
+      <p>
         The page you tried to access cannot be found. Maybe try going{" "}
         <Link href="/">home</Link> or read something from{" "}
         <Link href="/blog">the blog</Link>.
-      </P>
+      </p>
     </Layout>
   )
 }

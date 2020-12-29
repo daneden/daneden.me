@@ -1,5 +1,5 @@
 import { ReactNode } from "react"
-import { Atoms } from "./designSystem"
+import Atoms from "./designSystem/atoms"
 
 interface WrapperProps {
   id?: string

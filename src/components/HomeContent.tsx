@@ -1,6 +1,5 @@
 import { ReactElement } from "react"
-import Breakout from "./Breakout"
-import { Atoms } from "./designSystem"
+import Atoms from "./designSystem/atoms"
 import Image from "next/image"
 
 export default function HomeContent({

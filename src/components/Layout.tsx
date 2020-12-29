@@ -3,8 +3,7 @@ import formatDate from "@/utils/formatDate"
 import widont from "@/utils/widont"
 import { ReactNode } from "react"
 import siteConfig from "../data/siteconfig.json"
-import { Atoms, H1, P, Small } from "./designSystem"
-import DesignSystemProvider from "./designSystem/DesignSystemProvider"
+import Atoms from "@/components/designSystem/atoms"
 import Footer from "./Footer"
 import GlobalStyles from "./GlobalStyles"
 import Header from "./Header"
@@ -42,13 +41,11 @@ const Content = ({ frontMatter, children }: LayoutProps) => {
       <Wrapper>
         {!isRoot && (
           <header>
-            <H1>{widont(title)}</H1>
+            <h1>{widont(title)}</h1>
             {date && (
-              <P>
-                <time>
-                  <Small>Published {formattedDate}</Small>
-                </time>
-              </P>
+              <p>
+                <time className="small">Published {formattedDate}</time>
+              </p>
             )}
           </header>
         )}
@@ -73,9 +70,9 @@ const Content = ({ frontMatter, children }: LayoutProps) => {
 
 export default function Layout({ children, frontMatter }: LayoutProps) {
   return (
-    <DesignSystemProvider>
+    <>
       <Content frontMatter={frontMatter}>{children}</Content>
       <GlobalStyles />
-    </DesignSystemProvider>
+    </>
   )
 }

@@ -1,7 +1,7 @@
 import { MDXFrontMatter } from "*.mdx"
 import Layout from "@/components/Layout"
 import PostLink from "@/components/PostLink"
-import { PlainList } from "@/designSystem"
+import PlainList from "@/components/PlainList"
 import blogPosts from "@/utils/mdxUtils"
 import { ReactElement } from "react"
 export default function Blog({

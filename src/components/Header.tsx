@@ -2,8 +2,8 @@ import * as Fathom from "fathom-client"
 import { useRouter } from "next/router"
 import React from "react"
 import Atoms from "./designSystem/atoms"
-import PlainLink from "./designSystem/PlainLink"
-import PlainList from "./designSystem/PlainList"
+import PlainLink from "./PlainLink"
+import PlainList from "./PlainList"
 
 interface HeaderProps {
   siteTitle: string

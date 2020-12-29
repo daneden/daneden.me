@@ -1,4 +1,5 @@
-import { Atoms, PlainLink, Small } from "@/designSystem"
+import Atoms from "@/components/designSystem/atoms"
+import PlainLink from "@/components/PlainLink"
 import Image from "./Image"
 
 interface BookCover {
@@ -81,18 +82,15 @@ const Book = ({
                 />
               )}
             </p>
-            <p>
-              <Small display="block">{author}</Small>
-            </p>
+            <p className="small">{author}</p>
             {quote && (
               <p
+                className="small"
                 style={{
                   paddingTop: Atoms.spacing.xxsmall,
                 }}
               >
-                <Small display="block" receded={false}>
-                  <em>‘{quote}’</em>
-                </Small>
+                <em>‘{quote}’</em>
               </p>
             )}
           </div>

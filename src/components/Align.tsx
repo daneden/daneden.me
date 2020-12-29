@@ -1,4 +1,4 @@
-import Atoms from "./atoms"
+import Atoms from "./designSystem/atoms"
 
 const Subject = ({
   children,

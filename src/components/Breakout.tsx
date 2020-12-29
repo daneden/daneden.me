@@ -1,5 +1,5 @@
 import { ReactNode, useEffect } from "react"
-import { Atoms } from "./designSystem"
+import Atoms from "@/components/designSystem/atoms"
 
 interface Props {
   children: ReactNode

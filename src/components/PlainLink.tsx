@@ -1,4 +1,3 @@
-import React from "react"
 import Link, { LinkProps } from "./Link"
 
 type PlainLinkProps = Omit<LinkProps, "underline">

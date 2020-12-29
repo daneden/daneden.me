@@ -1,13 +1,12 @@
-import Markdown from "@/utils/Markdown"
-import React from "react"
-import { Align, Caption, Figure } from "./designSystem"
-import { FigureProps } from "./designSystem/Figure"
+import React, { ReactNode } from "react"
+import Align from "@/components/Align"
 import NextImage from "next/image"
 
-interface ImageProps extends Omit<FigureProps, "children"> {
+interface ImageProps {
   align?: "left" | "right"
   alt?: string
-  caption?: string
+  caption?: ReactNode
+  className?: string
   defaultSize?: string
   invertInDarkMode?: boolean
   src: string
@@ -65,14 +64,10 @@ const Image = ({
 
   return (
     <Wrapper>
-      <Figure className={className}>
+      <figure className={className}>
         {img}
-        {caption && (
-          <Caption>
-            <Markdown>{caption}</Markdown>
-          </Caption>
-        )}
-      </Figure>
+        {caption && <figcaption>{caption}</figcaption>}
+      </figure>
     </Wrapper>
   )
 }

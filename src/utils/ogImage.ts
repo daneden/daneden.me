@@ -1,5 +1,5 @@
 import { MDXFrontMatter } from "*.mdx"
-import { Atoms } from "@/designSystem"
+import Atoms from "@/components/designSystem/atoms"
 import widont from "@/utils/widont"
 import { createCanvas, registerFont } from "canvas"
 import { existsSync, promises as fs } from "fs"

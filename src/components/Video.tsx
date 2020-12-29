@@ -1,6 +1,3 @@
-import Markdown from "@/utils/Markdown"
-import { Caption, Figure } from "./designSystem"
-
 interface Props {
   autoPlay: boolean
   caption?: string
@@ -19,7 +16,7 @@ const Video = ({
   preload = true,
 }: Props) => {
   return (
-    <Figure>
+    <figure>
       {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
       <video
         autoPlay={autoPlay}
@@ -33,12 +30,8 @@ const Video = ({
         />
       </video>
 
-      {caption && (
-        <Caption>
-          <Markdown>{caption}</Markdown>
-        </Caption>
-      )}
-    </Figure>
+      {caption && <figcaption>{caption}</figcaption>}
+    </figure>
   )
 }
 

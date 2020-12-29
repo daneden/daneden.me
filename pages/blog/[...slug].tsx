@@ -1,6 +1,5 @@
 import { MDXFile, MDXFrontMatter } from "*.mdx"
 import Layout from "@/components/Layout"
-import { components as defaultComponents } from "@/designSystem/DesignSystemProvider"
 import allBlogPosts from "@/utils/mdxUtils"
 import { generateOgImages } from "@/utils/ogImage"
 import smartypants from "@ngsctt/remark-smartypants"
@@ -15,6 +14,13 @@ import slug from "rehype-slug"
 import abbr from "remark-abbr"
 import math from "remark-math"
 import toc from "remark-toc"
+import Image from "@/components/Image"
+import Link from "@/components/Link"
+
+const defaultComponents = {
+  a: Link,
+  Image,
+}
 
 // OpaqueComponentType is basically a generic that will be used for dynamically
 // importing components in MDX files.

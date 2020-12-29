@@ -6,13 +6,13 @@ categories:
     - code
 ---
 
-<Note>
+<aside>
     This is the first in a short series of posts explaining how to build a React
     application that simulates tossing a coin over and over again. Read{" "}
-    <Link href="/blog/2019/toss-a-coin-with-react-part-2/">part two</Link> and{" "}
-    <Link href="/blog/2020/toss-a-coin-with-react-part-3/">part three</Link>{" "}
-    when you’re done here!
-</Note>
+    <a href="/blog/2019/toss-a-coin-with-react-part-2/">part two</a> and{" "}
+    <a href="/blog/2020/toss-a-coin-with-react-part-3/">part three</a> when
+    you’re done here!
+</aside>
 
 I've never written a React tutorial before—there are plenty of people more
 qualified than me to do so—but I was recently reading
@@ -105,10 +105,10 @@ node_modules public src ↳ App.css ↳ App.js ↳ App.test.js ↳ index.css ↳
 Open up `src/App.js`. We’re going to delete most of the code already inside it,
 but feel free to copy-and-paste if it's easier.
 
-<Note>
+<aside>
     If the code syntax in this file is new to you, don’t worry: React introduces
     a few new concepts, but we’ll walk through it together.
-</Note>
+</aside>
 
 We'll delete some of the import statements at the top and most of the code in
 the `App` function. Here's what your `App.js` should look like:
@@ -146,15 +146,14 @@ also delete those files:
   yarn.lock
 ```
 
-<Note>
+<aside>
     You can see the running version of the app at this stage{" "}
-    <Link href="https://coin-toss-jkf64vttf.now.sh">here</Link>, and the source
-    code{" "}
-    <Link href="https://github.com/daneden/react-coin-toss/tree/5ed4d9e972c4c73a9dcc6f79569c37590fcdb526">
+    <a href="https://coin-toss-jkf64vttf.now.sh">here</a>, and the source code{" "}
+    <a href="https://github.com/daneden/react-coin-toss/tree/5ed4d9e972c4c73a9dcc6f79569c37590fcdb526">
         here
-    </Link>
+    </a>
     .
-</Note>
+</aside>
 
 ---
 
@@ -205,11 +204,11 @@ function App() {
 }
 ```
 
-<Note>
-    Note that here I’ve excluded the <Code>import</Code> and <Code>export</Code>{" "}
-    lines just to focus on the <Code>App</Code> function; be sure not to delete
+<aside>
+    Note that here I’ve excluded the <code>import</code> and <code>export</code>{" "}
+    lines just to focus on the <code>App</code> function; be sure not to delete
     them from your code.
-</Note>
+</aside>
 
 Save your changes and check the web browser: we now have a button, but clicking
 it doesn't do anything yet. Let's change that:
@@ -356,15 +355,14 @@ interwoven 0's and 1's.
 If you've made it this far, you should feel proud! We've made a React app that
 responds to user input and dynamically updates.
 
-<Note>
+<aside>
     You can see the running version of the app at this stage{" "}
-    <Link href="https://coin-toss-1fikjgmoj.now.sh/">here</Link>, and the source
-    code{" "}
-    <Link href="https://github.com/daneden/react-coin-toss/tree/549b8db01a10ebaff0766364f3cf48735aa4da21">
+    <a href="https://coin-toss-1fikjgmoj.now.sh/">here</a>, and the source code{" "}
+    <a href="https://github.com/daneden/react-coin-toss/tree/549b8db01a10ebaff0766364f3cf48735aa4da21">
         here
-    </Link>
+    </a>
     .
-</Note>
+</aside>
 
 ---
 
