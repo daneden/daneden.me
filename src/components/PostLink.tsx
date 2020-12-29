@@ -17,7 +17,7 @@ const PostLink = ({ post }: Props): ReactElement<HTMLDivElement> => {
       <div className="post-link">
         <PlainLink href={`blog/${post.slug}`}>
           <div>{widont(post.title)}</div>
-          <time className="small">{date}</time>
+          <time className="small meta">{date}</time>
         </PlainLink>
       </div>
       <style jsx>{`

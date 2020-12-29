@@ -222,7 +222,7 @@ const GlobalStyles = () => (
         .meta,
         .receded,
         figcaption {
-          color: var(--meta);
+          color: var(--meta-color);
         }
 
         table {
