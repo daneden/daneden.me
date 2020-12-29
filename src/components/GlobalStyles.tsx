@@ -212,6 +212,7 @@ const GlobalStyles = () => (
         }
 
         small,
+        .small,
         figcaption {
           font-size: ${Atoms.font.size.small};
           letter-spacing: 0.025em;
@@ -247,6 +248,10 @@ const GlobalStyles = () => (
           color: inherit;
           margin-bottom: ${Atoms.spacing.medium};
           padding: ${Atoms.spacing.small};
+        }
+
+        .zm {
+          margin: 0;
         }
       `}
     </style>

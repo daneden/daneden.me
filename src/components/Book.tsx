@@ -28,6 +28,42 @@ const Book = ({
 
   return (
     <>
+      <PlainLink href={url}>
+        {" "}
+        <div className="book-container">
+          <Image
+            alt={`The book cover for “${title}” by ${author}`}
+            height={cover.height}
+            sizes={Atoms.spacing.xlarge}
+            src={cover.src}
+            width={cover.width}
+          />
+          <div>
+            <small className="badge">{type}</small>
+            <p className="zm">
+              {title}&nbsp;
+              {isExternalLink && (
+                <img
+                  alt="External link icon"
+                  className="external-link-icon"
+                  src="/images/outbound.svg"
+                />
+              )}
+            </p>
+            <p className="small zm">{author}</p>
+            {quote && (
+              <p
+                className="small zm"
+                style={{
+                  paddingTop: Atoms.spacing.xxsmall,
+                }}
+              >
+                <em>‘{quote}’</em>
+              </p>
+            )}
+          </div>
+        </div>
+      </PlainLink>
       <style jsx>{`
         .book-container {
           align-items: start;
@@ -60,42 +96,6 @@ const Book = ({
           letter-spacing: 0.0125em;
         }
       `}</style>
-      <PlainLink href={url}>
-        {" "}
-        <div className="book-container">
-          <Image
-            alt={`The book cover for “${title}” by ${author}`}
-            height={cover.height}
-            sizes={Atoms.spacing.xlarge}
-            src={cover.src}
-            width={cover.width}
-          />
-          <div>
-            <small className="badge">{type}</small>
-            <p>
-              {title}&nbsp;
-              {isExternalLink && (
-                <img
-                  alt="External link icon"
-                  className="external-link-icon"
-                  src="/images/outbound.svg"
-                />
-              )}
-            </p>
-            <p className="small">{author}</p>
-            {quote && (
-              <p
-                className="small"
-                style={{
-                  paddingTop: Atoms.spacing.xxsmall,
-                }}
-              >
-                <em>‘{quote}’</em>
-              </p>
-            )}
-          </div>
-        </div>
-      </PlainLink>
     </>
   )
 }
