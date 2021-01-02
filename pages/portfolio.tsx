@@ -169,17 +169,7 @@ export default function PortfolioPage() {
         simple notepad. It&#39;s useful for avoiding bad browsing habits and
         jotting down ideas or errands.
       </p>
-      <h3>Gifme</h3>
-      <p>
-        <Link href="https://gif.daneden.me">Gifme</Link> is a personal
-        clone/rip-off/emulation of Giphy, the popular gif search engine. Tired
-        of Giphy&#39;s suboptimal Slack integration, I built Gifme as a web app
-        to search my own massive gif collection. View the{" "}
-        <Link href="https://github.com/daneden/de-gifs-client">
-          source on GitHub
-        </Link>{" "}
-        or <Link href="https://gif.daneden.me">visit the site</Link>.
-      </p>
+
       <h3>Toast</h3>
       <p>
         <Link href="http://daneden.github.io/Toast">Toast</Link> is a Sass/CSS
