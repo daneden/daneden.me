@@ -40,13 +40,6 @@ achieve this, I have a
 [function](https://github.com/daneden/daneden.me/blob/main/src/utils/ogImage.ts)
 that runs at build time to generate OG images using `node-canvas`.
 
-### Category Pages
-
-Next.js allows dynamic path static generation via `getStaticPaths`. I'm using
-this in
-[`[category].tsx`](https://github.com/daneden/daneden.me/blob/main/pages/blog/%5Bcategory%5D.tsx)
-to generate pages for blog post categories.
-
 ### `mdxUtils.ts`
 
 [`mdxUtils.ts`](https://github.com/daneden/daneden.me/blob/main/src/utils/mdxUtils.ts)
