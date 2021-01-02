@@ -107,14 +107,26 @@ export default function PortfolioPage() {
         the jam on top. I routinely embark on new side projects to explore
         coding opportunities and design styles outside of my employment.
       </p>
+
+      <h3>Eventually</h3>
+      <p>
+        Eventually is an iOS app I designed and built, like all my projects, to
+        solve a need of my own. It shows you significant events coming up in the
+        next week, month, and year. If you’ve ever been caught off guard by an
+        unexpected birthday, or need to remember you’ve got that vacation to
+        look forward to, Eventually is for you.{" "}
+        <Link href="https://eventually.app">Visit the microsite</Link> to learn
+        more.
+      </p>
+
       <h3>Zeitgeist</h3>
       <p>
-        Zeitgeist is a Mac menu bar app that lets you see the status of your
+        Zeitgeist is an iOS and Mac app that lets you see the status of your
         recent <Link href="https://vercel.com/home">Vercel</Link> deployments.
         It updates in (almost) real-time, giving you at-a-glance peace of mind
         about your web app deployments.{" "}
         <Link href="https://zeitgeist.daneden.me">Visit the microsite</Link> for
-        details and to download for free.
+        details and to download.
       </p>
       <h3>Lucid Underground</h3>
       <p>
