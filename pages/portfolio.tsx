@@ -166,8 +166,8 @@ export default function PortfolioPage() {
           Lucid
         </Link>{" "}
         is a Google Chrome extension that replaces the New Tab page with a
-        simple notepad. It&#39;s useful for avoiding bad browsing habits and
-        jotting down ideas or errands.
+        simple notepad. It’s useful for avoiding bad browsing habits and jotting
+        down ideas or errands.
       </p>
 
       <h3>Toast</h3>
