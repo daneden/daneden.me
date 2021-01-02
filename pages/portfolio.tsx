@@ -41,13 +41,13 @@ export default function PortfolioPage() {
       </p>
       <p>
         In late 2019, I relocated from Menlo Park, California to London, England
-        to help support the Ads organisation and scale our design system
-        team&#39;s portfolio.
+        to help support the Ads organisation and scale our design system team’s
+        portfolio.
       </p>
       <p>
         Before working on the Ads and Business Design System I worked as a
-        Product Designer on Facebook&#39;s Brand Measurement team, devoting my
-        time to creating new ways to measure and report ad effectiveness as it
+        Product Designer on Facebook’s Brand Measurement team, devoting my time
+        to creating new ways to measure and report ad effectiveness as it
         pertains to brand advertising.
       </p>
       <p>
