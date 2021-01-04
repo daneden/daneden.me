@@ -188,6 +188,8 @@ const GlobalStyles = () => (
 
         pre :global(code) {
           font-family: inherit;
+          box-shadow: none;
+          background-color: transparent;
         }
 
         figure {
