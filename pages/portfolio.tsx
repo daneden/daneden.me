@@ -193,7 +193,9 @@ export default function PortfolioPage() {
         open-source (S)CSS framework and design system adopted by several
         product teams to speed up their work.
       </p>
+
       <hr />
+
       <h2>Side Projects</h2>
       <p>
         If the work I do for money is my bread and butter, my side projects are
@@ -243,44 +245,13 @@ export default function PortfolioPage() {
         down ideas or errands.
       </p>
 
-      <h3>Toast</h3>
-      <p>
-        <Link href="http://daneden.github.io/Toast">Toast</Link> is a Sass/CSS
-        grid system, designed to be highly customisable, extremely verbose, and
-        simple-to-use out of the box. It uses no floats, no <code>first</code>{" "}
-        or <code>last</code> classes, and allows nesting.{" "}
-        <Link href="http://daneden.github.io/Toast">Visit the site</Link>
-      </p>
-      <h3>Digital Ruin</h3>
-      <p>
-        <Link href="http://digitalruin.tumblr.com/">Digital Ruin</Link> is—for
-        lack of a more fitting description—an art project dedicated to giving
-        form to both real and fictional digital exchanges, with an emphasis on
-        difficult interactions. It’s bleak, and hard to describe.{" "}
-        <Link href="http://digitalruin.tumblr.com/">Visit the site</Link>.
-      </p>
-      <h3>Just My Type</h3>
-      <p>
-        <Link href="http://justmytype.co">Just My Type</Link> is a library of
-        font pairings from Adobe Typekit and H&amp;FJ’s Cloud.Typography.
-        Created out of a desire for a place to keep track of my personal
-        favorite web font pairings, Just My Type has grown to become a popular
-        typography resource for many web designers.
-        <Link href="http://justmytype.co">Visit the site</Link>.
-      </p>
-      <h3>Onword</h3>
-      <p>
-        <Link href="http://onword.co">Onword</Link> is a simple web application
-        for writing documents. It was designed and developed in just 10 days,
-        and introduced me to the world of Ruby.{" "}
-        <Link href="http://onword.co">Visit the site</Link>.
-      </p>
       <h3>Brills</h3>
       <p>
         <Link href="http://brills.me">Brills</Link> is a simple money management
         web application built for budgeting quickly.{" "}
         <Link href="http://brills.me">Visit the site</Link>.
       </p>
+
       <h3>Animate.css</h3>
       <p>
         <Link href="http://animate.style/">Animate.css</Link> is a cross-browser
@@ -290,6 +261,7 @@ export default function PortfolioPage() {
         open source community.{" "}
         <Link href="http://animate.style/">Visit the site</Link>.
       </p>
+
       <style jsx>{`
         section {
           padding-top: 3rem;
