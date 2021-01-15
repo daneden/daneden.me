@@ -1,9 +1,101 @@
 import Layout from "@/components/Layout"
 import Link from "@/components/Link"
+import DeviceFrame from "@/components/DeviceFrame"
+import LightswitchImage from "@/components/LightSwitchImage"
+import Align from "@/components/Align"
+import atoms from "@/components/designSystem/atoms"
 
 export default function PortfolioPage() {
   return (
     <Layout frontMatter={{ title: "Portfolio" }}>
+      <p>
+        From independently designing and developing iOS apps, to helping scale
+        design systems to support thousands of designers and engineers building
+        products for Facebook’s billions of users and advertisers, I’ve spent
+        years designing and building products at all kinds of scale. Below
+        you’ll find a selection of my favourite projects and experiences.
+      </p>
+      <section>
+        <header className="portfolio-header">
+          <h3 className="portfolio-title">Solstice</h3>
+          <small className="meta">Design &amp; Development</small>
+        </header>
+        <p>
+          <DeviceFrame>
+            <LightswitchImage
+              height={2532}
+              srcDark="/uploads/portfolio/solstice/dark.png"
+              srcLight="/uploads/portfolio/solstice/light.png"
+              width={1170}
+            />
+          </DeviceFrame>
+        </p>
+        <p>
+          Solstice is an iOS app, independently designed and built by myself,
+          that shows you the amount of daylight today compared to yesterday,
+          along with information about the next and previous solstice.
+        </p>
+        <p>
+          <Link href="https://solstice.daneden.me">Visit the microsite</Link> to
+          learn more and download for free.
+        </p>
+      </section>
+
+      <section>
+        <header className="portfolio-header">
+          <h3 className="portfolio-title">Eventually</h3>
+          <small className="meta">Design &amp; Development</small>
+        </header>
+        <p>
+          <DeviceFrame>
+            <LightswitchImage
+              height={2532}
+              srcDark="/uploads/portfolio/eventually/dark.png"
+              srcLight="/uploads/portfolio/eventually/light.png"
+              width={1170}
+            />
+          </DeviceFrame>
+        </p>
+        <p>
+          Eventually that shows you significant events coming up in the next
+          week, month, and year. If you’ve ever been caught off guard by an
+          unexpected birthday, or need to remember you’ve got that vacation to
+          look forward to, Eventually is for you.
+        </p>
+        <p>
+          <Link href="https://eventually.app">Visit the microsite</Link> to
+          learn more.
+        </p>
+      </section>
+
+      <section>
+        <header className="portfolio-header">
+          <h3 className="portfolio-title">Zeitgeist</h3>
+          <small className="meta">Design &amp; Development</small>
+        </header>
+        <p>
+          <DeviceFrame>
+            <LightswitchImage
+              height={2532}
+              srcDark="/uploads/portfolio/zeitgeist/dark.png"
+              srcLight="/uploads/portfolio/zeitgeist/light.png"
+              width={1170}
+            />
+          </DeviceFrame>
+        </p>
+        <p>
+          Zeitgeist is an iOS and Mac app that lets you see the status of your
+          recent <Link href="https://vercel.com/home">Vercel</Link> deployments.
+          It updates in (almost) real-time, giving you at-a-glance peace of mind
+          about your web app deployments.
+        </p>
+        <p>
+          <Link href="https://zeitgeist.daneden.me">Visit the microsite</Link>{" "}
+          for details and to download.
+        </p>
+      </section>
+
+      <hr />
       <h2>Facebook</h2>
       <p>
         I’m currently working as a Design Manager supporting Facebook’s Commerce
@@ -101,6 +193,7 @@ export default function PortfolioPage() {
         open-source (S)CSS framework and design system adopted by several
         product teams to speed up their work.
       </p>
+      <hr />
       <h2>Side Projects</h2>
       <p>
         If the work I do for money is my bread and butter, my side projects are
@@ -108,26 +201,6 @@ export default function PortfolioPage() {
         coding opportunities and design styles outside of my employment.
       </p>
 
-      <h3>Eventually</h3>
-      <p>
-        Eventually is an iOS app I designed and built, like all my projects, to
-        solve a need of my own. It shows you significant events coming up in the
-        next week, month, and year. If you’ve ever been caught off guard by an
-        unexpected birthday, or need to remember you’ve got that vacation to
-        look forward to, Eventually is for you.{" "}
-        <Link href="https://eventually.app">Visit the microsite</Link> to learn
-        more.
-      </p>
-
-      <h3>Zeitgeist</h3>
-      <p>
-        Zeitgeist is an iOS and Mac app that lets you see the status of your
-        recent <Link href="https://vercel.com/home">Vercel</Link> deployments.
-        It updates in (almost) real-time, giving you at-a-glance peace of mind
-        about your web app deployments.{" "}
-        <Link href="https://zeitgeist.daneden.me">Visit the microsite</Link> for
-        details and to download.
-      </p>
       <h3>Lucid Underground</h3>
       <p>
         Lucid Underground is a web app and companion iOS and watchOS app that
@@ -217,6 +290,24 @@ export default function PortfolioPage() {
         open source community.{" "}
         <Link href="http://animate.style/">Visit the site</Link>.
       </p>
+      <style jsx>{`
+        section {
+          padding-top: 3rem;
+          padding-bottom: 3rem;
+        }
+
+        .portfolio-header {
+          text-align: center;
+          margin-bottom: 1.5rem;
+        }
+
+        .portfolio-title {
+          line-height: 1;
+          font-family: ${atoms.font.family.display};
+          font-style: normal;
+          font-size: ${atoms.font.size.h1};
+        }
+      `}</style>
     </Layout>
   )
 }
