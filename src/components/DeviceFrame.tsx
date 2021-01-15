@@ -40,7 +40,7 @@ export default function DeviceFrame({ children }: { children: ReactNode }) {
 
         .device::after {
           content: "";
-          height: calc(var(--inset-width) * 1.75);
+          height: calc(var(--inset-width) * 1.35);
           position: absolute;
           width: 45%;
           left: 50%;
