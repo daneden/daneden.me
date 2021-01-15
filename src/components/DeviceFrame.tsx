@@ -30,7 +30,6 @@ export default function DeviceFrame({ children }: { children: ReactNode }) {
             /* Inner highlight */ inset 0 0 var(--inset-width)
               calc(var(--inset-width) * 0.25) rgba(128, 128, 128, 0.2),
             /* Drop shadow */ 0 1.5rem 3rem rgba(0, 0, 0, 0.1);
-          will-change: margin, transform;
         }
 
         .device :global(img) {
