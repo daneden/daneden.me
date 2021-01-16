@@ -15,7 +15,7 @@ import abbr from "remark-abbr"
 import math from "remark-math"
 import toc from "remark-toc"
 import Image from "@/components/Image"
-import Link from "@/components/Link"
+import Link from "next/link"
 
 const defaultComponents = {
   a: Link,

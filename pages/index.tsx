@@ -1,7 +1,7 @@
 import { Canvas } from "@/components/Canvas"
 import HomeContent from "@/components/HomeContent"
 import Layout from "@/components/Layout"
-import Link from "@/components/Link"
+import Link from "next/link"
 
 export default function HomePage() {
   return (

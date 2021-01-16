@@ -1,5 +1,5 @@
 import Atoms from "@/components/designSystem/atoms"
-import Link from "@/components/Link"
+import Link from "next/link"
 
 const SkipLink = () => (
   <>

@@ -1,9 +1,25 @@
-import Link, { LinkProps } from "./Link"
+import Link, { LinkProps } from "next/link"
 
-type PlainLinkProps = Omit<LinkProps, "underline">
+type Props = React.PropsWithChildren<LinkProps> & {
+  className?: string
+  onClick?: () => void
+}
 
-const PlainLink = (props: PlainLinkProps) => (
-  <Link underline={false} {...props} />
+const PlainLink = ({ children, className, href, onClick }: Props) => (
+  <>
+    <span className={`plainlink-wrapper ${className}`}>
+      <Link href={href} passHref={true}>
+        <a href={String(href)} onClick={onClick}>
+          {children}
+        </a>
+      </Link>
+    </span>
+    <style jsx>{`
+      .plainlink-wrapper a {
+        text-decoration: none;
+      }
+    `}</style>
+  </>
 )
 
 export default PlainLink

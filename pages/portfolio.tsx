@@ -1,5 +1,5 @@
 import Layout from "@/components/Layout"
-import Link from "@/components/Link"
+import Link from "next/link"
 import DeviceFrame from "@/components/DeviceFrame"
 import LightswitchImage from "@/components/LightSwitchImage"
 import Align from "@/components/Align"
