@@ -28,7 +28,6 @@
     "@types/react-dom": "^17.0.0",
     "babel-loader": "^8.2.2",
     "canvas": "^2.6.1",
-    "fathom-client": "^3.0.0",
     "file-loader": "^6.2.0",
     "fs-readdir-recursive": "^1.1.0",
     "glsl-shader-loader": "^0.1.6",
