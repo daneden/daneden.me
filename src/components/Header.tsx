@@ -1,4 +1,3 @@
-import * as Fathom from "fathom-client"
 import { useRouter } from "next/router"
 import React from "react"
 import Atoms from "./designSystem/atoms"
@@ -36,12 +35,7 @@ const Header = ({ siteTitle }: HeaderProps) => {
           <PlainList>
             {links.map(({ to, label }) => (
               <li key={to}>
-                <PlainLink
-                  href={to}
-                  onClick={() => {
-                    Fathom.trackGoal("QSDYWCAL", 0)
-                  }}
-                >
+                <PlainLink href={to}>
                   {label}
                   {location.includes(to) ? " ☚" : ""}
                 </PlainLink>
