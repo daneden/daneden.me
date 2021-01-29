@@ -12,7 +12,7 @@ export const Canvas = () => {
   const [mounted, setMounted] = useState(false)
   const teardown = useRef<() => void>()
   const [scaleAmount, setScaleAmount] = useState(1)
-  const rotateAmount = 12
+  const rotateAmount = 10
 
   const canvasRef = useCallback((node) => {
     if (node !== null) {
