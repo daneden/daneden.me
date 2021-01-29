@@ -95,9 +95,9 @@ function init(canvas: HTMLCanvasElement) {
 
   // Set the resolution uniform and create a connection to the time uniform
   const resolution = [canvas.clientWidth, canvas.clientHeight]
-  const resolutionPosition = gl.getUniformLocation(program, "u_resolution")
-  const timePosition = gl.getUniformLocation(program, "u_time")
-  const shouldInvertPosition = gl.getUniformLocation(program, "u_shouldInvert")
+  const resolutionPosition = gl.getUniformLocation(program, "resolution")
+  const timePosition = gl.getUniformLocation(program, "time")
+  const shouldInvertPosition = gl.getUniformLocation(program, "shouldInvert")
   const mql = window.matchMedia("(prefers-color-scheme: dark)")
   let shouldInvert = !mql.matches
 
