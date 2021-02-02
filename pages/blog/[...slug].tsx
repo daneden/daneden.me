@@ -16,6 +16,7 @@ import math from "remark-math"
 import toc from "remark-toc"
 import Image from "@/components/Image"
 import Link from "next/link"
+import { MdxRemote } from "next-mdx-remote/types"
 
 const defaultComponents = {
   a: Link,
@@ -73,7 +74,7 @@ function buildComponentMap(source: string) {
 }
 
 interface PostPageProps {
-  source: string
+  source: MdxRemote.Source
   frontMatter: MDXFrontMatter
   extraComponents: string[]
 }
