@@ -6971,10 +6971,10 @@ remark-stringify@^8.1.1:
     unherit "^1.0.4"
     xtend "^4.0.1"
 
-remark-toc@^7.0.0:
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/remark-toc/-/remark-toc-7.0.0.tgz#d0f455b63fed00cccfe08050d75c2abef4508e38"
-  integrity sha512-NyW/W7ttlj003eFXeIgq7eV2bffTQuO48PyC9zbh/RhTA/QaHJOAgJ4qvaRwKAVMWSBIh4W/5nZFWQ4rceV3fw==
+remark-toc@^7.1.0:
+  version "7.1.0"
+  resolved "https://registry.yarnpkg.com/remark-toc/-/remark-toc-7.1.0.tgz#fd3fafe5536a94f486f5da470bd0410f7011bce8"
+  integrity sha512-ixSkphOb+RDBePrbx9j3BCPBuoc7SSp2COK2wTGseRr1Q5bWBCYOM0vO8EewbMa9+aVuzndZSRcJcvO/1zv5bA==
   dependencies:
     "@types/unist" "^2.0.3"
     mdast-util-toc "^5.0.0"
