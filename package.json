@@ -33,7 +33,7 @@
     "glsl-shader-loader": "^0.1.6",
     "gray-matter": "^4.0.2",
     "mdx-prism": "^0.3.1",
-    "next": "^10.0.5",
+    "next": "^10.0.6",
     "next-mdx-remote": "^2.1.1",
     "next-sitemap": "^1.5.2",
     "prismjs": "^1.23.0",
