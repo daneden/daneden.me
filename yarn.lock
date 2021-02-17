@@ -5603,10 +5603,10 @@ neo-async@^2.5.0, neo-async@^2.6.1, neo-async@^2.6.2:
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.2.tgz#b4aafb93e3aeb2d8174ca53cf163ab7d7308305f"
   integrity sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==
 
-next-mdx-remote@^2.1.1:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/next-mdx-remote/-/next-mdx-remote-2.1.1.tgz#5a5152aa642ca94197ce7e0ea57d78ea4af111b8"
-  integrity sha512-GHskKRaMISTVyliXsexohgpNH1sDBDhON0JpXJFeWMcXn+2XPb2aHXK9OUEMb8vHkEq3cEsYIZ+t7lWHm8Eu6A==
+next-mdx-remote@^2.1.3:
+  version "2.1.3"
+  resolved "https://registry.yarnpkg.com/next-mdx-remote/-/next-mdx-remote-2.1.3.tgz#a427d690691af081384770b464d3803350ada41f"
+  integrity sha512-wDI1KepnqG3FDu1wQJAJGGXAoyasjzbehcIhC+felDxGEbEEG8tYOkvMttXvMs4zaXPG4NeWnx0Ev0KdF0ZX1w==
   dependencies:
     "@babel/core" "^7.12.10"
     "@babel/preset-env" "^7.12.11"
