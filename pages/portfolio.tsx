@@ -57,10 +57,10 @@ export default function PortfolioPage() {
           </DeviceFrame>
         </p>
         <p>
-          Eventually that shows you significant events coming up in the next
-          week, month, and year. If you’ve ever been caught off guard by an
-          unexpected birthday, or need to remember you’ve got that vacation to
-          look forward to, Eventually is for you.
+          Eventually is an iOS app that shows you significant events coming up
+          in the next week, month, and year. If you’ve ever been caught off
+          guard by an unexpected birthday, or need to remember you’ve got that
+          vacation to look forward to, Eventually is for you.
         </p>
         <p>
           <Link href="https://eventually.app">Visit the microsite</Link> to
