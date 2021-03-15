@@ -1,11 +1,26 @@
 import Layout from "@/components/Layout"
 import Atoms from "@/designSystem/atoms"
 import { GetStaticProps } from "next"
-import bookDataSource from "@/data/books.json"
 import Book, { BookData } from "@/components/Book"
 import widont from "@/utils/widont"
 import React from "react"
 import Breakout from "@/components/Breakout"
+
+interface AirtableRecord {
+  fields: BookData & {
+    cover: Array<{
+      thumbnails: {
+        large: {
+          url: string
+          width: number
+          height: number
+        }
+      }
+    }>
+  }
+}
+
+const AIRTABLE_URL = "https://api.airtable.com/v0/appvuN9NMJEcGKY7Z/entries"
 
 // This function is used to help sort titles excluding leading "the/a"
 const strippedTitle = (str: string): string =>
@@ -44,6 +59,29 @@ export default function LibraryPage({ entries }: { entries: BookData[] }) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
+  const bookDataSource = (await fetch(AIRTABLE_URL, {
+    headers: {
+      Authorization: `Bearer ${process.env.AIRTABLE_API_KEY}`,
+    },
+  })
+    .then((d) => d.json())
+    .then((d) => d.records)
+    .then((d) =>
+      d.map((airtableRecord: AirtableRecord) => {
+        const { fields } = airtableRecord
+        const cover = {
+          src: fields.cover[0].thumbnails.large.url,
+          width: fields.cover[0].thumbnails.large.width,
+          height: fields.cover[0].thumbnails.large.height,
+        }
+
+        return {
+          ...fields,
+          cover,
+        }
+      })
+    )) as BookData[]
+
   const entries = bookDataSource
     .map((book) => {
       return {
@@ -54,7 +92,7 @@ export const getStaticProps: GetStaticProps = async () => {
     })
     .sort((a, b) =>
       strippedTitle(a.title).localeCompare(strippedTitle(b.title))
-    ) as BookData[]
+    )
 
   return {
     props: {

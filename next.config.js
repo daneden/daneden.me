@@ -6,6 +6,9 @@ module.exports = {
     locales: ["en-GB"],
     defaultLocale: "en-GB",
   },
+  images: {
+    domains: ["dl.airtable.com"],
+  },
   webpack: (config, { isServer }) => {
     if (!isServer) {
       config.node = {
