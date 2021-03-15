@@ -13,12 +13,12 @@ module.exports = {
   async redirects() {
     return [
       {
-        source: "/animate(.*)",
+        source: "/animate",
         permanent: true,
         destination: "https://animate.style/",
       },
       {
-        source: "/baseline(.*)",
+        source: "/baseline",
         permanent: true,
         destination: "https://github.com/daneden/Baseline.js",
       },
@@ -28,7 +28,7 @@ module.exports = {
         destination: "/playlist$1",
       },
       {
-        source: "/toast(.*)",
+        source: "/toast",
         permanent: true,
         destination: "https://daneden.github.io/Toast/",
       },
