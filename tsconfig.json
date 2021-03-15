@@ -17,6 +17,7 @@
     "paths": {
       "*": ["./src/typings/*"],
       "@/utils/*": ["src/utils/*"],
+      "@/data/*": ["src/data/*"],
       "@/components/*": ["src/components/*"],
       "@/designSystem": ["src/components/designSystem/index"],
       "@/designSystem/*": ["src/components/designSystem/*"]
