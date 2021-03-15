@@ -1,6 +1,17 @@
 [
   {
     "type": "book",
+    "title": "Seeing Like a State",
+    "author": "James C. Scott",
+    "cover": {
+      "height": 2326,
+      "src": "books/slas.jpg",
+      "width": 1501
+    },
+    "url": "https://yalebooks.co.uk/display.asp?k=9780300246759"
+  },
+  {
+    "type": "book",
     "title": "The Making of Prince of Persia",
     "author": "Jordan Mechner",
     "cover": {
