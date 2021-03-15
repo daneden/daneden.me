@@ -9,7 +9,42 @@ module.exports = {
   images: {
     domains: ["dl.airtable.com"],
   },
-  webpack: (config, { isServer }) => {
+
+  async redirects() {
+    return [
+      {
+        source: "/animate(.*)",
+        permanent: true,
+        destination: "https://animate.style/",
+      },
+      {
+        source: "/baseline(.*)",
+        permanent: true,
+        destination: "https://github.com/daneden/Baseline.js",
+      },
+      {
+        source: "/books(.*)",
+        permanent: true,
+        destination: "/playlist$1",
+      },
+      {
+        source: "/toast(.*)",
+        permanent: true,
+        destination: "https://daneden.github.io/Toast/",
+      },
+      {
+        source: "/images/favicon.ico",
+        destination: "/images/favicon.png",
+      },
+      {
+        source: "/:year(\\d+)/:month(\\d+)?/:day(\\d+)?/:title(.*)",
+        permanent: true,
+        destination: "/blog/:year/:title",
+      },
+    ]
+  },
+
+  webpack(config, { isServer }) {
     if (!isServer) {
       config.node = {
         fs: "empty",
