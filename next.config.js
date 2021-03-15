@@ -34,6 +34,7 @@ module.exports = {
       },
       {
         source: "/images/favicon.ico",
+        permanent: true,
         destination: "/images/favicon.png",
       },
       {
