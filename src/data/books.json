@@ -1,6 +1,17 @@
 [
   {
     "type": "book",
+    "title": "The Making of Prince of Persia",
+    "author": "Jordan Mechner",
+    "cover": {
+      "height": 888,
+      "src": "books/tmopop.jpg",
+      "width": 600
+    },
+    "url": "https://jordanmechner.com/store/the-making-of-prince-of-persia/"
+  },
+  {
+    "type": "book",
     "title": "The Politics of Design",
     "author": "Ruben Pater",
     "cover": {
