@@ -3,6 +3,7 @@ module.exports = {
     VERCEL_URL: process.env.VERCEL_URL || "daneden.me",
   },
   i18n: {
+    locales: ["en-GB"],
     defaultLocale: "en-GB",
   },
   images: {
