@@ -5637,10 +5637,10 @@ next-remote-watch@^0.3.0:
     commander "^5.0.0"
     express "^4.17.1"
 
-next-sitemap@^1.5.10:
-  version "1.5.10"
-  resolved "https://registry.yarnpkg.com/next-sitemap/-/next-sitemap-1.5.10.tgz#045f6db26e1be0abcea16f46f417f858ec2f071e"
-  integrity sha512-3ytBjg5c0tnLe/kItOovrdFaTqG3RVFSFZx0CcF7gK9eHNhoYrqUP2duylgI7vq0l978uZZWQIfGF6zwKckLjw==
+next-sitemap@^1.5.16:
+  version "1.5.16"
+  resolved "https://registry.yarnpkg.com/next-sitemap/-/next-sitemap-1.5.16.tgz#d0db72307468d3739dbfee7e874a141a52807e1d"
+  integrity sha512-MQ527OpEV5Jg7dH8gdyYJd4JN/VajeMzjmbOFis6UX7EIuJ067JgIrGoo/pwNlKTIsQ76eekPxaO9ThBIa1llA==
   dependencies:
     "@corex/deepmerge" "^2.5.3"
     matcher "^4.0.0"
