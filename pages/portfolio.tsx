@@ -203,6 +203,14 @@ export default function PortfolioPage() {
         coding opportunities and design styles outside of my employment.
       </p>
 
+      <h3>Bread for The Busy</h3>
+      <p>
+        After several years of making sourdough bread, I decided I wanted to
+        publish a little website to record and share some of my favourite (and
+        home-grown) recipes for bread.{" "}
+        <a href="https://breadforthebusy.com">Visit the site</a> to learn more.
+      </p>
+
       <h3>Lucid Underground</h3>
       <p>
         Lucid Underground is a web app and companion iOS and watchOS app that
