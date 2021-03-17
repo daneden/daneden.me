@@ -1,5 +1,11 @@
+interface Options {
+  year?: "numeric" | "2-digit"
+  month?: "long" | "short"
+  day?: "numeric"
+}
+
 export default function formatDate(date: Date | string = ""): string {
-  const options = {
+  const options: Options = {
     year: "numeric",
     month: "long",
     day: "numeric",
