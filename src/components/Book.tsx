@@ -79,7 +79,7 @@ const Book = ({
         }
 
         .external-link-icon {
-          width: 0.5em;
+          width: 0.55em;
         }
 
         .badge {
