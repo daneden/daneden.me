@@ -2,37 +2,35 @@ import Atoms from "@/components/designSystem/atoms"
 import PlainLink from "@/components/PlainLink"
 import Image from "./Image"
 
-interface BookCover {
+interface MediaCover {
   src: string
   width: number
   height: number
 }
-export interface BookData {
+export interface MediaData {
   author: string
-  cover: BookCover
+  cover: MediaCover
   quote?: string
   title: string
   url: string
   type: "book" | "podcast" | "music"
 }
 
-const Book = ({
+const Media = ({
   author,
   cover,
   quote,
   title,
   url,
   type = "book",
-}: BookData) => {
-  const isExternalLink = url.startsWith("http")
-
+}: MediaData) => {
   return (
     <>
       <PlainLink href={url}>
         {" "}
-        <div className="book-container">
+        <div className="media-container">
           <Image
-            alt={`The book cover for “${title}” by ${author}`}
+            alt={`The media cover for “${title}” by ${author}`}
             height={cover.height}
             sizes={Atoms.spacing.xlarge}
             src={cover.src}
@@ -40,16 +38,7 @@ const Book = ({
           />
           <div>
             <small className="badge">{type}</small>
-            <p className="zm">
-              {title}&nbsp;
-              {isExternalLink && (
-                <img
-                  alt="External link icon"
-                  className="external-link-icon"
-                  src="/images/outbound.svg"
-                />
-              )}
-            </p>
+            <p className="zm">{title}</p>
             <p className="small zm">{author}</p>
             {quote && (
               <p
@@ -65,7 +54,7 @@ const Book = ({
         </div>
       </PlainLink>
       <style jsx>{`
-        .book-container {
+        .media-container {
           align-items: start;
           display: grid;
           grid-gap: ${Atoms.spacing.xsmall};
@@ -74,12 +63,8 @@ const Book = ({
         }
 
         /* Override Figure's margin-bottom */
-        .book-container :global(figure) {
+        .media-container :global(figure) {
           margin-bottom: 0;
-        }
-
-        .external-link-icon {
-          width: 0.55em;
         }
 
         .badge {
@@ -100,4 +85,4 @@ const Book = ({
   )
 }
 
-export default Book
+export default Media

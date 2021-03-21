@@ -1,13 +1,13 @@
 import Layout from "@/components/Layout"
 import Atoms from "@/designSystem/atoms"
 import { GetStaticProps } from "next"
-import Book, { BookData } from "@/components/Book"
+import Media, { MediaData } from "@/components/Media"
 import widont from "@/utils/widont"
 import React from "react"
 import Breakout from "@/components/Breakout"
 
 interface AirtableRecord {
-  fields: BookData & {
+  fields: MediaData & {
     cover: Array<{
       thumbnails: {
         large: {
@@ -26,13 +26,13 @@ const AIRTABLE_URL = "https://api.airtable.com/v0/appvuN9NMJEcGKY7Z/entries"
 const strippedTitle = (str: string): string =>
   str.replace(/^(the|a) /i, "").toLowerCase()
 
-export default function LibraryPage({ entries }: { entries: BookData[] }) {
+export default function LibraryPage({ entries }: { entries: MediaData[] }) {
   return (
     <Layout frontMatter={{ title: "Playlist" }}>
       <Breakout>
         <div className="library">
           {entries.map(({ title, author, quote, cover, url, type }) => (
-            <Book
+            <Media
               author={author}
               cover={cover}
               key={title}
@@ -80,7 +80,7 @@ export const getStaticProps: GetStaticProps = async () => {
           cover,
         }
       })
-    )) as BookData[]
+    )) as MediaData[]
 
   const entries = bookDataSource
     .map((book) => {
