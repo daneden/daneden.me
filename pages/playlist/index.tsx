@@ -59,7 +59,7 @@ export default function LibraryPage({ entries }: { entries: MediaData[] }) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const bookDataSource = (await fetch(AIRTABLE_URL, {
+  const mediaDataSource = (await fetch(AIRTABLE_URL, {
     headers: {
       Authorization: `Bearer ${process.env.AIRTABLE_API_KEY}`,
     },
@@ -82,12 +82,12 @@ export const getStaticProps: GetStaticProps = async () => {
       })
     )) as MediaData[]
 
-  const entries = bookDataSource
-    .map((book) => {
+  const entries = mediaDataSource
+    .map((media) => {
       return {
-        ...book,
+        ...media,
         // Replace the last space with a non-breaking space
-        title: widont(book.title),
+        title: widont(media.title),
       }
     })
     .sort((a, b) =>
