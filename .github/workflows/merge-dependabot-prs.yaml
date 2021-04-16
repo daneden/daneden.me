@@ -1,16 +1,13 @@
 name: Merge Dependabot PRs
 
 on:
-  check_suite:
-    types:
-      - completed
+  pull_request:
 
 jobs:
-  merge-me:
-    name: Merge Dependabot PRs
+  auto-merge:
     runs-on: ubuntu-latest
     steps:
-      - name: Merge Dependabot PRs
-        uses: ridedott/merge-me-action@v2
+      - uses: actions/checkout@v2
+      - uses: ahmadnassri/action-dependabot-auto-merge@v2
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
