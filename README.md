@@ -6,6 +6,8 @@
 Welcome to the innards of [my website](http://daneden.me). It’s built using
 [Next.js](http://nextjs.org/) and deployed on [Vercel](https://vercel.com/home).
 
+This is a small change to test a GitHub action.
+
 ## Installation
 
 If you want to run this site locally:
