@@ -11,5 +11,5 @@ jobs:
       - name: Merge Dependabot PRs
         uses: daneden/enable-automerge-action@main
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.PAT }}
           allowed-author: daneden
