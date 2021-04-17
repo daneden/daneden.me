@@ -12,4 +12,3 @@ jobs:
         uses: daneden/enable-automerge-action@main
         with:
           github-token: ${{ secrets.PAT }}
-          allowed-author: daneden
