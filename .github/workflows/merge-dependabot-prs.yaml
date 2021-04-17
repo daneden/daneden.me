@@ -12,3 +12,4 @@ jobs:
         uses: daneden/enable-automerge-action@main
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
+          allowed-author: daneden
