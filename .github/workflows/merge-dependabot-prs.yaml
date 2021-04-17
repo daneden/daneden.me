@@ -1,14 +1,14 @@
-name: Merge Dependabot PRs
+name: Enable automerge for dependabot PRs
 
 on:
   pull_request:
 
 jobs:
   merge-me:
-    name: Merge Dependabot PRs
+    name: Enable automerge for dependabot PRs
     runs-on: ubuntu-latest
     steps:
-      - name: Merge Dependabot PRs
+      - name: Enable automerge for dependabot PRs
         uses: daneden/enable-automerge-action@main
         with:
           github-token: ${{ secrets.PAT }}
