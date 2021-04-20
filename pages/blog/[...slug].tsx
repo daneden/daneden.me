@@ -1,7 +1,6 @@
 import { MDXFile, MDXFrontMatter } from "*.mdx"
 import Layout from "@/components/Layout"
 import allBlogPosts from "@/utils/mdxUtils"
-import { generateOgImages } from "@/utils/ogImage"
 import smartypants from "@ngsctt/remark-smartypants"
 import prism from "mdx-prism"
 import { GetStaticPaths, GetStaticProps } from "next"
@@ -134,14 +133,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  try {
-    await generateOgImages(
-      Array.from(allBlogPosts.values()).map((post) => post.frontMatter)
-    )
-  } catch {
-    throw new Error(`Unable to generate image for posts`)
-  }
-
   const paths = Array.from(allBlogPosts.keys()).map((slug) => ({
     params: { slug: slug.split("/") },
   }))
