@@ -11,7 +11,7 @@ export default function HomePage() {
         <p>
           Daniel Eden is a Design Manager at{" "}
           <Link href="https://facebook.com/business">Facebook</Link> in London,
-          working on Facebook’s Commerce Products. He spends his time{" "}
+          supporting Facebook’s Commerce organisation. He spends his time{" "}
           <Link href="/blog">writing</Link>, thinking,{" "}
           <Link href="https://twitter.com/_dte">tweeting</Link>, and talking
           about Design Systems: how they scale, how they break, and the
