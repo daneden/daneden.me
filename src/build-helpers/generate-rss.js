@@ -60,9 +60,7 @@ const postsMap = new Map(
     .map((filePath) => {
       const fullPath = path.join(POSTS_PATH, filePath)
       const source = fs.readFileSync(fullPath)
-
       const slug = fullPath.replace(/^.*\/blog\//, "").replace(".mdx", "")
-      const ogSlug = slug.replace(/^\//, "").replace(/\//g, "-") + ".png"
 
       const { content, data } = matter(source)
       return {
@@ -70,7 +68,6 @@ const postsMap = new Map(
         frontMatter: {
           ...data,
           slug,
-          ogSlug,
         },
         path: fullPath,
       }
@@ -86,8 +83,10 @@ const postsMap = new Map(
 let promises = []
 let posts = []
 
-postsMap.forEach(async function addRssItem(post, path) {
+postsMap.forEach(async function makePromises(post, path) {
   const { content, frontMatter } = post
+
+  // Provide some mock components and empty functions for the interactive elements
   const components = {
     Image,
     a: Link,
