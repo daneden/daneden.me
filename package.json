@@ -16,7 +16,8 @@
   "scripts": {
     "build": "next build",
     "build:og-images": "node src/build-helpers/generate-og-images.js",
-    "prebuild": "yarn build:og-images",
+    "build:feed": "node src/build-helpers/generate-rss.js",
+    "prebuild": "yarn build:og-images && yarn build:feed",
     "postbuild": "next-sitemap",
     "dev": "next-remote-watch",
     "lint": "eslint \"**/*.{js,jsx,ts,tsx,md,mdx}\"",
@@ -68,6 +69,7 @@
     "husky": "^6.0.0",
     "lint-staged": "^10.5.4",
     "next-remote-watch": "^1.0.0",
-    "prettier": "^2.2.1"
+    "prettier": "^2.2.1",
+    "rss": "^1.2.2"
   }
 }
