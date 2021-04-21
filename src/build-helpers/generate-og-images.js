@@ -171,7 +171,10 @@ const generateOgImages = async (posts) => {
 
   const promises = posts.map(({ title, ogSlug }) => {
     return new Promise((resolve, reject) => {
-      const filepath = path.resolve(dir, `${ogSlug?.split(".png")[0]}.png`)
+      const filepath = path.resolve(
+        dir,
+        `${ogSlug ? ogSlug.split(".png")[0] : ""}.png`
+      )
 
       ogImage(title, (error, buffer) => {
         if (error) {
