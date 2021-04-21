@@ -2250,7 +2250,7 @@ debug@^3.2.6:
   dependencies:
     ms "^2.1.1"
 
-debug@^4.0.0, debug@^4.0.1, debug@^4.1.0, debug@^4.1.1, debug@^4.2.0:
+debug@^4.0.1, debug@^4.1.0, debug@^4.1.1, debug@^4.2.0:
   version "4.3.1"
   resolved "https://registry.yarnpkg.com/debug/-/debug-4.3.1.tgz#f0d229c505e0c6d8c49ac553d1b13dc183f6b2ee"
   integrity sha512-doEwdvm4PCeK4K3RQN2ZC2BYUBaxwLARCqZmMjtF8a51J2Rb0xpVloFRnCODwqjpwnAoao4pelN8l3RJdv3gRQ==
@@ -3993,7 +3993,7 @@ log-update@^4.0.0:
     slice-ansi "^4.0.0"
     wrap-ansi "^6.2.0"
 
-longest-streak@^2.0.0, longest-streak@^2.0.1:
+longest-streak@^2.0.1:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/longest-streak/-/longest-streak-2.0.4.tgz#b8599957da5b5dab64dee3fe316fa774597d90e4"
   integrity sha512-vM6rUVCVUJJt33bnmHiZEvr7wPT78ztX7rojL+LW51bHtLh6HTjx84LA5W4+oa6aKEJA7jJu5LR6vQRBpA5DVg==
@@ -4066,15 +4066,6 @@ mdast-util-definitions@^4.0.0:
   dependencies:
     unist-util-visit "^2.0.0"
 
-mdast-util-math@^0.1.0:
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/mdast-util-math/-/mdast-util-math-0.1.2.tgz#629a0793bd8822432917e5ddda5279492390cc2b"
-  integrity sha512-fogAitds+wH+QRas78Yr1TwmQGN4cW/G2WRw5ePuNoJbBSPJCxIOCE8MTzHgWHVSpgkRaPQTgfzXRE1CrwWSlg==
-  dependencies:
-    longest-streak "^2.0.0"
-    mdast-util-to-markdown "^0.6.0"
-    repeat-string "^1.0.0"
-
 mdast-util-to-hast@10.0.1:
   version "10.0.1"
   resolved "https://registry.yarnpkg.com/mdast-util-to-hast/-/mdast-util-to-hast-10.0.1.tgz#0cfc82089494c52d46eb0e3edb7a4eb2aea021eb"
@@ -4089,27 +4080,10 @@ mdast-util-to-hast@10.0.1:
     unist-util-position "^3.0.0"
     unist-util-visit "^2.0.0"
 
-mdast-util-to-markdown@^0.6.0:
-  version "0.6.2"
-  resolved "https://registry.yarnpkg.com/mdast-util-to-markdown/-/mdast-util-to-markdown-0.6.2.tgz#8fe6f42a2683c43c5609dfb40407c095409c85b4"
-  integrity sha512-iRczns6WMvu0hUw02LXsPDJshBIwtUPbvHBWo19IQeU0YqmzlA8Pd30U8V7uiI0VPkxzS7A/NXBXH6u+HS87Zg==
-  dependencies:
-    "@types/unist" "^2.0.0"
-    longest-streak "^2.0.0"
-    mdast-util-to-string "^2.0.0"
-    parse-entities "^2.0.0"
-    repeat-string "^1.0.0"
-    zwitch "^1.0.0"
-
 mdast-util-to-string@^1.0.5:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/mdast-util-to-string/-/mdast-util-to-string-1.1.0.tgz#27055500103f51637bd07d01da01eb1967a43527"
   integrity sha512-jVU0Nr2B9X3MU4tSK7JP1CMkSvOj7X5l/GboG1tKRw52lLF1x2Ju92Ms9tNetCcbfX3hzlM73zYo2NKkWSfF/A==
-
-mdast-util-to-string@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/mdast-util-to-string/-/mdast-util-to-string-2.0.0.tgz#b8cfe6a713e1091cb5b728fc48885a4767f8b97b"
-  integrity sha512-AW4DRS3QbBayY/jJmD8437V1Gombjf8RSOUCMFBuo5iHi58AGEgVCKQ+ezHkZZDpAQS75hcBMpLqjpJTjtUL7w==
 
 mdast-util-toc@^5.0.0:
   version "5.0.3"
@@ -4163,22 +4137,6 @@ methods@~1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/methods/-/methods-1.1.2.tgz#5529a4d67654134edcc5266656835b0f851afcee"
   integrity sha1-VSmk1nZUE07cxSZmVoNbD4Ua/O4=
-
-micromark-extension-math@^0.1.0:
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/micromark-extension-math/-/micromark-extension-math-0.1.2.tgz#5d7bb2b86018da4a758c05f3991664430ee4d711"
-  integrity sha512-ZJXsT2eVPM8VTmcw0CPSDeyonOn9SziGK3Z+nkf9Vb6xMPeU+4JMEnO6vzDL10562Favw8Vste74f54rxJ/i6Q==
-  dependencies:
-    katex "^0.12.0"
-    micromark "~2.11.0"
-
-micromark@~2.11.0:
-  version "2.11.2"
-  resolved "https://registry.yarnpkg.com/micromark/-/micromark-2.11.2.tgz#e8b6a05f54697d2d3d27fc89600c6bc40dd05f35"
-  integrity sha512-IXuP76p2uj8uMg4FQc1cRE7lPCLsfAXuEfdjtdO55VRiFO1asrCSQ5g43NmPqFtRwzEnEhafRVzn2jg0UiKArQ==
-  dependencies:
-    debug "^4.0.0"
-    parse-entities "^2.0.0"
 
 micromatch@^4.0.2:
   version "4.0.2"
@@ -5303,13 +5261,10 @@ remark-footnotes@2.0.0:
   resolved "https://registry.yarnpkg.com/remark-footnotes/-/remark-footnotes-2.0.0.tgz#9001c4c2ffebba55695d2dd80ffb8b82f7e6303f"
   integrity sha512-3Clt8ZMH75Ayjp9q4CorNeyjwIxHFcTkaektplKGl2A1jNGEUey8cKL0ZC5vJwfcD5GFGsNLImLG/NGzWIzoMQ==
 
-remark-math@4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/remark-math/-/remark-math-4.0.0.tgz#494ddd50766555ad2332e3afca7796a76452256f"
-  integrity sha512-lH7SoQenXtQrvL0bm+mjZbvOk//YWNuyR+MxV18Qyv8rgFmMEGNuB0TSCQDkoDaiJ40FCnG8lxErc/zhcedYbw==
-  dependencies:
-    mdast-util-math "^0.1.0"
-    micromark-extension-math "^0.1.0"
+remark-math@3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/remark-math/-/remark-math-3.0.1.tgz#85a02a15b15cad34b89a27244d4887b3a95185bb"
+  integrity sha512-epT77R/HK0x7NqrWHdSV75uNLwn8g9qTyMqCRCDujL0vj/6T6+yhdrR7mjELWtkse+Fw02kijAaBuVcHBor1+Q==
 
 remark-mdx@1.6.22, remark-mdx@^1.6.22:
   version "1.6.22"
