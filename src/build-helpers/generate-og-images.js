@@ -1,12 +1,56 @@
-import { MDXFrontMatter } from "*.mdx"
-import Atoms from "@/components/designSystem/atoms"
-import widont from "@/utils/widont"
-import { createCanvas, registerFont } from "canvas"
-import { existsSync, promises as fs } from "fs"
-import path from "path"
-import siteConfig from "../data/siteconfig.json"
+const fs = require("fs")
+const read = require("fs-readdir-recursive")
+const matter = require("gray-matter")
+const path = require("path")
+const { createCanvas, registerFont } = require("canvas")
+const siteConfig = require(path.resolve(
+  process.cwd(),
+  "src",
+  "data",
+  "siteconfig.json"
+))
 
-const { mkdir, writeFile } = fs
+const { mkdir, writeFile } = fs.promises
+const { existsSync } = fs
+
+const POSTS_PATH = path.join(process.cwd(), "blog")
+const postPaths = read(POSTS_PATH)
+
+const postsMap = new Map(
+  postPaths
+    .map((filePath) => {
+      const fullPath = path.join(POSTS_PATH, filePath)
+      const source = fs.readFileSync(fullPath)
+
+      const slug = fullPath.replace(/^.*\/blog\//, "").replace(".mdx", "")
+      const ogSlug = slug.replace(/^\//, "").replace(/\//g, "-") + ".png"
+
+      const { content, data } = matter(source)
+      return {
+        content,
+        frontMatter: {
+          ...data,
+          slug,
+          ogSlug,
+        },
+        path: fullPath,
+      }
+    })
+    .map((entry) => {
+      const {
+        frontMatter: { slug },
+      } = entry
+      return [slug, entry]
+    })
+)
+
+async function main() {
+  await generateOgImages(
+    Array.from(postsMap.values()).map((post) => post.frontMatter)
+  ).catch((e) => {
+    throw new Error(e)
+  })
+}
 
 const soehne = path.resolve(
   process.cwd(),
@@ -33,11 +77,7 @@ registerFont(national, {
 // This function takes a canvas, string, and maxwidth to determine
 // how to split the subject string based on its rendered length,
 // allowing text to wrap in the canvas
-function getLines(
-  ctx: CanvasRenderingContext2D,
-  text: string,
-  maxWidth: number
-): string[] {
+function getLines(ctx, text, maxWidth) {
   // TODO: Add non-space punctuation to getLines for splitting
   // Currently splitting just happens on spaces, but should probably
   // also apply to e.g. hyphens
@@ -59,15 +99,12 @@ function getLines(
   return lines
 }
 
-export default function ogImage(
-  title: string,
-  callback?: (e: unknown, b: Buffer) => void
-): Buffer | void {
+function ogImage(title, callback) {
   const displaySize = 80
   const lineHeight = displaySize * 1
   const authorSize = 36
   const [width, height] = [1200, 1200]
-  const [halfWidth, halfHeight] = [width / 2, height / 2]
+  const halfHeight = height / 2
   const textWidth = 1022
   const offset = 66
 
@@ -75,14 +112,25 @@ export default function ogImage(
   const ctx = canvas.getContext("2d")
 
   // Render the background colour
-  ctx.fillStyle = Atoms.colors.text
+  ctx.fillStyle = "#111"
   ctx.fillRect(0, 0, width, height)
 
   // Render the blog post title
   ctx.font = `bold ${displaySize}px Soehne`
   ctx.textAlign = "left"
   ctx.textBaseline = "middle"
-  ctx.fillStyle = Atoms.colors.wash
+  ctx.fillStyle = "#f5f5f5"
+
+  function widont(subject) {
+    const words = subject.split(" ")
+    const lastTwo = words.slice(-2).join(" ")
+
+    if (lastTwo.length >= 15) {
+      return subject
+    } else {
+      return subject.replace(/ ([^ ]*)$/, "\u00A0$1")
+    }
+  }
 
   const lines = getLines(ctx, widont(title), textWidth)
   const textHeight = lines.length * lineHeight
@@ -97,7 +145,7 @@ export default function ogImage(
   // Render the site title, assuming the main text isn't equal to it
   if (title !== siteConfig.title) {
     ctx.font = `${authorSize}px National 2`
-    ctx.fillStyle = Atoms.colors.meta
+    ctx.fillStyle = "#44464B"
 
     ctx.translate(width - offset, halfHeight)
     ctx.rotate(-Math.PI / 2)
@@ -114,14 +162,14 @@ export default function ogImage(
   return canvas.toBuffer("image/png")
 }
 
-export const generateOgImages = async (posts: MDXFrontMatter[]) => {
+const generateOgImages = async (posts) => {
   const dir = path.resolve("public", "og")
 
   if (!existsSync(dir)) {
-    await mkdir(dir)
+    await mkdir(dir).catch((e) => console.error(e))
   }
 
-  const promises = posts.map(({ title, ogSlug }, index) => {
+  const promises = posts.map(({ title, ogSlug }) => {
     return new Promise((resolve, reject) => {
       const filepath = path.resolve(dir, `${ogSlug?.split(".png")[0]}.png`)
 
@@ -140,3 +188,5 @@ export const generateOgImages = async (posts: MDXFrontMatter[]) => {
 
   await Promise.all(promises).catch((error) => console.error(error))
 }
+
+main()
