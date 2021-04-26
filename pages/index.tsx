@@ -6,7 +6,6 @@ import Link from "next/link"
 export default function HomePage() {
   return (
     <Layout>
-      <Canvas />
       <HomeContent>
         <p>
           Daniel Eden is a Design Manager at{" "}

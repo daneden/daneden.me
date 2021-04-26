@@ -12,7 +12,7 @@ export const Canvas = () => {
   const [mounted, setMounted] = useState(false)
   const teardown = useRef<() => void>()
   const [scaleAmount, setScaleAmount] = useState(1)
-  const rotateAmount = 10
+  const rotateAmount = 0
 
   const canvasRef = useCallback((node) => {
     if (node !== null) {
@@ -32,40 +32,41 @@ export const Canvas = () => {
     }
   }, [])
 
-  const applyTransform = useCallback(() => {
-    if (typeof window === "undefined") {
-      return
-    }
+  // TODO: think about putting this transformation behind a flag
+  // const applyTransform = useCallback(() => {
+  //   if (typeof window === "undefined") {
+  //     return
+  //   }
 
-    const { abs, cos, sin, PI } = Math
-    const radiansFactor = PI / 180
-    const { innerHeight: h, innerWidth: w } = window
-    const W =
-      w * abs(cos(rotateAmount * radiansFactor)) +
-      h * abs(sin(rotateAmount * radiansFactor))
-    const H =
-      w * abs(sin(rotateAmount * radiansFactor)) +
-      h * abs(cos(rotateAmount * radiansFactor))
+  //   const { abs, cos, sin, PI } = Math
+  //   const radiansFactor = PI / 180
+  //   const { innerHeight: h, innerWidth: w } = window
+  //   const W =
+  //     w * abs(cos(rotateAmount * radiansFactor)) +
+  //     h * abs(sin(rotateAmount * radiansFactor))
+  //   const H =
+  //     w * abs(sin(rotateAmount * radiansFactor)) +
+  //     h * abs(cos(rotateAmount * radiansFactor))
 
-    const a = Math.min(w / W, h / H)
-    setScaleAmount(a)
-  }, [])
+  //   const a = Math.min(w / W, h / H)
+  //   setScaleAmount(a)
+  // }, [])
 
-  // If the scale amount hasn't yet been calculated, call applyTransform
-  if (scaleAmount === 1) {
-    applyTransform()
-  }
+  // // If the scale amount hasn't yet been calculated, call applyTransform
+  // if (scaleAmount === 1) {
+  //   applyTransform()
+  // }
 
-  useLayoutEffect(
-    function transformCanvas() {
-      window.addEventListener("resize", applyTransform)
+  // useLayoutEffect(
+  //   function transformCanvas() {
+  //     window.addEventListener("resize", applyTransform)
 
-      return () => {
-        window.removeEventListener("resize", applyTransform)
-      }
-    },
-    [applyTransform]
-  )
+  //     return () => {
+  //       window.removeEventListener("resize", applyTransform)
+  //     }
+  //   },
+  //   [applyTransform]
+  // )
 
   return mounted
     ? createPortal(
