@@ -48,13 +48,7 @@ module.exports = {
     ]
   },
 
-  webpack(config, { isServer }) {
-    if (!isServer) {
-      config.node = {
-        fs: "empty",
-      }
-    }
-
+  webpack(config) {
     config.module.rules = [
       ...config.module.rules,
       {
