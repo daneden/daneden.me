@@ -23,6 +23,12 @@ export default function HomePage() {
         Design Systems: how they scale, how they break, and the people&nbsp;that
         maintain&nbsp;them.
       </p>
+      <p>
+        You probably came here to <a href="/blog">read the blog</a> or see{" "}
+        <a href="/portfolio">my work</a>. You should also know I’m (slowly)
+        working on a redesign for this website; forgive anything that appears
+        broken or, god forbid, particularly boring.
+      </p>
     </Layout>
   )
 }

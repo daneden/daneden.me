@@ -46,9 +46,9 @@ export default {
   },
   font: {
     family: {
-      body: `system-ui, -apple-system, sans-serif`,
-      mono: `"JetBrains Mono Web", "Input Mono", "Source Code Pro", "Monaco", monospace`,
-      display: "system-ui, -apple-system, sans-serif",
+      body: `"Inter", system-ui, -apple-system, sans-serif`,
+      mono: `"IBM Plex Mono", monospace`,
+      display: `"Inter", system-ui, -apple-system, sans-serif`,
     },
     size: {
       small: `${scales.small}rem`,

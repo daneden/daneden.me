@@ -50,6 +50,8 @@ const GlobalStyles = () => (
           line-height: ${Atoms.baseline};
           padding-left: ${Atoms.spacing.medium};
           padding-right: ${Atoms.spacing.medium};
+          font-feature-settings: "ss02" 1;
+          font-variant-alternates: stylistic(ss02);
         }
 
         #__next {
@@ -155,7 +157,6 @@ const GlobalStyles = () => (
 
         p {
           margin-bottom: ${Atoms.spacing.medium};
-          font-variant-numeric: oldstyle-nums;
         }
 
         pre,
