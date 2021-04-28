@@ -101,7 +101,7 @@ const GlobalStyles = () => (
         }
 
         sup[id^="fn"] a {
-          color: var(--meta-color);
+          color: var(--hover-color);
           text-decoration: none;
         }
 
@@ -230,18 +230,21 @@ const GlobalStyles = () => (
         table {
           hyphens: initial;
           margin-bottom: ${Atoms.spacing.medium};
+          border-collapse: collapse;
         }
 
         table :global(th),
         table :global(td) {
           vertical-align: top;
           padding: ${Atoms.spacing.xsmall};
-          padding-top: 0;
+          padding-top: ${Atoms.spacing.xxsmall};
+          padding-bottom: ${Atoms.spacing.xxsmall};
         }
 
         table :global(th) {
-          font-weight: normal;
-          font-family: ${Atoms.font.family.mono};
+          font-weight: 600;
+          font-size: ${Atoms.font.size.small};
+          border-bottom: 1px solid;
         }
 
         .note {

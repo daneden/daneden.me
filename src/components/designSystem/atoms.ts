@@ -13,7 +13,7 @@ const scales = {
 const widths = {
   auto: "auto",
   fill: "100%",
-  container: "34rem",
+  container: "32rem",
   // These values are changed momentarily; they’re set to 0 here to suppress TS errors.
   content: "",
   page: "",
