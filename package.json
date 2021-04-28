@@ -22,7 +22,8 @@
     "dev": "next-remote-watch",
     "lint": "eslint \"**/*.{js,jsx,ts,tsx,md,mdx}\"",
     "precommit": "lint-staged",
-    "start": "next start"
+    "start": "next start",
+    "prepare": "npx husky install"
   },
   "dependencies": {
     "@mdx-js/loader": "^1.6.22",
