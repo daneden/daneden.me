@@ -10,7 +10,7 @@ interface MetatagsProps {
   thumbnail: string
 }
 
-const dnsPrefetchURLs = ["https://stream.mux.com", "https://cdn.usefathom.com"]
+const dnsPrefetchURLs = ["https://stream.mux.com"]
 
 function Metatags(props: MetatagsProps): ReactElement<typeof Head> {
   const { title, description, url, pathname, thumbnail } = props
