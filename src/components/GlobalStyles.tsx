@@ -69,6 +69,7 @@ const GlobalStyles = () => (
           color: inherit;
           text-decoration-line: underline;
           text-decoration-color: var(--hover-color) !important;
+          text-decoration-thickness: 2px;
         }
 
         a:hover,
@@ -109,6 +110,7 @@ const GlobalStyles = () => (
           font-size: ${Atoms.font.size.h1};
           font-weight: 600;
           hyphens: initial;
+          letter-spacing: -0.015em;
           line-height: 1.1;
           margin-bottom: ${Atoms.spacing.medium};
           padding-bottom: ${Atoms.spacing.large};
@@ -168,7 +170,7 @@ const GlobalStyles = () => (
             inset 0 0 0 1px var(--code-wash);
           border-radius: 0.35em;
           font-family: ${Atoms.font.family.mono};
-          font-size: 0.875em;
+          font-size: 0.875rem;
           line-height: 1;
           letter-spacing: -0.025em;
         }

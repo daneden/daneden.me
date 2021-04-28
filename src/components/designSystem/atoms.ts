@@ -35,7 +35,7 @@ export default {
     blackAlpha: "rgba(0, 0, 0, 0.75)",
     whiteAlpha: "rgba(255, 255, 255, 0.75)",
     wash: "#f5f5f5",
-    siteLight: "blue",
+    siteLight: "dodgerBlue",
     siteDark: "dodgerBlue",
     text: "#111",
     meta: "#44464B",

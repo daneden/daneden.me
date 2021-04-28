@@ -55,14 +55,14 @@ const Header = ({ siteTitle }: HeaderProps) => {
           padding-top: ${Atoms.spacing.small};
         }
 
+        li {
+          display: inline-block;
+          margin-right: 1em;
+        }
+
         @media (max-width: ${Atoms.breakpoints.medium}) {
           header {
             grid-template-columns: 1fr;
-          }
-
-          li {
-            display: inline-block;
-            margin-right: 1em;
           }
         }
       `}</style>
