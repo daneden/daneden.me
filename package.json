@@ -19,7 +19,7 @@
     "build:feed": "node src/build-helpers/generate-rss.js",
     "prebuild": "yarn build:og-images && yarn build:feed",
     "postbuild": "next-sitemap",
-    "dev": "next-remote-watch",
+    "dev": "next dev",
     "lint": "eslint \"**/*.{js,jsx,ts,tsx,md,mdx}\"",
     "precommit": "lint-staged",
     "start": "next start",
@@ -69,7 +69,6 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "husky": "^6.0.0",
     "lint-staged": "^10.5.4",
-    "next-remote-watch": "^1.0.0",
     "prettier": "^2.2.1",
     "rss": "^1.2.2"
   }
