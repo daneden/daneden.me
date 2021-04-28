@@ -45,7 +45,6 @@ const GlobalStyles = () => (
         html {
           background-color: var(--wash-color);
           color: var(--text-color);
-          flex: 1;
           font-family: ${Atoms.font.family.body};
           font-size: clamp(100%, 2.5vw, 125%);
           line-height: ${Atoms.baseline};
@@ -56,7 +55,6 @@ const GlobalStyles = () => (
         #__next {
           display: flex;
           flex-direction: column;
-          min-height: 100vh;
         }
 
         ul,
@@ -106,8 +104,8 @@ const GlobalStyles = () => (
 
         h1 {
           font-family: ${Atoms.font.family.display};
-          font-size: 2.75rem;
-          font-weight: 400;
+          font-size: ${Atoms.font.size.h1};
+          font-weight: 600;
           hyphens: initial;
           line-height: 1.1;
           margin-bottom: ${Atoms.spacing.medium};
@@ -124,9 +122,8 @@ const GlobalStyles = () => (
 
         h2 {
           font-size: ${Atoms.font.size.h2};
-          font-weight: 400;
+          font-weight: 600;
           hyphens: initial;
-          letter-spacing: -0.025em;
           margin-bottom: ${Atoms.spacing.medium};
           padding-top: ${Atoms.spacing.small};
         }
@@ -139,10 +136,10 @@ const GlobalStyles = () => (
         }
 
         hr {
-          border: 2px solid var(--meta-color, ${Atoms.colors.meta});
+          border: 0;
+          border-top: 1px solid var(--meta-color, ${Atoms.colors.meta});
 
           display: block;
-          height: 1;
           margin: ${Atoms.spacing.large} 0;
         }
 

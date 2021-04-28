@@ -46,15 +46,15 @@ export default {
   },
   font: {
     family: {
-      body: `"Roslindale Text", "Times New Roman", serif`,
+      body: `system-ui, -apple-system, sans-serif`,
       mono: `"JetBrains Mono Web", "Input Mono", "Source Code Pro", "Monaco", monospace`,
-      display: "Roslindale Display",
+      display: "system-ui, -apple-system, sans-serif",
     },
     size: {
       small: `${scales.small}rem`,
       regular: `${scales.medium}rem`,
-      h1: `${scales.xlarge}rem`,
-      h2: `${scales.large}rem`,
+      h1: `${scales.large}rem`,
+      h2: `${scales.medium}rem`,
     },
   },
   scales,

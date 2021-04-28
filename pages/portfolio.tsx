@@ -286,6 +286,7 @@ export default function PortfolioPage() {
           font-family: ${atoms.font.family.display};
           font-style: normal;
           font-size: ${atoms.font.size.h1};
+          font-weight: 600;
         }
       `}</style>
     </Layout>
