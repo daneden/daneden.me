@@ -38,7 +38,7 @@ const Media = ({
           />
           <div>
             <small className="badge">{type}</small>
-            <p className="zm">{title}</p>
+            <p className="title zm">{title}</p>
             <p className="small zm">{author}</p>
             {quote && (
               <p
@@ -74,11 +74,14 @@ const Media = ({
           padding: 0.2em 0.35em;
           border-radius: 0.25em;
           display: inline-block;
-          text-transform: uppercase;
-          font-weight: 700;
+          text-transform: capitalize;
+          font-weight: 600;
           line-height: 1.1;
-          font-family: ${Atoms.font.family.mono};
-          letter-spacing: 0.0125em;
+          letter-spacing: 0.015em;
+        }
+
+        .title {
+          line-height: 1.4;
         }
       `}</style>
     </>
