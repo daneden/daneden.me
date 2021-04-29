@@ -169,13 +169,13 @@ const GlobalStyles = () => (
           padding: 0.15em 0.25em;
           vertical-align: baseline;
           background-color: var(--code-wash);
-          box-shadow: 0 1px 3px rgba(0,0,0,.125);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.125);
           border-radius: 0.5em;
           font-family: ${Atoms.font.family.mono};
           font-size: 0.875rem;
           line-height: 1;
           letter-spacing: -0.025em;
-          color: var(--code-color)
+          color: var(--code-color);
         }
 
         pre {
