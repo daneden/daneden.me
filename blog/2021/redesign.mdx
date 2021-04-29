@@ -1,0 +1,90 @@
+---
+title: "A Change of Scenery"
+date: "2021-04-29"
+layout: "post"
+categories:
+    - design
+    - process
+---
+
+It’s almost parody how common it is for designers to frequently and publicly
+redesign their website.
+[Ethan Marcotte](https://ethanmarcotte.com/wrote/let-a-website-be-a-worry-stone/)
+and [Frank Chimero](https://frankchimero.com/blog/2019/redesign/) are two such
+people who quite publicly went through their own flavours of dismantling and
+patiently reassembling their websites, and here I am experiencing my own
+[Popeye moment](https://frankchimero.com/blog/2020/popeye/) and reflecting on
+the longevity of the former lives of my website’s design.
+
+It doesn’t seem like a coincidence that this moment reaches me almost exactly 10
+years after the first snapshot of my website was added to the
+[Internet Archive Wayback Machine](https://web.archive.org/web/*/https://daneden.me).
+Unfortunately, the majority of (the 1,000+) snapshots are broken: years of
+interchanging URLs, web stacks, technologies, and designs are commensurate with
+the broken links to the resources that held the designs in place. Nevertheless,
+I can start to trace a route over the years.
+
+<RedesignGallery />
+
+The current design (as of April 29, 2021) has been practically
+unchanged—structurally speaking, at least—since
+[July 2019](https://web.archive.org/web/20190724200747/https://daneden.me/),
+which is a pretty long time! Prior to this iteration, the design changed fairly
+substantially every 2–3 months.
+
+I’m starting to chip away at the site’s latest iteration, one small change at a
+time. There are two goals in this exercise:
+
+1. Make the website fast
+2. Showcase my work
+
+The first goal is the only dealbreaker. I feel I’ve written a lot of useful
+posts, but that content is only useful if it’s accessible, and accessible
+_quickly_. I’m trying _really_ hard to toe the line between optimising for speed
+and optimising for expressing myself and my “brand”. Materially, this means
+being selective in which web fonts I choose, what content loads on the key
+pages, and how much I prioritise certain routes through the site by choosing
+certain navigation items.
+
+The second goal is taking me back to my first few years as an aspiring designer:
+the websites I designed peppered my portfolio, and I wore the projects like a
+Boy Scout sash. In the last year alone, I’ve enjoyed working on a handful of new
+projects, mostly independently designed and built iOS apps. There are a lot of
+details in some of these projects that I’m quietly proud of, and I’d love to
+share some of those projects with a bit more depth.
+
+Following the footsteps of others, I’m hoping to document this process in the
+public eye, with this blog post as my first stop on the journey.
+
+## April 29, 2021
+
+This morning, I made the first opinionated design choice: the typeface.
+
+In keeping with the redesign’s primary goal—make the website fast—I first chose
+[Inter](https://rsms.me/inter/), a beautiful typeface from former Dropbox
+colleague [Rasmus Andersson](https://rsms.me). It’s close enough to the macOS
+system font, San Francisco, that I can leverage `font-display: swap` to switch
+between them while the web font downloads, and it’s vanilla enough to have made
+for a good starting point for a redesign.
+
+However, dear reader, now is as good a time as any to admit that I am _obsessed_
+with street signage typography.
+
+<Image
+    src={`2021/04/transport.jpg`}
+    width={1100}
+    height={800}
+    caption={`Transport, the typeface used in British road signs, has been in use since the 1960s. Image courtesy of St Bride Library`}
+    alt={`A British road sign for the A46, set in the Transport typeface, with distances to Lincoln, Newark, Nottingham, and Leicester`}
+/>
+
+I’ve wanted for a long time to have an excuse to use
+[Transport](http://www.newtransport.co.uk) or
+[Interstate](https://fonts.adobe.com/fonts/interstate), and a redesign felt like
+a good excuse. Luckily, I found [Overpass](https://overpassfont.org), an open
+source font hosted on Google Fonts, which has excellent delivery strategies for
+performant websites; so that’s what I’ve picked, for now at least.
+
+Who knows whether Overpass will end up in the final version of this iteration,
+but right now I feel good about it. It feels utilitarian without being cold, and
+satisfies a personal, selfish itch.
