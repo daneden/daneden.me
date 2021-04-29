@@ -56,6 +56,10 @@ function buildComponentMap(source: string) {
       regex: /<TypedSystemsButton/,
       component: dynamic(() => import("@/components/typed-systems-components")),
     },
+    RedesignGallery: {
+      regex: /<RedesignGallery/,
+      component: dynamic(() => import("@/components/RedesignGallery")),
+    },
   }
 
   // Search the passed string for component instances and include them if
