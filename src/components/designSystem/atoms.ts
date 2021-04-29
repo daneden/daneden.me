@@ -47,7 +47,7 @@ export default {
   font: {
     family: {
       body: `"Overpass", system-ui, -apple-system, sans-serif`,
-      mono: `"IBM Plex Mono", monospace`,
+      mono: `"JetBrains Mono", monospace`,
       display: `"Overpass", system-ui, -apple-system, sans-serif`,
     },
     size: {
