@@ -28,7 +28,6 @@ export default function SyntaxHiglight(): ReactElement<unknown> {
         code[class*="language-"],
         pre[class*="language-"] {
           color: var(--c-color, --text-color, inherit);
-          background: none;
           font-family: var(--font-mono), Consolas, Monaco, "Andale Mono",
             "Ubuntu Mono", monospace;
           text-align: left;
@@ -49,18 +48,6 @@ export default function SyntaxHiglight(): ReactElement<unknown> {
           margin-bottom: 1.5rem;
           overflow: auto;
           padding: 1em;
-        }
-
-        :not(pre) > code[class*="language-"],
-        pre[class*="language-"] {
-          background: rgba(0, 0, 0, 0.025);
-        }
-
-        @media (prefers-color-scheme: dark) {
-          :not(pre) > code[class*="language-"],
-          pre[class*="language-"] {
-            background: rgba(255, 255, 255, 0.05);
-          }
         }
 
         /* Inline code */

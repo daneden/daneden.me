@@ -16,7 +16,8 @@ const GlobalStyles = () => (
           --highlight-color: ${Atoms.colors.highlight};
           --font-mono: ${Atoms.font.family.mono};
           --hover-color: var(--site-color);
-          --code-wash: rgba(128, 128, 128, 0.075);
+          --code-wash: #fff;
+          --code-color: #222;
           --grid-spec: minmax(0, 1fr) minmax(auto, ${Atoms.widths.container})
             minmax(0, 1fr);
         }
@@ -27,6 +28,8 @@ const GlobalStyles = () => (
             --text-color: ${Atoms.colors.wash};
             --meta-color: ${Atoms.colors.whiteAlpha};
             --wash-color: ${Atoms.colors.text};
+            --code-wash: #222;
+            --code-color: #eee;
           }
         }
 
@@ -163,16 +166,16 @@ const GlobalStyles = () => (
 
         pre,
         code {
-          padding: 0.1em 0.25em;
+          padding: 0.15em 0.25em;
           vertical-align: baseline;
           background-color: var(--code-wash);
-          box-shadow: inset 0 0 0 1px var(--code-wash),
-            inset 0 0 0 1px var(--code-wash);
-          border-radius: 0.35em;
+          box-shadow: 0 1px 3px rgba(0,0,0,.125);
+          border-radius: 0.5em;
           font-family: ${Atoms.font.family.mono};
           font-size: 0.875rem;
           line-height: 1;
           letter-spacing: -0.025em;
+          color: var(--code-color)
         }
 
         pre {
@@ -187,6 +190,7 @@ const GlobalStyles = () => (
         }
 
         pre :global(code) {
+          padding: 0;
           font-family: inherit;
           box-shadow: none;
           background-color: transparent;
@@ -247,7 +251,7 @@ const GlobalStyles = () => (
           border-bottom: 1px solid;
         }
 
-        .note {
+        aside {
           background-color: ${Atoms.colors.mark};
           border-left: 2px solid ${Atoms.colors.highlight};
           color: inherit;
