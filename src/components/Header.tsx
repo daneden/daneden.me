@@ -55,9 +55,9 @@ const Header = ({ siteTitle }: HeaderProps) => {
           padding-top: ${Atoms.spacing.small};
         }
 
-        li {
-          display: inline-block;
-          margin-right: 1em;
+        nav :global(ul) {
+          display: flex;
+          gap: ${Atoms.spacing.medium};
         }
 
         @media (max-width: ${Atoms.breakpoints.medium}) {
