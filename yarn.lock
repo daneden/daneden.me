@@ -4125,10 +4125,10 @@ next-mdx-remote@^2.1.4:
     "@mdx-js/mdx" "^1.6.22"
     "@mdx-js/react" "^1.6.22"
 
-next-sitemap@^1.6.29:
-  version "1.6.29"
-  resolved "https://registry.yarnpkg.com/next-sitemap/-/next-sitemap-1.6.29.tgz#1a72305307d5b51c7313bc1299fd143449ab9a14"
-  integrity sha512-BXWokbe07FIBHFVnLUBYbghX4n6yUA8d6S2c5YqbYnsQg1Bo+/rBizfsU9n6AOND3ClNiXy1HgC/7z5lVO3RUw==
+next-sitemap@^1.6.34:
+  version "1.6.34"
+  resolved "https://registry.yarnpkg.com/next-sitemap/-/next-sitemap-1.6.34.tgz#cf6eb530de8062d8e81bf8ec68f30b6bb4f9bda3"
+  integrity sha512-rq/MpfNPVeSQ6GSvltNwTvPpVNIjqIqdTywwIeI4tJ8ovYQBjiXqMOhf0539uQwrg6icBN4RNxgYGqFhFWAXKQ==
   dependencies:
     "@corex/deepmerge" "^2.5.6"
     matcher "^4.0.0"
