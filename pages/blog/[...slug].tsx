@@ -4,8 +4,8 @@ import allBlogPosts from "@/utils/mdxUtils"
 import smartypants from "@ngsctt/remark-smartypants"
 import prism from "mdx-prism"
 import { GetStaticPaths, GetStaticProps } from "next"
-import hydrate from "next-mdx-remote/hydrate"
-import renderToString from "next-mdx-remote/render-to-string"
+import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote"
+import { serialize } from "next-mdx-remote/serialize"
 import dynamic from "next/dynamic"
 import { ComponentType } from "react"
 import katex from "rehype-katex"
@@ -15,7 +15,6 @@ import math from "remark-math"
 import toc from "remark-toc"
 import Image from "@/components/Image"
 import Link from "next/link"
-import { MdxRemote } from "next-mdx-remote/types"
 
 const defaultComponents = {
   a: Link,
@@ -77,7 +76,7 @@ function buildComponentMap(source: string) {
 }
 
 interface PostPageProps {
-  source: MdxRemote.Source
+  source: MDXRemoteSerializeResult
   frontMatter: MDXFrontMatter
   extraComponents: string[]
 }
@@ -93,9 +92,11 @@ export default function PostPage({
     // JSX symbol for each extra component
     ...buildComponentMap(`<${extraComponents.join("<")}`),
   }
-
-  const content = hydrate(source, { components })
-  return <Layout frontMatter={frontMatter}>{content}</Layout>
+  return (
+    <Layout frontMatter={frontMatter}>
+      <MDXRemote {...source} components={components} />
+    </Layout>
+  )
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
@@ -117,8 +118,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     ...extraComponents,
   }
 
-  const mdxSource = await renderToString(content, {
-    components,
+  const mdxSource = await serialize(content, {
     mdxOptions: {
       remarkPlugins: [abbr, smartypants, math, toc],
       rehypePlugins: [katex, prism, slug],

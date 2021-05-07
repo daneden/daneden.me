@@ -3,16 +3,13 @@ const fs = require("fs")
 const read = require("fs-readdir-recursive")
 const matter = require("gray-matter")
 const path = require("path")
-const renderToString = require("next-mdx-remote/render-to-string")
-const katex = require("rehype-katex")
-const slug = require("rehype-slug")
 const abbr = require("remark-abbr")
 const math = require("remark-math")
 const toc = require("remark-toc")
-const NextImage = require("next/image")
-const prism = require("mdx-prism")
 const smartypants = require("@ngsctt/remark-smartypants")
 const React = require("react")
+const { renderToString } = require("react-dom/server")
+const MDX = require("@mdx-js/runtime")
 
 const emptyFunction = () => null
 
@@ -80,11 +77,10 @@ const postsMap = new Map(
     })
 )
 
-let promises = []
 let posts = []
 
-postsMap.forEach(async function makePromises(post, path) {
-  const { content, frontMatter } = post
+postsMap.forEach(async function compilePost(post, path) {
+  const { content } = post
 
   // Provide some mock components and empty functions for the interactive elements
   const components = {
@@ -95,37 +91,32 @@ postsMap.forEach(async function makePromises(post, path) {
     Codepen: emptyFunction,
   }
 
-  const mdxPromise = renderToString(content, {
-    components,
-    mdxOptions: {
-      remarkPlugins: [abbr, smartypants, math, toc],
-      rehypePlugins: [katex, prism, slug],
-    },
-  })
+  const compiledContent = renderToString(
+    React.createElement(
+      MDX,
+      {
+        components,
+        remarkPlugins: [abbr, smartypants, math, toc],
+      },
+      content
+    )
+  )
 
-  promises.push(mdxPromise)
-  posts.push({ ...post.frontMatter, path })
+  posts.push({ ...post.frontMatter, path, content: compiledContent })
 })
 
-Promise.all(promises)
-  .then((mdxSources) => {
-    mdxSources.map((mdxSource, i) => {
-      const post = posts[i]
-      feed.item({
-        title: post.title,
-        url: `https://daneden.me/blog/${post.path}`,
-        guid: post.path,
-        categories: post.categories,
-        date: post.date,
-        description: mdxSource.renderedOutput,
-      })
-    })
-
-    return
+posts.map((post) => {
+  feed.item({
+    title: post.title,
+    url: `https://daneden.me/blog/${post.path}`,
+    guid: post.path,
+    categories: post.categories,
+    date: post.date,
+    description: post.content,
   })
-  .then(() => {
-    const xmlString = feed.xml()
-    const filePath = path.resolve(process.cwd(), "public", "feed.xml")
+})
 
-    fs.writeFileSync(filePath, xmlString)
-  })
+const xmlString = feed.xml()
+const filePath = path.resolve(process.cwd(), "public", "feed.xml")
+
+fs.writeFileSync(filePath, xmlString)
