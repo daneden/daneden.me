@@ -64,19 +64,6 @@ const Media = ({
           margin-bottom: 0;
         }
 
-        .badge {
-          font-size: 0.575rem;
-          color: var(--wash-color);
-          background-color: var(--meta-color);
-          padding: 0.2em 0.35em;
-          border-radius: 0.25em;
-          display: inline-block;
-          text-transform: capitalize;
-          font-weight: 600;
-          line-height: 1.1;
-          letter-spacing: 0.015em;
-        }
-
         .title {
           line-height: 1.4;
         }
