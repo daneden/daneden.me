@@ -19,7 +19,7 @@ type LayoutProps = {
 const Content = ({ frontMatter, children }: LayoutProps) => {
   const site = siteConfig
   const title = frontMatter?.title || site.title
-  const isRoot = title == site.title
+  const isRoot = title === site.title
   const date = frontMatter?.date
   const formattedDate = formatDate(date || "")
   const excerpt = frontMatter?.excerpt

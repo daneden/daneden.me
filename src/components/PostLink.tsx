@@ -2,7 +2,6 @@ import { MDXFrontMatter } from "*.mdx"
 import formatDate from "@/utils/formatDate"
 import widont from "@/utils/widont"
 import { ReactElement } from "react"
-import Atoms from "@/components/designSystem/atoms"
 import PlainLink from "@/components/PlainLink"
 
 interface Props {

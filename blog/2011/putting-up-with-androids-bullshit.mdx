@@ -13,12 +13,12 @@ isn't available in previous versions of Android.
 We live in good times as web developer/designers. There are more fantastic
 resources available today than there ever have been - we have websites like
 [QuirksMode](http://www.quirksmode.org/), [Can I Use?](http://caniuse.com/), and
-the recent [Mobile HTML5](http://mobilehtml5.org/) to tell us what features we
+the recent [Mobile HTML5](http://mobilehtml5.org/) to tell us what features we
 can expect to use on a myriad of operating systems, browsers and mobile devices.
-Super! But there's a recurring theme across all of these websites. They all tell
+Super! But there's a recurring theme across all of these websites. They all tell
 us that Android _fully supports CSS animations._
 
-**That's crazy talk, Dan!** I hear you say. Open up any Android 2.0+ device and
+**That's crazy talk, Dan!** I hear you say. Open up any Android 2.0+ device and
 check out this [feature detection page.](http://daneden.me/labs/featuretest/)
 Sitting, quite proudly, will be the words "css animation" -
 [Modernizr](http://modernizr.com) says it's fully supported.So over you go to
@@ -28,7 +28,7 @@ fly. Back to the Droid we go, and what do we find?
 We find absolutely nothing.
 
 Here's the thing: CSS animations are supported by Android devices - but **only
-if a single property is changed.** As soon as you try to animate more than one
+if a single property is changed.** As soon as you try to animate more than one
 property at once, the entire element disappears. In non-native Android browsers,
 the element will be visible for the duration of the animation, but will hide
 immediately after it's finished. This is true for (as far as I know) all Android

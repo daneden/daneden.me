@@ -1,68 +1,37 @@
 {
   "root": true,
-  "settings": {
-    "react": {
-      "version": "detect"
-    }
-  },
-  "parserOptions": {
-    "ecmaVersion": 9,
-    "sourceType": "module",
-    "ecmaFeatures": {
-      "jsx": true
-    }
-  },
-  "extends": [
-    "plugin:@typescript-eslint/recommended",
-    "plugin:jsx-a11y/recommended",
-    "plugin:mdx/recommended",
-    "plugin:prettier/recommended",
-    "plugin:react/recommended"
-  ],
+  "parser": "@typescript-eslint/parser",
   "plugins": [
-    "daneden",
-    "import",
-    "jsx-a11y",
-    "mdx",
-    "prettier",
-    "react-hooks",
-    "react"
+    "@typescript-eslint"
   ],
-  "ignorePatterns": ["node_modules", "public/**/*.js", "*.woff2?", "*.ttf"],
-  "rules": {
-    "@typescript-eslint/explicit-function-return-type": "off",
-    "@typescript-eslint/explicit-module-boundary-types": "off",
-    "@typescript-eslint/member-delimiter-style": "off",
-    "@typescript-eslint/no-unused-vars": "off",
-    "daneden/explicit-let-type": "warn",
-    "prettier/prettier": "error",
-    "react-hooks/exhaustive-deps": "warn",
-    "react-hooks/rules-of-hooks": "error",
-    "react/boolean-prop-naming": "error",
-    "react/jsx-sort-props": "warn",
-    "react/jsx-uses-react": "warn",
-    "react/jsx-uses-vars": "error",
-    "react/jsx-filename-extension": [
-      1,
-      { "extensions": [".jsx", ".tsx", ".mdx"] }
-    ],
-    "react/prop-types": "off",
-    "react/no-unescaped-entities": "off",
-    "react/react-in-jsx-scope": "off"
-  },
+  "extends": [
+    "next",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+  ],
   "overrides": [
     {
-      "files": ["*.js"],
-      "rules": {
-        "@typescript-eslint/no-var-requires": "off",
-        "@typescript-eslint/camelcase": "off"
-      }
-    },
-    {
-      "files": ["*.mdx"],
-      "rules": {
-        "react/jsx-no-undef": "off"
-      }
+      "files": "*.mdx",
+      "extends": "plugin:mdx/recommended" // ESLint Parser/Plugin for MDX
     }
-  ]
+  ],
+  "rules": {
+    "quotes": ["error", "double",
+      {
+        "avoidEscape": true,
+        "allowTemplateLiterals": true
+      }],
+    "semi": [2, "never"],
+    "comma-dangle": [2, "only-multiline"],
+    "jsx-quotes": [2, "prefer-double"],
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "space-before-function-paren": [
+      "error",
+      {
+        "anonymous": "never",
+        "named": "never",
+        "asyncArrow": "always"
+      }
+    ],
+  }
 }

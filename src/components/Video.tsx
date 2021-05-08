@@ -17,7 +17,6 @@ const Video = ({
 }: Props) => {
   return (
     <figure>
-      {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
       <video
         autoPlay={autoPlay}
         controls={controls}

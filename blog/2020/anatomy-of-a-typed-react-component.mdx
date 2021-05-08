@@ -1,6 +1,6 @@
 ---
 layout: "post"
-title: "Anatomy of a Typed React Component"
+title: "Anatomy of a Typed React Component"
 date: "2020-06-30"
 categories:
     - code
@@ -53,7 +53,7 @@ Constants in JavaScript are essentially variables which, once assigned, cannot
 be changed. In the past you may have written or seen code that looks like this:
 
 ```js
-var number = 1
+let number = 1
 number = 2
 
 console.log(number) // => 2
@@ -126,7 +126,7 @@ arrow functions somewhat skip a level:
 const myObject = {
     foo: 1,
     // A regular function
-    withThis: function () {
+    withThis() {
         console.log(this)
     },
     // An arrow function
@@ -296,7 +296,7 @@ looks something like this:
 ```tsx
 interface Props {
     children?: React.ReactNode
-    hasPadding: Boolean
+    hasPadding: boolean
     onClick?: () => void
 }
 ```
@@ -316,7 +316,7 @@ little more, but TypeScript will also warn me if I use the component
 incorrectly:
 
 ```tsx
-;<Component onClick={false} />
+<Component onClick={false} />
 /**
  * TypeError: type '{ onClick }' is missing the following properties: children, hasPadding
  * TypeError: type 'false' is not assignable to type '(() => void) | undefined' in 'onClick'
@@ -445,7 +445,7 @@ JSX embedded expression since `if...else` statements don't have to return a
 value. You can, however, use _ternary operators_ to check a condition:
 
 ```tsx
-const Switch = ({ isOn }: { isOn: Boolean }) => (
+const Switch = ({ isOn }: { isOn: boolean }) => (
     <div>The switch is {isOn ? "on!" : "off."}</div>
 )
 ```

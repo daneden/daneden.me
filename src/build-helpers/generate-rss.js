@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 const RSS = require("rss")
 const fs = require("fs")
 const read = require("fs-readdir-recursive")
@@ -48,8 +49,8 @@ const postPaths = read(POSTS_PATH)
 const feed = new RSS({
   title: siteConfig.title,
   description: siteConfig.description,
-  feed_url: "https://daneden.me/feed.xml",
-  site_url: "https://daneden.me/",
+  feed_url: "https://daneden.me/feed.xml", // eslint-disable-line camelcase
+  site_url: "https://daneden.me/", // eslint-disable-line camelcase
 })
 
 const postsMap = new Map(
@@ -77,7 +78,7 @@ const postsMap = new Map(
     })
 )
 
-let posts = []
+const posts = []
 
 postsMap.forEach(async function compilePost(post, path) {
   const { content } = post

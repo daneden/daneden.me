@@ -2,7 +2,6 @@ import Layout from "@/components/Layout"
 import Link from "next/link"
 import DeviceFrame from "@/components/DeviceFrame"
 import LightswitchImage from "@/components/LightSwitchImage"
-import Align from "@/components/Align"
 import atoms from "@/components/designSystem/atoms"
 
 export default function PortfolioPage() {

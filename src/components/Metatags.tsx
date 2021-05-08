@@ -14,7 +14,7 @@ const dnsPrefetchURLs = ["https://stream.mux.com", "https://fonts.gstatic.com"]
 
 function Metatags(props: MetatagsProps): ReactElement<typeof Head> {
   const { title, description, url, pathname, thumbnail } = props
-  const pageTitle = title == site.title ? title : `${title} | ${site.title}`
+  const pageTitle = title === site.title ? title : `${title} | ${site.title}`
 
   return (
     <Head>

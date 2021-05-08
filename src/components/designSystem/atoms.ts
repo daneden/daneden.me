@@ -28,8 +28,8 @@ export default {
   baseline: BASELINE,
   widths,
   breakpoints: {
-    medium: `64em`,
-    narrow: `50em`,
+    medium: "64em",
+    narrow: "50em",
   },
   colors: {
     blackAlpha: "rgba(0, 0, 0, 0.75)",

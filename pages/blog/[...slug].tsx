@@ -113,11 +113,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   const extraComponents = buildComponentMap(content)
 
-  const components = {
-    ...defaultComponents,
-    ...extraComponents,
-  }
-
   const mdxSource = await serialize(content, {
     mdxOptions: {
       remarkPlugins: [abbr, smartypants, math, toc],

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 const fs = require("fs")
 const read = require("fs-readdir-recursive")
 const matter = require("gray-matter")
