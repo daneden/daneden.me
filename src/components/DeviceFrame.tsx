@@ -8,8 +8,6 @@ export default function DeviceFrame({ children }: { children: ReactNode }) {
       </figure>
       <style jsx>{`
         .device {
-          transform: translateZ(-1px) scale(200%);
-          transform-style: preserve-3d;
           --device-wash: #fefefe;
 
           display: block;

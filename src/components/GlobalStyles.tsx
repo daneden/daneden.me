@@ -86,7 +86,6 @@ const GlobalStyles = () => (
           padding-right: var(--sp-m);
           font-feature-settings: "ss02" 1;
           font-variant-alternates: stylistic(ss02);
-          perspective: 1px;
         }
 
         #__next {
