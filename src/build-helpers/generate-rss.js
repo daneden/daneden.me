@@ -90,6 +90,7 @@ postsMap.forEach(async function compilePost(post, path) {
     Video: emptyFunction,
     TypedSystemsButton: emptyFunction,
     Codepen: emptyFunction,
+    RedesignGallery: emptyFunction
   }
 
   const compiledContent = renderToString(
