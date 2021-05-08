@@ -51,13 +51,11 @@ const Header = ({ siteTitle }: HeaderProps) => {
           grid-template-columns: var(--grid-spec);
           grid-gap: var(--sp-xs);
           flex-wrap: wrap;
-          margin-bottom: var(--sp-s);
-          padding-top: var(--sp-s);
-          padding-left: var(--sp-s);
-          padding-right: var(--sp-s);
-          margin-left: calc(var(--sp-s) * -1);
-          margin-right: calc(var(--sp-s) * -1);
+          margin: 0 calc(var(--sp-m) * -1) var(--sp-s);
+          padding: var(--sp-s) var(--sp-s) 0;
           font-stretch: 125%;
+          font-size: var(--sp-s);
+          font-weight: 500;
         }
 
         header :global(a:hover, a:focus) {

@@ -36,12 +36,11 @@ const Media = ({
             width={cover.width}
           />
           <div>
-            <small className="badge">{type}</small>
             <p className="title zm">{title}</p>
-            <p className="small zm">{author}</p>
+            <p className="small meta zm">{author}</p>
             {quote && (
               <p
-                className="small zm"
+                className="small meta zm"
                 style={{
                   paddingTop: "var(--sp-xs)",
                 }}
@@ -58,7 +57,7 @@ const Media = ({
           display: grid;
           grid-gap: var(--sp-xs);
           grid-template-columns: var(--sp-xl) 1fr;
-          border-top: 1px solid;
+          border-top: 1px solid var(--meta-color);
         }
 
         /* Override Figure's margin-bottom */
