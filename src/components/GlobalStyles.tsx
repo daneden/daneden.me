@@ -159,7 +159,7 @@ const GlobalStyles = () => (
 
         h2 {
           font-size: var(--sp-l);
-          font-weight: 400;
+          font-weight: 300;
           hyphens: initial;
           margin-bottom: var(--sp-m);
           padding-top: var(--sp-s);
