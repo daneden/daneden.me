@@ -21,8 +21,8 @@ export default function HomePage() {
         maintain&nbsp;them.
       </p>
       <p>
-        You probably came here to <a href="/blog">read the blog</a> or see{" "}
-        <a href="/portfolio">my work</a>.
+        You probably came here to <Link href="/blog">read the blog</Link> or see{" "}
+        <Link href="/portfolio">my work</Link>.
       </p>
     </Layout>
   )
