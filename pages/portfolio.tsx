@@ -6,6 +6,11 @@ import LightswitchImage from "@/components/LightSwitchImage"
 export default function PortfolioPage() {
   return (
     <Layout frontMatter={{ title: "Portfolio" }}>
+      <style jsx global>{`
+        :root {
+          --site-color: blueviolet;
+        }
+      `}</style>
       <p>
         From independently designing and developing iOS apps, to helping scale
         design systems to support thousands of designers and engineers building

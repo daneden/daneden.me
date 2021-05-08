@@ -8,9 +8,11 @@ const GlobalStyles = () => (
         :root {
           color-scheme: light dark;
           --gray00: #faf7f7;
+          --gray05: #c2bcbc55;
           --gray10: #c2bcbc;
           --gray20: #8a8484;
           --gray30: #524e4e;
+          --gray35: #524e4e55;
           --gray40: #191818;
 
           --baseline: 1.6;
@@ -31,8 +33,10 @@ const GlobalStyles = () => (
           --sp-xxl: calc(var(--xxl) * 1rem);
 
           --container-width: 32rem;
-          --page-width: calc(var(--container-width) + (var(--baseline) * var(--m) * 2));
-          --content-width: calc(.25rem + (100vw - var(---page-width)) / 2);
+          --page-width: calc(
+            var(--container-width) + (var(--baseline) * var(--m) * 2)
+          );
+          --content-width: calc(0.25rem + (100vw - var(---page-width)) / 2);
 
           --breakpoint-narrow: 50em;
           --breakpoint-medium: 64em;
@@ -139,7 +143,8 @@ const GlobalStyles = () => (
           text-decoration: none;
         }
 
-        h1, .h1 {
+        h1,
+        .h1 {
           font-size: var(--sp-xl);
           font-weight: 200;
           hyphens: initial;
