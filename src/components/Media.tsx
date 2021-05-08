@@ -21,7 +21,6 @@ const Media = ({
   quote,
   title,
   url,
-  type = "book",
 }: MediaData) => {
   return (
     <>
