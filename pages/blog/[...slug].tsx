@@ -59,6 +59,10 @@ function buildComponentMap(source: string) {
       regex: /<RedesignGallery/,
       component: dynamic(() => import("@/components/RedesignGallery")),
     },
+    SaturationDemo: {
+      regex: /<SaturationDemo/,
+      component: dynamic(() => import("@/components/blog/SaturationDemo")),
+    },
   }
 
   // Search the passed string for component instances and include them if

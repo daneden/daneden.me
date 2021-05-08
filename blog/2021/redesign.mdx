@@ -19,6 +19,10 @@ categories:
     }
 `}</style>
 
+## Table of Contents
+
+## Prelude
+
 It’s almost parody how common it is for designers to frequently and publicly
 redesign their website.
 [Ethan Marcotte](https://ethanmarcotte.com/wrote/let-a-website-be-a-worry-stone/)
@@ -68,7 +72,7 @@ share some of those projects with a bit more depth.
 Following the footsteps of others, I’m hoping to document this process in the
 public eye, with this blog post as my first stop on the journey.
 
-## April 29, 2021
+## April 29, 2021: Type
 
 This morning, I made the first opinionated design choice: the typeface.
 
@@ -83,11 +87,11 @@ However, dear reader, now is as good a time as any to admit that I am _obsessed_
 with street signage typography.
 
 <Image
-  src={`2021/04/transport.jpg`}
-  width={1100}
-  height={800}
-  caption={`Transport, the typeface used in British road signs, has been in use since the 1960s. Image courtesy of St Bride Library`}
-  alt={`A British road sign for the A46, set in the Transport typeface, with distances to Lincoln, Newark, Nottingham, and Leicester`}
+    src={`2021/04/transport.jpg`}
+    width={1100}
+    height={800}
+    caption={`Transport, the typeface used in British road signs, has been in use since the 1960s. Image courtesy of St Bride Library`}
+    alt={`A British road sign for the A46, set in the Transport typeface, with distances to Lincoln, Newark, Nottingham, and Leicester`}
 />
 
 I’ve wanted for a long time to have an excuse to use
@@ -100,3 +104,52 @@ performant websites; so that’s what I’ve picked, for now at least.
 Who knows whether Overpass will end up in the final version of this iteration,
 but right now I feel good about it. It feels utilitarian without being cold, and
 satisfies a personal, selfish itch.
+
+## May 8, 2021: Colour
+
+Today’s challenge is colour. For a while, my site has been almost entirely
+monochromatic: almost-black on almost-white, with a fairly exact medium gray for
+highlights like links.
+
+Monochrome is very much my “aesthetic”, but I’ve also been itching to use colour
+as a way to (subtly) introduce a bit more personality into the site. I’ve also
+been enamoured of the idea of “art direction” for specific pages for some time,
+allowing different pages to take on entirely different appearances.
+[Trent Walton](https://trentwalton.com/2013/02/07/where-to-start/)’s website
+does an incredible job with this. I’m far too lazy and/or stubborn about code
+cleanliness to pursue quite the same degree of art direction for different
+pages, but colour feels like a good start.
+
+On this blog post, for example, the page takes on a slightly greenish hue
+compared to the rest of them (where I’ve also moved from gray and blue to a
+warmer pinkish hue and crimson links).
+
+I’m also trying to be a bit more intentional with the palettes I’m using. For
+example, in the previous, monochromatic grayscale version of the site, I
+basically only had to worry about three shades of completely desaturated gray:
+almost-black, almost-white, and bang-in-the-middle gray. But now, I want my
+tertiary and quarternary colours to be sensibly familial with the primary and
+secondary colours, which introduces all sorts of complexities.
+
+Generally speaking, as colours get darker, they ought to become more saturated
+to maintain relative darkness; likewise, not all hues take on the same
+appearance with equal lightness and saturation.
+
+<SaturationDemo />
+
+From a developer experience point of view, I’d love to be able to designate one
+or two specific colours I’d like to use in a palette, and have an algorithm
+generate a smooth curve through those colours—but as I mentioned above, I’m
+quite lazy. Maybe in the future, but today, I’m relying on
+[ColorBox](https://colorbox.io) to help me.
+
+After a couple of hours of tinkering, I also decided to up the ante on making
+the site a bit more expressive and changed the typeface to
+[Archivo Variable](https://fonts.google.com/specimen/Archivo). This lets me load
+one font from Google’s servers and then get total creative control over its
+appearance; weight, width, and italics. The result is a playful wide font in the
+site banner, all-business condensed headings, and a slight width increase for
+smaller settings like captions.
+
+One more touch: a vibrant, saturated site banner. A real statement piece. We'll
+see how long it takes for me to tire of it.

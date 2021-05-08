@@ -49,10 +49,7 @@ function Metatags(props: MetatagsProps): ReactElement<typeof Head> {
       <link color="#888" href="/images/favicon.svg" rel="mask-icon"></link>
 
       {/* Fonts */}
-      <link
-        href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=JetBrains+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-        rel="stylesheet"
-      />
+      <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=JetBrains+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
 
       {dnsPrefetchURLs.map((url, index) => [
         <link href={url} key={`preconnect-${index}`} rel="preconnect" />,

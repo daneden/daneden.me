@@ -51,7 +51,7 @@ const GlobalStyles = () => (
             minmax(0, 1fr);
 
           --font-mono: "JetBrains Mono", monospace;
-          --font-body: "Overpass", system-ui, -apple-system, sans-serif;
+          --font-body: "Archivo", system-ui, -apple-system, sans-serif;
         }
 
         @media (prefers-color-scheme: dark) {
@@ -96,7 +96,7 @@ const GlobalStyles = () => (
         ul,
         ol {
           margin-bottom: var(--sp-m);
-          padding-left: var(--sp-m);
+          padding-left: var(--sp-l);
         }
 
         a {
@@ -140,14 +140,14 @@ const GlobalStyles = () => (
         }
 
         h1, .h1 {
-          font-size: var(--sp-l);
-          font-weight: 600;
+          font-size: var(--sp-xl);
+          font-weight: 200;
           hyphens: initial;
-          letter-spacing: -0.015em;
           line-height: 1.1;
           margin-bottom: var(--sp-m);
           padding-bottom: var(--sp-l);
           padding-top: var(--sp-xl);
+          font-stretch: 25%;
         }
 
         blockquote {
@@ -158,18 +158,18 @@ const GlobalStyles = () => (
         }
 
         h2 {
-          font-size: var(--sp-m);
-          font-weight: 600;
+          font-size: var(--sp-l);
+          font-weight: 400;
           hyphens: initial;
           margin-bottom: var(--sp-m);
           padding-top: var(--sp-s);
+          font-stretch: 110%;
         }
 
         h3 {
           font-size: var(--sp-m);
-          font-weight: 400;
+          font-weight: 700;
           hyphens: initial;
-          font-style: italic;
         }
 
         hr {
@@ -184,8 +184,8 @@ const GlobalStyles = () => (
           background-color: var(--mark-color);
           border-radius: var(--sp-xxs);
           color: inherit;
-          margin-left: -var(--sp-xxs);
-          margin-right: -var(--sp-xxs);
+          margin-left: calc(var(--sp-xxs) * -1);
+          margin-right: calc(var(--sp-xxs) * -1);
           padding-left: var(--sp-xxs);
           padding-right: var(--sp-xxs);
         }
@@ -213,7 +213,7 @@ const GlobalStyles = () => (
           line-height: 1.5;
           overflow: auto;
           padding: var(--sp-xs);
-          margin: 0 -var(--sp-xs);
+          margin: 0 calc(var(--sp-xs) * -1);
           vertical-align: baseline;
           white-space: pre;
           margin-bottom: var(--sp-m);
@@ -253,6 +253,7 @@ const GlobalStyles = () => (
           font-size: var(--sp-s);
           letter-spacing: 0.025em;
           line-height: var(--baseline);
+          font-stretch: 105%;
         }
 
         .meta,

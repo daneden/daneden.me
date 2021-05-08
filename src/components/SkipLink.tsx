@@ -10,7 +10,7 @@ const SkipLink = () => (
         background-color: var(--highlight-color);
         color: var(--text-color);
         height: 0;
-        margin: 0 -var(--sp-m);
+        margin: 0 calc(var(--sp-m) * -1);
         padding: var(--sp-xs) var(--sp-m);
         position: absolute;
         top: -100%;

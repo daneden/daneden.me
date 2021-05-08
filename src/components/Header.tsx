@@ -45,13 +45,23 @@ const Header = ({ siteTitle }: HeaderProps) => {
       </header>
       <style jsx>{`
         header {
-          border-bottom: 1px solid;
+          background-color: var(--site-color);
+          color: var(--gray00);
           display: grid;
           grid-template-columns: var(--grid-spec);
           grid-gap: var(--sp-xs);
           flex-wrap: wrap;
           margin-bottom: var(--sp-s);
           padding-top: var(--sp-s);
+          padding-left: var(--sp-s);
+          padding-right: var(--sp-s);
+          margin-left: calc(var(--sp-s) * -1);
+          margin-right: calc(var(--sp-s) * -1);
+          font-stretch: 125%;
+        }
+
+        header :global(a:hover, a:focus) {
+          color: var(--gray40);
         }
 
         nav :global(ul) {
