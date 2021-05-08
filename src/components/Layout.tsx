@@ -3,7 +3,6 @@ import formatDate from "@/utils/formatDate"
 import widont from "@/utils/widont"
 import { ReactNode } from "react"
 import siteConfig from "../data/siteconfig.json"
-import Atoms from "@/components/designSystem/atoms"
 import Footer from "./Footer"
 import GlobalStyles from "./GlobalStyles"
 import Header from "./Header"
@@ -55,8 +54,8 @@ const Content = ({ frontMatter, children }: LayoutProps) => {
 
       <style jsx>{`
         header {
-          margin-bottom: ${Atoms.spacing.medium};
-          padding-bottom: ${Atoms.spacing.medium};
+          margin-bottom: var(--sp-m);
+          padding-bottom: var(--sp-m);
         }
 
         header :global(h1) {

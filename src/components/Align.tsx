@@ -1,5 +1,3 @@
-import Atoms from "./designSystem/atoms"
-
 const Subject = ({
   children,
   className,
@@ -15,13 +13,13 @@ const Subject = ({
         z-index: 1;
       }
 
-      @media (min-width: ${Atoms.breakpoints.narrow}) {
+      @media (min-width: 50em) {
         div {
           width: 40%;
         }
       }
 
-      @media (min-width: ${Atoms.breakpoints.medium}) {
+      @media (min-width: 64em) {
         div {
           width: 50%;
         }
@@ -30,16 +28,16 @@ const Subject = ({
       .left {
         float: left;
         margin-left: -25%;
-        margin-right: ${Atoms.spacing.medium};
+        margin-right: var(--sp-m);
       }
 
       .right {
         float: right;
         margin-right: -25%;
-        margin-left: ${Atoms.spacing.medium};
+        margin-left: var(--sp-m);
       }
 
-      @media (max-width: ${Atoms.breakpoints.medium}) {
+      @media (max-width: 64em) {
         .left {
           margin-left: 0;
         }
@@ -49,7 +47,7 @@ const Subject = ({
         }
       }
 
-      @media (max-width: ${Atoms.breakpoints.narrow}) {
+      @media (max-width: 50em) {
         .left,
         .right {
           float: none;

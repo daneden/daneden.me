@@ -1,5 +1,4 @@
 import { ReactNode } from "react"
-import Atoms from "./designSystem/atoms"
 
 interface WrapperProps {
   id?: string
@@ -15,12 +14,12 @@ export default function Wrapper({ id = "content", children }: WrapperProps) {
       <style jsx>{`
         div {
           display: grid;
-          grid-gap: ${Atoms.spacing.medium};
+          grid-gap: var(--sp-m);
           grid-template-columns: var(--grid-spec);
           flex-grow: 1;
         }
 
-        @media (max-width: ${Atoms.breakpoints.narrow}) {
+        @media (max-width: 50em) {
           div {
             display: block;
           }

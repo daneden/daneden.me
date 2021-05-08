@@ -1,4 +1,3 @@
-import Atoms from "@/components/designSystem/atoms"
 import Link from "next/link"
 
 export default function Footer() {
@@ -15,10 +14,9 @@ export default function Footer() {
       <style jsx>{`
         footer {
           border-top: 1px solid;
-          font-family: ${Atoms.font.family.body};
-          margin-top: ${Atoms.spacing.large};
-          padding-bottom: ${Atoms.spacing.large};
-          padding-top: ${Atoms.spacing.small};
+          margin-top: var(--sp-l);
+          padding-bottom: var(--sp-l);
+          padding-top: var(--sp-s);
           color: var(--meta-color);
           display: grid;
           grid-template-columns: var(--grid-spec);

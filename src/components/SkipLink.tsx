@@ -1,4 +1,3 @@
-import Atoms from "@/components/designSystem/atoms"
 import Link from "next/link"
 
 const SkipLink = () => (
@@ -8,17 +7,17 @@ const SkipLink = () => (
     </nav>
     <style jsx>{`
       nav {
-        background-color: ${Atoms.colors.highlight};
-        color: ${Atoms.colors.text};
+        background-color: var(--highlight-color);
+        color: var(--text-color);
         height: 0;
-        margin: 0 -${Atoms.spacing.medium};
-        padding: ${Atoms.spacing.xsmall} ${Atoms.spacing.medium};
+        margin: 0 -var(--sp-m);
+        padding: var(--sp-xs) var(--sp-m);
         position: absolute;
         top: -100%;
       }
 
       nav :global(a) {
-        --hover-color: ${Atoms.colors.text};
+        --hover-color: var(--text-color);
       }
 
       nav:focus-within {

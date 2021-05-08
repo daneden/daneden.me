@@ -1,6 +1,5 @@
 import { useRouter } from "next/router"
 import React from "react"
-import Atoms from "./designSystem/atoms"
 import PlainLink from "./PlainLink"
 import PlainList from "./PlainList"
 
@@ -49,18 +48,18 @@ const Header = ({ siteTitle }: HeaderProps) => {
           border-bottom: 1px solid;
           display: grid;
           grid-template-columns: var(--grid-spec);
-          grid-gap: ${Atoms.spacing.xsmall};
+          grid-gap: var(--sp-xs);
           flex-wrap: wrap;
-          margin-bottom: ${Atoms.spacing.small};
-          padding-top: ${Atoms.spacing.small};
+          margin-bottom: var(--sp-s);
+          padding-top: var(--sp-s);
         }
 
         nav :global(ul) {
           display: flex;
-          gap: ${Atoms.spacing.medium};
+          gap: var(--sp-s);
         }
 
-        @media (max-width: ${Atoms.breakpoints.medium}) {
+        @media (max-width: 64em) {
           header {
             grid-template-columns: 1fr;
           }

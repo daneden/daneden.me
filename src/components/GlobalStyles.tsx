@@ -1,4 +1,3 @@
-import Atoms from "./designSystem/atoms"
 import SyntaxHighlight from "@/components/SyntaxHighlight"
 
 const GlobalStyles = () => (
@@ -8,26 +7,58 @@ const GlobalStyles = () => (
       {`
         :root {
           color-scheme: light dark;
-          --site-color: ${Atoms.colors.siteLight};
-          --text-color: ${Atoms.colors.text};
-          --meta-color: ${Atoms.colors.blackAlpha};
-          --wash-color: ${Atoms.colors.wash};
-          --mark-color: ${Atoms.colors.mark};
-          --highlight-color: ${Atoms.colors.highlight};
-          --font-mono: ${Atoms.font.family.mono};
+          --gray00: #faf7f7;
+          --gray10: #c2bcbc;
+          --gray20: #8a8484;
+          --gray30: #524e4e;
+          --gray40: #191818;
+
+          --baseline: 1.6;
+          --xxs: 0.125;
+          --xs: 0.5;
+          --s: 0.75;
+          --m: 1;
+          --l: 1.5;
+          --xl: 3;
+          --xxl: 4;
+
+          --sp-xxs: calc(var(--xxs) * 1rem);
+          --sp-xs: calc(var(--xs) * 1rem);
+          --sp-s: calc(var(--s) * 1rem);
+          --sp-m: calc(var(--m) * 1rem);
+          --sp-l: calc(var(--l) * 1rem);
+          --sp-xl: calc(var(--xl) * 1rem);
+          --sp-xxl: calc(var(--xxl) * 1rem);
+
+          --container-width: 32rem;
+          --page-width: calc(var(--container-width) + (var(--baseline) * var(--m) * 2));
+          --content-width: calc(.25rem + (100vw - var(---page-width)) / 2);
+
+          --breakpoint-narrow: 50em;
+          --breakpoint-medium: 64em;
+
+          --site-color: crimson;
+          --text-color: var(--gray40);
+          --meta-color: var(--gray30);
+          --wash-color: var(--gray00);
+          --mark-color: rgba(255, 200, 0, 0.15);
+          --highlight-color: #ffc800;
           --hover-color: var(--site-color);
           --code-wash: #fff;
           --code-color: #222;
-          --grid-spec: minmax(0, 1fr) minmax(auto, ${Atoms.widths.container})
+
+          --grid-spec: minmax(0, 1fr) minmax(auto, var(--container-width))
             minmax(0, 1fr);
+
+          --font-mono: "JetBrains Mono", monospace;
+          --font-body: "Overpass", system-ui, -apple-system, sans-serif;
         }
 
         @media (prefers-color-scheme: dark) {
           :root {
-            --site-color: ${Atoms.colors.siteDark};
-            --text-color: ${Atoms.colors.wash};
-            --meta-color: ${Atoms.colors.whiteAlpha};
-            --wash-color: ${Atoms.colors.text};
+            --text-color: var(--gray00);
+            --meta-color: var(--gray10);
+            --wash-color: var(--gray40);
             --code-wash: #222;
             --code-color: #eee;
           }
@@ -41,20 +72,21 @@ const GlobalStyles = () => (
 
         video {
           display: block;
-          margin-bottom: ${Atoms.spacing.medium};
+          margin-bottom: var(--sp-m);
           max-width: 100%;
         }
 
         html {
           background-color: var(--wash-color);
           color: var(--text-color);
-          font-family: ${Atoms.font.family.body};
+          font-family: var(--font-body);
           font-size: clamp(100%, 2.5vw, 125%);
-          line-height: ${Atoms.baseline};
-          padding-left: ${Atoms.spacing.medium};
-          padding-right: ${Atoms.spacing.medium};
+          line-height: var(--baseline);
+          padding-left: var(--sp-m);
+          padding-right: var(--sp-m);
           font-feature-settings: "ss02" 1;
           font-variant-alternates: stylistic(ss02);
+          perspective: 1px;
         }
 
         #__next {
@@ -64,8 +96,8 @@ const GlobalStyles = () => (
 
         ul,
         ol {
-          margin-bottom: ${Atoms.spacing.medium};
-          padding-left: ${Atoms.spacing.medium};
+          margin-bottom: var(--sp-m);
+          padding-left: var(--sp-m);
         }
 
         a {
@@ -85,9 +117,9 @@ const GlobalStyles = () => (
         }
 
         .footnotes li {
-          margin-bottom: ${Atoms.spacing.xsmall};
-          font-size: ${Atoms.font.size.small};
-          color: var(--meta-color, ${Atoms.colors.meta});
+          margin-bottom: var(--sp-xs);
+          font-size: var(--sp-s);
+          color: var(--meta-color);
           letter-spacing: "0.025em";
         }
 
@@ -108,35 +140,34 @@ const GlobalStyles = () => (
           text-decoration: none;
         }
 
-        h1 {
-          font-family: ${Atoms.font.family.display};
-          font-size: ${Atoms.font.size.h1};
+        h1, .h1 {
+          font-size: var(--sp-l);
           font-weight: 600;
           hyphens: initial;
           letter-spacing: -0.015em;
           line-height: 1.1;
-          margin-bottom: ${Atoms.spacing.medium};
-          padding-bottom: ${Atoms.spacing.large};
-          padding-top: ${Atoms.spacing.xlarge};
+          margin-bottom: var(--sp-m);
+          padding-bottom: var(--sp-l);
+          padding-top: var(--sp-xl);
         }
 
         blockquote {
           border-left: 2px solid var(--site-color);
           font-style: italic;
-          padding-left: ${Atoms.spacing.medium};
-          margin-bottom: ${Atoms.spacing.medium};
+          padding-left: var(--sp-m);
+          margin-bottom: var(--sp-m);
         }
 
         h2 {
-          font-size: ${Atoms.font.size.h2};
+          font-size: var(--sp-m);
           font-weight: 600;
           hyphens: initial;
-          margin-bottom: ${Atoms.spacing.medium};
-          padding-top: ${Atoms.spacing.small};
+          margin-bottom: var(--sp-m);
+          padding-top: var(--sp-s);
         }
 
         h3 {
-          font-size: ${Atoms.font.size.regular};
+          font-size: var(--sp-m);
           font-weight: 400;
           hyphens: initial;
           font-style: italic;
@@ -144,24 +175,24 @@ const GlobalStyles = () => (
 
         hr {
           border: 0;
-          border-top: 1px solid var(--meta-color, ${Atoms.colors.meta});
+          border-top: 1px solid var(--meta-color);
 
           display: block;
-          margin: ${Atoms.spacing.large} 0;
+          margin: var(--sp-l) 0;
         }
 
         mark {
-          background-color: ${Atoms.colors.mark};
-          border-radius: ${Atoms.spacing.xxsmall};
+          background-color: var(--mark-color);
+          border-radius: var(--sp-xxs);
           color: inherit;
-          margin-left: -${Atoms.spacing.xxsmall};
-          margin-right: -${Atoms.spacing.xxsmall};
-          padding-left: ${Atoms.spacing.xxsmall};
-          padding-right: ${Atoms.spacing.xxsmall};
+          margin-left: -var(--sp-xxs);
+          margin-right: -var(--sp-xxs);
+          padding-left: var(--sp-xxs);
+          padding-right: var(--sp-xxs);
         }
 
         p {
-          margin-bottom: ${Atoms.spacing.medium};
+          margin-bottom: var(--sp-m);
         }
 
         pre,
@@ -171,7 +202,7 @@ const GlobalStyles = () => (
           background-color: var(--code-wash);
           box-shadow: 0 1px 3px rgba(0, 0, 0, 0.125);
           border-radius: 0.5em;
-          font-family: ${Atoms.font.family.mono};
+          font-family: var(--font-mono);
           font-size: 0.875rem;
           line-height: 1;
           letter-spacing: -0.025em;
@@ -182,11 +213,11 @@ const GlobalStyles = () => (
           display: block;
           line-height: 1.5;
           overflow: auto;
-          padding: ${Atoms.spacing.xsmall};
-          margin: 0 -${Atoms.spacing.xsmall};
+          padding: var(--sp-xs);
+          margin: 0 -var(--sp-xs);
           vertical-align: baseline;
           white-space: pre;
-          margin-bottom: ${Atoms.spacing.medium};
+          margin-bottom: var(--sp-m);
         }
 
         pre :global(code) {
@@ -201,7 +232,7 @@ const GlobalStyles = () => (
           flex-direction: column;
           justify-content: center;
           writing-mode: horizontal-tb;
-          margin-bottom: ${Atoms.spacing.medium};
+          margin-bottom: var(--sp-m);
         }
 
         figure :global(img) {
@@ -213,16 +244,16 @@ const GlobalStyles = () => (
 
         figure :global(figcaption) {
           order: 3;
-          margin-top: ${Atoms.spacing.xxsmall};
+          margin-top: var(--sp-xxs);
           color: var(--meta-color);
         }
 
         small,
         .small,
         figcaption {
-          font-size: ${Atoms.font.size.small};
+          font-size: var(--sp-s);
           letter-spacing: 0.025em;
-          line-height: ${Atoms.baseline};
+          line-height: var(--baseline);
         }
 
         .meta,
@@ -233,30 +264,30 @@ const GlobalStyles = () => (
 
         table {
           hyphens: initial;
-          margin-bottom: ${Atoms.spacing.medium};
+          margin-bottom: var(--sp-m);
           border-collapse: collapse;
         }
 
         table :global(th),
         table :global(td) {
           vertical-align: top;
-          padding: ${Atoms.spacing.xsmall};
-          padding-top: ${Atoms.spacing.xxsmall};
-          padding-bottom: ${Atoms.spacing.xxsmall};
+          padding: var(--sp-xs);
+          padding-top: var(--sp-xxs);
+          padding-bottom: var(--sp-xxs);
         }
 
         table :global(th) {
           font-weight: 600;
-          font-size: ${Atoms.font.size.small};
+          font-size: var(--sp-s);
           border-bottom: 1px solid;
         }
 
         aside {
-          background-color: ${Atoms.colors.mark};
-          border-left: 2px solid ${Atoms.colors.highlight};
+          background-color: var(--mark-color);
+          border-left: 2px solid var(--highlight-color);
           color: inherit;
-          margin-bottom: ${Atoms.spacing.medium};
-          padding: ${Atoms.spacing.small};
+          margin-bottom: var(--sp-m);
+          padding: var(--sp-s);
         }
 
         .zm {

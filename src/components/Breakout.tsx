@@ -1,5 +1,4 @@
 import { ReactNode, useEffect } from "react"
-import Atoms from "@/components/designSystem/atoms"
 
 interface Props {
   children: ReactNode
@@ -27,7 +26,7 @@ export default function Breakout({ children }: Props) {
         .container {
           width: calc(100vw - var(--scrollbar-width, 0px));
           margin-left: -50vw;
-          padding: ${Atoms.spacing.small};
+          padding: var(--sp-s);
         }
       `}</style>
     </>

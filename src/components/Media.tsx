@@ -1,4 +1,3 @@
-import Atoms from "@/components/designSystem/atoms"
 import PlainLink from "@/components/PlainLink"
 import Image from "./Image"
 
@@ -32,7 +31,7 @@ const Media = ({
           <Image
             alt={`The media cover for “${title}” by ${author}`}
             height={cover.height}
-            sizes={Atoms.spacing.xlarge}
+            sizes={"3rem"}
             src={cover.src}
             width={cover.width}
           />
@@ -44,7 +43,7 @@ const Media = ({
               <p
                 className="small zm"
                 style={{
-                  paddingTop: Atoms.spacing.xxsmall,
+                  paddingTop: "var(--sp-xs)",
                 }}
               >
                 <em>‘{quote}’</em>
@@ -57,8 +56,8 @@ const Media = ({
         .media-container {
           align-items: start;
           display: grid;
-          grid-gap: ${Atoms.spacing.xsmall};
-          grid-template-columns: ${Atoms.spacing.xlarge} 1fr;
+          grid-gap: var(--sp-xs);
+          grid-template-columns: var(--sp-xl) 1fr;
           border-top: 1px solid;
         }
 

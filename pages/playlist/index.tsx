@@ -1,5 +1,4 @@
 import Layout from "@/components/Layout"
-import Atoms from "@/designSystem/atoms"
 import { GetStaticProps } from "next"
 import Media, { MediaData } from "@/components/Media"
 import widont from "@/utils/widont"
@@ -49,7 +48,7 @@ export default function LibraryPage({ entries }: { entries: MediaData[] }) {
           align-content: start;
           place-items: start;
           display: grid;
-          grid-gap: ${Atoms.spacing.large};
+          grid-gap: var(--sp-l);
           grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
           justify-items: stretch;
         }

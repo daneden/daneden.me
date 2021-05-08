@@ -1,5 +1,4 @@
 import Layout from "@/components/Layout"
-import Atoms from "@/components/designSystem/atoms"
 import Link from "next/link"
 
 export default function FourOhFourPage() {
@@ -8,8 +7,8 @@ export default function FourOhFourPage() {
       <style global jsx>
         {`
           :root {
-            --wash-color: ${Atoms.colors.highlight} !important;
-            --text-color: ${Atoms.colors.text} !important;
+            --wash-color: var(--highlight-color) !important;
+            --text-color: var(--text-color) !important;
           }
         `}
       </style>

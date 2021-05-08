@@ -8,6 +8,10 @@ export default function DeviceFrame({ children }: { children: ReactNode }) {
       </figure>
       <style jsx>{`
         .device {
+          transform: translateZ(-1px) scale(200%);
+          transform-style: preserve-3d;
+          --device-wash: #fefefe;
+
           display: block;
           box-sizing: initial;
           --inset-width: 1.5ch;
@@ -21,15 +25,21 @@ export default function DeviceFrame({ children }: { children: ReactNode }) {
           height: calc(var(--width) * var(--aspect-ratio));
           border-radius: var(--radius);
           padding: var(--inset-width);
-          background-color: var(--wash-color);
-          margin: 0 auto;
+          background-color: var(--device-wash);
+          margin: 0 auto var(--sp-xl);
           box-shadow:
           /* Inner lowlight */ inset 0 0
               calc(var(--inset-width) * 0.35) calc(var(--inset-width) * 0.1)
-              var(--wash-color),
+              var(--device-wash),
             /* Inner highlight */ inset 0 0 var(--inset-width)
               calc(var(--inset-width) * 0.25) rgba(128, 128, 128, 0.2),
             /* Drop shadow */ 0 1.5rem 3rem rgba(0, 0, 0, 0.1);
+        }
+
+        @media (prefers-color-scheme: dark) {
+          .device {
+            --device-wash: #111;
+          }
         }
 
         .device :global(img) {
@@ -46,7 +56,7 @@ export default function DeviceFrame({ children }: { children: ReactNode }) {
           transform: translateX(-50%);
           border-bottom-left-radius: calc(var(--inset-width));
           border-bottom-right-radius: calc(var(--inset-width));
-          background-color: var(--wash-color);
+          background-color: var(--device-wash);
         }
 
         .device-inner {

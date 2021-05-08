@@ -1,5 +1,4 @@
 import Image from "@/components/Image"
-import Atoms from "@/designSystem/atoms"
 import Breakout from "./Breakout"
 
 const imageNames = [
@@ -58,7 +57,7 @@ export default function RedesignGallery() {
       <style jsx>{`
         .gallery {
           display: grid;
-          gap: ${Atoms.spacing.xsmall};
+          gap: var(--sp-xs);
           grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
         }
 

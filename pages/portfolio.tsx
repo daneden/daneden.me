@@ -2,7 +2,6 @@ import Layout from "@/components/Layout"
 import Link from "next/link"
 import DeviceFrame from "@/components/DeviceFrame"
 import LightswitchImage from "@/components/LightSwitchImage"
-import atoms from "@/components/designSystem/atoms"
 
 export default function PortfolioPage() {
   return (
@@ -16,7 +15,7 @@ export default function PortfolioPage() {
       </p>
       <section>
         <header className="portfolio-header">
-          <h3 className="portfolio-title">Solstice</h3>
+          <h3 className="h1">Solstice</h3>
           <small className="meta">Design &amp; Development</small>
         </header>
         <p>
@@ -42,7 +41,7 @@ export default function PortfolioPage() {
 
       <section>
         <header className="portfolio-header">
-          <h3 className="portfolio-title">Eventually</h3>
+          <h3 className="h1">Eventually</h3>
           <small className="meta">Design &amp; Development</small>
         </header>
         <p>
@@ -69,7 +68,7 @@ export default function PortfolioPage() {
 
       <section>
         <header className="portfolio-header">
-          <h3 className="portfolio-title">Zeitgeist</h3>
+          <h3 className="h1">Zeitgeist</h3>
           <small className="meta">Design &amp; Development</small>
         </header>
         <p>
@@ -280,12 +279,10 @@ export default function PortfolioPage() {
           margin-bottom: 1.5rem;
         }
 
-        .portfolio-title {
-          line-height: 1;
-          font-family: ${atoms.font.family.display};
+        .h1 {
+          margin: 0;
+          padding: 0;
           font-style: normal;
-          font-size: ${atoms.font.size.h1};
-          font-weight: 600;
         }
       `}</style>
     </Layout>
