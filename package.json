@@ -20,7 +20,7 @@
     "prebuild": "yarn build:og-images && yarn build:feed",
     "postbuild": "next-sitemap",
     "dev": "next dev",
-    "lint": "eslint \"**/*.{js,jsx,ts,tsx,md,mdx}\"",
+    "lint": "eslint \"**/*.{js,jsx,ts,tsx,mdx}\"",
     "precommit": "lint-staged",
     "start": "next start",
     "prepare": "npx husky install"
