@@ -45,6 +45,7 @@ const Header = ({ siteTitle }: HeaderProps) => {
       </header>
       <style jsx>{`
         header {
+          font-family: var(--font-sans);
           background-color: var(--site-color);
           color: var(--gray00);
           display: grid;

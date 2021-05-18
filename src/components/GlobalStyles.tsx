@@ -55,7 +55,11 @@ const GlobalStyles = () => (
             minmax(0, 1fr);
 
           --font-mono: "JetBrains Mono", monospace;
-          --font-body: "Archivo", system-ui, -apple-system, sans-serif;
+          --font-sans: "Archivo", system-ui, -apple-system, sans-serif;
+          --font-serif: "Piazzolla", Georgia, serif;
+          --font-body: var(--font-serif);
+          --font-heading: var(--font-sans);
+          --font-caption: var(--font-sans);
         }
 
         @media (prefers-color-scheme: dark) {
@@ -145,6 +149,7 @@ const GlobalStyles = () => (
 
         h1,
         .h1 {
+          font-family: var(--font-heading);
           font-size: var(--sp-xl);
           font-weight: 200;
           hyphens: initial;
@@ -163,6 +168,7 @@ const GlobalStyles = () => (
         }
 
         h2 {
+          font-family: var(--font-heading);
           font-size: var(--sp-l);
           font-weight: 300;
           hyphens: initial;
@@ -172,6 +178,7 @@ const GlobalStyles = () => (
         }
 
         h3 {
+          font-family: var(--font-heading);
           font-size: var(--sp-m);
           font-weight: 700;
           hyphens: initial;
@@ -247,6 +254,7 @@ const GlobalStyles = () => (
         }
 
         figure :global(figcaption) {
+          font-family: var(--font-caption);
           order: 3;
           margin-top: var(--sp-xxs);
           color: var(--meta-color);
@@ -255,6 +263,7 @@ const GlobalStyles = () => (
         small,
         .small,
         figcaption {
+          font-family: var(--font-caption);
           font-size: var(--sp-s);
           letter-spacing: 0.025em;
           line-height: var(--baseline);
