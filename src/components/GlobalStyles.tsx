@@ -119,6 +119,11 @@ const GlobalStyles = () => (
           color: var(--hover-color);
         }
 
+        .footnotes {
+          font-family: var(--font-caption);
+          font-stretch: 105%;
+        }
+
         .footnotes ol {
           padding-left: 0;
         }
