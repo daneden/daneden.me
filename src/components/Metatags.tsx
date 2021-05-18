@@ -10,7 +10,7 @@ interface MetatagsProps {
   thumbnail: string
 }
 
-const dnsPrefetchURLs = ["https://stream.mux.com", "https://fonts.gstatic.com"]
+const dnsPrefetchURLs = ["https://stream.mux.com"]
 
 function Metatags(props: MetatagsProps): ReactElement<typeof Head> {
   const { title, description, url, pathname, thumbnail } = props
@@ -47,12 +47,6 @@ function Metatags(props: MetatagsProps): ReactElement<typeof Head> {
       {/* Favicon */}
       <link href="/images/favicon.svg" rel="icon" type="image/svg+xml" />
       <link color="#888" href="/images/favicon.svg" rel="mask-icon"></link>
-
-      {/* Fonts */}
-      <link
-        href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Archivo:ital,wdth,wght@1,62..125,100..900&family=JetBrains+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Piazzolla:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-        rel="stylesheet"
-      />
 
       {dnsPrefetchURLs.map((url, index) => [
         <link href={url} key={`preconnect-${index}`} rel="preconnect" />,

@@ -54,9 +54,6 @@ const Header = ({ siteTitle }: HeaderProps) => {
           flex-wrap: wrap;
           margin: 0 calc(var(--sp-m) * -1) var(--sp-s);
           padding: var(--sp-s) var(--sp-s) 0;
-          font-stretch: 125%;
-          font-size: var(--sp-s);
-          font-weight: 500;
         }
 
         header :global(a:hover, a:focus) {

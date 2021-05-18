@@ -55,10 +55,10 @@ const GlobalStyles = () => (
             minmax(0, 1fr);
 
           --font-mono: "JetBrains Mono", monospace;
-          --font-sans: "Archivo", system-ui, -apple-system, sans-serif;
-          --font-serif: "Piazzolla", Georgia, serif;
+          --font-sans: "Soehne", system-ui, -apple-system, sans-serif;
+          --font-serif: "Tiempos Text", Georgia, serif;
           --font-body: var(--font-serif);
-          --font-heading: var(--font-sans);
+          --font-heading: var(--font-serif);
           --font-caption: var(--font-sans);
         }
 
@@ -155,14 +155,13 @@ const GlobalStyles = () => (
         h1,
         .h1 {
           font-family: var(--font-heading);
-          font-size: var(--sp-xl);
-          font-weight: 200;
+          font-size: var(--sp-l);
+          font-weight: 400;
           hyphens: initial;
           line-height: 1.1;
           margin-bottom: var(--sp-m);
           padding-bottom: var(--sp-l);
           padding-top: var(--sp-xl);
-          font-stretch: 25%;
         }
 
         blockquote {
@@ -174,18 +173,18 @@ const GlobalStyles = () => (
 
         h2 {
           font-family: var(--font-heading);
-          font-size: var(--sp-l);
-          font-weight: 300;
+          font-size: var(--sp-m);
+          font-weight: 400;
+          font-style: italic;
           hyphens: initial;
           margin-bottom: var(--sp-m);
           padding-top: var(--sp-s);
-          font-stretch: 110%;
         }
 
         h3 {
-          font-family: var(--font-heading);
+          font-family: var(--font-sans);
           font-size: var(--sp-m);
-          font-weight: 700;
+          font-weight: 400;
           hyphens: initial;
         }
 
@@ -272,7 +271,6 @@ const GlobalStyles = () => (
           font-size: var(--sp-s);
           letter-spacing: 0.025em;
           line-height: var(--baseline);
-          font-stretch: 105%;
         }
 
         .meta,
