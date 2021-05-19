@@ -42,6 +42,7 @@ export default function HomePage() {
             width={512}
             height={512}
             alt="The app icon for Solstice"
+            sizes={"4rem"}
           />
         }
       />
@@ -55,6 +56,7 @@ export default function HomePage() {
             width={4000}
             height={6000}
             alt="A loaf of sourdough bread"
+            sizes={"4rem"}
           />
         }
       />
