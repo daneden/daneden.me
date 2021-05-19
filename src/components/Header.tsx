@@ -45,7 +45,10 @@ const Header = ({ siteTitle }: HeaderProps) => {
       </header>
       <style jsx>{`
         header {
-          font-family: var(--font-sans);
+          font-family: var(--font-sans-extended);
+          font-size: var(--sp-s);
+          font-weight: 700;
+          -webkit-font-smoothing: antialiased;
           background-color: var(--site-color);
           color: var(--gray00);
           display: grid;

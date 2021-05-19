@@ -56,6 +56,7 @@ const GlobalStyles = () => (
 
           --font-mono: "JetBrains Mono", monospace;
           --font-sans: "Soehne", system-ui, -apple-system, sans-serif;
+          --font-sans-extended: "Soehne Breit", var(--font-sans);
           --font-serif: "Tiempos Text", Georgia, serif;
           --font-body: var(--font-serif);
           --font-heading: var(--font-serif);
@@ -182,7 +183,7 @@ const GlobalStyles = () => (
         }
 
         h3 {
-          font-family: var(--font-sans);
+          font-family: var(--font-sans-extended);
           font-size: var(--sp-m);
           font-weight: 400;
           hyphens: initial;
