@@ -122,7 +122,6 @@ const GlobalStyles = () => (
 
         .footnotes {
           font-family: var(--font-caption);
-          font-stretch: 105%;
         }
 
         .footnotes ol {
