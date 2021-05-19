@@ -7,6 +7,7 @@
     url("../fonts/TiemposTextWeb-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -18,6 +19,7 @@
     url("../fonts/TiemposTextWeb-RegularItalic.woff") format("woff");
   font-weight: 400;
   font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
@@ -29,6 +31,7 @@
     url("../fonts/TiemposTextWeb-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -40,6 +43,7 @@
     url("../fonts/TiemposTextWeb-BoldItalic.woff") format("woff");
   font-weight: 700;
   font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
@@ -51,6 +55,7 @@
     url("../fonts/soehne-breit-web-buch.woff") format("woff");
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -62,6 +67,7 @@
     url("../fonts/soehne-breit-web-buch-kursiv.woff") format("woff");
   font-weight: 400;
   font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
@@ -73,6 +79,7 @@
     url("../fonts/soehne-breit-web-dreiviertelfett.woff") format("woff");
   font-weight: 700;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -85,6 +92,7 @@
     url("../fonts/soehne-breit-web-dreiviertelfett-kursiv.woff") format("woff");
   font-weight: 700;
   font-style: italic;
+  font-display: swap;
 }
 
 /* Soehne */
@@ -97,6 +105,7 @@
     url("../fonts/soehne-web-buch.woff") format("woff");
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -108,6 +117,7 @@
     url("../fonts/soehne-web-buch-kursiv.woff") format("woff");
   font-weight: 400;
   font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
@@ -119,6 +129,7 @@
     url("../fonts/soehne-web-dreiviertelfett.woff") format("woff");
   font-weight: 700;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -130,4 +141,5 @@
     url("../fonts/soehne-web-dreiviertelfett-kursiv.woff") format("woff");
   font-weight: 700;
   font-style: italic;
+  font-display: swap;
 }
