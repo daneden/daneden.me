@@ -55,14 +55,14 @@ async function main() {
 
 const soehne = path.resolve(
   process.cwd(),
-  "public",
+  "src",
   "fonts",
   "ogFonts",
   "Soehne.ttf"
 )
 const national = path.resolve(
   process.cwd(),
-  "public",
+  "src",
   "fonts",
   "ogFonts",
   "National2App-Regular.ttf"
