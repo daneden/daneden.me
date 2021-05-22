@@ -8,7 +8,7 @@ export default function PortfolioPage() {
     <Layout frontMatter={{ title: "Portfolio" }}>
       <style jsx global>{`
         :root {
-          --site-color: blueviolet;
+          --site-color: dodgerblue !important;
         }
       `}</style>
       <p>
