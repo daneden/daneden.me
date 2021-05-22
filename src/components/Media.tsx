@@ -15,13 +15,7 @@ export interface MediaData {
   type: "book" | "podcast" | "music"
 }
 
-const Media = ({
-  author,
-  cover,
-  quote,
-  title,
-  url,
-}: MediaData) => {
+const Media = ({ author, cover, quote, title, url }: MediaData) => {
   return (
     <>
       <PlainLink href={url}>
@@ -30,16 +24,16 @@ const Media = ({
           <Image
             alt={`The media cover for “${title}” by ${author}`}
             height={cover.height}
-            sizes={"3rem"}
+            sizes={"4rem"}
             src={cover.src}
             width={cover.width}
           />
           <div>
-            <p className="title zm">{title}</p>
+            <h3 className="title zm">{title}</h3>
             <p className="small meta zm">{author}</p>
             {quote && (
               <p
-                className="small meta zm"
+                className="small serif meta zm"
                 style={{
                   paddingTop: "var(--sp-xs)",
                 }}
@@ -55,8 +49,9 @@ const Media = ({
           align-items: start;
           display: grid;
           grid-gap: var(--sp-xs);
-          grid-template-columns: var(--sp-xl) 1fr;
+          grid-template-columns: var(--sp-xxl) 1fr;
           border-top: 1px solid var(--meta-color);
+          margin-bottom: var(--sp-m);
         }
 
         /* Override Figure's margin-bottom */

@@ -310,6 +310,14 @@ const GlobalStyles = () => (
         .zm {
           margin: 0;
         }
+
+        .serif {
+          font-family: var(--font-serif);
+        }
+
+        .sans {
+          font-family: var(--font-sans);
+        }
       `}
     </style>
   </>

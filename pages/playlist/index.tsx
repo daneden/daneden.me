@@ -28,31 +28,18 @@ const strippedTitle = (str: string): string =>
 export default function LibraryPage({ entries }: { entries: MediaData[] }) {
   return (
     <Layout frontMatter={{ title: "Playlist" }}>
-      <Breakout>
-        <div className="library">
-          {entries.map(({ title, author, quote, cover, url, type }) => (
-            <Media
-              author={author}
-              cover={cover}
-              key={title}
-              quote={quote}
-              title={title}
-              type={type}
-              url={url}
-            />
-          ))}
-        </div>
-      </Breakout>
-      <style jsx>{`
-        .library {
-          align-content: start;
-          place-items: start;
-          display: grid;
-          grid-gap: var(--sp-l);
-          grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-          justify-items: stretch;
-        }
-      `}</style>
+      {entries.map(({ title, author, quote, cover, url, type }) => (
+        <Media
+          author={author}
+          cover={cover}
+          key={title}
+          quote={quote}
+          title={title}
+          type={type}
+          url={url}
+        />
+      ))}
+
       <style jsx global>{`
         :root {
           --site-color: #888 !important;
