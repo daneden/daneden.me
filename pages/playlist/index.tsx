@@ -53,6 +53,11 @@ export default function LibraryPage({ entries }: { entries: MediaData[] }) {
           justify-items: stretch;
         }
       `}</style>
+      <style jsx global>{`
+        :root {
+          --site-color: #888 !important;
+        }
+      `}</style>
     </Layout>
   )
 }

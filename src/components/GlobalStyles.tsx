@@ -21,8 +21,8 @@ const GlobalStyles = () => (
           --s: 0.75;
           --m: 1;
           --l: 1.5;
-          --xl: 3;
-          --xxl: 4;
+          --xl: 2;
+          --xxl: 3;
 
           --sp-xxs: calc(var(--xxs) * 1rem);
           --sp-xs: calc(var(--xs) * 1rem);
@@ -154,9 +154,9 @@ const GlobalStyles = () => (
 
         h1,
         .h1 {
-          font-family: var(--font-heading);
-          font-size: var(--sp-l);
-          font-weight: 400;
+          font-family: var(--font-sans-extended);
+          font-size: var(--sp-xl);
+          font-weight: 700;
           hyphens: initial;
           line-height: 1.1;
           margin-bottom: var(--sp-m);

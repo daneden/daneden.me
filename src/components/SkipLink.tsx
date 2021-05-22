@@ -7,6 +7,7 @@ const SkipLink = () => (
     </nav>
     <style jsx>{`
       nav {
+        font-family: var(--font-sans);
         background-color: var(--highlight-color);
         color: var(--text-color);
         height: 0;
