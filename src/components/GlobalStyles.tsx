@@ -156,7 +156,7 @@ const GlobalStyles = () => (
         .h1 {
           font-family: var(--font-sans-extended);
           font-size: var(--sp-xl);
-          font-weight: 700;
+          font-weight: 400;
           hyphens: initial;
           line-height: 1.1;
           margin-bottom: var(--sp-m);

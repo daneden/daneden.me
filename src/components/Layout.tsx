@@ -41,11 +41,7 @@ const Content = ({ frontMatter, children }: LayoutProps) => {
         {!isRoot && (
           <header>
             <h1>{widont(title)}</h1>
-            {date && (
-              <p>
-                <time className="small">Published {formattedDate}</time>
-              </p>
-            )}
+            {date && <time className="small">Published {formattedDate}</time>}
           </header>
         )}
         {children}
@@ -54,11 +50,11 @@ const Content = ({ frontMatter, children }: LayoutProps) => {
 
       <style jsx>{`
         header {
-          margin-bottom: var(--sp-m);
-          padding-bottom: var(--sp-m);
+          margin-bottom: var(--sp-l);
+          padding-bottom: var(--sp-xl);
         }
 
-        header :global(h1) {
+        header > :global(h1) {
           margin-bottom: 0 !important;
           padding-bottom: 0 !important;
         }
