@@ -23,7 +23,7 @@ export default function Footer() {
         }
 
         .wrapper {
-          grid-column: 2 / 3;
+          grid-column: var(--center-column);
         }
       `}</style>
     </>
