@@ -19,18 +19,12 @@ export default function Wrapper({ id = "content", children }: WrapperProps) {
           flex-grow: 1;
         }
 
-        @media (max-width: 50em) {
-          div {
-            display: block;
-          }
-        }
-
         div:focus {
           outline: none;
         }
 
         main {
-          grid-column: 2 / 3;
+          grid-column: var(--center-column);
         }
       `}</style>
     </>

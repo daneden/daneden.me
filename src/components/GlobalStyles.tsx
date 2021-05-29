@@ -7,13 +7,13 @@ const GlobalStyles = () => (
       {`
         :root {
           color-scheme: light dark;
-          --gray00: #faf7f7;
-          --gray05: #c2bcbc55;
-          --gray10: #c2bcbc;
-          --gray20: #8a8484;
-          --gray30: #524e4e;
-          --gray35: #524e4e55;
-          --gray40: #191818;
+          --gray00: #fff5e9;
+          --gray05: #fcefd977;
+          --gray10: #fcefd9;
+          --gray20: #674e15;
+          --gray30: #3b2d12;
+          --gray35: #3b2d1255;
+          --gray40: #140e05;
 
           --baseline: 1.6;
           --xxs: 0.125;
@@ -21,7 +21,7 @@ const GlobalStyles = () => (
           --s: 0.75;
           --m: 1;
           --l: 1.5;
-          --xl: 2;
+          --xl: 2.25;
           --xxl: 3;
 
           --sp-xxs: calc(var(--xxs) * 1rem);
@@ -41,7 +41,7 @@ const GlobalStyles = () => (
           --breakpoint-narrow: 50em;
           --breakpoint-medium: 64em;
 
-          --site-color: crimson;
+          --site-color: #dd425c;
           --text-color: var(--gray40);
           --meta-color: var(--gray30);
           --wash-color: var(--gray00);
@@ -53,6 +53,7 @@ const GlobalStyles = () => (
 
           --grid-spec: minmax(0, 1fr) minmax(auto, var(--container-width))
             minmax(0, 1fr);
+          --center-column: 2 / 3;
 
           --font-mono: "JetBrains Mono", monospace;
           --font-sans: "Soehne", system-ui, -apple-system, sans-serif;
@@ -61,6 +62,13 @@ const GlobalStyles = () => (
           --font-body: var(--font-serif);
           --font-heading: var(--font-serif);
           --font-caption: var(--font-sans);
+        }
+
+        @media (max-width: 50em) {
+          :root {
+            --grid-spec: 1fr;
+            --center-column: 1 / -1;
+          }
         }
 
         @media (prefers-color-scheme: dark) {
@@ -156,7 +164,7 @@ const GlobalStyles = () => (
         .h1 {
           font-family: var(--font-sans-extended);
           font-size: var(--sp-xl);
-          font-weight: 400;
+          font-weight: 700;
           hyphens: initial;
           line-height: 1.1;
           margin-bottom: var(--sp-m);
@@ -182,7 +190,7 @@ const GlobalStyles = () => (
         }
 
         h3 {
-          font-family: var(--font-sans-extended);
+          font-family: var(--font-sans);
           font-size: var(--sp-m);
           font-weight: 400;
           hyphens: initial;

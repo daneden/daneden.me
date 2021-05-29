@@ -6,6 +6,7 @@ interface MediaCover {
   width: number
   height: number
 }
+
 export interface MediaData {
   author: string
   cover: MediaCover

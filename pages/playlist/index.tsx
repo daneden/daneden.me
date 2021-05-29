@@ -39,12 +39,6 @@ export default function LibraryPage({ entries }: { entries: MediaData[] }) {
           url={url}
         />
       ))}
-
-      <style jsx global>{`
-        :root {
-          --site-color: #888 !important;
-        }
-      `}</style>
     </Layout>
   )
 }

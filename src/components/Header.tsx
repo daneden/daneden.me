@@ -45,22 +45,11 @@ const Header = ({ siteTitle }: HeaderProps) => {
       </header>
       <style jsx>{`
         header {
-          font-family: var(--font-sans-extended);
-          font-size: var(--sp-s);
-          font-weight: 700;
-          -webkit-font-smoothing: antialiased;
-          background-color: var(--site-color);
-          color: var(--gray00);
           display: grid;
           grid-template-columns: var(--grid-spec);
           grid-gap: var(--sp-xs);
           flex-wrap: wrap;
-          margin: 0 calc(var(--sp-m) * -1) var(--sp-s);
-          padding: var(--sp-s) var(--sp-s) 0;
-        }
-
-        header :global(a:hover, a:focus) {
-          color: var(--gray40);
+          margin: var(--sp-s) 0;
         }
 
         nav :global(ul) {
@@ -69,8 +58,8 @@ const Header = ({ siteTitle }: HeaderProps) => {
         }
 
         @media (max-width: 64em) {
-          header {
-            grid-template-columns: 1fr;
+          header > :global(*) {
+            grid-column: var(--center-column);
           }
         }
       `}</style>
