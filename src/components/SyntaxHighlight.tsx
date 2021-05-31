@@ -44,10 +44,10 @@ export default function SyntaxHiglight(): ReactElement<unknown> {
         /* Code blocks */
         pre[class*="language-"] {
           box-sizing: content-box;
-          margin: 0.5em -1em;
+          margin: 0.5em calc(var(--sp-xs) * -1);
           margin-bottom: 1.5rem;
           overflow: auto;
-          padding: 1em;
+          padding: var(--sp-xs);
         }
 
         /* Inline code */
