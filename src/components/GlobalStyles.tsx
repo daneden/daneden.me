@@ -66,7 +66,7 @@ const GlobalStyles = () => (
 
         @media (max-width: 50em) {
           :root {
-            --grid-spec: 1fr;
+            --grid-spec: minmax(100%, 1fr);
             --center-column: 1 / -1;
           }
         }
