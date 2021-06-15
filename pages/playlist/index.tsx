@@ -3,7 +3,6 @@ import { GetStaticProps } from "next"
 import Media, { MediaData } from "@/components/Media"
 import widont from "@/utils/widont"
 import React from "react"
-import Breakout from "@/components/Breakout"
 
 interface AirtableRecord {
   fields: MediaData & {
