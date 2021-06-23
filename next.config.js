@@ -43,6 +43,11 @@ module.exports = {
         permanent: true,
         destination: "/blog/:year/:title",
       },
+      {
+        source: "/rss.xml",
+        permanent: true,
+        destination: "/feed.xml",
+      },
     ]
   },
 
