@@ -6,13 +6,24 @@ import FeatureTile from "@/components/FeatureTile"
 export default function HomePage() {
   return (
     <Layout>
-      <p>
+      <p className="image-container">
+        <span className="badge" aria-hidden={true}>
+          Employed
+        </span>
+        <span className="badge" aria-hidden={true}>
+          British
+        </span>
+        <span className="badge" aria-hidden={true}>
+          “Unicorn”
+        </span>
         <Image
           alt="Daniel Eden"
           height={200}
           src="2020/11/face.jpg"
           width={200}
         />
+      </p>
+      <p className="intro">
         Daniel Eden is a Design Manager at{" "}
         <Link href="https://facebook.com/business">Facebook</Link> in London,
         supporting Facebook’s Commerce organisation. He spends his time{" "}
@@ -68,6 +79,49 @@ export default function HomePage() {
     light, the challenges and opportunities of accessible design become more
     vividly obvious."
       />
+      <style jsx>{`
+        .intro {
+          z-index: 2;
+        }
+
+        .image-container {
+          position: relative;
+          padding-block-start: var(--sp-l);
+        }
+
+        .badge {
+          font-family: var(--font-sans-extended);
+          padding: 1rem 1.5rem;
+          border-radius: 100%;
+          background-color: tomato;
+          color: var(--wash-color);
+          position: absolute;
+          text-transform: uppercase;
+          z-index: 2;
+          font-size: 1.75rem;
+          letter-spacing: 0.05em;
+        }
+
+        .badge:nth-of-type(1) {
+          top: 2.5%;
+          left: -2.5%;
+          transform: rotate(-5deg);
+        }
+
+        .badge:nth-of-type(2) {
+          right: calc(var(--sp-xs) * -1);
+          top: 25%;
+          transform: rotate(5deg);
+          filter: hue-rotate(270deg);
+        }
+
+        .badge:nth-of-type(3) {
+          left: 5%;
+          bottom: -2.5%;
+          transform: rotate(7deg);
+          filter: hue-rotate(180deg);
+        }
+      `}</style>
     </Layout>
   )
 }
