@@ -110,6 +110,10 @@ const GlobalStyles = () => (
           flex-direction: column;
         }
 
+        main {
+          position: relative;
+        }
+
         ul,
         ol {
           margin-bottom: var(--sp-m);
@@ -156,8 +160,29 @@ const GlobalStyles = () => (
         }
 
         sup[id^="fn"] a {
+          font-family: var(--font-sans);
           color: var(--hover-color);
           text-decoration: none;
+        }
+
+        @media (min-width: 600px) {
+          .footnotes {
+            position: absolute;
+            top: 5.5em;
+            left: 100%;
+            padding-left: var(--sp-xl);
+            width: 15em;
+          }
+
+          .footnotes hr {
+            display: none;
+          }
+
+          .footnotes li {
+            position: relative;
+            margin: 0;
+            padding: 0;
+          }
         }
 
         h1,
@@ -302,8 +327,9 @@ const GlobalStyles = () => (
         }
 
         table :global(th) {
-          font-weight: 600;
+          font-weight: 400;
           font-size: var(--sp-s);
+          font-family: var(--font-sans);
           border-bottom: 1px solid;
         }
 
