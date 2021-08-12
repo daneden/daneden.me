@@ -1,22 +1,28 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
-const RSS = require("rss")
-const fs = require("fs")
-const read = require("fs-readdir-recursive")
-const matter = require("gray-matter")
-const path = require("path")
-const abbr = require("remark-abbr")
-const math = require("remark-math")
-const toc = require("remark-toc")
-const smartypants = require("@ngsctt/remark-smartypants")
-const React = require("react")
-const { renderToString } = require("react-dom/server")
-const MDX = require("@mdx-js/runtime")
+import { createElement } from "react"
+import { createRequire } from "module"
+import { readFileSync, writeFileSync } from "fs"
+import { resolve, join } from "path"
+import abbr from "remark-abbr"
+import math from "remark-math"
+import matter from "gray-matter"
+import MDX from "@mdx-js/runtime"
+import read from "fs-readdir-recursive"
+import RSS from "rss"
+import server from "react-dom/server.js"
+import smartypants from "@ngsctt/remark-smartypants"
+import toc from "remark-toc"
+
+const { renderToString } = server
+
+const require = createRequire(import.meta.url)
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const siteConfig = require("../data/siteconfig.json")
 
 const emptyFunction = () => null
 
 const Image = ({ alt, src, width, height }) => {
   const isRemote = src.startsWith("http")
-  return React.createElement(
+  return createElement(
     "img",
     {
       alt,
@@ -29,21 +35,14 @@ const Image = ({ alt, src, width, height }) => {
 }
 
 const Link = ({ href, children }) => {
-  return React.createElement(
+  return createElement(
     "a",
     { href: `${href.startsWith("/") ? "https://daneden.me" : ""} ${href}` },
     children
   )
 }
 
-const siteConfig = require(path.resolve(
-  process.cwd(),
-  "src",
-  "data",
-  "siteconfig.json"
-))
-
-const POSTS_PATH = path.join(process.cwd(), "blog")
+const POSTS_PATH = join(process.cwd(), "blog")
 const postPaths = read(POSTS_PATH)
 
 const feed = new RSS({
@@ -56,8 +55,8 @@ const feed = new RSS({
 const postsMap = new Map(
   postPaths
     .map((filePath) => {
-      const fullPath = path.join(POSTS_PATH, filePath)
-      const source = fs.readFileSync(fullPath)
+      const fullPath = join(POSTS_PATH, filePath)
+      const source = readFileSync(fullPath)
       const slug = fullPath.replace(/^.*\/blog\//, "").replace(".mdx", "")
 
       const { content, data } = matter(source)
@@ -90,11 +89,11 @@ postsMap.forEach(async function compilePost(post, path) {
     Video: emptyFunction,
     TypedSystemsButton: emptyFunction,
     Codepen: emptyFunction,
-    RedesignGallery: emptyFunction
+    RedesignGallery: emptyFunction,
   }
 
   const compiledContent = renderToString(
-    React.createElement(
+    createElement(
       MDX,
       {
         components,
@@ -119,6 +118,6 @@ posts.map((post) => {
 })
 
 const xmlString = feed.xml()
-const filePath = path.resolve(process.cwd(), "public", "feed.xml")
+const filePath = resolve(process.cwd(), "public", "feed.xml")
 
-fs.writeFileSync(filePath, xmlString)
+writeFileSync(filePath, xmlString)

@@ -15,8 +15,8 @@
   "license": "MIT",
   "scripts": {
     "build": "next build",
-    "build:og-images": "node src/build-helpers/generate-og-images.js",
-    "build:feed": "node src/build-helpers/generate-rss.js",
+    "build:og-images": "node src/build-helpers/generate-og-images.mjs",
+    "build:feed": "node src/build-helpers/generate-rss.mjs",
     "prebuild": "yarn build:og-images && yarn build:feed",
     "postbuild": "next-sitemap",
     "dev": "next dev",

@@ -1,27 +1,27 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-const fs = require("fs")
-const read = require("fs-readdir-recursive")
-const matter = require("gray-matter")
-const path = require("path")
-const { createCanvas, registerFont } = require("canvas")
-const siteConfig = require(path.resolve(
-  process.cwd(),
-  "src",
-  "data",
-  "siteconfig.json"
-))
+import { createRequire } from "module"
+import { resolve as _resolve, join } from "path"
+import canvas from "canvas"
+import fs, { promises as _promises, readFileSync } from "fs"
+import matter from "gray-matter"
+import read from "fs-readdir-recursive"
 
-const { mkdir, writeFile } = fs.promises
+const { createCanvas, registerFont } = canvas
+
+const require = createRequire(import.meta.url)
+const siteConfig = require("../data/siteconfig.json")
+
+const { mkdir, writeFile } = _promises
 const { existsSync } = fs
 
-const POSTS_PATH = path.join(process.cwd(), "blog")
+const POSTS_PATH = join(process.cwd(), "blog")
 const postPaths = read(POSTS_PATH)
 
 const postsMap = new Map(
   postPaths
     .map((filePath) => {
-      const fullPath = path.join(POSTS_PATH, filePath)
-      const source = fs.readFileSync(fullPath)
+      const fullPath = join(POSTS_PATH, filePath)
+      const source = readFileSync(fullPath)
 
       const slug = fullPath.replace(/^.*\/blog\//, "").replace(".mdx", "")
       const ogSlug = slug.replace(/^\//, "").replace(/\//g, "-") + ".png"
@@ -53,14 +53,8 @@ async function main() {
   })
 }
 
-const soehne = path.resolve(
-  process.cwd(),
-  "src",
-  "fonts",
-  "ogFonts",
-  "Soehne.ttf"
-)
-const national = path.resolve(
+const soehne = _resolve(process.cwd(), "src", "fonts", "ogFonts", "Soehne.ttf")
+const national = _resolve(
   process.cwd(),
   "src",
   "fonts",
@@ -164,7 +158,7 @@ function ogImage(title, callback) {
 }
 
 const generateOgImages = async (posts) => {
-  const dir = path.resolve("public", "og")
+  const dir = _resolve("public", "og")
 
   if (!existsSync(dir)) {
     await mkdir(dir).catch((e) => console.error(e))
@@ -172,7 +166,7 @@ const generateOgImages = async (posts) => {
 
   const promises = posts.map(({ title, ogSlug }) => {
     return new Promise((resolve, reject) => {
-      const filepath = path.resolve(
+      const filepath = _resolve(
         dir,
         `${ogSlug ? ogSlug.split(".png")[0] : ""}.png`
       )
