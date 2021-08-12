@@ -1,5 +1,6 @@
 /* global process, module  */
 module.exports = {
+  experimental: { esmExternals: true },
   env: {
     VERCEL_URL: process.env.VERCEL_URL || "daneden.me",
   },
