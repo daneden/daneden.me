@@ -1,4 +1,3 @@
-/* global process, module  */
 module.exports = {
   experimental: { esmExternals: true },
   env: {
