@@ -1,6 +1,6 @@
-import React, { ReactNode } from "react"
 import Align from "@/components/Align"
 import NextImage from "next/image"
+import React, { ReactNode } from "react"
 
 interface ImageProps {
   align?: "left" | "right"

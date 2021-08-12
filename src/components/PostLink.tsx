@@ -1,8 +1,8 @@
 import { MDXFrontMatter } from "*.mdx"
+import PlainLink from "@/components/PlainLink"
 import formatDate from "@/utils/formatDate"
 import widont from "@/utils/widont"
 import { ReactElement } from "react"
-import PlainLink from "@/components/PlainLink"
 
 interface Props {
   post: MDXFrontMatter

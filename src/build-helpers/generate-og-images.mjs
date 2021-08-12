@@ -1,10 +1,10 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-import { createRequire } from "module"
-import { resolve as _resolve, join } from "path"
 import canvas from "canvas"
 import fs, { promises as _promises, readFileSync } from "fs"
-import matter from "gray-matter"
 import read from "fs-readdir-recursive"
+import matter from "gray-matter"
+import { createRequire } from "module"
+import { join, resolve as _resolve } from "path"
 
 const { createCanvas, registerFont } = canvas
 
