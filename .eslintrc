@@ -1,26 +1,32 @@
 {
   "root": true,
   "parser": "@typescript-eslint/parser",
-  "plugins": [
-    "@typescript-eslint"
-  ],
+  "plugins": ["@typescript-eslint"],
   "extends": [
     "next",
     "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended"
   ],
   "overrides": [
     {
       "files": "*.mdx",
-      "extends": "plugin:mdx/recommended" // ESLint Parser/Plugin for MDX
+      "extends": "plugin:mdx/recommended", // ESLint Parser/Plugin for MDX
+      "rules": {
+        // We can safely turn off these rules since components are provided in [...slug].tsx
+        "react/jsx-no-undef": "off",
+        "@next/next/no-html-link-for-pages": "off"
+      }
     }
   ],
   "rules": {
-    "quotes": ["error", "double",
+    "quotes": [
+      "error",
+      "double",
       {
         "avoidEscape": true,
         "allowTemplateLiterals": true
-      }],
+      }
+    ],
     "semi": [2, "never"],
     "comma-dangle": [2, "only-multiline"],
     "jsx-quotes": [2, "prefer-double"],
@@ -32,6 +38,6 @@
         "named": "never",
         "asyncArrow": "always"
       }
-    ],
+    ]
   }
 }
