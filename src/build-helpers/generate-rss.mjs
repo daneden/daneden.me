@@ -14,9 +14,8 @@ import RSS from "rss"
 
 const { renderToString } = server
 
-const require = createRequire(import.meta.url)
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const siteConfig = require("../data/siteconfig.json")
+const requireFile = createRequire(import.meta.url)
+const siteConfig = requireFile("../data/siteconfig.json")
 
 const emptyFunction = () => null
 
@@ -40,6 +39,18 @@ const Link = ({ href, children }) => {
     { href: `${href.startsWith("/") ? "https://daneden.me" : ""} ${href}` },
     children
   )
+}
+
+// Provide some mock components and empty functions for the interactive elements
+const mockComponents = {
+  Image,
+  a: Link,
+  Video: emptyFunction,
+  TypedSystemsButton: emptyFunction,
+  Codepen: emptyFunction,
+  RedesignGallery: emptyFunction,
+  SaturationDemo: emptyFunction,
+  style: emptyFunction,
 }
 
 const POSTS_PATH = join(process.cwd(), "blog")
@@ -82,21 +93,11 @@ const posts = []
 postsMap.forEach(async function compilePost(post, path) {
   const { content } = post
 
-  // Provide some mock components and empty functions for the interactive elements
-  const components = {
-    Image,
-    a: Link,
-    Video: emptyFunction,
-    TypedSystemsButton: emptyFunction,
-    Codepen: emptyFunction,
-    RedesignGallery: emptyFunction,
-  }
-
   const compiledContent = renderToString(
     createElement(
       MDX,
       {
-        components,
+        components: mockComponents,
         remarkPlugins: [abbr, smartypants, math, toc],
       },
       content

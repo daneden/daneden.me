@@ -68,11 +68,11 @@ function buildComponentMap(source: string) {
   // Search the passed string for component instances and include them if
   // necessary
   const map: { [key: string]: OpaqueComponentType } = {}
-  for (const prop in availableComponents) {
-    const currentComponent = availableComponents[prop]
+  for (const componentKey in availableComponents) {
+    const currentComponent = availableComponents[componentKey]
     const matches = currentComponent.regex.test(source)
     if (matches) {
-      map[prop] = currentComponent.component
+      map[componentKey] = currentComponent.component
     }
   }
 
