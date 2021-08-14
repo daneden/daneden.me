@@ -50,7 +50,7 @@
     "remark-abbr": "^1.4.1",
     "remark-math": "5.0.0",
     "remark-slug": "^7.0.0",
-    "remark-toc": "^7.2.0",
+    "remark-toc": "^8.0.0",
     "typescript": "^4.3.5"
   },
   "devDependencies": {
