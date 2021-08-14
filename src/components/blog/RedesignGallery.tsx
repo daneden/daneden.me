@@ -1,5 +1,5 @@
 import Image from "@/components/Image"
-import Breakout from "./Breakout"
+import Breakout from "../Breakout"
 
 const imageNames = [
   "2012-01",

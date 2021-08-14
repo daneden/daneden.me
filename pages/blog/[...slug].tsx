@@ -11,10 +11,10 @@ import dynamic from "next/dynamic"
 import Link from "next/link"
 import { ComponentType } from "react"
 import katex from "rehype-katex"
-import slug from "rehype-slug"
+import toc from "rehype-toc"
 import abbr from "remark-abbr"
 import math from "remark-math"
-import toc from "remark-toc"
+import slug from "remark-slug"
 
 const defaultComponents = {
   a: Link,
@@ -53,11 +53,11 @@ function buildComponentMap(source: string) {
     },
     TypedSystemsButton: {
       regex: /<TypedSystemsButton/,
-      component: dynamic(() => import("@/components/typed-systems-components")),
+      component: dynamic(() => import("@/components/blog/TypedSystemsButton")),
     },
     RedesignGallery: {
       regex: /<RedesignGallery/,
-      component: dynamic(() => import("@/components/RedesignGallery")),
+      component: dynamic(() => import("@/components/blog/RedesignGallery")),
     },
     SaturationDemo: {
       regex: /<SaturationDemo/,
@@ -119,8 +119,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   const mdxSource = await serialize(content, {
     mdxOptions: {
-      remarkPlugins: [abbr, smartypants, math, toc],
-      rehypePlugins: [katex, prism, slug],
+      remarkPlugins: [abbr, smartypants, math, slug],
+      rehypePlugins: [katex, prism, toc],
     },
   })
 
