@@ -11,10 +11,10 @@ import dynamic from "next/dynamic"
 import Link from "next/link"
 import { ComponentType } from "react"
 import katex from "rehype-katex"
-import toc from "rehype-toc"
 import abbr from "remark-abbr"
 import math from "remark-math"
 import slug from "remark-slug"
+import toc from "remark-toc"
 
 const defaultComponents = {
   a: Link,
@@ -119,8 +119,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   const mdxSource = await serialize(content, {
     mdxOptions: {
-      remarkPlugins: [abbr, smartypants, math, slug],
-      rehypePlugins: [katex, prism, toc],
+      remarkPlugins: [abbr, smartypants, math, slug, toc],
+      rehypePlugins: [katex, prism],
     },
   })
 
