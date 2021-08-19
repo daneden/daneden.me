@@ -258,7 +258,7 @@
     "@babel/helper-validator-identifier" "^7.14.9"
     to-fast-properties "^2.0.0"
 
-"@corex/deepmerge@^2.6.20":
+"@corex/deepmerge@^2.6.34":
   version "2.6.34"
   resolved "https://registry.yarnpkg.com/@corex/deepmerge/-/deepmerge-2.6.34.tgz#8dd084f2bcc9cf54f6b1210a1aebd25206de2a84"
   integrity sha512-5l3bQRGOoCJ1nYTxEaOW/MRuwNDq32KYatWO5rwOlOzxY4beVCrxDBaDBX5wpDn0PYm0QAul/vAC9GDHShEbTw==
@@ -3425,12 +3425,12 @@ next-mdx-remote@^3.0.4:
     esbuild "^0.12.9"
     pkg-dir "^5.0.0"
 
-next-sitemap@^1.6.148:
-  version "1.6.157"
-  resolved "https://registry.yarnpkg.com/next-sitemap/-/next-sitemap-1.6.157.tgz#9e894188217ec94a00d4e10ddebb92393a3ea14a"
-  integrity sha512-5aIGplbGj0vRsetVla1ZW+0CaRtFnDY9ffW8qqii/nAfOyFuBgaHgKS92TsuBPNzz7O0/7vz4x8jZXEoR9tg2w==
+next-sitemap@^1.6.160:
+  version "1.6.160"
+  resolved "https://registry.yarnpkg.com/next-sitemap/-/next-sitemap-1.6.160.tgz#9e7c0afa820aaeb08bd6e038c86a854eb4426f1d"
+  integrity sha512-nVnIIW5UeGfVks1kn5/ht4cah6GQHtYnLL8L5r4XONDB6PSi9bJRkyfS1j31JFOPJka0tTZCHHtQsHWAm8/C6A==
   dependencies:
-    "@corex/deepmerge" "^2.6.20"
+    "@corex/deepmerge" "^2.6.34"
     matcher "^4.0.0"
     minimist "^1.2.5"
 
