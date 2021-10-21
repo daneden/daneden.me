@@ -31,7 +31,7 @@
     "@mdx-js/runtime": "^1.6.22",
     "@ngsctt/remark-smartypants": "^0.2.0",
     "@types/react-dom": "^17.0.9",
-    "babel-loader": "^8.2.2",
+    "babel-loader": "^8.2.3",
     "canvas": "2.6.1",
     "file-loader": "^6.2.0",
     "fs-readdir-recursive": "^1.1.0",
