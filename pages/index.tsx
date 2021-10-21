@@ -1,7 +1,7 @@
+import FeatureTile from "@/components/FeatureTile"
+import Image from "@/components/Image"
 import Layout from "@/components/Layout"
 import Link from "next/link"
-import Image from "@/components/Image"
-import FeatureTile from "@/components/FeatureTile"
 
 export default function HomePage() {
   return (
@@ -90,10 +90,12 @@ export default function HomePage() {
         }
 
         .badge {
+          --h: 25;
+          --l: 50%;
           font-family: var(--font-sans-extended);
           padding: 1rem 1.5rem;
           border-radius: 100%;
-          background-color: tomato;
+          background-color: hsl(var(--h), 100%, var(--l));
           color: var(--wash-color);
           position: absolute;
           text-transform: uppercase;
@@ -112,14 +114,14 @@ export default function HomePage() {
           right: calc(var(--sp-xs) * -1);
           top: 25%;
           transform: rotate(5deg);
-          filter: hue-rotate(270deg);
+          --h: 290;
         }
 
         .badge:nth-of-type(3) {
           left: 5%;
           bottom: -2.5%;
           transform: rotate(7deg);
-          filter: hue-rotate(180deg);
+          --h: 200;
         }
       `}</style>
     </Layout>
