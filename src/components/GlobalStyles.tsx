@@ -193,6 +193,8 @@ const GlobalStyles = () => (
           font-family: var(--font-sans);
           font-size: var(--sp-m);
           font-weight: 400;
+          font-style: italic;
+          color: var(--meta-color);
           hyphens: initial;
         }
 

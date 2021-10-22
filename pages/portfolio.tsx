@@ -1,7 +1,7 @@
-import Layout from "@/components/Layout"
-import Link from "next/link"
 import DeviceFrame from "@/components/DeviceFrame"
+import Layout from "@/components/Layout"
 import LightswitchImage from "@/components/LightSwitchImage"
+import Link from "next/link"
 
 export default function PortfolioPage() {
   return (
@@ -95,18 +95,27 @@ export default function PortfolioPage() {
 
       <hr />
       <h2>Facebook</h2>
+      <h3>2021–</h3>
       <p>
-        I’m currently working as a Design Manager supporting Facebook’s Commerce
-        Opportunities organisation, specifically focused on buyer consideration
+        I’m currently working as a Product Designer on Facebook’s Customer
+        Support team. Our team is working to build customer support experiences
+        that are more equitable, human, and helpful for Facebook’s billions of
+        customers.
+      </p>
+      <h3>2020–2021</h3>
+      <p>
+        From 2020–2021, I worked as a Design Manager supporting Facebook’s
+        Commerce organisation, specifically focused on buyer consideration
         experiences for{" "}
         <Link href="https://en-gb.facebook.com/business/shops">
           Facebook Shops
         </Link>
-        . Our team focuses on giving people the information they need to make an
+        . Our team focused on giving people the information they need to make an
         informed purchase decision, providing Facebook employees with the
         standards to build high-quality buyer experiences, and exploring the
         future of commerce with Facebook Shops.
       </p>
+      <h3>2017–2020</h3>
       <p>
         From 2017–2020, I worked as a Design Lead for Facebook’s Ads and
         Business Design System. My team and I created and maintained the visual
@@ -114,6 +123,7 @@ export default function PortfolioPage() {
         products, serving millions of Facebook Ads customers and thousands of
         Facebook engineers and designers.
       </p>
+
       <p>
         In late 2018–early 2019, the team worked closely with Facebook’s primary
         revenue-impacting product, Ads Manager, to help them{" "}
@@ -134,6 +144,7 @@ export default function PortfolioPage() {
         to help support the Ads organisation and scale our design system team’s
         portfolio.
       </p>
+      <h3>2016–2017</h3>
       <p>
         Before working on the Ads and Business Design System I worked as a
         Product Designer on Facebook’s Brand Measurement team, devoting my time
