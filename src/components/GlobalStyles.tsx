@@ -8,7 +8,7 @@ const GlobalStyles = () => (
         :root {
           color-scheme: light dark;
           --gray-hue: 32;
-          --gray-sat-mult: 1.9;
+          --gray-sat-mult: 0.9;
 
           --gray00: hsl(var(--gray-hue), calc(var(--gray-sat-mult) * 50%), 98%);
           --gray05: hsl(var(--gray-hue), calc(var(--gray-sat-mult) * 40%), 95%);
