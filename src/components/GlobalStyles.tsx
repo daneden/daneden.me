@@ -8,14 +8,14 @@ const GlobalStyles = () => (
         :root {
           color-scheme: light dark;
           --gray-hue: 32;
-          --gray-sat-mult: 0.9;
+          --gray-sat-mult: 1.9;
 
           --gray00: hsl(var(--gray-hue), calc(var(--gray-sat-mult) * 50%), 98%);
-          --gray05: hsl(var(--gray-hue), calc(var(--gray-sat-mult) * 50%), 95%);
-          --gray10: hsl(var(--gray-hue), calc(var(--gray-sat-mult) * 55%), 90%);
-          --gray20: hsl(var(--gray-hue), calc(var(--gray-sat-mult) * 70%), 70%);
+          --gray05: hsl(var(--gray-hue), calc(var(--gray-sat-mult) * 40%), 95%);
+          --gray10: hsl(var(--gray-hue), calc(var(--gray-sat-mult) * 40%), 90%);
+          --gray20: hsl(var(--gray-hue), calc(var(--gray-sat-mult) * 40%), 70%);
           --gray30: hsl(var(--gray-hue), calc(var(--gray-sat-mult) * 30%), 30%);
-          --gray35: hsl(var(--gray-hue), calc(var(--gray-sat-mult) * 30%), 30%);
+          --gray35: hsl(var(--gray-hue), calc(var(--gray-sat-mult) * 15%), 20%);
           --gray40: hsl(var(--gray-hue), calc(var(--gray-sat-mult) * 30%), 5%);
 
           --baseline: 1.6;
