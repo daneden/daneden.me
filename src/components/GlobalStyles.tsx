@@ -7,13 +7,16 @@ const GlobalStyles = () => (
       {`
         :root {
           color-scheme: light dark;
-          --gray00: #fff5e9;
-          --gray05: #fcefd977;
-          --gray10: #fcefd9;
-          --gray20: #674e15;
-          --gray30: #3b2d12;
-          --gray35: #3b2d1255;
-          --gray40: #140e05;
+          --gray-hue: 32;
+          --gray-sat-mult: 0.9;
+
+          --gray00: hsl(var(--gray-hue), calc(var(--gray-sat-mult) * 50%), 98%);
+          --gray05: hsl(var(--gray-hue), calc(var(--gray-sat-mult) * 50%), 95%);
+          --gray10: hsl(var(--gray-hue), calc(var(--gray-sat-mult) * 55%), 90%);
+          --gray20: hsl(var(--gray-hue), calc(var(--gray-sat-mult) * 70%), 70%);
+          --gray30: hsl(var(--gray-hue), calc(var(--gray-sat-mult) * 30%), 30%);
+          --gray35: hsl(var(--gray-hue), calc(var(--gray-sat-mult) * 30%), 30%);
+          --gray40: hsl(var(--gray-hue), calc(var(--gray-sat-mult) * 30%), 5%);
 
           --baseline: 1.6;
           --xxs: 0.125;
