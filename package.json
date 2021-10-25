@@ -62,7 +62,7 @@
     "eslint-config-next": "^11.1.2",
     "eslint-plugin-mdx": "^1.16.0",
     "husky": "^7.0.4",
-    "lint-staged": "^11.2.3",
+    "lint-staged": "^11.2.4",
     "prettier": "^2.4.1",
     "rss": "^1.2.2"
   }
