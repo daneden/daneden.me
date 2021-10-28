@@ -38,5 +38,3 @@ fields:
   default: false
   description: Toggles post visibility. Note that posts with this value set to false
     can still be reached via the Git repository or exact path.
-pages:
-- blog/2021/example-post.mdx
