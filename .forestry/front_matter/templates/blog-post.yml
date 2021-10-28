@@ -32,10 +32,10 @@ fields:
   label: Categories
   config:
     use_select: false
-- name: published
+- name: hidden
   type: boolean
-  label: Published
-  default: true
+  label: Hidden
+  default: false
   description: Toggles post visibility. Note that posts with this value set to false
     can still be reached via the Git repository or exact path.
 pages:
