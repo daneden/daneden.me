@@ -51,10 +51,6 @@ module.exports = {
     config.module.rules = [
       ...config.module.rules,
       {
-        test: /\.(ttf)$/i,
-        loader: "file-loader",
-      },
-      {
         test: /\.mdx?$/,
         use: ["babel-loader", "@mdx-js/loader"],
       },
