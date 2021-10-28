@@ -11,6 +11,8 @@ fields:
 - type: datetime
   name: date
   label: Date
+  config:
+    export_format: YYYY-MM-DD
 - type: text
   name: layout
   label: Layout
