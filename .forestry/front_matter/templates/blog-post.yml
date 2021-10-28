@@ -12,7 +12,7 @@ fields:
   name: date
   label: Date
   config:
-    export_format: YYYY-MM-DD
+    export_format: '"YYYY-MM-DD"'
 - type: text
   name: layout
   label: Layout
