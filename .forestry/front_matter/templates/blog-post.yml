@@ -4,16 +4,34 @@ hide_body: false
 fields:
 - type: text
   name: title
-  label: title
+  label: Title
+  config:
+    required: true
 - type: datetime
   name: date
-  label: date
+  label: Date
 - type: text
   name: layout
-  label: layout
+  label: Layout
+  default: post
+  config:
+    required: true
+  hidden: true
 - type: textarea
   name: excerpt
-  label: excerpt
+  label: Excerpt
+  config:
+    required: true
+  description: Used in meta description and social graph cards. Required for SEO and
+    accessibility.
 - type: list
   name: categories
-  label: categories
+  label: Categories
+  config:
+    use_select: false
+- name: published
+  type: boolean
+  label: Published
+  default: true
+  description: Toggles post visibility. Note that posts with this value set to false
+    can still be reached via the Git repository or exact path.
