@@ -49,7 +49,7 @@
     "remark-abbr": "^1.4.1",
     "remark-math": "5.1.0",
     "remark-slug": "^7.0.1",
-    "remark-toc": "^8.0.0",
+    "remark-toc": "^8.0.1",
     "typescript": "^4.4.4"
   },
   "devDependencies": {
