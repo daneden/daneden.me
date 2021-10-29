@@ -6,7 +6,7 @@ import Link from "next/link"
 export default function HomePage() {
   return (
     <Layout>
-      <p className="image-container">
+      <div className="image-container">
         <span className="badge" aria-hidden={true}>
           Employed
         </span>
@@ -22,7 +22,7 @@ export default function HomePage() {
           src="2020/11/face.jpg"
           width={200}
         />
-      </p>
+      </div>
       <p className="intro">
         Daniel Eden is a Product Designer at{" "}
         <Link href="https://meta.com/">Meta</Link> in London, working on making
@@ -86,7 +86,7 @@ export default function HomePage() {
 
         .image-container {
           position: relative;
-          padding-block-start: var(--sp-l);
+          padding-block: var(--sp-l);
         }
 
         .badge {
@@ -119,7 +119,7 @@ export default function HomePage() {
 
         .badge:nth-of-type(3) {
           left: 5%;
-          bottom: -2.5%;
+          bottom: 2.5%;
           transform: rotate(7deg);
           --h: 200;
         }
