@@ -25,8 +25,8 @@ export default function HomePage() {
       </p>
       <p className="intro">
         Daniel Eden is a Product Designer at{" "}
-        <Link href="https://facebook.com/">Facebook</Link> in London, working on
-        making Customer Support experiences that are more equitable, human, and
+        <Link href="https://meta.com/">Meta</Link> in London, working on making
+        Customer Support experiences that are more equitable, human, and
         helpful. He spends his time <Link href="/blog">writing</Link>, thinking,{" "}
         <Link href="https://twitter.com/_dte">tweeting</Link>, and talking about
         Design Systems: how they scale, how they break, and the people&nbsp;that

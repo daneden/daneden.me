@@ -9,9 +9,9 @@ export default function PortfolioPage() {
       <p>
         From independently designing and developing iOS apps, to helping scale
         design systems to support thousands of designers and engineers building
-        products for Facebook’s billions of users and advertisers, I’ve spent
-        years designing and building products at all kinds of scale. Below
-        you’ll find a selection of my favourite projects and experiences.
+        products for Meta’s billions of users and advertisers, I’ve spent years
+        designing and building products at all kinds of scale. Below you’ll find
+        a selection of my favourite projects and experiences.
       </p>
       <section>
         <header className="portfolio-header">
@@ -94,45 +94,42 @@ export default function PortfolioPage() {
       </section>
 
       <hr />
-      <h2>Facebook</h2>
+      <h2>Meta</h2>
       <h3>2021–</h3>
       <p>
-        I’m currently working as a Product Designer on Facebook’s Customer
-        Support team. Our team is working to build customer support experiences
-        that are more equitable, human, and helpful for Facebook’s billions of
-        customers.
+        I’m currently working as a Product Designer on Meta’s Customer Support
+        team. Our team is working to build customer support experiences that are
+        more equitable, human, and helpful for Meta’s billions of customers.
       </p>
       <h3>2020–2021</h3>
       <p>
-        From 2020–2021, I worked as a Design Manager supporting Facebook’s
-        Commerce organisation, specifically focused on buyer consideration
-        experiences for{" "}
-        <Link href="https://en-gb.facebook.com/business/shops">
-          Facebook Shops
-        </Link>
+        From 2020–2021, I worked as a Design Manager supporting Meta’s Commerce
+        organisation, specifically focused on buyer consideration experiences
+        for{" "}
+        <Link href="https://en-gb.facebook.com/business/shops">Meta Shops</Link>
         . Our team focused on giving people the information they need to make an
-        informed purchase decision, providing Facebook employees with the
-        standards to build high-quality buyer experiences, and exploring the
-        future of commerce with Facebook Shops.
+        informed purchase decision, providing Meta employees with the standards
+        to build high-quality buyer experiences, and exploring the future of
+        commerce with Meta Shops.
       </p>
       <h3>2017–2020</h3>
       <p>
-        From 2017–2020, I worked as a Design Lead for Facebook’s Ads and
-        Business Design System. My team and I created and maintained the visual
-        language and web React components that power Facebook’s Ads and Business
-        products, serving millions of Facebook Ads customers and thousands of
-        Facebook engineers and designers.
+        From 2017–2020, I worked as a Design Lead for Meta’s Ads and Business
+        Design System. My team and I created and maintained the visual language
+        and web React components that power Meta’s Ads and Business products,
+        serving millions of Meta Ads customers and thousands of Meta engineers
+        and designers.
       </p>
 
       <p>
-        In late 2018–early 2019, the team worked closely with Facebook’s primary
+        In late 2018–early 2019, the team worked closely with Meta’s primary
         revenue-impacting product, Ads Manager, to help them{" "}
         <Link href="https://www.facebook.com/business/news/improving-ads-manager-and-business-manager">
           redesign the product
         </Link>{" "}
         in the pursuit of increased advertiser efficiency and customer value.
         This work was the first result of a coordinated effort to create a more
-        cohesive advertising and marketing experience across all of Facebook’s
+        cohesive advertising and marketing experience across all of Meta’s
         business tools. More about this work can be found on the{" "}
         <Link href="https://www.facebook.com/business/m/one-sheeters/DesigningBetterAdvertiserExperiences">
           Facebook Business website
@@ -147,18 +144,18 @@ export default function PortfolioPage() {
       <h3>2016–2017</h3>
       <p>
         Before working on the Ads and Business Design System I worked as a
-        Product Designer on Facebook’s Brand Measurement team, devoting my time
-        to creating new ways to measure and report ad effectiveness as it
-        pertains to brand advertising.
+        Product Designer on Meta’s Brand Measurement team, devoting my time to
+        creating new ways to measure and report ad effectiveness as it pertains
+        to brand advertising.
       </p>
       <p>
-        My first project at Facebook was{" "}
+        My first project at Meta was{" "}
         <Link href="https://www.facebook.com/business/news/optimize-your-ads-with-split-testing?pnref=story">
           Split Testing
         </Link>
         , a tool allowing advertisers to test different ad strategies against
         one another to find the most effective way to spend their ad budgets on
-        Facebook.
+        Meta’s platform.
       </p>
       <h2>Dropbox</h2>
       <p>
