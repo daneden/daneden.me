@@ -1,7 +1,7 @@
 import { MDXFrontMatter } from "*.mdx"
 import formatDate from "@/utils/formatDate"
 import widont from "@/utils/widont"
-import { ReactNode } from "react"
+import { ReactNode, useEffect } from "react"
 import siteConfig from "../data/siteconfig.json"
 import Footer from "./Footer"
 import GlobalStyles from "./GlobalStyles"
@@ -15,6 +15,56 @@ type LayoutProps = {
   children: ReactNode
 }
 
+const utils = {
+  qsa: (selector: keyof HTMLElementTagNameMap) =>
+    Array.from(document.querySelectorAll(selector)),
+  solveFor: (el: HTMLElement, currentTop: number, parentTop: number) => {
+    const previousEl = el.previousElementSibling as HTMLElement
+    const previousElTop = parseInt(previousEl.style.top, 10)
+    const previousElBottom =
+      previousEl.getBoundingClientRect().bottom - parentTop
+
+    // Check for overlaps
+    if (currentTop === previousElTop) {
+      const newTop = currentTop + previousEl.getBoundingClientRect().height
+      return newTop
+    } else if (currentTop < previousElBottom) {
+      const newTop = previousElBottom
+      return newTop
+    } else {
+      return currentTop
+    }
+  },
+}
+
+function calculateFootnotesPos() {
+  utils.qsa("sup").forEach((el: HTMLElement) => {
+    const elementId = el.getAttribute("id")
+    const id = (elementId ?? "").replace("fnref-", "")
+    const parent = document.querySelector(".footnotes")
+
+    if (parent === null) {
+      return
+    }
+
+    let top = Math.round(
+      el.getBoundingClientRect().top - parent.getBoundingClientRect().top
+    )
+    const note = document.querySelector(`#fn-${id}`) as HTMLElement
+
+    if (note === null) {
+      return
+    }
+
+    if (note.previousElementSibling) {
+      top = utils.solveFor(note, top, parent.getBoundingClientRect().top)
+    }
+
+    note.style.top = `${top}px`
+    note.style.opacity = "1"
+  })
+}
+
 const Content = ({ frontMatter, children }: LayoutProps) => {
   const site = siteConfig
   const title = frontMatter?.title || site.title
@@ -23,6 +73,10 @@ const Content = ({ frontMatter, children }: LayoutProps) => {
   const formattedDate = formatDate(date || "")
   const excerpt = frontMatter?.excerpt
   const ogSlug = frontMatter?.ogSlug
+
+  useEffect(() => {
+    calculateFootnotesPos()
+  }, [])
 
   return (
     <>
