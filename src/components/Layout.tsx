@@ -41,14 +41,13 @@ function calculateFootnotesPos() {
   utils.qsa("sup").forEach((el: HTMLElement) => {
     const elementId = el.getAttribute("id")
     const id = (elementId ?? "").replace("fnref-", "")
-    const parent = document.querySelector(".footnotes")
-
-    if (parent === null) {
-      return
-    }
+    const footnotesContainer = document.querySelector(
+      ".footnotes"
+    ) as HTMLElement
 
     let top = Math.round(
-      el.getBoundingClientRect().top - parent.getBoundingClientRect().top
+      el.getBoundingClientRect().top -
+        footnotesContainer.getBoundingClientRect().top
     )
     const note = document.querySelector(`#fn-${id}`) as HTMLElement
 
@@ -57,7 +56,11 @@ function calculateFootnotesPos() {
     }
 
     if (note.previousElementSibling) {
-      top = utils.solveFor(note, top, parent.getBoundingClientRect().top)
+      top = utils.solveFor(
+        note,
+        top,
+        footnotesContainer.getBoundingClientRect().top
+      )
     }
 
     note.style.top = `${top}px`
