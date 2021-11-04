@@ -51,7 +51,7 @@ const GlobalStyles = () => (
           --mark-color: rgba(255, 200, 0, 0.15);
           --highlight-color: #ffc800;
           --hover-color: var(--site-color);
-          --code-wash: #fff;
+          --code-wash: var(--gray05);
           --code-color: #222;
 
           --grid-spec: minmax(0, 1fr) minmax(auto, var(--container-width))
@@ -228,10 +228,9 @@ const GlobalStyles = () => (
           padding: 0.15em 0.25em;
           vertical-align: baseline;
           background-color: var(--code-wash);
-          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.125);
           border-radius: 0.5em;
           font-family: var(--font-mono);
-          font-size: 0.875rem;
+          font-size: 0.9em;
           line-height: 1;
           letter-spacing: -0.025em;
           color: var(--code-color);
@@ -296,6 +295,8 @@ const GlobalStyles = () => (
           hyphens: initial;
           margin-bottom: var(--sp-m);
           border-collapse: collapse;
+          font-family: var(--font-sans);
+          font-size: var(--sp-s);
         }
 
         table :global(th),
@@ -304,6 +305,7 @@ const GlobalStyles = () => (
           padding: var(--sp-xs);
           padding-top: var(--sp-xxs);
           padding-bottom: var(--sp-xxs);
+          border-bottom: 1px solid var(--gray10);
         }
 
         table :global(th) {
