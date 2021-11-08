@@ -97,6 +97,7 @@ const GlobalStyles = () => (
         }
 
         html {
+          border-top: var(--sp-xs) solid;
           background-color: var(--wash-color);
           color: var(--text-color);
           font-family: var(--font-body);
