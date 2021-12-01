@@ -204,7 +204,7 @@ const GlobalStyles = () => (
           border-top: 1px solid var(--meta-color);
           width: 50%;
           display: block;
-          margin: var(--sp-xl) auto;
+          margin: var(--sp-xxl) auto;
           position: relative;
         }
 
@@ -214,7 +214,6 @@ const GlobalStyles = () => (
           background-color: var(--wash-color);
           padding-inline: var(--sp-xs);
           position: absolute;
-
           left: 50%;
           transform: translateX(-50%) translateY(-50%);
           line-height: 0.5;
