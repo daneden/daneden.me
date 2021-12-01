@@ -84,6 +84,7 @@ export default function FeatureTile({ title, description, url, image }: Props) {
         }
 
         h3 {
+          font-family: var(--font-sans);
           color: inherit;
           font-style: normal;
         }

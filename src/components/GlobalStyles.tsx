@@ -8,7 +8,7 @@ const GlobalStyles = () => (
         :root {
           color-scheme: light dark;
           --gray-hue: 32;
-          --gray-sat-mult: 0.9;
+          --gray-sat-mult: 0.2;
 
           --gray00: hsl(var(--gray-hue), calc(var(--gray-sat-mult) * 50%), 98%);
           --gray05: hsl(var(--gray-hue), calc(var(--gray-sat-mult) * 40%), 95%);
@@ -23,8 +23,8 @@ const GlobalStyles = () => (
           --xs: 0.5;
           --s: 0.75;
           --m: 1;
-          --l: 1.5;
-          --xl: 2.25;
+          --l: 1.25;
+          --xl: 2;
           --xxl: 3;
 
           --sp-xxs: calc(var(--xxs) * 1rem);
@@ -35,7 +35,7 @@ const GlobalStyles = () => (
           --sp-xl: calc(var(--xl) * 1rem);
           --sp-xxl: calc(var(--xxl) * 1rem);
 
-          --container-width: 32rem;
+          --container-width: 33rem;
           --page-width: calc(
             var(--container-width) + (var(--baseline) * var(--m) * 2)
           );
@@ -97,14 +97,12 @@ const GlobalStyles = () => (
         }
 
         html {
-          border-top: var(--sp-xs) solid;
           background-color: var(--wash-color);
           color: var(--text-color);
           font-family: var(--font-body);
-          font-size: clamp(100%, 2.5vw, 125%);
+          font-size: clamp(100%, 2.5vw, 115%);
           line-height: var(--baseline);
-          padding-left: var(--sp-m);
-          padding-right: var(--sp-m);
+          padding: var(--sp-m);
           font-feature-settings: "ss02" 1;
           font-variant-alternates: stylistic(ss02);
         }
@@ -169,6 +167,7 @@ const GlobalStyles = () => (
           font-family: var(--font-sans-extended);
           font-size: var(--sp-xl);
           font-weight: 700;
+          color: var(--font-color);
           hyphens: initial;
           line-height: 1.1;
           margin-bottom: var(--sp-m);
@@ -177,7 +176,7 @@ const GlobalStyles = () => (
         }
 
         blockquote {
-          border-left: 2px solid var(--site-color);
+          border-left: 2px solid var(--meta-color);
           font-style: italic;
           padding-left: var(--sp-m);
           margin-bottom: var(--sp-m);
@@ -185,19 +184,17 @@ const GlobalStyles = () => (
 
         h2 {
           font-family: var(--font-heading);
-          font-size: var(--sp-m);
+          font-size: var(--sp-l);
           font-weight: 400;
-          font-style: italic;
           hyphens: initial;
           margin-bottom: var(--sp-m);
           padding-top: var(--sp-s);
         }
 
         h3 {
-          font-family: var(--font-sans);
+          font-family: var(--font-heading);
           font-size: var(--sp-m);
           font-weight: 400;
-          font-style: italic;
           color: var(--meta-color);
           hyphens: initial;
         }
@@ -205,9 +202,24 @@ const GlobalStyles = () => (
         hr {
           border: 0;
           border-top: 1px solid var(--meta-color);
-
+          width: 50%;
           display: block;
-          margin: var(--sp-l) 0;
+          margin: var(--sp-xl) auto;
+          position: relative;
+        }
+
+        hr::after {
+          font-family: var(--font-serif);
+          content: "∞";
+          background-color: var(--wash-color);
+          padding-inline: var(--sp-xs);
+          position: absolute;
+
+          left: 50%;
+          transform: translateX(-50%) translateY(-50%);
+          line-height: 0.5;
+          top: 50%;
+          height: var(--sp-s);
         }
 
         mark {

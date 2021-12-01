@@ -49,7 +49,7 @@ const Header = ({ siteTitle }: HeaderProps) => {
           grid-template-columns: var(--grid-spec);
           grid-gap: var(--sp-xs);
           flex-wrap: wrap;
-          margin: var(--sp-s) 0;
+          margin-bottom: var(--sp-s);
         }
 
         nav :global(ul) {
