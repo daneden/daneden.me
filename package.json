@@ -37,7 +37,7 @@
     "fs-readdir-recursive": "^1.1.0",
     "gray-matter": "^4.0.3",
     "mdx-prism": "^0.3.4",
-    "next": "^12.0.4",
+    "next": "^12.0.7",
     "next-mdx-remote": "^3.0.8",
     "next-sitemap": "^1.6.203",
     "prismjs": "^1.25.0",
