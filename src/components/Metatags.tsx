@@ -45,8 +45,7 @@ function Metatags(props: MetatagsProps): ReactElement<typeof Head> {
       <meta content="en" property="og:locale" />
 
       {/* Favicon */}
-      <link href="/images/favicon.svg" rel="icon" type="image/svg+xml" />
-      <link color="#888" href="/images/favicon.svg" rel="mask-icon"></link>
+      <link href="/images/face.jpeg" rel="icon" type="image/jpeg" />
 
       {dnsPrefetchURLs.map((url, index) => [
         <link href={url} key={`preconnect-${index}`} rel="preconnect" />,

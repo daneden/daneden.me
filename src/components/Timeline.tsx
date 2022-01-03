@@ -36,7 +36,7 @@ export default function Timeline() {
             .reverse()
             .map((year) => {
               return orderedData[year].map((entry, index) => (
-                <tr key={year}>
+                <tr key={`${year}-${index}`}>
                   {index === 0 ? <th>{year}</th> : <td />}
                   <td>
                     <Link href={entry.url}>{entry.title}</Link>
