@@ -20,7 +20,7 @@ export default function HomePage() {
       </Breakout>
       <style jsx>{`
         .intro {
-          font-size: clamp(1.5rem, 10vmin, 3.5rem);
+          font-size: clamp(1.5rem, 8vmin, 3.5rem);
           line-height: 1.2;
           font-style: normal;
           font-family: var(--font-sans);
