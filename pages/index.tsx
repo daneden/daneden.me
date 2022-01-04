@@ -17,7 +17,7 @@ export default function HomePage({ commitSha }: { commitSha: string }) {
   let fgHex = commitSha.slice(0, 6)
   let bgHex = commitSha.slice(0, 6)
 
-  const mirroredSha = commitSha + commitSha.split("").reverse().join()
+  const mirroredSha = commitSha + commitSha.split("").reverse().join("")
 
   // The foreground colour doesn’t change, so we can use its initial value for
   // this whole operation
