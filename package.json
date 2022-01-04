@@ -34,6 +34,7 @@
     "apca-w3": "^0.0.98-g-4g.4b",
     "babel-loader": "^8.2.3",
     "canvas": "2.6.1",
+    "colord": "^2.9.2",
     "file-loader": "^6.2.0",
     "fs-readdir-recursive": "^1.1.0",
     "gray-matter": "^4.0.3",

@@ -2,51 +2,24 @@
 import Breakout from "@/components/Breakout"
 import Layout from "@/components/Layout"
 import Timeline from "@/components/Timeline"
-import { APCAcontrast, colorParsley, sRGBtoY } from "apca-w3"
 import { execSync } from "child_process"
+import { colord, extend } from "colord"
+import lchPlugin from "colord/plugins/lch"
 import Link from "next/link"
 
-interface Color {
-  h: number
-  s: number
-  l: number
-}
+extend([lchPlugin])
 
 export default function HomePage({ commitSha }: { commitSha: string }) {
   // Set the foreground and background to be equal to begin with
-  let fgHex = commitSha.slice(0, 6)
-  let bgHex = commitSha.slice(0, 6)
+  const bgHex = commitSha.slice(0, 6)
+  const bg = colord(bgHex).toLch()
 
-  const mirroredSha = commitSha + commitSha.split("").reverse().join("")
-
-  // The foreground colour doesn’t change, so we can use its initial value for
-  // this whole operation
-  const fgArr = colorParsley(fgHex)
-
-  // Set an initial contrast score, index, and stopping point
-  let contrastScore = 0
-  let index = 6
-  const stoppingPoint = mirroredSha.length - 1
-
-  // While the contrast score is too low and before we've traveresed the entire
-  // commit SHA...
-  while (contrastScore < 60 && index < stoppingPoint) {
-    index++
-    // Pick a new color from the commit SHA
-    bgHex = mirroredSha.slice(index - 6, index)
-
-    // Find out the contrast
-    const bgArr = colorParsley(bgHex)
-    contrastScore = APCAcontrast(sRGBtoY(fgArr), sRGBtoY(bgArr))
+  const fg = {
+    ...bg,
+    l: (bg.l + 50) % 100,
   }
 
-  // If we ended up bailing out without finding a good pairing, we'll fall back
-  // to typical colors
-  const bailedOut = index >= stoppingPoint
-
-  // Otherwise, we'll set our background and foreground colors!
-  const bg = hexToHSL(bgHex) as Color
-  const fg = hexToHSL(fgHex) as Color
+  console.log(bg)
 
   return (
     <Layout>
@@ -91,19 +64,16 @@ export default function HomePage({ commitSha }: { commitSha: string }) {
       `}</style>
       <style jsx global>{`
         html {
-          ${!bailedOut &&
-          `--wash-color: hsl(${bg.h}, ${bg.s}%, ${bg.l}%) !important;
-           --text-color: hsl(${fg.h}, ${fg.s}%, ${fg.l}%) !important;
-           --meta-color: hsl(${fg.h}, ${fg.s - 20}%, ${fg.l - 10}%) !important;
-           --site-color: hsl(
-             ${bg.h},
-             ${(bg.s + 30) % 100}%,
-             ${(bg.l + 50) % 100}%
-           ) !important;
-           --code-wash: hsl(${bg.h}, ${bg.s}%, ${
-            (bg.l + 10) % 100
-          }%) !important;
-          --code-color: var(--text-color) !important;`}
+          --wash-color: lch(${bg.l} ${bg.c} ${bg.h}) !important;
+          --text-color: lch(${fg.l} ${fg.c} ${fg.h}) !important;
+          --meta-color: lch(
+            ${fg.l + (fg.l > bg.l ? 20 : -20)} ${fg.c} ${fg.h}
+          ) !important;
+          --site-color: lch(
+            ${(bg.l + 50) % 100} ${(bg.c + 30) % 100} ${bg.h}
+          ) !important;
+          --code-wash: lch(${(bg.l + 10) % 100} ${bg.c} ${bg.h}) !important;
+          --code-color: var(--text-color) !important;
         }
       `}</style>
     </Layout>
@@ -117,57 +87,5 @@ export async function getStaticProps() {
     props: {
       commitSha,
     },
-  }
-}
-
-function hexToHSL(hex: string): Color | null {
-  const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex)
-
-  if (result == null || result.length < 4) {
-    return null
-  }
-
-  let r = parseInt(result[1], 16)
-  let g = parseInt(result[2], 16)
-  let b = parseInt(result[3], 16)
-
-  ;(r /= 255), (g /= 255), (b /= 255)
-  let max = Math.max(r, g, b),
-    min = Math.min(r, g, b)
-  let h: number,
-    s: number,
-    l = (max + min) / 2
-
-  if (max == min) {
-    h = s = 0 // achromatic
-  } else {
-    let d = max - min
-    s = l > 0.5 ? d / (2 - max - min) : d / (max + min)
-    switch (max) {
-      case r:
-        h = (g - b) / d + (g < b ? 6 : 0)
-        break
-      case g:
-        h = (b - r) / d + 2
-        break
-      case b:
-        h = (r - g) / d + 4
-        break
-      default:
-        h = 0
-    }
-    h /= 6
-  }
-
-  h = Math.round(h * 360)
-
-  // Prevent saturation and lightness from getting too high
-  s = Math.round(s * 100)
-  l = Math.round(l * 90)
-
-  return {
-    h,
-    s,
-    l,
   }
 }

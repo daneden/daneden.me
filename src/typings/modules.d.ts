@@ -8,7 +8,6 @@ declare module "react-katex"
 declare module "react-script-tag"
 declare module "rehype-slug"
 declare module "remark-abbr"
-declare module "apca-w3"
 
 declare module "*.frag"
 declare module "*.glsl"
