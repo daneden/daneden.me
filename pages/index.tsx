@@ -33,7 +33,7 @@ export default function HomePage({ commitSha }: { commitSha: string }) {
         This page’s colour scheme is based on the website’s most recent commit,{" "}
         <code>
           <Link
-            href={`https://github.com/daneden/daneden.me/commit/${commitSha.slice(0, 7)}`}
+            href={`https://github.com/daneden/daneden.me/commit/${commitSha}`}
           >
             {commitSha.slice(0, 7)}
           </Link>
