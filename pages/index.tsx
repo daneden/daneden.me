@@ -92,18 +92,17 @@ export default function HomePage({ commitSha }: { commitSha: string }) {
       <style jsx global>{`
         html {
           ${!bailedOut &&
-          `--wash-color: lch(${bg.l} ${bg.s}% ${bg.h}) !important;
-          --text-color: lch(${fg.l} ${fg.s}% ${fg.h}) !important;
-          --meta-color: lch(${fg.l + (fg.l > bg.l ? 20 : -20)} ${fg.s}% ${
-            fg.h
-          }) !important;
-          --site-color:
-            lch(${(bg.l + 50) % 100} ${(bg.s + 30) % 100}% ${bg.h})
-
-          !important;
-          --code-wash: lch(${(bg.l + 10) % 100} ${bg.s}% ${
-            bg.h
-          }) !important !important;
+          `--wash-color: hsl(${bg.h}, ${bg.s}%, ${bg.l}%) !important;
+           --text-color: hsl(${fg.h}, ${fg.s}%, ${fg.l}%) !important;
+           --meta-color: hsl(${fg.h}, ${fg.s - 20}%, ${fg.l - 10}%) !important;
+           --site-color: hsl(
+             ${bg.h},
+             ${(bg.s + 30) % 100}%,
+             ${(bg.l + 50) % 100}%
+           ) !important;
+           --code-wash: hsl(${bg.h}, ${bg.s}%, ${
+            (bg.l + 10) % 100
+          }%) !important;
           --code-color: var(--text-color) !important;`}
         }
       `}</style>
