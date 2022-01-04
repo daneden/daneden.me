@@ -12,7 +12,7 @@ interface Color {
 }
 
 export default function HomePage({ commitSha }: { commitSha: string }) {
-  const bg = hexToHSL(commitSha) as Color
+  const bg = hexToHSL(commitSha.slice(0, 6)) as Color
   const fg = complementForColor(bg)
 
   return (
@@ -33,9 +33,9 @@ export default function HomePage({ commitSha }: { commitSha: string }) {
         This page’s colour scheme is based on the website’s most recent commit,{" "}
         <code>
           <Link
-            href={`https://github.com/daneden/daneden.me/commit/${commitSha}`}
+            href={`https://github.com/daneden/daneden.me/commit/${commitSha.slice(0, 7)}`}
           >
-            {commitSha}
+            {commitSha.slice(0, 7)}
           </Link>
         </code>
         .
@@ -75,7 +75,7 @@ export default function HomePage({ commitSha }: { commitSha: string }) {
 }
 
 export async function getStaticProps() {
-  const commitSha = execSync("git rev-parse HEAD").toString().trim().slice(0, 6)
+  const commitSha = execSync("git rev-parse HEAD").toString().trim()
 
   return {
     props: {
