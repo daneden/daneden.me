@@ -2,6 +2,7 @@
 import Breakout from "@/components/Breakout"
 import Layout from "@/components/Layout"
 import Timeline from "@/components/Timeline"
+import { APCAcontrast, colorParsley, sRGBtoY } from "apca-w3"
 import { execSync } from "child_process"
 import Link from "next/link"
 
@@ -12,8 +13,38 @@ interface Color {
 }
 
 export default function HomePage({ commitSha }: { commitSha: string }) {
-  const bg = hexToHSL(commitSha.slice(0, 6)) as Color
-  const fg = complementForColor(bg)
+  // Set the foreground and background to be equal to begin with
+  let fgHex = commitSha.slice(0, 6)
+  let bgHex = commitSha.slice(0, 6)
+
+  // The foreground colour doesn’t change, so we can use its initial value for
+  // this whole operation
+  const fgArr = colorParsley(fgHex)
+
+  // Set an initial contrast score, index, and stopping point
+  let contrastScore = 0
+  let index = 6
+  const stoppingPoint = commitSha.length - 1
+
+  // While the contrast score is too low and before we've traveresed the entire
+  // commit SHA...
+  while (contrastScore < 60 && index < stoppingPoint) {
+    index++
+    // Pick a new color from the commit SHA
+    bgHex = commitSha.slice(index - 6, index)
+
+    // Find out the contrast
+    const bgArr = colorParsley(bgHex)
+    contrastScore = APCAcontrast(sRGBtoY(fgArr), sRGBtoY(bgArr))
+  }
+
+  // If we ended up bailing out without finding a good pairing, we'll fall back
+  // to typical colors
+  const bailedOut = index >= stoppingPoint
+
+  // Otherwise, we'll set our background and foreground colors!
+  const bg = hexToHSL(bgHex) as Color
+  const fg = hexToHSL(fgHex) as Color
 
   return (
     <Layout>
@@ -58,7 +89,8 @@ export default function HomePage({ commitSha }: { commitSha: string }) {
       `}</style>
       <style jsx global>{`
         html {
-          --wash-color: hsl(${bg.h}, ${bg.s}%, ${bg.l}%) !important;
+          ${!bailedOut &&
+          `--wash-color: hsl(${bg.h}, ${bg.s}%, ${bg.l}%) !important;
           --text-color: hsl(${fg.h}, ${fg.s}%, ${fg.l}%) !important;
           --meta-color: hsl(${fg.h}, ${fg.s - 20}%, ${fg.l - 10}%) !important;
           --site-color: hsl(
@@ -67,7 +99,7 @@ export default function HomePage({ commitSha }: { commitSha: string }) {
             ${(bg.l + 50) % 100}%
           ) !important;
           --code-wash: hsl(${bg.h}, ${bg.s}%, ${(bg.l + 10) % 100}%) !important;
-          --code-color: var(--text-color) !important;
+          --code-color: var(--text-color) !important;`}
         }
       `}</style>
     </Layout>
@@ -133,13 +165,5 @@ function hexToHSL(hex: string): Color | null {
     h,
     s,
     l,
-  }
-}
-
-function complementForColor(color: Color): Color {
-  return {
-    h: (color.h + 90) % 360,
-    s: color.s,
-    l: (color.h + 50) % 100,
   }
 }

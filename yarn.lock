@@ -844,6 +844,11 @@ anymatch@~3.1.1:
     normalize-path "^3.0.0"
     picomatch "^2.0.4"
 
+apca-w3@^0.0.98-g-4g.4b:
+  version "0.0.98-g-4g.4b"
+  resolved "https://registry.yarnpkg.com/apca-w3/-/apca-w3-0.0.98-g-4g.4b.tgz#8777e88ae169da4ba04967c2849118334dbb198d"
+  integrity sha512-B4Z0a1Lnfg8PVSKdRdRMCb6cX9T7fzfU6hB/D/8J6Fxbo1orIQpxEJZtd2Ge5carzZNn1nKK/x5WDCqCcsT0yA==
+
 aproba@^1.0.3:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/aproba/-/aproba-1.2.0.tgz#6802e6264efd18c790a1b0d517f0f2627bf2c94a"
