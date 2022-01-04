@@ -124,8 +124,10 @@ function hexToHSL(hex: string): Color | null {
   }
 
   h = Math.round(h * 360)
+
+  // Prevent saturation and lightness from getting too high
   s = Math.round(s * 100)
-  l = Math.round(l * 100)
+  l = Math.round(l * 90)
 
   return {
     h,
