@@ -4,10 +4,14 @@ on: [push]
 
 jobs:
   lint:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v1
+      - name: Use Node.js 14.x
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14.x
       - name: yarn install
         run: yarn install
       - name: yarn lint
