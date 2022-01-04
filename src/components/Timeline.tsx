@@ -62,7 +62,6 @@ export default function Timeline() {
           width: calc(
             ((100vw - (var(--sp-m) * 2)) - var(--container-width)) / 2
           ) !important;
-          color: var(--meta-color);
         }
 
         th,
