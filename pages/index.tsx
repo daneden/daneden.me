@@ -17,6 +17,8 @@ export default function HomePage({ commitSha }: { commitSha: string }) {
   let fgHex = commitSha.slice(0, 6)
   let bgHex = commitSha.slice(0, 6)
 
+  const mirroredSha = commitSha + commitSha.split("").reverse().join()
+
   // The foreground colour doesn’t change, so we can use its initial value for
   // this whole operation
   const fgArr = colorParsley(fgHex)
@@ -24,14 +26,14 @@ export default function HomePage({ commitSha }: { commitSha: string }) {
   // Set an initial contrast score, index, and stopping point
   let contrastScore = 0
   let index = 6
-  const stoppingPoint = commitSha.length - 1
+  const stoppingPoint = mirroredSha.length - 1
 
   // While the contrast score is too low and before we've traveresed the entire
   // commit SHA...
   while (contrastScore < 60 && index < stoppingPoint) {
     index++
     // Pick a new color from the commit SHA
-    bgHex = commitSha.slice(index - 6, index)
+    bgHex = mirroredSha.slice(index - 6, index)
 
     // Find out the contrast
     const bgArr = colorParsley(bgHex)
