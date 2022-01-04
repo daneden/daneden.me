@@ -12,11 +12,12 @@ extend([lchPlugin])
 export default function HomePage({ commitSha }: { commitSha: string }) {
   // Set the foreground and background to be equal to begin with
   const bgHex = commitSha.slice(0, 6)
-  const bg = colord(bgHex).toLch()
+  const bg = colord(`#${bgHex}`).toLch()
 
   const fg = {
     ...bg,
     l: (bg.l + 50) % 100,
+    h: (bg.h + 180) % 360,
   }
 
   console.log(bg)
@@ -64,15 +65,15 @@ export default function HomePage({ commitSha }: { commitSha: string }) {
       `}</style>
       <style jsx global>{`
         html {
-          --wash-color: lch(${bg.l} ${bg.c} ${bg.h}) !important;
-          --text-color: lch(${fg.l} ${fg.c} ${fg.h}) !important;
+          --wash-color: lch(${bg.l}% ${bg.c} ${bg.h}) !important;
+          --text-color: lch(${fg.l}% ${fg.c} ${fg.h}) !important;
           --meta-color: lch(
-            ${fg.l + (fg.l > bg.l ? 20 : -20)} ${fg.c} ${fg.h}
+            ${fg.l + (fg.l > bg.l ? 20 : -20)}% ${fg.c} ${fg.h}
           ) !important;
           --site-color: lch(
-            ${(bg.l + 50) % 100} ${(bg.c + 30) % 100} ${bg.h}
+            ${(bg.l + 50) % 100}% ${(bg.c + 30) % 100} ${bg.h}
           ) !important;
-          --code-wash: lch(${(bg.l + 10) % 100} ${bg.c} ${bg.h}) !important;
+          --code-wash: lch(${(bg.l + 10) % 100}% ${bg.c} ${bg.h}) !important;
           --code-color: var(--text-color) !important;
         }
       `}</style>
