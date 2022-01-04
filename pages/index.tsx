@@ -138,7 +138,7 @@ function hexToHSL(hex: string): Color | null {
 
 function complementForColor(color: Color): Color {
   return {
-    h: (color.h + 180) % 360,
+    h: (color.h + 90) % 360,
     s: color.s,
     l: (color.h + 50) % 100,
   }
