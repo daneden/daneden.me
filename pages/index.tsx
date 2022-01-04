@@ -82,7 +82,7 @@ export default function HomePage({ commitSha }: { commitSha: string }) {
 }
 
 export async function getStaticProps() {
-  const commitSha = execSync("git rev-parse HEAD~1").toString().trim()
+  const commitSha = execSync("git rev-parse HEAD").toString().trim()
 
   return {
     props: {
