@@ -61,17 +61,19 @@ export default function HomePage({ commitSha }: { commitSha: string }) {
         }
       `}</style>
       <style jsx global>{`
-        html {
-          --wash-color: lch(${bg.l}% ${bg.c} ${bg.h}) !important;
-          --text-color: lch(${fg.l}% ${fg.c} ${fg.h}) !important;
-          --meta-color: lch(
-            ${fg.l + (fg.l > bg.l ? 10 : -10)}% ${fg.c} ${fg.h}
-          ) !important;
-          --site-color: lch(
-            ${(bg.l + 50) % 100}% ${(bg.c + 30) % 100} ${bg.h}
-          ) !important;
-          --code-wash: lch(${(bg.l + 10) % 100}% ${bg.c} ${bg.h}) !important;
-          --code-color: var(--text-color) !important;
+        @supports (color: lch(50% 70 180)) {
+          html {
+            --wash-color: lch(${bg.l}% ${bg.c} ${bg.h}) !important;
+            --text-color: lch(${fg.l}% ${fg.c} ${fg.h}) !important;
+            --meta-color: lch(
+              ${fg.l + (fg.l > bg.l ? 10 : -10)}% ${fg.c} ${fg.h}
+            ) !important;
+            --site-color: lch(
+              ${(bg.l + 50) % 100}% ${(bg.c + 30) % 100} ${bg.h}
+            ) !important;
+            --code-wash: lch(${(bg.l + 10) % 100}% ${bg.c} ${bg.h}) !important;
+            --code-color: var(--text-color) !important;
+          }
         }
       `}</style>
     </Layout>
