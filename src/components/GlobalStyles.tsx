@@ -122,7 +122,7 @@ const GlobalStyles = () => (
           color: inherit;
           text-decoration-line: underline;
           text-decoration-color: var(--hover-color) !important;
-          text-decoration-thickness: 2px;
+          text-decoration-thickness: max(0.05em, 1px);
         }
 
         a:hover,

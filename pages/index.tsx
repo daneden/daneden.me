@@ -60,7 +60,6 @@ export default function HomePage({ commitSha }: { commitSha: string }) {
           --padding-size: 0.05em;
           font-family: var(--font-serif);
           font-style: italic;
-          text-decoration-thickness: 0.05em;
         }
       `}</style>
       <style jsx global>{`
