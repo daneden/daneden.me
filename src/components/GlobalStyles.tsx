@@ -166,13 +166,14 @@ const GlobalStyles = () => (
         .h1 {
           font-family: var(--font-sans-extended);
           font-size: var(--sp-xl);
-          font-weight: 700;
+          font-weight: 400;
           color: var(--font-color);
           hyphens: initial;
           line-height: 1.1;
           margin-bottom: var(--sp-m);
           padding-bottom: var(--sp-l);
           padding-top: var(--sp-xl);
+          letter-spacing: -0.0125em;
         }
 
         blockquote {
