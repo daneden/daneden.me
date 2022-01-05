@@ -20,8 +20,6 @@ export default function HomePage({ commitSha }: { commitSha: string }) {
     h: (bg.h - 180) % 360,
   }
 
-  console.log(bg)
-
   return (
     <Layout>
       <Breakout>
