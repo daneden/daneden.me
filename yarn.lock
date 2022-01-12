@@ -3695,10 +3695,10 @@ next-mdx-remote@^3.0.8:
     esbuild "^0.12.9"
     pkg-dir "^5.0.0"
 
-next-sitemap@^1.8.4:
-  version "1.8.4"
-  resolved "https://registry.yarnpkg.com/next-sitemap/-/next-sitemap-1.8.4.tgz#70c8c2babe037f018ca127ef7609d2bff0f0003b"
-  integrity sha512-UYk2HQiZk+0EM+Az7uRfj0Vxl8fJ/6FMiVPtTgQo7WwavGgkX57Ol5lcKjcty/vJyVdZOUIuyjGtGzz4QzajVA==
+next-sitemap@^1.8.7:
+  version "1.8.7"
+  resolved "https://registry.yarnpkg.com/next-sitemap/-/next-sitemap-1.8.7.tgz#80a09fa36c104d019942a6195be3cfee5cfb52cb"
+  integrity sha512-Vd4Qo/FlOa3DfqoHwdY3KaIN5Qke4zde735lpq9V7LKbNWp4mZMLG0XMsAMV9EyxwB9iHENLIcVVnPwJKQPf9A==
   dependencies:
     "@corex/deepmerge" "^2.6.148"
     minimist "^1.2.5"
