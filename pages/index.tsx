@@ -11,8 +11,12 @@ extend([lchPlugin])
 
 export default function HomePage({ commitSha }: { commitSha: string }) {
   // Set the foreground and background to be equal to begin with
-  const bgHex = commitSha.slice(0, 6)
-  const bg = colord(`#${bgHex}`).toLch()
+  const indices = commitSha
+    .slice(0, 6)
+    .split("")
+    .map((i) => parseInt(i, 16))
+  const hex = indices.map((i) => commitSha[i % (commitSha.length - 1)]).join("")
+  const bg = colord(`#${hex}`).toLch()
 
   const fg = {
     ...bg,
