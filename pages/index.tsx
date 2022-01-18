@@ -10,7 +10,6 @@ import Link from "next/link"
 extend([lchPlugin])
 
 export default function HomePage({ commitSha }: { commitSha: string }) {
-  // Set the foreground and background to be equal to begin with
   const indices = commitSha
     .slice(0, 6)
     .split("")
