@@ -59,7 +59,8 @@ export default function HomePage({ commitSha }: { commitSha: string }) {
 
         .intro :global(a) {
           --padding-size: 0.05em;
-          font-family: var(--font-serif);
+          font-family: var(--font-heading);
+          letter-spacing: 0;
           font-style: italic;
         }
       `}</style>
