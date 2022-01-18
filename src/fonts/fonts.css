@@ -47,50 +47,25 @@
 }
 
 @font-face {
-  font-family: "Soehne Breit";
-  src: url("../fonts/soehne-breit-web-buch.eot");
-  src: url("../fonts/soehne-breit-web-buch.eot?#iefix")
+  font-family: "Tiempos Headline";
+  src: url("../fonts/TiemposHeadlineWeb-Light.eot");
+  src: url("../fonts/TiemposHeadlineWeb-Light.eot?#iefix")
       format("embedded-opentype"),
-    url("../fonts/soehne-breit-web-buch.woff2") format("woff2"),
-    url("../fonts/soehne-breit-web-buch.woff") format("woff");
-  font-weight: 400;
+    url("../fonts/TiemposHeadlineWeb-Light.woff2") format("woff2"),
+    url("../fonts/TiemposHeadlineWeb-Light.woff") format("woff");
+  font-weight: 200;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Soehne Breit";
-  src: url("../fonts/soehne-breit-web-buch-kursiv.eot");
-  src: url("../fonts/soehne-breit-web-buch-kursiv.eot?#iefix")
+  font-family: "Tiempos Headline";
+  src: url("../fonts/TiemposHeadlineWeb-LightItalic.eot");
+  src: url("../fonts/TiemposHeadlineWeb-LightItalic.eot?#iefix")
       format("embedded-opentype"),
-    url("../fonts/soehne-breit-web-buch-kursiv.woff2") format("woff2"),
-    url("../fonts/soehne-breit-web-buch-kursiv.woff") format("woff");
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Soehne Breit";
-  src: url("../fonts/soehne-breit-web-dreiviertelfett.eot");
-  src: url("../fonts/soehne-breit-web-dreiviertelfett.eot?#iefix")
-      format("embedded-opentype"),
-    url("../fonts/soehne-breit-web-dreiviertelfett.woff2") format("woff2"),
-    url("../fonts/soehne-breit-web-dreiviertelfett.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Soehne Breit";
-  src: url("../fonts/soehne-breit-web-dreiviertelfett-kursiv.eot");
-  src: url("../fonts/soehne-breit-web-dreiviertelfett-kursiv.eot?#iefix")
-      format("embedded-opentype"),
-    url("../fonts/soehne-breit-web-dreiviertelfett-kursiv.woff2")
-      format("woff2"),
-    url("../fonts/soehne-breit-web-dreiviertelfett-kursiv.woff") format("woff");
-  font-weight: 700;
+    url("../fonts/TiemposHeadlineWeb-LightItalic.woff2") format("woff2"),
+    url("../fonts/TiemposHeadlineWeb-LightItalic.woff") format("woff");
+  font-weight: 200;
   font-style: italic;
   font-display: swap;
 }

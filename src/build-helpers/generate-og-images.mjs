@@ -53,20 +53,27 @@ async function main() {
   })
 }
 
-const soehne = _resolve(process.cwd(), "src", "fonts", "ogFonts", "Soehne.ttf")
-const national = _resolve(
+const tiemposHeadline = _resolve(
   process.cwd(),
   "src",
   "fonts",
   "ogFonts",
-  "National2App-Regular.ttf"
+  "TiemposHeadline-Light.otf"
 )
 
+const soehne = _resolve(
+  process.cwd(),
+  "src",
+  "fonts",
+  "ogFonts",
+  "Soehne-Buch.otf"
+)
+
+registerFont(tiemposHeadline, {
+  family: "TiemposHeadline",
+})
 registerFont(soehne, {
   family: "Soehne",
-})
-registerFont(national, {
-  family: "National 2",
 })
 
 // This function takes a canvas, string, and maxwidth to determine
@@ -111,7 +118,7 @@ function ogImage(title, callback) {
   ctx.fillRect(0, 0, width, height)
 
   // Render the blog post title
-  ctx.font = `bold ${displaySize}px Soehne`
+  ctx.font = `light ${displaySize}px TiemposHeadline`
   ctx.textAlign = "left"
   ctx.textBaseline = "middle"
   ctx.fillStyle = "#f5f5f5"
@@ -139,7 +146,7 @@ function ogImage(title, callback) {
 
   // Render the site title, assuming the main text isn't equal to it
   if (title !== siteConfig.title) {
-    ctx.font = `${authorSize}px National 2`
+    ctx.font = `${authorSize}px Soehne`
     ctx.fillStyle = "#44464B"
 
     ctx.translate(width - offset, halfHeight)

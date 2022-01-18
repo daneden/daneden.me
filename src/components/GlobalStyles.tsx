@@ -60,10 +60,9 @@ const GlobalStyles = () => (
 
           --font-mono: "JetBrains Mono", monospace;
           --font-sans: "Soehne", system-ui, -apple-system, sans-serif;
-          --font-sans-extended: "Soehne Breit", var(--font-sans);
           --font-serif: "Tiempos Text", Georgia, serif;
           --font-body: var(--font-serif);
-          --font-heading: var(--font-serif);
+          --font-heading: "Tiempos Headline", var(--font-serif);
           --font-caption: var(--font-sans);
         }
 
@@ -164,7 +163,7 @@ const GlobalStyles = () => (
 
         h1,
         .h1 {
-          font-family: var(--font-sans-extended);
+          font-family: var(--font-heading);
           font-size: var(--sp-xl);
           font-weight: 400;
           color: var(--font-color);
