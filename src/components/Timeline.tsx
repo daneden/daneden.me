@@ -52,6 +52,8 @@ export default function Timeline() {
         table {
           font: inherit;
           width: 100%;
+          border-collapse: initial;
+          -webkit-border-horizontal-spacing: 0;
         }
 
         th {
@@ -74,6 +76,7 @@ export default function Timeline() {
         th,
         th + td {
           border-top: 2px solid var(--meta-color) !important;
+          border-collapse: no-collapse;
         }
 
         table :global(a) {
