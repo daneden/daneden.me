@@ -3,26 +3,21 @@ import Breakout from "@/components/Breakout"
 import Layout from "@/components/Layout"
 import Timeline from "@/components/Timeline"
 import { execSync } from "child_process"
-import { colord, extend } from "colord"
+import { colord, extend, LchColor } from "colord"
 import lchPlugin from "colord/plugins/lch"
 import Link from "next/link"
 
 extend([lchPlugin])
 
-export default function HomePage({ commitSha }: { commitSha: string }) {
-  const indices = commitSha
-    .slice(0, 6)
-    .split("")
-    .map((i) => parseInt(i, 16))
-  const hex = indices.map((i) => commitSha[i % (commitSha.length - 1)]).join("")
-  const bg = colord(`#${hex}`).toLch()
-
-  const fg = {
-    ...bg,
-    l: (bg.l + 50) % 100,
-    h: (bg.h - 180) % 360,
-  }
-
+export default function HomePage({
+  commitSha,
+  bg,
+  fg,
+}: {
+  commitSha: string
+  bg: LchColor
+  fg: LchColor
+}) {
   return (
     <Layout>
       <Breakout>
@@ -86,10 +81,24 @@ export default function HomePage({ commitSha }: { commitSha: string }) {
 
 export async function getStaticProps() {
   const commitSha = execSync("git rev-parse HEAD").toString().trim()
+  const indices = commitSha
+    .slice(0, 6)
+    .split("")
+    .map((i) => parseInt(i, 16))
+  const hex = indices.map((i) => commitSha[i % (commitSha.length - 1)]).join("")
+  const bg = colord(`#${hex}`).toLch()
+
+  const fg = {
+    ...bg,
+    l: (bg.l + 50) % 100,
+    h: (bg.h - 180) % 360,
+  }
 
   return {
     props: {
       commitSha,
+      bg,
+      fg,
     },
   }
 }
