@@ -56,11 +56,11 @@ function ogImage(callback) {
 
   // Render the blog post title
   ctx.font = `light ${displaySize}px TiemposHeadline`
-  ctx.textAlign = "left"
+  ctx.textAlign = "center"
   ctx.textBaseline = "middle"
   ctx.fillStyle = colord(fg).toHex()
 
-  ctx.fillText(commitSha, 0, height / 2)
+  ctx.fillText(commitSha, width / 2, height / 2)
 
   if (callback) {
     return canvas.toBuffer(callback)
