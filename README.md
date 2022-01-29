@@ -1,4 +1,4 @@
-# daneden.me
+# majouji.com
 
 [![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/daneden/daneden.me)
 ![Check lint results](https://github.com/daneden/daneden.me/workflows/Check%20lint%20results/badge.svg)
@@ -17,3 +17,5 @@ If you want to run this site locally:
 -   Party.
 
 To build for production, run `yarn build`.
+
+This is a fork of Dan Eden’s website.
