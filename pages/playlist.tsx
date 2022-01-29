@@ -18,6 +18,8 @@ interface AirtableRecord {
   }
 }
 
+/*
+
 const AIRTABLE_URL = "https://api.airtable.com/v0/appvuN9NMJEcGKY7Z/entries"
 
 // This function is used to help sort titles excluding leading "the/a"
@@ -85,3 +87,5 @@ export const getStaticProps: GetStaticProps = async () => {
     revalidate: 60,
   }
 }
+
+*/
