@@ -20,11 +20,6 @@ module.exports = {
         destination: "https://github.com/daneden/Baseline.js",
       },
       {
-        source: "/books(.*)",
-        permanent: true,
-        destination: "/playlist$1",
-      },
-      {
         source: "/toast",
         permanent: true,
         destination: "https://daneden.github.io/Toast/",
