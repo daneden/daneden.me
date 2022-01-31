@@ -4031,10 +4031,10 @@ next-mdx-remote@^3.0.8:
     esbuild "^0.12.9"
     pkg-dir "^5.0.0"
 
-next-sitemap@^2.0.7:
-  version "2.0.7"
-  resolved "https://registry.yarnpkg.com/next-sitemap/-/next-sitemap-2.0.7.tgz#58597d7bf9de3cfcdda79cc56ff75b5e0a5eafe3"
-  integrity sha512-QuB0j34a61FjSqOLab+57nBb9rfPEUewgpggs/BUR4CkXgglqn2eLorT0gh2lv9NA1j2rMmVH5xZTJpRlURyow==
+next-sitemap@^2.1.5:
+  version "2.1.5"
+  resolved "https://registry.yarnpkg.com/next-sitemap/-/next-sitemap-2.1.5.tgz#dce63aeaf3047ecbc3dcad8d041a55d18efa756e"
+  integrity sha512-4FDQhofIOa6kJf8s7BJ7XHbm5UdJ4dqwDnOB9sHl7zi4X50rzNf12wPhW/K41wZohtPKZV2jmrrc+XDxj1dpcA==
   dependencies:
     "@corex/deepmerge" "^2.6.148"
     minimist "^1.2.5"
