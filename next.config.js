@@ -11,9 +11,6 @@ if (
 }
 
 module.exports = {
-  experimental: {
-    esmExternals: "loose",
-  },
   env: {
     VERCEL_URL: process.env.VERCEL_URL || "daneden.me",
   },
