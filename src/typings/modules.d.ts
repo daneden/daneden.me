@@ -7,7 +7,6 @@ declare module "react-codepen-embed"
 declare module "react-katex"
 declare module "react-script-tag"
 declare module "rehype-slug"
-declare module "remark-abbr"
 
 declare module "*.frag"
 declare module "*.glsl"
