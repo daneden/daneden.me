@@ -1,7 +1,4 @@
 {
-  "experimental": {
-    "esmExternals": "loose"
-  },
   "github": {
     "silent": true
   },
