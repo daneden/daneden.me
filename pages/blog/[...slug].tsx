@@ -1,21 +1,14 @@
 import { MDXFile, MDXFrontMatter } from "*.mdx"
 import Image from "@/components/Image"
 import Layout from "@/components/Layout"
-import { htmlDirectives } from "@/utils/mdxPlugins.mjs"
+import { rehypePlugins, remarkPlugins } from "@/utils/mdxPlugins.mjs"
 import allBlogPosts from "@/utils/mdxUtils"
-import smartypants from "@ngsctt/remark-smartypants"
-import prism from "mdx-prism"
 import { GetStaticPaths, GetStaticProps } from "next"
 import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote"
 import { serialize } from "next-mdx-remote/serialize"
 import dynamic from "next/dynamic"
 import Link from "next/link"
 import { ComponentType } from "react"
-import katex from "rehype-katex"
-import directive from "remark-directive"
-import gfm from "remark-gfm"
-import math from "remark-math"
-import toc from "remark-toc"
 
 const defaultComponents = {
   a: Link,
@@ -120,8 +113,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   const mdxSource = await serialize(content, {
     mdxOptions: {
-      remarkPlugins: [gfm, smartypants, math, toc, directive, htmlDirectives],
-      rehypePlugins: [katex, prism],
+      remarkPlugins,
+      rehypePlugins,
     },
   })
 

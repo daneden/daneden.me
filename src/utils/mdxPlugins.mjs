@@ -6,7 +6,11 @@ import directive from "remark-directive"
 import gfm from "remark-gfm"
 import math from "remark-math"
 import toc from "remark-toc"
+import { unified } from "unified"
 import { visit } from "unist-util-visit"
+
+// This is just here to prevent the unified import from getting ignored
+unified()
 
 export function htmlDirectives() {
   return (tree) => {
