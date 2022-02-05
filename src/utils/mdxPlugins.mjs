@@ -8,11 +8,7 @@ import math from "remark-math"
 import toc from "remark-toc"
 import { visit } from "unist-util-visit"
 
-// This plugin is an example to let users write HTML with directives.
-// It’s informative but rather useless.
-// See below for others examples.
-/** @type {import('unified').Plugin<[], import('mdast').Root>} */
-function htmlDirectives() {
+export function htmlDirectives() {
   return (tree) => {
     visit(tree, (node) => {
       if (
