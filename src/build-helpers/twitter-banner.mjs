@@ -78,7 +78,7 @@ const client = new Twitter({
   access_token_secret: TWITTER_ACCESS_TOKEN_SECRET,
 })
 
-const currentBranch = execSync("git branch --show-current").toString()
+const currentBranch = execSync("git branch --show-current").toString().trim()
 
 if (currentBranch === "main" || currentBranch === "master") {
   client
