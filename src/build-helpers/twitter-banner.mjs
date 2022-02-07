@@ -80,7 +80,7 @@ const client = new Twitter({
 
 const currentBranch = execSync("git branch --show-current").toString()
 
-if (currentBranch === "main") {
+if (currentBranch === "main" || currentBranch === "master") {
   client
     .post(`account/update_profile_banner.json`, {
       banner: bannerData,
