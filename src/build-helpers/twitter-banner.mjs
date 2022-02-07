@@ -6,6 +6,10 @@ import "dotenv/config"
 import { resolve as _resolve } from "path"
 import Twitter from "twitter"
 
+if (execSync("git branch --show-current").toString() !== "main") {
+  return
+}
+
 const { createCanvas, registerFont } = canvas
 
 extend([lchPlugin])
