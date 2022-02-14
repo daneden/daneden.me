@@ -78,9 +78,17 @@ const client = new Twitter({
   access_token_secret: TWITTER_ACCESS_TOKEN_SECRET,
 })
 
-client
-  .post(`account/update_profile_banner.json`, {
-    banner: bannerData,
-  })
-  .then((d) => console.log(d))
-  .catch((e) => console.error(e))
+const currentBranch = execSync("git branch --show-current").toString().trim()
+
+if (currentBranch === "main" || currentBranch === "master") {
+  client
+    .post(`account/update_profile_banner.json`, {
+      banner: bannerData,
+    })
+    .then((d) => console.log(d))
+    .catch((e) => console.error(e))
+} else {
+  console.log(
+    `Skipping twitter banner image update since the current branch is ${currentBranch} and not main`
+  )
+}
