@@ -42,7 +42,7 @@
     "mdx-prism": "^0.3.4",
     "next": "^12.0.10",
     "next-mdx-remote": "^3.0.8",
-    "next-sitemap": "^2.1.14",
+    "next-sitemap": "^2.1.15",
     "prismjs": "^1.26.0",
     "react": "^17.0.2",
     "react-codepen-embed": "^1.1.0",
