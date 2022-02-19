@@ -1,5 +1,4 @@
 import MDX from "@mdx-js/runtime"
-import smartypants from "@ngsctt/remark-smartypants"
 import { readFileSync, writeFileSync } from "fs"
 import read from "fs-readdir-recursive"
 import matter from "gray-matter"
@@ -7,10 +6,8 @@ import { createRequire } from "module"
 import { join, resolve } from "path"
 import { createElement } from "react"
 import server from "react-dom/server.js"
-import abbr from "remark-abbr"
-import math from "remark-math"
-import toc from "remark-toc"
 import RSS from "rss"
+import { remarkPlugins } from "../utils/mdxPlugins.mjs"
 
 const { renderToString } = server
 
@@ -98,7 +95,7 @@ postsMap.forEach(async function compilePost(post, path) {
       MDX,
       {
         components: mockComponents,
-        remarkPlugins: [abbr, smartypants, math, toc],
+        remarkPlugins,
       },
       content
     )
