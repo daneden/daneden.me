@@ -10,6 +10,7 @@ if (
 }
 
 module.exports = {
+  experimental: { esmExternals: true },
   swcMinify: true,
   env: {
     VERCEL_URL: process.env.VERCEL_URL || "daneden.me",
