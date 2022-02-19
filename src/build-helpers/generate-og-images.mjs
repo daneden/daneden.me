@@ -1,12 +1,12 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-import canvas from "canvas"
+import canvas from "@napi-rs/canvas"
 import fs, { promises as _promises, readFileSync } from "fs"
 import read from "fs-readdir-recursive"
 import matter from "gray-matter"
 import { createRequire } from "module"
 import { join, resolve as _resolve } from "path"
 
-const { createCanvas, registerFont } = canvas
+const { createCanvas, GlobalFonts } = canvas
 
 const require = createRequire(import.meta.url)
 const siteConfig = require("../data/siteconfig.json")
@@ -69,12 +69,8 @@ const soehne = _resolve(
   "Soehne-Buch.otf"
 )
 
-registerFont(tiemposHeadline, {
-  family: "TiemposHeadline",
-})
-registerFont(soehne, {
-  family: "Soehne",
-})
+GlobalFonts.registerFromPath(tiemposHeadline, "TiemposHeadline")
+GlobalFonts.registerFromPath(soehne, "Soehne")
 
 // This function takes a canvas, string, and maxwidth to determine
 // how to split the subject string based on its rendered length,
@@ -172,20 +168,14 @@ const generateOgImages = async (posts) => {
   }
 
   const promises = posts.map(({ title, ogSlug }) => {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
       const filepath = _resolve(
         dir,
         `${ogSlug ? ogSlug.split(".png")[0] : ""}.png`
       )
 
-      ogImage(title, (error, buffer) => {
-        if (error) {
-          console.error(error)
-          reject()
-        }
-
-        writeFile(filepath, buffer)
-      })
+      const buffer = ogImage(title)
+      writeFile(filepath, buffer)
 
       resolve(filepath)
     })

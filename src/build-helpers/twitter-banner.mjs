@@ -1,4 +1,4 @@
-import canvas from "canvas"
+import canvas from "@napi-rs/canvas"
 import { execSync } from "child_process"
 import { colord, extend } from "colord"
 import lchPlugin from "colord/plugins/lch"
@@ -6,7 +6,7 @@ import "dotenv/config"
 import { resolve as _resolve } from "path"
 import Twitter from "twitter"
 
-const { createCanvas, registerFont } = canvas
+const { createCanvas, GlobalFonts } = canvas
 
 extend([lchPlugin])
 
@@ -25,9 +25,7 @@ const tiemposHeadline = _resolve(
   "TiemposHeadline-Light.otf"
 )
 
-registerFont(tiemposHeadline, {
-  family: "TiemposHeadline",
-})
+GlobalFonts.registerFromPath(tiemposHeadline, "TiemposHeadline")
 
 const commitSha = execSync("git rev-parse HEAD").toString().trim()
 const indices = commitSha
