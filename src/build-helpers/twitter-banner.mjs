@@ -57,8 +57,6 @@ function ogImage() {
   </text>
 </svg>`
 
-  console.log(svg)
-
   const pngData = render(svg, {
     background: colord(bg).toHex(),
     font: {

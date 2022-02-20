@@ -138,8 +138,6 @@ function ogImage(title) {
   }</text>
 </svg>`
 
-  console.log(svg)
-
   const pngData = render(svg, {
     background: "#111",
     font: {
