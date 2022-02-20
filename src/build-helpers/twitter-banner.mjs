@@ -51,7 +51,7 @@ function ogImage() {
     font-family="Tiempos Headline"
     font-size="${displaySize}"
     x="${width / 2}"
-    y="${height / 2}"
+    y="${height}"
     class="title">
   ${commitSha}
   </text>
