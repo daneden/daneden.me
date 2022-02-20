@@ -1,12 +1,10 @@
-import canvas from "@napi-rs/canvas"
+import { render } from "@resvg/resvg-js"
 import { execSync } from "child_process"
 import { colord, extend } from "colord"
 import lchPlugin from "colord/plugins/lch"
 import "dotenv/config"
 import { resolve as _resolve } from "path"
 import Twitter from "twitter"
-
-const { createCanvas, GlobalFonts } = canvas
 
 extend([lchPlugin])
 
@@ -25,8 +23,6 @@ const tiemposHeadline = _resolve(
   "TiemposHeadline-Light.otf"
 )
 
-GlobalFonts.registerFromPath(tiemposHeadline, "TiemposHeadline")
-
 const commitSha = execSync("git rev-parse HEAD").toString().trim()
 const indices = commitSha
   .slice(0, 6)
@@ -41,30 +37,36 @@ const fg = {
   h: (bg.h - 180) % 360,
 }
 
-function ogImage(callback) {
+function ogImage() {
   const displaySize = 1024
   const [width, height] = [1500, 500]
 
-  const canvas = createCanvas(width, height)
-  const ctx = canvas.getContext("2d")
+  const svg = `<svg viewBox="0 0 ${width} ${height}" xmlns="http://www.w3.org/2000/svg">
+  <style type="text/css">
+    .title { fill: ${colord(fg).toHex()}; }
+  </style>
 
-  // Render the background colour
-  ctx.fillStyle = colord(bg).toHex()
-  ctx.fillRect(0, 0, width, height)
+  <text
+    text-anchor="middle"
+    font-family="Tiempos Headline"
+    font-size="${displaySize}"
+    x="${width / 2}"
+    y="${height / 2}"
+    class="title">
+  ${commitSha}
+  </text>
+</svg>`
 
-  // Render the blog post title
-  ctx.font = `light ${displaySize}px TiemposHeadline`
-  ctx.textAlign = "center"
-  ctx.textBaseline = "middle"
-  ctx.fillStyle = colord(fg).toHex()
+  const pngData = render(svg, {
+    background: colord(bg).toHex(),
+    font: {
+      fontFiles: [tiemposHeadline], // Load custom fonts.
+      loadSystemFonts: false, // It will be faster to disable loading system fonts.
+    },
+    logLevel: "off",
+  })
 
-  ctx.fillText(commitSha, width / 2, height / 2)
-
-  if (callback) {
-    return canvas.toBuffer(callback)
-  }
-
-  return canvas.toBuffer("image/png")
+  return pngData
 }
 
 const bannerData = ogImage().toString("base64")

@@ -1,12 +1,10 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-import canvas from "@napi-rs/canvas"
+import { render } from "@resvg/resvg-js"
 import fs, { promises as _promises, readFileSync } from "fs"
 import read from "fs-readdir-recursive"
 import matter from "gray-matter"
 import { createRequire } from "module"
 import { join, resolve as _resolve } from "path"
-
-const { createCanvas, GlobalFonts } = canvas
 
 const require = createRequire(import.meta.url)
 const siteConfig = require("../data/siteconfig.json")
@@ -69,13 +67,21 @@ const soehne = _resolve(
   "Soehne-Buch.otf"
 )
 
-GlobalFonts.registerFromPath(tiemposHeadline, "TiemposHeadline")
-GlobalFonts.registerFromPath(soehne, "Soehne")
+function widont(subject) {
+  const words = subject.split(" ")
+  const lastTwo = words.slice(-2).join(" ")
+
+  if (lastTwo.length >= 15) {
+    return subject
+  } else {
+    return subject.replace(/ ([^ ]*)$/, "\u00A0$1")
+  }
+}
 
 // This function takes a canvas, string, and maxwidth to determine
 // how to split the subject string based on its rendered length,
 // allowing text to wrap in the canvas
-function getLines(ctx, text, maxWidth) {
+function getLines(text, maxWidth) {
   // TODO: Add non-space punctuation to getLines for splitting
   // Currently splitting just happens on spaces, but should probably
   // also apply to e.g. hyphens
@@ -85,7 +91,7 @@ function getLines(ctx, text, maxWidth) {
 
   for (let i = 1; i < words.length; i++) {
     const word = words[i]
-    const width = ctx.measureText(currentLine + " " + word).width
+    const width = (currentLine + " " + word).length
     if (width < maxWidth) {
       currentLine += " " + word
     } else {
@@ -97,67 +103,51 @@ function getLines(ctx, text, maxWidth) {
   return lines
 }
 
-function ogImage(title, callback) {
+function ogImage(title) {
   const displaySize = 80
-  const lineHeight = displaySize * 1
   const authorSize = 36
   const [width, height] = [1200, 1200]
   const halfHeight = height / 2
-  const textWidth = 1022
   const offset = 66
+  const lineHeight = displaySize * 1.15
 
-  const canvas = createCanvas(width, height)
-  const ctx = canvas.getContext("2d")
+  const lines = getLines(widont(title), 25)
+  const verticalOffset = lines.length * lineHeight
 
-  // Render the background colour
-  ctx.fillStyle = "#111"
-  ctx.fillRect(0, 0, width, height)
+  const svg = `<svg viewBox="0 0 ${width} ${height}" xmlns="http://www.w3.org/2000/svg">
+  <style type="text/css">
+    .title { fill: #f5f5f5; }
+    .author { fill: rgba(128, 128, 128, 0.75); }
+  </style>
 
-  // Render the blog post title
-  ctx.font = `light ${displaySize}px TiemposHeadline`
-  ctx.textAlign = "left"
-  ctx.textBaseline = "middle"
-  ctx.fillStyle = "#f5f5f5"
+  <text dominant-baseline="middle" font-family="Tiempos Headline" font-size="${displaySize}" x="${offset}" class="title">
+  ${lines
+    .map(
+      (line, i) =>
+        `<tspan x="${offset}"  dy="${
+          halfHeight + offset - verticalOffset / 2
+        }" y="${i * lineHeight}">${line}</tspan>`
+    )
+    .join("")}
+  </text>
 
-  function widont(subject) {
-    const words = subject.split(" ")
-    const lastTwo = words.slice(-2).join(" ")
+  <text text-anchor="middle" transform="translate(${
+    width - offset
+  }, ${halfHeight}) rotate(90)" font-family="Söhne" font-size="${authorSize}" class="author">${
+    siteConfig.title
+  }</text>
+</svg>`
 
-    if (lastTwo.length >= 15) {
-      return subject
-    } else {
-      return subject.replace(/ ([^ ]*)$/, "\u00A0$1")
-    }
-  }
-
-  const lines = getLines(ctx, widont(title), textWidth)
-  const textHeight = lines.length * lineHeight
-
-  // Mapping over the lines rather than .join("\n")-ing them allows us
-  // to use a custom "line height"
-  lines.map((line, i) => {
-    const y = halfHeight - textHeight / 2 + lineHeight * i + lineHeight / 3
-    ctx.fillText(line, offset, y)
+  const pngData = render(svg, {
+    background: "#111",
+    font: {
+      fontFiles: [tiemposHeadline, soehne], // Load custom fonts.
+      loadSystemFonts: false, // It will be faster to disable loading system fonts.
+    },
+    logLevel: "off",
   })
 
-  // Render the site title, assuming the main text isn't equal to it
-  if (title !== siteConfig.title) {
-    ctx.font = `${authorSize}px Soehne`
-    ctx.fillStyle = "#44464B"
-
-    ctx.translate(width - offset, halfHeight)
-    ctx.rotate(-Math.PI / 2)
-    ctx.textAlign = "center"
-    ctx.fillText(siteConfig.title, 0, 0)
-    ctx.resetTransform()
-    ctx.restore()
-  }
-
-  if (callback) {
-    return canvas.toBuffer(callback)
-  }
-
-  return canvas.toBuffer("image/png")
+  return pngData
 }
 
 const generateOgImages = async (posts) => {
