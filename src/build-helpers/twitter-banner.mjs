@@ -63,7 +63,7 @@ function ogImage() {
       fontFiles: [tiemposHeadline], // Load custom fonts.
       loadSystemFonts: false, // It will be faster to disable loading system fonts.
     },
-    logLevel: "debug",
+    logLevel: "off",
   })
 
   return pngData
