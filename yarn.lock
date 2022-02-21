@@ -4705,10 +4705,10 @@ next-mdx-remote@^4.0.0:
     vfile "^5.3.0"
     vfile-matter "^3.0.1"
 
-next-sitemap@^2.4.2:
-  version "2.4.2"
-  resolved "https://registry.yarnpkg.com/next-sitemap/-/next-sitemap-2.4.2.tgz#f5b9c344ee8c4757ca72467084621b6158e628a2"
-  integrity sha512-cvcK2oXNpVcxizPN4dSkOwA5/KIOUXrJVaWYuk17YQvbBqQzufhhr2JgqgB4QoG0U7sMlB1RB1VPDAZ78kK0Qw==
+next-sitemap@^2.4.4:
+  version "2.4.4"
+  resolved "https://registry.yarnpkg.com/next-sitemap/-/next-sitemap-2.4.4.tgz#5a4bc98579a2a392229ea3379db1d8cd695f7889"
+  integrity sha512-+huBDNj0BSU9gXWpBfpqeXHnAUnyNg4cEMN6K2CCmYhMGMYnsO5vaOylGJRlW9V3mqIJlTkbMV1K9dkESFamJQ==
   dependencies:
     "@corex/deepmerge" "^2.6.148"
     minimist "^1.2.5"
