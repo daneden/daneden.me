@@ -5,7 +5,7 @@ import matter from "gray-matter"
 import { createRequire } from "module"
 import { join, resolve } from "path"
 import { createElement } from "react"
-import server from "react-dom/server.js"
+import server from "react-dom/server"
 import RSS from "rss"
 import { remarkPlugins } from "../utils/mdxPlugins.mjs"
 
