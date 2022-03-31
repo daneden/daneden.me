@@ -77,7 +77,7 @@ export default function HomePage({
 }
 
 export async function getStaticProps() {
-  const commitSha = process.env.VERCEL_GIT_COMMIT_REF || "000000"
+  const commitSha = process.env.VERCEL_GIT_COMMIT_SHA || "7ba51d"
   const indices = commitSha
     .slice(0, 6)
     .split("")
