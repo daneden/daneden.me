@@ -2,7 +2,6 @@
 import Breakout from "@/components/Breakout"
 import Layout from "@/components/Layout"
 import Timeline from "@/components/Timeline"
-import { execSync } from "child_process"
 import { colord, extend, LchColor } from "colord"
 import lchPlugin from "colord/plugins/lch"
 import Link from "next/link"
@@ -78,7 +77,7 @@ export default function HomePage({
 }
 
 export async function getStaticProps() {
-  const commitSha = execSync("git rev-parse HEAD").toString().trim()
+  const commitSha = process.env.VERCEL_GIT_COMMIT_REF || "000000"
   const indices = commitSha
     .slice(0, 6)
     .split("")
