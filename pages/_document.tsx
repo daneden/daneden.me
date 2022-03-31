@@ -1,9 +1,11 @@
 import Document, { Head, Html, Main, NextScript } from "next/document"
+import { StrictMode } from "react"
 
 class CustomDocument extends Document {
   render() {
     return (
       <Html>
+        <StrictMode />
         <Head>
           {/* JetBrains Mono (for code blocks) */}
           <link

@@ -61,7 +61,7 @@ export default function HomePage({
       `}</style>
       <style jsx global>{`
         @supports (color: lch(50% 70 180)) {
-          html {
+          html:has(.intro) {
             --wash-color: lch(${bg.l}% ${bg.c} ${bg.h}) !important;
             --text-color: lch(${fg.l}% ${fg.c} ${fg.h}) !important;
             --meta-color: lch(${fg.l}% ${fg.c} ${fg.h} / 0.75) !important;

@@ -14,12 +14,16 @@ const PostLink = ({ post }: Props): ReactElement<HTMLDivElement> => {
   return (
     <>
       <p className="post-link">
-        <PlainLink className="post-link" href={`blog/${post.slug}`}>
-          <div className="post-title">{widont(post.title)}</div>
+        <PlainLink className="post-link" href={`/blog/${post.slug}`}>
+          <span className="post-title">{widont(post.title)}</span>
           <time className="small meta">{date}</time>
         </PlainLink>
       </p>
       <style jsx>{`
+        .post-title {
+          display: block;
+        }
+
         .post-link {
           line-height: 1.25;
         }
