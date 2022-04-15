@@ -32,7 +32,7 @@
     "@mdx-js/runtime": "^1.6.22",
     "@ngsctt/remark-smartypants": "^0.2.0",
     "@resvg/resvg-js": "^1.4.0",
-    "@types/react-dom": "^18.0.0",
+    "@types/react-dom": "^18.0.1",
     "apca-w3": "^0.1.1",
     "babel-loader": "^8.2.4",
     "colord": "^2.9.2",
