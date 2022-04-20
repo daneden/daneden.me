@@ -34,7 +34,7 @@
     "@resvg/resvg-js": "^1.4.0",
     "@types/react-dom": "^18.0.1",
     "apca-w3": "^0.1.1",
-    "babel-loader": "^8.2.4",
+    "babel-loader": "^8.2.5",
     "colord": "^2.9.2",
     "file-loader": "^6.2.0",
     "fs-readdir-recursive": "^1.1.0",
