@@ -1,4 +1,4 @@
-import { render } from "@resvg/resvg-js"
+import { Resvg } from "@resvg/resvg-js"
 import { execSync } from "child_process"
 import { colord, extend } from "colord"
 import lchPlugin from "colord/plugins/lch"
@@ -57,14 +57,16 @@ function ogImage() {
   </text>
 </svg>`
 
-  const pngData = render(svg, {
+  const pngData = new Resvg(svg, {
     background: colord(bg).toHex(),
     font: {
       fontFiles: [tiemposHeadline], // Load custom fonts.
       loadSystemFonts: false, // It will be faster to disable loading system fonts.
     },
     logLevel: "off",
-  }).asPng()
+  })
+    .render()
+    .asPng()
 
   return pngData
 }

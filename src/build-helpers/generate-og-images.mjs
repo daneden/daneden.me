@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-import { render } from "@resvg/resvg-js"
+import { Resvg } from "@resvg/resvg-js"
 import fs, { promises as _promises, readFileSync } from "fs"
 import read from "fs-readdir-recursive"
 import matter from "gray-matter"
@@ -138,14 +138,16 @@ function ogImage(title) {
   }</text>
 </svg>`
 
-  const pngData = render(svg, {
+  const pngData = new Resvg(svg, {
     background: "#111",
     font: {
       fontFiles: [tiemposHeadline, soehne], // Load custom fonts.
       loadSystemFonts: false, // It will be faster to disable loading system fonts.
     },
     logLevel: "off",
-  }).asPng()
+  })
+    .render()
+    .asPng()
 
   return pngData
 }
