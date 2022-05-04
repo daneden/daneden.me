@@ -64,7 +64,7 @@ function ogImage() {
       loadSystemFonts: false, // It will be faster to disable loading system fonts.
     },
     logLevel: "off",
-  })
+  }).asPng()
 
   return pngData
 }
