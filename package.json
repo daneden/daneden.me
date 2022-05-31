@@ -69,7 +69,7 @@
     "eslint-config-next": "^12.1.6",
     "eslint-plugin-mdx": "^1.17.0",
     "husky": "^8.0.1",
-    "lint-staged": "^12.4.2",
+    "lint-staged": "^12.4.3",
     "prettier": "^2.6.2",
     "rss": "^1.2.2",
     "twitter": "^1.7.1"
