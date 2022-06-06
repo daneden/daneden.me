@@ -916,12 +916,12 @@ ansi-styles@^6.0.0:
   resolved "https://registry.yarnpkg.com/ansi-styles/-/ansi-styles-6.1.0.tgz#87313c102b8118abd57371afab34618bf7350ed3"
   integrity sha512-VbqNsoz55SYGczauuup0MFUyXNQviSpFTj1RQtFzmQLk18qbVSpTFFGMT293rmDaQuKCT6InmbuEyUne4mTuxQ==
 
-apca-w3@^0.1.4:
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/apca-w3/-/apca-w3-0.1.4.tgz#c66d0d29f29ff2b1a263adb9a5241f04977c319c"
-  integrity sha512-N55S7j6WAAtjOysc+8WqrTE6pxv3GW0ZlugFoX8RWHWL5iuAvFRx35EyEVkE/xvNd1RFuvF54xqX24jVkgEw9w==
+apca-w3@^0.1.7:
+  version "0.1.7"
+  resolved "https://registry.yarnpkg.com/apca-w3/-/apca-w3-0.1.7.tgz#bcd8732f6342edb82e5e052f504d40d140ef3a1f"
+  integrity sha512-Xkx2XBQhHstoh83CWo5Vumvc7t4qkk0EnQrSCDxoY1RCl/0JLYMwd7gy/5EMdph6XSVt9SeWkn/PEozXlk4EFQ==
   dependencies:
-    colorparsley "^0.1.6"
+    colorparsley "^0.1.8"
 
 arg@^4.1.0:
   version "4.1.3"
@@ -1311,10 +1311,10 @@ colorette@^2.0.16:
   resolved "https://registry.yarnpkg.com/colorette/-/colorette-2.0.16.tgz#713b9af84fdb000139f04546bd4a93f62a5085da"
   integrity sha512-hUewv7oMjCp+wkBv5Rm0v87eJhq4woh5rSR+42YSQJKecCqgIqNkZ6lAlQms/BwHPJA5NKMRlpxPRv0n8HQW6g==
 
-colorparsley@^0.1.6:
-  version "0.1.6"
-  resolved "https://registry.yarnpkg.com/colorparsley/-/colorparsley-0.1.6.tgz#bb4b33e0fd9fb357a57b34a3afce37807cf7a460"
-  integrity sha512-fiK4goizsGw+Ak/nV5JshYcb2lrJC+sTdg+MXQRja4SeCA+caWLWLodAbJJJVcnuyypNlpmjPH9ktuojlvbimQ==
+colorparsley@^0.1.8:
+  version "0.1.8"
+  resolved "https://registry.yarnpkg.com/colorparsley/-/colorparsley-0.1.8.tgz#fd5c1b3d2befbc08c4ab73dc5c2c88f72f743132"
+  integrity sha512-rObESTTTE6G5qO5WFwFxWPggpw4KfpxnLC6Ssl8bITBnNVRhDsyCeTRAUxWQNVTx2pRknKlO2nddYTxjkdNFaw==
 
 combined-stream@^1.0.6, combined-stream@~1.0.6:
   version "1.0.8"
