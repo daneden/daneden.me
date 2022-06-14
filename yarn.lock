@@ -916,10 +916,10 @@ ansi-styles@^6.0.0:
   resolved "https://registry.yarnpkg.com/ansi-styles/-/ansi-styles-6.1.0.tgz#87313c102b8118abd57371afab34618bf7350ed3"
   integrity sha512-VbqNsoz55SYGczauuup0MFUyXNQviSpFTj1RQtFzmQLk18qbVSpTFFGMT293rmDaQuKCT6InmbuEyUne4mTuxQ==
 
-apca-w3@^0.1.7:
-  version "0.1.7"
-  resolved "https://registry.yarnpkg.com/apca-w3/-/apca-w3-0.1.7.tgz#bcd8732f6342edb82e5e052f504d40d140ef3a1f"
-  integrity sha512-Xkx2XBQhHstoh83CWo5Vumvc7t4qkk0EnQrSCDxoY1RCl/0JLYMwd7gy/5EMdph6XSVt9SeWkn/PEozXlk4EFQ==
+apca-w3@^0.1.8:
+  version "0.1.8"
+  resolved "https://registry.yarnpkg.com/apca-w3/-/apca-w3-0.1.8.tgz#73a8ede743c5a40f8a9de60413692ae7a9944fee"
+  integrity sha512-vMvQ+qJta/6QCUjJ16CT+PYQzvztPUAksiGda29GC6cm5ZwpQ0ZDQEuE1/RViuopLEsmBy1Wmajnw+/FLwKR2A==
   dependencies:
     colorparsley "^0.1.8"
 
