@@ -33,7 +33,7 @@
     "@ngsctt/remark-smartypants": "^0.2.0",
     "@resvg/resvg-js": "^2.0.1",
     "@types/react-dom": "^18.0.5",
-    "apca-w3": "^0.1.7",
+    "apca-w3": "^0.1.8",
     "babel-loader": "^8.2.5",
     "colord": "^2.9.2",
     "file-loader": "^6.2.0",
