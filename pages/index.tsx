@@ -100,7 +100,7 @@ export default function HomePage() {
         }
 
         .tile {
-          font-size: clamp(2rem, 2vmin, 3.5rem);
+          font-size: clamp(1.25rem, 2vmin, 3.5rem);
           background-color: var(--tile-background);
           color: var(--tile-foreground);
           aspect-ratio: 1 / 1;
@@ -181,6 +181,23 @@ export default function HomePage() {
           font-family: var(--font-heading);
           letter-spacing: 0;
           font-style: italic;
+        }
+
+        @media (max-width: 1000px) {
+          .root {
+            grid-template-columns: 1fr;
+            display: block;
+          }
+
+          .spanall {
+            grid-columns: 1 / 2;
+          }
+
+          .tile {
+            aspect-ratio: unset;
+            width: 100%;
+            display: block;
+          }
         }
       `}</style>
     </>
