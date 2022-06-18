@@ -53,7 +53,7 @@ function ogImage() {
     x="${width / 2}"
     y="${height}"
     class="title">
-  ${commitSha}
+  —/?!@
   </text>
 </svg>`
 
