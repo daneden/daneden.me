@@ -1,49 +1,167 @@
 /* eslint-disable prefer-const */
-import Breakout from "@/components/Breakout"
-import Layout from "@/components/Layout"
-import Timeline from "@/components/Timeline"
-import { colord, extend, LchColor } from "colord"
-import lchPlugin from "colord/plugins/lch"
+import Metatags from "@/components/Metatags"
 import Link from "next/link"
+import siteConfig from "../src/data/siteconfig.json"
+import Image from "next/image"
+import GlobalStyles from "@/components/GlobalStyles"
 
-extend([lchPlugin])
-
-export default function HomePage({
-  commitSha,
-  bg,
-  fg,
-}: {
-  commitSha: string
-  bg: LchColor
-  fg: LchColor
-}) {
+export default function HomePage() {
   return (
-    <Layout>
-      <Breakout>
-        <p className="intro">
-          Daniel Eden is a Product Designer at{" "}
-          <Link href="https://meta.com/">Meta</Link> in London, working on
-          making Customer Support experiences that are more equitable, human,
-          and helpful. He spends his time <Link href="/blog">writing</Link>,
-          thinking, <Link href="https://twitter.com/_dte">tweeting</Link>, and
-          talking about Design Systems: how they scale, how they break, and the
-          people&nbsp;that maintain&nbsp;them.
-        </p>
-        <Timeline />
-      </Breakout>
-      <p className="small">
-        This page’s colour scheme is based on the website’s most recent commit,{" "}
-        <code>
-          <Link
-            href={`https://github.com/daneden/daneden.me/commit/${commitSha}`}
-          >
-            {commitSha.slice(0, 7)}
-          </Link>
-        </code>
-        .
-      </p>
+    <>
+      <GlobalStyles />
+      <Metatags
+        description={siteConfig.description}
+        thumbnail={`https://${process.env.VERCEL_URL}/images/og.png`}
+        title={siteConfig.title}
+      />
+      <div className="root">
+        <div className="intro">
+          <p className="xxl">
+            Daniel Eden is a Product Designer at{" "}
+            <Link href="https://meta.com/">Meta</Link> in London, working on
+            making Customer Support experiences that are more equitable, human,
+            and helpful. He spends his time <Link href="/blog">writing</Link>,
+            thinking, <Link href="https://twitter.com/_dte">tweeting</Link>, and
+            talking about Design Systems: how they scale, how they break, and
+            the people&nbsp;that maintain&nbsp;them.
+          </p>
+        </div>
+        <Link href="https://solstice.daneden.me">
+          <a className="tile solstice">
+            <h2 className="xxl">Solstice</h2>
+            <p>An iOS app about daylight</p>
+            <Image
+              src="/images/solstice.png"
+              width={361}
+              height={734}
+              alt="An iPhone displaying the Solstice app in dark mode"
+              layout="intrinsic"
+            />
+          </a>
+        </Link>
+        <div className="tile where-we-can-go">
+          <h2 className="xxl">Where We Can Go</h2>
+          <p>
+            A <Link href="">conference talk</Link> and{" "}
+            <Link href="/blog/2019/where-we-can-go">essay</Link> about design
+            systems and design tools.
+          </p>
+          <div className="align-bottom">
+            <Image
+              src="/images/wwcg.jpg"
+              width={686}
+              height={386}
+              alt="Daniel Eden presenting “Where We Can Go” at Clarity Conference 2019"
+            />
+          </div>
+        </div>
+        <Link href="https://zeitgeist.daneden.me">
+          <a className="tile zeitgeist">
+            <h2 className="xxl">Zeitgeist</h2>
+            <p>Monitor your Vercel deployments</p>
+            <Image
+              src="/images/zeitgeist.png"
+              width={368}
+              height={749}
+              alt="An iPhone displaying the Zeitgeist app"
+            />
+          </a>
+        </Link>
+        <div className="tile extras xxl">
+          <Link href="/blog">Writing &rarr;</Link>
+          <Link href="/portfolio">Projects &rarr;</Link>
+          <Link href="/playlist">Playlist &rarr;</Link>
+        </div>
+      </div>
       <style jsx>{`
+        .root {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          margin: calc(var(--sp-m) * -1);
+          --tile-padding: 2vmax;
+        }
+
         .intro {
+          grid-column: 1 / 3;
+          padding: var(--tile-padding);
+        }
+
+        h2 {
+          line-height: 1;
+          padding: 0;
+          margin: 0;
+        }
+
+        .tile {
+          font-size: clamp(2rem, 2vmin, 3.5rem);
+          background-color: var(--tile-background);
+          color: var(--tile-foreground);
+          aspect-ratio: 1 / 1;
+          padding: var(--tile-padding);
+          text-align: center;
+          overflow: hidden;
+        }
+
+        a.tile {
+          text-decoration: none;
+        }
+
+        .solstice {
+          --tile-background: rgb(46, 177, 200);
+          --tile-foreground: white;
+        }
+
+        @supports (background-color: lch(60% 180 192)) {
+          .solstice {
+            --tile-background: lch(60% 180 192);
+          }
+        }
+
+        .where-we-can-go {
+          --tile-background: #060405;
+          --tile-foreground: white;
+        }
+
+        .zeitgeist {
+          --tile-background: #5856d6;
+          --tile-foreground: lightblue;
+        }
+
+        .extras {
+          display: grid;
+          grid-template-rows: 1fr 1fr 1fr;
+          padding: 0;
+        }
+
+        .extras :global(a) {
+          padding: var(--tile-padding);
+          display: grid;
+          place-items: center;
+          color: var(--site-color);
+          --hover-color: rgba(0, 0, 0, 0.1) !important;
+          text-decoration: none;
+        }
+
+        .extras :global(a):hover {
+          --hover-color: var(--site-color) !important;
+        }
+
+        .extras :global(a:nth-child(1)) {
+          background-color: khaki;
+          --site-color: orangered;
+        }
+
+        .extras :global(a:nth-child(2)) {
+          background-color: lightseagreen;
+          --site-color: midnightblue;
+        }
+
+        .extras :global(a:nth-child(3)) {
+          background-color: plum;
+          --site-color: royalblue;
+        }
+
+        .xxl {
           font-size: clamp(1.5rem, 8vmin, 3.5rem);
           line-height: 1.2;
           font-style: normal;
@@ -51,51 +169,13 @@ export default function HomePage({
           letter-spacing: -0.025em;
         }
 
-        .intro :global(a) {
+        .intro .xxl :global(a) {
           --padding-size: 0.05em;
           font-family: var(--font-heading);
           letter-spacing: 0;
           font-style: italic;
         }
       `}</style>
-      <style jsx global>{`
-        @supports (color: lch(50% 70 180)) {
-          html:has(.intro) {
-            --wash-color: lch(${bg.l}% ${bg.c} ${bg.h}) !important;
-            --text-color: lch(${fg.l}% ${fg.c} ${fg.h}) !important;
-            --meta-color: lch(${fg.l}% ${fg.c} ${fg.h} / 0.75) !important;
-            --site-color: lch(
-              ${(bg.l + 50) % 100}% ${(bg.c + 30) % 100} ${bg.h}
-            ) !important;
-            --code-wash: lch(${(bg.l + 10) % 100}% ${bg.c} ${bg.h}) !important;
-            --code-color: var(--text-color) !important;
-          }
-        }
-      `}</style>
-    </Layout>
+    </>
   )
-}
-
-export async function getStaticProps() {
-  const commitSha = process.env.VERCEL_GIT_COMMIT_SHA || "7ba51d"
-  const indices = commitSha
-    .slice(0, 6)
-    .split("")
-    .map((i) => parseInt(i, 16))
-  const hex = indices.map((i) => commitSha[i % (commitSha.length - 1)]).join("")
-  const bg = colord(`#${hex}`).toLch()
-
-  const fg = {
-    ...bg,
-    l: (bg.l + 50) % 100,
-    h: (bg.h - 180) % 360,
-  }
-
-  return {
-    props: {
-      commitSha,
-      bg,
-      fg,
-    },
-  }
 }
