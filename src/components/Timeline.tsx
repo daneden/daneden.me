@@ -52,7 +52,7 @@ export default function Timeline() {
         table {
           font: inherit;
           width: 100%;
-          border-collapse: initial;
+          border-collapse: collapse;
           -webkit-border-horizontal-spacing: 0;
         }
 

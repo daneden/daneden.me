@@ -4,6 +4,7 @@ import Link from "next/link"
 import siteConfig from "../src/data/siteconfig.json"
 import Image from "next/image"
 import GlobalStyles from "@/components/GlobalStyles"
+import Timeline from "@/components/Timeline"
 
 export default function HomePage() {
   return (
@@ -15,7 +16,7 @@ export default function HomePage() {
         title={siteConfig.title}
       />
       <div className="root">
-        <div className="intro">
+        <div className="intro spanall">
           <p className="xxl">
             Daniel Eden is a Product Designer at{" "}
             <Link href="https://meta.com/">Meta</Link> in London, working on
@@ -72,6 +73,9 @@ export default function HomePage() {
           <Link href="/portfolio">Projects &rarr;</Link>
           <Link href="/playlist">Playlist &rarr;</Link>
         </div>
+        <div className="spanall">
+          <Timeline />
+        </div>
       </div>
       <style jsx>{`
         .root {
@@ -82,8 +86,11 @@ export default function HomePage() {
         }
 
         .intro {
-          grid-column: 1 / 3;
           padding: var(--tile-padding);
+        }
+
+        .spanall {
+          grid-column: 1 / 3;
         }
 
         h2 {
