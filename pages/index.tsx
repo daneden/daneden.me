@@ -107,6 +107,13 @@ export default function HomePage() {
           padding: var(--tile-padding);
           text-align: center;
           overflow: hidden;
+          transition: 0.075s ease;
+        }
+
+        .tile:is(:hover, :focus):not(.where-we-can-go) {
+          background-color: var(--tile-foreground);
+          color: var(--tile-background);
+          box-shadow: inset 0 0 0 calc(var(--tile-padding) / 2) currentcolor;
         }
 
         a.tile {
@@ -115,7 +122,7 @@ export default function HomePage() {
 
         .solstice {
           --tile-background: rgb(46, 177, 200);
-          --tile-foreground: white;
+          --tile-foreground: lemonchiffon;
         }
 
         @supports (background-color: lch(60% 180 192)) {
@@ -147,24 +154,28 @@ export default function HomePage() {
           color: var(--site-color);
           --hover-color: rgba(0, 0, 0, 0.1) !important;
           text-decoration: none;
+          background-color: var(--tile-background);
+          transition: 0.075s ease;
         }
 
-        .extras :global(a):hover {
-          --hover-color: var(--site-color) !important;
+        .extras :global(a):is(:hover, :focus) {
+          background-color: var(--site-color) !important;
+          color: var(--tile-background) !important;
+          box-shadow: inset 0 0 0 calc(var(--tile-padding) / 2) currentcolor;
         }
 
         .extras :global(a:nth-child(1)) {
-          background-color: khaki;
+          --tile-background: khaki;
           --site-color: orangered;
         }
 
         .extras :global(a:nth-child(2)) {
-          background-color: lightseagreen;
+          --tile-background: lightseagreen;
           --site-color: midnightblue;
         }
 
         .extras :global(a:nth-child(3)) {
-          background-color: plum;
+          --tile-background: plum;
           --site-color: royalblue;
         }
 
