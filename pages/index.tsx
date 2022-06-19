@@ -122,7 +122,7 @@ export default function HomePage() {
 
         .solstice {
           --tile-background: rgb(46, 177, 200);
-          --tile-foreground: lemonchiffon;
+          --tile-foreground: mistyrose;
         }
 
         @supports (background-color: lch(60% 180 192)) {
@@ -137,8 +137,8 @@ export default function HomePage() {
         }
 
         .zeitgeist {
-          --tile-background: #5856d6;
-          --tile-foreground: lightblue;
+          --tile-background: seagreen;
+          --tile-foreground: powderblue;
         }
 
         .extras {
@@ -149,10 +149,10 @@ export default function HomePage() {
 
         .extras :global(a) {
           padding: var(--tile-padding);
+          padding-block-end: calc(var(--tile-padding) * 1.2);
           display: grid;
           place-items: center;
           color: var(--site-color);
-          --hover-color: rgba(0, 0, 0, 0.1) !important;
           text-decoration: none;
           background-color: var(--tile-background);
           transition: 0.075s ease;
