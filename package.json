@@ -17,9 +17,8 @@
     "build": "next build",
     "build:og-images": "node src/build-helpers/generate-og-images.mjs",
     "build:feed": "node src/build-helpers/generate-rss.mjs",
-    "social:twitterbanner": "node src/build-helpers/twitter-banner.mjs",
     "prebuild": "yarn build:og-images && yarn build:feed",
-    "postbuild": "next-sitemap && yarn social:twitterbanner",
+    "postbuild": "next-sitemap",
     "dev": "next dev",
     "lint": "eslint \"**/*.{js,jsx,ts,tsx,mdx}\"",
     "precommit": "lint-staged",
@@ -35,7 +34,6 @@
     "@types/react-dom": "^18.0.6",
     "apca-w3": "^0.1.9",
     "babel-loader": "^8.2.5",
-    "colord": "^2.9.2",
     "file-loader": "^6.2.0",
     "fs-readdir-recursive": "^1.1.0",
     "gray-matter": "^4.0.3",
@@ -71,7 +69,6 @@
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",
-    "rss": "^1.2.2",
-    "twitter": "^1.7.1"
+    "rss": "^1.2.2"
   }
 }
