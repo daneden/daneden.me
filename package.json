@@ -65,7 +65,7 @@
     "dotenv": "^16.0.1",
     "eslint": "^7.32.0",
     "eslint-config-next": "^12.2.5",
-    "eslint-plugin-mdx": "^1.17.1",
+    "eslint-plugin-mdx": "^2.0.2",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",
