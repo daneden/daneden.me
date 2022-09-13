@@ -61,7 +61,7 @@
     "@types/node": "^18.7.17",
     "@types/react": "^18.0.19",
     "@typescript-eslint/eslint-plugin": "^5.37.0",
-    "@typescript-eslint/parser": "^5.36.2",
+    "@typescript-eslint/parser": "^5.37.0",
     "dotenv": "^16.0.2",
     "eslint": "^8.23.1",
     "eslint-config-next": "^12.3.0",
