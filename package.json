@@ -63,7 +63,7 @@
     "@typescript-eslint/eslint-plugin": "^5.36.2",
     "@typescript-eslint/parser": "^5.36.2",
     "dotenv": "^16.0.2",
-    "eslint": "^8.23.0",
+    "eslint": "^8.23.1",
     "eslint-config-next": "^12.3.0",
     "eslint-plugin-mdx": "^2.0.4",
     "husky": "^8.0.1",
