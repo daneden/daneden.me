@@ -2,16 +2,6 @@
   "name": "daneden.me",
   "description": "The website and blog of Daniel Eden, a designer writing and thinking about design systems",
   "version": "3.0.0",
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{js,json,css,mdx,md,ts,tsx,jsx}": [
-      "prettier --write"
-    ]
-  },
   "license": "MIT",
   "scripts": {
     "build": "next build",
@@ -20,10 +10,8 @@
     "prebuild": "yarn build:og-images && yarn build:feed",
     "postbuild": "next-sitemap",
     "dev": "next dev",
-    "lint": "eslint \"**/*.{js,jsx,ts,tsx,mdx}\"",
-    "precommit": "lint-staged",
-    "start": "next start",
-    "prepare": "npx husky install"
+    "lint": "next lint",
+    "start": "next start"
   },
   "dependencies": {
     "@mdx-js/loader": "^2.1.3",
@@ -60,14 +48,9 @@
     "@now/node": "^1.8.5",
     "@types/node": "^18.7.18",
     "@types/react": "^18.0.20",
-    "@typescript-eslint/eslint-plugin": "^5.37.0",
-    "@typescript-eslint/parser": "^5.37.0",
     "dotenv": "^16.0.2",
-    "eslint": "^8.23.1",
-    "eslint-config-next": "^12.3.0",
-    "eslint-plugin-mdx": "^2.0.4",
-    "husky": "^8.0.1",
-    "lint-staged": "^13.0.3",
+    "eslint": "8.23.1",
+    "eslint-config-next": "12.3.0",
     "prettier": "^2.7.1",
     "rss": "^1.2.2"
   }

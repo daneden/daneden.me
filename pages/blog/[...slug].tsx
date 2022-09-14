@@ -17,7 +17,6 @@ const defaultComponents = {
 
 // OpaqueComponentType is basically a generic that will be used for dynamically
 // importing components in MDX files.
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 type OpaqueComponentType = ComponentType<any>
 
 interface ComponentMap {
