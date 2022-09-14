@@ -279,6 +279,7 @@ const GlobalStyles = () => (
           width: 100%;
           flex: 1 1 auto;
           order: 2;
+          height: auto;
         }
 
         figure :global(figcaption) {
