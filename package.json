@@ -48,7 +48,7 @@
     "@now/node": "^1.8.5",
     "@types/node": "^18.7.23",
     "@types/react": "^18.0.21",
-    "dotenv": "^16.0.2",
+    "dotenv": "^16.0.3",
     "eslint": "8.24.0",
     "eslint-config-next": "12.3.1",
     "prettier": "^2.7.1",
