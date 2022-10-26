@@ -47,7 +47,7 @@
   "devDependencies": {
     "@now/node": "^1.8.5",
     "@types/node": "^18.11.5",
-    "@types/react": "^18.0.22",
+    "@types/react": "^18.0.23",
     "dotenv": "^16.0.3",
     "eslint": "8.26.0",
     "eslint-config-next": "13.0.0",
