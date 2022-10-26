@@ -1,20 +1,13 @@
 import Align from "@/components/Align"
-import NextImage from "next/image"
+import NextImage, { ImageProps as NextImageProps } from "next/image"
 import React, { ReactNode } from "react"
 
 type SafeNumber = number | `${number}`
 
-interface ImageProps {
+interface ImageProps extends NextImageProps {
   align?: "left" | "right"
-  alt: string
   caption?: ReactNode
-  className?: string
-  defaultSize?: string
   invertInDarkMode?: boolean
-  src: string
-  width: SafeNumber
-  height: SafeNumber
-  sizes?: string
 }
 
 const Image = ({
@@ -30,7 +23,7 @@ const Image = ({
 }: ImageProps) => {
   let imgSizes = "(max-width: 800px) 680px, 100vw"
   let Wrapper: typeof Align.Left | typeof Align.Right | typeof React.Fragment
-  const isRemote = src.startsWith("http")
+  const isRemote = typeof src == "string" && src.startsWith("http")
 
   switch (align) {
     case "left":
