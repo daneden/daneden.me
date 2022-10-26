@@ -14,9 +14,6 @@ export default function LightswitchImage({
   height,
 }: Props) {
   const [src, setSrc] = useState(srcLight)
-  const typedWidth = typeof width === "number" ? Number(width) : String(width)
-  const typedHeight =
-    typeof height === "number" ? Number(height) : String(height)
 
   useEffect(() => {
     const mediaQuery = window?.matchMedia("(prefers-color-scheme: dark)")
@@ -35,5 +32,5 @@ export default function LightswitchImage({
     }
   }, [srcLight, srcDark])
 
-  return <Image alt={alt} height={typedHeight} src={src} width={typedWidth} />
+  return <Image alt={alt} height={height} src={src} width={width} />
 }
