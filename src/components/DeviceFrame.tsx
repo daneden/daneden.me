@@ -43,6 +43,8 @@ export default function DeviceFrame({ children }: { children: ReactNode }) {
         .device :global(img) {
           width: auto;
           display: block;
+          height: auto;
+          max-width: 100%;
         }
 
         .device::after {
