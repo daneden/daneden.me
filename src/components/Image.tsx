@@ -2,6 +2,8 @@ import Align from "@/components/Align"
 import NextImage from "next/image"
 import React, { ReactNode } from "react"
 
+type SafeNumber = number | `${number}`
+
 interface ImageProps {
   align?: "left" | "right"
   alt: string
@@ -10,8 +12,8 @@ interface ImageProps {
   defaultSize?: string
   invertInDarkMode?: boolean
   src: string
-  width: string | number
-  height: string | number
+  width: SafeNumber
+  height: SafeNumber
   sizes?: string
 }
 
