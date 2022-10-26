@@ -1,10 +1,10 @@
 /* eslint-disable prefer-const */
+import GlobalStyles from "@/components/GlobalStyles"
 import Metatags from "@/components/Metatags"
+import Timeline from "@/components/Timeline"
+import Image from "next/image"
 import Link from "next/link"
 import siteConfig from "../src/data/siteconfig.json"
-import Image from "next/image"
-import GlobalStyles from "@/components/GlobalStyles"
-import Timeline from "@/components/Timeline"
 
 export default function HomePage() {
   return (
@@ -36,7 +36,6 @@ export default function HomePage() {
               width={361}
               height={734}
               alt="An iPhone displaying the Solstice app in dark mode"
-              layout="intrinsic"
             />
           </a>
         </Link>
