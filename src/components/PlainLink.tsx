@@ -8,7 +8,7 @@ type Props = React.PropsWithChildren<LinkProps> & {
 const PlainLink = ({ children, className, href, onClick }: Props) => (
   <>
     <span className={`plainlink-wrapper ${className}`}>
-      <Link href={href} passHref={true}>
+      <Link href={href} passHref={true} legacyBehavior>
         <a href={String(href)} onClick={onClick}>
           {children}
         </a>

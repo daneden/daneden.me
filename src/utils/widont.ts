@@ -5,6 +5,6 @@ export default function widont(subject: string): string {
   if (lastTwo.length >= 15) {
     return subject
   } else {
-    return subject.replace(/ ([^ ]*)$/, "\u00A0$1")
+    return subject.replace(/ ([^ ]*)$/, "\u00A0$1");
   }
 }

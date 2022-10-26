@@ -34,7 +34,7 @@ export default function PortfolioPage() {
           along with information about the next and previous solstice.
         </p>
         <p>
-          <Link href="https://solstice.daneden.me">Visit the microsite</Link> to
+          <Link href="https://solstice.daneden.me" legacyBehavior>Visit the microsite</Link> to
           learn more and download for free.
         </p>
       </section>
@@ -61,7 +61,7 @@ export default function PortfolioPage() {
           vacation to look forward to, Eventually is for you.
         </p>
         <p>
-          <Link href="https://eventually.app">Visit the microsite</Link> to
+          <Link href="https://eventually.app" legacyBehavior>Visit the microsite</Link> to
           learn more.
         </p>
       </section>
@@ -83,12 +83,12 @@ export default function PortfolioPage() {
         </p>
         <p>
           Zeitgeist is an iOS and Mac app that lets you see the status of your
-          recent <Link href="https://vercel.com/home">Vercel</Link> deployments.
+          recent <Link href="https://vercel.com/home" legacyBehavior>Vercel</Link> deployments.
           It updates in (almost) real-time, giving you at-a-glance peace of mind
           about your web app deployments.
         </p>
         <p>
-          <Link href="https://zeitgeist.daneden.me">Visit the microsite</Link>{" "}
+          <Link href="https://zeitgeist.daneden.me" legacyBehavior>Visit the microsite</Link>{" "}
           for details and to download.
         </p>
       </section>
@@ -106,7 +106,7 @@ export default function PortfolioPage() {
         From 2020–2021, I worked as a Design Manager supporting Meta’s Commerce
         organisation, specifically focused on buyer consideration experiences
         for{" "}
-        <Link href="https://en-gb.facebook.com/business/shops">Meta Shops</Link>
+        <Link href="https://en-gb.facebook.com/business/shops" legacyBehavior>Meta Shops</Link>
         . Our team focused on giving people the information they need to make an
         informed purchase decision, providing Meta employees with the standards
         to build high-quality buyer experiences, and exploring the future of
@@ -124,14 +124,18 @@ export default function PortfolioPage() {
       <p>
         In late 2018–early 2019, the team worked closely with Meta’s primary
         revenue-impacting product, Ads Manager, to help them{" "}
-        <Link href="https://www.facebook.com/business/news/improving-ads-manager-and-business-manager">
+        <Link
+          href="https://www.facebook.com/business/news/improving-ads-manager-and-business-manager"
+          legacyBehavior>
           redesign the product
         </Link>{" "}
         in the pursuit of increased advertiser efficiency and customer value.
         This work was the first result of a coordinated effort to create a more
         cohesive advertising and marketing experience across all of Meta’s
         business tools. More about this work can be found on the{" "}
-        <Link href="https://www.facebook.com/business/m/one-sheeters/DesigningBetterAdvertiserExperiences">
+        <Link
+          href="https://www.facebook.com/business/m/one-sheeters/DesigningBetterAdvertiserExperiences"
+          legacyBehavior>
           Facebook Business website
         </Link>
         .
@@ -150,7 +154,9 @@ export default function PortfolioPage() {
       </p>
       <p>
         My first project at Meta was{" "}
-        <Link href="https://www.facebook.com/business/news/optimize-your-ads-with-split-testing?pnref=story">
+        <Link
+          href="https://www.facebook.com/business/news/optimize-your-ads-with-split-testing?pnref=story"
+          legacyBehavior>
           Split Testing
         </Link>
         , a tool allowing advertisers to test different ad strategies against
@@ -162,7 +168,9 @@ export default function PortfolioPage() {
         During my two and a half years at Dropbox, I worked on numerous projects
         across several different teams. Most notably, I worked with the Revenue
         &amp; Growth team on redesigning and{" "}
-        <Link href="https://blogs.dropbox.com/dropbox/2014/08/introducing-more-powerful-dropbox-pro/">
+        <Link
+          href="https://blogs.dropbox.com/dropbox/2014/08/introducing-more-powerful-dropbox-pro/"
+          legacyBehavior>
           relaunching Dropbox Pro
         </Link>
         (now known as Dropbox Plus), an effort which involved both product work
@@ -180,7 +188,7 @@ export default function PortfolioPage() {
         After working on Dropbox Pro, we spun off a small “blue sky” growth team
         to explore how we could foster increased adoption of our sharing tools.
         The most successful project to emerge from that team was the addition of{" "}
-        <Link href="https://dribbble.com/shots/1972358-Faceholder">
+        <Link href="https://dribbble.com/shots/1972358-Faceholder" legacyBehavior>
           user avatars
         </Link>{" "}
         in the Dropbox Product. Adding user photos to the product led to
@@ -195,7 +203,7 @@ export default function PortfolioPage() {
         historical knowledge and engineering principles to address
         inconsistencies in both the design and implementation of many product
         surfaces. The result of my work was{" "}
-        <Link href="http://dropbox.github.io/scooter/">Scooter</Link>, an
+        <Link href="http://dropbox.github.io/scooter/" legacyBehavior>Scooter</Link>, an
         open-source (S)CSS framework and design system adopted by several
         product teams to speed up their work.
       </p>
@@ -222,36 +230,44 @@ export default function PortfolioPage() {
         Lucid Underground is a web app and companion iOS and watchOS app that
         shows the current status of the London Underground, London Overground,
         TfL Rail, and DLR transit systems. You can{" "}
-        <Link href="https://underground.lucid.toys/">visit the website</Link> or{" "}
-        <Link href="https://apps.apple.com/gb/app/lucid-underground/id1491993114">
+        <Link href="https://underground.lucid.toys/" legacyBehavior>visit the website</Link> or{" "}
+        <Link
+          href="https://apps.apple.com/gb/app/lucid-underground/id1491993114"
+          legacyBehavior>
           buy the app
         </Link>{" "}
         on the iOS App Store.
       </p>
       <h3>Who Would Win Bot</h3>
       <p>
-        <Link href="https://twitter.com/WhoWouldWinBot">Who Would Win Bot</Link>{" "}
+        <Link href="https://twitter.com/WhoWouldWinBot" legacyBehavior>Who Would Win Bot</Link>{" "}
         is a Twitter bot that asks followers: in a fight between two random
         emoji, who would win?{" "}
-        <Link href="https://twitter.com/WhoWouldWinBot/status/1070173517528866817">
+        <Link
+          href="https://twitter.com/WhoWouldWinBot/status/1070173517528866817"
+          legacyBehavior>
           A Genie, or a potato?
         </Link>{" "}
-        <Link href="https://twitter.com/WhoWouldWinBot/status/1069992274665320448">
+        <Link
+          href="https://twitter.com/WhoWouldWinBot/status/1069992274665320448"
+          legacyBehavior>
           A bouquet, or a curling stone?
         </Link>{" "}
         View the{" "}
-        <Link href="https://github.com/daneden/who-would-win">
+        <Link href="https://github.com/daneden/who-would-win" legacyBehavior>
           source of GitHub
         </Link>{" "}
         or{" "}
-        <Link href="https://twitter.com/WhoWouldWinBot">
+        <Link href="https://twitter.com/WhoWouldWinBot" legacyBehavior>
           follow it on Twitter
         </Link>
         .
       </p>
       <h3>Lucid</h3>
       <p>
-        <Link href="https://chrome.google.com/webstore/detail/lucid/achogfadpkcepkepcpegehpiiioihmik">
+        <Link
+          href="https://chrome.google.com/webstore/detail/lucid/achogfadpkcepkepcpegehpiiioihmik"
+          legacyBehavior>
           Lucid
         </Link>{" "}
         is a Google Chrome extension that replaces the New Tab page with a
@@ -261,19 +277,19 @@ export default function PortfolioPage() {
 
       <h3>Brills</h3>
       <p>
-        <Link href="http://brills.me">Brills</Link> is a simple money management
+        <Link href="http://brills.me" legacyBehavior>Brills</Link> is a simple money management
         web application built for budgeting quickly.{" "}
-        <Link href="http://brills.me">Visit the site</Link>.
+        <Link href="http://brills.me" legacyBehavior>Visit the site</Link>.
       </p>
 
       <h3>Animate.css</h3>
       <p>
-        <Link href="http://animate.style/">Animate.css</Link> is a cross-browser
+        <Link href="http://animate.style/" legacyBehavior>Animate.css</Link> is a cross-browser
         plug-and-play CSS animation library for delightful animation in websites
         and web applications. Since I created the project in 2011, it has gone
         on to be used in tens of thousands of websites, growing into an active
         open source community.{" "}
-        <Link href="http://animate.style/">Visit the site</Link>.
+        <Link href="http://animate.style/" legacyBehavior>Visit the site</Link>.
       </p>
 
       <style jsx>{`
@@ -294,5 +310,5 @@ export default function PortfolioPage() {
         }
       `}</style>
     </Layout>
-  )
+  );
 }

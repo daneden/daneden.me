@@ -15,9 +15,9 @@ export default function FourOhFourPage() {
 
       <p>
         The page you tried to access cannot be found. Maybe try going{" "}
-        <Link href="/">home</Link> or read something from{" "}
-        <Link href="/blog">the blog</Link>.
+        <Link href="/" legacyBehavior>home</Link> or read something from{" "}
+        <Link href="/blog" legacyBehavior>the blog</Link>.
       </p>
     </Layout>
-  )
+  );
 }
