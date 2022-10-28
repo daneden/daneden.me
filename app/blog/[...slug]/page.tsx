@@ -72,11 +72,7 @@ function buildComponentMap(source: string) {
   return map
 }
 
-export default async function PostPage({
-  params: { slug },
-}: {
-  params: { slug: string[] }
-}) {
+export default async function PostPage({ params: { slug } }) {
   const postKey = (slug as string[]).join("/")
 
   const source = allBlogPosts.get(postKey) as MDXFile
