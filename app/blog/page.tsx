@@ -1,13 +1,12 @@
-import Layout from "@/components/Layout"
-import PlainList from "@/components/PlainList"
 import PostLink from "@/components/PostLink"
 import blogPosts from "@/utils/mdxUtils"
 export default async function Blog() {
   const posts = await getPosts()
 
   return (
-    <Layout frontMatter={{ title: "Blog" }}>
-      <PlainList>
+    <>
+      <h1>Blog</h1>
+      <ul className="plainlist">
         {posts.map((post) => {
           return (
             <li key={post.slug}>
@@ -15,8 +14,8 @@ export default async function Blog() {
             </li>
           )
         })}
-      </PlainList>
-    </Layout>
+      </ul>
+    </>
   )
 }
 

@@ -2,11 +2,13 @@ import Link from "next/link"
 
 const SkipLink = () => (
   <>
-    <nav>
-      <Link href="#content" legacyBehavior>Skip to content</Link>
+    <nav className="skipLink">
+      <Link href="#content" legacyBehavior>
+        Skip to content
+      </Link>
     </nav>
-    <style jsx>{`
-      nav {
+    <style>{`
+      .skipLink {
         font-family: var(--font-sans);
         background-color: var(--highlight-color);
         color: var(--text-color);
@@ -17,11 +19,11 @@ const SkipLink = () => (
         top: -100%;
       }
 
-      nav :global(a) {
+      .skipLink a {
         --hover-color: var(--text-color);
       }
 
-      nav:focus-within {
+      .skipLink:focus-within {
         height: auto;
         position: initial;
       }

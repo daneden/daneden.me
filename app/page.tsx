@@ -1,4 +1,5 @@
 /* eslint-disable prefer-const */
+import Breakout from "@/components/Breakout"
 import Metatags from "@/components/Metatags"
 import Timeline from "@/components/Timeline"
 import Image from "next/image"
@@ -7,7 +8,7 @@ import siteConfig from "../src/data/siteconfig.json"
 
 export default function HomePage() {
   return (
-    <>
+    <Breakout>
       <Metatags
         description={siteConfig.description}
         thumbnail={`https://${process.env.VERCEL_URL}/images/og.png`}
@@ -228,6 +229,6 @@ export default function HomePage() {
           }
         }
       `}</style>
-    </>
+    </Breakout>
   )
 }

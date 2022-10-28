@@ -1,5 +1,4 @@
 import PlainLink from "./PlainLink"
-import PlainList from "./PlainList"
 
 interface HeaderProps {
   siteTitle: string
@@ -23,39 +22,19 @@ const links = [
 const Header = ({ siteTitle }: HeaderProps) => {
   return (
     <>
-      <header>
+      <header className="site-header">
         <PlainLink href="/">{siteTitle}</PlainLink>
 
         <nav>
-          <PlainList>
+          <ul className="plainlist">
             {links.map(({ to, label }) => (
               <li key={to}>
                 <PlainLink href={to}>{label}</PlainLink>
               </li>
             ))}
-          </PlainList>
+          </ul>
         </nav>
       </header>
-      <style jsx>{`
-        header {
-          display: grid;
-          grid-template-columns: var(--grid-spec);
-          grid-gap: var(--sp-xs);
-          flex-wrap: wrap;
-          margin-bottom: var(--sp-s);
-        }
-
-        nav :global(ul) {
-          display: flex;
-          gap: var(--sp-s);
-        }
-
-        @media (max-width: 64em) {
-          header > :global(*) {
-            grid-column: var(--center-column);
-          }
-        }
-      `}</style>
     </>
   )
 }

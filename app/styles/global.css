@@ -97,11 +97,6 @@ html {
   font-variant-alternates: stylistic(ss02);
 }
 
-#__next {
-  display: flex;
-  flex-direction: column;
-}
-
 ul,
 ol {
   margin-bottom: var(--sp-m);
@@ -336,4 +331,64 @@ aside {
 
 .sans {
   font-family: var(--font-sans);
+}
+
+.plainlink-wrapper a {
+  text-decoration: none;
+}
+
+.wrapper {
+  display: grid;
+  grid-gap: var(--sp-m);
+  grid-template-columns: var(--grid-spec);
+  flex-grow: 1;
+}
+
+.wrapper:focus {
+  outline: none;
+}
+
+.wrapper > main {
+  grid-column: var(--center-column);
+}
+
+.breakout-container-hack {
+  margin: 0 auto;
+  width: 0;
+}
+
+.breakout-container {
+  width: calc(100vw - var(--scrollbar-width, 0px));
+  margin-left: -50vw;
+  padding: var(--sp-s);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.plainlist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.site-header {
+  display: grid;
+  grid-template-columns: var(--grid-spec);
+  grid-gap: var(--sp-xs);
+  flex-wrap: wrap;
+  margin-bottom: var(--sp-s);
+}
+
+.site-header nav ul {
+  display: flex;
+  gap: var(--sp-s);
+}
+
+@media (max-width: 64em) {
+  .site-header > * {
+    grid-column: var(--center-column);
+  }
 }
