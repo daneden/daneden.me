@@ -6,8 +6,11 @@ module.exports = {
   images: {
     domains: ["dl.airtable.com"],
   },
+  experimental: {
+    appDir: true,
+  },
 
-  async redirects() {
+  redirects() {
     return [
       {
         source: "/animate",

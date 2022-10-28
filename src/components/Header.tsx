@@ -1,5 +1,3 @@
-import { useRouter } from "next/router"
-import React from "react"
 import PlainLink from "./PlainLink"
 import PlainList from "./PlainList"
 
@@ -23,8 +21,6 @@ const links = [
 ]
 
 const Header = ({ siteTitle }: HeaderProps) => {
-  const location = useRouter().pathname
-
   return (
     <>
       <header>
@@ -34,10 +30,7 @@ const Header = ({ siteTitle }: HeaderProps) => {
           <PlainList>
             {links.map(({ to, label }) => (
               <li key={to}>
-                <PlainLink href={to}>
-                  {label}
-                  {location.includes(to) ? " ☚" : ""}
-                </PlainLink>
+                <PlainLink href={to}>{label}</PlainLink>
               </li>
             ))}
           </PlainList>

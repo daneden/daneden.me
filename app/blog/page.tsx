@@ -1,14 +1,10 @@
-import { MDXFrontMatter } from "*.mdx"
 import Layout from "@/components/Layout"
-import PostLink from "@/components/PostLink"
 import PlainList from "@/components/PlainList"
+import PostLink from "@/components/PostLink"
 import blogPosts from "@/utils/mdxUtils"
-import { ReactElement } from "react"
-export default function Blog({
-  posts,
-}: {
-  posts: MDXFrontMatter[]
-}): ReactElement<typeof Layout> {
+export default async function Blog() {
+  const posts = await getPosts()
+
   return (
     <Layout frontMatter={{ title: "Blog" }}>
       <PlainList>
@@ -24,7 +20,7 @@ export default function Blog({
   )
 }
 
-export async function getStaticProps() {
+async function getPosts() {
   const posts = Array.from(blogPosts.values())
     .map((post) => post.frontMatter)
     .sort((a, b) => {
@@ -32,7 +28,5 @@ export async function getStaticProps() {
     })
     .filter((post) => !post.hidden)
 
-  return {
-    props: { posts },
-  }
+  return posts
 }

@@ -1,10 +1,10 @@
-import { MDXFile, MDXFrontMatter } from "*.mdx"
+import { MDXFile } from "*.mdx"
 import Image from "@/components/Image"
 import Layout from "@/components/Layout"
 import { rehypePlugins, remarkPlugins } from "@/utils/mdxPlugins.mjs"
 import allBlogPosts from "@/utils/mdxUtils"
-import { GetStaticPaths, GetStaticProps } from "next"
-import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote"
+import { GetStaticPaths } from "next"
+import { MDXRemote } from "next-mdx-remote"
 import { serialize } from "next-mdx-remote/serialize"
 import dynamic from "next/dynamic"
 import Link from "next/link"
@@ -72,37 +72,12 @@ function buildComponentMap(source: string) {
   return map
 }
 
-interface PostPageProps {
-  source: MDXRemoteSerializeResult
-  frontMatter: MDXFrontMatter
-  extraComponents: string[]
-}
-
-export default function PostPage({
-  source,
-  frontMatter,
-  extraComponents,
-}: PostPageProps) {
-  const components = {
-    ...defaultComponents,
-    // Slightly hack the component map function by pretending to instantiate a
-    // JSX symbol for each extra component
-    ...buildComponentMap(`<${extraComponents.join("<")}`),
-  }
-  return (
-    <Layout frontMatter={frontMatter}>
-      <MDXRemote {...source} components={components} />
-    </Layout>
-  )
-}
-
-export const getStaticProps: GetStaticProps = async ({ params }) => {
-  if (!params) {
-    console.error("No parameters passed for static generation")
-    return { props: {} }
-  }
-
-  const postKey = (params.slug as string[]).join("/")
+export default async function PostPage({
+  params: { slug },
+}: {
+  params: { slug: string[] }
+}) {
+  const postKey = (slug as string[]).join("/")
 
   const source = allBlogPosts.get(postKey) as MDXFile
 
@@ -117,15 +92,17 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     },
   })
 
-  return {
-    props: {
-      source: mdxSource,
-      frontMatter,
-      // Next.js requires that static props are JSON serializable, so we have to
-      // just pass the extra components as strings.
-      extraComponents: Object.keys(extraComponents),
-    },
+  const components = {
+    ...defaultComponents,
+    // Slightly hack the component map function by pretending to instantiate a
+    // JSX symbol for each extra component
+    ...extraComponents,
   }
+  return (
+    <Layout frontMatter={frontMatter}>
+      <MDXRemote {...mdxSource} components={components} />
+    </Layout>
+  )
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {

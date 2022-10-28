@@ -38,7 +38,12 @@
         "src/components/designSystem/*"
       ]
     },
-    "incremental": true
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
   "exclude": [
     "node_modules"
@@ -48,6 +53,7 @@
     "**/*.tsx",
     "typings/mdx.d.ts",
     "**/*.mdx",
-    "next-env.d.ts"
+    "next-env.d.ts",
+    ".next/types/**/*.ts"
   ]
 }
