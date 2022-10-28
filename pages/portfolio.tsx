@@ -18,17 +18,17 @@ export default function PortfolioPage() {
           <h3 className="h1">Solstice</h3>
           <small className="meta">Design &amp; Development</small>
         </header>
-        <p>
-          <DeviceFrame>
-            <LightswitchImage
-              alt="The Solstice app, showing sunrise and sunset information for Hackney, London"
-              height={2532}
-              srcDark="/uploads/portfolio/solstice/dark.png"
-              srcLight="/uploads/portfolio/solstice/light.png"
-              width={1170}
-            />
-          </DeviceFrame>
-        </p>
+
+        <DeviceFrame>
+          <LightswitchImage
+            alt="The Solstice app, showing sunrise and sunset information for Hackney, London"
+            height={2532}
+            srcDark="/uploads/portfolio/solstice/dark.png"
+            srcLight="/uploads/portfolio/solstice/light.png"
+            width={1170}
+          />
+        </DeviceFrame>
+
         <p>
           Solstice is an iOS app, independently designed and built by myself,
           that shows you the amount of daylight today compared to yesterday,
@@ -47,17 +47,17 @@ export default function PortfolioPage() {
           <h3 className="h1">Eventually</h3>
           <small className="meta">Design &amp; Development</small>
         </header>
-        <p>
-          <DeviceFrame>
-            <LightswitchImage
-              alt="The Eventually app, showing upcoming events in the next week, month, and year"
-              height={2532}
-              srcDark="/uploads/portfolio/eventually/dark.png"
-              srcLight="/uploads/portfolio/eventually/light.png"
-              width={1170}
-            />
-          </DeviceFrame>
-        </p>
+
+        <DeviceFrame>
+          <LightswitchImage
+            alt="The Eventually app, showing upcoming events in the next week, month, and year"
+            height={2532}
+            srcDark="/uploads/portfolio/eventually/dark.png"
+            srcLight="/uploads/portfolio/eventually/light.png"
+            width={1170}
+          />
+        </DeviceFrame>
+
         <p>
           Eventually is an iOS app that shows you significant events coming up
           in the next week, month, and year. If you’ve ever been caught off
@@ -77,17 +77,17 @@ export default function PortfolioPage() {
           <h3 className="h1">Zeitgeist</h3>
           <small className="meta">Design &amp; Development</small>
         </header>
-        <p>
-          <DeviceFrame>
-            <LightswitchImage
-              alt="The Zeitgeist app, showing deployment details for an in-progress build"
-              height={2532}
-              srcDark="/uploads/portfolio/zeitgeist/dark.png"
-              srcLight="/uploads/portfolio/zeitgeist/light.png"
-              width={1170}
-            />
-          </DeviceFrame>
-        </p>
+
+        <DeviceFrame>
+          <LightswitchImage
+            alt="The Zeitgeist app, showing deployment details for an in-progress build"
+            height={2532}
+            srcDark="/uploads/portfolio/zeitgeist/dark.png"
+            srcLight="/uploads/portfolio/zeitgeist/light.png"
+            width={1170}
+          />
+        </DeviceFrame>
+
         <p>
           Zeitgeist is an iOS and Mac app that lets you see the status of your
           recent{" "}

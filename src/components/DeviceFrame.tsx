@@ -4,7 +4,7 @@ export default function DeviceFrame({ children }: { children: ReactNode }) {
   return (
     <>
       <figure className="device">
-        <div className="device-inner">{children}</div>
+        <span className="device-inner">{children}</span>
       </figure>
       <style jsx>{`
         .device {

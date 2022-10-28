@@ -2,8 +2,6 @@ import Align from "@/components/Align"
 import NextImage, { ImageProps as NextImageProps } from "next/image"
 import React, { ReactNode } from "react"
 
-type SafeNumber = number | `${number}`
-
 interface ImageProps extends NextImageProps {
   align?: "left" | "right"
   caption?: ReactNode
