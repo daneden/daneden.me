@@ -3,12 +3,11 @@ import Image from "@/components/Image"
 import Layout from "@/components/Layout"
 import { rehypePlugins, remarkPlugins } from "@/utils/mdxPlugins.mjs"
 import allBlogPosts from "@/utils/mdxUtils"
-import { GetStaticPaths } from "next"
 import { MDXRemote } from "next-mdx-remote"
 import { serialize } from "next-mdx-remote/serialize"
 import dynamic from "next/dynamic"
 import Link from "next/link"
-import { ComponentType } from "react"
+import { ComponentType, use } from "react"
 
 const defaultComponents = {
   a: Link,
@@ -72,10 +71,8 @@ function buildComponentMap(source: string) {
   return map
 }
 
-export default async function PostPage({ params: { slug } }) {
-  const postKey = (slug as string[]).join("/")
-
-  const source = allBlogPosts.get(postKey) as MDXFile
+const getPost = async (slug: string) => {
+  const source = allBlogPosts.get(slug) as MDXFile
 
   const { content, frontMatter } = source
 
@@ -87,6 +84,18 @@ export default async function PostPage({ params: { slug } }) {
       rehypePlugins: rehypePlugins,
     },
   })
+
+  return { mdxSource, frontMatter, extraComponents }
+}
+
+export default async function PostPage({
+  params: { slug },
+}: {
+  params: { slug: Array<string> }
+}) {
+  const { mdxSource, frontMatter, extraComponents } = use(
+    getPost(slug.join("/"))
+  )
 
   const components = {
     ...defaultComponents,
@@ -101,13 +110,8 @@ export default async function PostPage({ params: { slug } }) {
   )
 }
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = Array.from(allBlogPosts.keys()).map((slug) => ({
-    params: { slug: slug.split("/") },
+export async function generateStaticParams() {
+  return Array.from(allBlogPosts.keys()).map((slug) => ({
+    slug: slug.split("/"),
   }))
-
-  return {
-    paths,
-    fallback: false,
-  }
 }
