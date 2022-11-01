@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
 import { Resvg } from "@resvg/resvg-js"
 import fs, { promises as _promises, readFileSync } from "fs"
 import read from "fs-readdir-recursive"
