@@ -19,15 +19,6 @@ const PostLink = ({ post }: Props): ReactElement<HTMLDivElement> => {
           <time className="small meta">{date}</time>
         </PlainLink>
       </p>
-      <style jsx>{`
-        .post-title {
-          display: block;
-        }
-
-        .post-link {
-          line-height: 1.25;
-        }
-      `}</style>
     </>
   )
 }

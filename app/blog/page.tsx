@@ -1,31 +1,40 @@
-import PostLink from "@/components/PostLink"
-import blogPosts from "@/utils/mdxUtils"
+import { gql } from "graphql-request"
+import Link from "next/link"
+import { Post } from "./[slug]/page"
+
 export default async function Blog() {
-  const posts = await getPosts()
+  const {
+    data: { blogPosts: posts },
+  } = await fetch(
+    "https://api-eu-central-1.hygraph.com/v2/ckj905f88c5cc01z5gqb26m13/master",
+    {
+      method: "POST",
+      body: JSON.stringify({
+        query: gql`
+          query BlogPosts {
+            blogPosts(orderBy: date_DESC) {
+              date
+              slug
+              title
+            }
+          }
+        `,
+      }),
+    }
+  ).then((d) => d.json())
 
   return (
     <>
       <h1>Blog</h1>
       <ul className="plainlist">
-        {posts.map((post) => {
+        {posts.map((post: Post) => {
           return (
             <li key={post.slug}>
-              <PostLink post={post} />
+              <Link href={`/blog/${post.slug}`}>{post.title}</Link>
             </li>
           )
         })}
       </ul>
     </>
   )
-}
-
-async function getPosts() {
-  const posts = Array.from(blogPosts.values())
-    .map((post) => post.frontMatter)
-    .sort((a, b) => {
-      return Number(new Date(b.date || "")) - Number(new Date(a.date || ""))
-    })
-    .filter((post) => !post.hidden)
-
-  return posts
 }
