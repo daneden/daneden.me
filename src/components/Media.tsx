@@ -1,4 +1,4 @@
-import PlainLink from "@/components/PlainLink"
+import Link from "next/link"
 import Image from "./Image"
 
 interface MediaCover {
@@ -19,7 +19,7 @@ export interface MediaData {
 const Media = ({ author, cover, quote, title, url }: MediaData) => {
   return (
     <>
-      <PlainLink href={url}>
+      <Link className="plainlink" href={url}>
         {" "}
         <div className="media-container">
           <Image
@@ -44,7 +44,7 @@ const Media = ({ author, cover, quote, title, url }: MediaData) => {
             )}
           </div>
         </div>
-      </PlainLink>
+      </Link>
       <style jsx>{`
         .media-container {
           align-items: start;

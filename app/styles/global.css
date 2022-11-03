@@ -333,7 +333,7 @@ aside {
   font-family: var(--font-sans);
 }
 
-.plainlink-wrapper a {
+.plainlink {
   text-decoration: none;
 }
 
@@ -391,4 +391,9 @@ img {
   .site-header > * {
     grid-column: var(--center-column);
   }
+}
+
+.post-list-item {
+  margin-bottom: var(--sp-m);
+  line-height: 1.3;
 }

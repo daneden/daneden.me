@@ -1,8 +1,7 @@
+/** @type {import('next').NextConfig} */
+
 module.exports = {
   swcMinify: true,
-  env: {
-    VERCEL_URL: process.env.VERCEL_URL || "daneden.me",
-  },
   images: {
     domains: ["dl.airtable.com"],
   },
@@ -48,17 +47,5 @@ module.exports = {
         destination: "/feed.xml",
       },
     ]
-  },
-
-  webpack(config) {
-    config.module.rules = [
-      ...config.module.rules,
-      {
-        test: /\.mdx?$/,
-        use: ["babel-loader", "@mdx-js/loader"],
-      },
-    ]
-
-    return config
   },
 }

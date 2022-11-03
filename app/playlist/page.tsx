@@ -1,8 +1,5 @@
-import Layout from "@/components/Layout"
-import { GetStaticProps } from "next"
 import Media, { MediaData } from "@/components/Media"
 import widont from "@/utils/widont"
-import React from "react"
 
 interface AirtableRecord {
   fields: MediaData & {
@@ -24,25 +21,7 @@ const AIRTABLE_URL = "https://api.airtable.com/v0/appvuN9NMJEcGKY7Z/entries"
 const strippedTitle = (str: string): string =>
   str.replace(/^(the|a) /i, "").toLowerCase()
 
-export default function LibraryPage({ entries }: { entries: MediaData[] }) {
-  return (
-    <Layout frontMatter={{ title: "Playlist" }}>
-      {entries.map(({ title, author, quote, cover, url, type }) => (
-        <Media
-          author={author}
-          cover={cover}
-          key={title}
-          quote={quote}
-          title={title}
-          type={type}
-          url={url}
-        />
-      ))}
-    </Layout>
-  )
-}
-
-export const getStaticProps: GetStaticProps = async () => {
+export default async function LibraryPage() {
   const mediaDataSource = (await fetch(AIRTABLE_URL, {
     headers: {
       Authorization: `Bearer ${process.env.AIRTABLE_API_KEY}`,
@@ -77,11 +56,19 @@ export const getStaticProps: GetStaticProps = async () => {
     .sort((a, b) =>
       strippedTitle(a.title).localeCompare(strippedTitle(b.title))
     )
-
-  return {
-    props: {
-      entries,
-    },
-    revalidate: 60,
-  }
+  return (
+    <>
+      {entries.map(({ title, author, quote, cover, url, type }) => (
+        <Media
+          author={author}
+          cover={cover}
+          key={title}
+          quote={quote}
+          title={title}
+          type={type}
+          url={url}
+        />
+      ))}
+    </>
+  )
 }
