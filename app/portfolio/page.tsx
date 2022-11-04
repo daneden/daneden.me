@@ -16,7 +16,7 @@ export default function PortfolioPage() {
       <section>
         <header className="portfolio-header">
           <h3 className="h1">Solstice</h3>
-          <small className="meta">Design &amp; Development</small>
+          <span className="small meta">Design &amp; Development</span>
         </header>
 
         <DeviceFrame>
