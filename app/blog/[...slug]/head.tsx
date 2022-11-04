@@ -13,6 +13,8 @@ export default async function Head({
   const excerpt = post?.frontMatter.excerpt
   return (
     <>
+      <meta charSet="utf-8" />
+      <meta name="viewport" content="width=device-width" />
       <title>{post?.frontMatter.title + " | Daniel Eden, Designer"}</title>
       <Title>{post?.frontMatter.title ?? "Daniel Eden, Designer"}</Title>
       {excerpt != undefined ? <Description>{excerpt}</Description> : null}
