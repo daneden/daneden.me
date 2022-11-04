@@ -19,6 +19,7 @@ export default async function Head({
       <Thumbnail
         url={`https://${process.env.VERCEL_URL}/api/og?title=${post?.frontMatter.title}`}
       />
+      <link href="/images/face.jpeg" rel="icon" type="image/jpeg" />
     </>
   )
 }
