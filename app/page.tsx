@@ -19,17 +19,15 @@ export default function HomePage() {
             the people&nbsp;that maintain&nbsp;them.
           </p>
         </div>
-        <Link href="https://solstice.daneden.me">
-          <a className="tile solstice">
-            <h2 className="xxl">Solstice</h2>
-            <p>An iOS app about daylight</p>
-            <Image
-              src="/images/solstice.png"
-              width={361}
-              height={734}
-              alt="An iPhone displaying the Solstice app in dark mode"
-            />
-          </a>
+        <Link className="tile solstice" href="https://solstice.daneden.me">
+          <h2 className="xxl">Solstice</h2>
+          <p>An iOS app about daylight</p>
+          <Image
+            src="/images/solstice.png"
+            width={361}
+            height={734}
+            alt="An iPhone displaying the Solstice app in dark mode"
+          />
         </Link>
         <div className="tile where-we-can-go">
           <h2 className="xxl">Where We Can Go</h2>
@@ -47,17 +45,15 @@ export default function HomePage() {
             />
           </div>
         </div>
-        <Link href="https://zeitgeist.daneden.me">
-          <a className="tile zeitgeist">
-            <h2 className="xxl">Zeitgeist</h2>
-            <p>Monitor your Vercel deployments</p>
-            <Image
-              src="/images/zeitgeist.png"
-              width={368}
-              height={749}
-              alt="An iPhone displaying the Zeitgeist app"
-            />
-          </a>
+        <Link className="tile zeitgeist" href="https://zeitgeist.daneden.me">
+          <h2 className="xxl">Zeitgeist</h2>
+          <p>Monitor your Vercel deployments</p>
+          <Image
+            src="/images/zeitgeist.png"
+            width={368}
+            height={749}
+            alt="An iPhone displaying the Zeitgeist app"
+          />
         </Link>
         <div className="tile extras xxl">
           <Link href="/blog">Writing &rarr;</Link>
