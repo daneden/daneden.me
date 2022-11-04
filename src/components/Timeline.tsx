@@ -39,9 +39,7 @@ export default function Timeline() {
                 <tr key={`${year}-${index}`}>
                   {index === 0 ? <th>{year}</th> : <td />}
                   <td>
-                    <Link href={entry.url} legacyBehavior>
-                      {entry.title}
-                    </Link>
+                    <Link href={entry.url}>{entry.title}</Link>
 
                     <p className="small sans meta">{entry.description}</p>
                   </td>

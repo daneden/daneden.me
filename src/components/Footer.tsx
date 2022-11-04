@@ -6,19 +6,9 @@ export default function Footer() {
       <footer>
         <div className="footer-wrapper small">
           Written, designed, and built by Daniel Eden, a designer who you can
-          find on{" "}
-          <Link href="https://twitter.com/_dte" legacyBehavior>
-            Twitter
-          </Link>
-          ,{" "}
-          <Link href="https://github.com/daneden" legacyBehavior>
-            GitHub
-          </Link>
-          , or good old-fashioned{" "}
-          <Link href="mailto:dan.eden@me.com" legacyBehavior>
-            Email
-          </Link>
-          .
+          find on <Link href="https://twitter.com/_dte">Twitter</Link>,{" "}
+          <Link href="https://github.com/daneden">GitHub</Link>, or good
+          old-fashioned <Link href="mailto:dan.eden@me.com">Email</Link>.
         </div>
       </footer>
       <style jsx>{`

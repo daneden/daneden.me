@@ -3,9 +3,7 @@ import Link from "next/link"
 const SkipLink = () => (
   <>
     <nav className="skipLink">
-      <Link href="#content" legacyBehavior>
-        Skip to content
-      </Link>
+      <Link href="#content">Skip to content</Link>
     </nav>
     <style>{`
       .skipLink {
