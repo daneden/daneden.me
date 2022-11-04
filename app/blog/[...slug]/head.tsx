@@ -1,4 +1,4 @@
-import { Description, Thumbnail } from "@/components/Metatags"
+import { Description, Thumbnail, Title } from "@/components/Metatags"
 import { Post } from "@/utils/mdx/sources"
 
 export default async function Head({
@@ -14,6 +14,7 @@ export default async function Head({
   return (
     <>
       <title>{post?.frontMatter.title + " | Daniel Eden, Designer"}</title>
+      <Title>{post?.frontMatter.title ?? "Daniel Eden, Designer"}</Title>
       {excerpt != undefined ? <Description>{excerpt}</Description> : null}
       <Thumbnail
         url={`https://${process.env.VERCEL_URL}/api/og?title=${post?.frontMatter.title}`}

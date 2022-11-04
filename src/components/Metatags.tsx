@@ -20,7 +20,6 @@ export function Description({ children }: { children: string }) {
 export function Title({ children }: { children: string }) {
   return (
     <>
-      <title>{children}</title>
       <meta content={children} name="title" />
       <meta content={children} name="twitter:title" />
     </>
