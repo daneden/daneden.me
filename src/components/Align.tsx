@@ -7,7 +7,7 @@ const Subject = ({
 }) => (
   <>
     <div className={className}>{children}</div>
-    <style jsx>{`
+    <style>{`
       div {
         width: 100%;
         z-index: 1;

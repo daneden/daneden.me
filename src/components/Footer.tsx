@@ -11,7 +11,7 @@ export default function Footer() {
           old-fashioned <Link href="mailto:dan.eden@me.com">Email</Link>.
         </div>
       </footer>
-      <style jsx>{`
+      <style>{`
         footer {
           border-top: 1px solid;
           margin-top: var(--sp-l);

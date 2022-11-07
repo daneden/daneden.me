@@ -22,10 +22,12 @@ const strippedTitle = (str: string): string =>
   str.replace(/^(the|a) /i, "").toLowerCase()
 
 export default async function LibraryPage() {
-  const mediaDataSource = (await fetch(AIRTABLE_URL, {
+  const mediaDataSource = await fetch(AIRTABLE_URL, {
     headers: {
       Authorization: `Bearer ${process.env.AIRTABLE_API_KEY}`,
     },
+    next: { revalidate: 60 },
+    cache: "force-cache",
   })
     .then((d) => d.json())
     .then((d) => d.records)
@@ -43,10 +45,10 @@ export default async function LibraryPage() {
           cover,
         }
       })
-    )) as MediaData[]
+    )
 
-  const entries = mediaDataSource
-    .map((media) => {
+  const entries = (mediaDataSource as MediaData[])
+    .map((media: MediaData) => {
       return {
         ...media,
         // Replace the last space with a non-breaking space

@@ -48,7 +48,7 @@ export default function Timeline() {
             })}
         </tbody>
       </table>
-      <style jsx>{`
+      <style>{`
         table {
           font: inherit;
           width: 100%;

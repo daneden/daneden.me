@@ -45,25 +45,6 @@ const Media = ({ author, cover, quote, title, url }: MediaData) => {
           </div>
         </div>
       </Link>
-      <style jsx>{`
-        .media-container {
-          align-items: start;
-          display: grid;
-          grid-gap: var(--sp-xs);
-          grid-template-columns: var(--sp-xxl) 1fr;
-          border-top: 1px solid var(--meta-color);
-          margin-bottom: var(--sp-m);
-        }
-
-        /* Override Figure's margin-bottom */
-        .media-container :global(figure) {
-          margin-bottom: 0;
-        }
-
-        .title {
-          line-height: 1.4;
-        }
-      `}</style>
     </>
   )
 }

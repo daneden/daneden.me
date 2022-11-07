@@ -7,7 +7,7 @@ function ColorStrip() {
   return (
     <>
       <div role="presentation"></div>
-      <style jsx>{`
+      <style>{`
         div {
           height: var(--sp-xxl);
           background-image: linear-gradient(to right, ${stops});
@@ -39,7 +39,7 @@ function LinearVersusSteepedGradient() {
           decreases. The result is a much richer, darker-seeming dark stop.
         </figcaption>
       </figure>
-      <style jsx>{`
+      <style>{`
         .gradient {
           height: var(--sp-xl);
         }
@@ -73,7 +73,7 @@ function RelativeSaturationDemo() {
           the bottom gradient is a desaturated version of the top gradient.
         </figcaption>
       </figure>
-      <style jsx>{`
+      <style>{`
         .grayscale {
           filter: grayscale(100%);
         }

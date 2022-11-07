@@ -20,18 +20,6 @@ export default function RootLayout({
         <Header siteTitle={siteConfig.title} />
         <Wrapper>{children}</Wrapper>
         <Footer />
-
-        <style jsx>{`
-          header {
-            margin-bottom: var(--sp-l);
-            padding-bottom: var(--sp-xl);
-          }
-
-          header > :global(h1) {
-            margin-bottom: 0 !important;
-            padding-bottom: 0 !important;
-          }
-        `}</style>
       </body>
     </html>
   )

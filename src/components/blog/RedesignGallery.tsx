@@ -54,7 +54,7 @@ export default function RedesignGallery() {
           })}
         </div>
       </Breakout>
-      <style jsx>{`
+      <style>{`
         .gallery {
           display: grid;
           gap: var(--sp-xs);

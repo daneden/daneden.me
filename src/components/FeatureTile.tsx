@@ -22,11 +22,11 @@ export default function FeatureTile({ title, description, url, image }: Props) {
           </div>
         </a>
       </Link>
-      <style jsx>{`
-        .tile {
-          --transition: 0.15s cubic-bezier(0.6, 0.17, 0.31, 1);
-          display: grid;
-          gap: var(--sp-m);
+      <style>{`
+      .tile {
+        --transition: 0.15s cubic-bezier(0.6, 0.17, 0.31, 1);
+        display: grid;
+        gap: var(--sp-m);
 
           transition: var(--transition);
           background-color: var(--gray05);
@@ -83,12 +83,12 @@ export default function FeatureTile({ title, description, url, image }: Props) {
           padding: 0;
         }
 
-        h3 {
-          font-family: var(--font-sans);
-          color: inherit;
-          font-style: normal;
-        }
-      `}</style>
+      h3 {
+        font-family: var(--font-sans);
+        color: inherit;
+        font-style: normal;
+      }
+    `}</style>
     </>
   )
 }

@@ -6,7 +6,7 @@ export default function DeviceFrame({ children }: { children: ReactNode }) {
       <figure className="device">
         <span className="device-inner">{children}</span>
       </figure>
-      <style jsx>{`
+      <style>{`
         .device {
           --device-wash: #fefefe;
 
