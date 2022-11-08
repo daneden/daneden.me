@@ -1,25 +1,19 @@
-import Footer from "@/components/Footer"
-import Header from "@/components/Header"
 import SkipLink from "@/components/SkipLink"
 import Wrapper from "@/components/Wrapper"
-import siteConfig from "@/data/siteconfig.json"
 import "./styles/fonts/fonts.css"
 import "./styles/global.css"
 import "./styles/syntax.css"
 
-export default function RootLayout({
+export default function BranchPageLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
   return (
     <html>
-      <head></head>
       <body>
         <SkipLink />
-        <Header siteTitle={siteConfig.title} />
         <Wrapper>{children}</Wrapper>
-        <Footer />
       </body>
     </html>
   )

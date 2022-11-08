@@ -2,7 +2,7 @@ import formatDate from "@/utils/formatDate"
 import { Post } from "@/utils/mdx/sources"
 import { rehypePlugins, remarkPlugins } from "@/utils/mdxPlugins.mjs"
 import { serialize } from "next-mdx-remote/serialize"
-import { MdxContent } from "../../components/MdxContent"
+import { MdxContent } from "../../../components/MdxContent"
 
 interface PostPageProps {
   params: {

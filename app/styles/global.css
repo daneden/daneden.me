@@ -92,7 +92,6 @@ html {
   font-family: var(--font-body);
   font-size: clamp(100%, 2.5vw, 115%);
   line-height: var(--baseline);
-  padding: var(--sp-m);
   font-feature-settings: "ss02" 1;
   font-variant-alternates: stylistic(ss02);
 }
@@ -414,4 +413,8 @@ img {
 
 .media-container .title {
   line-height: 1.4;
+}
+
+.sp-m {
+  padding: var(--sp-m);
 }
