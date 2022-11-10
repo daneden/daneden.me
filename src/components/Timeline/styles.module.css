@@ -1,0 +1,34 @@
+.root {
+  font: inherit;
+  width: 100%;
+  border-collapse: collapse;
+  -webkit-border-horizontal-spacing: 0;
+}
+
+.root th {
+  font-weight: normal;
+  border: none;
+  font-size: inherit;
+  text-align: right;
+  width: calc(
+    ((100vw - (var(--sp-m) * 2)) - var(--container-width)) / 2
+  ) !important;
+}
+
+.root th,
+.root td {
+  vertical-align: top;
+  font-family: var(--font-sans);
+  border: none;
+  line-height: 1.2;
+  padding-inline: 0.25em;
+}
+
+.root th,
+.root th + td {
+  border-top: 2px solid var(--meta-color) !important;
+}
+
+.root a {
+  text-decoration: none;
+}

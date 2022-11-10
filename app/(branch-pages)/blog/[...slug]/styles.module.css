@@ -1,0 +1,8 @@
+.header {
+  margin-bottom: var(--sp-xxl);
+}
+
+.title {
+  padding-bottom: 0;
+  margin: 0;
+}

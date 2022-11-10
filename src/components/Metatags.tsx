@@ -1,57 +1,40 @@
-import Head from "next/head"
-import React, { ReactElement } from "react"
-import site from "../data/siteconfig.json"
-
 interface MetatagsProps {
   title?: string
   description: string
-  url?: string
-  pathname?: string
   thumbnail: string
 }
 
-const dnsPrefetchURLs = ["https://stream.mux.com"]
-
-function Metatags(props: MetatagsProps): ReactElement<typeof Head> {
-  const { title, description, url, pathname, thumbnail } = props
-  const pageTitle = title === site.title ? title : `${title} | ${site.title}`
-
+export function Description({ children }: { children: string }) {
   return (
-    <Head>
-      {/* Title */}
-      <title>{pageTitle}</title>
-      <meta content={pageTitle} name="title" />
-      <meta content={pageTitle} name="twitter:title" />
+    <>
+      <meta content={children} name="description" />
+      <meta content={children} property="og:description" />
+    </>
+  )
+}
 
-      {/* Description */}
-      <meta content={description} name="description" />
-      <meta content={description} name="twitter:description" />
-      <meta content={description} property="og:description" />
+export function Title({ children }: { children: string }) {
+  return (
+    <>
+      <meta content={children} name="title" />
+      <meta content={children} name="twitter:title" />
+    </>
+  )
+}
 
-      {pathname && <meta content={url + pathname} property="og:url" />}
-
-      {/* Thumbnail */}
-      {thumbnail && (
-        <>
-          <meta content={thumbnail} property="og:image" />
-          <meta content={thumbnail} property=" og:image:secure_url" />
-          <meta content={thumbnail} name="twitter:image" />
-        </>
-      )}
+export function Thumbnail({ url }: { url: string }) {
+  return (
+    <>
+      <meta content={url} property="og:image" />
+      <meta content={url} property=" og:image:secure_url" />
+      <meta content={url} name="twitter:image" />
       <meta content="1200" property="og:image:width" />
       <meta content="630" property="og:image:height" />
       <meta content="summary_large_image" name="twitter:card" />
-
-      <meta content="en" property="og:locale" />
-
-      {/* Favicon */}
-      <link href="/images/face.jpeg" rel="icon" type="image/jpeg" />
-
-      {dnsPrefetchURLs.map((url, index) => [
-        <link href={url} key={`preconnect-${index}`} rel="preconnect" />,
-        <link href={url} key={`prefetch-${index}`} rel="dns-prefetch" />,
-      ])}
-    </Head>
+    </>
   )
 }
-export default Metatags
+
+export function Favicon() {
+  return <link href="/images/face.jpeg" rel="icon" type="image/jpeg" />
+}

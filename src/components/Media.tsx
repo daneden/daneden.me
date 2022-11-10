@@ -1,4 +1,4 @@
-import PlainLink from "@/components/PlainLink"
+import Link from "next/link"
 import Image from "./Image"
 
 interface MediaCover {
@@ -19,7 +19,7 @@ export interface MediaData {
 const Media = ({ author, cover, quote, title, url }: MediaData) => {
   return (
     <>
-      <PlainLink href={url}>
+      <Link className="plainlink" href={url}>
         {" "}
         <div className="media-container">
           <Image
@@ -44,26 +44,7 @@ const Media = ({ author, cover, quote, title, url }: MediaData) => {
             )}
           </div>
         </div>
-      </PlainLink>
-      <style jsx>{`
-        .media-container {
-          align-items: start;
-          display: grid;
-          grid-gap: var(--sp-xs);
-          grid-template-columns: var(--sp-xxl) 1fr;
-          border-top: 1px solid var(--meta-color);
-          margin-bottom: var(--sp-m);
-        }
-
-        /* Override Figure's margin-bottom */
-        .media-container :global(figure) {
-          margin-bottom: 0;
-        }
-
-        .title {
-          line-height: 1.4;
-        }
-      `}</style>
+      </Link>
     </>
   )
 }
