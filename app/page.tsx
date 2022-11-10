@@ -1,12 +1,11 @@
 /* eslint-disable prefer-const */
-import Breakout from "@/components/Breakout"
 import Timeline from "@/components/Timeline"
 import Image from "next/image"
 import Link from "next/link"
 import "./styles/home.css"
 export default function HomePage() {
   return (
-    <Breakout>
+    <>
       <div className="root">
         <div className="intro spanall">
           <p className="xxl">
@@ -64,6 +63,6 @@ export default function HomePage() {
           <Timeline />
         </div>
       </div>
-    </Breakout>
+    </>
   )
 }

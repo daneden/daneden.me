@@ -6,13 +6,14 @@ function ColorStrip() {
 
   return (
     <>
-      <div role="presentation"></div>
-      <style>{`
-        div {
-          height: var(--sp-xxl);
-          background-image: linear-gradient(to right, ${stops});
-        }
-      `}</style>
+      <div
+        style={{
+          backgroundImage: `linear-gradient(to right, ${stops})`,
+          height: "var(--sp-xxl)",
+        }}
+        className="colorStrip"
+        role="presentation"
+      ></div>
     </>
   )
 }
@@ -26,12 +27,31 @@ function LinearVersusSteepedGradient() {
       `hsl(200, ${(30 / linearStops.length) * i + 10}%, ${(i + 1) * 10}%)`
   )
 
+  const commonStyles = {
+    height: "var(--sp-xl)",
+  }
+
   return (
     <>
       <figure>
         <div role="presentation">
-          <div className="gradient linear"></div>
-          <div className="gradient steeped"></div>
+          <div
+            style={{
+              ...commonStyles,
+              backgroundImage: `linear-gradient(to left, ${linearStops.join(
+                ", "
+              )})`,
+            }}
+          />
+          <div
+            style={{
+              ...commonStyles,
+              backgroundImage: `linear-gradient(
+            to left,
+            ${steepedStops.join(", ")}
+          )`,
+            }}
+          ></div>
         </div>
         <figcaption>
           In this example, the top gradient maintains a constant saturation,
@@ -39,22 +59,6 @@ function LinearVersusSteepedGradient() {
           decreases. The result is a much richer, darker-seeming dark stop.
         </figcaption>
       </figure>
-      <style>{`
-        .gradient {
-          height: var(--sp-xl);
-        }
-
-        .gradient.linear {
-          background-image: linear-gradient(to left, ${linearStops.join(", ")});
-        }
-
-        .gradient.steeped {
-          background-image: linear-gradient(
-            to left,
-            ${steepedStops.join(", ")}
-          );
-        }
-      `}</style>
     </>
   )
 }
@@ -64,7 +68,11 @@ function RelativeSaturationDemo() {
     <>
       <figure>
         <ColorStrip />
-        <div className="grayscale">
+        <div
+          style={{
+            filter: "grayscale(100%)",
+          }}
+        >
           <ColorStrip />
         </div>
         <figcaption>
@@ -73,11 +81,6 @@ function RelativeSaturationDemo() {
           the bottom gradient is a desaturated version of the top gradient.
         </figcaption>
       </figure>
-      <style>{`
-        .grayscale {
-          filter: grayscale(100%);
-        }
-      `}</style>
     </>
   )
 }

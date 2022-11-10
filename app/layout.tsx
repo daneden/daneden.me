@@ -1,5 +1,4 @@
 import SkipLink from "@/components/SkipLink"
-import Wrapper from "@/components/Wrapper"
 import "./styles/fonts/fonts.css"
 import "./styles/global.css"
 import "./styles/syntax.css"
@@ -13,7 +12,7 @@ export default function BranchPageLayout({
     <html>
       <body>
         <SkipLink />
-        <Wrapper>{children}</Wrapper>
+        {children}
       </body>
     </html>
   )

@@ -46,13 +46,6 @@ const Image = ({
         src={isRemote ? src : `/uploads/${src}`}
         width={width}
       />
-      <style>{`
-        @media (prefers-color-scheme: dark) {
-          :global(.invertInDarkMode) {
-            filter: invert(100%) hue-rotate(180deg);
-          }
-        }
-      `}</style>
     </>
   )
 

@@ -1,8 +1,8 @@
 .root {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin: calc(var(--sp-m) * -1);
-  --tile-padding: 2vmax;
+
+  --tile-padding: 1.8vmax;
 }
 
 .intro {

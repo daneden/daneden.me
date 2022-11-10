@@ -1,5 +1,6 @@
 import Image from "@/components/Image"
-import Breakout from "../Breakout"
+import Breakout from "../../Breakout"
+import styles from "./styles.module.css"
 
 const imageNames = [
   "2012-01",
@@ -32,7 +33,7 @@ export default function RedesignGallery() {
   return (
     <>
       <Breakout>
-        <div className="gallery">
+        <div className={styles.gallery}>
           {imageNames.map((image) => {
             const date = new Date(image)
             const description = date.toLocaleDateString(undefined, {
@@ -41,30 +42,18 @@ export default function RedesignGallery() {
             })
 
             return (
-              <div className="image" key={image}>
-                <Image
-                  alt={`A screenshot of this website’s homepage in ${description}`}
-                  caption={description}
-                  height={dims.height}
-                  src={`website-redesigns/${image}.png`}
-                  width={dims.width}
-                />
-              </div>
+              <Image
+                alt={`A screenshot of this website’s homepage in ${description}`}
+                caption={description}
+                height={dims.height}
+                src={`website-redesigns/${image}.png`}
+                width={dims.width}
+                key={image}
+              />
             )
           })}
         </div>
       </Breakout>
-      <style>{`
-        .gallery {
-          display: grid;
-          gap: var(--sp-xs);
-          grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
-        }
-
-        .gallery :global(figure) {
-          margin-bottom: 0;
-        }
-      `}</style>
     </>
   )
 }

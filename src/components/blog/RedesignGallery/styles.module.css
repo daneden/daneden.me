@@ -1,0 +1,9 @@
+.gallery {
+  display: grid;
+  gap: var(--sp-xs);
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+}
+
+.gallery figure {
+  margin-bottom: 0;
+}

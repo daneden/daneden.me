@@ -3,6 +3,7 @@ import { Post } from "@/utils/mdx/sources"
 import { rehypePlugins, remarkPlugins } from "@/utils/mdxPlugins.mjs"
 import { serialize } from "next-mdx-remote/serialize"
 import { MdxContent } from "../../../components/MdxContent"
+import styles from "./styles.module.css"
 
 interface PostPageProps {
   params: {
@@ -29,8 +30,8 @@ export default async function PostPage({ params }: PostPageProps) {
 
   return (
     <>
-      <header>
-        <h1 className="zm">{post?.frontMatter.title}</h1>
+      <header className={styles.header}>
+        <h1 className={styles.title}>{post?.frontMatter.title}</h1>
         <time className="sans meta small">
           Published {formatDate(post?.frontMatter.date)}
         </time>
