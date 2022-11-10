@@ -1,0 +1,11 @@
+.portfolioHeader {
+  text-align: center;
+  margin-block-end: var(--sp-xl);
+  margin-block-start: var(--sp-xxl);
+  padding-block-start: var(--sp-xl);
+}
+
+.title {
+  margin: 0;
+  padding: 0;
+}

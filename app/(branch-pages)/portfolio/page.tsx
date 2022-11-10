@@ -1,6 +1,7 @@
 import DeviceFrame from "@/components/DeviceFrame"
 import LightswitchImage from "@/components/LightSwitchImage"
 import Link from "next/link"
+import styles from "./styles.module.css"
 
 export default function PortfolioPage() {
   return (
@@ -14,8 +15,8 @@ export default function PortfolioPage() {
         a selection of my favourite projects and experiences.
       </p>
       <section>
-        <header className="portfolio-header">
-          <h3 className="h1">Solstice</h3>
+        <header className={styles.portfolioHeader}>
+          <h3 className={`h1 ${styles.title}`}>Solstice</h3>
           <span className="small meta">Design &amp; Development</span>
         </header>
 
@@ -41,8 +42,8 @@ export default function PortfolioPage() {
       </section>
 
       <section>
-        <header className="portfolio-header">
-          <h3 className="h1">Eventually</h3>
+        <header className={styles.portfolioHeader}>
+          <h3 className={`h1 ${styles.title}`}>Eventually</h3>
           <small className="meta">Design &amp; Development</small>
         </header>
 
@@ -69,8 +70,8 @@ export default function PortfolioPage() {
       </section>
 
       <section>
-        <header className="portfolio-header">
-          <h3 className="h1">Zeitgeist</h3>
+        <header className={styles.portfolioHeader}>
+          <h3 className={`h1 ${styles.title}`}>Zeitgeist</h3>
           <small className="meta">Design &amp; Development</small>
         </header>
 
