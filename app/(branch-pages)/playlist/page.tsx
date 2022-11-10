@@ -60,6 +60,7 @@ export default async function LibraryPage() {
     )
   return (
     <>
+      <h1>Playlist</h1>
       {entries.map(({ title, author, quote, cover, url, type }) => (
         <Media
           author={author}
