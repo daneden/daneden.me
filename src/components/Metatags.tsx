@@ -1,9 +1,3 @@
-interface MetatagsProps {
-  title?: string
-  description: string
-  thumbnail: string
-}
-
 export function Description({ children }: { children: string }) {
   return (
     <>
