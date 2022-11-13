@@ -239,7 +239,6 @@ pre {
   overflow: auto;
   padding: var(--sp-xs);
   margin: 0 calc(var(--sp-xs) * -1);
-  vertical-align: baseline;
   white-space: pre;
   margin-bottom: var(--sp-m);
 }
