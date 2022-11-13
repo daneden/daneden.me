@@ -1,0 +1,14 @@
+.wrapper {
+  display: grid;
+  grid-gap: var(--sp-m);
+  grid-template-columns: var(--grid-spec);
+  flex-grow: 1;
+}
+
+.wrapper:focus {
+  outline: none;
+}
+
+.wrapper > main {
+  grid-column: var(--center-column);
+}

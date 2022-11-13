@@ -1,4 +1,5 @@
 import Link from "next/link"
+import styles from "./styles.module.css"
 
 interface HeaderProps {
   siteTitle: string
@@ -22,7 +23,7 @@ const links = [
 const Header = ({ siteTitle }: HeaderProps) => {
   return (
     <>
-      <header className="site-header">
+      <header className={styles.root}>
         <Link className="plainlink" href="/">
           {siteTitle}
         </Link>

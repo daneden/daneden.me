@@ -1,0 +1,10 @@
+.breakoutContainerHack {
+  margin: 0 auto;
+  width: 0;
+}
+
+.breakoutContainer {
+  width: calc(100vw - var(--scrollbar-width, 0px));
+  margin-left: -50vw;
+  padding: var(--sp-s);
+}

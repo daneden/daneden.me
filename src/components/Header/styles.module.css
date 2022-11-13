@@ -1,0 +1,18 @@
+.root {
+  display: grid;
+  grid-template-columns: var(--grid-spec);
+  grid-gap: var(--sp-xs);
+  flex-wrap: wrap;
+  margin-bottom: var(--sp-s);
+}
+
+.root nav ul {
+  display: flex;
+  gap: var(--sp-s);
+}
+
+@media (max-width: 64em) {
+  .root > * {
+    grid-column: var(--center-column);
+  }
+}
