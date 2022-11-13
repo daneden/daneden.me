@@ -244,7 +244,7 @@ pre {
   margin-bottom: var(--sp-m);
 }
 
-pre :global(code) {
+pre code {
   padding: 0;
   font-family: inherit;
   box-shadow: none;
@@ -259,7 +259,7 @@ figure {
   margin-bottom: var(--sp-m);
 }
 
-figure :global(img) {
+figure img {
   display: block;
   width: 100%;
   flex: 1 1 auto;
@@ -267,7 +267,7 @@ figure :global(img) {
   height: auto;
 }
 
-figure :global(figcaption) {
+figure figcaption {
   font-family: var(--font-caption);
   order: 3;
   margin-top: var(--sp-xxs);
@@ -297,8 +297,7 @@ table {
   font-size: var(--sp-s);
 }
 
-table :global(th),
-table :global(td) {
+table :matches(th, td) {
   vertical-align: top;
   padding: var(--sp-xs);
   padding-top: var(--sp-xxs);
@@ -306,7 +305,7 @@ table :global(td) {
   border-bottom: 1px solid var(--gray10);
 }
 
-table :global(th) {
+table th {
   font-weight: 600;
   font-size: var(--sp-s);
   border-bottom: 1px solid;
