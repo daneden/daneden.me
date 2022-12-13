@@ -42,7 +42,7 @@
     "typescript": "^4.9.4",
     "unist-util-visit": "^4.1.1",
     "vfile": "^5.3.6",
-    "zod": "^3.19.1"
+    "zod": "^3.20.2"
   },
   "devDependencies": {
     "@now/node": "^1.8.5",
