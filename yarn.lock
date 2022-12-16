@@ -3257,7 +3257,7 @@ minimatch@^3.0.4, minimatch@^3.0.5, minimatch@^3.1.1, minimatch@^3.1.2:
   dependencies:
     brace-expansion "^1.1.7"
 
-minimist@^1.2.0, minimist@^1.2.6:
+minimist@^1.2.0, minimist@^1.2.6, minimist@^1.2.7:
   version "1.2.7"
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.7.tgz#daa1c4d91f507390437c6a8bc01078e7000c4d18"
   integrity sha512-bzfL1YUZsP41gmu/qjrEk0Q6i2ix/cVeAhbCbqH9u3zYutS1cLg00qhrD0M2MVdCcx4Sc0UpP2eBWo9rotpq6g==
@@ -3302,13 +3302,13 @@ next-mdx-remote@4.2.0:
     vfile "^5.3.0"
     vfile-matter "^3.0.1"
 
-next-sitemap@^3.1.32:
-  version "3.1.32"
-  resolved "https://registry.yarnpkg.com/next-sitemap/-/next-sitemap-3.1.32.tgz#e4a7227cab23b5e5c68bc54d335b86d3ff1e05f8"
-  integrity sha512-jkIKpwLXpWWTPfmDO46+6nu4+qpar4CjvUwCR9rYZHWtzE/wFfaCVFKpGtFMl6MFjpu8GjiE6kWFEa7uF3bzzg==
+next-sitemap@^3.1.42:
+  version "3.1.42"
+  resolved "https://registry.yarnpkg.com/next-sitemap/-/next-sitemap-3.1.42.tgz#f5c20f9a2cb66b75710bd7af4249041a47641af5"
+  integrity sha512-z/m440ZDCTxoE3FWbBWZLK66ZEh9e2R+j/Bm0d1Vo4PFkMi4yhWdIjWqhj//kyFyBvMYk3YWs8QQqVCCe15E6g==
   dependencies:
     "@corex/deepmerge" "^4.0.29"
-    minimist "^1.2.6"
+    minimist "^1.2.7"
 
 next@^13.0.6:
   version "13.0.6"
