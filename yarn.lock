@@ -777,13 +777,13 @@
   resolved "https://registry.yarnpkg.com/@vercel/analytics/-/analytics-0.1.6.tgz#a1ce184168d8f5ec02e35ec954d84ee68ea01f4b"
   integrity sha512-zNd5pj3iDvq8IMBQHa1YRcIteiw6ZiPB8AsONHd8ieFXlNpLqhXfIYnf4WvTfZ7S1NSJ++mIM14aJnNac/VMXQ==
 
-"@vercel/og@^0.0.21":
-  version "0.0.21"
-  resolved "https://registry.yarnpkg.com/@vercel/og/-/og-0.0.21.tgz#9d2421a241a0cfbdc3841b88bf323d980339da40"
-  integrity sha512-WgMahG5c8UM7xtn/mT+ljUpDMSDnSlu8AXL52JtTwxb1odrd0GWqZg2N1X38wulPj+sCccNpDdFmmAuw0GLc+Q==
+"@vercel/og@^0.0.22":
+  version "0.0.22"
+  resolved "https://registry.yarnpkg.com/@vercel/og/-/og-0.0.22.tgz#f17a6b0dceca4c58ea92499e6957598df5ce392e"
+  integrity sha512-HJjYfjpuNVnxwH7GnEv5QxzdIV4xytjY2RkVmhaOAKlms4X071WSPR9Jp6vjZ3Zmjz0tKSiRnrT5uN/PkW/q9Q==
   dependencies:
     "@resvg/resvg-wasm" "2.0.0-alpha.4"
-    satori "0.0.44"
+    satori "0.0.45"
     yoga-wasm-web "0.1.2"
 
 acorn-dynamic-import@^4.0.0:
@@ -3996,10 +3996,10 @@ safe-regex-test@^1.0.0:
     get-intrinsic "^1.1.3"
     is-regex "^1.1.4"
 
-satori@0.0.44:
-  version "0.0.44"
-  resolved "https://registry.yarnpkg.com/satori/-/satori-0.0.44.tgz#278d2c383a3248973c93843c0f72da5c69c9eafa"
-  integrity sha512-WKUxXC2qeyno6J3ucwwLozPL6j1HXOZiN5wIUf7iqAhlx1RUC/6ePIKHi7iPc3Cy6DYuZcJriZXxXkSdo2FQHg==
+satori@0.0.45:
+  version "0.0.45"
+  resolved "https://registry.yarnpkg.com/satori/-/satori-0.0.45.tgz#b91c7354c2baf5765b43eba6391f72067f5c3fd1"
+  integrity sha512-jF7AAK5ddZQVE6r6gTG07YxOvhldev0wBrFqBXRNbPH/mEy15gfIqA4xjGfVHczcGYZvY/VWmKri6DzRJF8cgQ==
   dependencies:
     "@shuding/opentype.js" "1.4.0-beta.0"
     css-background-parser "^0.1.0"
