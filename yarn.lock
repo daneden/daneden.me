@@ -772,10 +772,10 @@
   resolved "https://registry.yarnpkg.com/@vercel/analytics/-/analytics-0.1.6.tgz#a1ce184168d8f5ec02e35ec954d84ee68ea01f4b"
   integrity sha512-zNd5pj3iDvq8IMBQHa1YRcIteiw6ZiPB8AsONHd8ieFXlNpLqhXfIYnf4WvTfZ7S1NSJ++mIM14aJnNac/VMXQ==
 
-"@vercel/og@^0.0.25":
-  version "0.0.25"
-  resolved "https://registry.yarnpkg.com/@vercel/og/-/og-0.0.25.tgz#6f7951351e5321a8f097a10dbc6a1d4ccdf2cf23"
-  integrity sha512-Zirui1w0CjiOqHrMTOIDptghiEyxhiyVEdgUnJAeQYaXYrtQPUWLDWBIh5J+xHxIstWhT0C6DIw0iMGfHSXTNQ==
+"@vercel/og@^0.0.27":
+  version "0.0.27"
+  resolved "https://registry.yarnpkg.com/@vercel/og/-/og-0.0.27.tgz#b3682bc030e5d6269488fb2ee1ef8adf92bb023d"
+  integrity sha512-cUk6HmfLmBOISAA8gvPRNUx3eVOSyXblxiuv3uN9UTxLwdalQzPlHC/0byvTMR1eVi0y1trD5u6um/4xiTqgOQ==
   dependencies:
     "@resvg/resvg-wasm" "2.0.0-alpha.4"
     satori "0.0.46"
