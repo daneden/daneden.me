@@ -17,7 +17,7 @@
     "@resvg/resvg-js": "^2.3.1",
     "@types/react-dom": "^18.0.10",
     "@vercel/analytics": "^0.1.8",
-    "@vercel/og": "^0.0.27",
+    "@vercel/og": "^0.1.0",
     "apca-w3": "^0.1.9",
     "feed": "^4.2.2",
     "gray-matter": "^4.0.3",
