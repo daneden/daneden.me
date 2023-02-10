@@ -499,83 +499,83 @@
     tiny-glob "^0.2.9"
     tslib "^2.4.0"
 
-"@resvg/resvg-js-android-arm-eabi@2.3.1":
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/@resvg/resvg-js-android-arm-eabi/-/resvg-js-android-arm-eabi-2.3.1.tgz#cbc231837bfba7856b6b1f7ae58abf410adc73ba"
-  integrity sha512-N9TEhMW3DC4t5rRhMO31AZY3IBHrPPaYlfhm9g5A+4jHheNeFkWj3WHwTOThFMTDln45t7R7dZ4yVpI81Ucbkw==
+"@resvg/resvg-js-android-arm-eabi@2.4.0":
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/@resvg/resvg-js-android-arm-eabi/-/resvg-js-android-arm-eabi-2.4.0.tgz#e3a397053cfcd31077b5e72a3be0a27e77b6cda3"
+  integrity sha512-AtsKxd4bxlaMvWNZev6IMSNVl48yOHYMuccoVNT1Kzg5L/uWsEtWw8YV16GPc5W08NeeAOPr9ErCszm+fXYcsg==
 
-"@resvg/resvg-js-android-arm64@2.3.1":
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/@resvg/resvg-js-android-arm64/-/resvg-js-android-arm64-2.3.1.tgz#c7e237aa7e6a7c60a305f812953dc2555d38dd49"
-  integrity sha512-NFET2XoeWzskTJPaOcse2/iHizct9c5YhZ2gDjEeh3n1wyhpuQemdWH1qoodjxfeiBNqlIMi+fOoEv43tw+j2Q==
+"@resvg/resvg-js-android-arm64@2.4.0":
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/@resvg/resvg-js-android-arm64/-/resvg-js-android-arm64-2.4.0.tgz#4f72c0153ee51e1d59f29b5f6a8e0e9182df13f8"
+  integrity sha512-i0uuOSRrloU15mEPX21kOIVMNwoYKhcmiDjF+Cfu1K3LCNgPpIevu5oZ+wDnDy3Camcmu1bIEIkZ472wStK3aA==
 
-"@resvg/resvg-js-darwin-arm64@2.3.1":
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/@resvg/resvg-js-darwin-arm64/-/resvg-js-darwin-arm64-2.3.1.tgz#6b2a1b98c45d0b4d80d626f4003168711aa5698e"
-  integrity sha512-yZHN6lzvQochS8Qs7JI/xfasStog2EV8KOg4Xd75JhoB2w6ORZ/GlL3T/zA+f9vEkXL9rPymK/IOTSdNFNjbLQ==
+"@resvg/resvg-js-darwin-arm64@2.4.0":
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/@resvg/resvg-js-darwin-arm64/-/resvg-js-darwin-arm64-2.4.0.tgz#c7c67b3faceb11b09229e17a9668c932e5034272"
+  integrity sha512-9XoPblXClMaT+lxX2YVy+kjOClOKEWQf8ijtJMGwVLcn/kgiQoA1iDXL7KPm8cUh/PElUh/ANLIveESAoNkuvw==
 
-"@resvg/resvg-js-darwin-x64@2.3.1":
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/@resvg/resvg-js-darwin-x64/-/resvg-js-darwin-x64-2.3.1.tgz#5023357f99ea40df3469d462fda56335f6757725"
-  integrity sha512-EGeyTuPZG/JP92PROXQ1CmEnq/C0yOTrbX76XX+BHicjfhAjGx3sii1qD9k608TW0MppPMAVcQbhT1hxaQ4ViA==
+"@resvg/resvg-js-darwin-x64@2.4.0":
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/@resvg/resvg-js-darwin-x64/-/resvg-js-darwin-x64-2.4.0.tgz#0bcb42d4eea1debf388f6d78c0fe19c5d3e2a48c"
+  integrity sha512-Qb8JT/kYy4N0jfSR0kpzNeeDjMo2Os991SaPfWOqWE8RBXEYf6RUULwkfFzxRNsb5d/ohNF03VXKkiyLzQ/2ig==
 
-"@resvg/resvg-js-linux-arm-gnueabihf@2.3.1":
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/@resvg/resvg-js-linux-arm-gnueabihf/-/resvg-js-linux-arm-gnueabihf-2.3.1.tgz#6fe204e8968fba674914bd2ff6ea27965266de0a"
-  integrity sha512-EhlgOj1mxHbYATQch66G5yzCgrT6MvtH6wZua1bxjTK/QrPf3B0kkY6vmHlYOtZ9y807swXk3GlNhT9ztL21aw==
+"@resvg/resvg-js-linux-arm-gnueabihf@2.4.0":
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/@resvg/resvg-js-linux-arm-gnueabihf/-/resvg-js-linux-arm-gnueabihf-2.4.0.tgz#a7af268b9c271fcca99ea2797cd1889ba9f5b55a"
+  integrity sha512-JcYAi4m0mgqWjkOHZFHQIVWb7/w9eQJ3jtWmUt14NZ/pvS4a98n+MbDKWNHO9qaCSDIEitQS8t09MhgO04yAAw==
 
-"@resvg/resvg-js-linux-arm64-gnu@2.3.1":
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/@resvg/resvg-js-linux-arm64-gnu/-/resvg-js-linux-arm64-gnu-2.3.1.tgz#0fe39d6e870be8e1ca3fe383551733c6d824388f"
-  integrity sha512-wcamGmsNTVkq7Je0iMwDI+Te+ZD8YLYJpRBmQK5pnRWWzEp6ft6kHJ/dU8FjCipn0I8zUUNWylMsMVz5d0k5XQ==
+"@resvg/resvg-js-linux-arm64-gnu@2.4.0":
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/@resvg/resvg-js-linux-arm64-gnu/-/resvg-js-linux-arm64-gnu-2.4.0.tgz#18ff63e48816532250e53627d3486b83489e1ec7"
+  integrity sha512-jYDMHQJ0au5JT8qt5abPyJySd4wRuoT9Y7A9l0thHPHVaNo8GO8kWLy8iC03N0CP+/Ber/s1kPo/NxkvkXev5w==
 
-"@resvg/resvg-js-linux-arm64-musl@2.3.1":
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/@resvg/resvg-js-linux-arm64-musl/-/resvg-js-linux-arm64-musl-2.3.1.tgz#50330957a0018bcc501e24218b671338f458e338"
-  integrity sha512-ebvSKvTopIvZ3Wl3B4Wh7OqIVnRyJu29hSyaO1I+/cWJGSvk6GfFjGB6WYAsr9wjZPmDy8i3ODFKSrFRMgOaXQ==
+"@resvg/resvg-js-linux-arm64-musl@2.4.0":
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/@resvg/resvg-js-linux-arm64-musl/-/resvg-js-linux-arm64-musl-2.4.0.tgz#b79cb667670a0f5c5184e99a4ecf9329d5e70a34"
+  integrity sha512-YByXwG1dRWd5xetawMj9a2pbGtR8HuRSon5xKPCN30xHACTorXeCr8G0rtsMq/e8GkoHjgrvtA3QnPpB2d7z7Q==
 
-"@resvg/resvg-js-linux-x64-gnu@2.3.1":
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/@resvg/resvg-js-linux-x64-gnu/-/resvg-js-linux-x64-gnu-2.3.1.tgz#614d056ebc55a4aad880de0cf88b48b05ce2e7d2"
-  integrity sha512-DG2JRHRQPELa/PhZwv2cfOil4EUB0aBLh4SmbuMUke1eAfcFxizyJGsR6E98aG1ZX1gYlpb5hHJou+xvpTl2Jw==
+"@resvg/resvg-js-linux-x64-gnu@2.4.0":
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/@resvg/resvg-js-linux-x64-gnu/-/resvg-js-linux-x64-gnu-2.4.0.tgz#fcd8fb4e1f56f1089165edf84e92374cecb13b4e"
+  integrity sha512-OCWMeR9W55rkyxh6Gwnu04rr856uzEngUF4mXE1fqaTXLvGgNG++RpjwE7gQ64nKvSJF1stiL2QPqRB72LHPtw==
 
-"@resvg/resvg-js-linux-x64-musl@2.3.1":
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/@resvg/resvg-js-linux-x64-musl/-/resvg-js-linux-x64-musl-2.3.1.tgz#f74cb4fa838a24f707882461768b51d340cb6469"
-  integrity sha512-Qe9qyBk3waRppnIckiCj8Ql0tLY9qQACqcCUooQEbGaFY4iz4DcVyH/bFnNp2k9qGAA+AS1apimU84987L411Q==
+"@resvg/resvg-js-linux-x64-musl@2.4.0":
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/@resvg/resvg-js-linux-x64-musl/-/resvg-js-linux-x64-musl-2.4.0.tgz#5de66ae71f0a767c55209718ce50e9ae5921b3ff"
+  integrity sha512-JoFsQwg4T/1i+xjih5nFSSGF4RgcH1U5gbRVUL3YZW/HNO+7Mmmlv6F3HXCJI2xm9rVHoiNnzkFVD7AAXbG+ng==
 
-"@resvg/resvg-js-win32-arm64-msvc@2.3.1":
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/@resvg/resvg-js-win32-arm64-msvc/-/resvg-js-win32-arm64-msvc-2.3.1.tgz#c8d082d44ed03cafd937537058c9f847bd356926"
-  integrity sha512-W5JgJELQuKLeAjXJI38B3MMnIm+X5hR+mFWWM7PoQZrKD7p59grORj+FNPknF33eaglIiUoMh3zZJMxWVitBgw==
+"@resvg/resvg-js-win32-arm64-msvc@2.4.0":
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/@resvg/resvg-js-win32-arm64-msvc/-/resvg-js-win32-arm64-msvc-2.4.0.tgz#7860b6559556ae7f3c8d84592b6f85cc371ef3b8"
+  integrity sha512-SReuI+6PKgtd4NI491Y1epaEqerRz+Pf/O/3ePTSCiTYZaLQoUIJ0b7POIFbMKKW0el7Iv+CeSOMy2/TffbX9Q==
 
-"@resvg/resvg-js-win32-ia32-msvc@2.3.1":
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/@resvg/resvg-js-win32-ia32-msvc/-/resvg-js-win32-ia32-msvc-2.3.1.tgz#670d6e58fc87d4d0a85330d34a07b3a0ca80ae3c"
-  integrity sha512-/Ied/0EfsLwYhYY9dBOcMUFDo5TM9ddWapBLoV9bDqlpiE3+J1slpaBAzltN3x7SH8jhlZG9N3YoNVh0RhsUPA==
+"@resvg/resvg-js-win32-ia32-msvc@2.4.0":
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/@resvg/resvg-js-win32-ia32-msvc/-/resvg-js-win32-ia32-msvc-2.4.0.tgz#0e9eb8720e4c3d83d662ab4719f611dc15902d28"
+  integrity sha512-vO1Hqt6/1MFL9+PBvBP7GoqxtyUWEsUvUG0FunreBIX2NCifh0cwZxKKAN5NFpyAD/0F+os5SxDpBwpf2BBotg==
 
-"@resvg/resvg-js-win32-x64-msvc@2.3.1":
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/@resvg/resvg-js-win32-x64-msvc/-/resvg-js-win32-x64-msvc-2.3.1.tgz#31be10766c7dec179ac3566ac9551070a58bacb7"
-  integrity sha512-aj8n5G9QwRnNfeZYSn9TxPO9LMUmleKoRgY1qxMbQg1v2SaspOFVeR7FJBXFWW8nejUKQqnkY+1+6qMMydxFsA==
+"@resvg/resvg-js-win32-x64-msvc@2.4.0":
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/@resvg/resvg-js-win32-x64-msvc/-/resvg-js-win32-x64-msvc-2.4.0.tgz#8168f3ce30c12f54cd97b8d7ef85e819f2e13477"
+  integrity sha512-JEX4gp+qm+v7LKw8vVS4zP04qGK135Ja11QWmbM3OOpFvyTQkOiKuqm3FS+CIw6DE1A6kqX+dEwN8wBXWGDDDQ==
 
-"@resvg/resvg-js@^2.3.1":
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/@resvg/resvg-js/-/resvg-js-2.3.1.tgz#e1d061e61ded8af0649779a745f6817b8c0676eb"
-  integrity sha512-khkCB99ZKPXo6XQHHbOu7sLlayryP088chsO+ocp/LbEVm7cFOcsw5Dn9o/DMc4E9rT0jkEOVaVrH+GXkllnSg==
+"@resvg/resvg-js@^2.4.0":
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/@resvg/resvg-js/-/resvg-js-2.4.0.tgz#66945e4bf4d6819ef1f459b893f9dede53a3e397"
+  integrity sha512-M8Oetgb1w7x062aJDZl7Sf859pcbLm+5jen+aT5ShrSQRcHqftEbFzCgeOggZkcsFr4D8i9pM0ZuhOOhZWrORQ==
   optionalDependencies:
-    "@resvg/resvg-js-android-arm-eabi" "2.3.1"
-    "@resvg/resvg-js-android-arm64" "2.3.1"
-    "@resvg/resvg-js-darwin-arm64" "2.3.1"
-    "@resvg/resvg-js-darwin-x64" "2.3.1"
-    "@resvg/resvg-js-linux-arm-gnueabihf" "2.3.1"
-    "@resvg/resvg-js-linux-arm64-gnu" "2.3.1"
-    "@resvg/resvg-js-linux-arm64-musl" "2.3.1"
-    "@resvg/resvg-js-linux-x64-gnu" "2.3.1"
-    "@resvg/resvg-js-linux-x64-musl" "2.3.1"
-    "@resvg/resvg-js-win32-arm64-msvc" "2.3.1"
-    "@resvg/resvg-js-win32-ia32-msvc" "2.3.1"
-    "@resvg/resvg-js-win32-x64-msvc" "2.3.1"
+    "@resvg/resvg-js-android-arm-eabi" "2.4.0"
+    "@resvg/resvg-js-android-arm64" "2.4.0"
+    "@resvg/resvg-js-darwin-arm64" "2.4.0"
+    "@resvg/resvg-js-darwin-x64" "2.4.0"
+    "@resvg/resvg-js-linux-arm-gnueabihf" "2.4.0"
+    "@resvg/resvg-js-linux-arm64-gnu" "2.4.0"
+    "@resvg/resvg-js-linux-arm64-musl" "2.4.0"
+    "@resvg/resvg-js-linux-x64-gnu" "2.4.0"
+    "@resvg/resvg-js-linux-x64-musl" "2.4.0"
+    "@resvg/resvg-js-win32-arm64-msvc" "2.4.0"
+    "@resvg/resvg-js-win32-ia32-msvc" "2.4.0"
+    "@resvg/resvg-js-win32-x64-msvc" "2.4.0"
 
 "@resvg/resvg-wasm@2.0.0-alpha.4":
   version "2.0.0-alpha.4"
