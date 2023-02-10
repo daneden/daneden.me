@@ -14,7 +14,7 @@
     "@mdx-js/mdx": "^2.3.0",
     "@mdx-js/runtime": "^1.6.22",
     "@ngsctt/remark-smartypants": "^0.2.0",
-    "@resvg/resvg-js": "^2.3.1",
+    "@resvg/resvg-js": "^2.4.0",
     "@types/react-dom": "^18.0.10",
     "@vercel/analytics": "^0.1.8",
     "@vercel/og": "^0.1.0",
