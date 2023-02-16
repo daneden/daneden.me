@@ -16,7 +16,7 @@
     "@ngsctt/remark-smartypants": "^0.2.0",
     "@resvg/resvg-js": "^2.4.0",
     "@types/react-dom": "^18.0.11",
-    "@vercel/analytics": "^0.1.8",
+    "@vercel/analytics": "^0.1.9",
     "@vercel/og": "^0.1.0",
     "apca-w3": "^0.1.9",
     "feed": "^4.2.2",
