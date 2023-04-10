@@ -26,7 +26,7 @@
     "mdx-prism": "^0.3.4",
     "next": "^13.3.0",
     "next-mdx-remote": "4.4.1",
-    "next-sitemap": "^4.0.6",
+    "next-sitemap": "^4.0.7",
     "node-cache": "^5.1.2",
     "prismjs": "^1.29.0",
     "react": "^18.2.0",
