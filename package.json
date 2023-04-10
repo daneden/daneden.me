@@ -39,7 +39,7 @@
     "remark-math": "5.1.1",
     "remark-slug": "^7.0.1",
     "remark-toc": "^8.0.1",
-    "typescript": "^5.0.3",
+    "typescript": "^5.0.4",
     "unist-util-visit": "^4.1.2",
     "vfile": "^5.3.7",
     "zod": "^3.21.4"
