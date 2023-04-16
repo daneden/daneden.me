@@ -6,13 +6,13 @@ import { serialize } from "next-mdx-remote/serialize"
 import { MdxContent } from "../../../components/MdxContent"
 import styles from "./styles.module.css"
 
-type Props = {
+export async function generateMetadata({
+  params: { slug },
+}: {
   params: { slug: string[] }
-}
-
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+}): Promise<Metadata> {
   // read route params
-  const post = await Post.getMdxNode(params?.slug?.join("/"))
+  const post = await Post.getMdxNode(slug?.join("/"))
 
   return {
     title: post?.frontMatter.title,

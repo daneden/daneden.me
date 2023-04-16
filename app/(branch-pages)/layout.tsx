@@ -6,6 +6,12 @@ import "../styles/fonts/fonts.css"
 import "../styles/global.css"
 import "../styles/syntax.css"
 
+export const metadata = {
+  title: {
+    template: "%s | Daniel Eden",
+  },
+}
+
 export default function RootLayout({
   children,
 }: {

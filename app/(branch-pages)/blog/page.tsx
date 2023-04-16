@@ -3,7 +3,7 @@ import { Post } from "@/utils/mdx/sources"
 import Link from "next/link"
 
 export const metadata = {
-  title: "Daniel Eden — Blog",
+  title: "Blog",
   description: "Daniel Eden’s Blog",
 }
 

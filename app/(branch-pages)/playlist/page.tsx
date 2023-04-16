@@ -4,7 +4,7 @@ import widont from "@/utils/widont"
 import { gql } from "graphql-request"
 
 export const metadata = {
-  title: "Daniel Eden — Playlist",
+  title: "Playlist",
   description: "Daniel Eden’s favourite books and podcasts",
 }
 
