@@ -3,7 +3,7 @@
 module.exports = {
   swcMinify: true,
   images: {
-    domains: ["dl.airtable.com", "v5.airtableusercontent.com"],
+    domains: ["media.graphassets.com"],
   },
   experimental: {
     appDir: true,

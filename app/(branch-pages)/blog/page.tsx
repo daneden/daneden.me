@@ -2,6 +2,11 @@ import formatDate from "@/utils/formatDate"
 import { Post } from "@/utils/mdx/sources"
 import Link from "next/link"
 
+export const metadata = {
+  title: "Daniel Eden — Blog",
+  description: "Daniel Eden’s Blog",
+}
+
 export default async function Blog() {
   const posts = await Post.getAllMdxNodes()
 

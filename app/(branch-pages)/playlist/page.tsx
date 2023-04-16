@@ -1,54 +1,41 @@
-import Media, { MediaData } from "@/components/Media"
+import Media, { MediaItem } from "@/components/Media"
+import { client } from "@/utils/graphql-client"
 import widont from "@/utils/widont"
+import { gql } from "graphql-request"
 
-interface AirtableRecord {
-  fields: MediaData & {
-    cover: Array<{
-      thumbnails: {
-        large: {
-          url: string
-          width: number
-          height: number
-        }
-      }
-    }>
-  }
+export const metadata = {
+  title: "Daniel Eden — Playlist",
+  description: "Daniel Eden’s favourite books and podcasts",
 }
-
-const AIRTABLE_URL = "https://api.airtable.com/v0/appvuN9NMJEcGKY7Z/entries"
 
 // This function is used to help sort titles excluding leading "the/a"
 const strippedTitle = (str: string): string =>
   str.replace(/^(the|a) /i, "").toLowerCase()
 
 export default async function LibraryPage() {
-  const mediaDataSource = await fetch(AIRTABLE_URL, {
-    headers: {
-      Authorization: `Bearer ${process.env.AIRTABLE_API_KEY}`,
-    },
-    next: { revalidate: 60 },
-    cache: "force-cache",
-  })
-    .then((d) => d.json())
-    .then((d) => d.records)
-    .then((d) =>
-      d.map((airtableRecord: AirtableRecord) => {
-        const { fields } = airtableRecord
-        const cover = {
-          src: fields.cover[0].thumbnails.large.url,
-          width: fields.cover[0].thumbnails.large.width,
-          height: fields.cover[0].thumbnails.large.height,
+  const mediaDataQuery = gql`
+    query MediaItems {
+      mediaItems(first: 100) {
+        author
+        id
+        quote
+        title
+        url
+        coverImage {
+          url
+          width
+          height
         }
+      }
+    }
+  `
 
-        return {
-          ...fields,
-          cover,
-        }
-      })
-    )
+  const mediaItems = await (
+    await client.request<{ mediaItems: MediaItem[] }>(mediaDataQuery)
+  ).mediaItems
 
-  const entries = (mediaDataSource as MediaData[])
-    .map((media: MediaData) => {
+  const entries = mediaItems
+    .map((media) => {
       return {
         ...media,
         // Replace the last space with a non-breaking space
@@ -61,10 +48,10 @@ export default async function LibraryPage() {
   return (
     <>
       <h1>Playlist</h1>
-      {entries.map(({ title, author, quote, cover, url, type }) => (
+      {entries.map(({ title, author, quote, coverImage: cover, url, type }) => (
         <Media
           author={author}
-          cover={cover}
+          coverImage={cover}
           key={title}
           quote={quote}
           title={title}

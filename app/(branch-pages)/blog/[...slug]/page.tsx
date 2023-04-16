@@ -1,9 +1,24 @@
 import formatDate from "@/utils/formatDate"
 import { Post } from "@/utils/mdx/sources"
 import { rehypePlugins, remarkPlugins } from "@/utils/mdxPlugins.mjs"
+import { Metadata } from "next"
 import { serialize } from "next-mdx-remote/serialize"
 import { MdxContent } from "../../../components/MdxContent"
 import styles from "./styles.module.css"
+
+type Props = {
+  params: { slug: string[] }
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  // read route params
+  const post = await Post.getMdxNode(params?.slug?.join("/"))
+
+  return {
+    title: post?.frontMatter.title,
+    description: post?.frontMatter.excerpt,
+  }
+}
 
 interface PostPageProps {
   params: {

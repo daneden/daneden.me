@@ -3,6 +3,11 @@ import LightswitchImage from "@/components/LightSwitchImage"
 import Link from "next/link"
 import styles from "./styles.module.css"
 
+export const metadata = {
+  title: "Daniel Eden — Portfolio",
+  description: "Daniel Eden’s portfolio of design and engineering projects",
+}
+
 export default function PortfolioPage() {
   return (
     <>

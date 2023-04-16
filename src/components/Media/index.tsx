@@ -2,22 +2,23 @@ import Link from "next/link"
 import Image from "../Image"
 import styles from "./styles.module.css"
 
-interface MediaCover {
-  src: string
+export interface MediaItem {
+  title: string
+  author: string
+  url: string
+  quote?: string
+  coverImage: Asset
+  type: "book" | "podcast"
+}
+
+export interface Asset {
+  url: string
   width: number
   height: number
+  id: string
 }
 
-export interface MediaData {
-  author: string
-  cover: MediaCover
-  quote?: string
-  title: string
-  url: string
-  type: "book" | "podcast" | "music"
-}
-
-const Media = ({ author, cover, quote, title, url }: MediaData) => {
+const Media = ({ author, coverImage: cover, quote, title, url }: MediaItem) => {
   return (
     <>
       <Link className="plainlink" href={url}>
@@ -27,7 +28,7 @@ const Media = ({ author, cover, quote, title, url }: MediaData) => {
             alt={`The media cover for “${title}” by ${author}`}
             height={cover.height}
             sizes={"4rem"}
-            src={cover.src}
+            src={cover.url}
             width={cover.width}
           />
           <div>

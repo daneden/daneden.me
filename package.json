@@ -18,6 +18,8 @@
     "@vercel/analytics": "^0.1.11",
     "@vercel/og": "^0.5.2",
     "feed": "^4.2.2",
+    "graphql": "^16.6.0",
+    "graphql-request": "^6.0.0",
     "gray-matter": "^4.0.3",
     "hasha": "^5.2.2",
     "hastscript": "^7.2.0",
