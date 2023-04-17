@@ -42,7 +42,7 @@ function buildComponentMap(source: string) {
     },
     Codepen: {
       regex: /<Codepen/,
-      component: dynamic(() => import("react-codepen-embed")),
+      component: dynamic(() => import("@/components/Codepen")),
     },
     TypedSystemsButton: {
       regex: /<TypedSystemsButton/,
