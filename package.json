@@ -16,7 +16,7 @@
     "@ngsctt/remark-smartypants": "^0.2.0",
     "@types/react-dom": "^18.0.11",
     "@vercel/analytics": "^0.1.11",
-    "@vercel/og": "^0.5.2",
+    "@vercel/og": "^0.5.3",
     "feed": "^4.2.2",
     "graphql": "^16.6.0",
     "graphql-request": "^6.0.0",
