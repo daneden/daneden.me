@@ -3,6 +3,7 @@ import { Post } from "@/utils/mdx/sources"
 import { rehypePlugins, remarkPlugins } from "@/utils/mdxPlugins.mjs"
 import { Metadata } from "next"
 import { serialize } from "next-mdx-remote/serialize"
+import { notFound } from "next/navigation"
 import { MdxContent } from "../../../components/MdxContent"
 import styles from "./styles.module.css"
 
@@ -36,7 +37,12 @@ export async function generateStaticParams() {
 
 export default async function PostPage({ params }: PostPageProps) {
   const post = await Post.getMdxNode(params?.slug?.join("/"))
-  const mdx = await serialize(post!.content, {
+
+  if (!post) {
+    notFound()
+  }
+
+  const mdx = await serialize(post.content, {
     mdxOptions: {
       remarkPlugins: remarkPlugins,
       rehypePlugins: rehypePlugins,
@@ -46,12 +52,12 @@ export default async function PostPage({ params }: PostPageProps) {
   return (
     <>
       <header className={styles.header}>
-        <h1 className={styles.title}>{post?.frontMatter.title}</h1>
+        <h1 className={styles.title}>{post.frontMatter.title}</h1>
         <time className="sans meta small">
-          Published {formatDate(post?.frontMatter.date)}
+          Published {formatDate(post.frontMatter.date)}
         </time>
       </header>
-      <MdxContent source={mdx} rawSource={post!.content} />
+      <MdxContent source={mdx} rawSource={post.content} />
     </>
   )
 }
