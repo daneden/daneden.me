@@ -33,7 +33,7 @@ interface ComponentMap {
  * When adding new components to a post/MDX page, `componentsMap` needs to be
  * updated.
  */
-export function buildComponentMap(source: string) {
+function buildComponentMap(source: string) {
   // Define the components that should be made optionally available in MDX
   const availableComponents: ComponentMap = {
     Video: {
