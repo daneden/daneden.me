@@ -1,5 +1,5 @@
 import formatDate from "@/utils/formatDate"
-import { Post } from "@/utils/mdx/sources"
+import { getPost, getPosts } from "@/utils/mdx/sources"
 import { rehypePlugins, remarkPlugins } from "@/utils/mdxPlugins.mjs"
 import { Metadata } from "next"
 import { serialize } from "next-mdx-remote/serialize"
@@ -13,11 +13,27 @@ export async function generateMetadata({
   params: { slug: string[] }
 }): Promise<Metadata> {
   // read route params
-  const post = await Post.getMdxNode(slug?.join("/"))
+  const post = await getPost(slug?.join("/"))
+
+  const imageURL = new URL(
+    `${process.env.ENVIRONMENT == "production" ? "https" : "http"}://${
+      process.env.VERCEL_URL
+    }/api/opengraph-image?title=${post?.frontMatter.title}`
+  )
 
   return {
     title: post?.frontMatter.title,
     description: post?.frontMatter.excerpt,
+    openGraph: {
+      description: post?.frontMatter.excerpt,
+      title: post?.frontMatter.title,
+      images: [imageURL],
+    },
+    twitter: {
+      description: post?.frontMatter.excerpt,
+      title: post?.frontMatter.title,
+      images: [imageURL],
+    },
   }
 }
 
@@ -28,15 +44,15 @@ interface PostPageProps {
 }
 
 export async function generateStaticParams() {
-  const files = await Post.getMdxFiles()
+  const files = await getPosts()
 
   return files?.map((file) => ({
-    slug: file.slug.split("/"),
+    slug: file?.slug.split("/"),
   }))
 }
 
 export default async function PostPage({ params }: PostPageProps) {
-  const post = await Post.getMdxNode(params?.slug?.join("/"))
+  const post = await getPost(params?.slug?.join("/"))
 
   if (!post) {
     notFound()

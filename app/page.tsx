@@ -1,8 +1,13 @@
 /* eslint-disable prefer-const */
 import Timeline from "@/components/Timeline"
+import defaultMetadata from "@/data/siteconfig"
+import { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
 import "./styles/home.css"
+
+export const metadata: Metadata = defaultMetadata
+
 export default function HomePage() {
   return (
     <>

@@ -1,11 +1,11 @@
-import { Post } from "@/utils/mdx/sources"
+import { getPosts } from "@/utils/mdx/sources"
 import { Feed } from "feed"
 import { GetServerSidePropsContext } from "next"
 
 const { VERCEL_URL } = process.env
 
 async function generateRSSFeed() {
-  const posts = await Post.getAllMdxNodes()
+  const posts = await getPosts()
   const author = {
     name: "Daniel Eden",
     email: "dan.eden@me.com",

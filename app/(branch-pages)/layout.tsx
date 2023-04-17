@@ -1,16 +1,19 @@
 import Footer from "@/components/Footer"
 import Header from "@/components/Header"
 import Wrapper from "@/components/Wrapper"
-import siteConfig from "@/data/siteconfig.json"
+import defaultMetadata, { config } from "@/data/siteconfig"
+import { JetBrains_Mono } from "next/font/google"
 import "../styles/fonts/fonts.css"
 import "../styles/global.css"
 import "../styles/syntax.css"
 
-export const metadata = {
-  title: {
-    template: "%s | Daniel Eden",
-  },
-}
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
+  display: "swap",
+})
+
+export const metadata = defaultMetadata
 
 export default function RootLayout({
   children,
@@ -18,9 +21,9 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html className="sp-m">
+    <html className={`sp-m ${jetbrainsMono.variable}`}>
       <body>
-        <Header siteTitle={siteConfig.title} />
+        <Header siteTitle={config.title} />
         <Wrapper>{children}</Wrapper>
         <Footer />
       </body>

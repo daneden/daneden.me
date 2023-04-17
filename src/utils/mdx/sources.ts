@@ -1,6 +1,6 @@
+import { cache } from "react"
 import * as z from "zod"
 import { createSource } from "."
-
 export const Post = createSource({
   contentPath: "blog",
   basePath: "/blog",
@@ -12,3 +12,9 @@ export const Post = createSource({
     excerpt: z.string().optional(),
   }),
 })
+
+export const getPosts = cache(async () => await Post.getAllMdxNodes())
+
+export const getPost = cache(
+  async (slug: string | string[]) => await Post.getMdxNode(slug)
+)

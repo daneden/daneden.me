@@ -1,6 +1,6 @@
-import siteConfig from "@/data/siteconfig.json"
+import { config } from "@/data/siteconfig"
 import widont from "@/utils/widont"
-import { ImageResponse } from "@vercel/og"
+import { ImageResponse } from "next/server"
 
 const tiemposHeadline = fetch(
   new URL(
@@ -13,7 +13,7 @@ const soehne = fetch(
   new URL("../../app/styles/fonts/ogFonts/Soehne-Buch.otf", import.meta.url)
 ).then((res) => res.arrayBuffer())
 
-export default async function opengraphImage(title = siteConfig.title) {
+export default async function opengraphImage(title = config.title) {
   const tiemposFontData = await tiemposHeadline
   const soehneFontData = await soehne
 
@@ -58,7 +58,7 @@ export default async function opengraphImage(title = siteConfig.title) {
             right: -80,
           }}
         >
-          {title != siteConfig.title ? siteConfig.title : null}
+          {title != config.title ? config.title : null}
         </div>
       </div>
     ),
@@ -79,8 +79,4 @@ export default async function opengraphImage(title = siteConfig.title) {
       ],
     }
   )
-}
-
-export const config = {
-  runtime: "edge",
 }

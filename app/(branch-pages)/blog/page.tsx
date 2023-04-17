@@ -1,5 +1,5 @@
 import formatDate from "@/utils/formatDate"
-import { Post } from "@/utils/mdx/sources"
+import { getPosts } from "@/utils/mdx/sources"
 import Link from "next/link"
 
 export const metadata = {
@@ -8,7 +8,7 @@ export const metadata = {
 }
 
 export default async function Blog() {
-  const posts = await Post.getAllMdxNodes()
+  const posts = await getPosts()
 
   return (
     <>
