@@ -8,6 +8,4 @@ export async function GET(request: NextRequest) {
   return opengraphImage(title ?? undefined)
 }
 
-export const config = {
-  runtime: "edge",
-}
+export const runtime = "edge"
