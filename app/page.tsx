@@ -1,4 +1,5 @@
 /* eslint-disable prefer-const */
+import LightswitchImage from "@/components/LightSwitchImage"
 import Timeline from "@/components/Timeline"
 import defaultMetadata from "@/data/siteconfig"
 import { Metadata } from "next"
@@ -26,11 +27,12 @@ export default function HomePage() {
         <Link className="tile solstice" href="https://solstice.daneden.me">
           <h2 className="xxl">Solstice</h2>
           <p>An iOS app about daylight</p>
-          <Image
-            src="/images/solstice.png"
-            width={361}
-            height={734}
-            alt="An iPhone displaying the Solstice app in dark mode"
+          <LightswitchImage
+            alt="The Solstice app, showing sunrise and sunset information for Hackney, London"
+            height={2716}
+            srcDark="/uploads/portfolio/solstice-dark.png"
+            srcLight="/uploads/portfolio/solstice-light.png"
+            width={1339}
           />
         </Link>
         <div className="tile where-we-can-go">
@@ -52,11 +54,12 @@ export default function HomePage() {
         <Link className="tile zeitgeist" href="https://zeitgeist.daneden.me">
           <h2 className="xxl">Zeitgeist</h2>
           <p>Monitor your Vercel deployments</p>
-          <Image
-            src="/images/zeitgeist.png"
-            width={368}
-            height={749}
-            alt="An iPhone displaying the Zeitgeist app"
+          <LightswitchImage
+            alt="The Zeitgeist app, showing deployment details for a successful build"
+            height={2716}
+            srcDark="/uploads/portfolio/zeitgeist-dark.png"
+            srcLight="/uploads/portfolio/zeitgeist-light.png"
+            width={1339}
           />
         </Link>
         <div className="tile extras xxl">

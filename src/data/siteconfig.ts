@@ -1,4 +1,5 @@
 import { Metadata } from "next"
+import face from "../../public/images/face.jpeg"
 
 export const config = {
   title: "Daniel Eden, Designer",
@@ -13,6 +14,7 @@ const metadata: Metadata = {
     absolute: config.title,
   },
   description: config.description,
+  icons: [face.src],
 }
 
 export default metadata

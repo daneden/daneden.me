@@ -1,4 +1,3 @@
-import DeviceFrame from "@/components/DeviceFrame"
 import LightswitchImage from "@/components/LightSwitchImage"
 import Link from "next/link"
 import styles from "./styles.module.css"
@@ -25,15 +24,14 @@ export default function PortfolioPage() {
           <span className="small meta">Design &amp; Development</span>
         </header>
 
-        <DeviceFrame>
-          <LightswitchImage
-            alt="The Solstice app, showing sunrise and sunset information for Hackney, London"
-            height={2532}
-            srcDark="/uploads/portfolio/solstice/dark.png"
-            srcLight="/uploads/portfolio/solstice/light.png"
-            width={1170}
-          />
-        </DeviceFrame>
+        <LightswitchImage
+          alt="The Solstice app, showing sunrise and sunset information for Hackney, London"
+          height={2716}
+          srcDark="/uploads/portfolio/solstice-dark.png"
+          srcLight="/uploads/portfolio/solstice-light.png"
+          width={1339}
+          className={styles.appScreenshot}
+        />
 
         <p>
           Solstice is an iOS app, independently designed and built by myself,
@@ -52,15 +50,14 @@ export default function PortfolioPage() {
           <small className="meta">Design &amp; Development</small>
         </header>
 
-        <DeviceFrame>
-          <LightswitchImage
-            alt="The Eventually app, showing upcoming events in the next week, month, and year"
-            height={2532}
-            srcDark="/uploads/portfolio/eventually/dark.png"
-            srcLight="/uploads/portfolio/eventually/light.png"
-            width={1170}
-          />
-        </DeviceFrame>
+        <LightswitchImage
+          alt="The Eventually app, showing upcoming events in the next week, month, and year"
+          height={2716}
+          srcDark="/uploads/portfolio/eventually-dark.png"
+          srcLight="/uploads/portfolio/eventually-light.png"
+          width={1339}
+          className={styles.appScreenshot}
+        />
 
         <p>
           Eventually is an iOS app that shows you significant events coming up
@@ -80,15 +77,14 @@ export default function PortfolioPage() {
           <small className="meta">Design &amp; Development</small>
         </header>
 
-        <DeviceFrame>
-          <LightswitchImage
-            alt="The Zeitgeist app, showing deployment details for an in-progress build"
-            height={2532}
-            srcDark="/uploads/portfolio/zeitgeist/dark.png"
-            srcLight="/uploads/portfolio/zeitgeist/light.png"
-            width={1170}
-          />
-        </DeviceFrame>
+        <LightswitchImage
+          alt="The Zeitgeist app, showing deployment details for a successful build"
+          height={2716}
+          srcDark="/uploads/portfolio/zeitgeist-dark.png"
+          srcLight="/uploads/portfolio/zeitgeist-light.png"
+          width={1339}
+          className={styles.appScreenshot}
+        />
 
         <p>
           Zeitgeist is an iOS and Mac app that lets you see the status of your

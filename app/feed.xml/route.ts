@@ -1,6 +1,5 @@
 import { getPosts } from "@/utils/mdx/sources"
 import { Feed } from "feed"
-import { GetServerSidePropsContext } from "next"
 
 const { VERCEL_URL } = process.env
 
@@ -42,18 +41,15 @@ async function generateRSSFeed() {
   return feed
 }
 
-function RSSFeed() {}
-
-export async function getServerSideProps({ res }: GetServerSidePropsContext) {
+export async function GET() {
   const feed = await generateRSSFeed()
-
-  res.setHeader("Content-Type", "text/xml")
-  res.write(feed.rss2())
-  res.end()
-
-  return {
-    props: {},
-  }
+  return new Response(feed.rss2(), {
+    headers: {
+      "Content-Type": "text/xml",
+    },
+  })
 }
 
-export default RSSFeed
+export const config = {
+  runtime: "nodejs",
+}

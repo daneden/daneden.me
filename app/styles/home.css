@@ -40,6 +40,13 @@ a.tile {
   text-decoration: none;
 }
 
+.tile img {
+  max-width: 21rem !important;
+  margin: 0 auto;
+  display: block;
+  position: relative;
+}
+
 .solstice {
   --tile-background: rgb(46, 177, 200);
   --tile-foreground: mistyrose;

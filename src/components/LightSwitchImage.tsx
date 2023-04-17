@@ -13,6 +13,7 @@ export default function LightswitchImage({
   alt,
   width,
   height,
+  className,
 }: Props) {
   const [src, setSrc] = useState(srcLight)
 
@@ -33,5 +34,13 @@ export default function LightswitchImage({
     }
   }, [srcLight, srcDark])
 
-  return <Image alt={alt} height={height} src={src} width={width} />
+  return (
+    <Image
+      className={className}
+      alt={alt}
+      height={height}
+      src={src}
+      width={width}
+    />
+  )
 }
