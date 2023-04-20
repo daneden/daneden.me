@@ -2,6 +2,7 @@ import Footer from "@/components/Footer"
 import Header from "@/components/Header"
 import Wrapper from "@/components/Wrapper"
 import defaultMetadata, { config } from "@/data/siteconfig"
+import { Analytics } from "@vercel/analytics/react"
 import { JetBrains_Mono } from "next/font/google"
 import "../styles/fonts/fonts.css"
 import "../styles/global.css"
@@ -26,6 +27,7 @@ export default function RootLayout({
         <Header siteTitle={config.title} />
         <Wrapper>{children}</Wrapper>
         <Footer />
+        <Analytics />
       </body>
     </html>
   )
