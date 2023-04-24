@@ -50,7 +50,7 @@
     "@types/react": "^18.0.38",
     "eslint": "8.39.0",
     "eslint-config-next": "13.3.1",
-    "prettier": "^2.8.7",
+    "prettier": "^2.8.8",
     "rss": "^1.2.2"
   }
 }
