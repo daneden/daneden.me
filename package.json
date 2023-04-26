@@ -14,7 +14,7 @@
     "@mdx-js/mdx": "^2.3.0",
     "@mdx-js/runtime": "^1.6.22",
     "@ngsctt/remark-smartypants": "^0.2.0",
-    "@types/react-dom": "^18.0.11",
+    "@types/react-dom": "^18.2.1",
     "@vercel/analytics": "^1.0.0",
     "feed": "^4.2.2",
     "graphql": "^16.6.0",
