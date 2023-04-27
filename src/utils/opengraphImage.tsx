@@ -3,14 +3,11 @@ import widont from "@/utils/widont"
 import { ImageResponse } from "next/server"
 
 const tiemposHeadline = fetch(
-  new URL(
-    "../../app/styles/fonts/ogFonts/TiemposHeadline-Light.otf",
-    import.meta.url
-  )
+  new URL("../../app/fonts/ogFonts/TiemposHeadline-Light.otf", import.meta.url)
 ).then((res) => res.arrayBuffer())
 
 const soehne = fetch(
-  new URL("../../app/styles/fonts/ogFonts/Soehne-Buch.otf", import.meta.url)
+  new URL("../../app/fonts/ogFonts/Soehne-Buch.otf", import.meta.url)
 ).then((res) => res.arrayBuffer())
 
 export default async function opengraphImage(title = config.title) {

@@ -3,7 +3,7 @@ import Link from "next/link"
 import styles from "./styles.module.css"
 
 export const metadata = {
-  title: "Daniel Eden — Portfolio",
+  title: "Portfolio",
   description: "Daniel Eden’s portfolio of design and engineering projects",
 }
 

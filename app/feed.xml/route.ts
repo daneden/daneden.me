@@ -5,11 +5,13 @@ const { VERCEL_URL } = process.env
 
 async function generateRSSFeed() {
   const posts = await getPosts()
+
   const author = {
     name: "Daniel Eden",
     email: "dan.eden@me.com",
     link: "https://twitter.com/_dte",
   }
+
   const feed = new Feed({
     title: "Daniel Eden, Designer",
     description: "",
@@ -27,15 +29,17 @@ async function generateRSSFeed() {
   })
 
   posts.forEach((post) => {
-    feed.addItem({
-      title: post!.frontMatter.title,
-      link: `https://${VERCEL_URL}/blog/${post!.slug}`,
-      id: post!.slug,
-      description: post!.frontMatter.excerpt,
-      date: new Date(post!.frontMatter.date),
-      author: [author],
-      contributor: [author],
-    })
+    if (post) {
+      feed.addItem({
+        title: post.frontMatter.title,
+        link: `https://${VERCEL_URL}/blog/${post.slug}`,
+        id: post.slug,
+        description: post.frontMatter.excerpt,
+        date: new Date(post.frontMatter.date),
+        author: [author],
+        contributor: [author],
+      })
+    }
   })
 
   return feed

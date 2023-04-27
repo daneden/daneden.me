@@ -5,7 +5,6 @@ import defaultMetadata from "@/data/siteconfig"
 import { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
-import "./styles/home.css"
 
 export const metadata: Metadata = defaultMetadata
 

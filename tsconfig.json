@@ -1,11 +1,7 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "target": "es6",
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -19,24 +15,12 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "*": [
-        "./src/typings/*"
-      ],
-      "@/utils/*": [
-        "src/utils/*"
-      ],
-      "@/data/*": [
-        "src/data/*"
-      ],
-      "@/components/*": [
-        "src/components/*"
-      ],
-      "@/designSystem": [
-        "src/components/designSystem/index"
-      ],
-      "@/designSystem/*": [
-        "src/components/designSystem/*"
-      ]
+      "*": ["./src/typings/*"],
+      "@/utils/*": ["src/utils/*"],
+      "@/data/*": ["src/data/*"],
+      "@/components/*": ["src/components/*"],
+      "@/designSystem": ["src/components/designSystem/index"],
+      "@/designSystem/*": ["src/components/designSystem/*"]
     },
     "incremental": true,
     "plugins": [
@@ -45,9 +29,7 @@
       }
     ]
   },
-  "exclude": [
-    "node_modules"
-  ],
+  "exclude": ["node_modules"],
   "include": [
     "**/*.ts",
     "**/*.tsx",

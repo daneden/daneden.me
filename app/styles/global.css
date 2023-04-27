@@ -50,11 +50,16 @@
   --center-column: 2 / 3;
 
   --font-mono: "JetBrains Mono", monospace;
-  --font-sans: "Soehne", system-ui, -apple-system, sans-serif;
-  --font-serif: "Tiempos Text", Georgia, serif;
   --font-body: var(--font-serif);
-  --font-heading: "Tiempos Headline", var(--font-serif);
   --font-caption: var(--font-sans);
+
+  background-color: var(--wash-color);
+  color: var(--text-color);
+  font-family: var(--font-serif);
+  font-size: clamp(100%, 2.5vw, 115%);
+  line-height: var(--baseline);
+  font-feature-settings: "ss02" 1;
+  font-variant-alternates: stylistic(ss02);
 }
 
 @media (max-width: 50em) {
@@ -84,16 +89,6 @@ video {
   display: block;
   margin-bottom: var(--sp-m);
   max-width: 100%;
-}
-
-html {
-  background-color: var(--wash-color);
-  color: var(--text-color);
-  font-family: var(--font-body);
-  font-size: clamp(100%, 2.5vw, 115%);
-  line-height: var(--baseline);
-  font-feature-settings: "ss02" 1;
-  font-variant-alternates: stylistic(ss02);
 }
 
 ul,
