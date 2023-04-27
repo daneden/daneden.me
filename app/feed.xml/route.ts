@@ -50,6 +50,4 @@ export async function GET() {
   })
 }
 
-export const config = {
-  runtime: "nodejs",
-}
+export const runtime = "nodejs"

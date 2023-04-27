@@ -1,7 +1,6 @@
 /** @type {import('next').NextConfig} */
 
 module.exports = {
-  swcMinify: true,
   images: {
     domains: ["media.graphassets.com"],
   },
