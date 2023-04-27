@@ -10,8 +10,6 @@ import { notFound } from "next/navigation"
 import { ComponentType } from "react"
 import styles from "./styles.module.css"
 
-export const runtime = "edge"
-
 const defaultComponents = {
   a: (props: any) => <Link href={props.href}>{props.children}</Link>,
   Image,

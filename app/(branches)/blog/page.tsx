@@ -2,8 +2,6 @@ import formatDate from "@/utils/formatDate"
 import { getPosts } from "@/utils/mdx/sources"
 import Link from "next/link"
 
-export const runtime = "edge"
-
 export const metadata = {
   title: "Blog",
   description: "Daniel Eden’s Blog",
