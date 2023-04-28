@@ -36,10 +36,6 @@ function buildComponentMap(source: string) {
       regex: /<Video/,
       component: dynamic(() => import("@/components/Video")),
     },
-    Codepen: {
-      regex: /<Codepen/,
-      component: dynamic(() => import("@/components/Codepen")),
-    },
     TypedSystemsButton: {
       regex: /<TypedSystemsButton/,
       component: dynamic(() => import("@/components/blog/TypedSystemsButton")),
@@ -51,6 +47,12 @@ function buildComponentMap(source: string) {
     SaturationDemo: {
       regex: /<SaturationDemo/,
       component: dynamic(() => import("@/components/blog/SaturationDemo")),
+    },
+    DrawingWithNumbersSketch: {
+      regex: /<DrawingWithNumbersSketch/,
+      component: dynamic(
+        () => import("@/components/blog/DrawingWithNumbersSketch")
+      ),
     },
   }
 
