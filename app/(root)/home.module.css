@@ -13,7 +13,7 @@
   grid-column: 1 / 3;
 }
 
-h2 {
+.root h2 {
   line-height: 1;
   padding: 0;
   margin: 0;
@@ -30,7 +30,7 @@ h2 {
   transition: 0.075s ease;
 }
 
-.tile:is(:hover, :focus):not(.where-we-can-go) {
+.tile:is(:hover, :focus):not(.whereWeCanGo) {
   background-color: var(--tile-foreground);
   color: var(--tile-background);
   box-shadow: inset 0 0 0 calc(var(--tile-padding) / 2) currentcolor;
@@ -58,7 +58,7 @@ a.tile {
   }
 }
 
-.where-we-can-go {
+.whereWeCanGo {
   --tile-background: #060405;
   --tile-foreground: white;
 }

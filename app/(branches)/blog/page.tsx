@@ -15,17 +15,19 @@ export default async function Blog() {
       <h1>Blog</h1>
       <ul className="plainlist post-list">
         {posts.map((post) => {
-          return (
-            <li className="post-list-item" key={post?.slug}>
-              <Link className="plainlink" href={`/blog/${post?.slug}`}>
-                <span>{post?.frontMatter?.title}</span>
-                <br />
-                <span className="sans meta small">
-                  {formatDate(post?.frontMatter?.date)}
-                </span>
-              </Link>
-            </li>
-          )
+          if (post && post.frontMatter !== null) {
+            return (
+              <li className="post-list-item" key={post.slug}>
+                <Link className="plainlink" href={`/blog/${post.slug}`}>
+                  <span>{post.frontMatter.title}</span>
+                  <br />
+                  <span className="sans meta small">
+                    {formatDate(post.frontMatter.date)}
+                  </span>
+                </Link>
+              </li>
+            )
+          }
         })}
       </ul>
     </>

@@ -5,15 +5,15 @@ import defaultMetadata from "@/data/siteconfig"
 import { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
-
+import styles from "./home.module.css"
 export const metadata: Metadata = defaultMetadata
 
 export default function HomePage() {
   return (
     <>
-      <div className="root">
-        <div className="intro spanall">
-          <p className="xxl">
+      <div className={styles.root}>
+        <div className={`${styles.intro} ${styles.spanall}`}>
+          <p className={styles.xxl}>
             Daniel Eden is a Product Designer at{" "}
             <Link href="https://meta.com/">Meta</Link> in London, working on
             making Customer Support experiences that are more equitable, human,
@@ -23,8 +23,11 @@ export default function HomePage() {
             the people&nbsp;that maintain&nbsp;them.
           </p>
         </div>
-        <Link className="tile solstice" href="https://solstice.daneden.me">
-          <h2 className="xxl">Solstice</h2>
+        <Link
+          className={`${styles.tile} ${styles.solstice}`}
+          href="https://solstice.daneden.me"
+        >
+          <h2 className={styles.xxl}>Solstice</h2>
           <p>An iOS app about daylight</p>
           <LightswitchImage
             alt="The Solstice app, showing sunrise and sunset information for Hackney, London"
@@ -34,8 +37,8 @@ export default function HomePage() {
             width={1339}
           />
         </Link>
-        <div className="tile where-we-can-go">
-          <h2 className="xxl">Where We Can Go</h2>
+        <div className={`${styles.tile} ${styles.whereWeCanGo}`}>
+          <h2 className={styles.xxl}>Where We Can Go</h2>
           <p>
             A <Link href="">conference talk</Link> and{" "}
             <Link href="/blog/2019/where-we-can-go">essay</Link> about design
@@ -50,8 +53,11 @@ export default function HomePage() {
             />
           </div>
         </div>
-        <Link className="tile zeitgeist" href="https://zeitgeist.daneden.me">
-          <h2 className="xxl">Zeitgeist</h2>
+        <Link
+          className={`${styles.tile} ${styles.zeitgeist}`}
+          href="https://zeitgeist.daneden.me"
+        >
+          <h2 className={styles.xxl}>Zeitgeist</h2>
           <p>Monitor your Vercel deployments</p>
           <LightswitchImage
             alt="The Zeitgeist app, showing deployment details for a successful build"
@@ -61,12 +67,12 @@ export default function HomePage() {
             width={1339}
           />
         </Link>
-        <div className="tile extras xxl">
+        <div className={`${styles.xxl} ${styles.tile} ${styles.extras}`}>
           <Link href="/blog">Writing &rarr;</Link>
           <Link href="/portfolio">Projects &rarr;</Link>
           <Link href="/playlist">Playlist &rarr;</Link>
         </div>
-        <div className="spanall">
+        <div className={styles.spanall}>
           <Timeline />
         </div>
       </div>
