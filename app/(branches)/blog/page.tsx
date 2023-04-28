@@ -1,5 +1,5 @@
 import formatDate from "@/utils/formatDate"
-import { getPosts } from "@/utils/mdx/sources"
+import { allPosts } from "contentlayer/generated"
 import Link from "next/link"
 
 export const metadata = {
@@ -8,27 +8,26 @@ export const metadata = {
 }
 
 export default async function Blog() {
-  const posts = await getPosts()
-
   return (
     <>
       <h1>Blog</h1>
       <ul className="plainlist post-list">
-        {posts.map((post) => {
-          if (post && post.frontMatter !== null) {
+        {allPosts
+          .filter((post) => !post.hidden)
+          .sort((lhs, rhs) => rhs.date.localeCompare(lhs.date))
+          .map((post) => {
             return (
-              <li className="post-list-item" key={post.slug}>
-                <Link className="plainlink" href={`/blog/${post.slug}`}>
-                  <span>{post.frontMatter.title}</span>
+              <li className="post-list-item" key={post.url}>
+                <Link className="plainlink" href={post.url}>
+                  <span>{post.title}</span>
                   <br />
                   <span className="sans meta small">
-                    {formatDate(post.frontMatter.date)}
+                    {formatDate(post.date)}
                   </span>
                 </Link>
               </li>
             )
-          }
-        })}
+          })}
       </ul>
     </>
   )

@@ -19,6 +19,7 @@
 # misc
 .DS_Store
 .env*
+.contentlayer/
 
 # debug
 npm-debug.log*

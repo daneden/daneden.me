@@ -1,5 +1,4 @@
 ---
-layout: "post"
 title: "Building a Coin-Tossing Simulator with React, Hooks, and Vercel: Part 1"
 date: "2019-07-29"
 categories:
@@ -9,8 +8,8 @@ categories:
 <aside>
     This is the first in a short series of posts explaining how to build a React
     application that simulates tossing a coin over and over again. Read{" "}
-  <a href="/blog/2019/toss-a-coin-with-react-part-2/">part two</a> and{" "}
-  <a href="/blog/2020/toss-a-coin-with-react-part-3/">part three</a> when
+    <a href="/blog/2019/toss-a-coin-with-react-part-2/">part two</a> and{" "}
+    <a href="/blog/2020/toss-a-coin-with-react-part-3/">part three</a> when
     you’re done here!
 </aside>
 
@@ -129,7 +128,7 @@ the `App` function. Here's what your `App.js` should look like:
 import React from "react"
 
 function App() {
-  return <div>The coin toss app will go here!</div>
+    return <div>The coin toss app will go here!</div>
 }
 
 export default App
@@ -160,10 +159,10 @@ also delete those files:
 
 <aside>
     You can see the running version of the app at this stage{" "}
-  <a href="https://coin-toss-jkf64vttf.now.sh">here</a>, and the source code{" "}
-  <a href="https://github.com/daneden/react-coin-toss/tree/5ed4d9e972c4c73a9dcc6f79569c37590fcdb526">
+    <a href="https://coin-toss-jkf64vttf.now.sh">here</a>, and the source code{" "}
+    <a href="https://github.com/daneden/react-coin-toss/tree/5ed4d9e972c4c73a9dcc6f79569c37590fcdb526">
         here
-  </a>
+    </a>
     .
 </aside>
 
@@ -177,7 +176,7 @@ might be a surprise to you:
 import React from "react"
 
 function App() {
-  return <div>The coin toss app will go here!</div>
+    return <div>The coin toss app will go here!</div>
 }
 
 export default App
@@ -207,12 +206,12 @@ Let's add the "toss coin" button to our app. We can place a button inside the
 
 ```jsx
 function App() {
-  return (
-    <div>
+    return (
+        <div>
             The coin toss app will go here!
-      <button>Toss coin</button>
-    </div>
-  )
+            <button>Toss coin</button>
+        </div>
+    )
 }
 ```
 
@@ -227,16 +226,16 @@ it doesn't do anything yet. Let's change that:
 
 ```jsx
 function App() {
-  const tossCoin = () => {
-    alert("The coin was tossed")
-  }
+    const tossCoin = () => {
+        alert("The coin was tossed")
+    }
 
-  return (
-    <div>
+    return (
+        <div>
             The coin toss app will go here!
-      <button onClick={tossCoin}>Toss coin</button>
-    </div>
-  )
+            <button onClick={tossCoin}>Toss coin</button>
+        </div>
+    )
 }
 ```
 
@@ -262,22 +261,22 @@ import React from "react"
 const { useState } = React
 
 function App() {
-  const [side, setSide] = useState(1)
-  const [tossed, setTossed] = useState(0)
+    const [side, setSide] = useState(1)
+    const [tossed, setTossed] = useState(0)
 
-  const tossCoin = () => {
-    const landedOn = Math.round(Math.random())
-    setSide(landedOn)
-    setTossed(tossed + 1)
-  }
+    const tossCoin = () => {
+        const landedOn = Math.round(Math.random())
+        setSide(landedOn)
+        setTossed(tossed + 1)
+    }
 
-  return (
-    <div>
-      <p>The coin has been tossed {tossed} times.</p>
-      <p>It landed on {side === 1 ? "heads" : "tails"}</p>
-      <button onClick={tossCoin}>Toss coin</button>
-    </div>
-  )
+    return (
+        <div>
+            <p>The coin has been tossed {tossed} times.</p>
+            <p>It landed on {side === 1 ? "heads" : "tails"}</p>
+            <button onClick={tossCoin}>Toss coin</button>
+        </div>
+    )
 }
 
 export default App
@@ -329,9 +328,9 @@ Our `tossCoin` function has been updated too:
 
 ```js
 const tossCoin = () => {
-  const landedOn = Math.round(Math.random())
-  setSide(landedOn)
-  setTossed(tossed + 1)
+    const landedOn = Math.round(Math.random())
+    setSide(landedOn)
+    setTossed(tossed + 1)
 }
 ```
 
@@ -369,10 +368,10 @@ responds to user input and dynamically updates.
 
 <aside>
     You can see the running version of the app at this stage{" "}
-  <a href="https://coin-toss-1fikjgmoj.now.sh/">here</a>, and the source code{" "}
-  <a href="https://github.com/daneden/react-coin-toss/tree/549b8db01a10ebaff0766364f3cf48735aa4da21">
+    <a href="https://coin-toss-1fikjgmoj.now.sh/">here</a>, and the source code{" "}
+    <a href="https://github.com/daneden/react-coin-toss/tree/549b8db01a10ebaff0766364f3cf48735aa4da21">
         here
-  </a>
+    </a>
     .
 </aside>
 
@@ -385,6 +384,7 @@ everything else I've learned about JavaScript?
 
 Hopefully by following this tutorial you've started to feel a little of React's
 power come into play. What I've found really appealing about React is that it is
+
 <mark>declarative</mark> and it is <mark>reactive</mark>.
 
 By _declarative_, I mean that rather than describing the steps you take to make

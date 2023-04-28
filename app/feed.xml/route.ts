@@ -1,10 +1,10 @@
-import { getPosts } from "@/utils/mdx/sources"
+import { allPosts } from "contentlayer/generated"
 import { Feed } from "feed"
 
 const { VERCEL_URL } = process.env
 
 async function generateRSSFeed() {
-  const posts = await getPosts()
+  const posts = allPosts
 
   const author = {
     name: "Daniel Eden",
@@ -31,11 +31,11 @@ async function generateRSSFeed() {
   posts.forEach((post) => {
     if (post) {
       feed.addItem({
-        title: post.frontMatter.title,
-        link: `https://${VERCEL_URL}/blog/${post.slug}`,
-        id: post.slug,
-        description: post.frontMatter.excerpt,
-        date: new Date(post.frontMatter.date),
+        title: post.title,
+        link: `https://${VERCEL_URL}/${post.url}`,
+        id: post.url,
+        description: post.excerpt,
+        date: new Date(post.date),
         author: [author],
         contributor: [author],
       })

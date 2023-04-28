@@ -1,5 +1,4 @@
 ---
-layout: "post"
 title: "Square Peg, Round Hole: Typed Programming For Designers"
 date: "2019-07-09"
 categories:
@@ -36,7 +35,7 @@ and returns the result.
 
 ```js
 function sum(a, b) {
-  return a + b
+    return a + b
 }
 
 sum(1, 2)
@@ -52,7 +51,7 @@ the function to limit what arguments people can pass to it.
 // of data the function can accept and return
 //              👇         👇       👇
 function sum(a: number, b: number): number {
-  return a + b
+    return a + b
 }
 
 sum("hello", 2)
@@ -84,7 +83,7 @@ Button("Confirm")
 But what would happen if we were to put another Button inside this one?
 
 <TypedSystemsButton>
-  <TypedSystemsButton>Confirm</TypedSystemsButton>
+    <TypedSystemsButton>Confirm</TypedSystemsButton>
 </TypedSystemsButton>
 
 ```js
