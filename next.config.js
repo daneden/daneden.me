@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
+const { withContentlayer } = require("next-contentlayer")
 
-module.exports = {
+const config = {
   images: {
     domains: ["media.graphassets.com"],
   },
@@ -48,3 +49,5 @@ module.exports = {
     ]
   },
 }
+
+module.exports = withContentlayer(config)

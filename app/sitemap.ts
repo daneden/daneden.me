@@ -1,10 +1,10 @@
-import { getPosts } from "@/utils/mdx/sources"
+import { allPosts } from "contentlayer/generated"
 import { MetadataRoute } from "next"
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const blogPosts = (await getPosts()).map((post) => {
+  const blogPosts = allPosts.map((post) => {
     return {
-      url: `https://daneden.me/blog/${post?.slug}`,
+      url: `https://daneden.me/${post.url}`,
       lastModified: new Date(),
     }
   })

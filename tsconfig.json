@@ -20,7 +20,8 @@
       "@/data/*": ["src/data/*"],
       "@/components/*": ["src/components/*"],
       "@/designSystem": ["src/components/designSystem/index"],
-      "@/designSystem/*": ["src/components/designSystem/*"]
+      "@/designSystem/*": ["src/components/designSystem/*"],
+      "contentlayer/generated": ["./.contentlayer/generated"]
     },
     "incremental": true,
     "plugins": [
@@ -36,6 +37,7 @@
     "typings/mdx.d.ts",
     "**/*.mdx",
     "next-env.d.ts",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    ".contentlayer/generated"
   ]
 }
