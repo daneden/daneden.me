@@ -51,8 +51,7 @@ function buildComponentMap(source: string) {
     DrawingWithNumbersSketch: {
       regex: /<DrawingWithNumbersSketch/,
       component: dynamic(
-        () => import("@/components/blog/DrawingWithNumbersSketch"),
-        { ssr: false }
+        () => import("@/components/blog/DrawingWithNumbersSketch")
       ),
     },
   }
