@@ -2,6 +2,8 @@ import formatDate from "@/utils/formatDate"
 import { allPosts } from "contentlayer/generated"
 import Link from "next/link"
 
+export const runtime = "edge"
+
 export const metadata = {
   title: "Blog",
   description: "Daniel Eden’s Blog",
