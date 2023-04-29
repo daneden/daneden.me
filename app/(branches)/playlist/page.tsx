@@ -3,6 +3,8 @@ import { client } from "@/utils/graphql-client"
 import widont from "@/utils/widont"
 import { gql } from "graphql-request"
 
+export const runtime = "edge"
+
 export const metadata = {
   title: "Playlist",
   description: "Daniel Eden’s favourite books and podcasts",
