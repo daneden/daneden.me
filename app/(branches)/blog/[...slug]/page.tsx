@@ -5,8 +5,6 @@ import { notFound } from "next/navigation"
 import PostContent from "./PostContent"
 import styles from "./styles.module.css"
 
-export const runtime = "edge"
-
 export async function generateMetadata({
   params: { slug },
 }: {
