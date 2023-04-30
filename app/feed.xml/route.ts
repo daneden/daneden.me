@@ -1,10 +1,24 @@
-import { allPosts } from "contentlayer/generated"
+import { client } from "@/utils/graphql-client"
 import { Feed } from "feed"
+import { gql } from "graphql-request"
 
 const { VERCEL_URL } = process.env
 
+async function allPosts() {
+  return await client.request<{ posts: Post[] }>(gql`
+    query {
+      posts(first: 100) {
+        slug
+        title
+        excerpt
+        date
+      }
+    }
+  `)
+}
+
 async function generateRSSFeed() {
-  const posts = allPosts
+  const { posts } = await allPosts()
 
   const author = {
     name: "Daniel Eden",
@@ -32,9 +46,9 @@ async function generateRSSFeed() {
     if (post) {
       feed.addItem({
         title: post.title,
-        link: `https://${VERCEL_URL}/${post.url}`,
-        id: post.url,
-        description: post.excerpt,
+        link: `https://${VERCEL_URL}/blog/${post.slug}`,
+        id: post.slug,
+        description: post.excerpt ?? undefined,
         date: new Date(post.date),
         author: [author],
         contributor: [author],
