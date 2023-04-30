@@ -4,14 +4,12 @@ import { client } from "@/utils/graphql-client"
 import { rehypePlugins, remarkPlugins } from "@/utils/mdxPlugins.mjs"
 import { gql } from "graphql-request"
 import { Metadata } from "next"
-import { MDXRemote } from "next-mdx-remote/rsc"
+import { compileMDX } from "next-mdx-remote/rsc"
 import dynamic from "next/dynamic"
 import Link from "next/link"
 import { notFound } from "next/navigation"
 import { ComponentType } from "react"
 import styles from "./styles.module.css"
-
-export const runtime = "edge"
 
 async function allPosts() {
   return await client.request<{ posts: Post[] }>(gql`
@@ -29,7 +27,7 @@ async function getPost(slug: string) {
   return await client.request<{ post: Post }>(
     gql`
       query getPostBySlug($slug: String!) {
-        posts(where: { slug: $slug }) {
+        post(where: { slug: $slug }) {
           title
           excerpt
           content
@@ -164,6 +162,17 @@ export default async function PostPage({ params: { slug } }: PostPageProps) {
     ...buildComponentMap(post.content),
   }
 
+  const { content } = await compileMDX({
+    source: post.content,
+    components,
+    options: {
+      mdxOptions: {
+        remarkPlugins,
+        rehypePlugins,
+      },
+    },
+  })
+
   return (
     <>
       <header className={styles.header}>
@@ -173,12 +182,7 @@ export default async function PostPage({ params: { slug } }: PostPageProps) {
         </time>
       </header>
 
-      {/* @ts-expect-error */}
-      <MDXRemote
-        components={components}
-        source={post.content}
-        options={{ mdxOptions: { remarkPlugins, rehypePlugins } }}
-      />
+      {content}
     </>
   )
 }
