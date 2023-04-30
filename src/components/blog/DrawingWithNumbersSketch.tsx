@@ -4,7 +4,7 @@ import dynamic from "next/dynamic"
 import p5Types from "p5"
 import { ReactNode, useEffect, useState } from "react"
 
-let canvasWidth = 300,
+const canvasWidth = 300,
   canvasHeight = canvasWidth,
   length = 8,
   margin = 10,
@@ -17,7 +17,7 @@ function getNoOfRows(h: number, sw: number, m: number) {
 }
 
 function getNoOfCols(w: number, length: number, m: number) {
-  var totalLength = 0,
+  let totalLength = 0,
     noOfCols = 0
 
   m = m || 0
@@ -42,24 +42,19 @@ export default function P5Sketch() {
 
     const draw = (p5: p5Types) => {
       p5.background(255)
-      for (var i = 0; i < rows - 1; i++) {
-        for (var j = 0; j < columns - 1; j++) {
-          var currentOffset = {
+      for (let i = 0; i < rows - 1; i++) {
+        for (let j = 0; j < columns - 1; j++) {
+          const currentOffset = {
             x: j * length + (j + 1) * margin,
             y: (i + 1) * margin + i * strokeWidth + strokeWidth,
           }
 
-          var centerPoint = {
-            x: (currentOffset.x + (currentOffset.x + length)) / 2,
-            y: (currentOffset.y + (currentOffset.y + length)) / 2,
-          }
-
-          var delta = {
+          const delta = {
             x: currentOffset.x + length / 2 - margin / 2 - p5.mouseX,
             y: currentOffset.y - p5.mouseY,
           }
 
-          var theta = Math.atan2(delta.y, delta.x),
+          const theta = Math.atan2(delta.y, delta.x),
             deltaThreshold = 40
 
           p5.strokeWeight(strokeWidth)
@@ -69,8 +64,8 @@ export default function P5Sketch() {
             Math.abs(delta.x) < deltaThreshold &&
             Math.abs(delta.y) < deltaThreshold
           ) {
-            var amt = (Math.abs(delta.x) + Math.abs(delta.y)) / 2
-            var amtMapped = p5.map(amt, 0, deltaThreshold, -50, 255)
+            const amt = (Math.abs(delta.x) + Math.abs(delta.y)) / 2
+            const amtMapped = p5.map(amt, 0, deltaThreshold, -50, 255)
             p5.stroke(100, amtMapped)
           }
 
