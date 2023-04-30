@@ -33,5 +33,6 @@ yarn-error.log*
 public/robots.txt
 public/sitemap*.xml
 public/feed.xml
+src/hygraph.d.ts
 
 .vscode

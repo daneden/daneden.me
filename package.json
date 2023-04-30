@@ -7,20 +7,23 @@
     "build": "next build",
     "dev": "next dev",
     "lint": "next lint",
-    "start": "next start"
+    "start": "next start",
+    "generate": "graphql-codegen --require dotenv/config",
+    "prestart": "yarn generate",
+    "predev": "yarn generate",
+    "prebuild": "yarn generate"
   },
   "dependencies": {
     "@ngsctt/remark-smartypants": "^0.2.0",
     "@types/react-dom": "^18.2.1",
     "@vercel/analytics": "^1.0.0",
-    "contentlayer": "^0.3.2",
     "feed": "^4.2.2",
     "graphql": "^16.6.0",
     "graphql-request": "^6.0.0",
     "hastscript": "^7.2.0",
     "mdx-prism": "^0.3.4",
     "next": "^13.3.1",
-    "next-contentlayer": "^0.3.2",
+    "next-mdx-remote": "^4.4.1",
     "prismjs": "^1.29.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -36,7 +39,8 @@
     "typescript": "^5.0.4"
   },
   "devDependencies": {
-    "@now/node": "^1.8.5",
+    "@graphql-codegen/cli": "^3.3.1",
+    "@graphql-codegen/typescript": "^3.0.4",
     "@types/node": "^18.16.2",
     "@types/react": "^18.2.0",
     "eslint": "8.39.0",

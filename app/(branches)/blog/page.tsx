@@ -1,6 +1,9 @@
 import formatDate from "@/utils/formatDate"
-import { allPosts } from "contentlayer/generated"
+import { client } from "@/utils/graphql-client"
+import { gql } from "graphql-request"
 import Link from "next/link"
+
+export const runtime = "edge"
 
 export const metadata = {
   title: "Blog",
@@ -8,17 +11,27 @@ export const metadata = {
 }
 
 export default async function Blog() {
+  const { posts } = await client.request<{ posts: Post[] }>(gql`
+    query {
+      posts(orderBy: date_DESC, where: { hidden: false }, first: 100) {
+        slug
+        title
+        date
+      }
+    }
+  `)
+
   return (
     <>
       <h1>Blog</h1>
       <ul className="plainlist post-list">
-        {allPosts
+        {posts
           .filter((post) => !post.hidden)
           .sort((lhs, rhs) => rhs.date.localeCompare(lhs.date))
           .map((post) => {
             return (
-              <li className="post-list-item" key={post.url}>
-                <Link className="plainlink" href={post.url}>
+              <li className="post-list-item" key={post.slug}>
+                <Link className="plainlink" href={`/blog/${post.slug}`}>
                   <span>{post.title}</span>
                   <br />
                   <span className="sans meta small">

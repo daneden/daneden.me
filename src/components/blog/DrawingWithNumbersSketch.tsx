@@ -91,5 +91,5 @@ export default function P5Sketch() {
     setChildComponent(<Sketch setup={setup} draw={draw} />)
   }, [setChildComponent])
 
-  return <>childComponent</>
+  return <>{childComponent}</>
 }
