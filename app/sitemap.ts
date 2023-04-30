@@ -1,10 +1,11 @@
 import { client } from "@/utils/graphql-client"
 import { gql } from "graphql-request"
 import { MetadataRoute } from "next"
+import { cache } from "react"
 
 export const runtime = "edge"
 
-async function allPosts() {
+const allPosts = cache(async function allPosts() {
   return await client.request<{ posts: Post[] }>(gql`
     query {
       posts(first: 100) {
@@ -15,7 +16,7 @@ async function allPosts() {
       }
     }
   `)
-}
+})
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const { posts } = await allPosts()

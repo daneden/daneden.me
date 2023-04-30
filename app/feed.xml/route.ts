@@ -1,10 +1,11 @@
 import { client } from "@/utils/graphql-client"
 import { Feed } from "feed"
 import { gql } from "graphql-request"
+import { cache } from "react"
 
 const { VERCEL_URL } = process.env
 
-async function allPosts() {
+const allPosts = cache(async function allPosts() {
   return await client.request<{ posts: Post[] }>(gql`
     query {
       posts(first: 100) {
@@ -15,7 +16,7 @@ async function allPosts() {
       }
     }
   `)
-}
+})
 
 async function generateRSSFeed() {
   const { posts } = await allPosts()

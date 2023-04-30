@@ -8,10 +8,10 @@ import { compileMDX } from "next-mdx-remote/rsc"
 import dynamic from "next/dynamic"
 import Link from "next/link"
 import { notFound } from "next/navigation"
-import { ComponentType } from "react"
+import { ComponentType, cache } from "react"
 import styles from "./styles.module.css"
 
-async function allPosts() {
+const allPosts = cache(async function allPosts() {
   return await client.request<{ posts: Post[] }>(gql`
     query {
       posts(first: 100) {
@@ -21,9 +21,9 @@ async function allPosts() {
       }
     }
   `)
-}
+})
 
-async function getPost(slug: string) {
+const getPost = cache(async function getPost(slug: string) {
   return await client.request<{ post: Post }>(
     gql`
       query getPostBySlug($slug: String!) {
@@ -39,7 +39,7 @@ async function getPost(slug: string) {
       slug,
     }
   )
-}
+})
 
 export async function generateMetadata({
   params: { slug },

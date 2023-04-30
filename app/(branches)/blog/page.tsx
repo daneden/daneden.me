@@ -2,6 +2,7 @@ import formatDate from "@/utils/formatDate"
 import { client } from "@/utils/graphql-client"
 import { gql } from "graphql-request"
 import Link from "next/link"
+import { cache } from "react"
 
 export const runtime = "edge"
 
@@ -10,8 +11,8 @@ export const metadata = {
   description: "Daniel Eden’s Blog",
 }
 
-export default async function Blog() {
-  const { posts } = await client.request<{ posts: Post[] }>(gql`
+const allVisiblePosts = cache(async function allVisiblePosts() {
+  return await client.request<{ posts: Post[] }>(gql`
     query {
       posts(orderBy: date_DESC, where: { hidden: false }, first: 100) {
         slug
@@ -20,6 +21,10 @@ export default async function Blog() {
       }
     }
   `)
+})
+
+export default async function Blog() {
+  const { posts } = await allVisiblePosts()
 
   return (
     <>
