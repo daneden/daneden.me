@@ -2,6 +2,8 @@ import LightswitchImage from "@/components/LightSwitchImage"
 import Link from "next/link"
 import styles from "./styles.module.css"
 
+export const runtime = "edge"
+
 export const metadata = {
   title: "Portfolio",
   description: "Daniel Eden’s portfolio of design and engineering projects",
