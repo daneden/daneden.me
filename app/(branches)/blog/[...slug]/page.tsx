@@ -11,8 +11,6 @@ import { notFound } from "next/navigation"
 import { ComponentType } from "react"
 import styles from "./styles.module.css"
 
-export const runtime = "edge"
-
 async function allPosts() {
   return await client.request<{ posts: Post[] }>(gql`
     query {
