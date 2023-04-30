@@ -4,8 +4,10 @@ module.exports = {
   images: {
     domains: ["media.graphassets.com"],
   },
+
   experimental: {
     appDir: true,
+    typedRoutes: true,
   },
 
   redirects() {
