@@ -2,6 +2,8 @@ import { client } from "@/utils/graphql-client"
 import { gql } from "graphql-request"
 import { MetadataRoute } from "next"
 
+export const runtime = "edge"
+
 async function allPosts() {
   return await client.request<{ posts: Post[] }>(gql`
     query {
