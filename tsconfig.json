@@ -34,7 +34,7 @@
   "include": [
     "**/*.ts",
     "**/*.tsx",
-    "typings/mdx.d.ts",
+    "**/*.d.ts",
     "**/*.mdx",
     "next-env.d.ts",
     ".next/types/**/*.ts",
