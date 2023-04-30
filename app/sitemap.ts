@@ -1,10 +1,25 @@
-import { allPosts } from "contentlayer/generated"
+import { client } from "@/utils/graphql-client"
+import { gql } from "graphql-request"
 import { MetadataRoute } from "next"
 
+async function allPosts() {
+  return await client.request<{ posts: Post[] }>(gql`
+    query {
+      posts(first: 100) {
+        slug
+        title
+        excerpt
+        date
+      }
+    }
+  `)
+}
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const blogPosts = allPosts.map((post) => {
+  const { posts } = await allPosts()
+  const blogPosts = posts.map((post) => {
     return {
-      url: `https://daneden.me/${post.url}`,
+      url: `https://daneden.me/blog/${post.slug}`,
       lastModified: new Date(),
     }
   })
