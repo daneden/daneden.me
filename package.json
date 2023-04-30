@@ -10,7 +10,8 @@
     "start": "next start",
     "generate": "graphql-codegen --require dotenv/config",
     "prestart": "yarn generate",
-    "predev": "yarn generate"
+    "predev": "yarn generate",
+    "prebuild": "yarn generate"
   },
   "dependencies": {
     "@ngsctt/remark-smartypants": "^0.2.0",
