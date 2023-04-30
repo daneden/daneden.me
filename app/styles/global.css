@@ -172,9 +172,17 @@ h2 {
 }
 
 h3 {
-  font-family: var(--font-heading);
+  font-family: var(--font-sans);
   font-size: var(--sp-m);
   font-weight: 400;
+  color: var(--meta-color);
+  hyphens: initial;
+}
+
+h4 {
+  font-family: var(--font-sans);
+  font-size: var(--sp-s);
+  font-weight: 700;
   color: var(--meta-color);
   hyphens: initial;
 }
@@ -289,6 +297,7 @@ table {
   border-collapse: collapse;
   font-family: var(--font-sans);
   font-size: var(--sp-s);
+  width: 100%;
 }
 
 table :matches(th, td) {
@@ -300,7 +309,7 @@ table :matches(th, td) {
 }
 
 table th {
-  font-weight: 600;
+  font-weight: 400;
   font-size: var(--sp-s);
   border-bottom: 1px solid;
 }
@@ -311,6 +320,10 @@ aside {
   color: inherit;
   margin-bottom: var(--sp-m);
   padding: var(--sp-s);
+}
+
+aside :last-child {
+  margin-bottom: 0;
 }
 
 .zm {
