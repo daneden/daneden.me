@@ -13,7 +13,7 @@ export const metadata = {
 export default async function Blog() {
   const { posts } = await client.request<{ posts: Post[] }>(gql`
     query {
-      posts(orderBy: date_DESC, where: { hidden: false }) {
+      posts(orderBy: date_DESC, where: { hidden: false }, first: 100) {
         slug
         title
         date
