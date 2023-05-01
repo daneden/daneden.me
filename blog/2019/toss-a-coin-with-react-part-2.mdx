@@ -1,0 +1,266 @@
+---
+title: "Building a Coin-Tossing Simulator with React, Hooks, and Vercel: Part 2"
+date: "2019-08-10"
+categories:
+    - code
+---
+
+<aside>
+    This is the second part in a short series of posts explaining how to build a
+    React application that simulates tossing a coin over and over again. Read{" "}
+    <a href="/blog/2019/toss-a-coin-with-react-part-1/">part one</a> if you
+    haven’t already, and{" "}
+    <a href="/blog/2020/toss-a-coin-with-react-part-3/">part three</a> when
+    you’re done here!
+</aside>
+
+In the [first part](/2019/07/29/toss-a-coin-with-react-part-1/) of this
+tutorial, we built a simple React app with a button to toss a coin and tell us
+which side it landed on.
+
+(You can see the source code of where we left off
+[here](https://github.com/daneden/react-coin-toss/tree/549b8db01a10ebaff0766364f3cf48735aa4da21)
+and run the app [here](https://coin-toss-1fikjgmoj.now.sh))
+
+In this second part, we're going to start tracking the number of times each side
+appears, have the coin tossed automatically for us (rather than having to press
+a button) and visualise the results over time.
+
+## Counting Each Side
+
+Currently, our app tracks the total number of times the coin has been tossed,
+but you'll remember that from the start, we wanted to know how many times each
+side has appeared. Let's change our code to show us that information.
+
+In `App.js`, we'll add a few new variables using `useState`:
+
+```jsx
+function App() {
+    const [side, setSide] = useState(1)
+    const [heads, setHeads] = useState(0)
+    const [tails, setTails] = useState(0)
+
+    const tossed = heads + tails
+
+    const tossCoin = () => {
+        const landedOn = Math.round(Math.random())
+
+        if (landedOn === 1) {
+            setHeads(heads + 1)
+        } else {
+            setTails(tails + 1)
+        }
+
+        setSide(landedOn)
+    }
+
+    return (
+        <div>
+            <p>The coin has been tossed {tossed} times.</p>
+            <p>It landed on {side === 1 ? "heads" : "tails"}</p>
+
+            <ul>
+                <li>Heads: {heads}</li>
+                <li>Tails: {tails}</li>
+            </ul>
+
+            <button onClick={tossCoin}>Toss coin</button>
+        </div>
+    )
+}
+```
+
+We've added four new variables, `heads`, `setHeads`, `tails`, and `setTails`, to
+get and set the number of times that heads and tails each appear.
+
+We've removed the `useState` function call that sets `tossed` and `setTossed`
+and instead we'll set `const tossed = heads + tails`, just to reduce the number
+of "sources of truth" for the total number of times the coin has been tossed.
+
+We've also added a `ul` element to the rendered output where we can see the
+values of `heads` and `tails`, but just showing a number isn't very interesting.
+
+## Visualising The Coin Tosses
+
+Thankfully, there's a native HTML element that is perfectly suited for showing
+the number of times each side appears out of a total: the `meter` element.
+
+We use the `meter` element like so:
+
+```html
+<meter value="50" max="100" />
+```
+
+This would render a meter that's filled halfway. Let's use this element to
+display how many times each side has landed inside the `ul` we added earlier:
+
+```jsx
+<ul>
+    <li>
+        <label htmlFor="heads">Heads: {heads}</label>
+        <meter id="heads" value={heads} max={tossed} />
+    </li>
+    <li>
+        <label htmlFor="tails">Tails: {tails}</label>
+        <meter id="tails" value={tails} max={tossed} />
+    </li>
+</ul>
+```
+
+## Automatically Tossing The Coin
+
+The final step in this part of the tutorial will be to have the coin tossed
+automatically. To do this, we'll use another React hook: `useEffect`.
+
+The `useEffect` hook is used to call a function whenever a component renders or
+is re-rendered (which happens if its properties—props—or state changes). This is
+a bit abstract, but it's useful to us: we want to call a function when our app
+renders so that we can toss the coin automatically.
+
+In `App.js`, we'll get the `useEffect` hook the same way we get the `useState`
+hook:
+
+```jsx
+const { useEffect, useState } = React
+```
+
+And we'll add a `useEffect` call to our App component. We can add this right
+before the `return` statement:
+
+```jsx
+...
+
+useEffect(() => {
+  const interval = setInterval(tossCoin, 500)
+  return () => clearInterval(interval)
+})
+
+return (
+  <div>
+    ...
+```
+
+This will cause the `tossCoin` function to be called every 500 milliseconds, or
+every ½ a second. Note that in the `useEffect` call, we return a function that
+clears the interval: this is basically to clean up after ourselves if the App
+stops rendering, since we don't then need to keep calling `tossCoin` every
+500ms, and doing so could actually lead to bugs or slowness.
+
+You can change the interval to a different value to have the coin tossed more or
+less frequently, but it's already very useful: now that the coin is being tossed
+automatically, you can see within just a few seconds that the frequency of each
+side landing averages out to be about even quite quickly!
+
+Let's make one more change. Now that the coin is tossed automatically, the "toss
+coin" button is a bit useless. Let's update our app so that there's a "pause"
+button that lets us momentarily stop the automatic tossing and manually toss the
+coin again.
+
+```jsx
+function App() {
+    const [side, setSide] = useState(1)
+    const [heads, setHeads] = useState(0)
+    const [tails, setTails] = useState(0)
+    const [isPaused, setIsPaused] = useState(false)
+
+    const tossed = heads + tails
+
+    const tossCoin = () => {
+        const landedOn = Math.round(Math.random())
+
+        if (landedOn === 1) {
+            setHeads(heads + 1)
+        } else {
+            setTails(tails + 1)
+        }
+
+        setSide(landedOn)
+    }
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            if (!isPaused) {
+                tossCoin()
+            }
+        }, 10)
+        return () => clearInterval(interval)
+    })
+
+    return (
+        <div>
+            <p>The coin has been tossed {tossed} times.</p>
+            <p>It landed on {side === 1 ? "heads" : "tails"}</p>
+            <ul>
+                <li>
+                    <label htmlFor="heads">Heads: {heads}</label>
+                    <meter id="heads" value={heads} max={tossed} />
+                </li>
+                <li>
+                    <label htmlFor="tails">Tails: {tails}</label>
+                    <meter id="tails" value={tails} max={tossed} />
+                </li>
+            </ul>
+
+            <button onClick={() => setIsPaused(!isPaused)}>
+                {!isPaused ? "Pause" : "Continue"}
+            </button>
+            {isPaused && <button onClick={tossCoin}>Toss coin</button>}
+        </div>
+    )
+}
+```
+
+The complete app code is seen above, with the changes necessary to add the
+“pause” button. Let's walk through them together.
+
+We've added an `isPaused` and `setIsPaused` variable to determine whether the
+app is running, and set it to `false` by default.
+
+We've changed the `useEffect` callback a bit:
+
+```js
+useEffect(() => {
+    const interval = setInterval(() => {
+        if (!isPaused) {
+            tossCoin()
+        }
+    }, 10)
+    return () => clearInterval(interval)
+})
+```
+
+Now, we check if `isPaused` is `false` before calling the `tossCoin` function.
+
+Finally, in our rendered output, we add the new “Pause” button, which toggles
+the `isPaused` variable, and only show the "toss coin" button if the `isPaused`
+variable is false (since `!true` is equal to `false`):
+
+```jsx
+(
+<button onClick={() => setIsPaused(!isPaused)}>
+  {!isPaused ? "Pause" : "Continue"}
+</button>
+{ isPaused && <button onClick={tossCoin}>Toss coin</button> }
+)
+```
+
+And that's it! Now our app will automatically toss the coin for us, and show us
+a nice visualisation of the number of times each side is shown.
+
+<aside>
+    You can see the running version of the app at this stage{" "}
+    <a href="https://react-coin-toss-42i9s0vkn.now.sh">here</a>, and the source
+    code{" "}
+    <a href="https://github.com/daneden/react-coin-toss/tree/9006016cd3fb3a56d5961140db92e14c5ae19d74">
+        here
+    </a>
+    . Note that I also made some style changes to <code>index.css</code>, which can
+    be seen <a href="https://github.com/daneden/react-coin-toss/blob/9006016cd3fb3a56d5961140db92e14c5ae19d74/src/index.css">
+        here
+    </a>.
+</aside>
+
+In the next and final part of this tutorial, we'll keep track of the patterns
+that emerge—the number of times that each side shows consecutively—and we'll
+publish our app publicly using a service called
+[Vercel](https://vercel.com/home).
