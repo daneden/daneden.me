@@ -1,4 +1,4 @@
-import timeline from "@/data/timeline.json"
+import timeline from "@/app/timeline.json"
 import Link from "next/link"
 import styles from "./styles.module.css"
 
