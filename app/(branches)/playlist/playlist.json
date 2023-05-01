@@ -1,0 +1,354 @@
+{
+  "mediaItems": [
+    {
+      "title": "Seeing Like a State",
+      "type": "book",
+      "author": "James C. Scott",
+      "coverImage": {
+        "width": 1501,
+        "height": 2326,
+        "url": "https://media.graphassets.com/K5TAKCz0SgCF9ojte4lG"
+      },
+      "url": "https://uk.bookshop.org/a/3170/9780300246759"
+    },
+    {
+      "title": "The Making of Prince of Persia",
+      "type": "book",
+      "author": "Jordan Mechner",
+      "coverImage": {
+        "width": 600,
+        "height": 888,
+        "url": "https://media.graphassets.com/bcGQI0opS2W7a7QNJqnV"
+      },
+      "url": "https://jordanmechner.com/store/the-making-of-prince-of-persia/"
+    },
+    {
+      "title": "The Politics of Design",
+      "type": "book",
+      "author": "Ruben Pater",
+      "coverImage": {
+        "width": 1311,
+        "height": 2067,
+        "url": "https://media.graphassets.com/hSr2FYKpTkqSaMUhC7ix"
+      },
+      "url": "http://thepoliticsofdesign.com/"
+    },
+    {
+      "title": "Good Services",
+      "type": "book",
+      "author": "Lou Downe",
+      "coverImage": {
+        "width": 900,
+        "height": 1350,
+        "url": "https://media.graphassets.com/obsByDhiQ7SxgVdQvhyf"
+      },
+      "url": "https://uk.bookshop.org/a/3170/9789063695439"
+    },
+    {
+      "title": "Nice Try!",
+      "type": "podcast",
+      "author": "Avery Trufelman/Curbed",
+      "coverImage": {
+        "width": 400,
+        "height": 400,
+        "url": "https://media.graphassets.com/DV7MJ97pRoOoi1FD2yMW"
+      },
+      "url": "https://www.curbed.com/2019/5/7/18514684/nice-try-podcast-utopian-avery-trufelman"
+    },
+    {
+      "title": "My Favorite Murder",
+      "type": "podcast",
+      "author": "Karen Kilgariff, Georgia Hardstark",
+      "coverImage": {
+        "width": 800,
+        "height": 800,
+        "url": "https://media.graphassets.com/jzGHgmTfQJyzeb9sfayj"
+      },
+      "url": "https://myfavoritemurder.com/"
+    },
+    {
+      "title": "The End of Everything",
+      "type": "book",
+      "author": "Katie Mack",
+      "coverImage": {
+        "width": 440,
+        "height": 678,
+        "url": "https://media.graphassets.com/34oFax6RSQkztktAD73w"
+      },
+      "url": "https://uk.bookshop.org/a/3170/9780241372333"
+    },
+    {
+      "title": "The Signal and The Noise",
+      "type": "book",
+      "author": "Nate Silver",
+      "coverImage": {
+        "width": 600,
+        "height": 906,
+        "url": "https://media.graphassets.com/WFEotc7sSCKuQ4SYtBC7"
+      },
+      "quote": "One economist sees a $100 bill sitting on the street and reaches to grab it. “Don’t bother,” the other economist says. “If it were a real $100 bill, someone would already have picked it up.”",
+      "url": "https://uk.bookshop.org/a/3170/9780141975658"
+    },
+    {
+      "title": "The Code Book",
+      "type": "book",
+      "author": "Simon Singh",
+      "coverImage": {
+        "width": 780,
+        "height": 1195,
+        "url": "https://media.graphassets.com/DscK3ulEQNq5pl7MdikB"
+      },
+      "url": "https://uk.bookshop.org/a/3170/9781857028898"
+    },
+    {
+      "title": "What Can a Body Do?",
+      "type": "book",
+      "author": "Sara Hendren",
+      "coverImage": {
+        "width": 298,
+        "height": 450,
+        "url": "https://media.graphassets.com/ZVjCTjnVR6iJn3AI5ygu"
+      },
+      "url": "https://uk.bookshop.org/a/3170/9780735220003"
+    },
+    {
+      "title": "Nice White Parents",
+      "type": "podcast",
+      "author": "Chana Joffe-Walt/New York Times",
+      "coverImage": {
+        "width": 1200,
+        "height": 1200,
+        "url": "https://media.graphassets.com/8pAotsvuRrmTKCShsajt"
+      },
+      "url": "https://podcasts.apple.com/us/podcast/nice-white-parents/id1524080195"
+    },
+    {
+      "title": "A Short History of Nearly Everything",
+      "type": "book",
+      "author": "Bill Bryson",
+      "coverImage": {
+        "width": 1694,
+        "height": 2560,
+        "url": "https://media.graphassets.com/xu75oVwISSEwdhM2WsBY"
+      },
+      "quote": "…for 3.8 billion years, a period of time older than the Earth’s mountains and rivers and oceans, every one of your forebears on both sides has been attractive enough to find a mate, healthy enough to reproduce, and sufficiently blessed by fate and circumstances to live long enough to do so.",
+      "url": "https://uk.bookshop.org/a/3170/9781784161859"
+    },
+    {
+      "title": "Your Brain Is a Time Machine",
+      "type": "book",
+      "author": "Dean Buonomano",
+      "coverImage": {
+        "width": 938,
+        "height": 1425,
+        "url": "https://media.graphassets.com/XsEBj94jQwibarD5qpl4"
+      },
+      "quote": "Whether of color, sound, or the passage of time, our conscious experiences are in essence illusions, convenient running narratives of what the unconscious brain determines are the most relevant events happening in the extracranial world.",
+      "url": "https://uk.bookshop.org/a/3170/9780393355604"
+    },
+    {
+      "title": "Designing Design",
+      "type": "book",
+      "author": "Kenya Hara",
+      "coverImage": {
+        "width": 588,
+        "height": 845,
+        "url": "https://media.graphassets.com/kvkmC2NfRKeWEWhsuvYW"
+      },
+      "url": "https://www.lars-mueller-publishers.com/designing-design"
+    },
+    {
+      "title": "Object-Oriented Ontology",
+      "type": "book",
+      "author": "Graham Harman",
+      "coverImage": {
+        "width": 613,
+        "height": 1000,
+        "url": "https://media.graphassets.com/Q4b6KotTlOxikn7ovEGw"
+      },
+      "url": "https://uk.bookshop.org/a/3170/9780241269152"
+    },
+    {
+      "title": "The Order of Time",
+      "type": "book",
+      "author": "Carlo Rovelli",
+      "coverImage": {
+        "width": 1481,
+        "height": 2269,
+        "url": "https://media.graphassets.com/otCktDEjRFuZ2TmP3hRU"
+      },
+      "url": "https://uk.bookshop.org/a/3170/9780141984964"
+    },
+    {
+      "title": "Debt: The First 5,000 Years",
+      "type": "book",
+      "author": "David Graeber",
+      "coverImage": {
+        "width": 1687,
+        "height": 2512,
+        "url": "https://media.graphassets.com/3N7auQA2QuGlvPlQPEPm"
+      },
+      "quote": "“IMF Warns Second Bailout Would ‘Threaten Democracy,’ ” reads one headline. (Of course by “democracy” they mean “capitalism.”)",
+      "url": "https://uk.bookshop.org/a/3170/9781612194196"
+    },
+    {
+      "title": "Word By Word",
+      "type": "book",
+      "author": "Kory Stamper",
+      "coverImage": {
+        "width": 324,
+        "height": 500,
+        "url": "https://media.graphassets.com/jAEL1ErFSviB4cDXfMz2"
+      },
+      "url": "https://uk.bookshop.org/a/3170/9781101970263"
+    },
+    {
+      "title": "The Sixth Extinction",
+      "type": "book",
+      "author": "Elizabeth Kolbert",
+      "coverImage": {
+        "width": 1060,
+        "height": 1600,
+        "url": "https://media.graphassets.com/ZTTk0v1oSw6HoFgLxiAJ"
+      },
+      "url": "https://uk.bookshop.org/a/3170/9781408851241"
+    },
+    {
+      "title": "An Individual Note of Music, Sound, and Electronics",
+      "type": "book",
+      "author": "Daphne Oram",
+      "coverImage": {
+        "width": 1235,
+        "height": 1739,
+        "url": "https://media.graphassets.com/NepPErelTPeeF0nUAEqj"
+      },
+      "url": "https://uk.bookshop.org/a/3170/9781910221112"
+    },
+    {
+      "title": "The End of Policing",
+      "type": "book",
+      "author": "Alex S. Vitale",
+      "coverImage": {
+        "width": 800,
+        "height": 1193,
+        "url": "https://media.graphassets.com/HLQr3Dq2TNMJpSIAWirS"
+      },
+      "quote": "A kinder, gentler, and more diverse war on the poor is still a war on the poor.",
+      "url": "https://uk.bookshop.org/a/3170/9781784782924"
+    },
+    {
+      "title": "W.E.B. Du Bois’s Data Portraits: Visualizing Black America",
+      "type": "book",
+      "author": "Whitney Battle-Baptiste (Editor), Britt Rusert (Editor)",
+      "coverImage": {
+        "width": 484,
+        "height": 700,
+        "url": "https://media.graphassets.com/u6ocaygHR1WoHjJvRYCt"
+      },
+      "url": "https://uk.bookshop.org/a/3170/9781616897062"
+    },
+    {
+      "title": "You’re Wrong About",
+      "type": "podcast",
+      "author": "Michael Hobbs, Sarah Marshall",
+      "coverImage": {
+        "width": 640,
+        "height": 640,
+        "url": "https://media.graphassets.com/8zwIVo6VSbeBf7rZ38uM"
+      },
+      "url": "https://podcasts.apple.com/gb/podcast/youre-wrong-about/id1380008439"
+    },
+    {
+      "title": "What Tech Calls Thinking",
+      "type": "book",
+      "author": "Adrian Daub",
+      "coverImage": {
+        "width": 1777,
+        "height": 2555,
+        "url": "https://media.graphassets.com/rixAb3oR1yHjSQ0GlbCA"
+      },
+      "quote": "The aestheticization of labor is perhaps the central distinguishing feature of the tech job.",
+      "url": "https://www.fsgoriginals.com/news/logic-series-covers"
+    },
+    {
+      "title": "Subprime Attention Crisis",
+      "type": "book",
+      "author": "Tim Hwang",
+      "coverImage": {
+        "width": 1519,
+        "height": 2250,
+        "url": "https://media.graphassets.com/grLA0oLUQfedU5IYyB3F"
+      },
+      "url": "https://www.fsgoriginals.com/news/logic-series-covers"
+    },
+    {
+      "title": "What White People Can Do Next",
+      "type": "book",
+      "author": "Emma Dabiri",
+      "coverImage": {
+        "width": 2622,
+        "height": 4276,
+        "url": "https://media.graphassets.com/O6dRlYiOSi1csEHaogY9"
+      },
+      "url": "https://uk.bookshop.org/a/3170/9780141996738"
+    },
+    {
+      "title": "Why We Sleep",
+      "type": "book",
+      "author": "Matthew Walker",
+      "coverImage": {
+        "width": 1524,
+        "height": 2339,
+        "url": "https://media.graphassets.com/CIrAjfiDS2m4sf2LEe8R"
+      },
+      "url": "https://uk.bookshop.org/a/3170/9780141983769"
+    },
+    {
+      "title": "The Body Keeps the Score",
+      "type": "book",
+      "author": "Bessel Van Der Kolk, M.D.",
+      "coverImage": {
+        "width": 887,
+        "height": 1360,
+        "url": "https://media.graphassets.com/SHXVWmrSln7qFlJLO3rA"
+      },
+      "url": "https://uk.bookshop.org/a/3170/9780141978611"
+    },
+    {
+      "title": "Sapiens: A Brief History of Humankind",
+      "type": "book",
+      "author": "Yuval Noah Harari",
+      "coverImage": {
+        "width": 1524,
+        "height": 2339,
+        "url": "https://media.graphassets.com/apz3NXMXScy9owDN8H8k"
+      },
+      "quote": "Some religions, such as Christianity and Nazism, have killed millions out of burning hatred. Capitalism has killed millions out of cold indifference coupled with greed.",
+      "url": "https://uk.bookshop.org/a/3170/9780099590088"
+    },
+    {
+      "title": "CAPS LOCK",
+      "type": "book",
+      "author": "Ruben Pater",
+      "coverImage": {
+        "width": 1381,
+        "height": 2168,
+        "url": "https://media.graphassets.com/WDKwBFsR0S7PNT1gBcSA"
+      },
+      "quote": "How can you practice design outside of capitalism, when capitalism itself will do everything to try and appropriate anti-capitalist ideas or practices for its benefit?",
+      "url": "https://www.valiz.nl/en/publications/caps-lock.html"
+    },
+    {
+      "title": "Bullshit Jobs",
+      "type": "book",
+      "author": "David Graeber",
+      "coverImage": {
+        "width": 1656,
+        "height": 2560,
+        "url": "https://media.graphassets.com/HNDS4L8DQH6zTOHfjBgC"
+      },
+      "quote": "The feeling that work is a moral value in itself, and that anyone not willing to submit themselves to some kind of intense work discipline for most of their waking hours deserves nothing, is extraordinarily convenient for [the ruling class]",
+      "url": "https://uk.bookshop.org/a/3170/9780141983479"
+    }
+  ]
+}

@@ -1,11 +1,7 @@
-import Media, { MediaItem } from "@/app/components/Media"
-import { client } from "@/app/utils/graphql-client"
+import Media, { MediaType } from "@/app/components/Media"
 import widont from "@/app/utils/widont"
-import { gql } from "graphql-request"
 import { Metadata } from "next"
-import { cache } from "react"
-
-export const runtime = "edge"
+import playlist from "./playlist.json"
 
 export const metadata: Metadata = {
   title: "Playlist",
@@ -16,27 +12,8 @@ export const metadata: Metadata = {
 const strippedTitle = (str: string): string =>
   str.replace(/^(the|a) /i, "").toLowerCase()
 
-const getMediaItems = cache(async function getMediaItems() {
-  return await client.request<{ mediaItems: MediaItem[] }>(gql`
-    query MediaItems {
-      mediaItems(first: 100) {
-        author
-        id
-        quote
-        title
-        url
-        coverImage {
-          url
-          width
-          height
-        }
-      }
-    }
-  `)
-})
-
-export default async function LibraryPage() {
-  const { mediaItems } = await getMediaItems()
+export default function LibraryPage() {
+  const { mediaItems } = playlist
 
   const entries = mediaItems
     .map((media) => {
@@ -59,7 +36,7 @@ export default async function LibraryPage() {
           key={title}
           quote={quote}
           title={title}
-          type={type}
+          type={type as MediaType}
           url={url}
         />
       ))}

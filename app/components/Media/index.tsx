@@ -2,20 +2,24 @@ import Link from "next/link"
 import Image from "../Image"
 import styles from "./styles.module.css"
 
+export enum MediaType {
+  book = "book",
+  podcast = "podcast",
+}
+
 export interface MediaItem {
   title: string
   author: string
   url: string
   quote?: string
   coverImage: Asset
-  type: "book" | "podcast"
+  type: MediaType
 }
 
 export interface Asset {
   url: string
   width: number
   height: number
-  id: string
 }
 
 const Media = ({ author, coverImage: cover, quote, title, url }: MediaItem) => {
