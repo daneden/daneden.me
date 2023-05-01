@@ -1,15 +1,8 @@
----
-title: "A Design System Grammar"
-date: "2017-07-12"
-excerpt: >
-    How do we wittle down a large number of possible Design System components
-    into a sensible list of appropriate patterns for a given problem? In this
-    post, we explore a “Design System Grammar”; rules for composing arrangements
-    of components.
-categories:
-    - design
-    - process
----
+import { Metadata } from "next"
+export const metadata: Metadata = {
+    title: "A Design System Grammar",
+    description: `How do we wittle down a large number of possible Design System components into a sensible list of appropriate patterns for a given problem? In this post, we explore a “Design System Grammar”; rules for composing arrangements of components.`,
+}
 
 In my posts about Design Systems so far, I’ve theorized about the structural
 approach that causes existing design systems to fail, and an
@@ -60,7 +53,7 @@ documenting UI components:
 > _Composes: Login Page, Entity Creation Page, Search Form_
 >
 > At a minimum, a form is composed of a label, input, and button. They are
-> required to capture user input. \{Further problem definition and discussion…\}
+> required to capture user input. {Further problem definition and discussion…\}
 >
 > _Composed of: Button, Input, Label_
 
@@ -73,7 +66,7 @@ inclined, we can dig further to find the definition of the Button pattern:
 > _Composes: Form, Banner, Navigation_
 >
 > A Button is a low-level component that represents a familiar user concept.
-> \{Further problem definition and discussion…\}
+> {Further problem definition and discussion…\}
 >
 > _Composed of: Background, Border, Text, Spacing, Cursor_
 
