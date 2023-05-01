@@ -20,7 +20,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       }
 
       if (href.startsWith("#")) {
-        return <a {...props} />
+        return <a {...props} href={href} />
       } else {
         return <Link {...props} href={href} ref={undefined} />
       }
