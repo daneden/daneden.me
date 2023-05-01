@@ -16,7 +16,6 @@ const config = {
   },
   experimental: {
     appDir: true,
-    mdxRs: true,
   },
 
   redirects() {
