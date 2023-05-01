@@ -3,8 +3,6 @@ import formatDate from "@/utils/formatDate"
 import { Metadata } from "next"
 import Link from "next/link"
 
-export const runtime = "edge"
-
 export const metadata: Metadata = {
   title: "Blog",
   description: "Daniel Eden’s Blog",
