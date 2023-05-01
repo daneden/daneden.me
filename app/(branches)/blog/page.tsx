@@ -1,5 +1,5 @@
 import { getPosts } from "@/app/get-posts"
-import formatDate from "@/utils/formatDate"
+import formatDate from "@/app/utils/formatDate"
 import { Metadata } from "next"
 import Link from "next/link"
 

@@ -1,4 +1,4 @@
-import opengraphImage from "@/utils/opengraphImage"
+import opengraphImage from "@/app/utils/opengraphImage"
 import { NextRequest } from "next/server"
 
 export async function GET(request: NextRequest) {

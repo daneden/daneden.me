@@ -1,10 +1,6 @@
 import Link from "next/link"
 import styles from "./styles.module.css"
 
-interface HeaderProps {
-  siteTitle: string
-}
-
 const links = [
   {
     to: "/blog",
@@ -20,12 +16,12 @@ const links = [
   },
 ]
 
-const Header = ({ siteTitle }: HeaderProps) => {
+const Header = () => {
   return (
     <>
       <header className={styles.root}>
         <Link className="plainlink" href="/">
-          {siteTitle}
+          Daniel Eden, Designer
         </Link>
 
         <nav>

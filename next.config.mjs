@@ -1,5 +1,5 @@
 import nextMdx from "@next/mdx"
-import { rehypePlugins, remarkPlugins } from "./src/utils/mdxPlugins.mjs"
+import { rehypePlugins, remarkPlugins } from "./app/utils/mdxPlugins.mjs"
 
 const withMDX = nextMdx({
   options: {

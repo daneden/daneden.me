@@ -1,13 +1,20 @@
 /* eslint-disable prefer-const */
 import LightswitchImage from "@/app/components/LightSwitchImage"
 import Timeline from "@/app/components/Timeline"
-import defaultMetadata from "@/data/siteconfig"
 import { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
 import styles from "./home.module.css"
+import wwcg from "./wwcg.jpg"
 
-export const metadata: Metadata = defaultMetadata
+export const metadata: Metadata = {
+  title: {
+    template: `%s | "Daniel Eden, Designer"`,
+    absolute: "Daniel Eden, Designer",
+  },
+  description:
+    "The personal site, blog, and portfolio of Daniel Eden, a designer writing and thinking about design systems.",
+}
 
 export default function HomePage() {
   return (
@@ -47,9 +54,7 @@ export default function HomePage() {
           </p>
           <div className="align-bottom">
             <Image
-              src="/images/wwcg.jpg"
-              width={686}
-              height={386}
+              src={wwcg}
               alt="Daniel Eden presenting “Where We Can Go” at Clarity Conference 2019"
             />
           </div>

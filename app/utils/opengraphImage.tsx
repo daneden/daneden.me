@@ -1,5 +1,4 @@
-import { config } from "@/data/siteconfig"
-import widont from "@/utils/widont"
+import widont from "@/app/utils/widont"
 import { ImageResponse } from "next/server"
 
 const tiemposHeadline = fetch(
@@ -10,7 +9,9 @@ const soehne = fetch(
   new URL("https://daneden.me/og-fonts/Soehne-Buch.otf")
 ).then((res) => res.arrayBuffer())
 
-export default async function opengraphImage(title = config.title) {
+const defaultTitle = "Daniel Eden, Designer"
+
+export default async function opengraphImage(title = defaultTitle) {
   const tiemposFontData = await tiemposHeadline
   const soehneFontData = await soehne
 
@@ -55,7 +56,7 @@ export default async function opengraphImage(title = config.title) {
             right: -80,
           }}
         >
-          {title != config.title ? config.title : null}
+          {title != defaultTitle ? defaultTitle : null}
         </div>
       </div>
     ),

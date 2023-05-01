@@ -1,6 +1,6 @@
 import Media, { MediaItem } from "@/app/components/Media"
-import { client } from "@/utils/graphql-client"
-import widont from "@/utils/widont"
+import { client } from "@/app/utils/graphql-client"
+import widont from "@/app/utils/widont"
 import { gql } from "graphql-request"
 import { Metadata } from "next"
 import { cache } from "react"
