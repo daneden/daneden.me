@@ -1,10 +1,11 @@
 import LightswitchImage from "@/components/LightSwitchImage"
+import { Metadata } from "next"
 import Link from "next/link"
 import styles from "./styles.module.css"
 
 export const runtime = "edge"
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Portfolio",
   description: "Daniel Eden’s portfolio of design and engineering projects",
 }

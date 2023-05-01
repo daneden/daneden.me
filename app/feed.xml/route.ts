@@ -1,72 +1,37 @@
-import { client } from "@/utils/graphql-client"
-import { Feed } from "feed"
-import { gql } from "graphql-request"
-import { cache } from "react"
+import { getPosts } from "@/app/get-posts"
 
-const { VERCEL_URL } = process.env
-
-const allPosts = cache(async function allPosts() {
-  return await client.request<{ posts: Post[] }>(gql`
-    query {
-      posts(first: 100) {
-        slug
-        title
-        excerpt
-        date
-      }
+export function GET() {
+  const posts = getPosts()
+  const max = 100 // max returned posts
+  return new Response(
+    `<?xml version="1.0" encoding="utf-8"?>
+  <feed xmlns="http://www.w3.org/2005/Atom">
+    <title>Daniel Eden</title>
+    <subtitle>Blog</subtitle>
+    <link href="https://daneden.me/feed" rel="self"/>
+    <link href="https://daneden.me/"/>
+    <updated>${posts[0].date}</updated>
+    <id>https://daneden.me/</id>
+    <author>
+      <name>Daniel Eden</name>
+      <email>dan.eden@me.com</email>
+    </author>
+    ${posts.slice(0, max).reduce((acc, post) => {
+      const dateMatch = post.date.match(/\d{4}/)
+      if (!dateMatch) return ""
+      return `${acc}
+        <entry>
+          <id>${post.id}</id>
+          <title>${post.title}</title>
+          <link href="https://daneden.me/blog/${post.slug}"/>
+          <updated>${post.date}</updated>
+        </entry>`
+    }, "")}
+  </feed>`,
+    {
+      headers: {
+        "Content-Type": "application/atom+xml; charset=utf-8",
+      },
     }
-  `)
-})
-
-async function generateRSSFeed() {
-  const { posts } = await allPosts()
-
-  const author = {
-    name: "Daniel Eden",
-    email: "dan.eden@me.com",
-    link: "https://twitter.com/_dte",
-  }
-
-  const feed = new Feed({
-    title: "Daniel Eden, Designer",
-    description: "",
-    id: `https://${VERCEL_URL}`,
-    link: `https://${VERCEL_URL}`,
-    image: `https://${VERCEL_URL}/api/og`,
-    favicon: `https://${VERCEL_URL}/images/face.jpeg`,
-    copyright: `© ${new Date().getFullYear()} Daniel Eden`,
-    updated: new Date(),
-    generator: "Feed for Node.js",
-    feedLinks: {
-      rss2: `https://${VERCEL_URL}/feed.xml`,
-    },
-    author,
-  })
-
-  posts.forEach((post) => {
-    if (post) {
-      feed.addItem({
-        title: post.title,
-        link: `https://${VERCEL_URL}/blog/${post.slug}`,
-        id: post.slug,
-        description: post.excerpt ?? undefined,
-        date: new Date(post.date),
-        author: [author],
-        contributor: [author],
-      })
-    }
-  })
-
-  return feed
+  )
 }
-
-export async function GET() {
-  const feed = await generateRSSFeed()
-  return new Response(feed.rss2(), {
-    headers: {
-      "Content-Type": "text/xml",
-    },
-  })
-}
-
-export const runtime = "edge"

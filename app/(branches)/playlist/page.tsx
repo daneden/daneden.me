@@ -2,11 +2,12 @@ import Media, { MediaItem } from "@/components/Media"
 import { client } from "@/utils/graphql-client"
 import widont from "@/utils/widont"
 import { gql } from "graphql-request"
+import { Metadata } from "next"
 import { cache } from "react"
 
 export const runtime = "edge"
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Playlist",
   description: "Daniel Eden’s favourite books and podcasts",
 }

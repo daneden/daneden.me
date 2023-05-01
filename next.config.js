@@ -1,11 +1,19 @@
-/** @type {import('next').NextConfig} */
+const { rehypePlugins, remarkPlugins } = import("./src/utils/mdxPlugins.mjs")
 
-module.exports = {
+const withMDX = require("@next/mdx")({
+  rehypePlugins,
+  remarkPlugins,
+})
+
+/** @type {import('next').NextConfig} */
+const config = {
+  pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
   images: {
     domains: ["media.graphassets.com"],
   },
   experimental: {
     appDir: true,
+    mdxRs: true,
   },
 
   redirects() {
@@ -48,3 +56,5 @@ module.exports = {
     ]
   },
 }
+
+module.exports = withMDX(config)

@@ -1,0 +1,282 @@
+{
+  "posts": [
+    {
+      "id": "three-phases-of-design-systems",
+      "title": "Three Phases of Life for Design Systems",
+      "excerpt": "Design systems can be an intimidating undertaking: how can we create something that is robust and supports so many different needs? I’m here to tell you that the path you’re on is years long, but well worth it. Broadly speaking, your design system will undergo three phases of life: reflection, anticipation, and influence.",
+      "date": "2021-11-24"
+    },
+    {
+      "id": "thinking-is-work",
+      "title": "Thinking Is Work",
+      "excerpt": "I’ve spoken with a lot of folks recently about a challenge imposed on us by increased remote work: losing time to think. Because of an increased need to communicate and align with peers and teammates—and few, ineffective tools for doing so (video-conferencing meetings and documents)—we find ourselves spending more time communicating than executing and, more critically, thinking about work.\n",
+      "date": "2021-05-26"
+    },
+    {
+      "id": "redesign",
+      "title": "A Change of Scenery",
+      "excerpt": null,
+      "date": "2021-04-29"
+    },
+    {
+      "id": "access-ability",
+      "title": "Access—Ability",
+      "excerpt": "People tend to conflate “accessibility” with “disability”; but designing for accessibility is principally a question of “access”. Framed in this light, the challenges and opportunities of accessible design become more vividly obvious.",
+      "date": "2020-10-02"
+    },
+    {
+      "id": "tapestry-of-tools",
+      "title": "A Tapestry of Tools",
+      "excerpt": "When people ask “which design tool should I use?”, what I hear is “which design tool will take my work closest to the threshold of representing the real thing?”. Through this framing, it’s easier to see that… none of them really do.\n",
+      "date": "2020-08-21"
+    },
+    {
+      "id": "anatomy-of-a-typed-react-component",
+      "title": "Anatomy of a Typed React Component",
+      "excerpt": null,
+      "date": "2020-06-30"
+    },
+    {
+      "id": "strategies-for-cross-team-collaboration",
+      "title": "3 Strategies For Effective Cross-Team Collaboration",
+      "excerpt": "Working on the design system for Meta’s Ads and Business products, I’ve learned a lot about what makes an effective collaboration, and what can turn a difficult relationship into a productive one. In this post, I’ve tried to distill the three biggest behavioural changes that can lead to more effective working relationships.\n",
+      "date": "2020-04-06"
+    },
+    {
+      "id": "3x3-gtd",
+      "title": "3×3 GTD: A Priority-Driven To Do List",
+      "excerpt": "Three big things every year, and three small things every day: a straightforward approach to achieving your goals and ruthlessly prioritising your jobs-to-be-done.\n",
+      "date": "2020-03-26"
+    },
+    {
+      "id": "toss-a-coin-with-react-part-3",
+      "title": "Building a Coin-Tossing Simulator with React, Hooks, and Vercel: Part 3",
+      "excerpt": null,
+      "date": "2020-02-03"
+    },
+    {
+      "id": "building-my-own-meme-server",
+      "title": "Building My Own Meme Server With Dropbox, Netlify, and Zeit Now/Next",
+      "excerpt": null,
+      "date": "2019-12-08",
+      "hidden": true
+    },
+    {
+      "id": "regex-for-designers-and-writers",
+      "title": "Regex for Designers and UX Writers",
+      "excerpt": "Learn the basics of Regex, a powerful tool for searching and replacing text using patterns.\n",
+      "date": "2019-11-23"
+    },
+    {
+      "id": "where-we-can-go",
+      "title": "Where We Can Go",
+      "excerpt": "Design systems have matured as an subject over the years to the point of buzzwordiness; but what do design systems and design tools enable us to achieve long-term? What relationships do they enable, and what habits do they break? This post is the written transcription of my 2019 Clarity Conference presentation.\n",
+      "date": "2019-08-27"
+    },
+    {
+      "id": "toss-a-coin-with-react-part-2",
+      "title": "Building a Coin-Tossing Simulator with React, Hooks, and Vercel: Part 2",
+      "excerpt": null,
+      "date": "2019-08-10"
+    },
+    {
+      "id": "toss-a-coin-with-react-part-1",
+      "title": "Building a Coin-Tossing Simulator with React, Hooks, and Vercel: Part 1",
+      "excerpt": null,
+      "date": "2019-07-29"
+    },
+    {
+      "id": "typed-systems",
+      "title": "Square Peg, Round Hole: Typed Programming For Designers",
+      "excerpt": null,
+      "date": "2019-07-09"
+    },
+    {
+      "id": "designing-for-systems",
+      "title": "Designing And Building For Systems",
+      "excerpt": null,
+      "date": "2019-03-29"
+    },
+    {
+      "id": "wordplay",
+      "title": "Wordplay: Language Structure in Design Systems",
+      "excerpt": null,
+      "date": "2018-06-27"
+    },
+    {
+      "id": "subatomic-design-systems",
+      "title": "Subatomic Design Systems",
+      "excerpt": null,
+      "date": "2018-01-05"
+    },
+    {
+      "id": "the-burden-of-precision",
+      "title": "The Burden of Precision",
+      "excerpt": null,
+      "date": "2017-11-15"
+    },
+    {
+      "id": "design-system-structure",
+      "title": "Design System Structure",
+      "excerpt": "How do we draw the lines between a 'pattern' and a 'component' in design systems? How do systems intersect with brand design? In this post, we outline a structure that can be applied to a design system to identify its constituent parts and the interactions between them.\n",
+      "date": "2017-07-17"
+    },
+    {
+      "id": "a-design-system-grammar",
+      "title": "A Design System Grammar",
+      "excerpt": "How do we wittle down a large number of possible Design System components into a sensible list of appropriate patterns for a given problem? In this post, we explore a “Design System Grammar”; rules for composing arrangements of components.\n",
+      "date": "2017-07-12"
+    },
+    {
+      "id": "paving-the-path-of-least-resistance",
+      "title": "Paving the Path of Least Resistance",
+      "excerpt": null,
+      "date": "2017-06-27"
+    },
+    {
+      "id": "casting-graphite-in-gold",
+      "title": "Casting Graphite in Gold",
+      "excerpt": null,
+      "date": "2017-06-02"
+    },
+    {
+      "id": "designing-systems",
+      "title": "Designing Product UI Systems",
+      "excerpt": null,
+      "date": "2017-03-29"
+    },
+    {
+      "id": "drawing-with-numbers",
+      "title": "Drawing With Numbers",
+      "excerpt": null,
+      "date": "2016-11-02"
+    },
+    {
+      "id": "the-weird-wide-web",
+      "title": "The Weird Wide Web",
+      "excerpt": null,
+      "date": "2016-08-04"
+    },
+    {
+      "id": "the-landscape-of-web-typography",
+      "title": "The Landscape of Web Typography",
+      "excerpt": null,
+      "date": "2015-02-15"
+    },
+    {
+      "id": "making-sense",
+      "title": "Making Sense",
+      "excerpt": null,
+      "date": "2014-11-02"
+    },
+    {
+      "id": "design-elitism",
+      "title": "Design Elitism",
+      "excerpt": null,
+      "date": "2014-06-28"
+    },
+    {
+      "id": "the-little-red-book",
+      "title": "The Little Red Book",
+      "excerpt": null,
+      "date": "2014-05-27"
+    },
+    {
+      "id": "words",
+      "title": "Mouth Words, Brain Words",
+      "excerpt": null,
+      "date": "2014-05-18"
+    },
+    {
+      "id": "see-think-design-produce",
+      "title": "See, Think, Design, Produce",
+      "excerpt": null,
+      "date": "2014-05-06"
+    },
+    {
+      "id": "re-designing",
+      "title": "Re; Designing",
+      "excerpt": null,
+      "date": "2014-03-20"
+    },
+    {
+      "id": "learning-how-to-write",
+      "title": "Learning How To Write",
+      "excerpt": null,
+      "date": "2014-03-08"
+    },
+    {
+      "id": "emergency-mode",
+      "title": "Emergency Mode",
+      "excerpt": null,
+      "date": "2014-02-04"
+    },
+    {
+      "id": "things-ive-learned",
+      "title": "Things I’ve Learned On Planet Earth",
+      "excerpt": null,
+      "date": "2014-01-30"
+    },
+    {
+      "id": "everything-is-terrible",
+      "title": "It’s 2014 And Everything is Terrible",
+      "excerpt": null,
+      "date": "2014-01-24"
+    },
+    {
+      "id": "maestro",
+      "title": "A Little Music Please, Maestro",
+      "excerpt": null,
+      "date": "2014-01-05"
+    },
+    {
+      "id": "feeling-out-loud",
+      "title": "Feeling Out Loud",
+      "excerpt": null,
+      "date": "2013-12-19"
+    },
+    {
+      "id": "30k-feet-of-perspective",
+      "title": "Thirty Thousand Feet of Perspective",
+      "excerpt": null,
+      "date": "2013-10-02"
+    },
+    {
+      "id": "the-future-of-design",
+      "title": "Heart and The Future of Design",
+      "excerpt": null,
+      "date": "2013-09-11"
+    },
+    {
+      "id": "shame-and-legacy",
+      "title": "Out With The Old, In With The Good",
+      "excerpt": null,
+      "date": "2013-09-02"
+    },
+    {
+      "id": "practice-and-fear",
+      "title": "Practice & Fear",
+      "excerpt": null,
+      "date": "2013-07-24"
+    },
+    {
+      "id": "whim-and-aim",
+      "title": "Whim & Aim",
+      "excerpt": null,
+      "date": "2013-07-10"
+    },
+    {
+      "id": "constraints-affordances",
+      "title": "Constraints & Affordances",
+      "excerpt": null,
+      "date": "2012-06-11"
+    },
+    {
+      "id": "putting-up-with-androids-bullshit",
+      "title": "Dispelling the Android CSS Animation Myths",
+      "excerpt": null,
+      "date": "2011-12-14",
+      "hidden": true
+    }
+  ]
+}
