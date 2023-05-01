@@ -1,4 +1,4 @@
-import LightswitchImage from "@/components/LightSwitchImage"
+import LightswitchImage from "@/app/components/LightSwitchImage"
 import { Metadata } from "next"
 import Link from "next/link"
 import styles from "./styles.module.css"

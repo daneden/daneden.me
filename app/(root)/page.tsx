@@ -1,6 +1,6 @@
 /* eslint-disable prefer-const */
-import LightswitchImage from "@/components/LightSwitchImage"
-import Timeline from "@/components/Timeline"
+import LightswitchImage from "@/app/components/LightSwitchImage"
+import Timeline from "@/app/components/Timeline"
 import defaultMetadata from "@/data/siteconfig"
 import { Metadata } from "next"
 import Image from "next/image"

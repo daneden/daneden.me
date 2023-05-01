@@ -1,4 +1,4 @@
-import Image from "@/components/Image"
+import Image from "@/app/components/Image"
 import type { MDXComponents } from "mdx/types"
 
 // This file allows you to provide custom React components

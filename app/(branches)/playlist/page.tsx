@@ -1,4 +1,4 @@
-import Media, { MediaItem } from "@/components/Media"
+import Media, { MediaItem } from "@/app/components/Media"
 import { client } from "@/utils/graphql-client"
 import widont from "@/utils/widont"
 import { gql } from "graphql-request"

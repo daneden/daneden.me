@@ -1,4 +1,4 @@
-import Align from "@/components/Align"
+import Align from "@/app/components/Align"
 import NextImage, { ImageProps as NextImageProps } from "next/image"
 import React, { ReactNode } from "react"
 

@@ -1,4 +1,4 @@
-import SkipLink from "@/components/SkipLink"
+import SkipLink from "@/app/components/SkipLink"
 import { Analytics } from "@vercel/analytics/react"
 import { soehne, tiemposHeadline, tiemposText } from "../fonts"
 import "../styles/global.css"
