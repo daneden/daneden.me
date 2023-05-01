@@ -1,8 +1,7 @@
 "use client"
 
-import dynamic from "next/dynamic"
-import p5Types from "p5"
-import { ReactNode, useEffect, useState } from "react"
+import { NextReactP5Wrapper } from "@p5-wrapper/next"
+import { type Sketch } from "@p5-wrapper/react"
 
 const canvasWidth = 300,
   canvasHeight = canvasWidth,
@@ -31,16 +30,12 @@ function getNoOfCols(w: number, length: number, m: number) {
 }
 
 export default function P5Sketch() {
-  const [childComponent, setChildComponent] = useState<ReactNode>(<div />)
-
-  useEffect(() => {
-    const Sketch = dynamic(() => import("react-p5"))
-
-    const setup = (p5: p5Types) => {
+  const sketch: Sketch = (p5) => {
+    p5.setup = () => {
       p5.createCanvas(canvasWidth, canvasHeight)
     }
 
-    const draw = (p5: p5Types) => {
+    p5.draw = () => {
       p5.background(255)
       for (let i = 0; i < rows - 1; i++) {
         for (let j = 0; j < columns - 1; j++) {
@@ -82,9 +77,7 @@ export default function P5Sketch() {
         }
       }
     }
+  }
 
-    setChildComponent(<Sketch setup={setup} draw={draw} />)
-  }, [setChildComponent])
-
-  return <>{childComponent}</>
+  return <NextReactP5Wrapper sketch={sketch} />
 }
