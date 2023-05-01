@@ -1,8 +1,0 @@
-image: gitpod/workspace-full
-
-ports:
-  - port: 3000
-    onOpen: open-preview
-
-tasks:
-  - init: yarn install

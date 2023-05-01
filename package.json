@@ -7,11 +7,7 @@
     "build": "next build",
     "dev": "next dev",
     "lint": "next lint",
-    "start": "next start",
-    "generate": "graphql-codegen --require dotenv/config",
-    "prestart": "yarn generate",
-    "predev": "yarn generate",
-    "prebuild": "yarn generate"
+    "start": "next start"
   },
   "dependencies": {
     "@ngsctt/remark-smartypants": "^0.2.0",
@@ -39,8 +35,6 @@
     "typescript": "^5.0.4"
   },
   "devDependencies": {
-    "@graphql-codegen/cli": "^3.3.1",
-    "@graphql-codegen/typescript": "^3.0.4",
     "@types/node": "^18.16.2",
     "@types/react": "^18.2.0",
     "encoding": "^0.1.13",

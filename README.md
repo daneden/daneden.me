@@ -1,6 +1,5 @@
 # daneden.me
 
-[![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/daneden/daneden.me)
 ![Check lint results](https://github.com/daneden/daneden.me/workflows/Check%20lint%20results/badge.svg)
 
 Welcome to the innards of [my website](http://daneden.me). It’s built using
