@@ -1,5 +1,5 @@
+import Breakout from "@/components/Breakout"
 import Image from "@/components/Image"
-import Breakout from "../../Breakout"
 import styles from "./styles.module.css"
 
 const imageNames = [
