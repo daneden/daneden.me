@@ -1,10 +1,3 @@
-const { rehypePlugins, remarkPlugins } = import("./src/utils/mdxPlugins.mjs")
-
-const withMDX = require("@next/mdx")({
-  rehypePlugins,
-  remarkPlugins,
-})
-
 /** @type {import('next').NextConfig} */
 const config = {
   pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
@@ -57,4 +50,14 @@ const config = {
   },
 }
 
-module.exports = withMDX(config)
+module.exports = async (phase, { defaultConfig }) => {
+  const { rehypePlugins, remarkPlugins } = await import(
+    "./src/utils/mdxPlugins.mjs"
+  )
+
+  const withMDX = require("@next/mdx")({
+    options: { rehypePlugins, remarkPlugins },
+  })
+
+  return withMDX({ ...defaultConfig, ...config })
+}
