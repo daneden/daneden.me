@@ -1,7 +1,10 @@
 import SkipLink from "@/app/components/SkipLink"
 import { Analytics } from "@vercel/analytics/react"
 import { soehne, tiemposHeadline, tiemposText } from "../fonts"
+import sharedMetadata from "../metadata"
 import "../styles/global.css"
+
+export const metadata = sharedMetadata
 
 export default function RootLayout({
   children,

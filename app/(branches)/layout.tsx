@@ -3,9 +3,9 @@ import Header from "@/app/components/Header"
 import SkipLink from "@/app/components/SkipLink"
 import Wrapper from "@/app/components/Wrapper"
 import { Analytics } from "@vercel/analytics/react"
-import { Metadata } from "next"
 import { JetBrains_Mono } from "next/font/google"
 import { soehne, tiemposHeadline, tiemposText } from "../fonts"
+import sharedMetadata from "../metadata"
 import "../styles/global.css"
 import "../styles/syntax.css"
 
@@ -15,14 +15,7 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 })
 
-export const metadata: Metadata = {
-  title: {
-    template: `%s | "Daniel Eden, Designer"`,
-    absolute: "Daniel Eden, Designer",
-  },
-  description:
-    "The personal site, blog, and portfolio of Daniel Eden, a designer writing and thinking about design systems.",
-}
+export const metadata = sharedMetadata
 
 export default function BranchPageLayout({
   children,

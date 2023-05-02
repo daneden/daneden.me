@@ -1,20 +1,10 @@
 /* eslint-disable prefer-const */
 import LightswitchImage from "@/app/components/LightSwitchImage"
 import Timeline from "@/app/components/Timeline"
-import { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
 import styles from "./home.module.css"
 import wwcg from "./wwcg.jpg"
-
-export const metadata: Metadata = {
-  title: {
-    template: `%s | "Daniel Eden, Designer"`,
-    absolute: "Daniel Eden, Designer",
-  },
-  description:
-    "The personal site, blog, and portfolio of Daniel Eden, a designer writing and thinking about design systems.",
-}
 
 export default function HomePage() {
   return (
@@ -23,15 +13,15 @@ export default function HomePage() {
         <div className={`${styles.intro} ${styles.spanall}`}>
           <p className={styles.xxl}>
             Daniel Eden is a Product Designer at{" "}
-            <Link href="https://meta.com/">Meta</Link> in London, working on
-            making Customer Support experiences that are more equitable, human,
-            and helpful. He spends his time <Link href="/blog">writing</Link>,
-            thinking, <Link href="https://twitter.com/_dte">tweeting</Link>, and
+            <a href="https://meta.com/">Meta</a> in London, working on making
+            Customer Support experiences that are more equitable, human, and
+            helpful. He spends his time <Link href="/blog">writing</Link>,
+            thinking, <a href="https://twitter.com/_dte">tweeting</a>, and
             talking about Design Systems: how they scale, how they break, and
             the people&nbsp;that maintain&nbsp;them.
           </p>
         </div>
-        <Link
+        <a
           className={`${styles.tile} ${styles.solstice}`}
           href="https://solstice.daneden.me"
         >
@@ -44,13 +34,16 @@ export default function HomePage() {
             srcLight="/uploads/portfolio/solstice-light.png"
             width={1339}
           />
-        </Link>
+        </a>
         <div className={`${styles.tile} ${styles.whereWeCanGo}`}>
           <h2 className={styles.xxl}>Where We Can Go</h2>
           <p>
-            A <Link href="">conference talk</Link> and{" "}
-            <Link href="/blog/2019/where-we-can-go">essay</Link> about design
-            systems and design tools.
+            A{" "}
+            <a href="https://www.clarityconf.com/session/where-we-can-go">
+              conference talk
+            </a>{" "}
+            and <Link href="/blog/2019/where-we-can-go">essay</Link> about
+            design systems and design tools.
           </p>
           <div className="align-bottom">
             <Image
@@ -59,7 +52,7 @@ export default function HomePage() {
             />
           </div>
         </div>
-        <Link
+        <a
           className={`${styles.tile} ${styles.zeitgeist}`}
           href="https://zeitgeist.daneden.me"
         >
@@ -72,7 +65,7 @@ export default function HomePage() {
             srcLight="/uploads/portfolio/zeitgeist-light.png"
             width={1339}
           />
-        </Link>
+        </a>
         <div className={`${styles.xxl} ${styles.tile} ${styles.extras}`}>
           <Link href="/blog">Writing &rarr;</Link>
           <Link href="/portfolio">Projects &rarr;</Link>
