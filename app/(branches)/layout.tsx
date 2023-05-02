@@ -1,11 +1,11 @@
-import Footer from "@/components/Footer"
-import Header from "@/components/Header"
-import SkipLink from "@/components/SkipLink"
-import Wrapper from "@/components/Wrapper"
-import defaultMetadata, { config } from "@/data/siteconfig"
+import Footer from "@/app/components/Footer"
+import Header from "@/app/components/Header"
+import SkipLink from "@/app/components/SkipLink"
+import Wrapper from "@/app/components/Wrapper"
 import { Analytics } from "@vercel/analytics/react"
 import { JetBrains_Mono } from "next/font/google"
 import { soehne, tiemposHeadline, tiemposText } from "../fonts"
+import sharedMetadata from "../metadata"
 import "../styles/global.css"
 import "../styles/syntax.css"
 
@@ -15,7 +15,7 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 })
 
-export const metadata = defaultMetadata
+export const metadata = sharedMetadata
 
 export default function BranchPageLayout({
   children,
@@ -29,7 +29,7 @@ export default function BranchPageLayout({
       <body>
         <SkipLink />
         <div className={`sp-m ${jetbrainsMono.variable}`}>
-          <Header siteTitle={config.title} />
+          <Header />
           <Wrapper>{children}</Wrapper>
           <Footer />
         </div>

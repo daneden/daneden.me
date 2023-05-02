@@ -1,30 +1,15 @@
-import formatDate from "@/utils/formatDate"
-import { client } from "@/utils/graphql-client"
-import { gql } from "graphql-request"
+import { getPosts } from "@/app/get-posts"
+import formatDate from "@/app/utils/formatDate"
+import { Metadata } from "next"
 import Link from "next/link"
-import { cache } from "react"
 
-export const runtime = "edge"
-
-export const metadata = {
+export const metadata: Metadata = {
   title: "Blog",
   description: "Daniel Eden’s Blog",
 }
 
-const allVisiblePosts = cache(async function allVisiblePosts() {
-  return await client.request<{ posts: Post[] }>(gql`
-    query {
-      posts(orderBy: date_DESC, where: { hidden: false }, first: 100) {
-        slug
-        title
-        date
-      }
-    }
-  `)
-})
-
-export default async function Blog() {
-  const { posts } = await allVisiblePosts()
+export default function Blog() {
+  const posts = getPosts()
 
   return (
     <>

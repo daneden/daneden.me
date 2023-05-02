@@ -1,43 +1,30 @@
 {
   "compilerOptions": {
-    "target": "es6",
+    "target": "es2015",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": true,
+    "strict": false,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
+    "incremental": true,
     "esModuleInterop": true,
     "module": "esnext",
-    "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
+    "moduleResolution": "node",
     "baseUrl": ".",
     "paths": {
-      "*": ["./src/typings/*"],
-      "@/utils/*": ["src/utils/*"],
-      "@/data/*": ["src/data/*"],
-      "@/components/*": ["src/components/*"],
-      "@/designSystem": ["src/components/designSystem/index"],
-      "@/designSystem/*": ["src/components/designSystem/*"],
-      "contentlayer/generated": ["./.contentlayer/generated"]
+      "@/*": ["*"]
     },
-    "incremental": true,
     "plugins": [
       {
         "name": "next"
       }
-    ]
+    ],
+    "strictNullChecks": true
   },
-  "exclude": ["node_modules"],
-  "include": [
-    "**/*.ts",
-    "**/*.tsx",
-    "**/*.d.ts",
-    "**/*.mdx",
-    "next-env.d.ts",
-    ".next/types/**/*.ts",
-    ".contentlayer/generated"
-  ]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
 }

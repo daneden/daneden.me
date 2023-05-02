@@ -1,0 +1,302 @@
+export const metadata = {
+    title: "Regex for Designers and UX Writers",
+    description:
+        "Learn the basics of Regex, a powerful tool for searching and replacing text using patterns.",
+    openGraph: {
+        title: "Regex for Designers and UX Writers",
+        description:
+            "Learn the basics of Regex, a powerful tool for searching and replacing text using patterns.",
+        images: [
+            {
+                url: "/og/designing-for-systems",
+            },
+        ],
+    },
+}
+
+# Regex for Designers and UX Writers
+
+Across all our digital devices, one of the things we probably do most commonly
+is _search for something_. Whether it’s using Spotlight on our iPhone or Mac,
+searching using the Windows menu, using Ctrl+F or ⌘+F to search for something in
+a document, or looking something up on Google, we’re constantly finding our
+stuff by searching with text.
+
+Almost all text search is powered by a terse and powerful syntax called
+**regular expressions** or _regex_. The idea behind regex is straightforward:
+you use a sequence of characters to describe a search pattern. For example, if I
+wanted to find the word “regex” in a document, the regular expression I would
+write would look like this:
+
+```regex
+/regex/
+```
+
+The slashes at the beginning and end just indicate the beginning and end of a
+regular expression. This specific pattern would match instances of the word
+“regex”, but not “Regex”. If I wanted to make my search query match both of
+these variants, there are two ways I could do it:
+
+```regex
+/[Rr]egex/
+/regex/i
+```
+
+The first example above will match either an uppercase “R” or a lowercase “r”,
+followed by the remaining part of the word, “egex”.
+
+The second example above adds an “i” right after the closing slash. This “flag”,
+as it’s known, indicates that my search should be _case insensitive_, meaning it
+doesn’t matter whether the matching characters are uppercase or lowercase. This
+means that even a spelling such as “ReGeX” would match my query.
+
+The thing is, regex is useful not only for searching. It’s a powerful Swiss Army
+knife, useful for doing all sorts of things with text: searching, replacing,
+transforming, and validating different texts are just some of the ways that
+regex is used every day.
+
+As you can see, even searching for a single word can get quite complex when you
+take into account the various ways that word could be formatted, and how strict
+or loose we want our matches to be. In this post, I’ll highlight a number of
+ways that regex can be useful, whether you’re building a prototype using
+JavaScript, or trying to think about data validation or string replacement as a
+content writer.
+
+## Searching Spelling Variants
+
+We saw in one of the earlier examples how we can match either lowercase or
+uppercase letters, but regex gives us many other ways to look for characters:
+characters that may or may not be in the text, characters that appear a certain
+number of times, characters that are at the beginning or end of a text, or
+characters that are of a specific type, such as numbers or white space.
+
+As you can imagine, all these different capabilities allow you to write some
+very powerful (and very intimidating) patterns. But don’t worry; once you know
+what you’re looking at, regex can be quite easy to parse and understand.
+
+Let’s say you’re writing a document about colour, and you realise partway
+through that you really ought to have used the word “hue” instead of “colour”. A
+simple find-and-replace in any good word processor will help you out with
+this—but you’ve also been working with colleagues in different countries, some
+of whom spell it as “colour” and others who spell it as “color”.
+
+Our first task would be finding all the instances of the two variants for the
+word “colour”, and regex lets us make the letter “u” optional, like this:
+
+```regex
+/colou?r/
+```
+
+This will look for both “colour” and “color” in our text. Once we’ve found those
+matches, we can easily replace them all with the word “hue”.
+
+It’s also possible to look for entire words. Let’s say some maverick decided to
+add the word “chroma” instead of “colour”, which we also want to replace with
+“hue”. We can use a “pipe” character (`|`) to indicate alternate matching
+criteria:
+
+```regex
+/colou?r|chroma/
+```
+
+This query will match “colour”, “color”, and “chroma”.
+
+Let’s add one more complication. Let’s say we only want to replace instances of
+the word “colour” (or variants thereof) if they’re preceded by the words “red”,
+“blue”, or “green”.
+
+We can use a feature of regex called _capture groups_[^1] to look for and store
+the word before “colour”. Let’s modify our query:
+
+```regex
+/(red|blue|green) (colou?r|chroma)/
+```
+
+Above, we now have two capture groups, indicated by parentheses. The first one
+will match the words “red”, “blue”, or “green”; the second one will match
+“colour”, “color”, and “chroma”; and both groups are separated by a space.
+Matching those patterns is one thing, but now how do we replace the matches with
+“hue” while keeping the colour’s name in tact?
+
+When you use a capture group, you’ll get a reference to that group in
+substitution. The reference is the number of the group in the order they’re
+defined in the regex pattern. So to reference the first capture group with the
+colour’s name, I could write the following _substitution regex_:
+
+```regex
+\1 hue
+```
+
+The backslash before the 1 indicates that I’m referencing a capture group from
+my previous regex pattern[^2]. If the pattern finds the word “red” before
+“colour” (or one of its variants), the substitution regex will replace the
+entire match with “red hue”.[^3]
+
+## Character Quantifiers
+
+Besides searching text, another thing that regex is useful for is validating
+that text meets a certain formatting requirement. A good example for this use
+case would be making sure someone enters a valid telephone or credit card
+number, or a valid post code.
+
+Let’s start simple with this one. A valid credit card number, to my knowledge,
+is 16 digits long. We’re going to ignore the fact that certain types of cards
+start with certain digit sequences[^4], as well as ignoring spaces, so our regex
+is very simple:
+
+```regex
+/\d{16}/
+```
+
+The `\d` above is called a _meta sequence_, which matches digits (numbers 0
+through 9). There are many meta sequences in regex, including `\D`, which
+matches _non-digit_ characters, and `\w`, which matches word characters
+(alphanumeric characters).
+
+The curly braces indicate a _quantifier_. In the case above, it means we want to
+match 16 instances of digits. You could also specify a range of occurrences,
+like so:
+
+```regex
+/\d{12,16}/
+```
+
+This would match a string of numbers between 12 and 16 digits long.
+
+This range quantifier gives us another way to match against characters that may
+or may not be there. In other words, the following regex patterns are
+equivalent:
+
+```regex
+/colou?r/
+/colou{0, 1}r/
+```
+
+We can put together our knowledge of capture groups and quantifiers to match
+something more complicated. Let’s create a regex pattern to match against UK
+telephone numbers.
+
+We’ll make our regex support three common ways of indicating a UK telephone
+number. UK numbers can start one of three ways:
+
+-   With a leading `0`, followed by 10 digits. This is the common format for
+    calling UK numbers within the UK.
+-   With a leading `+44`, the international dialling code for UK numbers,
+    followed by 10 digits.
+-   With a leading `0044`, which is the international dialling code for devices
+    that don’t support dialling with a `+` or other non-numeric characters.
+
+So our regex needs to look for “0”, “+44”, or “0044”, followed by 10 digits:
+
+```regex
+/(0044|0|+44)(\d{10})/
+```
+
+Note that we put the `0044` first in the capture group. This is because regex
+will stop at the first match in a capture group or pattern. If we made `0` first
+in the capture group, then a number like 00441234567890 would first capture the
+first `0`, and then find 13—rather than the expected 10—following digits. For
+this reason, we put the more-specific criteria in a capture group first.
+
+By capturing the 10 digits after the dialling code, we’re able to standardise
+the numbers with the following format:
+
+```regex
++44\2
+```
+
+Where `\2` is referencing the second capture group, which contains the
+significant 10 digit telephone number.
+
+There’s one more thing about quantifiers worth pointing out. It’s possible to
+look for an unlimited number of character occurrences. Here are a couple of ways
+to look for unlimited numbers of characters:
+
+```regex
+/\w+/
+/\w{1,}/
+/\w*/
+/\w{0,}/
+```
+
+The first two patterns above will match _between **one** and unlimited_ word
+characters (alphanumeric characters and underscores); whereas the second two
+patterns will look for _between **zero** and unlimited_ word characters. Notice
+that when using the curly brace quantifier (`{a, b}`), the first number is the
+lower bound, and the second number is the upper bound. In our examples above,
+the upper bound is missing, which tells regex to set an unlimited upper bound.
+
+## Using Regex in The Real World
+
+We’ve learned enough about regex to be dangerous, but all our examples have been
+fairly abstract. You might be wondering, if you’re not a programmer, where can
+you use regex?
+
+Google’s productivity suite has support for regex in the find and replace
+dialogs, although only Google Sheets supports capture groups for replacing text.
+The version of regex used in their productivity suite uses `$` instead of `\` to
+reference capture group values.
+
+<Image
+    alt="The “Find and Replace” dialog in Google Sheets, with the “Search using regular expressions” option turned on"
+    caption="You can use regex in Google Docs and Google Sheets’ “Find and Replace” dialog"
+    height={1180}
+    src="/2019/11/sheets-regex.png"
+    width={1276}
+/>
+
+Next time you’re looking for something in a Google Doc or Sheet, consider
+toggling the regex feature on and using it to formulate more powerful searches.
+
+If you’re building a prototype in JavaScript or Typescript (for instance, using
+[Framer X](https://www.framer.com/)), you can use regex to validate input
+values:
+
+```js
+// Replace “Hello world” with “Goodbye world”, using a capture group
+"Hello world".replace(/Hello (world)/, "Goodbye $1")
+
+// Validate whether an input value matches a pattern
+const emailRegex = /[a-zA-Z0-9_+-.]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-]/
+emailRegex.test(input.value)
+// Returns true or false
+```
+
+You can also just think of regex as a useful tool for thinking about pattern
+matching and validation, especially when working with engineers. Since regex is
+such a powerful tool, it’s available in almost all programming languages.
+Engineers and data analysts often use regex, and adding even some surface-level
+knowledge about how regular expressions are written to your toolkit as a
+designer can strengthen your working relationship with the people who use it.
+
+---
+
+This post might not have made you a regex expert, but hopefully it has
+illuminated some of the uses for regex, and made it a little more
+understandable—and while you might not find applications for it in your
+day-to-day work, you may never think about humble Google searches or
+find-and-replace the same way again.
+
+[^1]:
+    There are also _non-capturing groups_, which have a slightly different
+    syntax: they open with `(?:` instead of just `(`. Capture groups have a
+    simpler syntax, and allow us to reference the matching value later on.
+
+[^2]:
+    Depending on the language or editor you’re using, the reference character
+    might be different. For example, in JavaScript or Go, you’d write `$1` to
+    reference the first capture group, whereas in PHP or Python, you’d write
+    `\1`.
+
+[^3]:
+    You can see this in action on
+    [this regex101 example](https://regex101.com/r/iN2qOR/1). Try playing around
+    with the match criteria and the test string!
+
+[^4]:
+    For example, Visa cards always start with a 4; MasterCard numbers always
+    start with a 5 followed by a number between 1–5; Amex always starts with 34
+    or 37. [This post](https://www.regular-expressions.info/creditcard.html)
+    goes into regex patterns for credit card numbers in some depth, but be
+    advised that the patterns therein are quite complex (though they use only
+    the features of regex we’re covering here!).
