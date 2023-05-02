@@ -20,10 +20,10 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       }
 
       if (href.startsWith("/"))
-        // @ts-expect-error Typed next.js routes
         return <Link {...props} href={href} ref={undefined} />
 
       return <a {...props} href={href} />
     },
+    Link,
   }
 }

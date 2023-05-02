@@ -16,7 +16,6 @@ const config = {
   },
   experimental: {
     appDir: true,
-    typedRoutes: true,
   },
 
   redirects() {
