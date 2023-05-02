@@ -42,7 +42,7 @@
     "@types/react": "^18.2.0",
     "encoding": "^0.1.13",
     "eslint": "8.39.0",
-    "eslint-config-next": "13.3.1",
+    "eslint-config-next": "13.3.4",
     "prettier": "^2.8.8",
     "rss": "^1.2.2"
   }
