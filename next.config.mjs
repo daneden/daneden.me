@@ -11,9 +11,7 @@ const withMDX = nextMdx({
 /** @type {import('next').NextConfig} */
 const config = {
   pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
-  images: {
-    domains: ["media.graphassets.com"],
-  },
+
   experimental: {
     appDir: true,
   },

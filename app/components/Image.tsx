@@ -21,7 +21,6 @@ const Image = ({
 }: ImageProps) => {
   let imgSizes = "(max-width: 800px) 680px, 100vw"
   let Wrapper: typeof Align.Left | typeof Align.Right | typeof React.Fragment
-  const isRemote = typeof src == "string" && src.startsWith("http")
 
   switch (align) {
     case "left":
@@ -43,7 +42,7 @@ const Image = ({
         className={invertInDarkMode ? "invertInDarkMode" : ""}
         height={height}
         sizes={sizes ?? imgSizes}
-        src={isRemote ? src : `/uploads/${src}`}
+        src={src}
         width={width}
       />
     </>
