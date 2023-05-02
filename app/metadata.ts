@@ -2,7 +2,7 @@ import { Metadata } from "next"
 
 const metadata: Metadata = {
   title: {
-    template: `%s | "Daniel Eden, Designer"`,
+    template: `%s | Daniel Eden, Designer`,
     absolute: "Daniel Eden, Designer",
   },
   description:
