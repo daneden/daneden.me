@@ -5,9 +5,9 @@ import Wrapper from "@/app/components/Wrapper"
 import { Analytics } from "@vercel/analytics/react"
 import { Metadata } from "next"
 import { JetBrains_Mono } from "next/font/google"
-import { soehne, tiemposHeadline, tiemposText } from "./fonts"
-import "./styles/global.css"
-import "./styles/syntax.css"
+import { soehne, tiemposHeadline, tiemposText } from "../fonts"
+import "../styles/global.css"
+import "../styles/syntax.css"
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -22,18 +22,6 @@ export const metadata: Metadata = {
   },
   description:
     "The personal site, blog, and portfolio of Daniel Eden, a designer writing and thinking about design systems.",
-  openGraph: {
-    title: "Daniel Eden, Designer",
-    description:
-      "The personal site, blog, and portfolio of Daniel Eden, a designer writing and thinking about design systems.",
-    url: "https://daneden.me",
-    siteName: "Daniel Eden, Designer",
-  },
-  twitter: {
-    card: "summary_large_image",
-    site: "@_dte",
-    creator: "@_dte",
-  },
 }
 
 export default function BranchPageLayout({

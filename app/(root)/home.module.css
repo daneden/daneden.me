@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
 
-  --tile-padding: var(--sp-m);
+  --tile-padding: 1.8vmax;
 }
 
 .intro {

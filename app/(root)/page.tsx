@@ -1,15 +1,24 @@
 /* eslint-disable prefer-const */
-import Breakout from "@/app/components/Breakout"
 import LightswitchImage from "@/app/components/LightSwitchImage"
 import Timeline from "@/app/components/Timeline"
+import { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
 import styles from "./home.module.css"
 import wwcg from "./wwcg.jpg"
 
+export const metadata: Metadata = {
+  title: {
+    template: `%s | "Daniel Eden, Designer"`,
+    absolute: "Daniel Eden, Designer",
+  },
+  description:
+    "The personal site, blog, and portfolio of Daniel Eden, a designer writing and thinking about design systems.",
+}
+
 export default function HomePage() {
   return (
-    <Breakout padding={false}>
+    <>
       <div className={styles.root}>
         <div className={`${styles.intro} ${styles.spanall}`}>
           <p className={styles.xxl}>
@@ -73,6 +82,6 @@ export default function HomePage() {
           <Timeline />
         </div>
       </div>
-    </Breakout>
+    </>
   )
 }

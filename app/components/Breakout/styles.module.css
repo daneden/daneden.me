@@ -6,8 +6,5 @@
 .breakoutContainer {
   width: calc(100vw - var(--scrollbar-width, 0px));
   margin-left: -50vw;
-}
-
-.withPadding {
   padding: var(--sp-s);
 }
