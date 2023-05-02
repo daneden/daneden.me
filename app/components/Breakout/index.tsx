@@ -3,9 +3,10 @@ import { ReactNode } from "react"
 import styles from "./styles.module.css"
 interface Props {
   children: ReactNode
+  padding: boolean
 }
 
-export default function Breakout({ children }: Props) {
+export default function Breakout({ children, padding = true }: Props) {
   return (
     <>
       <Script id="breakout-width-fix">{`
@@ -15,7 +16,13 @@ export default function Breakout({ children }: Props) {
       )
       `}</Script>
       <div className={styles.breakoutContainerHack}>
-        <div className={styles.breakoutContainer}>{children}</div>
+        <div
+          className={`${styles.breakoutContainer} ${
+            padding ? styles.withPadding : null
+          }`}
+        >
+          {children}
+        </div>
       </div>
     </>
   )
