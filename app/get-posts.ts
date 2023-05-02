@@ -4,7 +4,7 @@ export type Post = {
   id: string
   date: string
   title: string
-  excerpt: string
+  description: string
   slug: string
   hidden?: boolean
 }
