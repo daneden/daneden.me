@@ -3,7 +3,7 @@ import { ReactNode } from "react"
 import styles from "./styles.module.css"
 interface Props {
   children: ReactNode
-  padding: boolean
+  padding?: boolean
 }
 
 export default function Breakout({ children, padding = true }: Props) {
