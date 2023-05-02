@@ -21,6 +21,7 @@ export default function Blog() {
           .map((post) => {
             return (
               <li className="post-list-item" key={post.slug}>
+                {/** @ts-expect-error */}
                 <Link className="plainlink" href={`/blog/${post.slug}`}>
                   <span>{post.title}</span>
                   <br />
