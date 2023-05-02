@@ -1,7 +1,5 @@
 # daneden.me
 
-![Check lint results](https://github.com/daneden/daneden.me/workflows/Check%20lint%20results/badge.svg)
-
 Welcome to the innards of [my website](http://daneden.me). It’s built using
 [Next.js](http://nextjs.org/) and deployed on [Vercel](https://vercel.com/home).
 
