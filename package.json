@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@mdx-js/loader": "^2.3.0",
-    "@next/mdx": "^13.3.4",
+    "@next/mdx": "^13.4.0",
     "@ngsctt/remark-smartypants": "^0.2.0",
     "@p5-wrapper/next": "^0.1.2",
     "@p5-wrapper/react": "^4.2.0",
@@ -21,7 +21,7 @@
     "graphql-request": "^6.0.0",
     "hastscript": "^7.2.0",
     "mdx-prism": "^0.3.4",
-    "next": "^13.3.4",
+    "next": "^13.4.0",
     "next-mdx-remote": "^4.4.1",
     "prismjs": "^1.29.0",
     "react": "^18.2.0",

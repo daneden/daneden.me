@@ -12,10 +12,6 @@ const withMDX = nextMdx({
 const config = {
   pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
 
-  experimental: {
-    appDir: true,
-  },
-
   redirects() {
     return [
       {
