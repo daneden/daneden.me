@@ -41,7 +41,7 @@ export default function DeviceFrame({ children, device }: Props) {
         style={{
           aspectRatio: screenAspectRatio,
           marginInline: "6%",
-          "--aspect-ratio": screenAspectRatio,
+          ["--aspect-ratio" as any]: screenAspectRatio,
         }}
       >
         {children}
