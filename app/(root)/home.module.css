@@ -40,7 +40,7 @@ a.tile {
   text-decoration: none;
 }
 
-.tile img:not(.wwcgImage) {
+.tile img {
   max-width: 21rem !important;
   margin: 0 auto;
   display: block;
@@ -59,15 +59,15 @@ a.tile {
 }
 
 .whereWeCanGo {
-  --tile-background: #060405;
-  --tile-foreground: white;
+  --tile-background: orange;
+  --tile-foreground: #060405;
+  --hover-color: slateblue;
 }
 
 .wwcgImage {
   object-fit: contain;
   mix-blend-mode: luminosity;
-  filter: invert(100%);
-  height: 100%;
+
   width: 100%;
 }
 
