@@ -1,0 +1,30 @@
+.root {
+  position: relative;
+  max-height: 80vh;
+  margin: 0 auto;
+  display: grid;
+  place-content: center;
+}
+
+.children {
+  overflow: hidden;
+  --radius-amount: 7.5%;
+  --radius: 7.5% / calc(var(--aspect-ratio) * 10%);
+  border-radius: var(--radius);
+  z-index: 1;
+  position: relative;
+}
+
+.children video {
+  width: 100%;
+}
+
+.children :matches(figure, video) {
+  margin-bottom: 0;
+}
+
+.bezel {
+  position: absolute;
+  pointer-events: none;
+  z-index: 2;
+}
