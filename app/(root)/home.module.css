@@ -40,7 +40,7 @@ a.tile {
   text-decoration: none;
 }
 
-.tile img {
+.tile img:not(.wwcgImage) {
   max-width: 21rem !important;
   margin: 0 auto;
   display: block;
@@ -61,6 +61,14 @@ a.tile {
 .whereWeCanGo {
   --tile-background: #060405;
   --tile-foreground: white;
+}
+
+.wwcgImage {
+  object-fit: contain;
+  mix-blend-mode: luminosity;
+  filter: invert(100%);
+  height: 100%;
+  width: 100%;
 }
 
 .zeitgeist {

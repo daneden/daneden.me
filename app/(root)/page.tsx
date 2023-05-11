@@ -4,7 +4,7 @@ import Timeline from "@/app/components/Timeline"
 import Image from "next/image"
 import Link from "next/link"
 import styles from "./home.module.css"
-import wwcg from "./wwcg.jpg"
+import wwcg from "./wwcg.png"
 
 export default function HomePage() {
   return (
@@ -45,12 +45,12 @@ export default function HomePage() {
             and <Link href="/blog/2019/where-we-can-go">essay</Link> about
             design systems and design tools.
           </p>
-          <div className="align-bottom">
-            <Image
-              src={wwcg}
-              alt="Daniel Eden presenting “Where We Can Go” at Clarity Conference 2019"
-            />
-          </div>
+
+          <Image
+            src={wwcg}
+            alt="Daniel Eden presenting “Where We Can Go” at Clarity Conference 2019"
+            className={styles.wwcgImage}
+          />
         </div>
         <a
           className={`${styles.tile} ${styles.zeitgeist}`}
