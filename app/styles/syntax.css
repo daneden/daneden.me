@@ -16,6 +16,8 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --c-color: #eee;
+    --c-keyword: rgb(205, 74, 205);
+    --c-fns: rgb(226, 77, 40);
   }
 }
 
