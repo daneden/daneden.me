@@ -15,8 +15,8 @@ export default function SolsticeTitle() {
           <path
             d="M 0 100 Q 50 200 100 100 Q 150 0 200 100 Q 250 200 300 100 "
             stroke="currentcolor"
-            stroke-linecap="round"
-            stroke-width="4"
+            strokeLinecap="round"
+            strokeWidth="4"
             fill="none"
             opacity="0.2"
           />
