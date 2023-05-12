@@ -15,8 +15,6 @@ that went into making Solstice a powerful tool that’s simple to use.
 <DeviceFrame model={DeviceModel.iPhone14Pro}>
     <Video
         autoPlay={true}
-        controls={false}
-        loop={true}
         playsInline={true}
         poster="https://image.mux.com/wmuKWbZLNY2rHqcJWOaA7Ke2mfspU00021pYZPor6MTTE/thumbnail.webp?time=0"
         id={"wmuKWbZLNY2rHqcJWOaA7Ke2mfspU00021pYZPor6MTTE"}
@@ -37,6 +35,18 @@ easy to use, but imprecise: on smaller iPhone screens, individual days might end
 up less than 1px apart on the slider, making it impossible to choose a specific
 date. When I rebuilt Solstice, I knew from the start I wanted to allow choosing
 a specific date.
+
+<Image
+    src="/uploads/portfolio/solstice-tt.png"
+    width={1827}
+    height={859}
+    caption={
+        <>
+            The rebuilt Solstice app lets people choose specific dates, as well
+            as quickly scrub to dates in the past or future using the slider
+        </>
+    }
+/>
 
 This meant the “Time Machine” for controlling time travel needs three
 properties:
@@ -68,11 +78,11 @@ class TimeMachine: ObservableObject {
 }
 ```
 
-The `referenceDate` is updated every minute and/or when the app (re)enters the
-foreground. The whole class is also run on the main thread thanks to the
-`@MainActor` decorator; this ensures the UI remains responsive when the Time
-Machine changes, which is important since almost everything on the screen is
-dependent on the Time Machine's dates!
+The `referenceDate` is updated every minute in the app's main view using a
+timer[^1] and/or when the app (re)enters the foreground. The whole class is also
+run on the main thread thanks to the `@MainActor` decorator; this ensures the UI
+remains responsive when the Time Machine changes, which is important since
+almost everything on the screen is dependent on the Time Machine's dates!
 
 There's one problem though; the hour, minute, and second components of the
 reference and target dates can drift. If you open the app at 9am and set the
@@ -90,6 +100,119 @@ extension TimeMachine {
                             minute: time.minute ?? 0,
                             second: time.second ?? 0,
                             of: targetDate) ?? targetDate
-	}
+    }
 }
 ```
+
+This code still leaves one quirk: when the `referenceDate` ticks over to the
+next day, the `targetDate` has its time components set to the beginning of the
+same day, but this “groundhog day” effect feels like it's actually expected
+behaviour.
+
+## Time Zones
+
+In addition to comparing daylight at different times of the year, Solstice lets
+you compare it in different locations around the world. It's impossible to build
+an app that deals with time and location without running into the
+[complexities of time zones](https://xkcd.com/1883/).
+
+In Solstice, almost every reference to a Date value is passed through this
+function:
+
+```swift
+extension Date {
+    func withTimeZoneAdjustment(for timeZone: TimeZone?) -> Date {
+        guard let timeZone else { return self }
+        let tzOffset = timeZone.secondsFromGMT(for: self) - TimeZone.autoupdatingCurrent.secondsFromGMT(for: self)
+        return self.addingTimeInterval(TimeInterval(tzOffset))
+    }
+}
+```
+
+The function takes a time zone and returns the date adjusted for this time zone.
+This helps prevent weirdness like a 2pm sunrise when you're looking at a
+location 8 hours behind your own.
+
+<Image
+    src="/uploads/portfolio/solstice-tz.png"
+    width={1827}
+    height={914}
+    caption={
+        <>
+            The time zone indicator in Solstice started as a helpful debugging
+            tool and turned into one of my favourite little details
+        </>
+    }
+/>
+
+To help make sure my dates were working as expected, I added a time zone
+indicator at the top of views for locations outside of my current time zone.
+This debugging tool went on to become one of my favourite little details in the
+app.
+
+## Polar Days
+
+<Image
+    src="/uploads/portfolio/solstice-pd.png"
+    width={3272}
+    height={2998}
+    caption={
+        <>
+            In locations close to the north or south pole, there might not be a
+            sunrise or sunset. Distinguishing between 0 seconds and 24 hours of
+            daylight is surprisingly hard.
+        </>
+    }
+/>
+
+In locations close to the north or south pole, there are periods of the year
+during which the sun never rises or sets. In
+[Solar](https://github.com/ceeK/Solar), the library used in Solstice to
+calculate sunrise/sunset times, the time of the sunrise or sunset can sometimes
+be `nil`. In the original version of Solstice, I often force-unwrapped these
+values or fell back on an arbitrary date, leading to crashes or unexpected
+behaviour in the app. When I rebuilt the app, I implemented a “safe”
+sunrise/sunset value:
+
+```swift
+extension Solar {
+    var fallbackSunrise: Date? {
+        sunrise ?? civilSunrise ?? nauticalSunrise ?? astronomicalSunrise
+    }
+
+    var fallbackSunset: Date? {
+        sunset ?? civilSunset ?? nauticalSunset ?? astronomicalSunset
+    }
+
+    var safeSunrise: Date { sunrise ?? startOfDay }
+
+    var safeSunset: Date {
+        if let sunset { return sunset }
+
+        guard let fallbackSunset, let fallbackSunrise else {
+            return endOfDay
+        }
+
+        // If the sunrise is over 7 hours from sunrise, it's safe to assume this is a 24 hour day of daylight
+        if fallbackSunrise.distance(to: fallbackSunset) > (60 * 60 * 7) {
+            return endOfDay
+        } else {
+            // Otherwise, it's safe to assume this is a day of no daylight
+            return startOfDay.addingTimeInterval(0.1)
+        }
+    }
+}
+```
+
+`fallbackSunrise` and `fallbackSunset` return the “edges” of a day’s daylight;
+the moments when the sun begins or ends its journey above the horizon. Each of
+the common, civil, nautical, and astronomical sunrise/sunsets represent
+different degrees above or below the horizon and generally are calculable
+values, but during polar days—days with either 24 hours or 0 seconds of
+daylight—these times may not be calculable. To overcome this, the `safeSunrise`
+and `safeSunset` values find the best approximate fallback values, based on the
+distance between sunrise and sunset.
+
+[^1]:
+    I had explored using SwiftUI’s `TimelineView` for this update but found it
+    degraded the app's performance.
