@@ -7,6 +7,7 @@ interface Props {
   preload: boolean
   playsInline: boolean
   poster?: string
+  muted: boolean
 }
 
 const Video = ({
@@ -18,6 +19,7 @@ const Video = ({
   preload = true,
   playsInline = false,
   poster,
+  muted = false,
 }: Props) => {
   return (
     <figure>
@@ -28,6 +30,7 @@ const Video = ({
         preload={preload ? "auto" : "none"}
         playsInline={playsInline}
         poster={poster}
+        muted={muted}
       >
         <source
           src={`https://stream.mux.com/${id}.m3u8`}

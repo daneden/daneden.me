@@ -40,7 +40,12 @@ export default function PortfolioPage() {
           along with information about the next and previous solstice.
         </p>
         <p>
-          <Link href="https://solstice.daneden.me">Visit the microsite</Link> to
+          You can{" "}
+          <Link href="/portfolio/solstice">
+            read about how Solstice was made
+          </Link>
+          , or{" "}
+          <Link href="https://solstice.daneden.me">visit the microsite</Link> to
           learn more and download for free.
         </p>
       </section>

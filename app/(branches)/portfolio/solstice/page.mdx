@@ -5,10 +5,11 @@ import "./styles.css"
 
 <SolsticeTitle />
 
-Solstice is a project that started with a simple idea: what if I could see how
-much more or less daylight there is today compared to yesterday? But simple
-ideas can be complex to build. I wanted to share this deep dive into the work
-that went into making Solstice a powerful tool that’s simple to use.
+[Solstice](https://solstice.daneden.me) is a project that started with a simple
+idea: what if I could see how much more or less daylight there is today compared
+to yesterday? But simple ideas can be complex to build. I wanted to share this
+deep dive into the work that went into making Solstice a powerful tool that’s
+still simple to use.
 
 ## Overview
 
@@ -18,6 +19,8 @@ that went into making Solstice a powerful tool that’s simple to use.
         playsInline={true}
         poster="https://image.mux.com/wmuKWbZLNY2rHqcJWOaA7Ke2mfspU00021pYZPor6MTTE/thumbnail.webp?time=0"
         id={"wmuKWbZLNY2rHqcJWOaA7Ke2mfspU00021pYZPor6MTTE"}
+        muted={true}
+        loop={true}
     />
 </DeviceFrame>
 
@@ -25,6 +28,18 @@ Solstice is built in SwiftUI and works on iPhone, iPad, macOS, and Apple Watch.
 It’s privacy-sensitive by default, asking only for the permissions it needs
 (approximate location) and works without access to your location unless you
 explicitly grant permissions.
+
+<Image
+    src="/uploads/portfolio/solstice-devices.png"
+    width={2120}
+    height={2303}
+    caption={
+        <>
+            Solstice works across iPhone, iPad, macOS, and Apple Watch, and
+            features widgets, daily notifications, and Shortcuts support.
+        </>
+    }
+/>
 
 ## Time Travel
 
@@ -81,13 +96,13 @@ class TimeMachine: ObservableObject {
 The `referenceDate` is updated every minute in the app's main view using a
 timer[^1] and/or when the app (re)enters the foreground. The whole class is also
 run on the main thread thanks to the `@MainActor` decorator; this ensures the UI
-remains responsive when the Time Machine changes, which is important since
-almost everything on the screen is dependent on the Time Machine's dates!
+remains responsive when the Time Machine changes, which is important: almost
+everything on the screen is dependent on the Time Machine's dates.
 
 There's one problem though; the hour, minute, and second components of the
 reference and target dates can drift. If you open the app at 9am and set the
 target date to some future date, when you reopen the app at 9pm, the app will
-still show you data matching 9am on the _target date_. To prevent this, we need
+still show you data matching _9am on the target date_. To prevent this, we need
 one last computed property to synchronise the time components of the reference
 and target dates:
 
@@ -95,8 +110,8 @@ and target dates:
 extension TimeMachine {
     var date: Date {
         guard isOn else { return referenceDate }
-        let time = calendar.dateComponents([.hour, .minute, .second], from: referenceDate)
-        return calendar.date(bySettingHour: time.hour ?? 0,
+        let time = Calendar.current.dateComponents([.hour, .minute, .second], from: referenceDate)
+        return Calendar.current.date(bySettingHour: time.hour ?? 0,
                             minute: time.minute ?? 0,
                             second: time.second ?? 0,
                             of: targetDate) ?? targetDate
