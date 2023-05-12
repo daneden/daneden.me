@@ -1,0 +1,76 @@
+.root {
+  text-align: center;
+  position: relative;
+}
+
+.title {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: clamp(5rem, 8vw, 6rem);
+  padding-bottom: 0.85em;
+}
+
+@media (max-width: 500px) {
+  .solarChart {
+    display: none;
+  }
+}
+
+.solarChart {
+  mask-image: linear-gradient(
+    to left,
+    transparent,
+    black 15%,
+    black 85%,
+    transparent
+  );
+  pointer-events: none;
+}
+
+.solarChart,
+.horizonLower,
+.horizonUpper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.sineWave {
+  mask-image: linear-gradient(
+    to left,
+    transparent,
+    transparent 5%,
+    black 15%,
+    black 85%,
+    transparent 95%,
+    transparent
+  );
+
+  display: block;
+  margin: 0 auto;
+}
+
+.horizonLine {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  -webkit-backdrop-filter: blur(60px);
+  background-color: var(--text-color);
+  opacity: 0.2;
+  z-index: 1;
+}
+
+.horizonLower {
+  -webkit-backdrop-filter: blur(20px);
+  clip-path: inset(50% 0 0 0);
+  mask-image: radial-gradient(black, transparent),
+    linear-gradient(to left, transparent, black 5%, black 95%, transparent);
+}
+
+.horizonUpper {
+  clip-path: inset(0 0 50% 0);
+}

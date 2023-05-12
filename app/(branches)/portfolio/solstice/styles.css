@@ -1,0 +1,11 @@
+:root {
+  --wash-color: #f2fcfe;
+  --text-color: #001d3d;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-color: #f2fcfe;
+    --wash-color: #001d3d;
+  }
+}

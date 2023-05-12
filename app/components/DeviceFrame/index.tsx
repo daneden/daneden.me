@@ -21,6 +21,13 @@ function getScreenSize(device = DeviceModel.iPhone14Pro) {
   }
 }
 
+function getBezelMargin(device: DeviceModel = DeviceModel.iPhone14Pro) {
+  switch (device) {
+    case DeviceModel.iPhone14Pro:
+      return 5.925
+  }
+}
+
 interface Props {
   device: DeviceModel
   children: ReactNode
@@ -40,7 +47,7 @@ export default function DeviceFrame({ children, device }: Props) {
         className={styles.children}
         style={{
           aspectRatio: screenAspectRatio,
-          marginInline: "6%",
+          marginInline: `${getBezelMargin(device)}%`,
           ["--aspect-ratio" as any]: screenAspectRatio,
         }}
       >

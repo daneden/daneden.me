@@ -5,6 +5,8 @@ interface Props {
   id: string
   loop: boolean
   preload: boolean
+  playsInline: boolean
+  poster?: string
 }
 
 const Video = ({
@@ -14,6 +16,8 @@ const Video = ({
   id,
   loop = false,
   preload = true,
+  playsInline = false,
+  poster,
 }: Props) => {
   return (
     <figure>
@@ -22,6 +26,8 @@ const Video = ({
         controls={controls}
         loop={loop}
         preload={preload ? "auto" : "none"}
+        playsInline={playsInline}
+        poster={poster}
       >
         <source
           src={`https://stream.mux.com/${id}.m3u8`}

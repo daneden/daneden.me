@@ -1,8 +1,14 @@
+import SolsticeTitle from "./SolsticeTitle"
 import DeviceFrame, { DeviceModel } from "@/app/components/DeviceFrame"
 import Video from "@/app/components/Video"
+import "./styles.css"
 
-# Solstice
+<SolsticeTitle />
 
 <DeviceFrame model={DeviceModel.iPhone14Pro}>
-    <Video id={"wmuKWbZLNY2rHqcJWOaA7Ke2mfspU00021pYZPor6MTTE"} />
+    <Video
+        playsInline={true}
+        poster="https://image.mux.com/wmuKWbZLNY2rHqcJWOaA7Ke2mfspU00021pYZPor6MTTE/thumbnail.webp?time=0"
+        id={"wmuKWbZLNY2rHqcJWOaA7Ke2mfspU00021pYZPor6MTTE"}
+    />
 </DeviceFrame>
