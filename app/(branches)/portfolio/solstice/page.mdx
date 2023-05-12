@@ -5,6 +5,13 @@ import "./styles.css"
 
 <SolsticeTitle />
 
+Solstice is a project that started with a simple idea: what if I could see how
+much more or less daylight there is today compared to yesterday? But simple
+ideas can be complex to build. I wanted to share this deep dive into the work
+that went into making Solstice a powerful tool that’s simple to use.
+
+## Overview
+
 <DeviceFrame model={DeviceModel.iPhone14Pro}>
     <Video
         autoPlay={true}
@@ -15,3 +22,74 @@ import "./styles.css"
         id={"wmuKWbZLNY2rHqcJWOaA7Ke2mfspU00021pYZPor6MTTE"}
     />
 </DeviceFrame>
+
+Solstice is built in SwiftUI and works on iPhone, iPad, macOS, and Apple Watch.
+It’s privacy-sensitive by default, asking only for the permissions it needs
+(approximate location) and works without access to your location unless you
+explicitly grant permissions.
+
+## Time Travel
+
+One of Solstice's core features is Time Travel; the ability to compare today's
+daylight to any other date. In the first version of Solstice, a slider was used
+to allow quick time travel to dates in the past or future. This affordance is
+easy to use, but imprecise: on smaller iPhone screens, individual days might end
+up less than 1px apart on the slider, making it impossible to choose a specific
+date. When I rebuilt Solstice, I knew from the start I wanted to allow choosing
+a specific date.
+
+This meant the “Time Machine” for controlling time travel needs three
+properties:
+
+1. A reference date (the date we want to travel _from_)
+2. A target date (the date we want to travel _to_)
+3. An offset representing the number of days between the reference and target
+   dates
+
+To keep the offset in sync with the reference and target dates, it needs to be
+its own computed value. Putting all this together, a simplified version of
+Solstice's Time Machine looks like this:
+
+```swift
+@MainActor
+class TimeMachine: ObservableObject {
+    // The `isOn` property just indicates whether the Time Machine is active or not
+    @Published var isOn = false
+    @Published var referenceDate = Date()
+    @Published var targetDate = Date()
+
+    var offset: Binding<Double> {
+        Binding<Double>(get: {
+            Double(Calendar.current.dateComponents([.day], from: self.referenceDate, to: self.targetDate).day ?? 0)
+        }, set: { newValue in
+            self.targetDate = Calendar.current.date(byAdding: .day, value: Int(newValue), to: self.referenceDate) ?? self.referenceDate
+        })
+    }
+}
+```
+
+The `referenceDate` is updated every minute and/or when the app (re)enters the
+foreground. The whole class is also run on the main thread thanks to the
+`@MainActor` decorator; this ensures the UI remains responsive when the Time
+Machine changes, which is important since almost everything on the screen is
+dependent on the Time Machine's dates!
+
+There's one problem though; the hour, minute, and second components of the
+reference and target dates can drift. If you open the app at 9am and set the
+target date to some future date, when you reopen the app at 9pm, the app will
+still show you data matching 9am on the _target date_. To prevent this, we need
+one last computed property to synchronise the time components of the reference
+and target dates:
+
+```swift
+extension TimeMachine {
+    var date: Date {
+        guard isOn else { return referenceDate }
+        let time = calendar.dateComponents([.hour, .minute, .second], from: referenceDate)
+        return calendar.date(bySettingHour: time.hour ?? 0,
+                            minute: time.minute ?? 0,
+                            second: time.second ?? 0,
+                            of: targetDate) ?? targetDate
+	}
+}
+```

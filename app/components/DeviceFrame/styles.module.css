@@ -1,7 +1,7 @@
 .root {
   position: relative;
   max-height: 80vh;
-  margin: 0 auto;
+  margin: 0 auto var(--sp-m);
   display: grid;
   place-content: center;
 }
