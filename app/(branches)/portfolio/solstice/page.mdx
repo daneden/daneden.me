@@ -120,6 +120,10 @@ extension TimeMachine {
 }
 ```
 
+This `date` property is the source of truth for Solstice's dates, returning the
+reference date when time travel is inactive, and tge target date—with the
+reference date's time components—when it's active.
+
 This code still leaves one quirk: when the `referenceDate` ticks over to the
 next day, the `targetDate` has its time components set to the beginning of the
 same day, but this “groundhog day” effect feels like it's actually expected
