@@ -72,8 +72,9 @@ properties:
    dates
 
 To keep the offset in sync with the reference and target dates, it needs to be
-its own computed value. Putting all this together, a simplified version of
-Solstice's Time Machine looks like this:
+its own computed value, and since we want to control it via a slider, it needs
+to be a `Binding` over a `Double`. Putting all this together, a simplified
+version of Solstice's Time Machine looks like this:
 
 ```swift
 @MainActor
