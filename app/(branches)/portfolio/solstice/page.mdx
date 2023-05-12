@@ -129,10 +129,12 @@ behaviour.
 In addition to comparing daylight at different times of the year, Solstice lets
 you compare it in different locations around the world. It's impossible to build
 an app that deals with time and location without running into the
-[complexities of time zones](https://xkcd.com/1883/).
+[complexities of time zones](https://xkcd.com/1883/), and Solstice is no exception.
 
-In Solstice, almost every reference to a Date value is passed through this
-function:
+Furthermore, Solstice had the unique challenge of accurately representing dates and
+times in a way that also let people jump to arbitrary dates in the past or future.
+
+As a result, almost every reference to a Date value is passed through this function:
 
 ```swift
 extension Date {
