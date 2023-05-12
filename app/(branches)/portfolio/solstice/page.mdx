@@ -95,7 +95,7 @@ class TimeMachine: ObservableObject {
 
 The `referenceDate` is updated every minute in the app's main view using a
 timer[^1] and/or when the app (re)enters the foreground. The whole class is also
-run on the main thread thanks to the `@MainActor` decorator; this ensures the UI
+run on the main thread thanks to the `@MainActor` attribute; this ensures the UI
 remains responsive when the Time Machine changes, which is important: almost
 everything on the screen is dependent on the Time Machine's dates.
 
