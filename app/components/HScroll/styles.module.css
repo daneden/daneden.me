@@ -2,6 +2,7 @@
   display: flex;
   gap: var(--sp-m);
   padding: var(--sp-m);
+  margin-inline: calc(var(--sp-m) * -1);
   flex-wrap: nowrap;
   max-width: 100%;
   overflow-x: scroll;
