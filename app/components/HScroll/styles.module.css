@@ -6,3 +6,7 @@
   max-width: 100%;
   overflow-x: scroll;
 }
+
+.root > * {
+  flex-shrink: 0;
+}
