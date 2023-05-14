@@ -24,7 +24,7 @@ function getScreenSize(device = DeviceModel.iPhone14Pro) {
 function getBezelMargin(device: DeviceModel = DeviceModel.iPhone14Pro) {
   switch (device) {
     case DeviceModel.iPhone14Pro:
-      return 5.974
+      return 5.925
   }
 }
 
