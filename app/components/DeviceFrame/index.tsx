@@ -39,15 +39,17 @@ export default function DeviceFrame({ children, device }: Props) {
   const screenSize = getScreenSize(device)
 
   return (
-    <div className={styles.root} style={{ aspectRatio }}>
-      <Image src={frame} alt="" className={styles.bezel} />
-      <div
-        className={styles.children}
-        style={{
-          padding: `${getBezelMargin(device)}%`,
-        }}
-      >
-        {children}
+    <div className={styles.container}>
+      <div className={styles.root} style={{ aspectRatio }}>
+        <Image src={frame} alt="" className={styles.bezel} />
+        <div
+          className={styles.children}
+          style={{
+            padding: `${getBezelMargin(device)}%`,
+          }}
+        >
+          {children}
+        </div>
       </div>
     </div>
   )

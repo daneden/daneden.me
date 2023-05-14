@@ -5,8 +5,19 @@
   flex-wrap: nowrap;
   max-width: 100%;
   overflow-x: scroll;
+  justify-content: center;
+  margin: 0 auto;
 }
 
 .root > * {
   flex-shrink: 0;
+  flex-grow: 0;
+}
+
+.root > :first-child {
+  margin-inline-start: var(--sp-m);
+}
+
+.root > :last-child {
+  margin-inline-end: var(--sp-m);
 }

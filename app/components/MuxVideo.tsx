@@ -25,7 +25,7 @@ export default function MuxVideo({
   const posterSrc =
     poster == undefined
       ? undefined
-      : `https://stream.mux.com/${id}thumbnail.webp?time=${poster}`
+      : `https://image.mux.com/${id}/thumbnail.webp?time=${poster}`
   return (
     <figure>
       <video
