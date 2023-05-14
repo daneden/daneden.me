@@ -1,6 +1,8 @@
 import SolsticeTitle from "./SolsticeTitle"
 import DeviceFrame, { DeviceModel } from "@/app/components/DeviceFrame"
-import Video from "@/app/components/Video"
+import MuxVideo from "@/app/components/MuxVideo"
+import Breakout from "@/app/components/Breakout"
+import HScroll from "@/app/components/HScroll"
 import "./styles.css"
 
 <SolsticeTitle />
@@ -14,13 +16,14 @@ still simple to use.
 ## Overview
 
 <DeviceFrame model={DeviceModel.iPhone14Pro}>
-    <Video
+    <MuxVideo
         autoPlay={true}
         playsInline={true}
-        poster="https://image.mux.com/wmuKWbZLNY2rHqcJWOaA7Ke2mfspU00021pYZPor6MTTE/thumbnail.webp?time=0"
+        poster={0}
         id={"wmuKWbZLNY2rHqcJWOaA7Ke2mfspU00021pYZPor6MTTE"}
         muted={true}
         loop={true}
+        controls={false}
     />
 </DeviceFrame>
 
@@ -134,12 +137,15 @@ behaviour.
 In addition to comparing daylight at different times of the year, Solstice lets
 you compare it in different locations around the world. It's impossible to build
 an app that deals with time and location without running into the
-[complexities of time zones](https://xkcd.com/1883/), and Solstice is no exception.
+[complexities of time zones](https://xkcd.com/1883/), and Solstice is no
+exception.
 
-Furthermore, Solstice had the unique challenge of accurately representing dates and
-times in a way that also let people jump to arbitrary dates in the past or future.
+Furthermore, Solstice had the unique challenge of accurately representing dates
+and times in a way that also let people jump to arbitrary dates in the past or
+future.
 
-As a result, almost every reference to a Date value is passed through this function:
+As a result, almost every reference to a Date value is passed through this
+function:
 
 ```swift
 extension Date {
@@ -234,6 +240,46 @@ values, but during polar days—days with either 24 hours or 0 seconds of
 daylight—these times may not be calculable. To overcome this, the `safeSunrise`
 and `safeSunset` values find the best approximate fallback values, based on the
 distance between sunrise and sunset.
+
+<Breakout>
+    <HScroll>
+        <DeviceFrame device={DeviceModel.iPhone14Pro}>
+            <MuxVideo
+                autoPlay={true}
+                playsInline={true}
+                poster={0}
+                id={"SYt6iHdsdok9QEetaGbw8rhQ7P9Eor9HmKNLui25uf4"}
+                muted={true}
+                loop={true}
+                controls={false}
+            />
+        </DeviceFrame>
+        <DeviceFrame device={DeviceModel.iPhone14Pro}>
+            <MuxVideo
+                autoPlay={true}
+                playsInline={true}
+                poster={0}
+                id={"j02L01v7Jroby2e1N01wV86B3GOuye01k5SYG5zlMujU701c"}
+                muted={true}
+                loop={true}
+                controls={false}
+            />
+        </DeviceFrame>
+        <DeviceFrame device={DeviceModel.iPhone14Pro}>
+            <MuxVideo
+                autoPlay={true}
+                playsInline={true}
+                poster={0}
+                id={"vM2nFqaK7p01E1G00vI268apY700VMLjX902to4loAKKHZU"}
+                muted={true}
+                loop={true}
+                controls={false}
+            />
+        </DeviceFrame>
+
+    </HScroll>
+
+</Breakout>
 
 [^1]:
     I had explored using SwiftUI’s `TimelineView` for this update but found it

@@ -4,6 +4,7 @@
   margin: 0 auto var(--sp-m);
   display: grid;
   place-content: center;
+  align-items: stretch;
 }
 
 .children {
@@ -27,4 +28,8 @@
   position: absolute;
   pointer-events: none;
   z-index: 2;
+  max-height: 100%;
+  width: auto;
+  inset: 0;
+  margin: auto;
 }

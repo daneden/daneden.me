@@ -1,0 +1,8 @@
+.root {
+  display: flex;
+  gap: var(--sp-m);
+  padding: var(--sp-m);
+  flex-wrap: nowrap;
+  max-width: 100%;
+  overflow-x: scroll;
+}
