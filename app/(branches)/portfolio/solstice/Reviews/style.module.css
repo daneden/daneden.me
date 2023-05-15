@@ -1,0 +1,49 @@
+.root {
+  max-height: 36rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.root:has(:checked) {
+  max-height: none;
+}
+
+.readMore {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--sp-xxl) var(--sp-m) var(--sp-m);
+  text-align: center;
+  background-image: linear-gradient(transparent, var(--wash-color) 50%);
+}
+
+.readMore label {
+  color: var(--hover-color);
+  cursor: pointer;
+}
+
+.readMore input {
+  display: none;
+}
+
+.root:has(:checked) .readMore {
+  position: relative;
+  padding-block-start: 0;
+}
+
+.readMoreLabel {
+  display: inline-block;
+}
+
+.readLessLabel {
+  display: none;
+}
+
+.root:has(:checked) .readMoreLabel {
+  display: none;
+}
+
+.root:has(:checked) .readLessLabel {
+  display: inline-block;
+}
