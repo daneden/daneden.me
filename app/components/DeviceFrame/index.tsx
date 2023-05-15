@@ -14,13 +14,6 @@ function getBezel(device: DeviceModel = DeviceModel.iPhone14Pro) {
   }
 }
 
-function getScreenSize(device = DeviceModel.iPhone14Pro) {
-  switch (device) {
-    case DeviceModel.iPhone14Pro:
-      return { width: 443, height: 960 }
-  }
-}
-
 function getBezelMargin(device: DeviceModel = DeviceModel.iPhone14Pro) {
   switch (device) {
     case DeviceModel.iPhone14Pro:
@@ -36,7 +29,6 @@ interface Props {
 export default function DeviceFrame({ children, device }: Props) {
   const frame = getBezel(device)
   const aspectRatio = frame.width / frame.height
-  const screenSize = getScreenSize(device)
 
   return (
     <div className={styles.container}>

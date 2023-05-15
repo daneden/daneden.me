@@ -9,14 +9,14 @@
 
 .children {
   overflow: hidden;
-  --radius: 7.5% / calc(var(--aspect-ratio) * 10%);
-  border-radius: var(--radius);
+  border-radius: 20%;
   z-index: 1;
   position: relative;
 }
 
 .children video {
   width: 100%;
+  object-fit: fill;
 }
 
 .children :matches(figure, video) {

@@ -1,0 +1,15 @@
+.root {
+  border-radius: var(--sp-s);
+  padding: var(--sp-m);
+  background-color: var(--code-wash);
+  font-family: var(--font-sans);
+  margin-block-end: var(--sp-m);
+}
+
+.rating {
+  color: orange;
+}
+
+.root :last-child {
+  margin-block-end: 0;
+}
