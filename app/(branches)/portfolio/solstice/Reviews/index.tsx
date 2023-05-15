@@ -18,8 +18,9 @@ export default async function Reviews() {
   const reviewsData = await fetch(
     "https://connect.daneden.me/1547580907/reviews"
   )
-  const { data: reviews } = await reviewsData.json()
-  console.log(reviews)
+  const json = await reviewsData.json()
+  const { data: reviews } = json
+  console.log(json)
   const sortedReviews = (reviews as AppStoreConnectReview[]).sort(
     (lhs, rhs) => {
       return (
