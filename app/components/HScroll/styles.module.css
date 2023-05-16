@@ -6,10 +6,12 @@
   align-items: center;
   margin: 0 auto;
   width: fit-content;
+  scroll-snap-type: x mandatory;
 }
 
 .root > * {
   flex: 0 0 auto;
+  scroll-snap-align: center;
 }
 
 .root > :first-child {
