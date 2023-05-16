@@ -1,0 +1,21 @@
+.root {
+  display: flex;
+  gap: var(--sp-m);
+  padding: var(--sp-m);
+  overflow-x: scroll;
+  align-items: center;
+  margin: 0 auto;
+  width: fit-content;
+}
+
+.root > * {
+  flex: 0 0 auto;
+}
+
+.root > :first-child {
+  margin-inline-start: var(--sp-m);
+}
+
+.root > :last-child {
+  margin-inline-end: var(--sp-m);
+}

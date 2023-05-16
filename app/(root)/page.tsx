@@ -21,9 +21,9 @@ export default function HomePage() {
             the people&nbsp;that maintain&nbsp;them.
           </p>
         </div>
-        <a
+        <Link
           className={`${styles.tile} ${styles.solstice}`}
-          href="https://solstice.daneden.me"
+          href="/portfolio/solstice"
         >
           <h2 className={styles.xxl}>Solstice</h2>
           <p>An iOS app about daylight</p>
@@ -34,7 +34,7 @@ export default function HomePage() {
             srcLight="/uploads/portfolio/solstice-light.png"
             width={1339}
           />
-        </a>
+        </Link>
         <div className={`${styles.tile} ${styles.whereWeCanGo}`}>
           <h2 className={styles.xxl}>Where We Can Go</h2>
           <p>

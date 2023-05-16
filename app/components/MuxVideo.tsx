@@ -5,16 +5,27 @@ interface Props {
   id: string
   loop: boolean
   preload: boolean
+  playsInline: boolean
+  // The timestamp to render for the poster image. No poster image is shown when this value is undefined.
+  poster?: number
+  muted: boolean
 }
 
-const Video = ({
+export default function MuxVideo({
   autoPlay = false,
   caption,
   controls = true,
   id,
   loop = false,
   preload = true,
-}: Props) => {
+  playsInline = false,
+  poster,
+  muted = false,
+}: Props) {
+  const posterSrc =
+    poster == undefined
+      ? undefined
+      : `https://image.mux.com/${id}/thumbnail.webp?time=${poster}`
   return (
     <figure>
       <video
@@ -22,6 +33,9 @@ const Video = ({
         controls={controls}
         loop={loop}
         preload={preload ? "auto" : "none"}
+        playsInline={playsInline}
+        poster={posterSrc}
+        muted={muted}
       >
         <source
           src={`https://stream.mux.com/${id}.m3u8`}
@@ -33,5 +47,3 @@ const Video = ({
     </figure>
   )
 }
-
-export default Video

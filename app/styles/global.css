@@ -49,7 +49,6 @@
     minmax(0, 1fr);
   --center-column: 2 / 3;
 
-  --font-mono: "JetBrains Mono", monospace;
   --font-body: var(--font-serif);
   --font-caption: var(--font-sans);
 

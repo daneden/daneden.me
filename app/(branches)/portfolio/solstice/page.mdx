@@ -1,0 +1,348 @@
+import SolsticeTitle from "./SolsticeTitle"
+import DeviceFrame, { DeviceModel } from "@/app/components/DeviceFrame"
+import MuxVideo from "@/app/components/MuxVideo"
+import Breakout from "@/app/components/Breakout"
+import HScroll from "@/app/components/HScroll"
+import "./styles.css"
+import Reviews from "./Reviews"
+
+export const metadata = {
+    title: "Deep Dive: Solstice",
+    description:
+        "A deep dive into how the Solstice app for iOS, watchOS, and macOS was designed and built",
+    openGraph: {
+        title: "Deep Dive: Solstice",
+        description:
+            "A deep dive into how the Solstice app for iOS, watchOS, and macOS was designed and built",
+    },
+}
+
+<div className="solsticeDeepDive">
+<SolsticeTitle />
+
+<Image
+    alt="Two iPhones showing Solstice version 1 and version 2 side-by-side. Version 1 features a monochrome black-and-white design with limited use of color to denote interactive controls. Version 2 has a lot more color by comparison, showing a graphical chart that emulates the sky's appearance, and colorful bar charts indicating the daylight length changing over the year."
+    src="/uploads/portfolio/solstice-v1-v2.png"
+    width={3272}
+    height={2998}
+    caption={
+        <>
+            Solstice 1.0 and 2.0. Version 2 added support for multiple
+            locations, and more advanced data visualisations. Keeping the simple
+            design while adding more advanced features was an important part of
+            evolving the app.
+        </>
+    }
+/>
+
+[Solstice](https://solstice.daneden.me) is a project that started with a simple
+idea: what if I could see how much more or less daylight there is today compared
+to yesterday? But simple ideas can be complex to build. I wanted to share this
+deep dive into the work that went into making Solstice a powerful tool that’s
+still simple to use.
+
+## Overview
+
+<DeviceFrame model={DeviceModel.iPhone14Pro}>
+    <MuxVideo
+        autoPlay={true}
+        playsInline={true}
+        poster={0}
+        id={"wmuKWbZLNY2rHqcJWOaA7Ke2mfspU00021pYZPor6MTTE"}
+        muted={true}
+        loop={true}
+        controls={false}
+    />
+</DeviceFrame>
+
+Solstice is built in SwiftUI and works on iPhone, iPad, macOS, and Apple Watch.
+It’s privacy-sensitive by default, asking only for the permissions it needs
+(approximate location) and works without access to your location unless you
+explicitly grant permissions.
+
+<Image
+    alt="An iPhone and Apple Watch running the Solstice app, showing daylight information for London, England."
+    src="/uploads/portfolio/solstice-devices.png"
+    width={2120}
+    height={2303}
+    caption={
+        <>
+            Solstice works across iPhone, iPad, macOS, and Apple Watch, and
+            features widgets, daily notifications, and Shortcuts support.
+        </>
+    }
+/>
+
+## Time Travel
+
+One of Solstice's core features is Time Travel; the ability to compare today's
+daylight to any other date. In the first version of Solstice, a slider was used
+to allow quick time travel to dates in the past or future. This affordance is
+easy to use, but imprecise: on smaller iPhone screens, individual days might end
+up less than 1px apart on the slider, making it impossible to choose a specific
+date. When I rebuilt Solstice, I knew from the start I wanted to allow choosing
+a specific date.
+
+<Image
+    alt="A zoomed in screenshot of Solstice's time travel feature, showing a date picker and a slider with “Past” and “Future” as the start and end labels."
+    src="/uploads/portfolio/solstice-tt.png"
+    width={1827}
+    height={859}
+    caption={
+        <>
+            The rebuilt Solstice app lets people choose specific dates, as well
+            as quickly scrub to dates in the past or future using the slider
+        </>
+    }
+/>
+
+This meant the “Time Machine” for controlling time travel needed three
+properties:
+
+1. A reference date (the date we want to travel _from_—usually the current date)
+2. A target date (the date we want to travel _to_)
+3. An offset representing the number of days between the reference and target
+   dates
+
+To keep the offset in sync with the reference and target dates, it needs to be
+its own computed value, and since we want to control it via a slider, it needs
+to be a `Binding` over a `Double`. Putting all this together, a simplified
+version of Solstice's Time Machine looks like this:
+
+```swift
+@MainActor
+class TimeMachine: ObservableObject {
+    // The `isOn` property just indicates whether the Time Machine is active or not
+    @Published var isOn = false
+    @Published var referenceDate = Date()
+    @Published var targetDate = Date()
+
+    var offset: Binding<Double> {
+        Binding<Double>(get: {
+            Double(Calendar.current.dateComponents([.day], from: self.referenceDate, to: self.targetDate).day ?? 0)
+        }, set: { newValue in
+            self.targetDate = Calendar.current.date(byAdding: .day, value: Int(newValue), to: self.referenceDate) ?? self.referenceDate
+        })
+    }
+}
+```
+
+The `referenceDate` is updated every minute in the app's main view using a timer
+(I had explored using SwiftUI’s `TimelineView` for this update but found it
+degraded the app's performance) and/or when the app (re)enters the foreground.
+The whole class is also run on the main thread thanks to the `@MainActor`
+attribute; this ensures the UI remains responsive when the Time Machine changes,
+which is important: almost everything on the screen is dependent on the Time
+Machine's dates.
+
+There's one problem though; the hour, minute, and second components of the
+reference and target dates can drift. If you open the app at 9am and set the
+target date to some future date, when you reopen the app at 9pm, the app will
+still show you data matching _9am on the target date_. To prevent this, we need
+one last computed property to synchronise the time components of the reference
+and target dates:
+
+```swift
+extension TimeMachine {
+    var date: Date {
+        guard isOn else { return referenceDate }
+        let time = Calendar.current.dateComponents([.hour, .minute, .second], from: referenceDate)
+        return Calendar.current.date(bySettingHour: time.hour ?? 0,
+                            minute: time.minute ?? 0,
+                            second: time.second ?? 0,
+                            of: targetDate) ?? targetDate
+    }
+}
+```
+
+This `date` property is the source of truth for Solstice's dates, returning the
+reference date when time travel is inactive, and the target date—with the
+reference date's time components—when it's active.
+
+This code still leaves one quirk: when the `referenceDate` ticks over to the
+next day, the `targetDate` has its time components set to the beginning of the
+same day, but this “groundhog day” effect feels like it's actually expected
+behaviour.
+
+## Time Zones
+
+In addition to comparing daylight at different times of the year, Solstice lets
+you compare it in different locations around the world. It's impossible to build
+an app that deals with time and location without running into the
+[complexities of time zones](https://xkcd.com/1883/), and Solstice is no
+exception.
+
+Furthermore, Solstice had the unique challenge of accurately representing dates
+and times in a way that also let people jump to arbitrary dates in the past or
+future.
+
+As a result, almost every reference to a Date value is passed through this
+function:
+
+```swift
+extension Date {
+    func withTimeZoneAdjustment(for timeZone: TimeZone?) -> Date {
+        guard let timeZone else { return self }
+        let tzOffset = timeZone.secondsFromGMT(for: self) - TimeZone.autoupdatingCurrent.secondsFromGMT(for: self)
+        return self.addingTimeInterval(TimeInterval(tzOffset))
+    }
+}
+```
+
+The function takes a time zone and returns the date adjusted for this time zone.
+This helps prevent weirdness like a 2pm sunrise when you're looking at a
+location 8 hours behind your own.
+
+<Image
+    alt="A zoomed in screenshot of Solstice's time zone indicator at the top of its detail view, showing San Francisco's local time, which is 8 hours behind London time."
+    src="/uploads/portfolio/solstice-tz.png"
+    width={1827}
+    height={914}
+    caption={
+        <>
+            The time zone indicator in Solstice started as a helpful debugging
+            tool and turned into one of my favourite little details
+        </>
+    }
+/>
+
+To help make sure my dates were working as expected, I added a time zone
+indicator at the top of views for locations outside of my current time zone.
+This debugging tool went on to become one of my favourite little details in the
+app.
+
+## Polar Days
+
+<Image
+    alt="Two iPhones showing a location close to the north pole in Solstice at different times of year. The charts indicate 24 hours and 0 seconds of daylight respectively."
+    src="/uploads/portfolio/solstice-pd.png"
+    width={3272}
+    height={2998}
+    caption={
+        <>
+            In locations close to the north or south pole, there might not be a
+            sunrise or sunset. Distinguishing between 0 seconds and 24 hours of
+            daylight is surprisingly hard.
+        </>
+    }
+/>
+
+In locations close to the north or south pole, there are periods of the year
+during which the sun never rises or sets. In
+[Solar](https://github.com/ceeK/Solar), the library used in Solstice to
+calculate sunrise/sunset times, the time of the sunrise or sunset can sometimes
+be `nil`. In the original version of Solstice, I often force-unwrapped these
+values or fell back on an arbitrary date, leading to crashes or unexpected
+behaviour in the app. When I rebuilt the app, I implemented a “safe”
+sunrise/sunset value:
+
+```swift
+extension Solar {
+    var fallbackSunrise: Date? {
+        sunrise ?? civilSunrise ?? nauticalSunrise ?? astronomicalSunrise
+    }
+
+    var fallbackSunset: Date? {
+        sunset ?? civilSunset ?? nauticalSunset ?? astronomicalSunset
+    }
+
+    var safeSunrise: Date { sunrise ?? startOfDay }
+
+    var safeSunset: Date {
+        if let sunset { return sunset }
+
+        guard let fallbackSunset, let fallbackSunrise else {
+            return endOfDay
+        }
+
+        // If the sunrise is over 7 hours from sunrise, it's safe to assume this is a 24 hour day of daylight
+        if fallbackSunrise.distance(to: fallbackSunset) > (60 * 60 * 7) {
+            return endOfDay
+        } else {
+            // Otherwise, it's safe to assume this is a day of no daylight
+            return startOfDay.addingTimeInterval(0.1)
+        }
+    }
+}
+```
+
+`fallbackSunrise` and `fallbackSunset` return the “edges” of a day’s daylight;
+the moments when the sun begins or ends its journey above the horizon. Each of
+the common, civil, nautical, and astronomical sunrise/sunsets represent
+different degrees above or below the horizon and generally are calculable
+values, but during polar days—days with either 24 hours or 0 seconds of
+daylight—these times may not be calculable. To overcome this, the `safeSunrise`
+and `safeSunset` values find the best approximate fallback values, based on the
+distance between sunrise and sunset.
+
+## Little Details
+
+<Breakout padding={false}>
+    <HScroll>
+        <DeviceFrame device={DeviceModel.iPhone14Pro}>
+            <MuxVideo
+                autoPlay={true}
+                playsInline={true}
+                poster={6}
+                id={"SYt6iHdsdok9QEetaGbw8rhQ7P9Eor9HmKNLui25uf4"}
+                muted={true}
+                loop={true}
+                controls={false}
+            />
+        </DeviceFrame>
+        <DeviceFrame device={DeviceModel.iPhone14Pro}>
+            <MuxVideo
+                autoPlay={true}
+                playsInline={true}
+                poster={9}
+                id={"j02L01v7Jroby2e1N01wV86B3GOuye01k5SYG5zlMujU701c"}
+                muted={true}
+                loop={true}
+                controls={false}
+            />
+        </DeviceFrame>
+        <DeviceFrame device={DeviceModel.iPhone14Pro}>
+            <MuxVideo
+                autoPlay={true}
+                playsInline={true}
+                poster={18}
+                id={"v02luJB19A48QNPpxjtaueV00dohsOG9GOJFiDUGGdSQQ"}
+                muted={true}
+                loop={true}
+                controls={false}
+            />
+        </DeviceFrame>
+        <DeviceFrame device={DeviceModel.iPhone14Pro}>
+            <MuxVideo
+                autoPlay={true}
+                playsInline={true}
+                poster={40}
+                id={"vM2nFqaK7p01E1G00vI268apY700VMLjX902to4loAKKHZU"}
+                muted={true}
+                loop={true}
+                controls={false}
+            />
+        </DeviceFrame>
+    </HScroll>
+</Breakout>
+
+Solstice is a real labour of love; it's a tool I still use almost daily to enjoy
+the long summer days and get me through the long winter nights. Every time I
+open the app, I tend to notice something new that feels like it could use
+polishing, or think of another “wouldn’t it be nice if...”. The app boasts daily
+notifications with scheduling options to match the sunrise or sunset; Lock
+Screen widgets which show tomorrow's sunlight information after the sun sets;
+little details like the ability to share the solar chart or configure its
+appearance; and SAD preferences that let you turn off notifications when
+daylight starts to reduce.
+
+I’ve also loved people's kind reviews for the app. I’ll let them speak for
+themselves:
+
+<Reviews />
+
+It's heartwarming to see that an app I took such pleasure in building has been
+loved by so many people. The app is free to
+[download on the App Store](https://apps.apple.com/us/app/solstice/id1547580907).
+
+</div>

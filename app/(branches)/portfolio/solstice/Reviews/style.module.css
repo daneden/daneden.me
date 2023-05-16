@@ -1,0 +1,56 @@
+.container {
+  position: relative;
+}
+
+.root {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-template-rows: masonry;
+  gap: var(--sp-m);
+  max-height: 36rem;
+  overflow: hidden;
+}
+
+.container:has(:checked) .root {
+  max-height: none;
+}
+
+.readMore {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--sp-xxl) var(--sp-m) var(--sp-m);
+  text-align: center;
+  background-image: linear-gradient(transparent, var(--wash-color) 50%);
+}
+
+.container:has(:checked) .readMore {
+  position: relative;
+  padding-block-start: 0;
+}
+
+.readMore label {
+  color: var(--hover-color);
+  cursor: pointer;
+}
+
+.readMore input {
+  display: none;
+}
+
+.readMoreLabel {
+  display: inline-block;
+}
+
+.readLessLabel {
+  display: none;
+}
+
+.container:has(:checked) .readMoreLabel {
+  display: none;
+}
+
+.container:has(:checked) .readLessLabel {
+  display: inline-block;
+}

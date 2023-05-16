@@ -1,0 +1,34 @@
+.root {
+  position: relative;
+  max-height: 80vh;
+  margin: 0 auto var(--sp-m);
+  display: grid;
+  place-content: center;
+  align-items: stretch;
+}
+
+.children {
+  overflow: hidden;
+  border-radius: 20%;
+  z-index: 1;
+  position: relative;
+}
+
+.children video {
+  width: 100%;
+  object-fit: fill;
+}
+
+.children :matches(figure, video) {
+  margin-bottom: 0;
+}
+
+.bezel {
+  position: absolute;
+  pointer-events: none;
+  z-index: 2;
+  max-height: 100%;
+  width: auto;
+  inset: 0;
+  margin: auto;
+}

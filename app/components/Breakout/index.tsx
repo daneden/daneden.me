@@ -18,7 +18,7 @@ export default function Breakout({ children, padding = true }: Props) {
       <div className={styles.breakoutContainerHack}>
         <div
           className={`${styles.breakoutContainer} ${
-            padding ? styles.withPadding : null
+            padding ? styles.withPadding : ""
           }`}
         >
           {children}
