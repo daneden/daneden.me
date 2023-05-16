@@ -6,8 +6,29 @@ import HScroll from "@/app/components/HScroll"
 import "./styles.css"
 import Reviews from "./Reviews"
 
+export const metadata = {
+    title: "Deep Dive: Solstice",
+    description:
+        "A deep dive into how the Solstice app for iOS, watchOS, and macOS was designed and built",
+}
+
 <div className="solsticeDeepDive">
 <SolsticeTitle />
+
+<Image
+    alt="Two iPhones showing Solstice version 1 and version 2 side-by-side. Version 1 features a monochrome black-and-white design with limited use of color to denote interactive controls. Version 2 has a lot more color by comparison, showing a graphical chart that emulates the sky's appearance, and colorful bar charts indicating the daylight length changing over the year."
+    src="/uploads/portfolio/solstice-v1-v2.png"
+    width={3272}
+    height={2998}
+    caption={
+        <>
+            Solstice 1.0 and 2.0. Version 2 added support for multiple
+            locations, and more advanced data visualisations. Keeping the simple
+            design while adding more advanced features was an important part of
+            evolving the app.
+        </>
+    }
+/>
 
 [Solstice](https://solstice.daneden.me) is a project that started with a simple
 idea: what if I could see how much more or less daylight there is today compared
@@ -35,6 +56,7 @@ It’s privacy-sensitive by default, asking only for the permissions it needs
 explicitly grant permissions.
 
 <Image
+    alt="An iPhone and Apple Watch running the Solstice app, showing daylight information for London, England."
     src="/uploads/portfolio/solstice-devices.png"
     width={2120}
     height={2303}
@@ -57,6 +79,7 @@ date. When I rebuilt Solstice, I knew from the start I wanted to allow choosing
 a specific date.
 
 <Image
+    alt="A zoomed in screenshot of Solstice's time travel feature, showing a date picker and a slider with “Past” and “Future” as the start and end labels."
     src="/uploads/portfolio/solstice-tt.png"
     width={1827}
     height={859}
@@ -166,6 +189,7 @@ This helps prevent weirdness like a 2pm sunrise when you're looking at a
 location 8 hours behind your own.
 
 <Image
+    alt="A zoomed in screenshot of Solstice's time zone indicator at the top of its detail view, showing San Francisco's local time, which is 8 hours behind London time."
     src="/uploads/portfolio/solstice-tz.png"
     width={1827}
     height={914}
@@ -185,6 +209,7 @@ app.
 ## Polar Days
 
 <Image
+    alt="Two iPhones showing a location close to the north pole in Solstice at different times of year. The charts indicate 24 hours and 0 seconds of daylight respectively."
     src="/uploads/portfolio/solstice-pd.png"
     width={3272}
     height={2998}

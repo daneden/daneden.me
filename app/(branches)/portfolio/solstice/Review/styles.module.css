@@ -3,7 +3,6 @@
   padding: var(--sp-m);
   background-color: var(--code-wash);
   font-family: var(--font-sans);
-  margin-block-end: var(--sp-m);
 }
 
 .rating {
