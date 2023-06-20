@@ -52,9 +52,9 @@ export default function HomePage() {
             className={styles.wwcgImage}
           />
         </div>
-        <a
+        <Link
           className={`${styles.tile} ${styles.zeitgeist}`}
-          href="https://zeitgeist.daneden.me"
+          href="/portfolio/zeitgeist"
         >
           <h2 className={styles.xxl}>Zeitgeist</h2>
           <p>Monitor your Vercel deployments</p>
@@ -65,7 +65,7 @@ export default function HomePage() {
             srcLight="/uploads/portfolio/zeitgeist-light.png"
             width={1339}
           />
-        </a>
+        </Link>
         <div className={`${styles.xxl} ${styles.tile} ${styles.extras}`}>
           <Link href="/blog">Writing &rarr;</Link>
           <Link href="/portfolio">Projects &rarr;</Link>

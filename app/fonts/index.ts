@@ -1,3 +1,4 @@
+import { Instrument_Serif } from "next/font/google"
 import localFont from "next/font/local"
 
 export const soehne = localFont({
@@ -69,4 +70,11 @@ export const tiemposText = localFont({
   ],
   variable: "--font-serif",
   display: "auto",
+})
+
+export const instrumentSerif = Instrument_Serif({
+  variable: "--font-heading",
+  display: "auto",
+  weight: "400",
+  subsets: ["latin", "latin-ext"],
 })

@@ -16,7 +16,11 @@ const links = [
   },
 ]
 
-const Header = ({ activeSegments = [] }: { activeSegments: string[] }) => {
+export default function Header({
+  activeSegments = [],
+}: {
+  activeSegments: string[]
+}) {
   console.log(activeSegments)
   return (
     <>
@@ -31,7 +35,9 @@ const Header = ({ activeSegments = [] }: { activeSegments: string[] }) => {
               <li key={to}>
                 <Link
                   className={`plainlink ${
-                    activeSegments.includes(to) ? styles.activeSegment : ""
+                    activeSegments.includes(to.split("/")[1])
+                      ? styles.activeSegment
+                      : ""
                   }`}
                   href={to}
                 >
@@ -45,5 +51,3 @@ const Header = ({ activeSegments = [] }: { activeSegments: string[] }) => {
     </>
   )
 }
-
-export default Header

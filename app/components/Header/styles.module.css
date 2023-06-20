@@ -17,6 +17,11 @@
   }
 }
 
-.activeSegment::before {
-  content: "☛";
+.activeSegment {
+  position: relative;
+  color: var(--site-color);
+}
+
+.activeSegment::after {
+  content: "*";
 }

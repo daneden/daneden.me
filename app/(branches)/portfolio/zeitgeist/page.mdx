@@ -20,6 +20,15 @@ export const metadata = {
 <div className="deepDive">
 <ZeitgeistTitle />
 
+[Zeitgeist](https://zeitgeist.link) is an iOS and macOS app for monitoring
+[Vercel](https://vercel.com) deployments. Unlike my other apps, Zeitgeist serves
+a very specific audience: web developers who deploy their work to Vercel. I
+wanted to build a companion app that was powerful while maintaining simplicity
+and feeling lightweight. It's also the only app in my portfolio that extensively
+relies on an internet connection, and this presented its own set of design
+challenges. In this deep dive, I wanted to share some of the architectural
+details behind Zeitgeist’s design.
+
 ## Notifications
 
 Zeitgeist was built before Vercel sent their own email notifications about
@@ -46,7 +55,8 @@ Service (APNS). This happens across several steps:
    later.
 3. This token is then sent to Zeitgeist's “Postal Service” (ZPS) server, one of
    a few components used to manage notifications for Zeitgeist. Along with the
-   token, the current user's Vercel account ID is sent to the ZPS server.
+   token, the Vercel account IDs for the user's signed in accounts are sent to
+   the ZPS server.
 4. The ZPS server saves the device token and associated account ID into a
    database.
 
@@ -124,9 +134,11 @@ that makes a view respond to these events, and runs some asynchronous code
 (typically fetching new data). I also wanted this asynchronous code to run on
 other events, such as:
 
-1. When the user manually refreshes the page
-2. When the app reenters the foreground from the background
-3. When the view first appears
+1. When the view first appears
+2. When the user manually refreshes the page
+3. When the app receives a webhook from Vercel
+4. When the user's session changes
+5. When the app reenters the foreground from the background
 
 Here's a simplified snippet of the `dataTask` View modifier:
 
@@ -172,7 +184,8 @@ extension View {
 }
 ```
 
-To manage SWR-style caching, Swift’s Foundation framework provides URLCache,
+To manage SWR-style caching, Swift’s Foundation framework provides
+[`URLCache`](https://developer.apple.com/documentation/foundation/urlcache),
 which is used to offer immediate responses when available while up-to-date data
 is requested. Here’s a simplified snippet of how this works for fetching
 deployments:

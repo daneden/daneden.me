@@ -99,7 +99,12 @@ export default function PortfolioPage() {
           about your web app deployments.
         </p>
         <p>
-          <Link href="https://zeitgeist.daneden.me">Visit the microsite</Link>{" "}
+          You can{" "}
+          <Link href="/portfolio/zeitgeist">
+            read about how Zeitgeist was made
+          </Link>
+          , or{" "}
+          <Link href="https://zeitgeist.daneden.me">visit the microsite</Link>{" "}
           for details and to download.
         </p>
       </section>
