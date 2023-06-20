@@ -9,6 +9,8 @@ interface Props {
   // The timestamp to render for the poster image. No poster image is shown when this value is undefined.
   poster?: number
   muted: boolean
+  width?: number
+  height?: number
 }
 
 export default function MuxVideo({
@@ -21,6 +23,8 @@ export default function MuxVideo({
   playsInline = false,
   poster,
   muted = false,
+  width,
+  height,
 }: Props) {
   const posterSrc =
     poster == undefined
@@ -36,6 +40,8 @@ export default function MuxVideo({
         playsInline={playsInline}
         poster={posterSrc}
         muted={muted}
+        width={width}
+        height={height}
       >
         <source
           src={`https://stream.mux.com/${id}.m3u8`}

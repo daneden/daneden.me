@@ -262,7 +262,8 @@ figure {
 
 figure img {
   display: block;
-  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
   flex: 1 1 auto;
   order: 2;
   height: auto;
