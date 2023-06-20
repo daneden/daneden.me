@@ -12,6 +12,8 @@
   margin: 0;
   padding: 0;
   line-height: 1;
+  z-index: 1;
+  position: relative;
 }
 
 .iconContainer {
@@ -25,10 +27,18 @@
 }
 
 .icon {
-  max-width: 12rem;
-  opacity: 0.15;
+  max-width: 15rem;
+  opacity: 0.75;
+}
+
+@media (prefers-color-scheme: dark) {
+  .icon {
+    filter: invert(100%);
+  }
 }
 
 .tagline {
   font-family: var(--font-mono);
+  position: relative;
+  z-index: 1;
 }

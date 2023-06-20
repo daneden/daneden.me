@@ -6,12 +6,10 @@
   align-items: center;
   margin: 0 auto;
   width: fit-content;
-  scroll-snap-type: x mandatory;
 }
 
 .root > * {
   flex: 0 0 auto;
-  scroll-snap-align: center;
 }
 
 .root > :first-child {
@@ -20,4 +18,12 @@
 
 .root > :last-child {
   margin-inline-end: var(--sp-m);
+}
+
+.scrollSnapping {
+  scroll-snap-type: x mandatory;
+}
+
+.scrollSnapping > * {
+  scroll-snap-align: center;
 }
