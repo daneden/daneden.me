@@ -211,4 +211,42 @@ let deploymentsResponse = try JSONDecoder().decode(VercelDeployment.APIResponse.
 deployments = deploymentsResponse.deployments
 ```
 
+## Power and Simplicity
+
+Vercel's platform is improving all the time, with recent additions including
+storage and Edge configuration. Zeitgeist will never have full feature parity
+with Vercel's own platform, but one of the design principles of the app is to
+make it as poweful as possible while keeping its interface simple.
+
+It's similar to the difference between a full-fledged toolkit with power tools
+and a travel-size screwdriver set. There are times you'd prefer a full toolkit,
+but it's amazing what you can do with a few streamlined tools.
+
+Zeitgeist supports environment variable editing, redeploying with or without
+build caches, deleting deployments, promoting to production, following build
+logs, with a feature list that continues to grow.
+
+<DeviceFrame device={DeviceModel.iPhone14Pro}>
+    <MuxVideo
+        autoPlay={true}
+        playsInline={true}
+        poster={18}
+        id={"g1nDcw5KW8F2OyFyA01UKXV01TGwfsS01sdPMmfVSpnSdw"}
+        muted={true}
+        loop={true}
+        controls={false}
+        width={886}
+        height={1920}
+    />
+</DeviceFrame>
+
+Environment variables are worth looking at in detail. There's a lot of
+information associated with environment variables: what targets are they
+available in? Are they encrypted, plain text, or secret? Zeitgeist protects
+environment variables with on-device biometrics or passcode, and decrypts
+encrypted values on-demand to protect sensitive information. The app also lets
+you create, update, and delete environment variables. Combined with the ability
+to rebuild deployments, this makes it trivial to update an environment variable
+and rebuild a deployment to apply those changes, all on your phone.
+
 </div>

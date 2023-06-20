@@ -21,7 +21,6 @@ export default function Header({
 }: {
   activeSegments: string[]
 }) {
-  console.log(activeSegments)
   return (
     <>
       <header className={styles.root}>
