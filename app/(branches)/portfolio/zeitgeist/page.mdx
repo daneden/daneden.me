@@ -29,6 +29,7 @@ notifications set up is registering a device with Apple's Push Notification
 Server (APNS). This happens across several steps:
 
 <Breakout>
+<HScroll>
     <Image
         alt="A diagram illustrating how devices are registered for push notifications in Zeitgeist. The diagram is explained in detail below."
         src="/uploads/portfolio/zeitgeist/Registration.svg"
@@ -36,6 +37,7 @@ Server (APNS). This happens across several steps:
         height={297}
         invertInDarkMode={true}
     />
+</HScroll>
 </Breakout>
 
 1. iOS registers the device with APNS.
@@ -49,10 +51,11 @@ Server (APNS). This happens across several steps:
 
 Once this registration is complete, the app can respond to webhook events sent
 by Vercel's server. These events are sent when deployments are created or
-complete with failure or success, as well as othere events such as project
+complete with failure or success, as well as other events such as project
 changes.
 
 <Breakout>
+<HScroll>
     <Image
         alt="A diagram illustrating how webhooks trigger push notifications for Zeitgeist. The diagram is explained in detail below."
         src="/uploads/portfolio/zeitgeist/Webhooks.svg"
@@ -60,6 +63,7 @@ changes.
         height={297}
         invertInDarkMode={true}
     />
+</HScroll>
 </Breakout>
 
 1. An event on Vercel triggers a webhook, which is sent to the ZPS server. The
