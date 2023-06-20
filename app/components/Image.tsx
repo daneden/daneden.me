@@ -2,7 +2,7 @@ import Align from "@/app/components/Align"
 import NextImage, { ImageProps as NextImageProps } from "next/image"
 import React, { ReactNode } from "react"
 
-interface ImageProps extends NextImageProps {
+export interface ImageProps extends NextImageProps {
   align?: "left" | "right"
   caption?: ReactNode
   invertInDarkMode?: boolean

@@ -16,3 +16,7 @@
     grid-column: var(--center-column);
   }
 }
+
+.activeSegment::before {
+  content: "☛";
+}

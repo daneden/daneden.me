@@ -1,6 +1,6 @@
 "use client"
-import Image, { ImageProps } from "next/image"
 import { useEffect, useState } from "react"
+import Image, { ImageProps } from "./Image"
 
 interface Props extends Omit<ImageProps, "src"> {
   srcLight: string
@@ -14,6 +14,7 @@ export default function LightswitchImage({
   width,
   height,
   className,
+  caption,
 }: Props) {
   const [src, setSrc] = useState(srcLight)
 
@@ -41,6 +42,7 @@ export default function LightswitchImage({
       height={height}
       src={src}
       width={width}
+      caption={caption}
     />
   )
 }

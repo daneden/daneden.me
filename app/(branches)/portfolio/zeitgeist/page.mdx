@@ -3,6 +3,7 @@ import DeviceFrame, { DeviceModel } from "@/app/components/DeviceFrame"
 import MuxVideo from "@/app/components/MuxVideo"
 import Breakout from "@/app/components/Breakout"
 import HScroll from "@/app/components/HScroll"
+import LightSwitchImage from "@/app/components/LightSwitchImage"
 import "./styles.css"
 
 export const metadata = {
@@ -16,7 +17,7 @@ export const metadata = {
     },
 }
 
-<div className="zeitgeistDeepDive">
+<div className="deepDive">
 <ZeitgeistTitle />
 
 ## Notifications
@@ -26,7 +27,7 @@ failed builds, so part of the goal for the app from its conception was to offer
 timely information about build status. Notifications were added in v3 of the
 app, and are more powerful than they first appear. The first step in getting
 notifications set up is registering a device with Apple's Push Notification
-Server (APNS). This happens across several steps:
+Service (APNS). This happens across several steps:
 
 <Breakout padding={false}>
     <HScroll scrollSnapping={false}>
@@ -83,6 +84,23 @@ to them. In Zeitgeist, users enable notifications on a per-project and per-event
 basis, so that they're not swamped by a torrent of notifications about every
 deployment in their account.
 
+<LightSwitchImage
+    srcLight="/uploads/portfolio/zeitgeist/notifications.light.png"
+    srcDark="/uploads/portfolio/zeitgeist/notifications.dark.png"
+    alt="Notification settings for a project named daneden.me. “Production only”, “Error building”, and “Deployed” are toggled on."
+    caption={
+        <>
+            Notifications are enabled on a per-project and per-event basis. In
+            this project, notifications will be received for production builds
+            that fail and succeed. Since all events are sent to the device as
+            silent notifications, the app feels responsive with real-time
+            updates.
+        </>
+    }
+    width={624}
+    height={618}
+/>
+
 ## Networking
 
 The background push notifications also play a part in one of Zeitgeist's most
@@ -101,9 +119,63 @@ app about when views should be updated. Whenever there's a new build status, or
 a change to a project, the app should request the latest information from
 Vercel's servers.
 
+To make this kind of event propogation simple, I created a SwiftUI View modifier
+that makes a view respond to these events, and runs some asynchronous code
+(typically fetching new data). I also wanted this asynchronous code to run on
+other events, such as:
+
+1. When the user manually refreshes the page
+2. When the app reenters the foreground from the background
+3. When the view first appears
+
+Here's a simplified snippet of the `dataTask` View modifier:
+
+```swift
+import SwiftUI
+
+struct DataTaskModifier: ViewModifier {
+   @EnvironmentObject var session: VercelSession
+   @Environment(\.scenePhase) var scenePhase
+   let action: () async -> Void
+
+   func body(content: Content) -> some View {
+   content
+      // Run the async action when the view appears...
+      .task { await action() }
+      // ...when the user refreshes
+      .refreshable { await action() }
+      // ...when background notifications are received
+      .onReceive(NotificationCenter.default.publisher(for: .ZPSNotification)) { _ in
+         Task { await action() }
+      }
+      // ...when the user session changes
+      .onReceive(session.objectWillChange) { _ in
+         if session.isAuthenticated {
+            Task { await action() }
+         }
+      }
+      // ...when the app reenters the foreground
+      .onChange(of: scenePhase) { currentScenePhase in
+         if case .active = currentScenePhase {
+            Task { await action() }
+         }
+      }
+   }
+}
+
+extension View {
+   // Usage:
+   // View.dataTask { await someAsyncFunction() }
+   func dataTask(perform action: @escaping () async -> Void) -> some View {
+      modifier(DataTaskModifier(action: action))
+   }
+}
+```
+
 To manage SWR-style caching, Swift’s Foundation framework provides URLCache,
 which is used to offer immediate responses when available while up-to-date data
-is requested:
+is requested. Here’s a simplified snippet of how this works for fetching
+deployments:
 
 ```swift
 var request = VercelAPI.request(
