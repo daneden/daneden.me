@@ -16,7 +16,7 @@ export default function HomePage() {
             <a href="https://meta.com/">Meta</a> in London, working on making
             Customer Support experiences that are more equitable, human, and
             helpful. He spends his time <Link href="/blog">writing</Link>,
-            thinking, <a href="https://twitter.com/_dte">tweeting</a>, and
+            thinking, <a href="https://threads.net/@_dte?rel=me">posting</a>, and
             talking about Design Systems: how they scale, how they break, and
             the people&nbsp;that maintain&nbsp;them.
           </p>
