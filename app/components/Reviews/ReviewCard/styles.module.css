@@ -3,10 +3,8 @@
   padding: var(--sp-m);
   background-color: var(--code-wash);
   font-family: var(--font-sans);
-}
-
-.rating {
-  color: orange;
+  overflow: hidden;
+  position: relative;
 }
 
 .root :last-child {

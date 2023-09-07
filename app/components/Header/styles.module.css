@@ -16,3 +16,16 @@
     grid-column: var(--center-column);
   }
 }
+
+.activeSegment {
+  position: relative;
+}
+
+.activeSegment::after {
+  content: "*";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--site-color);
+}

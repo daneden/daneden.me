@@ -20,9 +20,12 @@
   bottom: 0;
   left: 0;
   right: 0;
-  padding: var(--sp-xxl) var(--sp-m) var(--sp-m);
+  padding: calc(var(--sp-m) * 5) var(--sp-m) var(--sp-s);
+  top: 50%;
   text-align: center;
-  background-image: linear-gradient(transparent, var(--wash-color) 50%);
+  background-image: linear-gradient(transparent, var(--wash-color) 55%);
+  display: grid;
+  place-items: center;
 }
 
 .container:has(:checked) .readMore {
@@ -31,8 +34,14 @@
 }
 
 .readMore label {
-  color: var(--hover-color);
   cursor: pointer;
+  font-family: var(--font-sans);
+  padding: var(--sp-xs) var(--sp-s);
+  border-radius: var(--sp-s);
+  background-color: var(--text-color);
+  color: var(--wash-color);
+  line-height: 1;
+  margin: var(--sp-m);
 }
 
 .readMore input {
@@ -41,6 +50,14 @@
 
 .readMoreLabel {
   display: inline-block;
+}
+
+.readMoreLabel::after {
+  content: " ↓";
+}
+
+.readLessLabel::after {
+  content: " ↑";
 }
 
 .readLessLabel {

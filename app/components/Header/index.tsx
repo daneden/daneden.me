@@ -1,43 +1,10 @@
-import Link from "next/link"
-import styles from "./styles.module.css"
+"use client"
 
-const links = [
-  {
-    to: "/blog",
-    label: "Blog",
-  },
-  {
-    to: "/portfolio",
-    label: "Portfolio",
-  },
-  {
-    to: "/playlist",
-    label: "Playlist",
-  },
-]
+import { useSelectedLayoutSegments } from "next/navigation"
+import ServerHeader from "./ServerHeader"
 
-const Header = () => {
-  return (
-    <>
-      <header className={styles.root}>
-        <Link className="plainlink" href="/">
-          Daniel Eden, Designer
-        </Link>
+export default function Header() {
+  const segments = useSelectedLayoutSegments()
 
-        <nav>
-          <ul className="plainlist">
-            {links.map(({ to, label }) => (
-              <li key={to}>
-                <Link className="plainlink" href={to}>
-                  {label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      </header>
-    </>
-  )
+  return <ServerHeader activeSegments={segments} />
 }
-
-export default Header

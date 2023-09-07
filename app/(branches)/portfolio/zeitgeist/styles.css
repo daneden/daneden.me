@@ -1,0 +1,5 @@
+.deepDive :matches(h1, h2, h3, h4) {
+  text-align: center;
+  font-family: var(--font-sans);
+  font-weight: 700;
+}

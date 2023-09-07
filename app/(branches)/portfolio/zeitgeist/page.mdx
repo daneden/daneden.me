@@ -1,0 +1,280 @@
+import ZeitgeistTitle from "./ZeitgeistTitle"
+import DeviceFrame, { DeviceModel } from "@/app/components/DeviceFrame"
+import MuxVideo from "@/app/components/MuxVideo"
+import Breakout from "@/app/components/Breakout"
+import HScroll from "@/app/components/HScroll"
+import LightSwitchImage from "@/app/components/LightSwitchImage"
+import "./styles.css"
+import Reviews from "@/app/components/Reviews"
+
+export const metadata = {
+    title: "Deep Dive: Zeitgeist",
+    description:
+        "A deep dive into how the Zeitgeist app for iOS and macOS was designed and built",
+    openGraph: {
+        title: "Deep Dive: Zeitgeist",
+        description:
+            "A deep dive into how the Zeitgeist app for iOS and macOS was designed and built",
+    },
+}
+
+<div className="deepDive">
+<ZeitgeistTitle />
+
+[Zeitgeist](https://zeitgeist.link) is an iOS and macOS app for monitoring
+[Vercel](https://vercel.com) deployments. Unlike my other apps, Zeitgeist serves
+a very specific audience: web developers who deploy their work to Vercel. I
+wanted to build a companion app that was powerful while maintaining simplicity
+and feeling lightweight. It's also the only app in my portfolio that extensively
+relies on an internet connection, and this presented its own set of design
+challenges. In this deep dive, I wanted to share some of the architectural
+details behind Zeitgeist’s design.
+
+## Notifications
+
+Zeitgeist was built before Vercel sent their own email notifications about
+failed builds, so part of the goal for the app from its conception was to offer
+timely information about build status. Notifications were added in v3 of the
+app, and are more powerful than they first appear.
+
+The first step in getting notifications set up is registering a device with
+Apple's Push Notification Service (APNS). This happens across several steps:
+
+<Breakout padding={false} style={{ marginBottom: "var(--sp-m)" }}>
+    <HScroll scrollSnapping={false}>
+        <Image
+            alt="A diagram illustrating how devices are registered for push notifications in Zeitgeist. The diagram is explained in detail below."
+            src="/uploads/portfolio/zeitgeist/Registration.svg"
+            width={985}
+            height={297}
+            invertInDarkMode={true}
+        />
+    </HScroll>
+</Breakout>
+
+1. iOS registers the device with APNS.
+2. APNS returns a unique device token that will be reused to send notifications
+   later.
+3. This token is then sent to Zeitgeist's “Postal Service” (ZPS) server, one of
+   a few components used to manage notifications for Zeitgeist. Along with the
+   token, the Vercel account IDs for the user's signed in accounts are sent to
+   the ZPS server.
+4. The ZPS server saves the device token and associated account ID into a
+   database.
+
+Once this registration is complete, the app can respond to webhook events sent
+by Vercel's server. These events are sent when deployments are created or
+complete with failure or success, as well as other events such as project
+changes.
+
+<Breakout padding={false} style={{ marginBottom: "var(--sp-m)" }}>
+    <HScroll scrollSnapping={false}>
+        <Image
+            alt="A diagram illustrating how webhooks trigger push notifications for Zeitgeist. The diagram is explained in detail below."
+            src="/uploads/portfolio/zeitgeist/Webhooks.svg"
+            width={985}
+            height={297}
+            invertInDarkMode={true}
+        />
+    </HScroll>
+</Breakout>
+
+1. An event on Vercel triggers a webhook, which is sent to the ZPS server. The
+   payload includes information such as the event type and user ID.
+2. ZPS processes the webhook payload. If the event type is supported, the user's
+   ID is used to fetch registered device tokens from the register.
+3. The register returns all device tokens matching the given user ID.
+4. The notification payload is sent to APNS, containing most of the same
+   information provided in the original webhook event, such as information about
+   a Git commit that caused a deployment.
+5. APNS delivers the notification to the user's device as a **background push
+   notification**.
+
+Note that the notification is delivered in the background. This allows the
+user's preferences to take precedence in how notifications are finally surfaced
+to them. In Zeitgeist, users enable notifications on a per-project and per-event
+basis, so that they're not swamped by a torrent of notifications about every
+deployment in their account.
+
+<LightSwitchImage
+    srcLight="/uploads/portfolio/zeitgeist/notifications.light.png"
+    srcDark="/uploads/portfolio/zeitgeist/notifications.dark.png"
+    alt="Notification settings for a project named daneden.me. “Production only”, “Error building”, and “Deployed” are toggled on."
+    caption={
+        <>
+            Notifications are enabled on a per-project and per-event basis. In
+            this project, notifications will be received for production builds
+            that fail and succeed. Since all events are sent to the device as
+            silent notifications, the app feels responsive with real-time
+            updates.
+        </>
+    }
+    width={624}
+    height={618}
+/>
+
+## Networking
+
+The background push notifications also play a part in one of Zeitgeist's most
+important features: real-time updates.
+
+When I set out to build Zeitgeist, I wanted it to feel performant and responsive
+on every page. This meant two features had to be included in the networking
+layer:
+
+1. Real-time updates
+2. “[Stale-while-revalidate](https://web.dev/stale-while-revalidate/)”
+   (SWR)-style caching
+
+For real-time updates, background push notifications offer a clear signal to the
+app about when views should be updated. Whenever there's a new build status, or
+a change to a project, the app should request the latest information from
+Vercel's servers.
+
+<MuxVideo
+    autoPlay={true}
+    playsInline={true}
+    id={"PXDT5mpUOh6CHkqC017CJLx028jUwa6WQEdgqck553Tm4"}
+    muted={true}
+    loop={true}
+    caption={
+        <>
+            Changes on Vercel—such as new builds, completed deployments, or
+            project changes—are instantly reflected in the Zeitgeist app thanks
+            to its background notifications.
+        </>
+    }
+
+/>
+
+To make this kind of event propogation simple, I created a SwiftUI View modifier
+that makes a view respond to these events, and runs some asynchronous code
+(typically fetching new data). I also wanted this asynchronous code to run on
+other events, such as:
+
+1. When the view first appears
+2. When the user manually refreshes the page
+3. When the app receives a webhook from Vercel
+4. When the user's session changes
+5. When the app reenters the foreground from the background
+
+Here's a simplified snippet of the `dataTask` View modifier:
+
+```swift
+import SwiftUI
+
+struct DataTaskModifier: ViewModifier {
+   @EnvironmentObject var session: VercelSession
+   @Environment(\.scenePhase) var scenePhase
+   let action: () async -> Void
+
+   func body(content: Content) -> some View {
+   content
+      // Run the async action when the view appears...
+      .task { await action() }
+      // ...when the user refreshes
+      .refreshable { await action() }
+      // ...when background notifications are received
+      .onReceive(NotificationCenter.default.publisher(for: .ZPSNotification)) { _ in
+         Task { await action() }
+      }
+      // ...when the user session changes
+      .onReceive(session.objectWillChange) { _ in
+         if session.isAuthenticated {
+            Task { await action() }
+         }
+      }
+      // ...when the app reenters the foreground
+      .onChange(of: scenePhase) { currentScenePhase in
+         if case .active = currentScenePhase {
+            Task { await action() }
+         }
+      }
+   }
+}
+
+extension View {
+   // Usage:
+   // View.dataTask { await someAsyncFunction() }
+   func dataTask(perform action: @escaping () async -> Void) -> some View {
+      modifier(DataTaskModifier(action: action))
+   }
+}
+```
+
+To manage SWR-style caching, Swift’s Foundation framework provides
+[`URLCache`](https://developer.apple.com/documentation/foundation/urlcache),
+which is used to offer immediate responses when available while up-to-date data
+is requested. Here’s a simplified snippet of how this works for fetching
+deployments:
+
+```swift
+var request = VercelAPI.request(
+  for: .deployments(),
+  with: session.account.id,
+  queryItems: queryItems
+)
+
+try session.signRequest(&request)
+
+// Immediately show the cached data
+if let cachedResponse = URLCache.shared.cachedResponse(for: request),
+  let decodedFromCache = try? JSONDecoder().decode(VercelDeployment.APIResponse.self, from: cachedResponse.data) {
+  deployments = decodedFromCache.deployments
+}
+
+// Asynchronously fetch the most recent data
+let (data, _) = try await URLSession.shared.data(for: request)
+let deploymentsResponse = try JSONDecoder().decode(VercelDeployment.APIResponse.self, from: data)
+deployments = deploymentsResponse.deployments
+```
+
+## Power and Simplicity
+
+Vercel's platform is improving all the time, with recent additions including
+storage and Edge configuration. Zeitgeist will never have full feature parity
+with Vercel's own platform, but one of the design principles of the app is to
+make it as poweful as possible while keeping its interface simple.
+
+It's similar to the difference between a full-fledged toolkit with power tools
+and a travel-size screwdriver set. There are times you'd prefer a full toolkit,
+but it's amazing what you can do with a few streamlined tools.
+
+Zeitgeist supports environment variable editing, redeploying with or without
+build caches, deleting deployments, promoting to production, following build
+logs, with a feature list that continues to grow.
+
+<DeviceFrame device={DeviceModel.iPhone14Pro}>
+    <MuxVideo
+        autoPlay={true}
+        playsInline={true}
+        poster={18}
+        id={"g1nDcw5KW8F2OyFyA01UKXV01TGwfsS01sdPMmfVSpnSdw"}
+        muted={true}
+        loop={true}
+        controls={false}
+        width={886}
+        height={1920}
+    />
+</DeviceFrame>
+
+Environment variables are worth looking at in detail. There's a lot of
+information associated with environment variables: what targets are they
+available in? Are they encrypted, plain text, or secret? Zeitgeist protects
+environment variables with on-device biometrics or passcode, and decrypts
+encrypted values on-demand to protect sensitive information. The app also lets
+you create, update, and delete environment variables. Combined with the ability
+to rebuild deployments, this makes it trivial to update an environment variable
+and rebuild a deployment to apply those changes, all on your phone.
+
+---
+
+Like most of my side projects, Zeitgeist was built to serve a personal need; I’m
+thrilled to see it providing value to so many other developers, too. It's also
+one of the most architecturally complex and utilitarian projects in my
+portfolio, and a fun challenge to maintain the balance between simplicity and
+power.
+
+<Reviews appId="zeitgeist" />
+
+</div>

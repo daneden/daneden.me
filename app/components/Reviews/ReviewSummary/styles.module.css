@@ -1,0 +1,18 @@
+.reviewAverage {
+  margin: 0;
+  padding: 0;
+  font-size: 7rem;
+  line-height: 1;
+}
+
+.reviewAverage::before {
+  content: "★";
+  position: absolute;
+  font-size: 20rem;
+  opacity: 0.05;
+  pointer-events: none;
+  line-height: 0;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%) translateX(-25%);
+}

@@ -1,0 +1,44 @@
+.root {
+  text-align: center;
+  position: relative;
+  margin-bottom: var(--sp-xxl);
+  padding-block: 3rem;
+}
+
+.title {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: clamp(5rem, 8vw, 6rem);
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  z-index: 1;
+  position: relative;
+}
+
+.iconContainer {
+  display: grid;
+  place-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.icon {
+  max-width: 15rem;
+  opacity: 0.75;
+}
+
+@media (prefers-color-scheme: dark) {
+  .icon {
+    filter: invert(100%);
+  }
+}
+
+.tagline {
+  font-family: var(--font-mono);
+  position: relative;
+  z-index: 1;
+}
