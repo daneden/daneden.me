@@ -362,6 +362,10 @@ img {
   padding: var(--sp-m);
 }
 
+.tac {
+  text-align: center;
+}
+
 @media (prefers-color-scheme: dark) {
   .invertInDarkMode {
     filter: invert(100%) hue-rotate(180deg);

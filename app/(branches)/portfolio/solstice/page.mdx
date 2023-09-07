@@ -4,7 +4,7 @@ import MuxVideo from "@/app/components/MuxVideo"
 import Breakout from "@/app/components/Breakout"
 import HScroll from "@/app/components/HScroll"
 import "./styles.css"
-import Reviews from "./Reviews"
+import Reviews from "@/app/components/Reviews"
 
 export const metadata = {
     title: "Deep Dive: Solstice",
@@ -295,7 +295,7 @@ distance between sunrise and sunset.
 
 ## Little Details
 
-<Breakout padding={false}>
+<Breakout padding={false} style={{ marginBlockEnd: "var(--sp-m)" }}>
     <HScroll>
         <DeviceFrame device={DeviceModel.iPhone14Pro}>
             <MuxVideo
@@ -378,7 +378,7 @@ daylight starts to reduce.
 I’ve also loved people's kind reviews for the app. I’ll let them speak for
 themselves:
 
-<Reviews />
+<Reviews appId="solstice" />
 
 It's heartwarming to see that an app I took such pleasure in building has been
 loved by so many people. The app is free to

@@ -5,6 +5,7 @@ import Breakout from "@/app/components/Breakout"
 import HScroll from "@/app/components/HScroll"
 import LightSwitchImage from "@/app/components/LightSwitchImage"
 import "./styles.css"
+import Reviews from "@/app/components/Reviews"
 
 export const metadata = {
     title: "Deep Dive: Zeitgeist",
@@ -34,11 +35,12 @@ details behind Zeitgeist’s design.
 Zeitgeist was built before Vercel sent their own email notifications about
 failed builds, so part of the goal for the app from its conception was to offer
 timely information about build status. Notifications were added in v3 of the
-app, and are more powerful than they first appear. The first step in getting
-notifications set up is registering a device with Apple's Push Notification
-Service (APNS). This happens across several steps:
+app, and are more powerful than they first appear.
 
-<Breakout padding={false}>
+The first step in getting notifications set up is registering a device with
+Apple's Push Notification Service (APNS). This happens across several steps:
+
+<Breakout padding={false} style={{ marginBottom: "var(--sp-m)" }}>
     <HScroll scrollSnapping={false}>
         <Image
             alt="A diagram illustrating how devices are registered for push notifications in Zeitgeist. The diagram is explained in detail below."
@@ -65,7 +67,7 @@ by Vercel's server. These events are sent when deployments are created or
 complete with failure or success, as well as other events such as project
 changes.
 
-<Breakout padding={false}>
+<Breakout padding={false} style={{ marginBottom: "var(--sp-m)" }}>
     <HScroll scrollSnapping={false}>
         <Image
             alt="A diagram illustrating how webhooks trigger push notifications for Zeitgeist. The diagram is explained in detail below."
@@ -128,6 +130,22 @@ For real-time updates, background push notifications offer a clear signal to the
 app about when views should be updated. Whenever there's a new build status, or
 a change to a project, the app should request the latest information from
 Vercel's servers.
+
+<MuxVideo
+    autoPlay={true}
+    playsInline={true}
+    id={"PXDT5mpUOh6CHkqC017CJLx028jUwa6WQEdgqck553Tm4"}
+    muted={true}
+    loop={true}
+    caption={
+        <>
+            Changes on Vercel—such as new builds, completed deployments, or
+            project changes—are instantly reflected in the Zeitgeist app thanks
+            to its background notifications.
+        </>
+    }
+
+/>
 
 To make this kind of event propogation simple, I created a SwiftUI View modifier
 that makes a view respond to these events, and runs some asynchronous code
@@ -248,5 +266,15 @@ encrypted values on-demand to protect sensitive information. The app also lets
 you create, update, and delete environment variables. Combined with the ability
 to rebuild deployments, this makes it trivial to update an environment variable
 and rebuild a deployment to apply those changes, all on your phone.
+
+---
+
+Like most of my side projects, Zeitgeist was built to serve a personal need; I’m
+thrilled to see it providing value to so many other developers, too. It's also
+one of the most architecturally complex and utilitarian projects in my
+portfolio, and a fun challenge to maintain the balance between simplicity and
+power.
+
+<Reviews appId="zeitgeist" />
 
 </div>

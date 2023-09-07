@@ -27,3 +27,19 @@
 .scrollSnapping > * {
   scroll-snap-align: center;
 }
+
+.root::-webkit-scrollbar {
+  height: 1em;
+  width: 1em;
+}
+
+.root::-webkit-scrollbar-thumb {
+  background-color: rgba(128, 128, 128, 0.3);
+  border: 0.25em solid transparent;
+  background-clip: padding-box;
+  border-radius: 1em;
+}
+
+.root::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(128, 128, 128, 0.5);
+}

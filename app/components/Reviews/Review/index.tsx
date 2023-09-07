@@ -1,3 +1,4 @@
+import ReviewCard from "../ReviewCard"
 import styles from "./styles.module.css"
 
 export default function Review({ title, children, stars }) {
@@ -7,11 +8,11 @@ export default function Review({ title, children, stars }) {
     .fill(emptyStar)
     .map((value, index) => (index < stars ? filledStar : value))
   return (
-    <div className={styles.root}>
+    <ReviewCard>
       <header>
         <strong>{title}</strong> <span className={styles.rating}>{rating}</span>
       </header>
       {children}
-    </div>
+    </ReviewCard>
   )
 }

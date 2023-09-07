@@ -19,9 +19,13 @@
 
 .activeSegment {
   position: relative;
-  color: var(--site-color);
 }
 
 .activeSegment::after {
   content: "*";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--site-color);
 }
