@@ -34,7 +34,7 @@
     "remark-math": "5.1.1",
     "remark-slug": "^7.0.1",
     "remark-toc": "^8.0.1",
-    "sharp": "^0.32.1",
+    "sharp": "^0.32.6",
     "typescript": "^5.0.4"
   },
   "devDependencies": {
