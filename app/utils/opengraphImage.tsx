@@ -1,5 +1,5 @@
 import widont from "@/app/utils/widont"
-import { ImageResponse } from "next/server"
+import { ImageResponse } from "next/og"
 
 const tiemposHeadline = fetch(
   new URL("https://daneden.me/og-fonts/TiemposHeadline-Light.otf")
