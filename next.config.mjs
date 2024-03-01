@@ -12,6 +12,10 @@ const withMDX = nextMdx({
 const config = {
   pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
 
+  experimental: {
+    optimizePackageImports: ["@p5-wrapper/next", "@p5-wrapper/react"],
+  },
+
   redirects() {
     return [
       {
