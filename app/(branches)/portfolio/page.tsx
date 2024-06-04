@@ -113,7 +113,7 @@ export default function PortfolioPage() {
       <h2>Meta</h2>
       <h3>2024–</h3>
       <p>
-        Currently, I work in the Reality Labs’ Avatars & Identity org, focused on
+        Currently, I work in the Reality Labs Avatars & Identity org, focused on
         supporting a robust, expressive avatar editor experience across Meta’s
         family of apps.
       </p>
