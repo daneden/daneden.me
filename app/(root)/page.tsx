@@ -13,9 +13,9 @@ export default function HomePage() {
         <div className={`${styles.intro} ${styles.spanall}`}>
           <p className={styles.xxl}>
             Daniel Eden is a Product Designer at{" "}
-            <a href="https://meta.com/">Meta</a> in London, working on making
-            Customer Support experiences that are more equitable, human, and
-            helpful. He spends his time <Link href="/blog">writing</Link>,
+            <a href="https://about.meta.com/uk/realitylabs/">Meta Reality Labs</a>,
+            working on Avatars & Identity, helping people express their full selves
+            in the Metaverse. He spends his time <Link href="/blog">writing</Link>,
             thinking, <a rel="me" href="https://threads.net/@_dte">posting</a>, and
             talking about Design Systems: how they scale, how they break, and
             the people&nbsp;that maintain&nbsp;them.

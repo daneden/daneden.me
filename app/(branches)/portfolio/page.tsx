@@ -111,9 +111,15 @@ export default function PortfolioPage() {
 
       <hr />
       <h2>Meta</h2>
-      <h3>2021–</h3>
+      <h3>2024–</h3>
       <p>
-        I’m currently working as a Product Designer on Meta’s Customer Support
+        Currently, I work in the Reality Labs Avatars & Identity org, focused on
+        supporting a robust, expressive avatar editor experience across Meta’s
+        family of apps.
+      </p>
+      <h3>2021–2024</h3>
+      <p>
+        From 2021–2024, I worked as a Product Designer on Meta’s Customer Support
         team. Our team is working to build customer support experiences that are
         more equitable, human, and helpful for Meta’s billions of customers.
       </p>
