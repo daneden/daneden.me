@@ -1,6 +1,30 @@
 {
   "mediaItems": [
     {
+      "title": "The Skull",
+      "type": "book",
+      "author": "Jon Klassen",
+      "coverImage": {
+        "width": 1135,
+        "height": 1500,
+        "url": "/uploads/playlist/the-skull.jpg"
+      },
+      "quote": "Otilla looked up to where the voice had come from. In a window above the door, she saw a skull looking at her.",
+      "url": "https://uk.bookshop.org/a/3170/9781529509571"
+    },
+    {
+      "title": "Godfather Death",
+      "type": "book",
+      "author": "Sally Nicholls, Júlia Sàrda",
+      "coverImage": {
+        "width": 1076,
+        "height": 1500,
+        "url": "/uploads/playlist/godfather-death.jpg"
+      },
+      "quote": "You cannot bargain with me. You cannot bribe me. You cannot steal what is mine. No one can escape me. And I will be your son’s godfather.",
+      "url": "https://amzn.to/3VcKjab"
+    },
+    {
       "title": "Seeing Like a State",
       "type": "book",
       "author": "James C. Scott",
