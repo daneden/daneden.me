@@ -1,6 +1,12 @@
 {
   "posts": [
     {
+      "id": "do-less",
+      "title": "Do Less",
+      "description": "How can you create more value with fewer resources? The answer is simple: do less.",
+      "date": "2025-02-15"
+    },
+    {
       "id": "three-phases-of-design-systems",
       "title": "Three Phases of Life for Design Systems",
       "description": "Design systems can be an intimidating undertaking: how can we create something that is robust and supports so many different needs? I’m here to tell you that the path you’re on is years long, but well worth it. Broadly speaking, your design system will undergo three phases of life: reflection, anticipation, and influence.",
