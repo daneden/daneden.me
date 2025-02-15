@@ -11,6 +11,7 @@ interface Props {
   muted: boolean
   width?: number
   height?: number
+  className?: string
 }
 
 export default function MuxVideo({
@@ -25,6 +26,7 @@ export default function MuxVideo({
   muted = false,
   width,
   height,
+  className,
 }: Props) {
   const posterSrc =
     poster == undefined
@@ -33,6 +35,7 @@ export default function MuxVideo({
   return (
     <figure>
       <video
+        className={className}
         autoPlay={autoPlay}
         controls={controls}
         loop={loop}

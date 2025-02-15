@@ -366,6 +366,11 @@ img {
   text-align: center;
 }
 
+.br-l {
+  border-radius: var(--sp-l);
+  overflow: hidden;
+}
+
 @media (prefers-color-scheme: dark) {
   .invertInDarkMode {
     filter: invert(100%) hue-rotate(180deg);
