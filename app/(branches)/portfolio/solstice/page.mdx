@@ -1,10 +1,10 @@
-import SolsticeTitle from "./SolsticeTitle"
-import DeviceFrame, { DeviceModel } from "@/app/components/DeviceFrame"
-import MuxVideo from "@/app/components/MuxVideo"
 import Breakout from "@/app/components/Breakout"
+import DeviceFrame, { DeviceModel } from "@/app/components/DeviceFrame"
 import HScroll from "@/app/components/HScroll"
-import "./styles.css"
+import MuxVideo from "@/app/components/MuxVideo"
 import Reviews from "@/app/components/Reviews"
+import SolsticeTitle from "./SolsticeTitle"
+import "./styles.css"
 
 export const metadata = {
     title: "Deep Dive: Solstice",
@@ -297,7 +297,7 @@ distance between sunrise and sunset.
 
 <Breakout padding={false} style={{ marginBlockEnd: "var(--sp-m)" }}>
     <HScroll>
-        <DeviceFrame device={DeviceModel.iPhone14Pro}>
+        <DeviceFrame model={DeviceModel.iPhone14Pro}>
             <MuxVideo
                 autoPlay={true}
                 playsInline={true}
@@ -310,7 +310,7 @@ distance between sunrise and sunset.
                 height={1920}
             />
         </DeviceFrame>
-        <DeviceFrame device={DeviceModel.iPhone14Pro}>
+        <DeviceFrame model={DeviceModel.iPhone14Pro}>
             <MuxVideo
                 autoPlay={true}
                 playsInline={true}
@@ -323,7 +323,7 @@ distance between sunrise and sunset.
                 height={1920}
             />
         </DeviceFrame>
-        <DeviceFrame device={DeviceModel.iPhone14Pro}>
+        <DeviceFrame model={DeviceModel.iPhone14Pro}>
             <MuxVideo
                 autoPlay={true}
                 playsInline={true}
@@ -336,7 +336,7 @@ distance between sunrise and sunset.
                 height={1920}
             />
         </DeviceFrame>
-        <DeviceFrame device={DeviceModel.iPhone14Pro}>
+        <DeviceFrame model={DeviceModel.iPhone14Pro}>
             <MuxVideo
                 autoPlay={true}
                 playsInline={true}
@@ -349,7 +349,7 @@ distance between sunrise and sunset.
                 height={1920}
             />
         </DeviceFrame>
-        <DeviceFrame device={DeviceModel.iPhone14Pro}>
+        <DeviceFrame model={DeviceModel.iPhone14Pro}>
             <MuxVideo
                 autoPlay={true}
                 playsInline={true}

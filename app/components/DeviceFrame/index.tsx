@@ -1,33 +1,40 @@
 import Image from "next/image"
 import { ReactNode } from "react"
+import iPadPro11M4Bezel from "./bezels/iPadPro11M4.png"
 import iPhone14ProBezel from "./bezels/iPhone14Pro.png"
 import styles from "./styles.module.css"
 
 export enum DeviceModel {
   iPhone14Pro,
+  iPadPro11M4,
 }
 
-function getBezel(device: DeviceModel = DeviceModel.iPhone14Pro) {
+function getBezel(device: DeviceModel) {
   switch (device) {
     case DeviceModel.iPhone14Pro:
       return iPhone14ProBezel
+    case DeviceModel.iPadPro11M4:
+      return iPadPro11M4Bezel
   }
 }
 
-function getBezelMargin(device: DeviceModel = DeviceModel.iPhone14Pro) {
+function getBezelMargin(device: DeviceModel) {
   switch (device) {
     case DeviceModel.iPhone14Pro:
       return 5.925
+    case DeviceModel.iPadPro11M4:
+      return 4.166
   }
 }
 
 interface Props {
-  device: DeviceModel
+  model: DeviceModel
   children: ReactNode
 }
 
-export default function DeviceFrame({ children, device }: Props) {
-  const frame = getBezel(device)
+export default function DeviceFrame({ children, model }: Props) {
+  console.log(model)
+  const frame = getBezel(model)
   const aspectRatio = frame.width / frame.height
 
   return (
@@ -37,7 +44,7 @@ export default function DeviceFrame({ children, device }: Props) {
         <div
           className={styles.children}
           style={{
-            padding: `${getBezelMargin(device)}%`,
+            padding: `${getBezelMargin(model)}%`,
           }}
         >
           {children}

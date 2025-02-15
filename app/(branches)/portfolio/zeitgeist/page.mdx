@@ -1,11 +1,11 @@
-import ZeitgeistTitle from "./ZeitgeistTitle"
-import DeviceFrame, { DeviceModel } from "@/app/components/DeviceFrame"
-import MuxVideo from "@/app/components/MuxVideo"
 import Breakout from "@/app/components/Breakout"
+import DeviceFrame, { DeviceModel } from "@/app/components/DeviceFrame"
 import HScroll from "@/app/components/HScroll"
 import LightSwitchImage from "@/app/components/LightSwitchImage"
-import "./styles.css"
+import MuxVideo from "@/app/components/MuxVideo"
 import Reviews from "@/app/components/Reviews"
+import "./styles.css"
+import ZeitgeistTitle from "./ZeitgeistTitle"
 
 export const metadata = {
     title: "Deep Dive: Zeitgeist",
@@ -244,7 +244,7 @@ Zeitgeist supports environment variable editing, redeploying with or without
 build caches, deleting deployments, promoting to production, following build
 logs, with a feature list that continues to grow.
 
-<DeviceFrame device={DeviceModel.iPhone14Pro}>
+<DeviceFrame model={DeviceModel.iPhone14Pro}>
     <MuxVideo
         autoPlay={true}
         playsInline={true}

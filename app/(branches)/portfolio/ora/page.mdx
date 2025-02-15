@@ -1,0 +1,148 @@
+import DeviceFrame, { DeviceModel } from "@/app/components/DeviceFrame"
+import MuxVideo from "@/app/components/MuxVideo"
+import OraTitle from "./OraTitle"
+
+export const metadata = {
+    title: "Deep Dive: Ora",
+    description:
+        "A deep dive into how the Ora app for iOS and watchOS was designed and built",
+    openGraph: {
+        title: "Deep Dive: Ora",
+        description:
+            "A deep dive into how the Ora app for iOS and watchOS was designed and built",
+    },
+}
+
+<OraTitle />
+
+<Image
+    alt="Ora running on an iPhone and an Apple Watch Ultra. The iPhone app features a World Clock view, showing times around the world on a globe."
+    src="/uploads/portfolio/ora-devices.png"
+    width={2120}
+    height={2303}
+/>
+
+Every February in the Eden household, we look forward to tuning in to
+[softball](https://www.ncaa.com/sports/softball/d1) season. Being based in the
+UK makes it difficult to watch all the games; ESPN and other exclusive rights
+holders make it notoriously difficult to stream games outside of the US, but
+there's another, more everyday problem: what time the games are happening.
+
+The world clock features built-in to our phones and computers are great at
+letting us know what time it is _now_ around the world, but less useful at
+answering questions like: What time will it be in London when it’s 5pm in
+Clearwater, Florida?
+
+After a couple of years of scratching my brain about these annual questions, I
+decided to do something about it by building an app.
+
+## It’s about time
+
+When I was building [Solstice](/portfolio/solstice), many of the bugs I
+encountered had something to do with time. Part of this was due to the Time
+Travel feature, which allows people to travel through time up to 6 months into
+the past or future, to see how the daylight changes.
+
+Spending months solving these bugs and making Time Travel work as intuitively as
+possible made me eager to incorporate the feature into another app.
+
+It was fun taking a feature I’d built for traversing time on the order of days
+and months, and adapting it for traversing time on the order of hours.
+
+## It’s all in the details
+
+Ora is a wildly simple app—it’s a lot like Solstice’s initial 1.0 release, just
+focusing on doing one job well. Creating something really simple meant I could
+dedicate less time to building features and fixing bugs, and more time to adding
+small details that many will never notice, but reward those who do.
+
+<DeviceFrame model={DeviceModel.iPhone14Pro}>
+    <MuxVideo
+        autoPlay={true}
+        playsInline={true}
+        muted={true}
+        controls={false}
+        loop={true}
+        id={"Rzna5BV4uIKEFnLS4N7hkQo39p7swHwiIwwGWX2YfyI"}
+    />
+</DeviceFrame>
+
+One of Ora’s more subtle details is the relative delay of clocks. The further
+away from GMT the time zone is, the longer it takes for the time change to
+animate. It’s still only a matter of milliseconds, but adds a sense of distance
+between the locations.
+
+<MuxVideo
+    className="br-l"
+    autoPlay={true}
+    playsInline={true}
+    muted={true}
+    controls={false}
+    loop={true}
+    id={"p23h02ZkPb6xzOSf6gDbd97Dv6aa01TdVNEVuEnjr00qh00"}
+/>
+
+I spent a while adding a subtle highlight edge to the clocks that appear on the
+globe. As time travel is adjusted, this highlight slowly moves around the edge
+of the container, suggestive of the way the sun’s light changes throughout the
+day.
+
+<MuxVideo
+    className="br-l"
+    autoPlay={true}
+    playsInline={true}
+    muted={true}
+    controls={false}
+    loop={true}
+    id={"Am9DDgQc2dMDaxujtIuPPkTq8pLHmLWuijXPYNbLtYg"}
+/>
+
+There are a couple of places where an animated version of the Ora app icon shows
+up. The top navigation icon that toggles the World Clock view animates while
+Time Travel is used. The more obviously-animated version appears on the “About”
+screen, and hides some details of its own.
+
+As each “segment” of the globe animates from one edge to the other, its opacity
+fades from semi-transparent, to opaque, and back again. The stroke width also
+varies _ever_ so slightly, suggestive of it actually rotating out of view on a
+sphere.
+
+<DeviceFrame model={DeviceModel.iPadPro11M4}>
+    <MuxVideo
+        autoPlay={true}
+        playsInline={true}
+        muted={true}
+        controls={false}
+        loop={true}
+        id={"H9otgbV02iILwFNXNtxEZZf9CtmpQ8fkf7lskti6dIIQ"}
+    />
+</DeviceFrame>
+
+The Time Travel UI didn't look right occupying the full width of the screen on
+Ora for iPad, so I made it smaller. It was hard to decide whether it should live
+on the left or right bottom corner, so instead, I let people put it in their
+corner of preference, making sure it was possible to “flick” it from one side of
+the screen to another.
+
+<DeviceFrame model={DeviceModel.iPhone14Pro}>
+    <MuxVideo
+        autoPlay={true}
+        playsInline={true}
+        muted={true}
+        controls={false}
+        loop={true}
+        id={"7unk7FdOX02ST6qONonvtx2FjpZf2LYO6nG1Mx01AQTdk"}
+    />
+</DeviceFrame>
+
+On iPhone, I wanted to have the Time Travel bar always visible (unlike in
+Solstice), which meant it had to be as unintrustive as possible. I really like
+the playback bar in Apple Music and borrowed some of the same details for Ora,
+including the progressive blur that obscures content as it scrolls underneath
+it. One detail I added was to give the bottom corners an exaggerated radius to
+match the radius of the screen.
+
+---
+
+Ora is free to
+[download on the app store](https://apps.apple.com/us/app/ora-world-clock/id6502857758).
