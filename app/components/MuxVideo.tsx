@@ -112,7 +112,8 @@ export default function MuxVideo({
     height,
     poster: posterSrc,
     muted,
-    preload: preload ? "auto" : "none"
+    preload: preload ? "auto" : "none",
+    suppressHydrationWarning: true
   }
 
   const videoElement = Hls.isSupported() ? <video ref={playerRef} {...props} /> : <video
