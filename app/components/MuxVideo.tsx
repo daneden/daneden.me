@@ -1,3 +1,6 @@
+"use client"
+import ReactHlsPlayer from "react-hls-player";
+
 interface Props {
   autoPlay: boolean
   caption?: string
@@ -32,25 +35,25 @@ export default function MuxVideo({
     poster == undefined
       ? undefined
       : `https://image.mux.com/${id}/thumbnail.webp?time=${poster}`
+
+      const src = `https://stream.mux.com/${id}.m3u8`
+
   return (
     <figure>
-      <video
+      {/** @ts-ignore */}
+      <ReactHlsPlayer
+        src={src}
         className={className}
         autoPlay={autoPlay}
+        playsInline={playsInline}
         controls={controls}
         loop={loop}
         preload={preload ? "auto" : "none"}
-        playsInline={playsInline}
         poster={posterSrc}
-        muted={muted}
         width={width}
         height={height}
-      >
-        <source
-          src={`https://stream.mux.com/${id}.m3u8`}
-          type="application/x-mpegURL"
-        />
-      </video>
+        muted={muted}
+      />
 
       {caption && <figcaption>{caption}</figcaption>}
     </figure>

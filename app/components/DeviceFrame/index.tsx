@@ -33,7 +33,6 @@ interface Props {
 }
 
 export default function DeviceFrame({ children, model }: Props) {
-  console.log(model)
   const frame = getBezel(model)
   const aspectRatio = frame.width / frame.height
 
