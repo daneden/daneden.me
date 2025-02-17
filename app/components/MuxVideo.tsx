@@ -1,5 +1,7 @@
 "use client"
-import ReactHlsPlayer from "react-hls-player";
+
+import React, { useEffect, useRef } from 'react';
+import Hls, { HlsConfig } from 'hls.js';
 
 interface Props {
   autoPlay: boolean
@@ -31,29 +33,97 @@ export default function MuxVideo({
   height,
   className,
 }: Props) {
+  const playerRef = useRef<HTMLVideoElement>(null)
+
   const posterSrc =
     poster == undefined
       ? undefined
       : `https://image.mux.com/${id}/thumbnail.webp?time=${poster}`
 
-      const src = `https://stream.mux.com/${id}.m3u8`
+  const src = `https://stream.mux.com/${id}.m3u8`
+
+  useEffect(() => {
+    let hls: Hls;
+
+    function _initPlayer() {
+      if (hls != null) {
+        hls.destroy()
+      }
+
+      const newHls = new Hls({
+        enableWorker: false
+      })
+
+      if (playerRef.current != null) {
+        newHls.attachMedia(playerRef.current)
+      }
+
+      newHls.on(Hls.Events.MEDIA_ATTACHED, () => {
+        newHls.loadSource(src)
+
+        newHls.on(Hls.Events.MANIFEST_PARSED, () => {
+          if (autoPlay) {
+            playerRef?.current
+              ?.play()
+              .catch(() => {
+                console.log("Unable to autoplay prior to user interaction with the DOM")
+              })
+          }
+        })
+      })
+
+      newHls.on(Hls.Events.ERROR, function (event, data) {
+        if (data.fatal) {
+          switch (data.type) {
+            case Hls.ErrorTypes.NETWORK_ERROR:
+              newHls.startLoad();
+              break;
+            case Hls.ErrorTypes.MEDIA_ERROR:
+              newHls.recoverMediaError();
+              break;
+            default:
+              _initPlayer();
+              break;
+          }
+        }
+      })
+
+      hls = newHls
+    }
+
+    if (Hls.isSupported()) {
+      _initPlayer();
+    }
+
+    return () => {
+      if (hls != null) {
+        hls.destroy()
+      }
+    }
+  }, [autoPlay, playerRef, src])
+
+  const props = {
+    autoPlay,
+    className,
+    playsInline,
+    loop,
+    controls,
+    width,
+    height,
+    poster: posterSrc,
+    muted,
+    preload: preload ? "auto" : "none"
+  }
+
+  const videoElement = Hls.isSupported() ? <video ref={playerRef} {...props} /> : <video
+    ref={playerRef}
+    src={src}
+    {...props}
+  />
 
   return (
     <figure>
-      {/** @ts-ignore */}
-      <ReactHlsPlayer
-        src={src}
-        className={className}
-        autoPlay={autoPlay}
-        playsInline={playsInline}
-        controls={controls}
-        loop={loop}
-        preload={preload ? "auto" : "none"}
-        poster={posterSrc}
-        width={width}
-        height={height}
-        muted={muted}
-      />
+      {videoElement}
 
       {caption && <figcaption>{caption}</figcaption>}
     </figure>

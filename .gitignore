@@ -2,6 +2,9 @@
 /node_modules
 /.pnp
 .pnp.js
+/.yarn/
+.pnp.cjs
+.pnp.loader.mjs
 .husky
 
 # testing
