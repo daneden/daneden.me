@@ -30,19 +30,17 @@
     "remark-directive": "^3.0.1",
     "remark-gfm": "^4.0.1",
     "remark-math": "^6.0.0",
-    "remark-slug": "^8.0.0",
     "remark-toc": "^9.0.0",
     "sharp": "^0.33.5",
     "typescript": "^5.7.3"
   },
   "devDependencies": {
-    "@types/hls.js": "^1.0.0",
     "@types/node": "^18.16.2",
     "@types/react": "^19.0.10",
     "encoding": "^0.1.13",
-    "eslint": "8.39.0",
-    "eslint-config-next": "^13.4.0",
-    "prettier": "^2.8.8",
+    "eslint": "^9.20.1",
+    "eslint-config-next": "^15.1.7",
+    "prettier": "^3.5.1",
     "rss": "^1.2.2"
   }
 }
