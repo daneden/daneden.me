@@ -27,8 +27,8 @@ export default async function Reviews({ appId }: { appId: string }) {
 
   const sortedReviews = reviews.sort((lhs, rhs) => {
     return (
-      new Date(lhs.attributes.createdDate).getTime() -
-      new Date(rhs.attributes.createdDate).getTime()
+      new Date(rhs.attributes.createdDate).getTime() -
+      new Date(lhs.attributes.createdDate).getTime()
     )
   })
 
