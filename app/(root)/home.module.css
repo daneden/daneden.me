@@ -8,7 +8,7 @@
 }
 
 .xxl {
-  font-size: clamp(1.4rem, 8vmin, 3.5rem);
+  font-size: clamp(1.4rem, 7.5vmin, 3.5rem);
   line-height: 1.2;
   font-style: normal;
   font-family: var(--font-sans);
