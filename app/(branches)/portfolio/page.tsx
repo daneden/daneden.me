@@ -1,3 +1,4 @@
+import Image from "@/app/components/Image"
 import LightswitchImage from "@/app/components/LightSwitchImage"
 import { Metadata } from "next"
 import Link from "next/link"
@@ -19,6 +20,34 @@ export default function PortfolioPage() {
         designing and building products at all kinds of scale. Below you’ll find
         a selection of my favourite projects and experiences.
       </p>
+      <section>
+        <header className={styles.portfolioHeader}>
+          <h3 className={`h1 ${styles.title}`}>Ora</h3>
+          <span className="small meta">Design &amp; Development</span>
+        </header>
+
+        <Image
+          alt="The Ora app, showing an interactive globe with different time zones highlighted"
+          height={2716}
+          src="/uploads/portfolio/ora.png"
+          width={1339}
+          className={styles.appScreenshot}
+        />
+
+        <p>
+          Ora is a world clock app unlike any other. It lets you see the time around the world—literally. And unlike other world clock apps, you can use Time Travel to answer questions like “What time will it be in London when it’s 5pm in New York?”
+        </p>
+        <p>
+          You can{" "}
+          <Link href="/portfolio/ora">
+            read about how Ora was made
+          </Link>
+          , or{" "}
+          <Link href="https://ora.daneden.me">visit the microsite</Link> to
+          learn more and download for free.
+        </p>
+      </section>
+
       <section>
         <header className={styles.portfolioHeader}>
           <h3 className={`h1 ${styles.title}`}>Solstice</h3>

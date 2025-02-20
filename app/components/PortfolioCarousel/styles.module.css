@@ -1,0 +1,102 @@
+.root {
+  overflow-x: scroll;
+  max-width: 100%;
+  display: flex;
+  padding: .75rem;
+  gap: .75rem;
+  font-family: var(--font-sans);
+  --card-count: 3.5;
+}
+
+.root h2 {
+  font-family: var(--font-sans);
+  margin: 0;
+  padding: 0;
+  font-variation-settings: "wdth" 132;
+}
+
+@media screen and (max-width: 1256px) {
+  .root {
+    --card-count: 2.5;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .root {
+    --card-count: 1.5;
+  }
+}
+
+.card {
+  --flex-basis: calc((100 / var(--card-count)) * 1vw);
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 var(--flex-basis);
+  aspect-ratio: 5 / 8;
+  overflow: hidden;
+  background-color: rgba(128, 128, 128, 0.1);
+  --highlight-color: rgba(0, 0, 0, 0.125);
+  --button-background: rgba(250, 250, 250, 0.9);
+  --border-radius: .75em;
+  padding: .75rem;
+  border-radius: .75em;
+  position: relative;
+  border: 1px solid transparent;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+ .wwcgImage > img {
+  filter: invert()
+  }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  .card {
+    --highlight-color: rgba(255, 255, 255, 0.1);
+    --button-background: rgba(20, 20, 20, 0.9);
+  }
+}
+
+.highlight {
+  background-clip: padding-box;
+}
+
+.highlight::after {
+  border-radius: var(--border-radius);
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  pointer-events: none;
+  border: 1px solid var(--highlight-color);
+  mask-image: linear-gradient(black, rgba(0, 0, 0, 0.5));
+}
+
+.stretcher {
+display: flex;
+flex: 1 1 auto;
+place-items: center;
+}
+
+.button {
+  --border-radius: 2em;
+  background-color: var(--button-background);
+  border-radius: 2rem;
+  padding: 0.75em 1em;
+  backdrop-filter: blur(8px);
+  position: absolute;
+  bottom: .75em;
+  right: .75em;
+  text-decoration: none;
+  z-index: 10;
+  font-size: .8em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05), 0 1px 1px rgba(0, 0, 0, 0.125), 0 2px 4px rgba(0, 0, 0, 0.05);
+  line-height: 1;
+}
+
+.button:hover {
+  background-color: var(--site-color);
+  color: #fff;
+}
