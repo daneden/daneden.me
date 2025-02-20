@@ -49,6 +49,8 @@
     minmax(0, 1fr);
   --center-column: 2 / 3;
 
+  --font-sans: system-ui, -apple-system;
+
   --font-body: var(--font-serif);
   --font-caption: var(--font-sans);
 
@@ -57,7 +59,7 @@
   font-family: var(--font-serif);
   font-size: clamp(100%, 2.75vw, 125%);
   line-height: var(--baseline);
-  font-feature-settings: "ss02" 1;
+  font-feature-settings: "ss02" 1, "cv06" 1;
   font-variant-alternates: stylistic(ss02);
 }
 

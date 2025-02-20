@@ -4,7 +4,7 @@ import SkipLink from "@/app/components/SkipLink"
 import Wrapper from "@/app/components/Wrapper"
 import { Analytics } from "@vercel/analytics/react"
 import { JetBrains_Mono } from "next/font/google"
-import { soehne, tiemposHeadline, tiemposText } from "../fonts"
+import { tiemposHeadline, tiemposText } from "../fonts"
 import sharedMetadata from "../metadata"
 import "../styles/global.css"
 import "../styles/syntax.css"
@@ -24,7 +24,7 @@ export default function BranchPageLayout({
 }) {
   return (
     <html
-      className={`${soehne.variable} ${tiemposHeadline.variable} ${tiemposText.variable}`}
+      className={`${tiemposHeadline.variable} ${tiemposText.variable}`}
     >
       <body>
         <SkipLink />

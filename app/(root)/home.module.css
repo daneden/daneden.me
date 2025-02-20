@@ -1,6 +1,6 @@
 .root {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
 
   --tile-padding: 1.8vmax;
 }
@@ -9,122 +9,11 @@
   padding: var(--tile-padding);
 }
 
-.spanall {
-  grid-column: 1 / 3;
-}
-
-.root h2 {
-  line-height: 1;
-  padding: 0;
-  margin: 0;
-}
-
-.tile {
-  font-size: clamp(1.25rem, 2vmin, 3.5rem);
-  background-color: var(--tile-background);
-  color: var(--tile-foreground);
-  aspect-ratio: 1 / 1;
-  padding: var(--tile-padding);
-  text-align: center;
-  overflow: hidden;
-  transition: 0.075s ease;
-}
-
-.tile:is(:hover, :focus):not(.whereWeCanGo) {
-  background-color: var(--tile-foreground);
-  color: var(--tile-background);
-  box-shadow: inset 0 0 0 calc(var(--tile-padding) / 2) currentcolor;
-}
-
-a.tile {
-  text-decoration: none;
-}
-
-.tile img {
-  max-width: 21rem !important;
-  margin: 0 auto;
-  display: block;
-  position: relative;
-}
-
-.solstice {
-  --tile-background: rgb(46, 177, 200);
-  --tile-foreground: mistyrose;
-}
-
-@supports (background-color: lch(60% 180 192)) {
-  .solstice {
-    --tile-background: lch(60% 180 192);
-  }
-}
-
-.whereWeCanGo {
-  --tile-background: orange;
-  --tile-foreground: #060405;
-  --hover-color: slateblue;
-}
-
-.wwcgImage {
-  object-fit: contain;
-  mix-blend-mode: luminosity;
-
-  width: 100%;
-}
-
-.zeitgeist {
-  --tile-background: seagreen;
-  --tile-foreground: powderblue;
-}
-
-.ora {
-  --tile-background: #303030;
-  --tile-foreground: color(display-p3 0.997 0.435 0);
-}
-
-.extras {
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
-  padding: 0;
-}
-
-.extras a {
-  padding: var(--tile-padding);
-  padding-block-end: calc(var(--tile-padding) * 1.2);
-  display: grid;
-  place-items: center;
-  color: var(--site-color);
-  text-decoration: none;
-  background-color: var(--tile-background);
-  transition: 0.075s ease;
-}
-
-.extras a:is(:hover, :focus) {
-  background-color: var(--site-color) !important;
-  color: var(--tile-background) !important;
-  box-shadow: inset 0 0 0 calc(var(--tile-padding) / 2) currentcolor;
-}
-
-.extras a:nth-child(1) {
-  --tile-background: khaki;
-  --site-color: orangered;
-}
-
-.extras a:nth-child(2) {
-  --tile-background: lightseagreen;
-  --site-color: midnightblue;
-}
-
-.extras a:nth-child(3) {
-  --tile-background: plum;
-  --site-color: royalblue;
-}
-
 .xxl {
   font-size: clamp(1.5rem, 8vmin, 3.5rem);
   line-height: 1.2;
   font-style: normal;
   font-family: var(--font-sans);
-  letter-spacing: -0.025em;
 }
 
 .intro .xxl a {
@@ -132,21 +21,4 @@ a.tile {
   font-family: var(--font-heading);
   letter-spacing: 0;
   font-style: italic;
-}
-
-@media (max-width: 1000px) {
-  .root {
-    grid-template-columns: 1fr;
-    display: block;
-  }
-
-  .spanall {
-    grid-column: 1 / 2;
-  }
-
-  .tile {
-    aspect-ratio: unset;
-    width: 100%;
-    display: block;
-  }
 }
