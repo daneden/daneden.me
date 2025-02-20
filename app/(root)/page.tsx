@@ -13,25 +13,26 @@ export default function HomePage() {
         <div className={`${styles.intro} ${styles.spanall}`}>
           <p className={styles.xxl}>
             Daniel Eden is a Product Designer at{" "}
-            <a href="https://about.meta.com/uk/realitylabs/">Meta Reality Labs</a>,
-            working on Avatars & Identity, helping people express their full selves
-            in the Metaverse. He spends his time <Link href="/blog">writing</Link>,
-            thinking, <a rel="me" href="https://threads.net/@_dte">posting</a>, and
-            talking about Design Systems: how they scale, how they break, and
-            the people&nbsp;that maintain&nbsp;them.
+            <a href="https://about.meta.com/uk/realitylabs/">
+              Meta Reality Labs
+            </a>
+            , working on Avatars & Identity, helping people express their full
+            selves in the Metaverse. He spends his time{" "}
+            <Link href="/blog">writing</Link>, thinking,{" "}
+            <a rel="me" href="https://threads.net/@_dte">
+              posting
+            </a>
+            , and talking about Design Systems: how they scale, how they break,
+            and the people&nbsp;that maintain&nbsp;them.
           </p>
         </div>
-        <Link
-          className={`${styles.tile} ${styles.solstice}`}
-          href="/portfolio/solstice"
-        >
-          <h2 className={styles.xxl}>Solstice</h2>
-          <p>An iOS app about daylight</p>
-          <LightswitchImage
-            alt="The Solstice app, showing sunrise and sunset information for Hackney, London"
+        <Link className={`${styles.tile} ${styles.ora}`} href="/portfolio/ora">
+          <h2 className={styles.xxl}>Ora</h2>
+          <p>It’s about time</p>
+          <Image
+            alt="The Ora app, showing an interactive globe with different time zones highlighted"
             height={2716}
-            srcDark="/uploads/portfolio/solstice-dark.png"
-            srcLight="/uploads/portfolio/solstice-light.png"
+            src="/uploads/portfolio/ora.png"
             width={1339}
           />
         </Link>
@@ -53,16 +54,16 @@ export default function HomePage() {
           />
         </div>
         <Link
-          className={`${styles.tile} ${styles.zeitgeist}`}
-          href="/portfolio/zeitgeist"
+          className={`${styles.tile} ${styles.solstice}`}
+          href="/portfolio/solstice"
         >
-          <h2 className={styles.xxl}>Zeitgeist</h2>
-          <p>Monitor your Vercel deployments</p>
+          <h2 className={styles.xxl}>Solstice</h2>
+          <p>An iOS app about daylight</p>
           <LightswitchImage
-            alt="The Zeitgeist app, showing deployment details for a successful build"
+            alt="The Solstice app, showing sunrise and sunset information for Hackney, London"
             height={2716}
-            srcDark="/uploads/portfolio/zeitgeist-dark.png"
-            srcLight="/uploads/portfolio/zeitgeist-light.png"
+            srcDark="/uploads/portfolio/solstice-dark.png"
+            srcLight="/uploads/portfolio/solstice-light.png"
             width={1339}
           />
         </Link>

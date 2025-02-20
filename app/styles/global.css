@@ -55,7 +55,7 @@
   background-color: var(--wash-color);
   color: var(--text-color);
   font-family: var(--font-serif);
-  font-size: clamp(100%, 2.5vw, 115%);
+  font-size: clamp(100%, 2.75vw, 125%);
   line-height: var(--baseline);
   font-feature-settings: "ss02" 1;
   font-variant-alternates: stylistic(ss02);

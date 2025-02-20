@@ -76,6 +76,11 @@ a.tile {
   --tile-foreground: powderblue;
 }
 
+.ora {
+  --tile-background: #303030;
+  --tile-foreground: color(display-p3 0.997 0.435 0);
+}
+
 .extras {
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;

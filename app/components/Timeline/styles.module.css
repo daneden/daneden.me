@@ -26,7 +26,7 @@
 
 .root th,
 .root th + td {
-  border-top: 2px solid var(--meta-color) !important;
+  border-top: 1px solid var(--meta-color) !important;
 }
 
 .root a {
