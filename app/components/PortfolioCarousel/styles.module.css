@@ -32,7 +32,7 @@
   display: flex;
   flex-direction: column;
   flex: 1 0 var(--flex-basis);
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 5 / 8;
   overflow: hidden;
   background-color: rgba(128, 128, 128, 0.1);
   --highlight-color: rgba(0, 0, 0, 0.125);
@@ -91,7 +91,7 @@ place-items: center;
   right: .75em;
   text-decoration: none;
   z-index: 10;
-  font-size: .75em;
+  font-size: .8em;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05), 0 1px 1px rgba(0, 0, 0, 0.125), 0 2px 4px rgba(0, 0, 0, 0.05);
   line-height: 1;
 }
