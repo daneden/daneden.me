@@ -45,7 +45,7 @@ export default function PortfolioCarousel() {
     </div>
     <div className={cx(styles.card, styles.highlight)}>
       <h2>Zeitgeist</h2>
-      <p>An app for <Link href="https://vercel.com">Vercel</Link> developers for iPhone, iPad, and Apple Watch.</p>
+      <p>An app for <Link href="https://vercel.com">Vercel</Link> developers for iPhone, iPad, and Mac.</p>
       <DeviceFrame model={DeviceModel.iPhone14Pro}>
         <MuxVideo id="4Df02lKW9dwgsYydlMXp02tEnR6CAk5S3g5eXxRPoGm00o" width={589} height={1278} autoPlay={true} loop={true} controls={false} muted={true} preload={true} playsInline={true} />
       </DeviceFrame>
