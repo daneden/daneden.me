@@ -2,7 +2,8 @@ import Footer from "@/app/components/Footer"
 import Header from "@/app/components/Header"
 import SkipLink from "@/app/components/SkipLink"
 import Wrapper from "@/app/components/Wrapper"
-import { Analytics } from "@vercel/analytics/react"
+import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import { JetBrains_Mono } from "next/font/google"
 import { tiemposHeadline, tiemposText } from "../fonts"
 import sharedMetadata from "../metadata"
@@ -34,6 +35,7 @@ export default function BranchPageLayout({
           <Footer />
         </div>
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   )
