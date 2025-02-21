@@ -13,7 +13,7 @@ export default function PortfolioCarousel() {
       <h2>Ora</h2>
       <p>An app about time for iPhone, iPad, and Apple Watch.</p>
       <DeviceFrame model={DeviceModel.iPhone14Pro}>
-        <MuxVideo id="NhkXQ6j5cqn8EaKdsg3ob5octWKsDlZHG1e1vLt02HUY" width={589} height={1278} autoPlay={true} loop={true} controls={false} muted={true} preload={true} playsInline={true} />
+        <MuxVideo poster={1} id="NhkXQ6j5cqn8EaKdsg3ob5octWKsDlZHG1e1vLt02HUY" width={589} height={1278} autoPlay={true} loop={true} controls={false} muted={true} preload={true} playsInline={true} />
       </DeviceFrame>
       <Link className={cx(styles.button, styles.highlight)} href="/portfolio/ora">Learn more &rarr;</Link>
     </div>
@@ -21,7 +21,7 @@ export default function PortfolioCarousel() {
       <h2>Solstice</h2>
       <p>An app about daylight for iPhone, iPad, Mac, Apple Watch, and Apple Vision Pro.</p>
       <DeviceFrame model={DeviceModel.iPhone14Pro}>
-        <MuxVideo id="DNNKwHRzLg3qErq1ccG6GP8tCd1etvD5elgQQkqyks8" width={589} height={1278} autoPlay={true} loop={true} controls={false} muted={true} preload={true} playsInline={true} />
+        <MuxVideo poster={1} id="DNNKwHRzLg3qErq1ccG6GP8tCd1etvD5elgQQkqyks8" width={589} height={1278} autoPlay={true} loop={true} controls={false} muted={true} preload={true} playsInline={true} />
       </DeviceFrame>
       <Link className={cx(styles.button, styles.highlight)} href="/portfolio/solstice">Learn more &rarr;</Link>
     </div>
@@ -47,7 +47,7 @@ export default function PortfolioCarousel() {
       <h2>Zeitgeist</h2>
       <p>An app for <Link href="https://vercel.com">Vercel</Link> developers for iPhone, iPad, and Mac.</p>
       <DeviceFrame model={DeviceModel.iPhone14Pro}>
-        <MuxVideo id="4Df02lKW9dwgsYydlMXp02tEnR6CAk5S3g5eXxRPoGm00o" width={589} height={1278} autoPlay={true} loop={true} controls={false} muted={true} preload={true} playsInline={true} />
+        <MuxVideo poster={1} id="4Df02lKW9dwgsYydlMXp02tEnR6CAk5S3g5eXxRPoGm00o" width={589} height={1278} autoPlay={true} loop={true} controls={false} muted={true} preload={true} playsInline={true} />
       </DeviceFrame>
       <Link className={cx(styles.button, styles.highlight)} href="/portfolio/zeitgeist">Learn more &rarr;</Link>
     </div>
