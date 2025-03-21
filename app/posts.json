@@ -1,6 +1,12 @@
 {
   "posts": [
     {
+      "id": "the-wrong-table",
+      "title": "You’re at the wrong table",
+      "description": "Designers often lament that they want “a seat at the table”—more influence over product decisions and strategic direction. The problem is, we’re looking at the wrong table.",
+      "date": "2025-03-21"
+    },
+    {
       "id": "do-less",
       "title": "Do Less",
       "description": "How can you create more value with fewer resources? The answer is simple: do less.",

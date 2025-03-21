@@ -1,0 +1,50 @@
+import DesignDecisionsIllustration from "./DesignDecisionsIllustration"
+import ConstraintsIllustration from "./ConstraintsIllustration"
+import Breakout from "@/app/components/Breakout"
+import HScroll from "@/app/components/HScroll"
+
+export const metadata = {
+    title: "You’re at the wrong table",
+    description:
+        "Designers often lament that they want “a seat at the table”—more influence over product decisions and strategic direction. The problem is, we’re looking at the wrong table.",
+    openGraph: {
+        title: "You’re at the wrong table",
+        description:
+            "Designers often lament that they want “a seat at the table”—more influence over product decisions and strategic direction. The problem is, we’re looking at the wrong table.",
+        images: [
+            {
+                url: "/og/the-wrong-table",
+            },
+        ],
+    },
+}
+
+# What we mean when we talk about quality
+
+For a long time, digital product designers were _begging_ for a “seat at the table”. 
+
+<Breakout padding={false} style={{ marginBottom: "var(--sp-m)" }}>
+    <HScroll scrollSnapping={false}>
+        <DesignDecisionsIllustration />
+    </HScroll>
+</Breakout>
+
+Here are a few examples of the kinds of decisions that are often made at build-time, by engineers, in code:
+
+1. How many times a user can submit malformed input, and what happens before or after that limit
+2. Whether a view has a fixed size, or scales to different screen sizes
+3. An animation timing function
+4. Whether a parent/container or its child contents provides a margin between elements
+
+All of these decisions are _design decisions:_ choices that make a material difference to the end-user experience, or set constraints on how the features they're applied to can adapt in the future. Yet they happen far downstream from where most designers actively practice and, tellingly, where they _want_ to practice.
+
+<Breakout padding={false} style={{ marginBottom: "var(--sp-m)" }}>
+    <HScroll scrollSnapping={false}>
+        <ConstraintsIllustration />
+    </HScroll>
+</Breakout>
+
+The problem with leaving these choices to engineers working alone is twofold:
+
+1. **It creates distance between the _intended design_ and the actual product.** It is often the case that these kinds of “edge cases” or more trivial-seeming considerations are well-accounted for in the designers' mind, and may even seem so obvious to them that they don't feel the need to describe or render them in design specs.
+2. **It introduces constraints that might not be immediately obvious.** For example, deciding that the space between tiles in a grid layout is provided by the tiles themselves, and not by the container, suddenly introduces a constraint: the gap between tiles is _always expected_ to be the same size.
