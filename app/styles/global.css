@@ -154,6 +154,7 @@ h1,
   padding-bottom: var(--sp-l);
   padding-top: var(--sp-xl);
   letter-spacing: -0.0125em;
+  text-wrap: balance;
 }
 
 blockquote {
