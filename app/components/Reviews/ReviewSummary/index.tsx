@@ -16,7 +16,7 @@ export default function ReviewSummary({
     <ReviewCard>
       <div className="tac">
         <h1 className={styles.reviewAverage}>{reviewAverage.toFixed(1)}</h1>
-        <p className="meta">{reviews.length} ratings</p>
+        <p className="meta">{reviews.length} reviews</p>
       </div>
     </ReviewCard>
   )
