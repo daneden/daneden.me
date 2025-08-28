@@ -15,7 +15,7 @@ export default function PortfolioCarousel() {
       <DeviceFrame model={DeviceModel.iPhone14Pro}>
         <MuxVideo poster={1} id="NhkXQ6j5cqn8EaKdsg3ob5octWKsDlZHG1e1vLt02HUY" width={589} height={1278} autoPlay={true} loop={true} controls={false} muted={true} preload={true} playsInline={true} />
       </DeviceFrame>
-      <Link className={cx(styles.button, styles.highlight)} href="/portfolio/ora">Learn more &rarr;</Link>
+      <Link className={cx(styles.button)} href="/portfolio/ora">Learn more &rarr;</Link>
     </div>
     <div className={cx(styles.card, styles.highlight)}>
       <h2>Solstice</h2>
@@ -23,7 +23,7 @@ export default function PortfolioCarousel() {
       <DeviceFrame model={DeviceModel.iPhone14Pro}>
         <MuxVideo poster={1} id="DNNKwHRzLg3qErq1ccG6GP8tCd1etvD5elgQQkqyks8" width={589} height={1278} autoPlay={true} loop={true} controls={false} muted={true} preload={true} playsInline={true} />
       </DeviceFrame>
-      <Link className={cx(styles.button, styles.highlight)} href="/portfolio/solstice">Learn more &rarr;</Link>
+      <Link className={cx(styles.button)} href="/portfolio/solstice">Learn more &rarr;</Link>
     </div>
 
     <div className={cx(styles.card, styles.highlight)}>
@@ -40,7 +40,7 @@ export default function PortfolioCarousel() {
             alt="Daniel Eden presenting “Where We Can Go” at Clarity Conference 2019"
             className={styles.wwcgImage}
           />
-          <Link className={cx(styles.button, styles.highlight)} href="/blog/2019/where-we-can-go">Read the post &rarr;</Link>
+          <Link className={cx(styles.button)} href="/blog/2019/where-we-can-go">Read the post &rarr;</Link>
           </div>
     </div>
     <div className={cx(styles.card, styles.highlight)}>
@@ -49,7 +49,7 @@ export default function PortfolioCarousel() {
       <DeviceFrame model={DeviceModel.iPhone14Pro}>
         <MuxVideo poster={1} id="4Df02lKW9dwgsYydlMXp02tEnR6CAk5S3g5eXxRPoGm00o" width={589} height={1278} autoPlay={true} loop={true} controls={false} muted={true} preload={true} playsInline={true} />
       </DeviceFrame>
-      <Link className={cx(styles.button, styles.highlight)} href="/portfolio/zeitgeist">Learn more &rarr;</Link>
+      <Link className={cx(styles.button)} href="/portfolio/zeitgeist">Learn more &rarr;</Link>
     </div>
   </section>
 }
