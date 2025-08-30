@@ -21,7 +21,7 @@
     "hastscript": "^9.0.0",
     "hls.js": "^1.5.20",
     "mdx-prism": "^0.3.4",
-    "next": "^15.1.7",
+    "next": "^15.4.7",
     "next-mdx-remote": "^5.0.0",
     "prismjs": "^1.29.0",
     "react": "^19.0.0",
