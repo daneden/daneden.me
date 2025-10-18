@@ -1,6 +1,12 @@
 {
   "posts": [
     {
+      "id": "creating-reality",
+      "title": "Creating Reality",
+      "description": "Code is an incomparably powerful tool for designers, allowing us to create unambiguous, detailed realities that better express our ideas.",
+      "date": "2025-10-18"
+    },
+    {
       "id": "do-less",
       "title": "Do Less",
       "description": "How can you create more value with fewer resources? The answer is simple: do less.",

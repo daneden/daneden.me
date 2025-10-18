@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="543px" height="317px" viewBox="0 0 543 317" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>shapes-disparity</title>
+    <g id="shapes-disparity" stroke="none" fill="none" fill-rule="evenodd" stroke-width="1">
+        <g id="Group">
+            <path d="M93.8689,80.0416 C37.5911,98.0614 59.2763,190.602 80.1331,237.131 C80.9277,238.904 82.6869,240.000003 84.6295,240.000003 L176.107,240.000003 C178.76,240.000003 180.951,237.928 181.099,235.28 L185.311,160.15 C185.422,158.167 186.697,156.437 188.559,155.744 L208.363,148.376 C211.6,147.172 212.683,143.117 210.528,140.418 C187.551,111.65 152.07,61.406 93.8689,80.0416 Z" id="Path" fill="color(display-p3 0.533 0.533 0.533)" fill-rule="nonzero" opacity="0.4"></path>
+            <circle id="Oval" fill="color(display-p3 1.000 1.000 1.000)" fill-rule="nonzero" cx="116.5" cy="127.5" r="44.5"></circle>
+            <circle id="Oval" fill="color(display-p3 0.384 0.212 1.000)" fill-rule="nonzero" cx="117" cy="127" r="26"></circle>
+            <path d="M454.73,81.8445 C508.444,98.9677 487.823,186.832 467.915,231.135 C467.12,232.904 465.361,234 463.422,234 L376.368,234 C373.716,234 371.525,231.929 371.376,229.281 L367.375,158.209 C367.263,156.223 365.985,154.492 364.119,153.801 L345.666,146.966 C342.42,145.764 341.33,141.701 343.494,139 C365.453,111.591 399.31,64.1774 454.73,81.8445 Z" id="Path" fill="color(display-p3 0.533 0.533 0.533)" fill-rule="nonzero" opacity="0.4"></path>
+            <circle id="Oval" fill="color(display-p3 1.000 1.000 1.000)" fill-rule="nonzero" cx="432.5" cy="127.5" r="44.5"></circle>
+            <path d="M428.67,108.5 C430.594,105.167 435.406,105.167 437.33,108.5 L454.651,138.5 C456.575,141.833 454.17,146 450.321,146 L415.679,146 C411.83,146 409.425,141.833 411.349,138.5 L428.67,108.5 Z" id="Path" fill="color(display-p3 0.427 0.831 0.000)" fill-rule="nonzero"></path>
+        </g>
+    </g>
+</svg>
