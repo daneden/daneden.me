@@ -303,7 +303,7 @@ table {
   width: 100%;
 }
 
-table :matches(th, td) {
+table :is(th, td) {
   vertical-align: top;
   padding: var(--sp-xs);
   padding-top: var(--sp-xxs);

@@ -27,11 +27,10 @@ export function htmlDirectives() {
 }
 
 export const remarkPlugins = [
-  gfm,
-  smartypants,
-  math,
-  toc,
-  directive,
-  htmlDirectives,
+  'remark-gfm',
+  '@ngsctt/remark-smartypants',
+  'remark-math',
+  'remark-toc',
+  'remark-directive',
 ]
-export const rehypePlugins = [katex, prism]
+export const rehypePlugins = ['rehype-katex', 'mdx-prism']

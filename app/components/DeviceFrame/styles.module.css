@@ -20,7 +20,7 @@
   object-fit: fill;
 }
 
-.children :matches(figure, video) {
+.children :is(figure, video) {
   margin-bottom: 0;
 }
 
