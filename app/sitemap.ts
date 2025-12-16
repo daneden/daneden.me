@@ -1,8 +1,6 @@
 import { getPosts } from "@/app/get-posts"
 import { MetadataRoute } from "next"
 
-export const runtime = "edge"
-
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const posts = getPosts()
   const blogPosts = posts.map((post) => {
