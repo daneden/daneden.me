@@ -17,14 +17,28 @@ export interface AppStoreConnectReview {
 }
 
 export default async function Reviews({ appId }: { appId: string }) {
-  const reviewsData = await fetch(`https://connect.daneden.me/${appId}/reviews`, {
-    next: { revalidate: 3600 }, // Revalidate hourly instead of on every build
-  })
-  const json = await reviewsData.json()
-  const { data: reviews }: { data: AppStoreConnectReview[] } = json
+  let reviews: AppStoreConnectReview[] | null = null
+
+  try {
+    const reviewsData = await fetch(
+      `https://connect.daneden.me/${appId}/reviews`,
+      {
+        next: { revalidate: 3600 }, // Revalidate hourly instead of on every build
+      }
+    )
+
+    if (!reviewsData.ok) {
+      return null
+    }
+
+    const json = await reviewsData.json()
+    reviews = json.data
+  } catch {
+    return null
+  }
 
   if (!reviews) {
-    return
+    return null
   }
 
   const sortedReviews = reviews.sort((lhs, rhs) => {
