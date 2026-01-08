@@ -1,13 +1,14 @@
-import widont from "@/app/utils/widont"
+import { readFile } from "fs/promises"
 import { ImageResponse } from "next/og"
+import { join } from "path"
 
-const tiemposHeadline = fetch(
-  new URL("https://daneden.me/og-fonts/TiemposHeadline-Light.otf")
-).then((res) => res.arrayBuffer())
+import widont from "@/app/utils/widont"
 
-const soehne = fetch(
-  new URL("https://daneden.me/og-fonts/Soehne-Buch.otf")
-).then((res) => res.arrayBuffer())
+const tiemposHeadline = readFile(
+  join(process.cwd(), "public/og-fonts/TiemposHeadline-Light.otf")
+)
+
+const soehne = readFile(join(process.cwd(), "public/og-fonts/Soehne-Buch.otf"))
 
 const defaultTitle = "Daniel Eden, Designer"
 
