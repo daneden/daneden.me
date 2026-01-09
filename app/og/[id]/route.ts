@@ -1,7 +1,12 @@
 import { getPosts } from "@/app/get-posts"
 import opengraphImage from "@/app/utils/opengraphImage"
 
-export async function GET(_req: Request, { params }: { params: Promise<{ id: string }>}) {
+export const runtime = "nodejs"
+
+export async function GET(
+  _req: Request,
+  { params }: { params: Promise<{ id: string }> }
+) {
   const posts = getPosts()
   const id = (await params).id
   const post = posts.find((p) => p.id === id)
