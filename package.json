@@ -4,10 +4,10 @@
   "version": "3.0.0",
   "license": "MIT",
   "scripts": {
-    "build": "next build",
-    "dev": "next dev",
-    "lint": "next lint",
-    "start": "next start"
+    "build": "bun --bun next build",
+    "dev": "bun --bun next dev",
+    "lint": "bun --bun next lint",
+    "start": "bun --bun next start"
   },
   "dependencies": {
     "@mdx-js/loader": "^3.1.1",

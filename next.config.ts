@@ -1,5 +1,6 @@
+import { NextConfig } from "next"
 import nextMdx from "@next/mdx"
-import { rehypePlugins, remarkPlugins } from "./app/utils/mdxPlugins.mjs"
+import { rehypePlugins, remarkPlugins } from "@/app/utils/mdxPlugins.js"
 
 const withMDX = nextMdx({
   options: {
@@ -8,11 +9,10 @@ const withMDX = nextMdx({
   },
 })
 
-/** @type {import('next').NextConfig} */
-const config = {
+const config: NextConfig = {
   pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
 
-  redirects() {
+  async redirects() {
     return [
       {
         source: "/animate",
