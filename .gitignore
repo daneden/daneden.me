@@ -38,4 +38,7 @@ public/sitemap*.xml
 public/feed.xml
 src/hygraph.d.ts
 
+# benchmark results
+turbopack-benchmark-results.json
+
 .vscode

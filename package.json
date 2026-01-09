@@ -5,9 +5,12 @@
   "license": "MIT",
   "scripts": {
     "build": "bun --bun next build",
+    "build:turbo": "bun --bun next build --turbo",
     "dev": "bun --bun next dev",
+    "dev:turbo": "bun --bun next dev --turbo",
     "lint": "bun --bun next lint",
-    "start": "bun --bun next start"
+    "start": "bun --bun next start",
+    "benchmark": "bun run benchmark.ts"
   },
   "dependencies": {
     "@mdx-js/loader": "^3.1.1",
