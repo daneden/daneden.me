@@ -16,7 +16,7 @@
     "module": "esnext",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "react-jsx",
+    "jsx": "preserve",
     "moduleResolution": "node",
     "baseUrl": ".",
     "paths": {
