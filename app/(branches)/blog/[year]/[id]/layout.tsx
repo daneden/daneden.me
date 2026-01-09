@@ -1,7 +1,6 @@
 import { Metadata } from "next"
 import { getPosts } from "@/app/get-posts"
-
-export type Params = Promise<{ year: string; id: string }>
+import { Params } from "./page"
 
 export async function generateMetadata({
   params,
@@ -31,14 +30,6 @@ export async function generateMetadata({
       ],
     },
   }
-}
-
-export async function generateStaticParams() {
-  const posts = getPosts()
-  return posts.map((post) => ({
-    year: post.slug.split("/")[0],
-    id: post.id,
-  }))
 }
 
 export default function BlogPostLayout({

@@ -1,6 +1,7 @@
 import { Metadata } from "next"
 
 const metadata: Metadata = {
+  metadataBase: new URL("https://daneden.me"),
   title: {
     template: `%s | Daniel Eden, Designer`,
     absolute: "Daniel Eden, Designer",

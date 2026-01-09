@@ -1,4 +1,6 @@
-import { Params, generateStaticParams as generateStaticParamsForPosts } from "./layout"
+import { getPosts } from "@/app/get-posts"
+
+export type Params = Promise<{ year: string; id: string }>
 
 export default async function Page({
   params,
@@ -12,7 +14,11 @@ export default async function Page({
 }
  
 export async function generateStaticParams() {
-    return await generateStaticParamsForPosts()
+  const posts = getPosts()
+  return posts.map((post) => ({
+    year: post.slug.split("/")[0],
+    id: post.id,
+  }))
 }
  
 export const dynamicParams = false
