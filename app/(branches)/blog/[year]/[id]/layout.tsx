@@ -1,7 +1,7 @@
 import { Metadata } from "next"
 import { getPosts } from "@/app/get-posts"
 
-type Params = Promise<{ year: string; id: string }>
+export type Params = Promise<{ year: string; id: string }>
 
 export async function generateMetadata({
   params,
