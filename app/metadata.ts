@@ -13,6 +13,13 @@ const metadata: Metadata = {
       "The personal site, blog, and portfolio of Daniel Eden, a designer writing and thinking about design systems.",
     url: "https://daneden.me",
     siteName: "Daniel Eden, Designer",
+    images: [
+      {
+        url: '/og/default',
+        width: 1200,
+        height: 630
+      }
+    ]
   },
   twitter: {
     card: "summary_large_image",
