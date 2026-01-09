@@ -1,19 +1,19 @@
 import widont from "@/app/utils/widont"
+import { readFileSync } from "fs"
 import { ImageResponse } from "next/og"
+import { join } from "path"
 
-const tiemposHeadline = fetch(
-  new URL("https://daneden.me/og-fonts/TiemposHeadline-Light.otf")
-).then((res) => res.arrayBuffer())
+const tiemposHeadline = readFileSync(
+  join(process.cwd(), "public/og-fonts/TiemposHeadline-Light.otf")
+)
 
-const soehne = fetch(
-  new URL("https://daneden.me/og-fonts/Soehne-Buch.otf")
-).then((res) => res.arrayBuffer())
+const soehne = readFileSync(
+  join(process.cwd(), "public/og-fonts/Soehne-Buch.otf")
+)
 
 const defaultTitle = "Daniel Eden, Designer"
 
 export default async function opengraphImage(title = defaultTitle) {
-  const tiemposFontData = await tiemposHeadline
-  const soehneFontData = await soehne
 
   return new ImageResponse(
     (
@@ -66,12 +66,12 @@ export default async function opengraphImage(title = defaultTitle) {
       fonts: [
         {
           name: "Tiempos Headline",
-          data: tiemposFontData,
+          data: tiemposHeadline,
           style: "normal",
         },
         {
           name: "Soehne",
-          data: soehneFontData,
+          data: soehne,
           style: "normal",
         },
       ],
