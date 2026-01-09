@@ -1,11 +1,4 @@
-import smartypants from "@ngsctt/remark-smartypants"
 import { h } from "hastscript"
-import prism from "mdx-prism"
-import katex from "rehype-katex"
-import directive from "remark-directive"
-import gfm from "remark-gfm"
-import math from "remark-math"
-import toc from "remark-toc"
 import { visit } from "unist-util-visit"
 
 export function htmlDirectives() {
@@ -33,4 +26,4 @@ export const remarkPlugins = [
   'remark-toc',
   'remark-directive',
 ]
-export const rehypePlugins = ['rehype-katex', 'mdx-prism']
+export const rehypePlugins = ['rehype-katex', 'rehype-prism-plus']

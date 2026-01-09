@@ -29,7 +29,24 @@ Key routes:
 
 ### Content & MDX
 
-Blog posts are MDX files with exported metadata. Post metadata is also maintained in `app/posts.json` for listings and feeds.
+Blog posts are MDX files stored at `app/(branches)/blog/[year]/[id]/page.mdx`.
+
+**Important: Blog post metadata is centralized in two locations:**
+1. `app/posts.json` — Source of truth for all post metadata (title, description, date, id)
+2. `app/(branches)/blog/[year]/[id]/layout.tsx` — Reads from posts.json and generates Next.js metadata
+
+**Publishing a new blog post:**
+1. Create the MDX file at `app/(branches)/blog/YYYY/post-slug/page.mdx` (no metadata exports needed)
+2. Add post metadata to `app/posts.json`:
+   ```json
+   {
+     "id": "post-slug",
+     "title": "Post Title",
+     "description": "Post description",
+     "date": "YYYY-MM-DD"
+   }
+   ```
+3. The layout automatically generates metadata and Open Graph images via `/og/[id]`
 
 MDX configuration in `next.config.mjs` includes:
 - Remark: `remark-gfm`, `remark-smartypants`, `remark-math`, `remark-toc`, `remark-directive`
