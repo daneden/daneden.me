@@ -23,6 +23,7 @@
 .DS_Store
 .env*
 .contentlayer/
+.claude/
 
 # debug
 npm-debug.log*
