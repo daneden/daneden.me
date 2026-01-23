@@ -1,0 +1,43 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: var(--sp-l);
+  justify-items: center;
+  align-items: center;
+  padding: var(--sp-l) 0;
+}
+
+@media (min-width: 50em) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: var(--sp-xl);
+  }
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-xs);
+}
+
+.name {
+  font-family: var(--font-sans);
+  font-size: var(--sp-s);
+  color: var(--meta-color);
+  text-align: center;
+}
+
+/* No-JS fallback grid */
+.fallbackGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: var(--sp-l);
+  justify-items: center;
+  padding: var(--sp-l) 0;
+}
+
+.fallbackGrid img {
+  max-width: 100%;
+  height: auto;
+}

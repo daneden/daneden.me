@@ -1,0 +1,49 @@
+{
+  "stickers": [
+    {
+      "id": "metalverse",
+      "name": "Metalverse",
+      "image": {
+        "src": "/uploads/stickers/metalverse.png",
+        "width": 512,
+        "height": 258
+      }
+    },
+    {
+      "id": "mv-uxr",
+      "name": "MV UXR",
+      "image": {
+        "src": "/uploads/stickers/mv-uxr.png",
+        "width": 512,
+        "height": 301
+      }
+    },
+    {
+      "id": "g-splat",
+      "name": "Gaussian Splat",
+      "image": {
+        "src": "/uploads/stickers/g-splat.png",
+        "width": 512,
+        "height": 141
+      }
+    },
+    {
+      "id": "is-it-hot",
+      "name": "Is It Hot?",
+      "image": {
+        "src": "/uploads/stickers/is-it-hot.png",
+        "width": 512,
+        "height": 258
+      }
+    },
+    {
+      "id": "how-can-we-help",
+      "name": "How Can We Help?",
+      "image": {
+        "src": "/uploads/stickers/how-can-we-help.png",
+        "width": 512,
+        "height": 509
+      }
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+.container {
+  perspective: 800px;
+  perspective-origin: center center;
+}
+
+.sticker {
+  position: relative;
+  transform-style: preserve-3d;
+  transform-origin: var(--peel-origin, 50% 50%);
+  transform: rotateX(calc(var(--tilt-x, 0) * 1deg))
+    rotateY(calc(var(--tilt-y, 0) * 1deg)) scale(var(--scale, 1));
+  cursor: pointer;
+  will-change: transform, filter;
+  transition: filter 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  filter: drop-shadow(0 0 0 transparent) drop-shadow(0 0 0 transparent);
+}
+
+.sticker.isLifted {
+  filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.2))
+    drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+/* Glossy highlight overlay - masked to sticker shape */
+.sticker::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  --x: calc(var(--mouse-x, 0.5) * 100%);
+  background: linear-gradient(
+    calc(var(--mouse-y, 0.5) * 45deg + 90deg),
+    transparent 0%,
+    transparent calc(var(--x, 50%) - 25%),
+    rgba(255, 255, 255, 0.05) calc(var(--x, 50%) - 20%),
+    rgba(255, 255, 255, 0.25) var(--x, 50%),
+    rgba(255, 255, 255, 0.05) calc(var(--x, 50%) + 20%),
+    transparent calc(var(--x, 50%) + 25%),
+    transparent 100%
+  );
+  opacity: var(--gloss-opacity, 0);
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  mix-blend-mode: plus-lighter;
+  mask-image: var(--sticker-url);
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
+
+.sticker img {
+  display: block;
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.sticker.isLifted {
+  --gloss-opacity: 1;
+}
+
+/* Subtle idle animation for visual interest */
+@media (prefers-reduced-motion: no-preference) {
+  .sticker:not(.isLifted) {
+    animation: idle 6s ease-in-out infinite;
+  }
+
+  @keyframes idle {
+    0%,
+    100% {
+      transform: rotateX(0deg) rotateY(0deg) scale(1);
+    }
+    50% {
+      transform: rotateX(0.5deg) rotateY(-0.5deg) scale(1);
+    }
+  }
+}

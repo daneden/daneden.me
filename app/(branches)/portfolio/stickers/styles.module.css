@@ -1,0 +1,27 @@
+.intro {
+  margin-bottom: var(--sp-l);
+}
+
+.instructions {
+  font-family: var(--font-sans);
+  font-size: var(--sp-s);
+  color: var(--meta-color);
+  text-align: center;
+  margin-bottom: var(--sp-m);
+}
+
+.instructions span {
+  display: block;
+}
+
+@media (hover: hover) {
+  .instructions .touch {
+    display: none;
+  }
+}
+
+@media (hover: none) {
+  .instructions .hover {
+    display: none;
+  }
+}
