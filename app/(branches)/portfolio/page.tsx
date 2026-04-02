@@ -140,11 +140,14 @@ export default function PortfolioPage() {
 
       <hr />
       <h2>Meta</h2>
-      <h3>2024–</h3>
+      <h3>2024–2026</h3>
       <p>
-        Currently, I work in the Reality Labs Avatars & Identity org, focused on
+        I worked for two years in the Reality Labs Avatars & Identity org, focused on
         supporting a robust, expressive avatar editor experience across Meta’s
         family of apps.
+      </p>
+      <p>
+        In 2025, I became the lead designer supporting the Meta Horizon profile across mobile and VR.
       </p>
       <h3>2021–2024</h3>
       <p>

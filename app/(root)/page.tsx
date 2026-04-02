@@ -10,7 +10,7 @@ export default function HomePage() {
       <div className={styles.root}>
         <div className={`${styles.intro} ${styles.spanall}`}>
           <p className={styles.xxl}>
-            Daniel Eden is a Product Designer at{" "}
+            Daniel Eden is a Product Designer. He most recently worked at{" "}
             <a href="https://about.meta.com/uk/realitylabs/">
               Meta Reality Labs
             </a>
