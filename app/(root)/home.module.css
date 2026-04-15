@@ -5,6 +5,7 @@
 
 .intro {
   padding: 1.5rem;
+  text-wrap: pretty;
 }
 
 .xxl {
