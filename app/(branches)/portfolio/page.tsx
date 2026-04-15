@@ -139,6 +139,11 @@ export default function PortfolioPage() {
       </section>
 
       <hr />
+      <h2>Figma</h2>
+      <h3>2026–</h3>
+      <p>
+        I joined Figma in 2026, supporting developer tools.
+      </p>
       <h2>Meta</h2>
       <h3>2024–2026</h3>
       <p>
