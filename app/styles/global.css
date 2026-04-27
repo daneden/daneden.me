@@ -35,7 +35,7 @@
   --breakpoint-narrow: 50em;
   --breakpoint-medium: 64em;
 
-  --site-color: #dd425c;
+  --site-color: color(display-p3 0.997 0.435 0);
   --text-color: var(--gray40);
   --meta-color: var(--gray30);
   --wash-color: var(--gray00);
@@ -59,7 +59,9 @@
   font-family: var(--font-serif);
   font-size: clamp(100%, 2.75vw, 125%);
   line-height: var(--baseline);
-  font-feature-settings: "ss02" 1, "cv06" 1;
+  font-feature-settings:
+    "ss02" 1,
+    "cv06" 1;
   font-variant-alternates: stylistic(ss02);
 }
 
