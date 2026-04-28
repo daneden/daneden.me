@@ -1,0 +1,167 @@
+.root {
+  display: block;
+  width: 100%;
+  max-width: 24rem;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  margin: 0 auto;
+  color: var(--color-gray-700, #888);
+}
+
+.shapes > g {
+  transform-box: view-box;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: step-end;
+}
+
+/*
+ * Cycle (8s), ~8 fps motion (1.5% per tick = 0.12s).
+ *
+ * Stagger tightened to a 12% spread. Each shape has its own personality —
+ * not just an offset:
+ *
+ *   square    (decisive)            forward 12%–24%   reverse 60%–72%
+ *   circle    (pauses mid-arc)      forward 14%–26%   reverse 62%–74%
+ *   triangle  (tentative, then go)  forward 17%–29%   reverse 65%–77%
+ *   rightRect (overshoots, corrects)forward 20%–32%   reverse 68%–80%
+ *   leftRect  (false start, undo)   forward 24%–36%   reverse 72%–84%
+ *
+ * Human moments:
+ *   - circle holds (50,-62) across two ticks mid-arc — a beat of "is this right?"
+ *   - triangle nudges to (4,-8,2°) then sits there for two ticks before going
+ *   - rightRect peaks at (-26,-160,52°), pulls back too far to (-32,-114,28°),
+ *     then re-corrects to (-14,-130,38°) before settling
+ *   - leftRect commits to (-12,6,-4°), pulls back to (-2,2,-1°) — a clear undo —
+ *     then goes for real
+ *   - leftRect's reverse has a brief mid-arc pause too
+ *
+ * Collective end rest:   36%–60%  ≈ 1.92s
+ * Collective start rest: 84%→12%  ≈ 2.24s
+ */
+
+.square {
+  transform-origin: 283px 132px;
+  animation-name: square;
+}
+@keyframes square {
+  0%   { transform: translate(0, 0) rotate(0deg); }
+  13.5%{ transform: translate(-10px, 10px) rotate(-2deg); }
+  15%  { transform: translate(-26px, 28px) rotate(-6deg); }
+  16.5%{ transform: translate(-48px, 56px) rotate(-9deg); }
+  18%  { transform: translate(-72px, 96px) rotate(-9deg); }
+  19.5%{ transform: translate(-86px, 142px) rotate(-7deg); }
+  21%  { transform: translate(-86px, 180px) rotate(-3deg); }
+  22.5%{ transform: translate(-72px, 212px) rotate(3deg); }
+  24%  { transform: translate(-69px, 205px) rotate(0deg); }
+  61.5%{ transform: translate(-78px, 198px) rotate(2deg); }
+  63%  { transform: translate(-72px, 168px) rotate(6deg); }
+  64.5%{ transform: translate(-58px, 130px) rotate(9deg); }
+  66%  { transform: translate(-38px, 90px) rotate(9deg); }
+  67.5%{ transform: translate(-18px, 50px) rotate(7deg); }
+  69%  { transform: translate(-2px, 18px) rotate(3deg); }
+  70.5%{ transform: translate(8px, -8px) rotate(-2deg); }
+  72%  { transform: translate(0, 0) rotate(0deg); }
+}
+
+.circle {
+  transform-origin: 128px 132px;
+  animation-name: circle;
+}
+@keyframes circle {
+  0%   { transform: translate(0, 0); }
+  15.5%{ transform: translate(8px, -22px); }
+  17%  { transform: translate(28px, -46px); }
+  18.5%{ transform: translate(50px, -62px); }
+  20%  { transform: translate(50px, -62px); }
+  21.5%{ transform: translate(76px, -64px); }
+  23%  { transform: translate(98px, -52px); }
+  24.5%{ transform: translate(88px, -42px); }
+  26%  { transform: translate(86px, -45px); }
+  63.5%{ transform: translate(88px, -22px); }
+  65%  { transform: translate(82px, 6px); }
+  66.5%{ transform: translate(70px, 30px); }
+  68%  { transform: translate(50px, 36px); }
+  69.5%{ transform: translate(28px, 30px); }
+  71%  { transform: translate(28px, 28px); }
+  72.5%{ transform: translate(8px, 12px); }
+  74%  { transform: translate(0, 0); }
+}
+
+.triangle {
+  transform-origin: 128px 310.67px;
+  animation-name: triangle;
+}
+@keyframes triangle {
+  0%   { transform: translate(0, 0) rotate(0deg); }
+  18.5%{ transform: translate(4px, -8px) rotate(2deg); }
+  20%  { transform: translate(4px, -8px) rotate(2deg); }
+  21.5%{ transform: translate(24px, -46px) rotate(8deg); }
+  23%  { transform: translate(44px, -68px) rotate(12deg); }
+  24.5%{ transform: translate(74px, -90px) rotate(12deg); }
+  26%  { transform: translate(96px, -98px) rotate(6deg); }
+  27.5%{ transform: translate(84px, -76px) rotate(-2deg); }
+  29%  { transform: translate(86px, -82.84px) rotate(0deg); }
+  66.5%{ transform: translate(76px, -56px) rotate(-4deg); }
+  68%  { transform: translate(52px, -36px) rotate(-8deg); }
+  69.5%{ transform: translate(28px, -16px) rotate(-12deg); }
+  71%  { transform: translate(8px, 0px) rotate(-10deg); }
+  72.5%{ transform: translate(-6px, 6px) rotate(-6deg); }
+  74%  { transform: translate(-4px, 4px) rotate(-2deg); }
+  75.5%{ transform: translate(2px, 0px) rotate(0deg); }
+  77%  { transform: translate(0, 0) rotate(0deg); }
+}
+
+.rightRect {
+  transform-origin: 323.5px 285px;
+  animation-name: rightRect;
+}
+@keyframes rightRect {
+  0%   { transform: translate(0, 0) rotate(0deg); }
+  21.5%{ transform: translate(12px, -16px) rotate(6deg); }
+  23%  { transform: translate(16px, -42px) rotate(18deg); }
+  24.5%{ transform: translate(10px, -76px) rotate(30deg); }
+  26%  { transform: translate(-4px, -118px) rotate(42deg); }
+  27.5%{ transform: translate(-26px, -160px) rotate(52deg); }
+  29%  { transform: translate(-32px, -114px) rotate(28deg); }
+  30.5%{ transform: translate(-14px, -130px) rotate(38deg); }
+  32%  { transform: translate(-16.37px, -139.32px) rotate(37.11deg); }
+  69.5%{ transform: translate(-2px, -120px) rotate(32deg); }
+  71%  { transform: translate(12px, -86px) rotate(22deg); }
+  72.5%{ transform: translate(24px, -50px) rotate(10deg); }
+  74%  { transform: translate(22px, -8px) rotate(-2deg); }
+  75.5%{ transform: translate(14px, 14px) rotate(-6deg); }
+  77%  { transform: translate(2px, 8px) rotate(-3deg); }
+  78.5%{ transform: translate(-4px, 4px) rotate(-1deg); }
+  80%  { transform: translate(0, 0) rotate(0deg); }
+}
+
+.leftRect {
+  transform-origin: 242.5px 285px;
+  animation-name: leftRect;
+}
+@keyframes leftRect {
+  0%   { transform: translate(0, 0) rotate(0deg); }
+  25.5%{ transform: translate(-10px, 4px) rotate(-5deg); }
+  27%  { transform: translate(-18px, -2px) rotate(-10deg); }
+  28.5%{ transform: translate(-42px, -22px) rotate(-22deg); }
+  30%  { transform: translate(-72px, -48px) rotate(-32deg); }
+  31.5%{ transform: translate(-118px, -100px) rotate(-48deg); }
+  33%  { transform: translate(-138px, -140px) rotate(-52deg); }
+  34.5%{ transform: translate(-128px, -150px) rotate(-42deg); }
+  36%  { transform: translate(-121.63px, -136.13px) rotate(-45deg); }
+  69.5%{ transform: translate(-130px, -130px) rotate(-36deg); }
+  71%  { transform: translate(-118px, -100px) rotate(-22deg); }
+  72.5%{ transform: translate(-92px, -68px) rotate(-10deg); }
+  74%  { transform: translate(-58px, -38px) rotate(0deg); }
+  75.5%{ transform: translate(-32px, -22px) rotate(2deg); }
+  77%  { transform: translate(-12px, -6px) rotate(4deg); }
+  78.5%{ transform: translate(8px, 12px) rotate(2deg); }
+  80%  { transform: translate(0, 0) rotate(0deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shapes > g {
+    animation: none;
+  }
+}
