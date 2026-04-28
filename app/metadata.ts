@@ -7,11 +7,11 @@ const metadata: Metadata = {
     absolute: "Daniel Eden, Designer",
   },
   description:
-    "The personal site, blog, and portfolio of Daniel Eden, a designer writing and thinking about design systems.",
+    "The personal site, blog, and portfolio of Daniel Eden.",
   openGraph: {
     title: "Daniel Eden, Designer",
     description:
-      "The personal site, blog, and portfolio of Daniel Eden, a designer writing and thinking about design systems.",
+      "The personal site, blog, and portfolio of Daniel Eden.",
     url: "https://daneden.me",
     siteName: "Daniel Eden, Designer",
     images: [

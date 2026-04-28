@@ -1,4 +1,4 @@
-import Image from "@/app/components/Image"
+import { OraHero, SolsticeHero, ZeitgeistHero } from "@/app/components/AppHero"
 import LightswitchImage from "@/app/components/LightSwitchImage"
 import { Metadata } from "next"
 import Link from "next/link"
@@ -26,24 +26,17 @@ export default function PortfolioPage() {
           <span className="small meta">Design &amp; Development</span>
         </header>
 
-        <Image
-          alt="The Ora app, showing an interactive globe with different time zones highlighted"
-          height={2716}
-          src="/uploads/portfolio/ora.png"
-          width={1339}
-          className={styles.appScreenshot}
-        />
+        <OraHero />
 
         <p>
-          Ora is a world clock app unlike any other. It lets you see the time around the world—literally. And unlike other world clock apps, you can use Time Travel to answer questions like “What time will it be in London when it’s 5pm in New York?”
+          Ora is a world clock app unlike any other. It lets you see the time
+          around the world—literally. And unlike other world clock apps, you can
+          use Time Travel to answer questions like “What time will it be in
+          London when it’s 5pm in New York?”
         </p>
         <p>
-          You can{" "}
-          <Link href="/portfolio/ora">
-            read about how Ora was made
-          </Link>
-          , or{" "}
-          <Link href="https://ora.daneden.me">visit the microsite</Link> to
+          You can <Link href="/portfolio/ora">read about how Ora was made</Link>
+          , or <Link href="https://ora.daneden.me">visit the microsite</Link> to
           learn more and download for free.
         </p>
       </section>
@@ -54,14 +47,7 @@ export default function PortfolioPage() {
           <span className="small meta">Design &amp; Development</span>
         </header>
 
-        <LightswitchImage
-          alt="The Solstice app, showing sunrise and sunset information for Hackney, London"
-          height={2716}
-          srcDark="/uploads/portfolio/solstice-dark.png"
-          srcLight="/uploads/portfolio/solstice-light.png"
-          width={1339}
-          className={styles.appScreenshot}
-        />
+        <SolsticeHero />
 
         <p>
           Solstice is an iOS app, independently designed and built by myself,
@@ -112,14 +98,7 @@ export default function PortfolioPage() {
           <small className="meta">Design &amp; Development</small>
         </header>
 
-        <LightswitchImage
-          alt="The Zeitgeist app, showing deployment details for a successful build"
-          height={2716}
-          srcDark="/uploads/portfolio/zeitgeist-dark.png"
-          srcLight="/uploads/portfolio/zeitgeist-light.png"
-          width={1339}
-          className={styles.appScreenshot}
-        />
+        <ZeitgeistHero />
 
         <p>
           Zeitgeist is an iOS and Mac app that lets you see the status of your
@@ -141,24 +120,24 @@ export default function PortfolioPage() {
       <hr />
       <h2>Figma</h2>
       <h3>2026–</h3>
-      <p>
-        I joined Figma in 2026, supporting developer tools.
-      </p>
+      <p>I joined Figma in 2026, supporting developer tools.</p>
       <h2>Meta</h2>
       <h3>2024–2026</h3>
       <p>
-        I worked for two years in the Reality Labs Avatars & Identity org, focused on
-        supporting a robust, expressive avatar editor experience across Meta’s
-        family of apps.
+        I worked for two years in the Reality Labs Avatars & Identity org,
+        focused on supporting a robust, expressive avatar editor experience
+        across Meta’s family of apps.
       </p>
       <p>
-        In 2025, I became the lead designer supporting the Meta Horizon profile across mobile and VR.
+        In 2025, I became the lead designer supporting the Meta Horizon profile
+        across mobile and VR.
       </p>
       <h3>2021–2024</h3>
       <p>
-        From 2021–2024, I worked as a Product Designer on Meta’s Customer Support
-        team. Our team is working to build customer support experiences that are
-        more equitable, human, and helpful for Meta’s billions of customers.
+        From 2021–2024, I worked as a Product Designer on Meta’s Customer
+        Support team. Our team is working to build customer support experiences
+        that are more equitable, human, and helpful for Meta’s billions of
+        customers.
       </p>
       <h3>2020–2021</h3>
       <p>
