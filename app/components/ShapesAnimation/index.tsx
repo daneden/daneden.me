@@ -35,7 +35,7 @@ export default function ShapesAnimation() {
           <feDisplacementMap
             in="SourceGraphic"
             in2="turb"
-            scale="6"
+            scale="5"
             xChannelSelector="R"
             yChannelSelector="G"
           />
@@ -48,7 +48,7 @@ export default function ShapesAnimation() {
         fill="none"
         className={styles.shapes}
       >
-        <g className={styles.circle}>
+        <g stroke="oklch(64% 0.22 25)" className={styles.circle}>
           <circle
             cx="128"
             cy="132"
@@ -56,7 +56,7 @@ export default function ShapesAnimation() {
             filter="url(#shapes-anim-handdrawn)"
           />
         </g>
-        <g className={styles.square}>
+        <g stroke="oklch(74% 0.20 80)" className={styles.square}>
           <rect
             x="223"
             y="72"
@@ -66,7 +66,7 @@ export default function ShapesAnimation() {
             filter="url(#shapes-anim-handdrawn)"
           />
         </g>
-        <g className={styles.leftRect}>
+        <g stroke="oklch(52% 0.19 220)" className={styles.leftRect}>
           <rect
             x="223"
             y="225"
@@ -76,7 +76,7 @@ export default function ShapesAnimation() {
             filter="url(#shapes-anim-handdrawn)"
           />
         </g>
-        <g className={styles.rightRect}>
+        <g stroke="oklch(50% 0.20 305)" className={styles.rightRect}>
           <rect
             x="304"
             y="225"
@@ -86,7 +86,7 @@ export default function ShapesAnimation() {
             filter="url(#shapes-anim-handdrawn)"
           />
         </g>
-        <g className={styles.triangle}>
+        <g stroke="oklch(60% 0.21 145)" className={styles.triangle}>
           <path
             d="M123.67 249.5C125.594 246.167 130.406 246.167 132.33 249.5L181.693 335C183.618 338.333 181.212 342.5 177.363 342.5H78.6367C74.7877 342.5 72.3821 338.333 74.3066 335L123.67 249.5Z"
             filter="url(#shapes-anim-handdrawn)"
