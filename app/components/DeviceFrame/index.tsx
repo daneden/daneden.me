@@ -2,11 +2,13 @@ import Image from "next/image"
 import { ReactNode } from "react"
 import iPadPro11M4Bezel from "./bezels/iPadPro11M4.png"
 import iPhone14ProBezel from "./bezels/iPhone14Pro.png"
+import iPhone17ProBezel from "./bezels/iPhone17Pro.png"
 import styles from "./styles.module.css"
 
 export enum DeviceModel {
   iPhone14Pro,
   iPadPro11M4,
+  iPhone17Pro,
 }
 
 function getBezel(device: DeviceModel) {
@@ -15,6 +17,8 @@ function getBezel(device: DeviceModel) {
       return iPhone14ProBezel
     case DeviceModel.iPadPro11M4:
       return iPadPro11M4Bezel
+    case DeviceModel.iPhone17Pro:
+      return iPhone17ProBezel
   }
 }
 
@@ -24,6 +28,8 @@ function getBezelMargin(device: DeviceModel) {
       return 5.925
     case DeviceModel.iPadPro11M4:
       return 4.166
+    case DeviceModel.iPhone17Pro:
+      return 4.925
   }
 }
 

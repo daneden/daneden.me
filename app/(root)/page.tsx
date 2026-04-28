@@ -10,7 +10,9 @@ export default function HomePage() {
       <div className={styles.root}>
         <div className={`${styles.intro} ${styles.spanall}`}>
           <p className={styles.xxl}>
-            Daniel Eden is a Product Designer at <a href="https://figma.com">Figma</a>, working on the future of how digital products are designed and built. He spends his time{" "}
+            Daniel Eden is a Product Designer at{" "}
+            <a href="https://figma.com">Figma</a>, working on the future of how
+            digital products are designed and built. He spends his time{" "}
             <Link href="/blog">writing</Link>, thinking,{" "}
             <a rel="me" href="https://threads.net/@_dte">
               posting
