@@ -58,5 +58,23 @@
     "url": "https://ondeck.daneden.me",
     "title": "On Deck",
     "description": "iOS App"
+  },
+  {
+    "date": "2020-09-01",
+    "url": "https://breadforthebusy.com",
+    "title": "Bread for the Busy",
+    "description": "Website"
+  },
+  {
+    "date": "2011-10-12",
+    "url": "https://animate.style",
+    "title": "Animate.css",
+    "description": "Open Source"
+  },
+  {
+    "date": "2011-11-21",
+    "url": "https://github.com/daneden/toast",
+    "title": "Toast",
+    "description": "Open Source"
   }
 ]

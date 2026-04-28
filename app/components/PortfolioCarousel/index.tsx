@@ -27,14 +27,6 @@ export default function PortfolioCarousel() {
         </Link>
       </div>
       <div className={cx(styles.card, styles.highlight)}>
-        <h2>On Deck</h2>
-        <p>A college softball score tracking app for iPhone.</p>
-        <OnDeckHero />
-        <Link className={cx(styles.button)} href="https://ondeck.daneden.me">
-          Learn more &rarr;
-        </Link>
-      </div>
-      <div className={cx(styles.card, styles.highlight)}>
         <h2>Where We Can Go</h2>
         <p>
           A{" "}
@@ -50,6 +42,14 @@ export default function PortfolioCarousel() {
             Read the post &rarr;
           </Link>
         </div>
+      </div>
+      <div className={cx(styles.card, styles.highlight)}>
+        <h2>On Deck</h2>
+        <p>A college softball score tracking app for iPhone.</p>
+        <OnDeckHero />
+        <Link className={cx(styles.button)} href="https://ondeck.daneden.me">
+          Learn more &rarr;
+        </Link>
       </div>
       <div className={cx(styles.card, styles.highlight)}>
         <h2>Zeitgeist</h2>
