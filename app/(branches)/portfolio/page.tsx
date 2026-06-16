@@ -120,7 +120,8 @@ export default function PortfolioPage() {
       <hr />
       <h2>Figma</h2>
       <h3>2026–</h3>
-      <p>I joined Figma in 2026, supporting developer tools.</p>
+      <p>I joined Figma in 2026, supporting the Build pillar, focusing on developer tools and the intersection of code and design.</p>
+      <p>My first project was a series of improvements to Figma Make, an AI-driven prompt-to-app tool. I worked closely with a multi-disciplinary team to improve the design quality of Make's outputs through changes to the system prompt and new first-party skills.</p>
       <h2>Meta</h2>
       <h3>2024–2026</h3>
       <p>
