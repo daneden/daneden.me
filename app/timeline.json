@@ -3,7 +3,7 @@
     "date": "2021-01-16",
     "url": "https://apps.apple.com/app/solstice/id1547580907",
     "title": "Solstice",
-    "description": "iOS App"
+    "description": "iOS, macOS, watchOS, and visionOS App"
   },
   {
     "date": "2020-09-20",
@@ -15,7 +15,7 @@
     "date": "2020-12-02",
     "url": "https://apps.apple.com/app/zeitgeist/id1526052028",
     "title": "Zeitgeist",
-    "description": "iOS App"
+    "description": "iOS and macOS App"
   },
   {
     "date": "2019-08-21",
@@ -51,13 +51,19 @@
     "date": "2025-02-15",
     "url": "https://ora.daneden.me",
     "title": "Ora",
-    "description": "iOS App"
+    "description": "iOS, macOS, and watchOS App"
   },
   {
     "date": "2026-02-01",
     "url": "https://ondeck.daneden.me",
     "title": "On Deck",
     "description": "iOS App"
+  },
+  {
+    "date": "2026-06-01",
+    "url": "https://playback.daneden.me",
+    "title": "Playback",
+    "description": "iOS and macOS App"
   },
   {
     "date": "2020-09-01",
