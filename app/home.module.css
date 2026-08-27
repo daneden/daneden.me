@@ -4,7 +4,7 @@
 }
 
 .intro {
-  padding: 1.5rem;
+  padding-block-start: 1.5rem;
   text-wrap: pretty;
 }
 
@@ -15,9 +15,13 @@
   font-family: var(--font-sans);
 }
 
-.intro .xxl a {
+.intro.xxl a {
   --padding-size: 0.05em;
   font-family: var(--font-heading);
   letter-spacing: 0;
   font-style: italic;
+}
+
+.container {
+  padding-inline: 0.75rem;
 }
