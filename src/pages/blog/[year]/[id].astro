@@ -1,0 +1,27 @@
+---
+import Image from "@/components/Image.astro"
+import Base from "@/layouts/Base.astro"
+import { getCollection, render } from "astro:content"
+
+export async function getStaticPaths() {
+  const posts = await getCollection("posts")
+  return posts.map((post) => {
+    const [year, id] = post.id.split("/")
+    return { params: { year, id }, props: { post } }
+  })
+}
+
+const { post } = Astro.props
+const { Content } = await render(post)
+const slug = post.id.split("/")[1]
+---
+
+<Base
+  title={post.data.title}
+  description={post.data.description}
+  image={`/og/${slug}.png`}
+  theme={post.data.theme}
+  scheme={post.data.scheme}
+>
+  <Content components={{ Image }} />
+</Base>

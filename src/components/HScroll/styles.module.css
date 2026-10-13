@@ -1,0 +1,45 @@
+.root {
+  display: flex;
+  gap: var(--space-m);
+  padding: var(--space-m);
+  overflow-x: scroll;
+  align-items: center;
+  margin: 0 auto;
+  width: fit-content;
+}
+
+.root > * {
+  flex: 0 0 auto;
+}
+
+.root > :first-child {
+  margin-inline-start: var(--space-m);
+}
+
+.root > :last-child {
+  margin-inline-end: var(--space-m);
+}
+
+.scrollSnapping {
+  scroll-snap-type: x mandatory;
+}
+
+.scrollSnapping > * {
+  scroll-snap-align: center;
+}
+
+.root::-webkit-scrollbar {
+  height: 1em;
+  width: 1em;
+}
+
+.root::-webkit-scrollbar-thumb {
+  background-color: rgba(128, 128, 128, 0.3);
+  border: 0.25em solid transparent;
+  background-clip: padding-box;
+  border-radius: 1em;
+}
+
+.root::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(128, 128, 128, 0.5);
+}

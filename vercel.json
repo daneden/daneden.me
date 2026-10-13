@@ -1,0 +1,46 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "astro",
+  "redirects": [
+    {
+      "source": "/animate",
+      "destination": "https://animate.style/",
+      "permanent": true
+    },
+    {
+      "source": "/baseline",
+      "destination": "https://github.com/daneden/Baseline.js",
+      "permanent": true
+    },
+    {
+      "source": "/books(.*)",
+      "destination": "/playlist$1",
+      "permanent": true
+    },
+    {
+      "source": "/toast",
+      "destination": "https://daneden.github.io/Toast/",
+      "permanent": true
+    },
+    {
+      "source": "/images/favicon.ico",
+      "destination": "/images/favicon.png",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d+)/:month(\\d+)?/:day(\\d+)?/:title(.*)",
+      "destination": "/blog/:year/:title",
+      "permanent": true
+    },
+    {
+      "source": "/rss.xml",
+      "destination": "/feed.xml",
+      "permanent": true
+    },
+    {
+      "source": "/og/:slug((?!.*\\.png$).*)",
+      "destination": "/og/:slug.png",
+      "permanent": true
+    }
+  ]
+}

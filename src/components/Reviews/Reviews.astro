@@ -1,0 +1,16 @@
+---
+// Fetches App Store reviews at build time; renders nothing if unavailable.
+import Reviews, { type AppStoreConnectReview } from "./index"
+
+const { appId } = Astro.props as { appId: string }
+
+let reviews: AppStoreConnectReview[] | null = null
+try {
+  const response = await fetch(`https://connect.daneden.me/${appId}/reviews`)
+  if (response.ok) reviews = (await response.json()).data
+} catch {
+  // Offline or the service is down: skip the section.
+}
+---
+
+{reviews && reviews.length > 0 && <Reviews reviews={reviews} />}

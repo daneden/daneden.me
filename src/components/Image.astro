@@ -1,0 +1,69 @@
+---
+// MDX-facing Image. Astro (not React) so captions can be JSX written in MDX,
+// and so images can go through astro:assets (Vercel's optimiser in production).
+import Align from "@/components/Align"
+import { Image as OptimizedImage } from "astro:assets"
+import type { ImageMetadata } from "astro"
+import type { ImageSource } from "./Image"
+
+interface Props {
+  src: ImageSource
+  alt: string
+  width?: number
+  height?: number
+  sizes?: string
+  class?: string
+  className?: string
+  align?: "left" | "right"
+  caption?: unknown
+  invertInDarkMode?: boolean
+}
+
+const { src, alt, align, caption, invertInDarkMode = false } = Astro.props
+const className = Astro.props.class ?? Astro.props.className
+const resolved = typeof src === "string" ? { src, width: Astro.props.width, height: Astro.props.height } : src
+const width = Astro.props.width ?? resolved.width
+const height = Astro.props.height ?? resolved.height
+
+const Wrapper = align === "left" ? Align.Left : align === "right" ? Align.Right : Fragment
+const sizes =
+  Astro.props.sizes ??
+  (align
+    ? "(max-width: 1032px) 340px, (max-width: 800px) 272px, 100vw"
+    : "(max-width: 800px) 680px, 100vw")
+
+// Vector and animated images are served as-is.
+const passthrough = /\.(svg|gif)$/i.test(resolved.src) || !width || !height
+const widths = [640, 828, 1080, 1200, 1920].filter((w) => w < width!).concat(width!)
+const imgClass = invertInDarkMode ? "invertInDarkMode" : undefined
+---
+
+<Wrapper>
+  <figure class={className}>
+    {
+      passthrough ? (
+        <img
+          alt={alt}
+          class={imgClass}
+          src={resolved.src}
+          width={width}
+          height={height}
+          loading="lazy"
+          decoding="async"
+        />
+      ) : (
+        <OptimizedImage
+          alt={alt}
+          class={imgClass}
+          src={src as ImageMetadata /* strings work too; width and height are always set */}
+          width={width}
+          height={height}
+          widths={widths}
+          sizes={sizes}
+          quality={75}
+        />
+      )
+    }
+    {caption && <figcaption>{caption}</figcaption>}
+  </figure>
+</Wrapper>

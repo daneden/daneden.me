@@ -1,0 +1,24 @@
+/*
+ * Shiki renders code with the css-variables theme (see astro.config.ts);
+ * this maps its variables onto syntax tokens so themes can restyle code.
+ */
+:root {
+  --shiki-foreground: var(--color-syntax-text);
+  --shiki-background: var(--color-surface-code);
+  --shiki-token-constant: var(--color-syntax-class);
+  --shiki-token-string: var(--color-syntax-string);
+  --shiki-token-string-expression: var(--color-syntax-string);
+  --shiki-token-comment: var(--color-syntax-comment);
+  --shiki-token-keyword: var(--color-syntax-keyword);
+  --shiki-token-parameter: var(--color-syntax-text);
+  --shiki-token-function: var(--color-syntax-function);
+  --shiki-token-punctuation: var(--color-syntax-comment);
+  --shiki-token-link: var(--color-syntax-operator);
+  --shiki-token-inserted: var(--color-syntax-string);
+  --shiki-token-deleted: var(--color-syntax-function);
+}
+
+pre.astro-code {
+  font-feature-settings: "dlig", "calt", "clig";
+  tab-size: 2;
+}

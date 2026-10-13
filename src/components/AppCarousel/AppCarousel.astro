@@ -1,0 +1,108 @@
+---
+import { OnDeckHero, OraHero, SolsticeHero, ZeitgeistHero } from "@/components/AppHero"
+import iPhoneBezel from "@/components/DeviceFrame/bezels/iPhone17Pro.png"
+import styles from "./styles.module.css"
+
+const apps = [
+  {
+    title: "Ora",
+    description: "An app about time for iPhone, iPad, and Apple Watch.",
+    href: "/portfolio/ora",
+    Preview: OraHero,
+  },
+  {
+    title: "Solstice",
+    description: "An app about daylight for iPhone, iPad, Mac, Apple Watch, and Apple Vision Pro.",
+    href: "/portfolio/solstice",
+    Preview: SolsticeHero,
+  },
+  {
+    title: "On Deck",
+    description: "A college softball score tracking app for iPhone.",
+    href: "https://ondeck.daneden.me",
+    Preview: OnDeckHero,
+  },
+  {
+    title: "Zeitgeist",
+    description: 'An app for <a href="https://vercel.com">Vercel</a> developers for iPhone, iPad, and Mac.',
+    href: "/portfolio/zeitgeist",
+    Preview: ZeitgeistHero,
+  },
+]
+
+const phoneRatio = iPhoneBezel.width / iPhoneBezel.height
+---
+
+<section
+  class={styles.carousel}
+  aria-roledescription="carousel"
+  aria-label="Apps"
+  style={`--phone-ratio: ${phoneRatio}`}
+  data-carousel
+>
+  <div class={styles.track} tabindex="0" data-track>
+    {
+      apps.map(({ title, description, href, Preview }, i) => (
+        <article
+          class={styles.app}
+          role="group"
+          aria-roledescription="slide"
+          aria-label={`${i + 1} of ${apps.length}: ${title}`}
+        >
+          <div class={styles.preview}>
+            <Preview />
+          </div>
+          <div class={styles.text}>
+            <h2>{title}</h2>
+            <p set:html={description} />
+            <a class={styles.more} href={href} aria-label={`Learn more: ${title}`}>
+              Learn more &rarr;
+            </a>
+          </div>
+        </article>
+      ))
+    }
+  </div>
+  <div class={styles.dots}>
+    {
+      apps.map(({ title }, i) => (
+        <button
+          class={styles.dot}
+          type="button"
+          aria-label={`Show ${title}`}
+          aria-current={i === 0 ? "true" : "false"}
+          data-dot
+        />
+      ))
+    }
+  </div>
+</section>
+
+<script>
+  const behavior = matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"
+
+  for (const root of document.querySelectorAll<HTMLElement>("[data-carousel]")) {
+    const track = root.querySelector<HTMLElement>("[data-track]")!
+    const slides = [...track.children] as HTMLElement[]
+    const dots = [...root.querySelectorAll<HTMLButtonElement>("[data-dot]")]
+    let current = 0
+
+    const show = (index: number) => track.scrollTo({ left: slides[index].offsetLeft, behavior })
+
+    const update = () =>
+      dots.forEach((dot, i) => dot.setAttribute("aria-current", String(i === current)))
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) current = slides.indexOf(entry.target as HTMLElement)
+        }
+        update()
+      },
+      { root: track, threshold: 0.6 }
+    )
+    slides.forEach((slide) => observer.observe(slide))
+
+    dots.forEach((dot, i) => dot.addEventListener("click", () => show(i)))
+  }
+</script>

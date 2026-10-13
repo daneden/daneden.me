@@ -5,77 +5,61 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Commands
 
 ```bash
-yarn dev      # Start development server
-yarn build    # Build for production
-yarn lint     # Run ESLint
-yarn start    # Start production server
+bun run dev      # Build tokens, start Astro dev server
+bun run build    # Build tokens, build static site to dist/
+bun run tokens   # Rebuild src/styles/tokens.css from tokens/ (dev does this on every change)
+bun run check    # astro check (types)
 ```
 
 ## Architecture
 
-This is a personal portfolio/blog built with **Next.js 16 using the App Router**.
+A statically generated personal site and blog built with **Astro**. React is used for components, but nothing is hydrated: pages ship no framework JS. The only client scripts are `src/scripts/hls.ts`, which plays Mux videos in browsers without native HLS, and the paging script in `src/components/AppCarousel/AppCarousel.astro`.
 
-### Routing Structure
+### Routing
 
-The app uses route groups to organize layouts:
-- `app/(root)/` — Homepage with minimal layout (just Vercel Analytics)
-- `app/(branches)/` — Content pages (blog, portfolio, playlist) with full Header/Footer/Wrapper layout
+- `src/pages/index.astro`: homepage
+- `src/pages/blog/[year]/[id].astro`: blog posts from the `posts` content collection
+- `src/pages/portfolio/*.mdx`: portfolio deep dives (frontmatter `layout: ../../layouts/Page.astro`)
+- `src/pages/feed.xml.ts`: RSS feed
+- `src/pages/og/[slug].png.ts`: Open Graph images, rendered at build time with Satori + resvg
+- Redirects live in `vercel.json`
 
-Key routes:
-- `/blog/[year]/[id]` — Blog posts as MDX files stored at `app/(branches)/blog/[year]/[id]/page.mdx`
-- `/portfolio/[projectName]` — Portfolio project pages
-- `/feed.xml` — Atom RSS feed (route handler)
-- `/og/[id]` — Dynamic Open Graph image generation
+### Content
 
-### Content & MDX
+Blog posts are MDX files at `content/YYYY/post-slug/page.mdx`, collected by `src/content.config.ts`. Metadata is frontmatter:
 
-Blog posts are MDX files stored at `app/(branches)/blog/[year]/[id]/page.mdx`.
+```yaml
+---
+title: "Post Title"
+description: "Post description"   # optional
+date: YYYY-MM-DD
+hidden: true                      # optional, hides from index and feed
+theme: "<name>"                   # optional, art-directed theme from tokens/themes
+scheme: "dark"                    # optional, locks the page's colour scheme
+---
+```
 
-**Important: Blog post metadata is centralized in two locations:**
-1. `app/posts.json` — Source of truth for all post metadata (title, description, date, id)
-2. `app/(branches)/blog/[year]/[id]/layout.tsx` — Reads from posts.json and generates Next.js metadata
+In MDX, `<Image>` is the Astro component in `src/components/Image.astro` (it accepts JSX captions). React components can be imported and used in MDX, but JSX passed as a non-children prop to a React component won't render; use a string or an Astro component.
 
-**Publishing a new blog post:**
-1. Create the MDX file at `app/(branches)/blog/YYYY/post-slug/page.mdx` (no metadata exports needed)
-2. Add post metadata to `app/posts.json`:
-   ```json
-   {
-     "id": "post-slug",
-     "title": "Post Title",
-     "description": "Post description",
-     "date": "YYYY-MM-DD"
-   }
-   ```
-3. The layout automatically generates metadata and Open Graph images via `/og/[id]`
+### Design tokens and theming
 
-MDX configuration in `next.config.mjs` includes:
-- Remark: `remark-gfm`, `remark-smartypants`, `remark-math`, `remark-toc`, `remark-directive`
-- Rehype: `rehype-katex`, `mdx-prism`
+Tokens are the source of truth for colour, type, and spacing. They're DTCG-format JSON in `tokens/`, built with Terrazzo:
 
-Custom MDX components are defined in `mdx-components.tsx` (enhanced Image, smart Link handling).
+- `tokens/palette.mjs`: picks which [Tailwind colour ramp](https://tailwindcss.com/docs/colors) is the site's `base` (and per-theme overrides). `tokens/generate-palette.mjs` writes every Tailwind ramp (`color.<ramp>.<50–950>`) plus the `color.base.*` aliases to `tokens/generated/` (gitignored) as DTCG.
+- `tokens/primitives.tokens.json`: other raw values (`color.brand.*`, syntax colours, font families, width axis, scale). Don't reference these from CSS.
+- `tokens/semantic.tokens.json`: what CSS uses (`--color-text-primary`, `--space-m`, `--font-family-heading`, …). Light-scheme values.
+- `tokens/schemes/dark.tokens.json`: dark overrides.
+- `tokens/themes/*.tokens.json`: art-directed themes. Register new ones in `tokens/site.resolver.json`.
+- `tokens/plugin-light-dark.mjs`: writes `src/styles/tokens.css` (gitignored). Scheme differences become `light-dark()` pairs on `:root`; each theme becomes a `[data-theme="…"]` block with only its differences.
+
+During `astro dev`, a Vite plugin in `astro.config.ts` reruns `bun run tokens` when anything in `tokens/` changes, so edits show without a reload.
+
+Pages set `data-theme` / `data-scheme` on `<html>` via `Base.astro` props (or MDX/post frontmatter). Locking a scheme just sets `color-scheme`, so every token follows.
+
+Fonts are plain `@font-face` rules in `src/fonts/fonts.css` (Tiempos Text/Headline locally; Zalando Sans and JetBrains Mono from Fontsource). Sans width is set with `font-stretch: calc(var(--font-width-ui) * 1%)` (and `-label`, `-display`).
 
 ### Styling
 
-CSS modules for component styles, with global design tokens in `app/styles/global.css`:
-- Spacing scale: `--sp-xxs` through `--sp-xxl`
-- Color system with HSL-based gray scale
-- Typography via CSS variables: `--font-sans`, `--font-serif`, `--font-heading`, `--font-mono`
-- Breakpoints: `--breakpoint-narrow` (50em), `--breakpoint-medium` (64em)
+CSS modules per component, plus `src/styles/global.css` (cascade layers: reset, tokens, base, components) and `src/styles/syntax.css` (maps Shiki's css-variables theme to syntax tokens). Use semantic tokens rather than raw values.
 
-Custom fonts loaded via `next/font` in `app/fonts/`.
-
-### Key Files
-
-- `app/get-posts.ts` — Transforms posts.json into route-ready post data
-- `app/metadata.ts` — Base site metadata with OpenGraph/Twitter cards
-- `app/sitemap.ts` — Dynamic sitemap generation
-- `app/utils/` — Helpers: `cx.ts` (classnames), `formatDate.ts`, `widont.ts` (typography)
-- `next.config.mjs` — MDX plugins and legacy URL redirects
-
-### Static Site Pattern
-
-This is a statically generated site with no runtime data fetching. Content comes from:
-- MDX files (blog posts)
-- JSON files (`posts.json`, `playlist.json`, `timeline.json`)
-
-GraphQL client exists (`app/utils/graphql-client.ts`) configured for Hygraph but is not actively used.
+Breakpoints: 50em (narrow), 64em (medium).

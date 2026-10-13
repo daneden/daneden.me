@@ -1,0 +1,120 @@
+{
+  "$description": "Primitive values. Nothing in the site should reference these directly; use semantic tokens instead.",
+  "color": {
+    "$type": "color",
+    "brand": {
+      "orange": {
+        "$description": "Out of sRGB gamut; display-p3(0.997 0.435 0).",
+        "$value": {
+          "colorSpace": "oklch",
+          "components": [0.7195, 0.2325, 45.21]
+        }
+      },
+      "yellow": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [1, 0.784, 0],
+          "hex": "#ffc800"
+        }
+      },
+      "yellow-wash": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [1, 0.784, 0],
+          "alpha": 0.15
+        }
+      }
+    },
+    "syntax": {
+      "$description": "Tomorrow-ish syntax palette carried over from the old Prism theme.",
+      "green": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0, 0.467, 0.176],
+          "hex": "#00772d"
+        }
+      },
+      "red": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.855, 0.165, 0],
+          "hex": "#da2a00"
+        }
+      },
+      "red-light": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.886, 0.302, 0.157],
+          "hex": "#e24d28"
+        }
+      },
+      "purple": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.655, 0.051, 0.655],
+          "hex": "#a70da7"
+        }
+      },
+      "purple-light": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.804, 0.29, 0.804],
+          "hex": "#cd4acd"
+        }
+      },
+      "orange": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.953, 0.49, 0],
+          "hex": "#f37d00"
+        }
+      },
+      "cyan": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0, 0.6, 0.702],
+          "hex": "#0099b3"
+        }
+      }
+    }
+  },
+  "font": {
+    "family": {
+      "$type": "fontFamily",
+      "tiempos-text": { "$value": ["Tiempos Text", "Georgia", "serif"] },
+      "tiempos-headline": {
+        "$value": ["Tiempos Headline", "Georgia", "serif"]
+      },
+      "system": { "$value": ["system-ui", "-apple-system", "sans-serif"] },
+      "jetbrains-mono": {
+        "$value": [
+          "JetBrains Mono Variable",
+          "ui-monospace",
+          "Menlo",
+          "monospace"
+        ]
+      },
+      "zalando-sans": {
+        "$value": ["Zalando Sans Variable", "system-ui", "sans-serif"]
+      }
+    },
+    "width": {
+      "$type": "number",
+      "$description": "Width-axis positions as font-stretch percentages (Zalando Sans supports 75–125).",
+      "narrow": { "$value": 92 },
+      "normal": { "$value": 100 },
+      "expanded": { "$value": 125 }
+    }
+  },
+  "scale": {
+    "$type": "dimension",
+    "$description": "Spacing and type scale, in rems.",
+    "xxs": { "$value": { "value": 0.2, "unit": "rem" } },
+    "xs": { "$value": { "value": 0.563, "unit": "rem" } },
+    "s": { "$value": { "value": 0.75, "unit": "rem" } },
+    "m": { "$value": { "value": 1, "unit": "rem" } },
+    "l": { "$value": { "value": 1.333, "unit": "rem" } },
+    "xl": { "$value": { "value": 1.777, "unit": "rem" } },
+    "xxl": { "$value": { "value": 2.369, "unit": "rem" } }
+  }
+}

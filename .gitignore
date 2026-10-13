@@ -10,10 +10,9 @@
 # testing
 /coverage
 
-# next.js
-/.next/
-/out/
-/static/
+# astro
+/dist/
+/.astro/
 
 # production
 /build
@@ -40,3 +39,7 @@ public/feed.xml
 src/hygraph.d.ts
 
 .vscode
+
+# generated from tokens/ by `bun run tokens`
+src/styles/tokens.css
+tokens/generated/

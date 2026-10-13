@@ -1,0 +1,65 @@
+import type { CSSProperties, ReactNode } from "react"
+import iPadPro11M4Bezel from "./bezels/iPadPro11M4.png"
+import iPhone14ProBezel from "./bezels/iPhone14Pro.png"
+import iPhone17ProBezel from "./bezels/iPhone17Pro.png"
+import styles from "./styles.module.css"
+
+export enum DeviceModel {
+  iPhone14Pro,
+  iPadPro11M4,
+  iPhone17Pro,
+}
+
+function getBezel(device: DeviceModel) {
+  switch (device) {
+    case DeviceModel.iPhone14Pro:
+      return iPhone14ProBezel
+    case DeviceModel.iPadPro11M4:
+      return iPadPro11M4Bezel
+    case DeviceModel.iPhone17Pro:
+      return iPhone17ProBezel
+  }
+}
+
+function getBezelMargin(device: DeviceModel) {
+  switch (device) {
+    case DeviceModel.iPhone14Pro:
+      return 5.925
+    case DeviceModel.iPadPro11M4:
+      return 4.166
+    case DeviceModel.iPhone17Pro:
+      return 4.925
+  }
+}
+
+interface Props {
+  model: DeviceModel
+  children: ReactNode
+}
+
+export default function DeviceFrame({ children, model }: Props) {
+  const frame = getBezel(model)
+  const aspectRatio = frame.width / frame.height
+
+  return (
+    <div className={styles.container}>
+      <div className={styles.root} style={{ "--aspect-ratio": aspectRatio } as CSSProperties}>
+        <img
+          src={frame.src}
+          width={frame.width}
+          height={frame.height}
+          alt=""
+          className={styles.bezel}
+        />
+        <div
+          className={styles.children}
+          style={{
+            padding: `${getBezelMargin(model)}%`,
+          }}
+        >
+          {children}
+        </div>
+      </div>
+    </div>
+  )
+}

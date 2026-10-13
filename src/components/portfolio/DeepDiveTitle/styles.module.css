@@ -1,0 +1,36 @@
+.root {
+  text-align: center;
+  position: relative;
+  margin-bottom: var(--space-xxl);
+  padding-block: 3rem;
+}
+
+.title {
+  font-family: var(--font-family-heading);
+  font-style: italic;
+  font-size: clamp(5rem, 8vw, 6rem);
+  letter-spacing: -0.025em;
+  line-height: 1;
+  margin: 0;
+  padding: var(--title-offset) 0 0;
+  position: relative;
+  z-index: 1;
+}
+
+.icon {
+  display: grid;
+  place-items: center;
+  position: absolute;
+  inset: var(--icon-offset) 0 0;
+  color: var(--color-surface-card);
+}
+
+.icon > * {
+  width: 100%;
+  max-width: var(--icon-size);
+  height: auto;
+}
+
+.icon img {
+  opacity: 0.75;
+}

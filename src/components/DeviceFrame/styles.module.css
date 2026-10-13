@@ -1,0 +1,36 @@
+.root {
+  position: relative;
+  aspect-ratio: var(--aspect-ratio);
+  width: min(100%, var(--device-max-height, 80vh) * var(--aspect-ratio));
+  margin: 0 auto var(--device-margin, var(--space-m));
+  display: grid;
+  place-content: center;
+  align-items: stretch;
+}
+
+.children {
+  overflow: hidden;
+  border-radius: 20%;
+  z-index: 1;
+  position: relative;
+}
+
+.children video {
+  width: 100%;
+  height: auto;
+  object-fit: fill;
+}
+
+.children :is(figure, video) {
+  margin-bottom: 0;
+}
+
+.bezel {
+  position: absolute;
+  pointer-events: none;
+  z-index: 2;
+  max-height: 100%;
+  width: auto;
+  inset: 0;
+  margin: auto;
+}

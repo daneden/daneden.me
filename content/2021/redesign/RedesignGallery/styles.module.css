@@ -1,6 +1,6 @@
 .gallery {
   display: grid;
-  gap: var(--sp-xs);
+  gap: var(--space-xs);
   grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
 }
 

@@ -1,0 +1,123 @@
+.carousel {
+  margin-block: var(--space-m) var(--space-l);
+  font-family: var(--font-family-body);
+  font-size: var(--space-m);
+  line-height: var(--font-line-height-body);
+}
+
+.carousel .text a {
+  font-style: normal;
+}
+
+.track {
+  position: relative;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 100%;
+  gap: var(--space-m);
+  aspect-ratio: 2 / 1;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  border-radius: var(--space-xl);
+}
+
+.track::-webkit-scrollbar {
+  display: none;
+}
+
+@media (max-width: 50em) {
+  .track {
+    aspect-ratio: 3 / 2;
+  }
+}
+
+.app {
+  position: relative;
+  container-type: size;
+  display: flex;
+  align-items: start;
+  gap: var(--space-m);
+  padding: var(--space-m) var(--space-m) 0;
+  background: var(--color-surface-card);
+  border-radius: var(--space-xl);
+  overflow: hidden;
+  scroll-snap-align: start;
+}
+
+.preview {
+  flex: 0 0 calc(150cqh * var(--phone-ratio));
+  --device-max-height: 150cqh;
+  --device-margin: 0;
+}
+
+.text {
+  flex: 1;
+  min-width: 0;
+  padding-bottom: var(--space-m);
+}
+
+.app h2 {
+  margin: var(--space-s) 0 var(--space-xxs);
+  padding: 0;
+}
+
+.app p {
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-s);
+}
+
+.more {
+  position: absolute;
+  inset-block-end: var(--space-m);
+  inset-inline-end: var(--space-m);
+  padding: 0.6em 1em;
+  border-radius: var(--radius-pill);
+  background: var(--color-surface-page);
+  box-shadow:
+    0 1px 2px rgb(0 0 0 / 0.08),
+    0 4px 12px rgb(0 0 0 / 0.06);
+  font-family: var(--font-family-ui);
+  font-size: var(--scale-s);
+  line-height: 1;
+  text-decoration: none;
+  transition:
+    background-color 150ms ease,
+    color 150ms ease;
+}
+
+.more:is(:hover, :focus-visible) {
+  background: var(--color-text-primary);
+  color: var(--color-surface-page);
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-s);
+}
+
+.dot {
+  display: grid;
+  place-items: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.dot::before {
+  content: "";
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: var(--color-border-subtle);
+  transition: background-color 200ms ease;
+}
+
+.dot[aria-current="true"]::before {
+  background: var(--color-text-primary);
+}

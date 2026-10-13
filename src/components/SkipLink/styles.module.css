@@ -1,0 +1,19 @@
+.skipLink {
+  font-family: var(--font-family-ui);
+  background-color: var(--color-highlight);
+  color: var(--color-text-primary);
+  height: 0;
+  margin: 0 calc(var(--space-m) * -1);
+  padding: var(--space-xs) var(--space-m);
+  position: absolute;
+  top: -100%;
+}
+
+.skipLink a {
+  --color-accent: var(--color-text-primary);
+}
+
+.skipLink:focus-within {
+  height: auto;
+  position: initial;
+}

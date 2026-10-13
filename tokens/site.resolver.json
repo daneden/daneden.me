@@ -1,0 +1,30 @@
+{
+  "name": "daneden.me",
+  "version": "2025.10",
+  "sets": {
+    "base": {
+      "sources": [
+        {"$ref": "generated/palette.tokens.json"},
+        {"$ref": "primitives.tokens.json"},
+        {"$ref": "semantic.tokens.json"}
+      ]
+    }
+  },
+  "modifiers": {
+    "scheme": {
+      "description": "Colour scheme. Emitted as light-dark() pairs so any element can lock its scheme with color-scheme.",
+      "contexts": {"light": [], "dark": [{"$ref": "schemes/dark.tokens.json"}]},
+      "default": "light"
+    },
+    "theme": {
+      "description": "Art-directed themes. Applied with data-theme=\"<name>\"; only tokens that differ from the default are emitted.",
+      "contexts": {"default": []},
+      "default": "default"
+    }
+  },
+  "resolutionOrder": [
+    {"$ref": "#/sets/base"},
+    {"$ref": "#/modifiers/scheme"},
+    {"$ref": "#/modifiers/theme"}
+  ]
+}

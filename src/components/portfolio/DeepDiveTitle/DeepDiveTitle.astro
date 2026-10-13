@@ -1,0 +1,38 @@
+---
+import type { ImageMetadata } from "astro"
+import styles from "./styles.module.css"
+
+interface Props {
+  title: string
+  /** An SVG import (drawn in currentColor) or a raster image import. */
+  icon: ((props: Record<string, unknown>) => unknown) | ImageMetadata
+  iconSize?: string
+  iconOffset?: string
+  titleOffset?: string
+}
+
+const { title, icon, iconSize = "12rem", iconOffset = "0", titleOffset = "0" } = Astro.props
+const Svg = typeof icon === "function" ? icon : null
+const image = typeof icon === "function" ? null : icon
+---
+
+<header
+  class={styles.root}
+  style={{ "--icon-size": iconSize, "--icon-offset": iconOffset, "--title-offset": titleOffset }}
+>
+  <div class={styles.icon} aria-hidden="true">
+    {Svg && <Svg />}
+    {
+      image && (
+        <img
+          class="invertInDarkMode"
+          src={image.src}
+          width={image.width}
+          height={image.height}
+          alt=""
+        />
+      )
+    }
+  </div>
+  <h1 class={styles.title}>{title}</h1>
+</header>
