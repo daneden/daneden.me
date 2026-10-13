@@ -21,13 +21,12 @@
 - OG images still use Söhne (from `src/og-fonts`). Switch to Zalando Sans once there's a TTF/OTF copy.
 - App Store reviews are fetched at build time, so they update on deploy rather than hourly.
 
-## Phase 2: Homepage
+## Phase 2: Homepage (first pass done)
 
-- **App carousel (`PortfolioCarousel` + `HScroll`)**: keep the horizontal scroll and tweak the visuals. Card titles already use the `display` width.
-- **Replace `Timeline` with cards.** Same horizontal-scroll pattern or a grid below it. Source data: `src/data/timeline.json`. Group it into apps, talks and writing, or one card per item.
-- **Résumé card**: Figma (2026–), Meta (2016–2026, with roles broken down as on `/portfolio`), Dropbox (2013–2016). Plus talks (dotCSS 2015, One Day Out 2016, Clarity 2019) and podcasts/interviews (Design Details 2016, Lovers Magazine 2018).
-  - Needs: any podcast or talk appearances missing from the timeline.
-- Consider making cards a content collection (`src/content/cards/*.md`) so adding one is just adding a file.
+- Cards share one component (`src/components/Cards`): a horizontally scrolling `CardRow`, media and text `Card` variants, `CardButton`, and `CardList` for dated entries. Card colours and radii are tokens (`--color-surface-card`, `--color-border-card`, `--color-surface-overlay`, `--radius-card`, `--radius-pill`), so themes can restyle them.
+- The app carousel is now built on `Cards`. It looks the same apart from the token colours.
+- The timeline table is replaced by a second row of text cards (`src/components/HomeCards`): Résumé (`src/data/resume.json`, links to `/portfolio`), Talks & Interviews, Apps, and Open Source & Side Projects (`src/data/timeline.json`, grouped by `kind`).
+- To do: add any missing talks or podcasts to `timeline.json`, and tweak the carousel visuals.
 
 ## Phase 3: Footer (done)
 

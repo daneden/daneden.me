@@ -3,23 +3,51 @@
   "color": {
     "$type": "color",
     "text": {
-      "primary": { "$value": "{color.neutral.0}" },
-      "secondary": { "$value": "{color.neutral.10}" },
-      "code": { "$value": "{color.neutral.5}" }
+      "primary": {
+        "$value": "{color.neutral.0}"
+      },
+      "secondary": {
+        "$value": "{color.neutral.10}"
+      },
+      "code": {
+        "$value": "{color.neutral.5}"
+      }
     },
     "surface": {
-      "page": { "$value": "{color.neutral.40}" },
-      "code": { "$value": "{color.neutral.35}" }
+      "page": {
+        "$value": "{color.neutral.40}"
+      },
+      "code": {
+        "$value": "{color.neutral.35}"
+      },
+      "overlay": {
+        "$value": "{color.scrim.dark-overlay}"
+      }
     },
     "border": {
-      "subtle": { "$value": "{color.neutral.35}" },
-      "default": { "$value": "{color.neutral.10}" }
+      "subtle": {
+        "$value": "{color.neutral.35}"
+      },
+      "default": {
+        "$value": "{color.neutral.10}"
+      },
+      "card": {
+        "$value": "{color.scrim.dark-border}"
+      }
     },
     "syntax": {
-      "text": { "$value": "{color.neutral.5}" },
-      "function": { "$value": "{color.syntax.red-light}" },
-      "keyword": { "$value": "{color.syntax.purple-light}" },
-      "comment": { "$value": "{color.neutral.30}" }
+      "text": {
+        "$value": "{color.neutral.5}"
+      },
+      "function": {
+        "$value": "{color.syntax.red-light}"
+      },
+      "keyword": {
+        "$value": "{color.syntax.purple-light}"
+      },
+      "comment": {
+        "$value": "{color.neutral.30}"
+      }
     }
   }
 }

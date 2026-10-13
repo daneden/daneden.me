@@ -11,6 +11,9 @@
       },
       "code": {
         "$value": "{color.neutral.40}"
+      },
+      "on-accent": {
+        "$value": "{color.white}"
       }
     },
     "surface": {
@@ -19,6 +22,14 @@
       },
       "code": {
         "$value": "{color.neutral.5}"
+      },
+      "card": {
+        "$description": "Homepage cards.",
+        "$value": "{color.scrim.card}"
+      },
+      "overlay": {
+        "$description": "Floating controls over content, e.g. card buttons.",
+        "$value": "{color.scrim.light-overlay}"
       }
     },
     "border": {
@@ -27,6 +38,9 @@
       },
       "default": {
         "$value": "{color.neutral.30}"
+      },
+      "card": {
+        "$value": "{color.scrim.light-border}"
       }
     },
     "accent": {
@@ -136,6 +150,21 @@
       "$value": {
         "value": 33,
         "unit": "rem"
+      }
+    }
+  },
+  "radius": {
+    "$type": "dimension",
+    "card": {
+      "$value": {
+        "value": 1.5,
+        "unit": "em"
+      }
+    },
+    "pill": {
+      "$value": {
+        "value": 2,
+        "unit": "em"
       }
     }
   }

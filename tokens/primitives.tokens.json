@@ -187,6 +187,84 @@
           "hex": "#0099b3"
         }
       }
+    },
+    "black": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "white": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "scrim": {
+      "$description": "Translucent fills for borders and overlays.",
+      "light-border": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [
+            0,
+            0,
+            0
+          ],
+          "alpha": 0.125
+        }
+      },
+      "dark-border": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [
+            1,
+            1,
+            1
+          ],
+          "alpha": 0.1
+        }
+      },
+      "light-overlay": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [
+            0.98,
+            0.98,
+            0.98
+          ],
+          "alpha": 0.8
+        }
+      },
+      "dark-overlay": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [
+            0.078,
+            0.078,
+            0.078
+          ],
+          "alpha": 0.8
+        }
+      },
+      "card": {
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [
+            0.5,
+            0.5,
+            0.5
+          ],
+          "alpha": 0.1
+        }
+      }
     }
   },
   "font": {

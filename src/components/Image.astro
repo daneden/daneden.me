@@ -3,6 +3,7 @@
 // and so images can go through astro:assets (Vercel's optimiser in production).
 import Align from "@/components/Align"
 import { Image as OptimizedImage } from "astro:assets"
+import type { ImageMetadata } from "astro"
 import type { ImageSource } from "./Image"
 
 interface Props {
@@ -54,7 +55,7 @@ const imgClass = invertInDarkMode ? "invertInDarkMode" : undefined
         <OptimizedImage
           alt={alt}
           class={imgClass}
-          src={src}
+          src={src as ImageMetadata /* strings work too; width and height are always set */}
           width={width}
           height={height}
           widths={widths}
