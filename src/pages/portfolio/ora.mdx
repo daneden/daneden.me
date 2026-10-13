@@ -8,11 +8,12 @@ image: "/og-ora.png"
 import Image from "@/components/Image.astro"
 import DeviceFrame, { DeviceModel } from "@/components/DeviceFrame"
 import MuxVideo from "@/components/MuxVideo"
-import OraTitle from "@/components/portfolio/OraTitle"
+import DeepDiveTitle from "@/components/portfolio/DeepDiveTitle/DeepDiveTitle.astro"
+import oraIcon from "@/components/portfolio/DeepDiveTitle/ora.svg"
 import Reviews from "@/components/Reviews/Reviews.astro"
 
 
-<OraTitle />
+<DeepDiveTitle title="Ora" icon={oraIcon} iconOffset="var(--space-m)" />
 
 <Image
     alt="Ora running on an iPhone and an Apple Watch Ultra. The iPhone app features a World Clock view, showing times around the world on a globe."

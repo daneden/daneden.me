@@ -1,4 +1,4 @@
-import type { ReactNode } from "react"
+import type { CSSProperties, ReactNode } from "react"
 import iPadPro11M4Bezel from "./bezels/iPadPro11M4.png"
 import iPhone14ProBezel from "./bezels/iPhone14Pro.png"
 import iPhone17ProBezel from "./bezels/iPhone17Pro.png"
@@ -43,7 +43,7 @@ export default function DeviceFrame({ children, model }: Props) {
 
   return (
     <div className={styles.container}>
-      <div className={styles.root} style={{ aspectRatio }}>
+      <div className={styles.root} style={{ "--aspect-ratio": aspectRatio } as CSSProperties}>
         <img
           src={frame.src}
           width={frame.width}

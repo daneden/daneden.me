@@ -2,110 +2,27 @@
   "$description": "Primitive values. Nothing in the site should reference these directly; use semantic tokens instead.",
   "color": {
     "$type": "color",
-    "neutral": {
-      "$description": "Warm gray ramp. Hue and chroma carried over from the old HSL ramp (hue 32, saturation × 0.2).",
-      "0": {
+    "brand": {
+      "orange": {
+        "$description": "Out of sRGB gamut; display-p3(0.997 0.435 0).",
         "$value": {
           "colorSpace": "oklch",
-          "components": [
-            0.9851,
-            0.0009,
-            71.44
-          ]
+          "components": [0.7195, 0.2325, 45.21]
         }
       },
-      "5": {
+      "yellow": {
         "$value": {
-          "colorSpace": "oklch",
-          "components": [
-            0.9625,
-            0.0018,
-            71.43
-          ]
+          "colorSpace": "srgb",
+          "components": [1, 0.784, 0],
+          "hex": "#ffc800"
         }
       },
-      "10": {
+      "yellow-wash": {
         "$value": {
-          "colorSpace": "oklch",
-          "components": [
-            0.9247,
-            0.0036,
-            71.42
-          ]
+          "colorSpace": "srgb",
+          "components": [1, 0.784, 0],
+          "alpha": 0.15
         }
-      },
-      "20": {
-        "$value": {
-          "colorSpace": "oklch",
-          "components": [
-            0.7693,
-            0.0113,
-            71.32
-          ]
-        }
-      },
-      "30": {
-        "$value": {
-          "colorSpace": "oklch",
-          "components": [
-            0.422,
-            0.0098,
-            71.24
-          ]
-        }
-      },
-      "35": {
-        "$value": {
-          "colorSpace": "oklch",
-          "components": [
-            0.3224,
-            0.0035,
-            71.36
-          ]
-        }
-      },
-      "40": {
-        "$value": {
-          "colorSpace": "oklch",
-          "components": [
-            0.1586,
-            0.0021,
-            71.33
-          ]
-        }
-      }
-    },
-    "orange": {
-      "$description": "Out of sRGB gamut; display-p3(0.997 0.435 0).",
-      "$value": {
-        "colorSpace": "oklch",
-        "components": [
-          0.7195,
-          0.2325,
-          45.21
-        ]
-      }
-    },
-    "yellow": {
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          1,
-          0.784,
-          0
-        ],
-        "hex": "#ffc800"
-      }
-    },
-    "yellow-wash": {
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          1,
-          0.784,
-          0
-        ],
-        "alpha": 0.15
       }
     },
     "syntax": {
@@ -113,156 +30,50 @@
       "green": {
         "$value": {
           "colorSpace": "srgb",
-          "components": [
-            0,
-            0.467,
-            0.176
-          ],
+          "components": [0, 0.467, 0.176],
           "hex": "#00772d"
         }
       },
       "red": {
         "$value": {
           "colorSpace": "srgb",
-          "components": [
-            0.855,
-            0.165,
-            0
-          ],
+          "components": [0.855, 0.165, 0],
           "hex": "#da2a00"
         }
       },
       "red-light": {
         "$value": {
           "colorSpace": "srgb",
-          "components": [
-            0.886,
-            0.302,
-            0.157
-          ],
+          "components": [0.886, 0.302, 0.157],
           "hex": "#e24d28"
         }
       },
       "purple": {
         "$value": {
           "colorSpace": "srgb",
-          "components": [
-            0.655,
-            0.051,
-            0.655
-          ],
+          "components": [0.655, 0.051, 0.655],
           "hex": "#a70da7"
         }
       },
       "purple-light": {
         "$value": {
           "colorSpace": "srgb",
-          "components": [
-            0.804,
-            0.29,
-            0.804
-          ],
+          "components": [0.804, 0.29, 0.804],
           "hex": "#cd4acd"
         }
       },
       "orange": {
         "$value": {
           "colorSpace": "srgb",
-          "components": [
-            0.953,
-            0.49,
-            0
-          ],
+          "components": [0.953, 0.49, 0],
           "hex": "#f37d00"
         }
       },
       "cyan": {
         "$value": {
           "colorSpace": "srgb",
-          "components": [
-            0,
-            0.6,
-            0.702
-          ],
+          "components": [0, 0.6, 0.702],
           "hex": "#0099b3"
-        }
-      }
-    },
-    "black": {
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0,
-          0,
-          0
-        ]
-      }
-    },
-    "white": {
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          1,
-          1,
-          1
-        ]
-      }
-    },
-    "scrim": {
-      "$description": "Translucent fills for borders and overlays.",
-      "light-border": {
-        "$value": {
-          "colorSpace": "srgb",
-          "components": [
-            0,
-            0,
-            0
-          ],
-          "alpha": 0.125
-        }
-      },
-      "dark-border": {
-        "$value": {
-          "colorSpace": "srgb",
-          "components": [
-            1,
-            1,
-            1
-          ],
-          "alpha": 0.1
-        }
-      },
-      "light-overlay": {
-        "$value": {
-          "colorSpace": "srgb",
-          "components": [
-            0.98,
-            0.98,
-            0.98
-          ],
-          "alpha": 0.8
-        }
-      },
-      "dark-overlay": {
-        "$value": {
-          "colorSpace": "srgb",
-          "components": [
-            0.078,
-            0.078,
-            0.078
-          ],
-          "alpha": 0.8
-        }
-      },
-      "card": {
-        "$value": {
-          "colorSpace": "srgb",
-          "components": [
-            0.5,
-            0.5,
-            0.5
-          ],
-          "alpha": 0.1
         }
       }
     }
@@ -270,27 +81,11 @@
   "font": {
     "family": {
       "$type": "fontFamily",
-      "tiempos-text": {
-        "$value": [
-          "Tiempos Text",
-          "Georgia",
-          "serif"
-        ]
-      },
+      "tiempos-text": { "$value": ["Tiempos Text", "Georgia", "serif"] },
       "tiempos-headline": {
-        "$value": [
-          "Tiempos Headline",
-          "Georgia",
-          "serif"
-        ]
+        "$value": ["Tiempos Headline", "Georgia", "serif"]
       },
-      "system": {
-        "$value": [
-          "system-ui",
-          "-apple-system",
-          "sans-serif"
-        ]
-      },
+      "system": { "$value": ["system-ui", "-apple-system", "sans-serif"] },
       "jetbrains-mono": {
         "$value": [
           "JetBrains Mono Variable",
@@ -300,71 +95,26 @@
         ]
       },
       "zalando-sans": {
-        "$value": [
-          "Zalando Sans Variable",
-          "system-ui",
-          "sans-serif"
-        ]
+        "$value": ["Zalando Sans Variable", "system-ui", "sans-serif"]
       }
     },
     "width": {
       "$type": "number",
       "$description": "Width-axis positions as font-stretch percentages (Zalando Sans supports 75–125).",
-      "narrow": {
-        "$value": 92
-      },
-      "normal": {
-        "$value": 100
-      },
-      "expanded": {
-        "$value": 125
-      }
+      "narrow": { "$value": 92 },
+      "normal": { "$value": 100 },
+      "expanded": { "$value": 125 }
     }
   },
   "scale": {
     "$type": "dimension",
     "$description": "Spacing and type scale, in rems.",
-    "xxs": {
-      "$value": {
-        "value": 0.2,
-        "unit": "rem"
-      }
-    },
-    "xs": {
-      "$value": {
-        "value": 0.6,
-        "unit": "rem"
-      }
-    },
-    "s": {
-      "$value": {
-        "value": 0.8,
-        "unit": "rem"
-      }
-    },
-    "m": {
-      "$value": {
-        "value": 1,
-        "unit": "rem"
-      }
-    },
-    "l": {
-      "$value": {
-        "value": 1.25,
-        "unit": "rem"
-      }
-    },
-    "xl": {
-      "$value": {
-        "value": 2,
-        "unit": "rem"
-      }
-    },
-    "xxl": {
-      "$value": {
-        "value": 3,
-        "unit": "rem"
-      }
-    }
+    "xxs": { "$value": { "value": 0.2, "unit": "rem" } },
+    "xs": { "$value": { "value": 0.563, "unit": "rem" } },
+    "s": { "$value": { "value": 0.75, "unit": "rem" } },
+    "m": { "$value": { "value": 1, "unit": "rem" } },
+    "l": { "$value": { "value": 1.333, "unit": "rem" } },
+    "xl": { "$value": { "value": 1.777, "unit": "rem" } },
+    "xxl": { "$value": { "value": 2.369, "unit": "rem" } }
   }
 }

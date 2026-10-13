@@ -4,7 +4,7 @@
   "version": "3.0.0",
   "license": "MIT",
   "scripts": {
-    "tokens": "tz build -c terrazzo.config.mjs",
+    "tokens": "bun tokens/generate-palette.mjs && tz build -c terrazzo.config.mjs",
     "dev": "bun run tokens && astro dev",
     "build": "bun run tokens && astro build",
     "preview": "astro preview",
@@ -40,7 +40,8 @@
     "@terrazzo/plugin-css": "^2.8.0",
     "@types/node": "^18.19.130",
     "@types/react": "^19.2.7",
-    "prettier": "^3.7.4"
+    "prettier": "^3.7.4",
+    "tailwindcss": "^4.3.3"
   },
   "type": "module"
 }

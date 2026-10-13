@@ -3,106 +3,46 @@
   "color": {
     "$type": "color",
     "text": {
-      "primary": {
-        "$value": "{color.neutral.40}"
-      },
-      "secondary": {
-        "$value": "{color.neutral.30}"
-      },
-      "code": {
-        "$value": "{color.neutral.40}"
-      },
-      "on-accent": {
-        "$value": "{color.white}"
-      }
+      "primary": { "$value": "{color.base.950}" },
+      "secondary": { "$value": "{color.base.600}" },
+      "code": { "$value": "{color.base.950}" }
     },
     "surface": {
-      "page": {
-        "$value": "{color.neutral.0}"
-      },
-      "code": {
-        "$value": "{color.neutral.5}"
-      },
-      "card": {
-        "$description": "Homepage cards.",
-        "$value": "{color.scrim.card}"
-      },
-      "overlay": {
-        "$description": "Floating controls over content, e.g. card buttons.",
-        "$value": "{color.scrim.light-overlay}"
-      }
+      "page": { "$value": "{color.base.50}" },
+      "card": { "$value": "{color.base.100}" },
+      "code": { "$value": "{color.base.100}" },
+      "card": { "$value": "{color.base.100}" }
     },
     "border": {
-      "subtle": {
-        "$value": "{color.neutral.10}"
-      },
-      "default": {
-        "$value": "{color.neutral.30}"
-      },
-      "card": {
-        "$value": "{color.scrim.light-border}"
-      }
+      "subtle": { "$value": "{color.base.200}" },
+      "default": { "$value": "{color.base.600}" }
     },
-    "accent": {
-      "$value": "{color.orange}"
-    },
-    "highlight": {
-      "$value": "{color.yellow}"
-    },
-    "highlight-wash": {
-      "$value": "{color.yellow-wash}"
-    },
+    "accent": { "$value": "{color.brand.orange}" },
+    "highlight": { "$value": "{color.brand.yellow}" },
+    "highlight-wash": { "$value": "{color.brand.yellow-wash}" },
     "syntax": {
-      "text": {
-        "$value": "{color.neutral.35}"
-      },
-      "string": {
-        "$value": "{color.syntax.green}"
-      },
-      "function": {
-        "$value": "{color.syntax.red}"
-      },
-      "keyword": {
-        "$value": "{color.syntax.purple}"
-      },
-      "class": {
-        "$value": "{color.syntax.orange}"
-      },
-      "operator": {
-        "$value": "{color.syntax.cyan}"
-      },
-      "comment": {
-        "$value": "{color.neutral.20}"
-      }
+      "text": { "$value": "{color.base.800}" },
+      "string": { "$value": "{color.syntax.green}" },
+      "function": { "$value": "{color.syntax.red}" },
+      "keyword": { "$value": "{color.syntax.purple}" },
+      "class": { "$value": "{color.syntax.orange}" },
+      "operator": { "$value": "{color.syntax.cyan}" },
+      "comment": { "$value": "{color.base.400}" }
     }
   },
   "font": {
     "family": {
       "$type": "fontFamily",
-      "body": {
-        "$value": "{font.family.tiempos-text}"
-      },
-      "heading": {
-        "$value": "{font.family.tiempos-headline}"
-      },
-      "ui": {
-        "$value": "{font.family.zalando-sans}"
-      },
-      "mono": {
-        "$value": "{font.family.jetbrains-mono}"
-      }
+      "body": { "$value": "{font.family.tiempos-text}" },
+      "heading": { "$value": "{font.family.tiempos-headline}" },
+      "ui": { "$value": "{font.family.zalando-sans}" },
+      "mono": { "$value": "{font.family.jetbrains-mono}" }
     },
-    "weight": {
-      "$type": "fontWeight",
-      "heading": {
-        "$value": 400
-      }
-    },
+    "weight": { "$type": "fontWeight", "heading": { "$value": 400 } },
     "line-height": {
       "$type": "number",
-      "body": {
-        "$value": 1.6
-      }
+      "body": { "$value": 1.6 },
+      "heading": { "$value": 1.15 }
     },
     "width": {
       "$type": "number",
@@ -122,50 +62,20 @@
   },
   "space": {
     "$type": "dimension",
-    "xxs": {
-      "$value": "{scale.xxs}"
-    },
-    "xs": {
-      "$value": "{scale.xs}"
-    },
-    "s": {
-      "$value": "{scale.s}"
-    },
-    "m": {
-      "$value": "{scale.m}"
-    },
-    "l": {
-      "$value": "{scale.l}"
-    },
-    "xl": {
-      "$value": "{scale.xl}"
-    },
-    "xxl": {
-      "$value": "{scale.xxl}"
-    }
+    "xxs": { "$value": "{scale.xxs}" },
+    "xs": { "$value": "{scale.xs}" },
+    "s": { "$value": "{scale.s}" },
+    "m": { "$value": "{scale.m}" },
+    "l": { "$value": "{scale.l}" },
+    "xl": { "$value": "{scale.xl}" },
+    "xxl": { "$value": "{scale.xxl}" }
   },
   "size": {
     "$type": "dimension",
-    "container": {
-      "$value": {
-        "value": 33,
-        "unit": "rem"
-      }
-    }
+    "container": { "$value": { "value": 33, "unit": "rem" } }
   },
   "radius": {
     "$type": "dimension",
-    "card": {
-      "$value": {
-        "value": 1.5,
-        "unit": "em"
-      }
-    },
-    "pill": {
-      "$value": {
-        "value": 2,
-        "unit": "em"
-      }
-    }
+    "pill": { "$value": { "value": 999, "unit": "px" } }
   }
 }

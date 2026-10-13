@@ -13,9 +13,8 @@
 .signoff {
   grid-column: 1;
   grid-row: 1;
-  height: calc(var(--space-xxl) * 2);
+  height: var(--space-xxl);
   width: auto;
-  color: var(--color-text-primary);
 }
 
 .wrapper {

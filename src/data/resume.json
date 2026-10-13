@@ -7,11 +7,13 @@
   },
   {
     "company": "Meta",
+    "url": "https://meta.com",
     "role": "Product Designer, Design Lead, Design Manager",
     "years": "2016–26"
   },
   {
     "company": "Dropbox",
+    "url": "https://dropbox.com",
     "role": "Product Designer, Design Engineer",
     "years": "2013–16"
   }

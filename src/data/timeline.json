@@ -14,11 +14,53 @@
     "kind": "app"
   },
   {
+    "date": "2025-09-17",
+    "url": "https://github.com/daneden/TimeMachine",
+    "title": "TimeMachine",
+    "description": "A Swift library for building apps with time travel",
+    "kind": "project"
+  },
+  {
+    "date": "2025-05-29",
+    "url": "https://github.com/daneden/Suite",
+    "title": "Suite",
+    "description": "Practical extensions for SwiftUI that make common tasks easier",
+    "kind": "project"
+  },
+  {
     "date": "2025-02-15",
     "url": "https://ora.daneden.me",
     "title": "Ora",
     "description": "iOS, macOS, and watchOS App",
     "kind": "app"
+  },
+  {
+    "date": "2022-02-03",
+    "url": "https://flowstate.daneden.me",
+    "title": "Flowstate",
+    "description": "Curated music for focused periods of work",
+    "kind": "project"
+  },
+  {
+    "date": "2022-01-11",
+    "url": "https://github.com/daneden/Twift",
+    "title": "Twift",
+    "description": "An async Swift library for the Twitter v2 API",
+    "kind": "project"
+  },
+  {
+    "date": "2021-05-24",
+    "url": "https://typographyforknowledge.work",
+    "title": "Typography for Knowledge Work",
+    "description": "A guide to clear, readable typography for everyday documents",
+    "kind": "project"
+  },
+  {
+    "date": "2021-02-23",
+    "url": "https://rando.daneden.me",
+    "title": "Rando",
+    "description": "Pick a random item from a list",
+    "kind": "project"
   },
   {
     "date": "2021-01-16",
@@ -45,7 +87,35 @@
     "date": "2020-09-01",
     "url": "https://breadforthebusy.com",
     "title": "Bread for the Busy",
-    "description": "Website",
+    "description": "Sourdough recipes and tips for busy people",
+    "kind": "project"
+  },
+  {
+    "date": "2020-08-04",
+    "url": "https://pipify.vercel.app",
+    "title": "PiPify",
+    "description": "A bookmarklet that plays any video picture-in-picture",
+    "kind": "project"
+  },
+  {
+    "date": "2020-01-27",
+    "url": "https://github.com/daneden/random-music-playlist",
+    "title": "Random Music Playlist",
+    "description": "A macOS service that plays a random Apple Music playlist",
+    "kind": "project"
+  },
+  {
+    "date": "2019-12-09",
+    "url": "https://brills.me",
+    "title": "Brills",
+    "description": "Quickly works out how much disposable income you have each month",
+    "kind": "project"
+  },
+  {
+    "date": "2019-11-07",
+    "url": "https://lucid.toys",
+    "title": "Lucid Toys",
+    "description": "Single-purpose web apps for focus and utility, like a Tube status board and a timer",
     "kind": "project"
   },
   {
@@ -56,11 +126,46 @@
     "kind": "talk"
   },
   {
+    "date": "2018-11-12",
+    "url": "https://2018-music.daneden.me",
+    "title": "Oakland 2018",
+    "description": "Photos of Oakland’s Chinatown as covers for a year of playlists",
+    "kind": "project"
+  },
+  {
+    "date": "2018-10-19",
+    "url": "https://github.com/daneden/who-would-win",
+    "title": "Who Would Win Bot",
+    "description": "A Twitter bot that pits emoji against one another",
+    "kind": "project"
+  },
+  {
+    "date": "2018-03-22",
+    "url": "https://github.com/daneden/design-systems-office-hours-playbook",
+    "title": "Design Systems Office Hours Playbook",
+    "description": "A template for running (or attending) design systems office hours",
+    "kind": "project"
+  },
+  {
     "date": "2018-03-12",
     "url": "https://www.loversmagazine.com/interviews/daniel-eden",
     "title": "Lovers Magazine",
     "description": "Interview",
     "kind": "interview"
+  },
+  {
+    "date": "2018-02-12",
+    "url": "https://2017-music.daneden.me",
+    "title": "2017 in Music",
+    "description": "Generative art covers for a year of monthly playlists",
+    "kind": "project"
+  },
+  {
+    "date": "2016-08-09",
+    "url": "https://photos.daneden.me",
+    "title": "Photos",
+    "description": "A gallery of some of my favourite photos",
+    "kind": "project"
   },
   {
     "date": "2016-05-29",
@@ -84,17 +189,31 @@
     "kind": "talk"
   },
   {
+    "date": "2013-08-19",
+    "url": "https://github.com/daneden/justmytype",
+    "title": "Just My Type",
+    "description": "A community collection of Typekit font pairings",
+    "kind": "project"
+  },
+  {
+    "date": "2012-04-12",
+    "url": "https://basehold.it",
+    "title": "Basehold.it",
+    "description": "Quick, painless, JavaScript-free baseline grid overlays",
+    "kind": "project"
+  },
+  {
     "date": "2011-11-21",
-    "url": "https://github.com/daneden/toast",
+    "url": "https://github.com/daneden/Toast",
     "title": "Toast",
-    "description": "Open Source",
+    "description": "A highly customisable, responsive (S)CSS grid",
     "kind": "project"
   },
   {
     "date": "2011-10-12",
     "url": "https://animate.style",
     "title": "Animate.css",
-    "description": "Open Source",
+    "description": "Ready-to-use, cross-browser CSS animations",
     "kind": "project"
   }
 ]

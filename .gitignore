@@ -42,3 +42,4 @@ src/hygraph.d.ts
 
 # generated from tokens/ by `bun run tokens`
 src/styles/tokens.css
+tokens/generated/

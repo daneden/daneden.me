@@ -7,13 +7,13 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ```bash
 bun run dev      # Build tokens, start Astro dev server
 bun run build    # Build tokens, build static site to dist/
-bun run tokens   # Rebuild src/styles/tokens.css from tokens/
+bun run tokens   # Rebuild src/styles/tokens.css from tokens/ (dev does this on every change)
 bun run check    # astro check (types)
 ```
 
 ## Architecture
 
-A statically generated personal site and blog built with **Astro**. React is used for components, but nothing is hydrated: pages ship no framework JS. The only client script is `src/scripts/hls.ts`, which plays Mux videos in browsers without native HLS.
+A statically generated personal site and blog built with **Astro**. React is used for components, but nothing is hydrated: pages ship no framework JS. The only client scripts are `src/scripts/hls.ts`, which plays Mux videos in browsers without native HLS, and the paging script in `src/components/AppCarousel/AppCarousel.astro`.
 
 ### Routing
 
@@ -34,7 +34,7 @@ title: "Post Title"
 description: "Post description"   # optional
 date: YYYY-MM-DD
 hidden: true                      # optional, hides from index and feed
-theme: "deep-dive"                # optional, art-directed theme
+theme: "<name>"                   # optional, art-directed theme from tokens/themes
 scheme: "dark"                    # optional, locks the page's colour scheme
 ---
 ```
@@ -45,11 +45,14 @@ In MDX, `<Image>` is the Astro component in `src/components/Image.astro` (it acc
 
 Tokens are the source of truth for colour, type, and spacing. They're DTCG-format JSON in `tokens/`, built with Terrazzo:
 
-- `tokens/primitives.tokens.json`: raw values (OKLCH neutral ramp, brand colours, font families, width axis, scale). Don't reference these from CSS.
+- `tokens/palette.mjs`: picks which [Tailwind colour ramp](https://tailwindcss.com/docs/colors) is the site's `base` (and per-theme overrides). `tokens/generate-palette.mjs` writes every Tailwind ramp (`color.<ramp>.<50–950>`) plus the `color.base.*` aliases to `tokens/generated/` (gitignored) as DTCG.
+- `tokens/primitives.tokens.json`: other raw values (`color.brand.*`, syntax colours, font families, width axis, scale). Don't reference these from CSS.
 - `tokens/semantic.tokens.json`: what CSS uses (`--color-text-primary`, `--space-m`, `--font-family-heading`, …). Light-scheme values.
 - `tokens/schemes/dark.tokens.json`: dark overrides.
 - `tokens/themes/*.tokens.json`: art-directed themes. Register new ones in `tokens/site.resolver.json`.
 - `tokens/plugin-light-dark.mjs`: writes `src/styles/tokens.css` (gitignored). Scheme differences become `light-dark()` pairs on `:root`; each theme becomes a `[data-theme="…"]` block with only its differences.
+
+During `astro dev`, a Vite plugin in `astro.config.ts` reruns `bun run tokens` when anything in `tokens/` changes, so edits show without a reload.
 
 Pages set `data-theme` / `data-scheme` on `<html>` via `Base.astro` props (or MDX/post frontmatter). Locking a scheme just sets `color-scheme`, so every token follows.
 

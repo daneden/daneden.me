@@ -1,9 +1,10 @@
 ---
 layout: "../../layouts/Page.astro"
 title: "Deep Dive: Solstice"
-description: "A deep dive into how the Solstice app for iOS, watchOS, and macOS was designed and built"
+description:
+    "A deep dive into how the Solstice app for iOS, watchOS, and macOS was
+    designed and built"
 image: "/og-solstice.png"
-theme: "deep-dive"
 ---
 
 import Image from "@/components/Image.astro"
@@ -12,12 +13,12 @@ import DeviceFrame, { DeviceModel } from "@/components/DeviceFrame"
 import HScroll from "@/components/HScroll"
 import MuxVideo from "@/components/MuxVideo"
 import Reviews from "@/components/Reviews/Reviews.astro"
-import SolsticeTitle from "@/components/portfolio/SolsticeTitle"
+import DeepDiveTitle from "@/components/portfolio/DeepDiveTitle/DeepDiveTitle.astro"
+import solsticeIcon from "@/components/portfolio/DeepDiveTitle/solstice.svg"
 import "@/components/portfolio/solstice.css"
 
-
 <div class="solsticeDeepDive">
-<SolsticeTitle />
+<DeepDiveTitle title="Solstice" icon={solsticeIcon} />
 
 <Image
     alt="Two iPhones showing Solstice version 1 and version 2 side-by-side. Version 1 features a monochrome black-and-white design with limited use of color to denote interactive controls. Version 2 has a lot more color by comparison, showing a graphical chart that emulates the sky's appearance, and colorful bar charts indicating the daylight length changing over the year."

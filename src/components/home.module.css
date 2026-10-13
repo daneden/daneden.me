@@ -6,19 +6,12 @@
 .intro {
   padding-block-start: 1.5rem;
   text-wrap: pretty;
-}
-
-.xxl {
-  font-size: clamp(1.4rem, 7.5vmin, 3.5rem);
-  line-height: 1.2;
-  font-style: normal;
-  font-family: var(--font-family-ui);
-}
-
-.intro.xxl a {
-  --padding-size: 0.05em;
+  font-size: var(--scale-xl);
+  line-height: 1.3;
   font-family: var(--font-family-heading);
-  letter-spacing: 0;
+}
+
+.intro a {
   font-style: italic;
 }
 

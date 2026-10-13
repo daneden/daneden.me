@@ -4,6 +4,9 @@ import sitemap from "@astrojs/sitemap"
 import vercel from "@astrojs/vercel"
 import { unified } from "@astrojs/markdown-remark"
 import { defineConfig } from "astro/config"
+import { execSync } from "node:child_process"
+import { fileURLToPath } from "node:url"
+import type { Plugin } from "vite"
 import rehypeKatex from "rehype-katex"
 import remarkDirective from "remark-directive"
 import remarkMath from "remark-math"
@@ -17,9 +20,30 @@ const cssVariablesTheme = createCssVariablesTheme({
   fontStyle: true,
 })
 
+const tokensDir = fileURLToPath(new URL("./tokens/", import.meta.url))
+const generatedDir = fileURLToPath(new URL("./tokens/generated/", import.meta.url))
+
+function rebuildTokensOnChange(): Plugin {
+  return {
+    name: "rebuild-tokens-on-change",
+    configureServer(server) {
+      server.watcher.add(tokensDir)
+      server.watcher.on("change", (file) => {
+        if (!file.startsWith(tokensDir) || file.startsWith(generatedDir)) return
+        try {
+          execSync("bun run tokens", { stdio: "inherit" })
+        } catch {
+          // Terrazzo has already printed the error; keep the dev server running.
+        }
+      })
+    },
+  }
+}
+
 export default defineConfig({
   site: "https://daneden.me",
   integrations: [mdx(), react(), sitemap()],
+  vite: { plugins: [rebuildTokensOnChange()] },
   // Images go through Vercel's optimiser in production (sharp locally).
   adapter: vercel({
     imageService: true,

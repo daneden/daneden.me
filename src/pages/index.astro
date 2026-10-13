@@ -1,24 +1,21 @@
 ---
-import Breakout from "@/components/Breakout"
-import PortfolioCarousel from "@/components/PortfolioCarousel"
-import HomeCards from "@/components/HomeCards"
+import AppCarousel from "@/components/AppCarousel/AppCarousel.astro"
 import styles from "@/components/home.module.css"
+import HomeSections from "@/components/HomeSections"
 import Base from "@/layouts/Base.astro"
 ---
 
 <Base>
-  <div class={styles.root}>
-    <Breakout padding={false}>
-      <p class={`${styles.intro} ${styles.xxl} ${styles.container}`}>
+  <div class={`${styles.root} ${styles.intro}`}>
+      <p>
         Dan Eden is a Designer currently working at{" "}
         <a href="https://figma.com">Figma</a>, designing and building for
-        designers and builders. In his spare time, he ships small apps. He{" "}
-        <a href="/blog">writes</a> about it: how they&rsquo;re designed, how
-        they&rsquo;re built, and what he learns making them. He{" "}
+        designers and builders.</p>
+        <p>In his spare time, he builds little apps to solve little problems.</p>
+        <AppCarousel />
+        <p>Dan <a href="/blog">writes</a> about what he&rsquo;s learned from and about designing. He{" "}
         <a rel="me" href="https://threads.net/@_dte">posts</a> about it more.
       </p>
-      <PortfolioCarousel />
-      <HomeCards />
-    </Breakout>
   </div>
+  <HomeSections />
 </Base>

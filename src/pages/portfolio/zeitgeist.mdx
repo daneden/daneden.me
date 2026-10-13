@@ -1,9 +1,10 @@
 ---
 layout: "../../layouts/Page.astro"
 title: "Deep Dive: Zeitgeist"
-description: "A deep dive into how the Zeitgeist app for iOS and iPadOS was designed and built"
+description:
+    "A deep dive into how the Zeitgeist app for iOS and iPadOS was designed and
+    built"
 image: "/og-zeitgeist.png"
-theme: "deep-dive"
 ---
 
 import Image from "@/components/Image.astro"
@@ -14,11 +15,11 @@ import LightSwitchImage from "@/components/LightSwitchImage"
 import MuxVideo from "@/components/MuxVideo"
 import Reviews from "@/components/Reviews/Reviews.astro"
 import "@/components/portfolio/zeitgeist.css"
-import ZeitgeistTitle from "@/components/portfolio/ZeitgeistTitle"
-
+import DeepDiveTitle from "@/components/portfolio/DeepDiveTitle/DeepDiveTitle.astro"
+import zeitgeistIcon from "@/components/portfolio/DeepDiveTitle/zeitgeist.png"
 
 <div class="deepDive">
-<ZeitgeistTitle />
+<DeepDiveTitle title="Zeitgeist" icon={zeitgeistIcon} iconSize="15rem" titleOffset="var(--space-s)" />
 
 [Zeitgeist](https://zeitgeist.link) is an iOS and iPadOS app for monitoring
 [Vercel](https://vercel.com) deployments. Unlike my other apps, Zeitgeist serves
