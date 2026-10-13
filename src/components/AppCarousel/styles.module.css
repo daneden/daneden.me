@@ -15,7 +15,7 @@
   grid-auto-flow: column;
   grid-auto-columns: 100%;
   gap: var(--space-m);
-  aspect-ratio: 2 / 1;
+  aspect-ratio: 2 / 1.25;
   overflow-x: auto;
   overscroll-behavior-x: contain;
   scroll-snap-type: x mandatory;
@@ -47,8 +47,8 @@
 }
 
 .preview {
-  flex: 0 0 calc(150cqh * var(--phone-ratio));
-  --device-max-height: 150cqh;
+  flex: 0 0 calc(140cqh * var(--phone-ratio));
+  --device-max-height: 140cqh;
   --device-margin: 0;
 }
 
