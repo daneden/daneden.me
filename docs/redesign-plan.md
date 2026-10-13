@@ -14,27 +14,24 @@
 - Mux video and the light/dark image work without client-side React.
 - Removed: GraphQL client, next-mdx-remote, duplicate Prism packages.
 
-### Known gaps from the move
+### Follow-ups from the move
 
-- **Image optimisation.** `next/image` used to resize `public/uploads` (83MB, 16 files over 1MB). They're now served as-is. Fix next, with one of:
-  1. `@astrojs/vercel` with `imageService: true`, so `Image.astro` goes through Vercel's optimiser like before (smallest change), or
-  2. Move uploads into `src/assets` and let `astro:assets` resize at build time (portable, slower builds).
+- Images go through Vercel's optimiser again (`@astrojs/vercel` with `imageService`): `Image.astro` emits a `srcset`, and playlist covers are 160px thumbnails. Check a preview deploy to confirm `/_vercel/image` serves both `/uploads/…` paths and imported `_astro/…` assets.
 - The feed is now RSS 2.0 rather than Atom (same URL; readers handle both).
 - OG images still use Söhne (from `src/og-fonts`). Switch to Zalando Sans once there's a TTF/OTF copy.
+- App Store reviews are fetched at build time, so they update on deploy rather than hourly.
 
 ## Phase 2: Homepage
 
 - **App carousel (`PortfolioCarousel` + `HScroll`)**: keep the horizontal scroll and tweak the visuals. Card titles already use the `display` width.
 - **Replace `Timeline` with cards.** Same horizontal-scroll pattern or a grid below it. Source data: `src/data/timeline.json`. Group it into apps, talks and writing, or one card per item.
-- **Résumé card**: Figma (2026–), Meta (2016–2026, with roles broken down as on `/portfolio`), Dropbox. Plus talks (dotCSS 2015, One Day Out 2016, Clarity 2019) and podcasts/interviews (Design Details 2016, Lovers Magazine 2018).
-  - Needs: Dropbox dates, and any podcast or talk appearances missing from the timeline.
+- **Résumé card**: Figma (2026–), Meta (2016–2026, with roles broken down as on `/portfolio`), Dropbox (2013–2016). Plus talks (dotCSS 2015, One Day Out 2016, Clarity 2019) and podcasts/interviews (Design Details 2016, Lovers Magazine 2018).
+  - Needs: any podcast or talk appearances missing from the timeline.
 - Consider making cards a content collection (`src/content/cards/*.md`) so adding one is just adding a file.
 
-## Phase 3: Footer
+## Phase 3: Footer (done)
 
-- Big ✌ (U+270C) in the left gutter, standard footer text in the main column.
-- Render with `font-family: "Zapf Dingbats"` and U+FE0E (text presentation, so it doesn't turn into the emoji). Apple platforms ship Zapf Dingbats. Everywhere else needs a fallback: either an SVG of the glyph (check the ITC/Monotype licence before tracing it), or a drawn version.
-- Size and colour should come from tokens (e.g. `--color-accent`), so themes can restyle it.
+- ✌ as an inline SVG (`currentColor`) in the leading gutter, lined up with the site name in the header, with the footer text in the main column. On narrow screens it moves above the text.
 
 ## Phase 4: Themes in practice
 

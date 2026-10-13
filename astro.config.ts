@@ -1,6 +1,7 @@
 import mdx from "@astrojs/mdx"
 import react from "@astrojs/react"
 import sitemap from "@astrojs/sitemap"
+import vercel from "@astrojs/vercel"
 import { unified } from "@astrojs/markdown-remark"
 import { defineConfig } from "astro/config"
 import rehypeKatex from "rehype-katex"
@@ -19,6 +20,15 @@ const cssVariablesTheme = createCssVariablesTheme({
 export default defineConfig({
   site: "https://daneden.me",
   integrations: [mdx(), react(), sitemap()],
+  // Images go through Vercel's optimiser in production (sharp locally).
+  adapter: vercel({
+    imageService: true,
+    devImageService: "sharp",
+    imagesConfig: {
+      sizes: [160, 320, 640, 828, 1080, 1200, 1920, 2048, 3840],
+      domains: [],
+    },
+  }),
   markdown: {
     // GFM and SmartyPants are on by default in unified().
     processor: unified({

@@ -198,6 +198,7 @@ export default function PortfolioPage() {
         Meta’s platform.
       </p>
       <h2>Dropbox</h2>
+      <h3>2013–2016</h3>
       <p>
         During my two and a half years at Dropbox, I worked on numerous projects
         across several different teams. Most notably, I worked with the Revenue

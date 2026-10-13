@@ -1,13 +1,35 @@
 .root {
-  border-top: 1px solid;
-  margin-top: var(--space-l);
-  padding-bottom: var(--space-l);
-  padding-top: var(--space-s);
+  border-top: 1px solid var(--color-border-default);
+  margin-top: var(--space-xxl);
+  padding-block: var(--space-l) var(--space-xxl);
   color: var(--color-text-secondary);
   display: grid;
   grid-template-columns: var(--grid-spec);
+  grid-gap: var(--space-xs);
+  align-items: start;
+}
+
+/* The sign-off sits in the leading gutter, like the site name in the header. */
+.signoff {
+  grid-column: 1;
+  grid-row: 1;
+  height: calc(var(--space-xxl) * 2);
+  width: auto;
+  color: var(--color-text-primary);
 }
 
 .wrapper {
   grid-column: var(--center-column);
+  grid-row: 1;
+}
+
+@media (max-width: 64em) {
+  .signoff {
+    grid-column: var(--center-column);
+    height: var(--space-xxl);
+  }
+
+  .wrapper {
+    grid-row: 2;
+  }
 }

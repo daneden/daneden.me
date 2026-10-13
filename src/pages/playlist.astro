@@ -2,14 +2,32 @@
 import Media, { MediaType } from "@/components/Media"
 import playlist from "@/data/playlist.json"
 import Base from "@/layouts/Base.astro"
+import { getImage } from "astro:assets"
 import widont from "@/utils/widont"
 
 // Sort titles ignoring a leading "the" or "a"
 const strippedTitle = (str: string): string =>
   str.replace(/^(the|a) /i, "").toLowerCase()
 
-const entries = playlist.mediaItems
-  .map((media) => ({ ...media, title: widont(media.title) }))
+// Covers display at 4rem; request a 2x-ish thumbnail rather than the original.
+const entries = (
+  await Promise.all(
+    playlist.mediaItems.map(async (media) => {
+      const { width, height, url } = media.coverImage
+      const thumb = await getImage({
+        src: url,
+        width: 160,
+        height: Math.round((160 * height) / width),
+        quality: 75,
+      })
+      return {
+        ...media,
+        title: widont(media.title),
+        coverImage: { ...media.coverImage, url: thumb.src },
+      }
+    })
+  )
+)
   .sort((a, b) => strippedTitle(a.title).localeCompare(strippedTitle(b.title)))
 ---
 
