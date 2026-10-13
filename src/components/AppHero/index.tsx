@@ -6,7 +6,7 @@ export function OraHero() {
     <DeviceFrame model={DeviceModel.iPhone17Pro}>
       <MuxVideo
         poster={1}
-        id="fzNFERUjdjh00Xj9glPTWuGW801PZSKrrqpYC00ocjWnKQ"
+        id="Jk281KvYPvuA02JIP4VtY7RzR5027yOr9udZ5lcuIhghs"
         width={201}
         height={437}
         autoPlay={true}
@@ -25,7 +25,7 @@ export function SolsticeHero() {
     <DeviceFrame model={DeviceModel.iPhone17Pro}>
       <MuxVideo
         poster={1}
-        id="tBQs1C7FVOs3GG5Sfuio8Ew5qtobtQWmzuwTr77tlec"
+        id="9QG7pgkQ6bj4v25dTRb301bGdOudFN9fWzVsbcB7ibE00"
         width={201}
         height={437}
         autoPlay={true}
