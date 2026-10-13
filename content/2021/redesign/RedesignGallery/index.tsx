@@ -46,7 +46,7 @@ export default function RedesignGallery() {
                 alt={`A screenshot of this website’s homepage in ${description}`}
                 caption={description}
                 height={dims.height}
-                src={`website-redesigns/${image}.png`}
+                src={`/uploads/website-redesigns/${image}.png`}
                 width={dims.width}
                 key={image}
               />
