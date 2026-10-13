@@ -1,4 +1,5 @@
 .root {
+  view-transition-name: site-header;
   display: grid;
   grid-template-columns: var(--grid-spec);
   grid-gap: var(--space-xs);

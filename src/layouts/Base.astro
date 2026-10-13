@@ -64,6 +64,19 @@ const imageURL = new URL(image, Astro.site)
         window.innerWidth - document.documentElement.clientWidth + "px"
       )
     </script>
+    <script is:inline>
+      // The header animates in only if it was scrolled out of view on the previous page.
+      addEventListener("pageswap", (event) => {
+        if (!event.viewTransition) return
+        const header = document.querySelector("[data-site-header]")
+        sessionStorage.setItem("header-was-hidden", String(header.getBoundingClientRect().bottom <= 0))
+      })
+      addEventListener("pagereveal", (event) => {
+        const hidden = sessionStorage.getItem("header-was-hidden") === "true"
+        sessionStorage.removeItem("header-was-hidden")
+        if (hidden) event.viewTransition?.types.add("header-enter")
+      })
+    </script>
     <slot name="head" />
   </head>
   <body>

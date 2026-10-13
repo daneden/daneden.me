@@ -357,3 +357,67 @@
     filter: invert(100%) hue-rotate(180deg);
   }
 }
+
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition {
+    navigation: auto;
+  }
+
+  :root {
+    --page-out-scale: 0.985;
+    --page-in-scale: 1.015;
+  }
+
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    transform-origin: top;
+  }
+
+  ::view-transition-old(root) {
+    animation: 150ms cubic-bezier(0.5, 0.15, 0.15, 1) both page-out;
+  }
+
+  ::view-transition-new(root) {
+    animation: 150ms cubic-bezier(0.5, 0.15, 0.15, 1) both page-in;
+    animation-delay: 75ms;
+  }
+
+  :root:active-view-transition-type(header-enter)::view-transition-group(
+      site-header
+    ) {
+    animation: none;
+  }
+
+  :root:active-view-transition-type(header-enter)::view-transition-old(
+      site-header
+    ) {
+    display: none;
+  }
+
+  :root:active-view-transition-type(header-enter)::view-transition-new(
+      site-header
+    ) {
+    animation: 350ms cubic-bezier(0.5, 0.15, 0.15, 1) both header-in;
+  }
+}
+
+@keyframes page-out {
+  to {
+    opacity: 0;
+    scale: var(--page-out-scale);
+  }
+}
+
+@keyframes page-in {
+  from {
+    opacity: 0;
+    scale: var(--page-in-scale);
+  }
+}
+
+@keyframes header-in {
+  from {
+    opacity: 0;
+    translate: 0 -4px;
+  }
+}

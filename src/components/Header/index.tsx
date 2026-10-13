@@ -18,7 +18,7 @@ const links = [
 export default function Header({ pathname }: { pathname: string }) {
   return (
     <>
-      <header className={styles.root}>
+      <header className={styles.root} data-site-header>
         <a className="plainlink" href="/">
           Daniel Eden, Designer
         </a>
