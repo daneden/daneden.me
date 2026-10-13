@@ -1,0 +1,38 @@
+---
+// MDX-facing Image. Astro (not React) so captions can be JSX written in MDX.
+import Align from "@/components/Align"
+import type { ImageSource } from "./Image"
+
+interface Props {
+  src: ImageSource
+  alt: string
+  width?: number
+  height?: number
+  sizes?: string
+  class?: string
+  className?: string
+  align?: "left" | "right"
+  caption?: unknown
+  invertInDarkMode?: boolean
+}
+
+const { src, alt, width, height, align, caption, invertInDarkMode = false } = Astro.props
+const className = Astro.props.class ?? Astro.props.className
+const resolved = typeof src === "string" ? { src, width, height } : src
+const Wrapper = align === "left" ? Align.Left : align === "right" ? Align.Right : Fragment
+---
+
+<Wrapper>
+  <figure class={className}>
+    <img
+      alt={alt}
+      class={invertInDarkMode ? "invertInDarkMode" : undefined}
+      src={resolved.src}
+      width={width ?? resolved.width}
+      height={height ?? resolved.height}
+      loading="lazy"
+      decoding="async"
+    />
+    {caption && <figcaption>{caption}</figcaption>}
+  </figure>
+</Wrapper>

@@ -1,0 +1,18 @@
+.portfolioHeader {
+  text-align: center;
+  margin-block-end: var(--space-xl);
+  margin-block-start: var(--space-xxl);
+  padding-block-start: var(--space-xl);
+}
+
+.appScreenshot {
+  display: block;
+  position: relative;
+  width: max(16rem, 20vmax);
+  margin: 0 auto 1.5rem;
+}
+
+.title {
+  margin: 0 !important;
+  padding: 0 !important;
+}

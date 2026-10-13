@@ -1,0 +1,142 @@
+{
+  "$description": "Semantic tokens. These are what components and styles use. Values here are for the light scheme; see schemes/dark.tokens.json for dark overrides.",
+  "color": {
+    "$type": "color",
+    "text": {
+      "primary": {
+        "$value": "{color.neutral.40}"
+      },
+      "secondary": {
+        "$value": "{color.neutral.30}"
+      },
+      "code": {
+        "$value": "{color.neutral.40}"
+      }
+    },
+    "surface": {
+      "page": {
+        "$value": "{color.neutral.0}"
+      },
+      "code": {
+        "$value": "{color.neutral.5}"
+      }
+    },
+    "border": {
+      "subtle": {
+        "$value": "{color.neutral.10}"
+      },
+      "default": {
+        "$value": "{color.neutral.30}"
+      }
+    },
+    "accent": {
+      "$value": "{color.orange}"
+    },
+    "highlight": {
+      "$value": "{color.yellow}"
+    },
+    "highlight-wash": {
+      "$value": "{color.yellow-wash}"
+    },
+    "syntax": {
+      "text": {
+        "$value": "{color.neutral.35}"
+      },
+      "string": {
+        "$value": "{color.syntax.green}"
+      },
+      "function": {
+        "$value": "{color.syntax.red}"
+      },
+      "keyword": {
+        "$value": "{color.syntax.purple}"
+      },
+      "class": {
+        "$value": "{color.syntax.orange}"
+      },
+      "operator": {
+        "$value": "{color.syntax.cyan}"
+      },
+      "comment": {
+        "$value": "{color.neutral.20}"
+      }
+    }
+  },
+  "font": {
+    "family": {
+      "$type": "fontFamily",
+      "body": {
+        "$value": "{font.family.tiempos-text}"
+      },
+      "heading": {
+        "$value": "{font.family.tiempos-headline}"
+      },
+      "ui": {
+        "$value": "{font.family.zalando-sans}"
+      },
+      "mono": {
+        "$value": "{font.family.jetbrains-mono}"
+      }
+    },
+    "weight": {
+      "$type": "fontWeight",
+      "heading": {
+        "$value": 400
+      }
+    },
+    "line-height": {
+      "$type": "number",
+      "body": {
+        "$value": 1.6
+      }
+    },
+    "width": {
+      "$type": "number",
+      "ui": {
+        "$description": "Running sans text: captions, footnotes, tables.",
+        "$value": "{font.width.narrow}"
+      },
+      "label": {
+        "$description": "Short sans text: subheadings, nav.",
+        "$value": "{font.width.normal}"
+      },
+      "display": {
+        "$description": "Display sans: card titles and other large, short text.",
+        "$value": "{font.width.expanded}"
+      }
+    }
+  },
+  "space": {
+    "$type": "dimension",
+    "xxs": {
+      "$value": "{scale.xxs}"
+    },
+    "xs": {
+      "$value": "{scale.xs}"
+    },
+    "s": {
+      "$value": "{scale.s}"
+    },
+    "m": {
+      "$value": "{scale.m}"
+    },
+    "l": {
+      "$value": "{scale.l}"
+    },
+    "xl": {
+      "$value": "{scale.xl}"
+    },
+    "xxl": {
+      "$value": "{scale.xxl}"
+    }
+  },
+  "size": {
+    "$type": "dimension",
+    "container": {
+      "$value": {
+        "value": 33,
+        "unit": "rem"
+      }
+    }
+  }
+}

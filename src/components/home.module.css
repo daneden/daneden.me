@@ -1,0 +1,27 @@
+.root {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.intro {
+  padding-block-start: 1.5rem;
+  text-wrap: pretty;
+}
+
+.xxl {
+  font-size: clamp(1.4rem, 7.5vmin, 3.5rem);
+  line-height: 1.2;
+  font-style: normal;
+  font-family: var(--font-family-ui);
+}
+
+.intro.xxl a {
+  --padding-size: 0.05em;
+  font-family: var(--font-family-heading);
+  letter-spacing: 0;
+  font-style: italic;
+}
+
+.container {
+  padding-inline: 0.75rem;
+}

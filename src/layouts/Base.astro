@@ -1,0 +1,84 @@
+---
+import Footer from "@/components/Footer"
+import Header from "@/components/Header"
+import SkipLink from "@/components/SkipLink"
+import Wrapper from "@/components/Wrapper"
+import { SITE_DESCRIPTION, SITE_TITLE } from "@/site"
+import type { Scheme, Theme } from "@/themes"
+import Analytics from "@vercel/analytics/astro"
+import SpeedInsights from "@vercel/speed-insights/astro"
+import "@/fonts/fonts.css"
+import "@/styles/global.css"
+import "@/styles/syntax.css"
+
+interface Props {
+  title?: string
+  description?: string
+  /** Path to an Open Graph image, relative to the site root. */
+  image?: string
+  /** Art-directed theme from tokens/themes. */
+  theme?: Theme
+  /** Lock the page to one colour scheme. */
+  scheme?: Scheme
+}
+
+const {
+  title,
+  description = SITE_DESCRIPTION,
+  image = "/og/default.png",
+  theme,
+  scheme,
+} = Astro.props
+
+const fullTitle = title ? `${title} | ${SITE_TITLE}` : SITE_TITLE
+const imageURL = new URL(image, Astro.site)
+---
+
+<!doctype html>
+<html lang="en" data-theme={theme} data-scheme={scheme}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" href="/icon.jpeg" />
+    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
+    <link rel="alternate" type="application/atom+xml" title="Daniel Eden" href="/feed.xml" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <meta property="og:title" content={title ?? SITE_TITLE} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={new URL(Astro.url.pathname, Astro.site)} />
+    <meta property="og:site_name" content={SITE_TITLE} />
+    <meta property="og:image" content={imageURL} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@_dte" />
+    <meta name="twitter:creator" content="@_dte" />
+
+    <script is:inline>
+      // Breakout components size themselves against the viewport minus the scrollbar.
+      document.documentElement.style.setProperty(
+        "--scrollbar-width",
+        window.innerWidth - document.documentElement.clientWidth + "px"
+      )
+    </script>
+    <slot name="head" />
+  </head>
+  <body>
+    <SkipLink />
+    <div class="sp-m">
+      <Header pathname={Astro.url.pathname} />
+      <Wrapper>
+        <slot />
+      </Wrapper>
+      <Footer />
+    </div>
+    <Analytics />
+    <SpeedInsights />
+    <script>
+      import "@/scripts/hls"
+    </script>
+  </body>
+</html>

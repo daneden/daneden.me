@@ -1,0 +1,25 @@
+{
+  "$description": "Dark scheme overrides. Only colours belong here; they’re emitted as light-dark() pairs.",
+  "color": {
+    "$type": "color",
+    "text": {
+      "primary": { "$value": "{color.neutral.0}" },
+      "secondary": { "$value": "{color.neutral.10}" },
+      "code": { "$value": "{color.neutral.5}" }
+    },
+    "surface": {
+      "page": { "$value": "{color.neutral.40}" },
+      "code": { "$value": "{color.neutral.35}" }
+    },
+    "border": {
+      "subtle": { "$value": "{color.neutral.35}" },
+      "default": { "$value": "{color.neutral.10}" }
+    },
+    "syntax": {
+      "text": { "$value": "{color.neutral.5}" },
+      "function": { "$value": "{color.syntax.red-light}" },
+      "keyword": { "$value": "{color.syntax.purple-light}" },
+      "comment": { "$value": "{color.neutral.30}" }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+---
+import Media, { MediaType } from "@/components/Media"
+import playlist from "@/data/playlist.json"
+import Base from "@/layouts/Base.astro"
+import widont from "@/utils/widont"
+
+// Sort titles ignoring a leading "the" or "a"
+const strippedTitle = (str: string): string =>
+  str.replace(/^(the|a) /i, "").toLowerCase()
+
+const entries = playlist.mediaItems
+  .map((media) => ({ ...media, title: widont(media.title) }))
+  .sort((a, b) => strippedTitle(a.title).localeCompare(strippedTitle(b.title)))
+---
+
+<Base title="Playlist" description="Daniel Eden’s favourite books and podcasts">
+  <h1>Playlist</h1>
+  {
+    entries.map(({ title, author, quote, coverImage, url, type }) => (
+      <Media
+        author={author}
+        coverImage={coverImage}
+        quote={quote}
+        title={title}
+        type={type as MediaType}
+        url={url}
+      />
+    ))
+  }
+</Base>

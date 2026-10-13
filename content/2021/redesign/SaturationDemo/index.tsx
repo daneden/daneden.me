@@ -9,7 +9,7 @@ function ColorStrip() {
       <div
         style={{
           backgroundImage: `linear-gradient(to right, ${stops})`,
-          height: "var(--sp-xxl)",
+          height: "var(--space-xxl)",
         }}
         className="colorStrip"
         role="presentation"
@@ -28,7 +28,7 @@ function LinearVersusSteepedGradient() {
   )
 
   const commonStyles = {
-    height: "var(--sp-xl)",
+    height: "var(--space-xl)",
   }
 
   return (

@@ -1,0 +1,26 @@
+---
+import Base from "@/layouts/Base.astro"
+import formatDate from "@/utils/formatDate"
+import { getCollection } from "astro:content"
+
+const posts = (await getCollection("posts", (post) => !post.data.hidden)).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+)
+---
+
+<Base title="Blog" description="Daniel Eden’s Blog">
+  <h1>Blog</h1>
+  <ul class="plainlist post-list">
+    {
+      posts.map((post) => (
+        <li class="post-list-item">
+          <a class="plainlink" href={`/blog/${post.id}`}>
+            <span>{post.data.title}</span>
+            <br />
+            <span class="sans meta small">{formatDate(post.data.date)}</span>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</Base>

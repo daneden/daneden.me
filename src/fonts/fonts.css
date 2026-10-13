@@ -1,0 +1,44 @@
+/*
+ * Plain @font-face rules: browsers only download a face when something uses
+ * it, so themes can reference any family here at no cost to other pages.
+ */
+@import "@fontsource-variable/jetbrains-mono";
+@import "@fontsource-variable/zalando-sans/wdth.css";
+@import "@fontsource-variable/zalando-sans/wdth-italic.css";
+
+@font-face {
+  font-family: "Tiempos Text";
+  src: url("./TiemposTextWeb-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Tiempos Text";
+  src: url("./TiemposTextWeb-RegularItalic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Tiempos Text";
+  src: url("./TiemposTextWeb-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Tiempos Text";
+  src: url("./TiemposTextWeb-BoldItalic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Tiempos Headline";
+  src: url("./TiemposHeadlineWeb-Light.woff2") format("woff2");
+  font-weight: 200 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Tiempos Headline";
+  src: url("./TiemposHeadlineWeb-LightItalic.woff2") format("woff2");
+  font-weight: 200 400;
+  font-style: italic;
+}

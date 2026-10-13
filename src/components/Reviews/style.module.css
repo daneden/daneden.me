@@ -1,0 +1,73 @@
+.container {
+  position: relative;
+}
+
+.root {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-template-rows: masonry;
+  gap: var(--space-m);
+  max-height: 36rem;
+  overflow: hidden;
+}
+
+.container:has(:checked) .root {
+  max-height: none;
+}
+
+.readMore {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: calc(var(--space-m) * 5) var(--space-m) var(--space-s);
+  top: 50%;
+  text-align: center;
+  background-image: linear-gradient(transparent, var(--color-surface-page) 55%);
+  display: grid;
+  place-items: center;
+}
+
+.container:has(:checked) .readMore {
+  position: relative;
+  padding-block-start: 0;
+}
+
+.readMore label {
+  cursor: pointer;
+  font-family: var(--font-family-ui);
+  padding: var(--space-xs) var(--space-s);
+  border-radius: var(--space-s);
+  background-color: var(--color-text-primary);
+  color: var(--color-surface-page);
+  line-height: 1;
+  margin: var(--space-m);
+}
+
+.readMore input {
+  display: none;
+}
+
+.readMoreLabel {
+  display: inline-block;
+}
+
+.readMoreLabel::after {
+  content: " ↓";
+}
+
+.readLessLabel::after {
+  content: " ↑";
+}
+
+.readLessLabel {
+  display: none;
+}
+
+.container:has(:checked) .readMoreLabel {
+  display: none;
+}
+
+.container:has(:checked) .readLessLabel {
+  display: inline-block;
+}

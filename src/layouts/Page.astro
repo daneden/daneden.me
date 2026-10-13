@@ -1,0 +1,16 @@
+---
+// Layout for standalone MDX pages; reads their frontmatter.
+import Base from "./Base.astro"
+
+const { frontmatter } = Astro.props
+---
+
+<Base
+  title={frontmatter.title}
+  description={frontmatter.description}
+  image={frontmatter.image}
+  theme={frontmatter.theme}
+  scheme={frontmatter.scheme}
+>
+  <slot />
+</Base>

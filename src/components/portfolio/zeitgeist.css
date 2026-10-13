@@ -1,0 +1,4 @@
+/* Heading font and weight come from the deep-dive theme. */
+.deepDive :is(h1, h2, h3, h4) {
+  text-align: center;
+}

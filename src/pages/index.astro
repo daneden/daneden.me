@@ -1,0 +1,26 @@
+---
+import Breakout from "@/components/Breakout"
+import PortfolioCarousel from "@/components/PortfolioCarousel"
+import Timeline from "@/components/Timeline"
+import styles from "@/components/home.module.css"
+import Base from "@/layouts/Base.astro"
+---
+
+<Base>
+  <div class={styles.root}>
+    <Breakout padding={false}>
+      <p class={`${styles.intro} ${styles.xxl} ${styles.container}`}>
+        Dan Eden is a Designer currently working at{" "}
+        <a href="https://figma.com">Figma</a>, designing and building for
+        designers and builders. In his spare time, he ships small apps. He{" "}
+        <a href="/blog">writes</a> about it: how they&rsquo;re designed, how
+        they&rsquo;re built, and what he learns making them. He{" "}
+        <a rel="me" href="https://threads.net/@_dte">posts</a> about it more.
+      </p>
+      <PortfolioCarousel />
+      <div class={styles.container}>
+        <Timeline />
+      </div>
+    </Breakout>
+  </div>
+</Base>

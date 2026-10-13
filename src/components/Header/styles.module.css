@@ -1,0 +1,31 @@
+.root {
+  display: grid;
+  grid-template-columns: var(--grid-spec);
+  grid-gap: var(--space-xs);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-s);
+}
+
+.root nav ul {
+  display: flex;
+  gap: var(--space-s);
+}
+
+@media (max-width: 64em) {
+  .root > * {
+    grid-column: var(--center-column);
+  }
+}
+
+.activeSegment {
+  position: relative;
+}
+
+.activeSegment::after {
+  content: "*";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--color-accent);
+}

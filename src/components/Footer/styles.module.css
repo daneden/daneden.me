@@ -1,0 +1,13 @@
+.root {
+  border-top: 1px solid;
+  margin-top: var(--space-l);
+  padding-bottom: var(--space-l);
+  padding-top: var(--space-s);
+  color: var(--color-text-secondary);
+  display: grid;
+  grid-template-columns: var(--grid-spec);
+}
+
+.wrapper {
+  grid-column: var(--center-column);
+}

@@ -1,0 +1,320 @@
+import { OraHero, SolsticeHero, ZeitgeistHero } from "@/components/AppHero"
+import LightswitchImage from "@/components/LightSwitchImage"
+import styles from "./page.module.css"
+
+export default function PortfolioPage() {
+  return (
+    <>
+      <h1>Portfolio</h1>
+      <p>
+        From independently designing and developing iOS apps, to helping scale
+        design systems to support thousands of designers and engineers building
+        products for Meta’s billions of users and advertisers, I’ve spent years
+        designing and building products at all kinds of scale. Below you’ll find
+        a selection of my favourite projects and experiences.
+      </p>
+      <section>
+        <header className={styles.portfolioHeader}>
+          <h3 className={`h1 ${styles.title}`}>Ora</h3>
+          <span className="small meta">Design &amp; Development</span>
+        </header>
+
+        <OraHero />
+
+        <p>
+          Ora is a world clock app unlike any other. It lets you see the time
+          around the world—literally. And unlike other world clock apps, you can
+          use Time Travel to answer questions like “What time will it be in
+          London when it’s 5pm in New York?”
+        </p>
+        <p>
+          You can <a href="/portfolio/ora">read about how Ora was made</a>
+          , or <a href="https://ora.daneden.me">visit the microsite</a> to
+          learn more and download for free.
+        </p>
+      </section>
+
+      <section>
+        <header className={styles.portfolioHeader}>
+          <h3 className={`h1 ${styles.title}`}>Solstice</h3>
+          <span className="small meta">Design &amp; Development</span>
+        </header>
+
+        <SolsticeHero />
+
+        <p>
+          Solstice is an iOS app, independently designed and built by myself,
+          that shows you the amount of daylight today compared to yesterday,
+          along with information about the next and previous solstice.
+        </p>
+        <p>
+          You can{" "}
+          <a href="/portfolio/solstice">
+            read about how Solstice was made
+          </a>
+          , or{" "}
+          <a href="https://solstice.daneden.me">visit the microsite</a> to
+          learn more and download for free.
+        </p>
+      </section>
+
+      <section>
+        <header className={styles.portfolioHeader}>
+          <h3 className={`h1 ${styles.title}`}>Eventually</h3>
+          <small className="meta">Design &amp; Development</small>
+        </header>
+
+        <LightswitchImage
+          alt="The Eventually app, showing upcoming events in the next week, month, and year"
+          height={2716}
+          srcDark="/uploads/portfolio/eventually-dark.png"
+          srcLight="/uploads/portfolio/eventually-light.png"
+          width={1339}
+          className={styles.appScreenshot}
+        />
+
+        <p>
+          Eventually is an iOS app that shows you significant events coming up
+          in the next week, month, and year. If you’ve ever been caught off
+          guard by an unexpected birthday, or need to remember you’ve got that
+          vacation to look forward to, Eventually is for you.
+        </p>
+        <p>
+          <a href="https://eventually.app">Visit the microsite</a> to
+          learn more.
+        </p>
+      </section>
+
+      <section>
+        <header className={styles.portfolioHeader}>
+          <h3 className={`h1 ${styles.title}`}>Zeitgeist</h3>
+          <small className="meta">Design &amp; Development</small>
+        </header>
+
+        <ZeitgeistHero />
+
+        <p>
+          Zeitgeist is an iOS and Mac app that lets you see the status of your
+          recent <a href="https://vercel.com/home">Vercel</a> deployments.
+          It updates in (almost) real-time, giving you at-a-glance peace of mind
+          about your web app deployments.
+        </p>
+        <p>
+          You can{" "}
+          <a href="/portfolio/zeitgeist">
+            read about how Zeitgeist was made
+          </a>
+          , or{" "}
+          <a href="https://zeitgeist.daneden.me">visit the microsite</a>{" "}
+          for details and to download.
+        </p>
+      </section>
+
+      <hr />
+      <h2>Figma</h2>
+      <h3>2026–</h3>
+      <p>
+        I joined Figma in 2026, supporting the Build pillar, focusing on
+        developer tools and the intersection of code and design.
+      </p>
+      <p>
+        My first project was a series of improvements to Figma Make, an
+        AI-driven prompt-to-app tool. I worked closely with a multi-disciplinary
+        team to improve the design quality of Make's outputs through changes to
+        the system prompt and new first-party skills.
+      </p>
+      <h2>Meta</h2>
+      <h3>2024–2026</h3>
+      <p>
+        I worked for two years in the Reality Labs Avatars & Identity org,
+        focused on supporting a robust, expressive avatar editor experience
+        across Meta’s family of apps.
+      </p>
+      <p>
+        In 2025, I became the lead designer supporting the Meta Horizon profile
+        across mobile and VR.
+      </p>
+      <h3>2021–2024</h3>
+      <p>
+        From 2021–2024, I worked as a Product Designer on Meta’s Customer
+        Support team. Our team is working to build customer support experiences
+        that are more equitable, human, and helpful for Meta’s billions of
+        customers.
+      </p>
+      <h3>2020–2021</h3>
+      <p>
+        From 2020–2021, I worked as a Design Manager supporting Meta’s Commerce
+        organisation, specifically focused on buyer consideration experiences
+        for{" "}
+        <a href="https://en-gb.facebook.com/business/shops">Meta Shops</a>
+        . Our team focused on giving people the information they need to make an
+        informed purchase decision, providing Meta employees with the standards
+        to build high-quality buyer experiences, and exploring the future of
+        commerce with Meta Shops.
+      </p>
+      <h3>2017–2020</h3>
+      <p>
+        From 2017–2020, I worked as a Design Lead for Meta’s Ads and Business
+        Design System. My team and I created and maintained the visual language
+        and web React components that power Meta’s Ads and Business products,
+        serving millions of Meta Ads customers and thousands of Meta engineers
+        and designers.
+      </p>
+
+      <p>
+        In late 2018–early 2019, the team worked closely with Meta’s primary
+        revenue-impacting product, Ads Manager, to help them{" "}
+        <a href="https://www.facebook.com/business/news/improving-ads-manager-and-business-manager">
+          redesign the product
+        </a>{" "}
+        in the pursuit of increased advertiser efficiency and customer value.
+        This work was the first result of a coordinated effort to create a more
+        cohesive advertising and marketing experience across all of Meta’s
+        business tools. More about this work can be found on the{" "}
+        <a href="https://www.facebook.com/business/m/one-sheeters/DesigningBetterAdvertiserExperiences">
+          Facebook Business website
+        </a>
+        .
+      </p>
+      <p>
+        In late 2019, I relocated from Menlo Park, California to London, England
+        to help support the Ads organisation and scale our design system team’s
+        portfolio.
+      </p>
+      <h3>2016–2017</h3>
+      <p>
+        Before working on the Ads and Business Design System I worked as a
+        Product Designer on Meta’s Brand Measurement team, devoting my time to
+        creating new ways to measure and report ad effectiveness as it pertains
+        to brand advertising.
+      </p>
+      <p>
+        My first project at Meta was{" "}
+        <a href="https://www.facebook.com/business/news/optimize-your-ads-with-split-testing?pnref=story">
+          Split Testing
+        </a>
+        , a tool allowing advertisers to test different ad strategies against
+        one another to find the most effective way to spend their ad budgets on
+        Meta’s platform.
+      </p>
+      <h2>Dropbox</h2>
+      <p>
+        During my two and a half years at Dropbox, I worked on numerous projects
+        across several different teams. Most notably, I worked with the Revenue
+        &amp; Growth team on redesigning and{" "}
+        <a href="https://blogs.dropbox.com/dropbox/2014/08/introducing-more-powerful-dropbox-pro/">
+          relaunching Dropbox Pro
+        </a>
+        (now known as Dropbox Plus), an effort which involved both product work
+        (in the form of building new features, such as password-protected shared
+        links) and marketing efforts. Additionally, I helped lead the
+        engineering efforts to build the marketing pages for Dropbox Pro.
+      </p>
+      <p>
+        After the initial launch of the new offering, our team was poised to
+        grow adoption. We spent months experimenting with marketing efforts, as
+        well as refining the checkout experience. We saw a direct and
+        substantial positive impact on subscriptions through our improvements.
+      </p>
+      <p>
+        After working on Dropbox Pro, we spun off a small “blue sky” growth team
+        to explore how we could foster increased adoption of our sharing tools.
+        The most successful project to emerge from that team was the addition of{" "}
+        <a href="https://dribbble.com/shots/1972358-Faceholder">
+          user avatars
+        </a>{" "}
+        in the Dropbox Product. Adding user photos to the product led to
+        increased sharing activity, just as we had hoped, but it also unlocked
+        possibilities for other product teams to build richer, more user-centric
+        experiences.
+      </p>
+      <p>
+        In my final year at the company, I joined the Web Infrastructure team as
+        a Design Engineer to work on Design Systems. I had spent all my tenure
+        at Dropbox maintaining a suite of design tools, so was able to provide
+        historical knowledge and engineering principles to address
+        inconsistencies in both the design and implementation of many product
+        surfaces. The result of my work was{" "}
+        <a href="http://dropbox.github.io/scooter/">Scooter</a>, an
+        open-source (S)CSS framework and design system adopted by several
+        product teams to speed up their work.
+      </p>
+
+      <hr />
+
+      <h2>Side Projects</h2>
+      <p>
+        If the work I do for money is my bread and butter, my side projects are
+        the jam on top. I routinely embark on new side projects to explore
+        coding opportunities and design styles outside of my employment.
+      </p>
+
+      <h3>Bread for The Busy</h3>
+      <p>
+        After several years of making sourdough bread, I decided I wanted to
+        publish a little website to record and share some of my favourite (and
+        home-grown) recipes for bread.{" "}
+        <a href="https://breadforthebusy.com">Visit the site</a> to learn more.
+      </p>
+
+      <h3>Lucid Underground</h3>
+      <p>
+        Lucid Underground is a web app and companion iOS and watchOS app that
+        shows the current status of the London Underground, London Overground,
+        TfL Rail, and DLR transit systems. You can{" "}
+        <a href="https://underground.lucid.toys/">visit the website</a> or{" "}
+        <a href="https://apps.apple.com/gb/app/lucid-underground/id1491993114">
+          buy the app
+        </a>{" "}
+        on the iOS App Store.
+      </p>
+      <h3>Who Would Win Bot</h3>
+      <p>
+        <a href="https://twitter.com/WhoWouldWinBot">Who Would Win Bot</a>{" "}
+        is a Twitter bot that asks followers: in a fight between two random
+        emoji, who would win?{" "}
+        <a href="https://twitter.com/WhoWouldWinBot/status/1070173517528866817">
+          A Genie, or a potato?
+        </a>{" "}
+        <a href="https://twitter.com/WhoWouldWinBot/status/1069992274665320448">
+          A bouquet, or a curling stone?
+        </a>{" "}
+        View the{" "}
+        <a href="https://github.com/daneden/who-would-win">
+          source of GitHub
+        </a>{" "}
+        or{" "}
+        <a href="https://twitter.com/WhoWouldWinBot">
+          follow it on Twitter
+        </a>
+        .
+      </p>
+      <h3>Lucid</h3>
+      <p>
+        <a href="https://chrome.google.com/webstore/detail/lucid/achogfadpkcepkepcpegehpiiioihmik">
+          Lucid
+        </a>{" "}
+        is a Google Chrome extension that replaces the New Tab page with a
+        simple notepad. It’s useful for avoiding bad browsing habits and jotting
+        down ideas or errands.
+      </p>
+
+      <h3>Brills</h3>
+      <p>
+        <a href="http://brills.me">Brills</a> is a simple money management
+        web application built for budgeting quickly.{" "}
+        <a href="http://brills.me">Visit the site</a>.
+      </p>
+
+      <h3>Animate.css</h3>
+      <p>
+        <a href="http://animate.style/">Animate.css</a> is a cross-browser
+        plug-and-play CSS animation library for delightful animation in websites
+        and web applications. Since I created the project in 2011, it has gone
+        on to be used in tens of thousands of websites, growing into an active
+        open source community.{" "}
+        <a href="http://animate.style/">Visit the site</a>.
+      </p>
+    </>
+  )
+}

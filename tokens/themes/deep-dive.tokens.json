@@ -1,0 +1,11 @@
+{
+  "$description": "Portfolio deep dives: sans-serif, bold headings.",
+  "font": {
+    "family": {
+      "heading": { "$type": "fontFamily", "$value": "{font.family.zalando-sans}" }
+    },
+    "weight": {
+      "heading": { "$type": "fontWeight", "$value": 700 }
+    }
+  }
+}
