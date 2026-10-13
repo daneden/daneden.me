@@ -1,6 +1,5 @@
 import widont from "@/utils/widont"
 import { readFileSync } from "fs"
-import { Resvg } from "@resvg/resvg-js"
 import satori from "satori"
 import { join } from "path"
 
@@ -15,8 +14,7 @@ const soehne = readFileSync(
 const defaultTitle = "Daniel Eden, Designer"
 
 export default async function opengraphImage(title = defaultTitle) {
-
-  const svg = await satori(
+  return satori(
     (
       <div
         style={{
@@ -78,6 +76,4 @@ export default async function opengraphImage(title = defaultTitle) {
       ],
     }
   )
-
-  return new Resvg(svg).render().asPng()
 }

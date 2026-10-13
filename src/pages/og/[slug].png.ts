@@ -1,4 +1,5 @@
 import opengraphImage from "@/utils/opengraphImage"
+import { Resvg } from "@resvg/resvg-js"
 import type { APIRoute, GetStaticPaths } from "astro"
 import { getCollection } from "astro:content"
 
@@ -14,6 +15,7 @@ export const getStaticPaths = (async () => {
 }) satisfies GetStaticPaths
 
 export const GET: APIRoute = async ({ props }) => {
-  const png = await opengraphImage(props.title)
+  const svg = await opengraphImage(props.title)
+  const png = new Resvg(svg).render().asPng()
   return new Response(new Uint8Array(png), { headers: { "Content-Type": "image/png" } })
 }
